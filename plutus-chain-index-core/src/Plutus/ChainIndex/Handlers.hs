@@ -240,7 +240,6 @@ appendBlocks ::
     ( Member (State ChainIndexState) effs
     , Member (Reader Depth) effs
     , Member BeamEffect effs
-    , Member (Error ChainIndexError) effs
     , Member (LogMsg ChainIndexLog) effs
     )
     => [ChainSyncBlock] -> Eff effs ()
@@ -251,9 +250,8 @@ appendBlocks blocks = do
             let newUtxoState = TxUtxoBalance.fromBlock tip_ (map fst transactions)
             case UtxoState.insert newUtxoState utxoIndexState of
                 Left err -> do
-                    let reason = InsertionFailed err
-                    logError $ Err reason
-                    throwError reason
+                    logError $ Err $ InsertionFailed err
+                    return (utxoIndexState, txs, utxoStates)
                 Right InsertUtxoSuccess{newIndex, insertPosition} -> do
                     logDebug $ InsertionSuccess tip_ insertPosition
                     return (newIndex, transactions ++ txs, newUtxoState : utxoStates)

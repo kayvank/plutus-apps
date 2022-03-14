@@ -81,9 +81,9 @@ withRunRequirements logConfig config cont = do
 
     (trace :: Trace IO (PrettyObject ChainIndexLog), _) <- setupTrace_ logConfig "chain-index"
 
-    -- Optimize Sqlite for write performance, halves the sync time.
-    -- https://sqlite.org/wal.html
-    -- Sqlite.execute_ conn "PRAGMA journal_mode=WAL"
+    -- We set 'journal_mode=DELETE' explicitly here to highlight that we don't use https://sqlite.org/wal.html
+    -- WAL doesn't support sudden stopping of chain-index process corrupting the state of database.
+    Sqlite.execute_ conn "PRAGMA journal_mode=DELETE"
     Sqlite.runBeamSqliteDebug (logDebug (convertLog PrettyObject trace) . (BeamLogItem . SqlLog)) conn $ do
         autoMigrate Sqlite.migrationBackend checkedSqliteDb
 
