@@ -83,7 +83,7 @@ withRunRequirements logConfig config cont = do
 
     -- Optimize Sqlite for write performance, halves the sync time.
     -- https://sqlite.org/wal.html
-    Sqlite.execute_ conn "PRAGMA journal_mode=WAL"
+    -- Sqlite.execute_ conn "PRAGMA journal_mode=WAL"
     Sqlite.runBeamSqliteDebug (logDebug (convertLog PrettyObject trace) . (BeamLogItem . SqlLog)) conn $ do
         autoMigrate Sqlite.migrationBackend checkedSqliteDb
 
