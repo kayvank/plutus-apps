@@ -6,11 +6,12 @@ import Test.Tasty (TestTree, defaultMain, localOption, testGroup)
 import Test.Tasty.Hedgehog (HedgehogTestLimit (HedgehogTestLimit))
 
 main :: IO ()
-main = defaultMain tests
+main = defaultMain  tests
 
 tests :: TestTree
 tests = localOption (HedgehogTestLimit $ Just 200) $
     testGroup "marconi-sidechain"
         [ Api.Query.Indexers.Utxo.tests
         , CLI.tests
+        , Api.Query.Indexers.Utxo.rpcTests
         ]
