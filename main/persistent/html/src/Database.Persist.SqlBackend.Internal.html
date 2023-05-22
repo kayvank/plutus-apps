@@ -185,11 +185,11 @@
 </span><span id="line-151"></span><span>    </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">hookGetStatement :: SqlBackend -&gt; Text -&gt; Statement -&gt; IO Statement
 </span><a href="Database.Persist.SqlBackend.Internal.html#hookGetStatement"><span class="hs-identifier hs-var">hookGetStatement</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">SqlBackend
 </span><span class="hs-identifier">_</span></span><span> </span><span class="annot"><span class="annottext">Text
-</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621679925928"><span class="annot"><span class="annottext">Statement
-</span><a href="#local-6989586621679925928"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Statement -&gt; IO Statement
+</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621679926097"><span class="annot"><span class="annottext">Statement
+</span><a href="#local-6989586621679926097"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Statement -&gt; IO Statement
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">Statement
-</span><a href="#local-6989586621679925928"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679926097"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-152"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-153"></span><span>
 </span><span id="line-154"></span><span class="hs-comment">-- | A function for creating a value of the 'SqlBackend' type. You should prefer</span><span>
@@ -200,7 +200,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-159"></span><span class="hs-comment">-- @since 2.13.0.0</span><span>
 </span><span id="line-160"></span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.html#mkSqlBackend"><span class="hs-identifier hs-type">mkSqlBackend</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.MkSqlBackend.html#MkSqlBackendArgs"><span class="hs-identifier hs-type">MkSqlBackendArgs</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.html#SqlBackend"><span class="hs-identifier hs-type">SqlBackend</span></a></span><span>
 </span><span id="line-161"></span><span id="mkSqlBackend"><span class="annot"><span class="annottext">mkSqlBackend :: MkSqlBackendArgs -&gt; SqlBackend
-</span><a href="Database.Persist.SqlBackend.Internal.html#mkSqlBackend"><span class="hs-identifier hs-var hs-var">mkSqlBackend</span></a></span></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.MkSqlBackend.html#MkSqlBackendArgs"><span class="hs-identifier hs-type">MkSqlBackendArgs</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679925911"><span id="local-6989586621679925912"><span id="local-6989586621679925913"><span id="local-6989586621679925914"><span id="local-6989586621679925915"><span id="local-6989586621679925916"><span id="local-6989586621679925917"><span id="local-6989586621679925918"><span id="local-6989586621679925919"><span id="local-6989586621679925920"><span id="local-6989586621679925921"><span id="local-6989586621679925922"><span id="local-6989586621679925923"><span id="local-6989586621679925924"><span id="local-6989586621679925925"><span class="annot"><span class="annottext">IO ()
+</span><a href="Database.Persist.SqlBackend.Internal.html#mkSqlBackend"><span class="hs-identifier hs-var hs-var">mkSqlBackend</span></a></span></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.MkSqlBackend.html#MkSqlBackendArgs"><span class="hs-identifier hs-type">MkSqlBackendArgs</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679926080"><span id="local-6989586621679926081"><span id="local-6989586621679926082"><span id="local-6989586621679926083"><span id="local-6989586621679926084"><span id="local-6989586621679926085"><span id="local-6989586621679926086"><span id="local-6989586621679926087"><span id="local-6989586621679926088"><span id="local-6989586621679926089"><span id="local-6989586621679926090"><span id="local-6989586621679926091"><span id="local-6989586621679926092"><span id="local-6989586621679926093"><span id="local-6989586621679926094"><span class="annot"><span class="annottext">IO ()
 Text
 IORef (Map Text Statement)
 [EntityDef]
@@ -318,7 +318,7 @@ forall a. Maybe a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement) -&gt; MkStatementCache
 </span><a href="Database.Persist.SqlBackend.StatementCache.html#mkSimpleStatementCache"><span class="hs-identifier hs-var">mkSimpleStatementCache</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
-</span><a href="#local-6989586621679925923"><span class="hs-identifier hs-var">connStmtMap</span></a></span><span>
+</span><a href="#local-6989586621679926092"><span class="hs-identifier hs-var">connStmtMap</span></a></span><span>
 </span><span id="line-171"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">IO ()
 Text
 [EntityDef]
@@ -368,18 +368,18 @@ connMigrateSql :: [EntityDef]
 connClose :: IO ()
 connInsertSql :: EntityDef -&gt; [PersistValue] -&gt; InsertSqlResult
 connPrepare :: Text -&gt; IO Statement
-</span><a href="#local-6989586621679925911"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span><span>
+</span><a href="#local-6989586621679926080"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span><span>
 </span><span id="line-172"></span><span>        </span><span class="hs-special">}</span><span>
 </span><span id="line-173"></span><span>
 </span><span id="line-174"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="Database.Persist.Class.PersistStore.html#HasPersistBackend"><span class="hs-identifier hs-type">HasPersistBackend</span></a></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.html#SqlBackend"><span class="hs-identifier hs-type">SqlBackend</span></a></span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-175"></span><span>    </span><span class="hs-keyword">type</span><span> </span><span id="BaseBackend"><span class="annot"><a href="Database.Persist.Class.PersistStore.html#BaseBackend"><span class="hs-identifier hs-var">BaseBackend</span></a></span></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.html#SqlBackend"><span class="hs-identifier hs-type">SqlBackend</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.html#SqlBackend"><span class="hs-identifier hs-type">SqlBackend</span></a></span><span>
-</span><span id="line-176"></span><span>    </span><span id="local-6989586621679925890"><span class="annot"><span class="annottext">persistBackend :: SqlBackend -&gt; BaseBackend SqlBackend
+</span><span id="line-176"></span><span>    </span><span id="local-6989586621679926059"><span class="annot"><span class="annottext">persistBackend :: SqlBackend -&gt; BaseBackend SqlBackend
 </span><a href="Database.Persist.Class.PersistStore.html#persistBackend"><span class="hs-identifier hs-var hs-var hs-var hs-var">persistBackend</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SqlBackend -&gt; BaseBackend SqlBackend
 forall a. a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">id</span></a></span><span>
 </span><span id="line-177"></span><span>
 </span><span id="line-178"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="Database.Persist.Class.PersistStore.html#IsPersistBackend"><span class="hs-identifier hs-type">IsPersistBackend</span></a></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.html#SqlBackend"><span class="hs-identifier hs-type">SqlBackend</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-179"></span><span>    </span><span id="local-6989586621679925884"><span class="annot"><span class="annottext">mkPersistBackend :: BaseBackend SqlBackend -&gt; SqlBackend
+</span><span id="line-179"></span><span>    </span><span id="local-6989586621679926053"><span class="annot"><span class="annottext">mkPersistBackend :: BaseBackend SqlBackend -&gt; SqlBackend
 </span><a href="Database.Persist.Class.PersistStore.html#mkPersistBackend"><span class="hs-identifier hs-var hs-var hs-var hs-var">mkPersistBackend</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BaseBackend SqlBackend -&gt; SqlBackend
 forall a. a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">id</span></a></span><span>

@@ -37,34 +37,34 @@ forall a. IO a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">unsafePerformIO</span></a></span><span> </span><span class="annot"><span class="annottext">(IO DateState -&gt; DateState) -&gt; IO DateState -&gt; DateState
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-32"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679093652"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093652"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093651"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093651"><span class="hs-identifier hs-var">s2</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093650"><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093650"><span class="hs-identifier hs-var">date</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (ByteString, ByteString, CTime)
+</span><span id="line-32"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679093659"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093659"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093658"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093658"><span class="hs-identifier hs-var">s2</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093657"><span class="annot"><span class="annottext">CTime
+</span><a href="#local-6989586621679093657"><span class="hs-identifier hs-var">date</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (ByteString, ByteString, CTime)
 </span><a href="Snap.Internal.Http.Server.Date.html#fetchTime"><span class="hs-identifier hs-var">fetchTime</span></a></span><span>
-</span><span id="line-33"></span><span>    </span><span id="local-6989586621679093648"><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093648"><span class="hs-identifier hs-var">bs1</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; IO (IORef ByteString)
+</span><span id="line-33"></span><span>    </span><span id="local-6989586621679093655"><span class="annot"><span class="annottext">IORef ByteString
+</span><a href="#local-6989586621679093655"><span class="hs-identifier hs-var">bs1</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; IO (IORef ByteString)
 forall a. a -&gt; IO (IORef a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">newIORef</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; IO (IORef ByteString))
 -&gt; ByteString -&gt; IO (IORef ByteString)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093652"><span class="hs-identifier hs-var">s1</span></a></span><span>
-</span><span id="line-34"></span><span>    </span><span id="local-6989586621679093646"><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093646"><span class="hs-identifier hs-var">bs2</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; IO (IORef ByteString)
+</span><a href="#local-6989586621679093659"><span class="hs-identifier hs-var">s1</span></a></span><span>
+</span><span id="line-34"></span><span>    </span><span id="local-6989586621679093653"><span class="annot"><span class="annottext">IORef ByteString
+</span><a href="#local-6989586621679093653"><span class="hs-identifier hs-var">bs2</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; IO (IORef ByteString)
 forall a. a -&gt; IO (IORef a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">newIORef</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; IO (IORef ByteString))
 -&gt; ByteString -&gt; IO (IORef ByteString)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093651"><span class="hs-identifier hs-var">s2</span></a></span><span>
-</span><span id="line-35"></span><span>    </span><span id="local-6989586621679093645"><span class="annot"><span class="annottext">IORef CTime
-</span><a href="#local-6989586621679093645"><span class="hs-identifier hs-var">dt</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CTime -&gt; IO (IORef CTime)
+</span><a href="#local-6989586621679093658"><span class="hs-identifier hs-var">s2</span></a></span><span>
+</span><span id="line-35"></span><span>    </span><span id="local-6989586621679093652"><span class="annot"><span class="annottext">IORef CTime
+</span><a href="#local-6989586621679093652"><span class="hs-identifier hs-var">dt</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CTime -&gt; IO (IORef CTime)
 forall a. a -&gt; IO (IORef a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">newIORef</span></a></span><span> </span><span class="annot"><span class="annottext">(CTime -&gt; IO (IORef CTime)) -&gt; CTime -&gt; IO (IORef CTime)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093650"><span class="hs-identifier hs-var">date</span></a></span><span>
+</span><a href="#local-6989586621679093657"><span class="hs-identifier hs-var">date</span></a></span><span>
 </span><span id="line-36"></span><span>
 </span><span id="line-37"></span><span>    </span><span class="annot"><span class="annottext">DateState -&gt; IO DateState
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -72,9 +72,9 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">IORef ByteString -&gt; IORef ByteString -&gt; IORef CTime -&gt; DateState
 </span><a href="Snap.Internal.Http.Server.Date.html#DateState"><span class="hs-identifier hs-var">DateState</span></a></span><span> </span><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093648"><span class="hs-identifier hs-var">bs1</span></a></span><span> </span><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093646"><span class="hs-identifier hs-var">bs2</span></a></span><span> </span><span class="annot"><span class="annottext">IORef CTime
-</span><a href="#local-6989586621679093645"><span class="hs-identifier hs-var">dt</span></a></span><span>
+</span><a href="#local-6989586621679093655"><span class="hs-identifier hs-var">bs1</span></a></span><span> </span><span class="annot"><span class="annottext">IORef ByteString
+</span><a href="#local-6989586621679093653"><span class="hs-identifier hs-var">bs2</span></a></span><span> </span><span class="annot"><span class="annottext">IORef CTime
+</span><a href="#local-6989586621679093652"><span class="hs-identifier hs-var">dt</span></a></span><span>
 </span><span id="line-38"></span><span class="hs-pragma">{-# NOINLINE</span><span> </span><span class="annot"><a href="Snap.Internal.Http.Server.Date.html#dateState"><span class="hs-pragma hs-type">dateState</span></a></span><span> </span><span class="hs-pragma">#-}</span><span>
 </span><span id="line-39"></span><span>
 </span><span id="line-40"></span><span>
@@ -82,62 +82,62 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-42"></span><span class="annot"><a href="Snap.Internal.Http.Server.Date.html#fetchTime"><span class="hs-identifier hs-type">fetchTime</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">,</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">,</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">CTime</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-43"></span><span id="fetchTime"><span class="annot"><span class="annottext">fetchTime :: IO (ByteString, ByteString, CTime)
 </span><a href="Snap.Internal.Http.Server.Date.html#fetchTime"><span class="hs-identifier hs-var hs-var">fetchTime</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-44"></span><span>    </span><span class="hs-glyph">!</span><span id="local-6989586621679093644"><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093644"><span class="hs-identifier hs-var">now</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO CTime
+</span><span id="line-44"></span><span>    </span><span class="hs-glyph">!</span><span id="local-6989586621679093651"><span class="annot"><span class="annottext">CTime
+</span><a href="#local-6989586621679093651"><span class="hs-identifier hs-var">now</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO CTime
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">epochTime</span></a></span><span>
-</span><span id="line-45"></span><span>    </span><span class="hs-glyph">!</span><span id="local-6989586621679093643"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093643"><span class="hs-identifier hs-var">t1</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CTime -&gt; IO ByteString
+</span><span id="line-45"></span><span>    </span><span class="hs-glyph">!</span><span id="local-6989586621679093650"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093650"><span class="hs-identifier hs-var">t1</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CTime -&gt; IO ByteString
 </span><a href="../../../../snap-core/html/src"><span class="hs-identifier hs-var">formatHttpTime</span></a></span><span> </span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093644"><span class="hs-identifier hs-var">now</span></a></span><span>
-</span><span id="line-46"></span><span>    </span><span class="hs-glyph">!</span><span id="local-6989586621679093642"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093642"><span class="hs-identifier hs-var">t2</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CTime -&gt; IO ByteString
+</span><a href="#local-6989586621679093651"><span class="hs-identifier hs-var">now</span></a></span><span>
+</span><span id="line-46"></span><span>    </span><span class="hs-glyph">!</span><span id="local-6989586621679093649"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093649"><span class="hs-identifier hs-var">t2</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CTime -&gt; IO ByteString
 </span><a href="../../../../snap-core/html/src"><span class="hs-identifier hs-var">formatLogTime</span></a></span><span> </span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093644"><span class="hs-identifier hs-var">now</span></a></span><span>
-</span><span id="line-47"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679093641"><span class="annot"><span class="annottext">out :: (ByteString, ByteString, CTime)
-</span><a href="#local-6989586621679093641"><span class="hs-identifier hs-var hs-var">out</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093643"><span class="hs-identifier hs-var">t1</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093642"><span class="hs-identifier hs-var">t2</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093644"><span class="hs-identifier hs-var">now</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679093651"><span class="hs-identifier hs-var">now</span></a></span><span>
+</span><span id="line-47"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679093648"><span class="annot"><span class="annottext">out :: (ByteString, ByteString, CTime)
+</span><a href="#local-6989586621679093648"><span class="hs-identifier hs-var hs-var">out</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093650"><span class="hs-identifier hs-var">t1</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093649"><span class="hs-identifier hs-var">t2</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">CTime
+</span><a href="#local-6989586621679093651"><span class="hs-identifier hs-var">now</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>    </span><span class="annot"><span class="annottext">(ByteString, ByteString, CTime)
 -&gt; IO (ByteString, ByteString, CTime)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString, ByteString, CTime)
-</span><a href="#local-6989586621679093641"><span class="hs-identifier hs-var">out</span></a></span><span>
+</span><a href="#local-6989586621679093648"><span class="hs-identifier hs-var">out</span></a></span><span>
 </span><span id="line-49"></span><span>
 </span><span id="line-50"></span><span>
 </span><span id="line-51"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
 </span><span id="line-52"></span><span class="annot"><a href="Snap.Internal.Http.Server.Date.html#updateState"><span class="hs-identifier hs-type">updateState</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Snap.Internal.Http.Server.Date.html#DateState"><span class="hs-identifier hs-type">DateState</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-53"></span><span id="updateState"><span class="annot"><span class="annottext">updateState :: DateState -&gt; IO ()
-</span><a href="Snap.Internal.Http.Server.Date.html#updateState"><span class="hs-identifier hs-var hs-var">updateState</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Snap.Internal.Http.Server.Date.html#DateState"><span class="hs-identifier hs-type">DateState</span></a></span><span> </span><span id="local-6989586621679093639"><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093639"><span class="hs-identifier hs-var">dateString</span></a></span></span><span> </span><span id="local-6989586621679093638"><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093638"><span class="hs-identifier hs-var">logString</span></a></span></span><span> </span><span id="local-6989586621679093637"><span class="annot"><span class="annottext">IORef CTime
-</span><a href="#local-6989586621679093637"><span class="hs-identifier hs-var">time</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-54"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679093636"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093636"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093635"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093635"><span class="hs-identifier hs-var">s2</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093634"><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093634"><span class="hs-identifier hs-var">now</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (ByteString, ByteString, CTime)
+</span><a href="Snap.Internal.Http.Server.Date.html#updateState"><span class="hs-identifier hs-var hs-var">updateState</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Snap.Internal.Http.Server.Date.html#DateState"><span class="hs-identifier hs-type">DateState</span></a></span><span> </span><span id="local-6989586621679093646"><span class="annot"><span class="annottext">IORef ByteString
+</span><a href="#local-6989586621679093646"><span class="hs-identifier hs-var">dateString</span></a></span></span><span> </span><span id="local-6989586621679093645"><span class="annot"><span class="annottext">IORef ByteString
+</span><a href="#local-6989586621679093645"><span class="hs-identifier hs-var">logString</span></a></span></span><span> </span><span id="local-6989586621679093644"><span class="annot"><span class="annottext">IORef CTime
+</span><a href="#local-6989586621679093644"><span class="hs-identifier hs-var">time</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-54"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679093643"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093643"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093642"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679093642"><span class="hs-identifier hs-var">s2</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679093641"><span class="annot"><span class="annottext">CTime
+</span><a href="#local-6989586621679093641"><span class="hs-identifier hs-var">now</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (ByteString, ByteString, CTime)
 </span><a href="Snap.Internal.Http.Server.Date.html#fetchTime"><span class="hs-identifier hs-var">fetchTime</span></a></span><span>
 </span><span id="line-55"></span><span>    </span><span class="annot"><span class="annottext">IORef ByteString -&gt; ByteString -&gt; IO ()
 forall a. IORef a -&gt; a -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">writeIORef</span></a></span><span> </span><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093639"><span class="hs-identifier hs-var">dateString</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; IO ()) -&gt; ByteString -&gt; IO ()
+</span><a href="#local-6989586621679093646"><span class="hs-identifier hs-var">dateString</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; IO ()) -&gt; ByteString -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093636"><span class="hs-identifier hs-var">s1</span></a></span><span>
+</span><a href="#local-6989586621679093643"><span class="hs-identifier hs-var">s1</span></a></span><span>
 </span><span id="line-56"></span><span>    </span><span class="annot"><span class="annottext">IORef ByteString -&gt; ByteString -&gt; IO ()
 forall a. IORef a -&gt; a -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">writeIORef</span></a></span><span> </span><span class="annot"><span class="annottext">IORef ByteString
-</span><a href="#local-6989586621679093638"><span class="hs-identifier hs-var">logString</span></a></span><span>  </span><span class="annot"><span class="annottext">(ByteString -&gt; IO ()) -&gt; ByteString -&gt; IO ()
+</span><a href="#local-6989586621679093645"><span class="hs-identifier hs-var">logString</span></a></span><span>  </span><span class="annot"><span class="annottext">(ByteString -&gt; IO ()) -&gt; ByteString -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679093635"><span class="hs-identifier hs-var">s2</span></a></span><span>
+</span><a href="#local-6989586621679093642"><span class="hs-identifier hs-var">s2</span></a></span><span>
 </span><span id="line-57"></span><span>    </span><span class="annot"><span class="annottext">IORef CTime -&gt; CTime -&gt; IO ()
 forall a. IORef a -&gt; a -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">writeIORef</span></a></span><span> </span><span class="annot"><span class="annottext">IORef CTime
-</span><a href="#local-6989586621679093637"><span class="hs-identifier hs-var">time</span></a></span><span>       </span><span class="annot"><span class="annottext">(CTime -&gt; IO ()) -&gt; CTime -&gt; IO ()
+</span><a href="#local-6989586621679093644"><span class="hs-identifier hs-var">time</span></a></span><span>       </span><span class="annot"><span class="annottext">(CTime -&gt; IO ()) -&gt; CTime -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093634"><span class="hs-identifier hs-var">now</span></a></span><span>
+</span><a href="#local-6989586621679093641"><span class="hs-identifier hs-var">now</span></a></span><span>
 </span><span id="line-58"></span><span>
 </span><span id="line-59"></span><span>    </span><span class="annot"><span class="annottext">() -&gt; IO ()
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -154,11 +154,11 @@ forall a. IO a -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mask_</span></a></span><span> </span><span class="annot"><span class="annottext">(IO () -&gt; IO ()) -&gt; IO () -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-65"></span><span>    </span><span id="local-6989586621679093632"><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093632"><span class="hs-identifier hs-var">now</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO CTime
+</span><span id="line-65"></span><span>    </span><span id="local-6989586621679093639"><span class="annot"><span class="annottext">CTime
+</span><a href="#local-6989586621679093639"><span class="hs-identifier hs-var">now</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO CTime
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">epochTime</span></a></span><span>
-</span><span id="line-66"></span><span>    </span><span id="local-6989586621679093631"><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093631"><span class="hs-identifier hs-var">old</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IORef CTime -&gt; IO CTime
+</span><span id="line-66"></span><span>    </span><span id="local-6989586621679093638"><span class="annot"><span class="annottext">CTime
+</span><a href="#local-6989586621679093638"><span class="hs-identifier hs-var">old</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IORef CTime -&gt; IO CTime
 forall a. IORef a -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readIORef</span></a></span><span> </span><span class="annot"><span class="annottext">(IORef CTime -&gt; IO CTime) -&gt; IORef CTime -&gt; IO CTime
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -168,10 +168,10 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-67"></span><span>    </span><span class="annot"><span class="annottext">Bool -&gt; IO () -&gt; IO ()
 forall (f :: * -&gt; *). Applicative f =&gt; Bool -&gt; f () -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">when</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093632"><span class="hs-identifier hs-var">now</span></a></span><span> </span><span class="annot"><span class="annottext">CTime -&gt; CTime -&gt; Bool
+</span><a href="#local-6989586621679093639"><span class="hs-identifier hs-var">now</span></a></span><span> </span><span class="annot"><span class="annottext">CTime -&gt; CTime -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">CTime
-</span><a href="#local-6989586621679093631"><span class="hs-identifier hs-var">old</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(IO () -&gt; IO ()) -&gt; IO () -&gt; IO ()
+</span><a href="#local-6989586621679093638"><span class="hs-identifier hs-var">old</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(IO () -&gt; IO ()) -&gt; IO () -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">DateState -&gt; IO ()
 </span><a href="Snap.Internal.Http.Server.Date.html#updateState"><span class="hs-identifier hs-var">updateState</span></a></span><span> </span><span class="annot"><span class="annottext">DateState

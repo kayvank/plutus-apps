@@ -36,73 +36,73 @@ Foldable t =&gt;
 </span><span id="line-24"></span><span class="hs-comment">-- | Construct a tuple type given a list of types.</span><span>
 </span><span id="line-25"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleT"><span class="hs-identifier hs-type">toTupleT</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">TypeQ</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">TypeQ</span></a></span><span>
 </span><span id="line-26"></span><span id="toTupleT"><span class="annot"><span class="annottext">toTupleT :: [TypeQ] -&gt; TypeQ
-</span><a href="Optics.TH.Internal.Utils.html#toTupleT"><span class="hs-identifier hs-var hs-var">toTupleT</span></a></span></span><span> </span><span class="hs-special">[</span><span id="local-6989586621679065339"><span class="annot"><span class="annottext">TypeQ
-</span><a href="#local-6989586621679065339"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TypeQ
-</span><a href="#local-6989586621679065339"><span class="hs-identifier hs-var">x</span></a></span><span>
-</span><span id="line-27"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleT"><span class="hs-identifier hs-var">toTupleT</span></a></span><span> </span><span id="local-6989586621679065338"><span class="annot"><span class="annottext">[TypeQ]
-</span><a href="#local-6989586621679065338"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TypeQ -&gt; [TypeQ] -&gt; TypeQ
+</span><a href="Optics.TH.Internal.Utils.html#toTupleT"><span class="hs-identifier hs-var hs-var">toTupleT</span></a></span></span><span> </span><span class="hs-special">[</span><span id="local-6989586621679065338"><span class="annot"><span class="annottext">TypeQ
+</span><a href="#local-6989586621679065338"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TypeQ
+</span><a href="#local-6989586621679065338"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><span id="line-27"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleT"><span class="hs-identifier hs-var">toTupleT</span></a></span><span> </span><span id="local-6989586621679065337"><span class="annot"><span class="annottext">[TypeQ]
+</span><a href="#local-6989586621679065337"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TypeQ -&gt; [TypeQ] -&gt; TypeQ
 </span><a href="Optics.TH.Internal.Utils.html#appsT"><span class="hs-identifier hs-var">appsT</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; TypeQ
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">tupleT</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[TypeQ] -&gt; Int
 forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">length</span></a></span><span> </span><span class="annot"><span class="annottext">[TypeQ]
-</span><a href="#local-6989586621679065338"><span class="hs-identifier hs-var">xs</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[TypeQ]
-</span><a href="#local-6989586621679065338"><span class="hs-identifier hs-var">xs</span></a></span><span>
+</span><a href="#local-6989586621679065337"><span class="hs-identifier hs-var">xs</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[TypeQ]
+</span><a href="#local-6989586621679065337"><span class="hs-identifier hs-var">xs</span></a></span><span>
 </span><span id="line-28"></span><span>
 </span><span id="line-29"></span><span class="hs-comment">-- | Construct a tuple value given a list of expressions.</span><span>
 </span><span id="line-30"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleE"><span class="hs-identifier hs-type">toTupleE</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">ExpQ</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">ExpQ</span></a></span><span>
 </span><span id="line-31"></span><span id="toTupleE"><span class="annot"><span class="annottext">toTupleE :: [ExpQ] -&gt; ExpQ
-</span><a href="Optics.TH.Internal.Utils.html#toTupleE"><span class="hs-identifier hs-var hs-var">toTupleE</span></a></span></span><span> </span><span class="hs-special">[</span><span id="local-6989586621679065335"><span class="annot"><span class="annottext">ExpQ
-</span><a href="#local-6989586621679065335"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExpQ
-</span><a href="#local-6989586621679065335"><span class="hs-identifier hs-var">x</span></a></span><span>
-</span><span id="line-32"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleE"><span class="hs-identifier hs-var">toTupleE</span></a></span><span> </span><span id="local-6989586621679065334"><span class="annot"><span class="annottext">[ExpQ]
-</span><a href="#local-6989586621679065334"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[ExpQ] -&gt; ExpQ
+</span><a href="Optics.TH.Internal.Utils.html#toTupleE"><span class="hs-identifier hs-var hs-var">toTupleE</span></a></span></span><span> </span><span class="hs-special">[</span><span id="local-6989586621679065334"><span class="annot"><span class="annottext">ExpQ
+</span><a href="#local-6989586621679065334"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExpQ
+</span><a href="#local-6989586621679065334"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><span id="line-32"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleE"><span class="hs-identifier hs-var">toTupleE</span></a></span><span> </span><span id="local-6989586621679065333"><span class="annot"><span class="annottext">[ExpQ]
+</span><a href="#local-6989586621679065333"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[ExpQ] -&gt; ExpQ
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">tupE</span></a></span><span> </span><span class="annot"><span class="annottext">[ExpQ]
-</span><a href="#local-6989586621679065334"><span class="hs-identifier hs-var">xs</span></a></span><span>
+</span><a href="#local-6989586621679065333"><span class="hs-identifier hs-var">xs</span></a></span><span>
 </span><span id="line-33"></span><span>
 </span><span id="line-34"></span><span class="hs-comment">-- | Construct a tuple pattern given a list of patterns.</span><span>
 </span><span id="line-35"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleP"><span class="hs-identifier hs-type">toTupleP</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">PatQ</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">PatQ</span></a></span><span>
 </span><span id="line-36"></span><span id="toTupleP"><span class="annot"><span class="annottext">toTupleP :: [PatQ] -&gt; PatQ
-</span><a href="Optics.TH.Internal.Utils.html#toTupleP"><span class="hs-identifier hs-var hs-var">toTupleP</span></a></span></span><span> </span><span class="hs-special">[</span><span id="local-6989586621679065331"><span class="annot"><span class="annottext">PatQ
-</span><a href="#local-6989586621679065331"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PatQ
-</span><a href="#local-6989586621679065331"><span class="hs-identifier hs-var">x</span></a></span><span>
-</span><span id="line-37"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleP"><span class="hs-identifier hs-var">toTupleP</span></a></span><span> </span><span id="local-6989586621679065330"><span class="annot"><span class="annottext">[PatQ]
-</span><a href="#local-6989586621679065330"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[PatQ] -&gt; PatQ
+</span><a href="Optics.TH.Internal.Utils.html#toTupleP"><span class="hs-identifier hs-var hs-var">toTupleP</span></a></span></span><span> </span><span class="hs-special">[</span><span id="local-6989586621679065330"><span class="annot"><span class="annottext">PatQ
+</span><a href="#local-6989586621679065330"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PatQ
+</span><a href="#local-6989586621679065330"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><span id="line-37"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#toTupleP"><span class="hs-identifier hs-var">toTupleP</span></a></span><span> </span><span id="local-6989586621679065329"><span class="annot"><span class="annottext">[PatQ]
+</span><a href="#local-6989586621679065329"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[PatQ] -&gt; PatQ
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">tupP</span></a></span><span> </span><span class="annot"><span class="annottext">[PatQ]
-</span><a href="#local-6989586621679065330"><span class="hs-identifier hs-var">xs</span></a></span><span>
+</span><a href="#local-6989586621679065329"><span class="hs-identifier hs-var">xs</span></a></span><span>
 </span><span id="line-38"></span><span>
 </span><span id="line-39"></span><span class="hs-comment">-- | Apply arguments to a type constructor.</span><span>
 </span><span id="line-40"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#conAppsT"><span class="hs-identifier hs-type">conAppsT</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Name</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span>
 </span><span id="line-41"></span><span id="conAppsT"><span class="annot"><span class="annottext">conAppsT :: Name -&gt; [Type] -&gt; Type
-</span><a href="Optics.TH.Internal.Utils.html#conAppsT"><span class="hs-identifier hs-var hs-var">conAppsT</span></a></span></span><span> </span><span id="local-6989586621679065328"><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065328"><span class="hs-identifier hs-var">conName</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Type -&gt; Type -&gt; Type) -&gt; Type -&gt; [Type] -&gt; Type
+</span><a href="Optics.TH.Internal.Utils.html#conAppsT"><span class="hs-identifier hs-var hs-var">conAppsT</span></a></span></span><span> </span><span id="local-6989586621679065327"><span class="annot"><span class="annottext">Name
+</span><a href="#local-6989586621679065327"><span class="hs-identifier hs-var">conName</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Type -&gt; Type -&gt; Type) -&gt; Type -&gt; [Type] -&gt; Type
 forall (t :: * -&gt; *) b a.
 Foldable t =&gt;
 (b -&gt; a -&gt; b) -&gt; b -&gt; t a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">foldl</span></a></span><span> </span><span class="annot"><span class="annottext">Type -&gt; Type -&gt; Type
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">AppT</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Name -&gt; Type
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">ConT</span></a></span><span> </span><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065328"><span class="hs-identifier hs-var">conName</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065327"><span class="hs-identifier hs-var">conName</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-42"></span><span>
 </span><span id="line-43"></span><span class="hs-comment">-- | Generate many new names from a given base name.</span><span>
 </span><span id="line-44"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#newNames"><span class="hs-identifier hs-type">newNames</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span> </span><span class="hs-comment">{- ^ base name -}</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-comment">{- ^ count -}</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Q</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Name</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-45"></span><span id="newNames"><span class="annot"><span class="annottext">newNames :: String -&gt; Int -&gt; Q [Name]
-</span><a href="Optics.TH.Internal.Utils.html#newNames"><span class="hs-identifier hs-var hs-var">newNames</span></a></span></span><span> </span><span id="local-6989586621679065324"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065324"><span class="hs-identifier hs-var">base</span></a></span></span><span> </span><span id="local-6989586621679065323"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679065323"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Q Name] -&gt; Q [Name]
+</span><a href="Optics.TH.Internal.Utils.html#newNames"><span class="hs-identifier hs-var hs-var">newNames</span></a></span></span><span> </span><span id="local-6989586621679065323"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679065323"><span class="hs-identifier hs-var">base</span></a></span></span><span> </span><span id="local-6989586621679065322"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679065322"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Q Name] -&gt; Q [Name]
 forall (t :: * -&gt; *) (m :: * -&gt; *) a.
 (Traversable t, Monad m) =&gt;
 t (m a) -&gt; m (t a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">sequence</span></a></span><span> </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">String -&gt; Q Name
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">newName</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065324"><span class="hs-identifier hs-var">base</span></a></span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679065323"><span class="hs-identifier hs-var">base</span></a></span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span class="annot"><span class="annottext">Int -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679065320"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679065320"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679065320"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679065319"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679065319"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679065319"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-glyph">..</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679065323"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679065322"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-46"></span><span>
 </span><span id="line-47"></span><span class="hs-comment">-- We substitute concrete types with type variables and match them with concrete</span><span>
 </span><span id="line-48"></span><span class="hs-comment">-- types in the instance context. This significantly improves type inference as</span><span>
@@ -110,23 +110,23 @@ forall a. Show a =&gt; a -&gt; String
 </span><span id="line-50"></span><span class="hs-comment">-- and UndecidableInstances.</span><span>
 </span><span id="line-51"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#eqSubst"><span class="hs-identifier hs-type">eqSubst</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Q</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Pred</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-52"></span><span id="eqSubst"><span class="annot"><span class="annottext">eqSubst :: Type -&gt; String -&gt; Q (Type, Type)
-</span><a href="Optics.TH.Internal.Utils.html#eqSubst"><span class="hs-identifier hs-var hs-var">eqSubst</span></a></span></span><span> </span><span id="local-6989586621679065318"><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065318"><span class="hs-identifier hs-var">ty</span></a></span></span><span> </span><span id="local-6989586621679065317"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065317"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-53"></span><span>  </span><span id="local-6989586621679065316"><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065316"><span class="hs-identifier hs-var">placeholder</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Name -&gt; Type
+</span><a href="Optics.TH.Internal.Utils.html#eqSubst"><span class="hs-identifier hs-var hs-var">eqSubst</span></a></span></span><span> </span><span id="local-6989586621679065317"><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065317"><span class="hs-identifier hs-var">ty</span></a></span></span><span> </span><span id="local-6989586621679065316"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679065316"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-53"></span><span>  </span><span id="local-6989586621679065315"><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065315"><span class="hs-identifier hs-var">placeholder</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Name -&gt; Type
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">VarT</span></a></span><span> </span><span class="annot"><span class="annottext">(Name -&gt; Type) -&gt; Q Name -&gt; TypeQ
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Q Name
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">newName</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065317"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><a href="#local-6989586621679065316"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-54"></span><span>  </span><span class="annot"><span class="annottext">(Type, Type) -&gt; Q (Type, Type)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065316"><span class="hs-identifier hs-var">placeholder</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Type -&gt; Type -&gt; Type
+</span><a href="#local-6989586621679065315"><span class="hs-identifier hs-var">placeholder</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Type -&gt; Type -&gt; Type
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var">D.equalPred</span></a></span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065316"><span class="hs-identifier hs-var">placeholder</span></a></span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065318"><span class="hs-identifier hs-var">ty</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065315"><span class="hs-identifier hs-var">placeholder</span></a></span><span> </span><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065317"><span class="hs-identifier hs-var">ty</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-55"></span><span>
 </span><span id="line-56"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#addKindInfo"><span class="hs-identifier hs-type">addKindInfo</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-type">D.DatatypeInfo</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span>
 </span><span id="line-57"></span><span id="addKindInfo"><span class="annot"><span class="annottext">addKindInfo :: DatatypeInfo -&gt; Type -&gt; Type
@@ -136,9 +136,9 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-59"></span><span class="hs-comment">-- | Fill in kind variables using info from datatype type parameters.</span><span>
 </span><span id="line-60"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#addKindInfo%27"><span class="hs-identifier hs-type">addKindInfo'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-type">D.DatatypeInfo</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span>
 </span><span id="line-61"></span><span id="addKindInfo%27"><span class="annot"><span class="annottext">addKindInfo' :: [Type] -&gt; DatatypeInfo -&gt; Type -&gt; Type
-</span><a href="Optics.TH.Internal.Utils.html#addKindInfo%27"><span class="hs-identifier hs-var hs-var">addKindInfo'</span></a></span></span><span> </span><span id="local-6989586621679065310"><span class="annot"><span class="annottext">[Type]
-</span><a href="#local-6989586621679065310"><span class="hs-identifier hs-var">additionalInfo</span></a></span></span><span> </span><span id="local-6989586621679065309"><span class="annot"><span class="annottext">DatatypeInfo
-</span><a href="#local-6989586621679065309"><span class="hs-identifier hs-var">di</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Optics.TH.Internal.Utils.html#addKindInfo%27"><span class="hs-identifier hs-var hs-var">addKindInfo'</span></a></span></span><span> </span><span id="local-6989586621679065309"><span class="annot"><span class="annottext">[Type]
+</span><a href="#local-6989586621679065309"><span class="hs-identifier hs-var">additionalInfo</span></a></span></span><span> </span><span id="local-6989586621679065308"><span class="annot"><span class="annottext">DatatypeInfo
+</span><a href="#local-6989586621679065308"><span class="hs-identifier hs-var">di</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-62"></span><span>  </span><span class="annot"><span class="annottext">Map Name Type -&gt; Type -&gt; Type
 forall t. SubstType t =&gt; Map Name Type -&gt; t -&gt; t
 </span><a href="Language.Haskell.TH.Optics.Internal.html#substType"><span class="hs-identifier hs-var">substType</span></a></span><span> </span><span class="annot"><span class="annottext">(Map Name Type -&gt; Type -&gt; Type)
@@ -152,14 +152,14 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(Type -&gt; Maybe (Name, Type)) -&gt; [Type] -&gt; [(Name, Type)]
 forall a b. (a -&gt; Maybe b) -&gt; [a] -&gt; [b]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mapMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">Type -&gt; Maybe (Name, Type)
-</span><a href="#local-6989586621679065304"><span class="hs-identifier hs-var">var</span></a></span><span> </span><span class="annot"><span class="annottext">([Type] -&gt; Type -&gt; Type) -&gt; [Type] -&gt; Type -&gt; Type
+</span><a href="#local-6989586621679065303"><span class="hs-identifier hs-var">var</span></a></span><span> </span><span class="annot"><span class="annottext">([Type] -&gt; Type -&gt; Type) -&gt; [Type] -&gt; Type -&gt; Type
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">[Type]
-</span><a href="#local-6989586621679065310"><span class="hs-identifier hs-var">additionalInfo</span></a></span><span> </span><span class="annot"><span class="annottext">[Type] -&gt; [Type] -&gt; [Type]
+</span><a href="#local-6989586621679065309"><span class="hs-identifier hs-var">additionalInfo</span></a></span><span> </span><span class="annot"><span class="annottext">[Type] -&gt; [Type] -&gt; [Type]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeInfo -&gt; [Type]
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var hs-var">D.datatypeInstTypes</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeInfo
-</span><a href="#local-6989586621679065309"><span class="hs-identifier hs-var">di</span></a></span><span>
+</span><a href="#local-6989586621679065308"><span class="hs-identifier hs-var">di</span></a></span><span>
 </span><span id="line-63"></span><span>  </span><span class="hs-keyword">where</span><span>
 </span><span id="line-64"></span><span>    </span><span class="hs-comment">-- If the type is a data/newtype family instance, we need to fill in all of</span><span>
 </span><span id="line-65"></span><span>    </span><span class="hs-comment">-- the kinds for weird cases such as:</span><span>
@@ -170,32 +170,32 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><span id="line-70"></span><span>    </span><span class="hs-comment">-- Otherwise we only need info about kind variables.</span><span>
 </span><span id="line-71"></span><span>    </span><span class="hs-comment">--</span><span>
 </span><span id="line-72"></span><span>    </span><span class="hs-comment">-- More info at https://github.com/ekmett/lens/pull/945.</span><span>
-</span><span id="line-73"></span><span>    </span><span id="local-6989586621679065302"><span class="annot"><span class="annottext">isDataFamily :: Bool
-</span><a href="#local-6989586621679065302"><span class="hs-identifier hs-var hs-var">isDataFamily</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">DatatypeInfo -&gt; DatatypeVariant
+</span><span id="line-73"></span><span>    </span><span id="local-6989586621679065301"><span class="annot"><span class="annottext">isDataFamily :: Bool
+</span><a href="#local-6989586621679065301"><span class="hs-identifier hs-var hs-var">isDataFamily</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">DatatypeInfo -&gt; DatatypeVariant
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var hs-var">D.datatypeVariant</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeInfo
-</span><a href="#local-6989586621679065309"><span class="hs-identifier hs-var">di</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeVariant -&gt; DatatypeVariant -&gt; Bool
+</span><a href="#local-6989586621679065308"><span class="hs-identifier hs-var">di</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeVariant -&gt; DatatypeVariant -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeVariant
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var">D.DataInstance</span></a></span><span>
 </span><span id="line-74"></span><span>                </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeInfo -&gt; DatatypeVariant
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var hs-var">D.datatypeVariant</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeInfo
-</span><a href="#local-6989586621679065309"><span class="hs-identifier hs-var">di</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeVariant -&gt; DatatypeVariant -&gt; Bool
+</span><a href="#local-6989586621679065308"><span class="hs-identifier hs-var">di</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeVariant -&gt; DatatypeVariant -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">DatatypeVariant
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var">D.NewtypeInstance</span></a></span><span>
 </span><span id="line-75"></span><span>
-</span><span id="line-76"></span><span>    </span><span id="local-6989586621679065304"><span class="annot"><span class="annottext">var :: Type -&gt; Maybe (Name, Type)
-</span><a href="#local-6989586621679065304"><span class="hs-identifier hs-var hs-var">var</span></a></span></span><span> </span><span id="local-6989586621679065297"><span class="annot"><span class="annottext">t :: Type
-</span><a href="#local-6989586621679065297"><span class="hs-identifier hs-var">t</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">SigT</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">VarT</span></a></span><span> </span><span id="local-6989586621679065295"><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065295"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679065294"><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065294"><span class="hs-identifier hs-var">k</span></a></span></span><span class="hs-special">)</span><span>
+</span><span id="line-76"></span><span>    </span><span id="local-6989586621679065303"><span class="annot"><span class="annottext">var :: Type -&gt; Maybe (Name, Type)
+</span><a href="#local-6989586621679065303"><span class="hs-identifier hs-var hs-var">var</span></a></span></span><span> </span><span id="local-6989586621679065296"><span class="annot"><span class="annottext">t :: Type
+</span><a href="#local-6989586621679065296"><span class="hs-identifier hs-var">t</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">SigT</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">VarT</span></a></span><span> </span><span id="local-6989586621679065294"><span class="annot"><span class="annottext">Name
+</span><a href="#local-6989586621679065294"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679065293"><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065293"><span class="hs-identifier hs-var">k</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-77"></span><span>      </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679065302"><span class="hs-identifier hs-var">isDataFamily</span></a></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Name, Type) -&gt; Maybe (Name, Type)
+</span><a href="#local-6989586621679065301"><span class="hs-identifier hs-var">isDataFamily</span></a></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Name, Type) -&gt; Maybe (Name, Type)
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065295"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065297"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065294"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065296"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-78"></span><span>      </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Optic' A_Traversal NoIx Type Name -&gt; Type -&gt; Bool
 forall k (is :: IxList) s a.
 Is k A_Fold =&gt;
@@ -203,16 +203,16 @@ Optic' k is s a -&gt; s -&gt; Bool
 </span><a href="../../../../optics-core/html/src"><span class="hs-identifier hs-var">has</span></a></span><span> </span><span class="annot"><span class="annottext">Optic' A_Traversal NoIx Type Name
 forall t. HasTypeVars t =&gt; Traversal' t Name
 </span><a href="Language.Haskell.TH.Optics.Internal.html#typeVars"><span class="hs-identifier hs-var">typeVars</span></a></span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065294"><span class="hs-identifier hs-var">k</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Name, Type) -&gt; Maybe (Name, Type)
+</span><a href="#local-6989586621679065293"><span class="hs-identifier hs-var">k</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Name, Type) -&gt; Maybe (Name, Type)
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065295"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065297"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065294"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065296"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-79"></span><span>      </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span>      </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (Name, Type)
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
-</span><span id="line-80"></span><span>    </span><span class="annot"><a href="#local-6989586621679065304"><span class="hs-identifier hs-var">var</span></a></span><span> </span><span class="annot"><span class="annottext">Type
+</span><span id="line-80"></span><span>    </span><span class="annot"><a href="#local-6989586621679065303"><span class="hs-identifier hs-var">var</span></a></span><span> </span><span class="annot"><span class="annottext">Type
 </span><span class="hs-identifier">_</span></span><span>              </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (Name, Type)
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
@@ -230,27 +230,27 @@ forall a. Set a
 </span><span id="line-88"></span><span class="hs-comment">-- a list of variables to exclude from quantification.</span><span>
 </span><span id="line-89"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#quantifyType%27"><span class="hs-identifier hs-type">quantifyType'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">S.Set</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Name</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-type">TyVarBndrSpec</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Cxt</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span><span>
 </span><span id="line-90"></span><span id="quantifyType%27"><span class="annot"><span class="annottext">quantifyType' :: Set Name -&gt; [TyVarBndrSpec] -&gt; [Type] -&gt; Type -&gt; Type
-</span><a href="Optics.TH.Internal.Utils.html#quantifyType%27"><span class="hs-identifier hs-var hs-var">quantifyType'</span></a></span></span><span> </span><span id="local-6989586621679065287"><span class="annot"><span class="annottext">Set Name
-</span><a href="#local-6989586621679065287"><span class="hs-identifier hs-var">exclude</span></a></span></span><span> </span><span id="local-6989586621679065286"><span class="annot"><span class="annottext">[TyVarBndrSpec]
-</span><a href="#local-6989586621679065286"><span class="hs-identifier hs-var">vars</span></a></span></span><span> </span><span id="local-6989586621679065285"><span class="annot"><span class="annottext">[Type]
-</span><a href="#local-6989586621679065285"><span class="hs-identifier hs-var">cx</span></a></span></span><span> </span><span id="local-6989586621679065284"><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065284"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[TyVarBndrSpec] -&gt; [Type] -&gt; Type -&gt; Type
+</span><a href="Optics.TH.Internal.Utils.html#quantifyType%27"><span class="hs-identifier hs-var hs-var">quantifyType'</span></a></span></span><span> </span><span id="local-6989586621679065286"><span class="annot"><span class="annottext">Set Name
+</span><a href="#local-6989586621679065286"><span class="hs-identifier hs-var">exclude</span></a></span></span><span> </span><span id="local-6989586621679065285"><span class="annot"><span class="annottext">[TyVarBndrSpec]
+</span><a href="#local-6989586621679065285"><span class="hs-identifier hs-var">vars</span></a></span></span><span> </span><span id="local-6989586621679065284"><span class="annot"><span class="annottext">[Type]
+</span><a href="#local-6989586621679065284"><span class="hs-identifier hs-var">cx</span></a></span></span><span> </span><span id="local-6989586621679065283"><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065283"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[TyVarBndrSpec] -&gt; [Type] -&gt; Type -&gt; Type
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">ForallT</span></a></span><span> </span><span class="annot"><span class="annottext">[TyVarBndrSpec]
-</span><a href="#local-6989586621679065282"><span class="hs-identifier hs-var">vs</span></a></span><span> </span><span class="annot"><span class="annottext">[Type]
-</span><a href="#local-6989586621679065285"><span class="hs-identifier hs-var">cx</span></a></span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065284"><span class="hs-identifier hs-var">t</span></a></span><span>
+</span><a href="#local-6989586621679065281"><span class="hs-identifier hs-var">vs</span></a></span><span> </span><span class="annot"><span class="annottext">[Type]
+</span><a href="#local-6989586621679065284"><span class="hs-identifier hs-var">cx</span></a></span><span> </span><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065283"><span class="hs-identifier hs-var">t</span></a></span><span>
 </span><span id="line-91"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-92"></span><span>    </span><span id="local-6989586621679065282"><span class="annot"><span class="annottext">vs :: [TyVarBndrSpec]
-</span><a href="#local-6989586621679065282"><span class="hs-identifier hs-var hs-var">vs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(TyVarBndrSpec -&gt; Bool) -&gt; [TyVarBndrSpec] -&gt; [TyVarBndrSpec]
+</span><span id="line-92"></span><span>    </span><span id="local-6989586621679065281"><span class="annot"><span class="annottext">vs :: [TyVarBndrSpec]
+</span><a href="#local-6989586621679065281"><span class="hs-identifier hs-var hs-var">vs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(TyVarBndrSpec -&gt; Bool) -&gt; [TyVarBndrSpec] -&gt; [TyVarBndrSpec]
 forall a. (a -&gt; Bool) -&gt; [a] -&gt; [a]
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">filter</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679065281"><span class="annot"><span class="annottext">TyVarBndrSpec
-</span><a href="#local-6989586621679065281"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TyVarBndrSpec -&gt; Name
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">filter</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679065280"><span class="annot"><span class="annottext">TyVarBndrSpec
+</span><a href="#local-6989586621679065280"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TyVarBndrSpec -&gt; Name
 forall flag. TyVarBndrSpec -&gt; Name
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var">D.tvName</span></a></span><span> </span><span class="annot"><span class="annottext">TyVarBndrSpec
-</span><a href="#local-6989586621679065281"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Name -&gt; Set Name -&gt; Bool
+</span><a href="#local-6989586621679065280"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Name -&gt; Set Name -&gt; Bool
 forall a. Ord a =&gt; a -&gt; Set a -&gt; Bool
 </span><a href="../../../../containers/html/src"><span class="hs-operator hs-var">`S.notMember`</span></a></span><span> </span><span class="annot"><span class="annottext">Set Name
-</span><a href="#local-6989586621679065287"><span class="hs-identifier hs-var">exclude</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065286"><span class="hs-identifier hs-var">exclude</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-93"></span><span>       </span><span class="annot"><span class="annottext">([TyVarBndrSpec] -&gt; [TyVarBndrSpec])
 -&gt; ([Type] -&gt; [TyVarBndrSpec]) -&gt; [Type] -&gt; [TyVarBndrSpec]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -271,7 +271,7 @@ forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">map</span></a></span><span> </span><span class="annot"><span class="annottext">TyVarBndrSpec -&gt; Type
 forall flag. TyVarBndrSpec -&gt; Type
 </span><a href="Optics.TH.Internal.Utils.html#tyVarBndrToType"><span class="hs-identifier hs-var">tyVarBndrToType</span></a></span><span> </span><span class="annot"><span class="annottext">[TyVarBndrSpec]
-</span><a href="#local-6989586621679065286"><span class="hs-identifier hs-var">vars</span></a></span><span> </span><span class="annot"><span class="annottext">[Type] -&gt; [Type] -&gt; [Type]
+</span><a href="#local-6989586621679065285"><span class="hs-identifier hs-var">vars</span></a></span><span> </span><span class="annot"><span class="annottext">[Type] -&gt; [Type] -&gt; [Type]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">Set Type -&gt; [Type]
 forall a. Set a -&gt; [a]
@@ -281,23 +281,23 @@ forall k a (is :: IxList) s.
 Optic' k is s a -&gt; s -&gt; Set a
 </span><a href="../../../../optics-core/html/src"><span class="hs-identifier hs-var">setOf</span></a></span><span> </span><span class="annot"><span class="annottext">Optic' A_Fold NoIx Type Type
 </span><a href="Language.Haskell.TH.Optics.Internal.html#typeVarsKinded"><span class="hs-identifier hs-var">typeVarsKinded</span></a></span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065284"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065283"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-96"></span><span>
 </span><span id="line-97"></span><span class="hs-comment">-- | Transform 'TyVarBndr' into a 'Type' so it's suitable e.g. for</span><span>
 </span><span id="line-98"></span><span class="hs-comment">-- freeVariablesWellScoped or type substitution.</span><span>
-</span><span id="line-99"></span><span id="local-6989586621679065370"><span class="annot"><a href="Optics.TH.Internal.Utils.html#tyVarBndrToType"><span class="hs-identifier hs-type">tyVarBndrToType</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-type">TyVarBndr_</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679065370"><span class="hs-identifier hs-type">flag</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span></span><span>
+</span><span id="line-99"></span><span id="local-6989586621679065369"><span class="annot"><a href="Optics.TH.Internal.Utils.html#tyVarBndrToType"><span class="hs-identifier hs-type">tyVarBndrToType</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-type">TyVarBndr_</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679065369"><span class="hs-identifier hs-type">flag</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Type</span></a></span></span><span>
 </span><span id="line-100"></span><span id="tyVarBndrToType"><span class="annot"><span class="annottext">tyVarBndrToType :: TyVarBndrSpec -&gt; Type
 </span><a href="Optics.TH.Internal.Utils.html#tyVarBndrToType"><span class="hs-identifier hs-var hs-var">tyVarBndrToType</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Name -&gt; Type) -&gt; (Name -&gt; Type -&gt; Type) -&gt; TyVarBndrSpec -&gt; Type
 forall r flag.
 (Name -&gt; r) -&gt; (Name -&gt; Type -&gt; r) -&gt; TyVarBndrSpec -&gt; r
 </span><a href="../../../../th-abstraction/html/src"><span class="hs-identifier hs-var">elimTV</span></a></span><span> </span><span class="annot"><span class="annottext">Name -&gt; Type
-</span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">VarT</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679065269"><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065269"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679065268"><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065268"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Type -&gt; Type -&gt; Type
+</span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">VarT</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679065268"><span class="annot"><span class="annottext">Name
+</span><a href="#local-6989586621679065268"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679065267"><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065267"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Type -&gt; Type -&gt; Type
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">SigT</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Name -&gt; Type
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">VarT</span></a></span><span> </span><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065269"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Type
-</span><a href="#local-6989586621679065268"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065268"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Type
+</span><a href="#local-6989586621679065267"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-101"></span><span>
 </span><span id="line-102"></span><span class="hs-comment">-- | Pass in a list of lists of extensions, where any of the given extensions</span><span>
 </span><span id="line-103"></span><span class="hs-comment">-- will satisfy it. For example, you might need either GADTs or</span><span>
@@ -311,12 +311,12 @@ forall r flag.
 </span><span id="line-111"></span><span class="hs-comment">--</span><span>
 </span><span id="line-112"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#requireExtensions"><span class="hs-identifier hs-type">requireExtensions</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-boot-th-8.10.7/src"><span class="hs-identifier hs-type">Extension</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Q</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-113"></span><span id="requireExtensions"><span class="annot"><span class="annottext">requireExtensions :: String -&gt; [[Extension]] -&gt; Q ()
-</span><a href="Optics.TH.Internal.Utils.html#requireExtensions"><span class="hs-identifier hs-var hs-var">requireExtensions</span></a></span></span><span> </span><span id="local-6989586621679065266"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065266"><span class="hs-identifier hs-var">what</span></a></span></span><span> </span><span id="local-6989586621679065265"><span class="annot"><span class="annottext">[[Extension]]
-</span><a href="#local-6989586621679065265"><span class="hs-identifier hs-var">extLists</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="Optics.TH.Internal.Utils.html#requireExtensions"><span class="hs-identifier hs-var hs-var">requireExtensions</span></a></span></span><span> </span><span id="local-6989586621679065265"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679065265"><span class="hs-identifier hs-var">what</span></a></span></span><span> </span><span id="local-6989586621679065264"><span class="annot"><span class="annottext">[[Extension]]
+</span><a href="#local-6989586621679065264"><span class="hs-identifier hs-var">extLists</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-114"></span><span>  </span><span class="hs-comment">-- Taken from the persistent library</span><span>
-</span><span id="line-115"></span><span>  </span><span id="local-6989586621679065264"><span class="annot"><span class="annottext">[[Extension]]
-</span><a href="#local-6989586621679065264"><span class="hs-identifier hs-var">required</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">([Extension] -&gt; Q Bool) -&gt; [[Extension]] -&gt; Q [[Extension]]
+</span><span id="line-115"></span><span>  </span><span id="local-6989586621679065263"><span class="annot"><span class="annottext">[[Extension]]
+</span><a href="#local-6989586621679065263"><span class="hs-identifier hs-var">required</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">([Extension] -&gt; Q Bool) -&gt; [[Extension]] -&gt; Q [[Extension]]
 forall (m :: * -&gt; *) a.
 Applicative m =&gt;
 (a -&gt; m Bool) -&gt; [a] -&gt; m [a]
@@ -336,18 +336,18 @@ forall (t :: * -&gt; *) (f :: * -&gt; *) a b.
 (a -&gt; f b) -&gt; t a -&gt; f (t b)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">traverse</span></a></span><span> </span><span class="annot"><span class="annottext">Extension -&gt; Q Bool
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">isExtEnabled</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[[Extension]]
-</span><a href="#local-6989586621679065265"><span class="hs-identifier hs-var">extLists</span></a></span><span>
+</span><a href="#local-6989586621679065264"><span class="hs-identifier hs-var">extLists</span></a></span><span>
 </span><span id="line-116"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">([Extension] -&gt; Maybe Extension) -&gt; [[Extension]] -&gt; [Extension]
 forall a b. (a -&gt; Maybe b) -&gt; [a] -&gt; [b]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mapMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">[Extension] -&gt; Maybe Extension
 forall a. [a] -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">listToMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">[[Extension]]
-</span><a href="#local-6989586621679065264"><span class="hs-identifier hs-var">required</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679065263"><span class="hs-identifier hs-var">required</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-117"></span><span>    </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">() -&gt; Q ()
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-118"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621679065257"><span class="annot"><span class="annottext">Extension
-</span><a href="#local-6989586621679065257"><span class="hs-identifier hs-var">extension</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String -&gt; Q ()
+</span><span id="line-118"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621679065256"><span class="annot"><span class="annottext">Extension
+</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var">extension</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String -&gt; Q ()
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fail</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Q ()) -&gt; String -&gt; Q ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -358,20 +358,20 @@ forall a. Monoid a =&gt; [a] -&gt; a
 </span><span class="hs-string">&quot;Generating &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065266"><span class="hs-identifier hs-var">what</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679065265"><span class="hs-identifier hs-var">what</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot; requires the &quot;</span></span><span>
 </span><span id="line-120"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Extension -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">Extension
-</span><a href="#local-6989586621679065257"><span class="hs-identifier hs-var">extension</span></a></span><span>
+</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var">extension</span></a></span><span>
 </span><span id="line-121"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot; language extension. Please enable it by copy/pasting this line to the top of your file:\n\n&quot;</span></span><span>
 </span><span id="line-122"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Extension -&gt; String
 forall a. Show a =&gt; a -&gt; String
-</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var">extensionToPragma</span></a></span><span> </span><span class="annot"><span class="annottext">Extension
-</span><a href="#local-6989586621679065257"><span class="hs-identifier hs-var">extension</span></a></span><span>
+</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var">extensionToPragma</span></a></span><span> </span><span class="annot"><span class="annottext">Extension
+</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var">extension</span></a></span><span>
 </span><span id="line-123"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n\nTo enable it in a GHCi session, use the following command:\n\n&quot;</span></span><span>
 </span><span id="line-124"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
@@ -380,10 +380,10 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">Extension -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">Extension
-</span><a href="#local-6989586621679065257"><span class="hs-identifier hs-var">extension</span></a></span><span>
+</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var">extension</span></a></span><span>
 </span><span id="line-125"></span><span>      </span><span class="hs-special">]</span><span>
-</span><span id="line-126"></span><span>    </span><span id="local-6989586621679065255"><span class="annot"><span class="annottext">[Extension]
-</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var">extensions</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String -&gt; Q ()
+</span><span id="line-126"></span><span>    </span><span id="local-6989586621679065254"><span class="annot"><span class="annottext">[Extension]
+</span><a href="#local-6989586621679065254"><span class="hs-identifier hs-var">extensions</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String -&gt; Q ()
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fail</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Q ()) -&gt; String -&gt; Q ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -394,7 +394,7 @@ forall a. Monoid a =&gt; [a] -&gt; a
 </span><span class="hs-string">&quot;Generating &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679065266"><span class="hs-identifier hs-var">what</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679065265"><span class="hs-identifier hs-var">what</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot; requires the following language extensions:\n\n&quot;</span></span><span>
@@ -411,7 +411,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Extension -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[Extension]
-</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var">extensions</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065254"><span class="hs-identifier hs-var">extensions</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-129"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n\nPlease enable the extensions by copy/pasting these lines into the top of your file:\n\n&quot;</span></span><span>
 </span><span id="line-130"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; String
@@ -421,8 +421,8 @@ forall a. [a] -&gt; [[a]] -&gt; [a]
 forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">map</span></a></span><span> </span><span class="annot"><span class="annottext">Extension -&gt; String
 forall a. Show a =&gt; a -&gt; String
-</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var">extensionToPragma</span></a></span><span> </span><span class="annot"><span class="annottext">[Extension]
-</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var">extensions</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var">extensionToPragma</span></a></span><span> </span><span class="annot"><span class="annottext">[Extension]
+</span><a href="#local-6989586621679065254"><span class="hs-identifier hs-var">extensions</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-131"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n\nTo enable them in a GHCi session, use the following command:\n\n&quot;</span></span><span>
 </span><span id="line-132"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
@@ -439,18 +439,18 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Extension -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[Extension]
-</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var">extensions</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679065254"><span class="hs-identifier hs-var">extensions</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-133"></span><span>      </span><span class="hs-special">]</span><span>
 </span><span id="line-134"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-135"></span><span>    </span><span id="local-6989586621679065256"><span class="annot"><span class="annottext">extensionToPragma :: a -&gt; String
-</span><a href="#local-6989586621679065256"><span class="hs-identifier hs-var hs-var">extensionToPragma</span></a></span></span><span> </span><span id="local-6989586621679065252"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679065252"><span class="hs-identifier hs-var">ext</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
+</span><span id="line-135"></span><span>    </span><span id="local-6989586621679065255"><span class="annot"><span class="annottext">extensionToPragma :: a -&gt; String
+</span><a href="#local-6989586621679065255"><span class="hs-identifier hs-var hs-var">extensionToPragma</span></a></span></span><span> </span><span id="local-6989586621679065251"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679065251"><span class="hs-identifier hs-var">ext</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;{-# LANGUAGE &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679065252"><span class="hs-identifier hs-var">ext</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679065251"><span class="hs-identifier hs-var">ext</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot; #-}&quot;</span></span><span>
@@ -490,10 +490,10 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><span id="line-155"></span><span>
 </span><span id="line-156"></span><span class="annot"><a href="Optics.TH.Internal.Utils.html#inlinePragma"><span class="hs-identifier hs-type">inlinePragma</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Name</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">DecQ</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-157"></span><span id="inlinePragma"><span class="annot"><span class="annottext">inlinePragma :: Name -&gt; [DecQ]
-</span><a href="Optics.TH.Internal.Utils.html#inlinePragma"><span class="hs-identifier hs-var hs-var">inlinePragma</span></a></span></span><span> </span><span id="local-6989586621679065241"><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065241"><span class="hs-identifier hs-var">methodName</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Name -&gt; Inline -&gt; RuleMatch -&gt; Phases -&gt; DecQ
+</span><a href="Optics.TH.Internal.Utils.html#inlinePragma"><span class="hs-identifier hs-var hs-var">inlinePragma</span></a></span></span><span> </span><span id="local-6989586621679065240"><span class="annot"><span class="annottext">Name
+</span><a href="#local-6989586621679065240"><span class="hs-identifier hs-var">methodName</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Name -&gt; Inline -&gt; RuleMatch -&gt; Phases -&gt; DecQ
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">pragInlD</span></a></span><span> </span><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621679065241"><span class="hs-identifier hs-var">methodName</span></a></span><span> </span><span class="annot"><span class="annottext">Inline
+</span><a href="#local-6989586621679065240"><span class="hs-identifier hs-var">methodName</span></a></span><span> </span><span class="annot"><span class="annottext">Inline
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">Inline</span></a></span><span> </span><span class="annot"><span class="annottext">RuleMatch
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">FunLike</span></a></span><span> </span><span class="annot"><span class="annottext">Phases
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">AllPhases</span></a></span><span class="hs-special">]</span><span>

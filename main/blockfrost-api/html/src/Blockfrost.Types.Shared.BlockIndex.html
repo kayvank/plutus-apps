@@ -15,13 +15,13 @@
 </span><span id="line-15"></span><span>  </span><span class="hs-special">)</span><span>
 </span><span id="line-16"></span><span>
 </span><span id="line-17"></span><span class="hs-comment">-- | Block height (number) and optional index</span><span>
-</span><span id="line-18"></span><span id="local-6989586621681197389"><span id="local-6989586621681197390"></span></span><span class="hs-keyword">data</span><span> </span><span id="BlockIndex"><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-var">BlockIndex</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockIndex"><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-var">BlockIndex</span></a></span></span><span> </span><span class="hs-special">{</span><span>
+</span><span id="line-18"></span><span id="local-6989586621681197396"><span id="local-6989586621681197397"></span></span><span class="hs-keyword">data</span><span> </span><span id="BlockIndex"><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-var">BlockIndex</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockIndex"><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-var">BlockIndex</span></a></span></span><span> </span><span class="hs-special">{</span><span>
 </span><span id="line-19"></span><span>    </span><span id="blockIndexHeight"><span class="annot"><span class="annottext">BlockIndex -&gt; Integer
 </span><a href="Blockfrost.Types.Shared.BlockIndex.html#blockIndexHeight"><span class="hs-identifier hs-var hs-var">blockIndexHeight</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
 </span><span id="line-20"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="blockIndexIndex"><span class="annot"><span class="annottext">BlockIndex -&gt; Maybe Integer
 </span><a href="Blockfrost.Types.Shared.BlockIndex.html#blockIndexIndex"><span class="hs-identifier hs-var hs-var">blockIndexIndex</span></a></span></span><span>  </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
 </span><span id="line-21"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681197382"><span id="local-6989586621681197384"><span class="annot"><span class="annottext">BlockIndex -&gt; BlockIndex -&gt; Bool
+</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681197389"><span id="local-6989586621681197391"><span class="annot"><span class="annottext">BlockIndex -&gt; BlockIndex -&gt; Bool
 (BlockIndex -&gt; BlockIndex -&gt; Bool)
 -&gt; (BlockIndex -&gt; BlockIndex -&gt; Bool) -&gt; Eq BlockIndex
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -29,7 +29,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: BlockIndex -&gt; BlockIndex -&gt; Bool
 == :: BlockIndex -&gt; BlockIndex -&gt; Bool
 $c== :: BlockIndex -&gt; BlockIndex -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197375"><span id="local-6989586621681197377"><span id="local-6989586621681197379"><span class="annot"><span class="annottext">Int -&gt; BlockIndex -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197382"><span id="local-6989586621681197384"><span id="local-6989586621681197386"><span class="annot"><span class="annottext">Int -&gt; BlockIndex -&gt; ShowS
 [BlockIndex] -&gt; ShowS
 BlockIndex -&gt; String
 (Int -&gt; BlockIndex -&gt; ShowS)
@@ -54,10 +54,10 @@ $cto :: forall x. Rep BlockIndex x -&gt; BlockIndex
 $cfrom :: forall x. BlockIndex -&gt; Rep BlockIndex x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-23"></span><span>
-</span><span id="line-24"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197364"><span id="local-6989586621681197366"><span id="local-6989586621681197368"><span class="annot"><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-type">ToHttpApiData</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-25"></span><span>  </span><span id="local-6989586621681197362"><span class="annot"><span class="annottext">toUrlPiece :: BlockIndex -&gt; Text
-</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toUrlPiece</span></a></span></span><span> </span><span id="local-6989586621681197360"><span class="annot"><span class="annottext">BlockIndex
-</span><a href="#local-6989586621681197360"><span class="hs-identifier hs-var">bi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
+</span><span id="line-24"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197371"><span id="local-6989586621681197373"><span id="local-6989586621681197375"><span class="annot"><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-type">ToHttpApiData</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-25"></span><span>  </span><span id="local-6989586621681197369"><span class="annot"><span class="annottext">toUrlPiece :: BlockIndex -&gt; Text
+</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toUrlPiece</span></a></span></span><span> </span><span id="local-6989586621681197367"><span class="annot"><span class="annottext">BlockIndex
+</span><a href="#local-6989586621681197367"><span class="hs-identifier hs-var">bi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">Data.Text.pack</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Text) -&gt; String -&gt; Text
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
@@ -65,7 +65,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockIndex -&gt; Integer
 </span><a href="Blockfrost.Types.Shared.BlockIndex.html#blockIndexHeight"><span class="hs-identifier hs-var hs-var">blockIndexHeight</span></a></span><span> </span><span class="annot"><span class="annottext">BlockIndex
-</span><a href="#local-6989586621681197360"><span class="hs-identifier hs-var">bi</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681197367"><span class="hs-identifier hs-var">bi</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-27"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; ShowS
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; (Integer -&gt; String) -&gt; Maybe Integer -&gt; String
@@ -81,22 +81,22 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockIndex -&gt; Maybe Integer
 </span><a href="Blockfrost.Types.Shared.BlockIndex.html#blockIndexIndex"><span class="hs-identifier hs-var hs-var">blockIndexIndex</span></a></span><span> </span><span class="annot"><span class="annottext">BlockIndex
-</span><a href="#local-6989586621681197360"><span class="hs-identifier hs-var">bi</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681197367"><span class="hs-identifier hs-var">bi</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-28"></span><span>
-</span><span id="line-29"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197351"><span id="local-6989586621681197353"><span class="annot"><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-type">FromHttpApiData</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-30"></span><span>  </span><span id="local-6989586621681197349"><span class="annot"><span class="annottext">parseUrlPiece :: Text -&gt; Either Text BlockIndex
-</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseUrlPiece</span></a></span></span><span> </span><span id="local-6989586621681197347"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197347"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; [Text]
+</span><span id="line-29"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197358"><span id="local-6989586621681197360"><span class="annot"><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-type">FromHttpApiData</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-30"></span><span>  </span><span id="local-6989586621681197356"><span class="annot"><span class="annottext">parseUrlPiece :: Text -&gt; Either Text BlockIndex
+</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseUrlPiece</span></a></span></span><span> </span><span id="local-6989586621681197354"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681197354"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; [Text]
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">Data.Text.splitOn</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;:&quot;</span></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197347"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621681197354"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-31"></span><span>    </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;&quot;</span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Either Text BlockIndex
 forall a b. a -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Left</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Empty block index&quot;</span></span><span>
-</span><span id="line-32"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621681197345"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197345"><span class="hs-identifier hs-var">bh</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer -&gt; BlockIndex
+</span><span id="line-32"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621681197352"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681197352"><span class="hs-identifier hs-var">bh</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer -&gt; BlockIndex
 </span><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-operator hs-var">`BlockIndex`</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Integer
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; BlockIndex)
@@ -105,17 +105,17 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Either Text Integer
 forall a. FromHttpApiData a =&gt; Text -&gt; Either Text a
 </span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var">parseUrlPiece</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197345"><span class="hs-identifier hs-var">bh</span></a></span><span>
-</span><span id="line-33"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621681197343"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197343"><span class="hs-identifier hs-var">bh</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197342"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197342"><span class="hs-identifier hs-var">idx</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer -&gt; BlockIndex
+</span><a href="#local-6989586621681197352"><span class="hs-identifier hs-var">bh</span></a></span><span>
+</span><span id="line-33"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621681197350"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681197350"><span class="hs-identifier hs-var">bh</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197349"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681197349"><span class="hs-identifier hs-var">idx</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer -&gt; BlockIndex
 </span><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-var">BlockIndex</span></a></span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; Maybe Integer -&gt; BlockIndex)
 -&gt; Either Text Integer -&gt; Either Text (Maybe Integer -&gt; BlockIndex)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Either Text Integer
 forall a. FromHttpApiData a =&gt; Text -&gt; Either Text a
 </span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var">parseUrlPiece</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197343"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">Either Text (Maybe Integer -&gt; BlockIndex)
+</span><a href="#local-6989586621681197350"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">Either Text (Maybe Integer -&gt; BlockIndex)
 -&gt; Either Text (Maybe Integer) -&gt; Either Text BlockIndex
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer
@@ -126,7 +126,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Either Text Integer
 forall a. FromHttpApiData a =&gt; Text -&gt; Either Text a
 </span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var">parseUrlPiece</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681197342"><span class="hs-identifier hs-var">idx</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681197349"><span class="hs-identifier hs-var">idx</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-34"></span><span>    </span><span class="annot"><span class="annottext">[Text]
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Either Text BlockIndex
 forall a b. a -&gt; Either a b
@@ -134,7 +134,7 @@ forall a b. a -&gt; Either a b
 </span><span class="hs-string">&quot;Invalid block index&quot;</span></span><span>
 </span><span id="line-35"></span><span>
 </span><span id="line-36"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToParam</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant/html/src"><span class="hs-identifier hs-type">QueryParam</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;from&quot;</span></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-37"></span><span>  </span><span id="local-6989586621681197339"><span class="annot"><span class="annottext">toParam :: Proxy (QueryParam &quot;from&quot; BlockIndex) -&gt; DocQueryParam
+</span><span id="line-37"></span><span>  </span><span id="local-6989586621681197346"><span class="annot"><span class="annottext">toParam :: Proxy (QueryParam &quot;from&quot; BlockIndex) -&gt; DocQueryParam
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toParam</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy (QueryParam &quot;from&quot; BlockIndex)
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-38"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; String -&gt; ParamKind -&gt; DocQueryParam
@@ -150,8 +150,8 @@ forall a b. a -&gt; Either a b
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var">Normal</span></a></span><span>
 </span><span id="line-45"></span><span>
 </span><span id="line-46"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToParam</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant/html/src"><span class="hs-identifier hs-type">QueryParam</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;to&quot;</span></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-47"></span><span>  </span><span id="local-6989586621681197334"><span class="annot"><span class="annottext">toParam :: Proxy (QueryParam &quot;to&quot; BlockIndex) -&gt; DocQueryParam
-</span><a href="#local-6989586621681197334"><span class="hs-identifier hs-var hs-var hs-var hs-var">toParam</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy (QueryParam &quot;to&quot; BlockIndex)
+</span><span id="line-47"></span><span>  </span><span id="local-6989586621681197341"><span class="annot"><span class="annottext">toParam :: Proxy (QueryParam &quot;to&quot; BlockIndex) -&gt; DocQueryParam
+</span><a href="#local-6989586621681197341"><span class="hs-identifier hs-var hs-var hs-var hs-var">toParam</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy (QueryParam &quot;to&quot; BlockIndex)
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-48"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; String -&gt; ParamKind -&gt; DocQueryParam
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var">DocQueryParam</span></a></span><span>
@@ -166,7 +166,7 @@ forall a b. a -&gt; Either a b
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var">Normal</span></a></span><span>
 </span><span id="line-55"></span><span>
 </span><span id="line-56"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockIndex.html#BlockIndex"><span class="hs-identifier hs-type">BlockIndex</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-57"></span><span>    </span><span id="local-6989586621681197331"><span class="annot"><span class="annottext">toSamples :: Proxy BlockIndex -&gt; [(Text, BlockIndex)]
+</span><span id="line-57"></span><span>    </span><span id="local-6989586621681197338"><span class="annot"><span class="annottext">toSamples :: Proxy BlockIndex -&gt; [(Text, BlockIndex)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, BlockIndex)] -&gt; Proxy BlockIndex -&gt; [(Text, BlockIndex)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, BlockIndex)] -&gt; Proxy BlockIndex -&gt; [(Text, BlockIndex)])

@@ -48,8 +48,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-39"></span><span>  </span><span id="local-6989586621679483402"><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483402"><span class="hs-identifier hs-var">aName</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen ApplicationName -&gt; PropertyT IO ApplicationName
+</span><span id="line-39"></span><span>  </span><span id="local-6989586621679483635"><span class="annot"><span class="annottext">ApplicationName
+</span><a href="#local-6989586621679483635"><span class="hs-identifier hs-var">aName</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen ApplicationName -&gt; PropertyT IO ApplicationName
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -67,7 +67,7 @@ forall (m :: * -&gt; *).
 MonadError ApplicationNameError m =&gt;
 ApplicationName -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkApplicationName</span></a></span><span> </span><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483402"><span class="hs-identifier hs-var">aName</span></a></span><span>
+</span><a href="#local-6989586621679483635"><span class="hs-identifier hs-var">aName</span></a></span><span>
 </span><span id="line-41"></span><span>
 </span><span id="line-42"></span><span class="hs-comment">-- Make sure `checkApplicationName` fails on names that are too long.</span><span>
 </span><span id="line-43"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkApplicationNameTooLong"><span class="hs-identifier hs-type">ts_prop_checkApplicationNameTooLong</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -84,8 +84,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-45"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ApplicationName</span></a></span><span> </span><span id="local-6989586621679483398"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483398"><span class="hs-identifier hs-var">aName</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-45"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ApplicationName</span></a></span><span> </span><span id="local-6989586621679483631"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679483631"><span class="hs-identifier hs-var">aName</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-46"></span><span>    </span><span class="annot"><span class="annottext">Gen ApplicationName -&gt; PropertyT IO ApplicationName
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -100,19 +100,19 @@ forall (m :: * -&gt; *) a.
 (MonadGen m, GenBase m ~ Identity) =&gt;
 (a -&gt; Bool) -&gt; m a -&gt; m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.filter</span></a></span><span>
-</span><span id="line-48"></span><span>        </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679483396"><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483396"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Int
+</span><span id="line-48"></span><span>        </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679483629"><span class="annot"><span class="annottext">ApplicationName
+</span><a href="#local-6989586621679483629"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Int
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.length</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ApplicationName -&gt; Text
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">unApplicationName</span></a></span><span> </span><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483396"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679483629"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 forall i. Integral i =&gt; i
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">applicationNameMaxLength</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-49"></span><span>        </span><span class="annot"><span class="annottext">Gen ApplicationName
 </span><a href="Test.Cardano.Chain.Update.Gen.html#genApplicationName"><span class="hs-identifier hs-var">genApplicationName</span></a></span><span>
-</span><span id="line-50"></span><span>  </span><span id="local-6989586621679483393"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483393"><span class="hs-identifier hs-var">moreText</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Text -&gt; PropertyT IO Text
+</span><span id="line-50"></span><span>  </span><span id="local-6989586621679483626"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679483626"><span class="hs-identifier hs-var">moreText</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Text -&gt; PropertyT IO Text
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -150,9 +150,9 @@ cat b c -&gt; cat a b -&gt; cat a c
 -&gt; Text -&gt; Either ApplicationNameError ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483398"><span class="hs-identifier hs-var">aName</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
+</span><a href="#local-6989586621679483631"><span class="hs-identifier hs-var">aName</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-operator hs-var">`T.append`</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483393"><span class="hs-identifier hs-var">moreText</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483626"><span class="hs-identifier hs-var">moreText</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-54"></span><span>
 </span><span id="line-55"></span><span class="hs-comment">-- Make sure `checkApplicationName` fails on names that are non-ascii.</span><span>
 </span><span id="line-56"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkApplicationNameNotAscii"><span class="hs-identifier hs-type">ts_prop_checkApplicationNameNotAscii</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -169,8 +169,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-58"></span><span>  </span><span id="local-6989586621679483385"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679483385"><span class="hs-identifier hs-var">nonAscii</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-58"></span><span>  </span><span id="local-6989586621679483618"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679483618"><span class="hs-identifier hs-var">nonAscii</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-59"></span><span>    </span><span class="annot"><span class="annottext">Gen String -&gt; PropertyT IO String
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -231,7 +231,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.pack</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679483385"><span class="hs-identifier hs-var">nonAscii</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483618"><span class="hs-identifier hs-var">nonAscii</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-66"></span><span>
 </span><span id="line-67"></span><span class="hs-comment">-- Make sure `checkSoftwareVersion` works for allowed values.</span><span>
 </span><span id="line-68"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkSoftwareVersion"><span class="hs-identifier hs-type">ts_prop_checkSoftwareVersion</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -248,8 +248,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-70"></span><span>  </span><span id="local-6989586621679483375"><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483375"><span class="hs-identifier hs-var">sVer</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion -&gt; PropertyT IO SoftwareVersion
+</span><span id="line-70"></span><span>  </span><span id="local-6989586621679483608"><span class="annot"><span class="annottext">SoftwareVersion
+</span><a href="#local-6989586621679483608"><span class="hs-identifier hs-var">sVer</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion -&gt; PropertyT IO SoftwareVersion
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -267,7 +267,7 @@ forall (m :: * -&gt; *).
 MonadError SoftwareVersionError m =&gt;
 SoftwareVersion -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkSoftwareVersion</span></a></span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483375"><span class="hs-identifier hs-var">sVer</span></a></span><span>
+</span><a href="#local-6989586621679483608"><span class="hs-identifier hs-var">sVer</span></a></span><span>
 </span><span id="line-72"></span><span>
 </span><span id="line-73"></span><span class="hs-comment">-- Make sure `checkSoftwareVersion` fails on names that are too long.</span><span>
 </span><span id="line-74"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkSoftwareVersionTooLong"><span class="hs-identifier hs-type">ts_prop_checkSoftwareVersionTooLong</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -284,8 +284,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-76"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ApplicationName</span></a></span><span> </span><span id="local-6989586621679483373"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483373"><span class="hs-identifier hs-var">aName</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-76"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ApplicationName</span></a></span><span> </span><span id="local-6989586621679483606"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679483606"><span class="hs-identifier hs-var">aName</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-77"></span><span>    </span><span class="annot"><span class="annottext">Gen ApplicationName -&gt; PropertyT IO ApplicationName
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -300,19 +300,19 @@ forall (m :: * -&gt; *) a.
 (MonadGen m, GenBase m ~ Identity) =&gt;
 (a -&gt; Bool) -&gt; m a -&gt; m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.filter</span></a></span><span>
-</span><span id="line-79"></span><span>        </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679483372"><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483372"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Int
+</span><span id="line-79"></span><span>        </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679483605"><span class="annot"><span class="annottext">ApplicationName
+</span><a href="#local-6989586621679483605"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Int
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.length</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ApplicationName -&gt; Text
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">unApplicationName</span></a></span><span> </span><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483372"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679483605"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 forall i. Integral i =&gt; i
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">applicationNameMaxLength</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-80"></span><span>        </span><span class="annot"><span class="annottext">Gen ApplicationName
 </span><a href="Test.Cardano.Chain.Update.Gen.html#genApplicationName"><span class="hs-identifier hs-var">genApplicationName</span></a></span><span>
-</span><span id="line-81"></span><span>  </span><span id="local-6989586621679483371"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483371"><span class="hs-identifier hs-var">moreText</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Text -&gt; PropertyT IO Text
+</span><span id="line-81"></span><span>  </span><span id="local-6989586621679483604"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679483604"><span class="hs-identifier hs-var">moreText</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Text -&gt; PropertyT IO Text
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -327,26 +327,26 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><span class="hs-number">20</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">GenT Identity Char
 forall (m :: * -&gt; *). MonadGen m =&gt; m Char
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.ascii</span></a></span><span>
-</span><span id="line-82"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483370"><span class="annot"><span class="annottext">appNameTooLong :: ApplicationName
-</span><a href="#local-6989586621679483370"><span class="hs-identifier hs-var hs-var">appNameTooLong</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; ApplicationName
+</span><span id="line-82"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483603"><span class="annot"><span class="annottext">appNameTooLong :: ApplicationName
+</span><a href="#local-6989586621679483603"><span class="hs-identifier hs-var hs-var">appNameTooLong</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; ApplicationName
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">ApplicationName</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; ApplicationName) -&gt; Text -&gt; ApplicationName
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483373"><span class="hs-identifier hs-var">aName</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
+</span><a href="#local-6989586621679483606"><span class="hs-identifier hs-var">aName</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-operator hs-var">`T.append`</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483371"><span class="hs-identifier hs-var">moreText</span></a></span><span>
-</span><span id="line-83"></span><span>  </span><span id="local-6989586621679483369"><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483369"><span class="hs-identifier hs-var">sVersion</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion -&gt; PropertyT IO SoftwareVersion
+</span><a href="#local-6989586621679483604"><span class="hs-identifier hs-var">moreText</span></a></span><span>
+</span><span id="line-83"></span><span>  </span><span id="local-6989586621679483602"><span class="annot"><span class="annottext">SoftwareVersion
+</span><a href="#local-6989586621679483602"><span class="hs-identifier hs-var">sVersion</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion -&gt; PropertyT IO SoftwareVersion
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion
 </span><a href="Test.Cardano.Chain.Update.Gen.html#genSoftwareVersion"><span class="hs-identifier hs-var">genSoftwareVersion</span></a></span><span>
-</span><span id="line-84"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483368"><span class="annot"><span class="annottext">sVersion' :: SoftwareVersion
-</span><a href="#local-6989586621679483368"><span class="hs-identifier hs-var hs-var">sVersion'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483369"><span class="hs-identifier hs-var">sVersion</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">svAppName :: ApplicationName
+</span><span id="line-84"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483601"><span class="annot"><span class="annottext">sVersion' :: SoftwareVersion
+</span><a href="#local-6989586621679483601"><span class="hs-identifier hs-var hs-var">sVersion'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
+</span><a href="#local-6989586621679483602"><span class="hs-identifier hs-var">sVersion</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">svAppName :: ApplicationName
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">svAppName</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483370"><span class="hs-identifier hs-var">appNameTooLong</span></a></span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679483603"><span class="hs-identifier hs-var">appNameTooLong</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-85"></span><span>  </span><span class="annot"><span class="annottext">Constr -&gt; Either SoftwareVersionError () -&gt; PropertyT IO ()
 forall b a (m :: * -&gt; *).
 (Buildable b, Data a, HasCallStack, MonadTest m) =&gt;
@@ -357,7 +357,7 @@ forall (m :: * -&gt; *).
 MonadError SoftwareVersionError m =&gt;
 SoftwareVersion -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkSoftwareVersion</span></a></span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483368"><span class="hs-identifier hs-var">sVersion'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483601"><span class="hs-identifier hs-var">sVersion'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-86"></span><span>
 </span><span id="line-87"></span><span class="hs-comment">-- Make sure `checkSoftwareVersion` fails on names that are non-ascii.</span><span>
 </span><span id="line-88"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkSoftwareVersionNotAscii"><span class="hs-identifier hs-type">ts_prop_checkSoftwareVersionNotAscii</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -374,8 +374,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-90"></span><span>  </span><span id="local-6989586621679483364"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679483364"><span class="hs-identifier hs-var">nonAscii</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-90"></span><span>  </span><span id="local-6989586621679483597"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679483597"><span class="hs-identifier hs-var">nonAscii</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-91"></span><span>    </span><span class="annot"><span class="annottext">Gen String -&gt; PropertyT IO String
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -417,25 +417,25 @@ forall i. Integral i =&gt; i
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">applicationNameMaxLength</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">GenT Identity Char
 forall (m :: * -&gt; *). MonadGen m =&gt; m Char
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.unicodeAll</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-95"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483363"><span class="annot"><span class="annottext">appNameNonascii :: ApplicationName
-</span><a href="#local-6989586621679483363"><span class="hs-identifier hs-var hs-var">appNameNonascii</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; ApplicationName
+</span><span id="line-95"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483596"><span class="annot"><span class="annottext">appNameNonascii :: ApplicationName
+</span><a href="#local-6989586621679483596"><span class="hs-identifier hs-var hs-var">appNameNonascii</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; ApplicationName
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">ApplicationName</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; ApplicationName) -&gt; Text -&gt; ApplicationName
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.pack</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679483364"><span class="hs-identifier hs-var">nonAscii</span></a></span><span>
-</span><span id="line-96"></span><span>  </span><span id="local-6989586621679483362"><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483362"><span class="hs-identifier hs-var">sVersion</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion -&gt; PropertyT IO SoftwareVersion
+</span><a href="#local-6989586621679483597"><span class="hs-identifier hs-var">nonAscii</span></a></span><span>
+</span><span id="line-96"></span><span>  </span><span id="local-6989586621679483595"><span class="annot"><span class="annottext">SoftwareVersion
+</span><a href="#local-6989586621679483595"><span class="hs-identifier hs-var">sVersion</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion -&gt; PropertyT IO SoftwareVersion
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen SoftwareVersion
 </span><a href="Test.Cardano.Chain.Update.Gen.html#genSoftwareVersion"><span class="hs-identifier hs-var">genSoftwareVersion</span></a></span><span>
-</span><span id="line-97"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483361"><span class="annot"><span class="annottext">sVersion' :: SoftwareVersion
-</span><a href="#local-6989586621679483361"><span class="hs-identifier hs-var hs-var">sVersion'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483362"><span class="hs-identifier hs-var">sVersion</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">svAppName :: ApplicationName
+</span><span id="line-97"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483594"><span class="annot"><span class="annottext">sVersion' :: SoftwareVersion
+</span><a href="#local-6989586621679483594"><span class="hs-identifier hs-var hs-var">sVersion'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
+</span><a href="#local-6989586621679483595"><span class="hs-identifier hs-var">sVersion</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">svAppName :: ApplicationName
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">svAppName</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ApplicationName
-</span><a href="#local-6989586621679483363"><span class="hs-identifier hs-var">appNameNonascii</span></a></span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679483596"><span class="hs-identifier hs-var">appNameNonascii</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-98"></span><span>  </span><span class="annot"><span class="annottext">Constr -&gt; Either SoftwareVersionError () -&gt; PropertyT IO ()
 forall b a (m :: * -&gt; *).
 (Buildable b, Data a, HasCallStack, MonadTest m) =&gt;
@@ -446,7 +446,7 @@ forall (m :: * -&gt; *).
 MonadError SoftwareVersionError m =&gt;
 SoftwareVersion -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkSoftwareVersion</span></a></span><span> </span><span class="annot"><span class="annottext">SoftwareVersion
-</span><a href="#local-6989586621679483361"><span class="hs-identifier hs-var">sVersion'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483594"><span class="hs-identifier hs-var">sVersion'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-99"></span><span>
 </span><span id="line-100"></span><span class="hs-comment">-- Make sure `checkSystemTag` works for allowed values.</span><span>
 </span><span id="line-101"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkSystemTag"><span class="hs-identifier hs-type">ts_prop_checkSystemTag</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -463,8 +463,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-103"></span><span>  </span><span id="local-6989586621679483358"><span class="annot"><span class="annottext">SystemTag
-</span><a href="#local-6989586621679483358"><span class="hs-identifier hs-var">sTag</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SystemTag -&gt; PropertyT IO SystemTag
+</span><span id="line-103"></span><span>  </span><span id="local-6989586621679483591"><span class="annot"><span class="annottext">SystemTag
+</span><a href="#local-6989586621679483591"><span class="hs-identifier hs-var">sTag</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen SystemTag -&gt; PropertyT IO SystemTag
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -482,7 +482,7 @@ forall (m :: * -&gt; *).
 MonadError SystemTagError m =&gt;
 SystemTag -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkSystemTag</span></a></span><span> </span><span class="annot"><span class="annottext">SystemTag
-</span><a href="#local-6989586621679483358"><span class="hs-identifier hs-var">sTag</span></a></span><span>
+</span><a href="#local-6989586621679483591"><span class="hs-identifier hs-var">sTag</span></a></span><span>
 </span><span id="line-105"></span><span>
 </span><span id="line-106"></span><span class="hs-comment">-- Make sure `checkSystemTag` fails on tags that are too long.</span><span>
 </span><span id="line-107"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkSystemTagTooLong"><span class="hs-identifier hs-type">ts_prop_checkSystemTagTooLong</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -499,8 +499,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-109"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">SystemTag</span></a></span><span> </span><span id="local-6989586621679483355"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483355"><span class="hs-identifier hs-var">tag</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-109"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">SystemTag</span></a></span><span> </span><span id="local-6989586621679483588"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679483588"><span class="hs-identifier hs-var">tag</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-110"></span><span>    </span><span class="annot"><span class="annottext">Gen SystemTag -&gt; PropertyT IO SystemTag
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -514,19 +514,19 @@ forall (m :: * -&gt; *) a.
 (MonadGen m, GenBase m ~ Identity) =&gt;
 (a -&gt; Bool) -&gt; m a -&gt; m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.filter</span></a></span><span>
-</span><span id="line-112"></span><span>        </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679483354"><span class="annot"><span class="annottext">SystemTag
-</span><a href="#local-6989586621679483354"><span class="hs-identifier hs-var">sysTag</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Int
+</span><span id="line-112"></span><span>        </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679483587"><span class="annot"><span class="annottext">SystemTag
+</span><a href="#local-6989586621679483587"><span class="hs-identifier hs-var">sysTag</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Int
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.length</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SystemTag -&gt; Text
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">getSystemTag</span></a></span><span> </span><span class="annot"><span class="annottext">SystemTag
-</span><a href="#local-6989586621679483354"><span class="hs-identifier hs-var">sysTag</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679483587"><span class="hs-identifier hs-var">sysTag</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 forall i. Integral i =&gt; i
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">systemTagMaxLength</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-113"></span><span>        </span><span class="annot"><span class="annottext">Gen SystemTag
 </span><a href="Test.Cardano.Chain.Update.Gen.html#genSystemTag"><span class="hs-identifier hs-var">genSystemTag</span></a></span><span>
-</span><span id="line-114"></span><span>  </span><span id="local-6989586621679483352"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483352"><span class="hs-identifier hs-var">moreText</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Text -&gt; PropertyT IO Text
+</span><span id="line-114"></span><span>  </span><span id="local-6989586621679483585"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679483585"><span class="hs-identifier hs-var">moreText</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Text -&gt; PropertyT IO Text
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -541,12 +541,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><span class="hs-number">20</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">GenT Identity Char
 forall (m :: * -&gt; *). MonadGen m =&gt; m Char
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.ascii</span></a></span><span>
-</span><span id="line-115"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483351"><span class="annot"><span class="annottext">sysTagTooLong :: SystemTag
-</span><a href="#local-6989586621679483351"><span class="hs-identifier hs-var hs-var">sysTagTooLong</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; SystemTag
+</span><span id="line-115"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483584"><span class="annot"><span class="annottext">sysTagTooLong :: SystemTag
+</span><a href="#local-6989586621679483584"><span class="hs-identifier hs-var hs-var">sysTagTooLong</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; SystemTag
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">SystemTag</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483355"><span class="hs-identifier hs-var">tag</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
+</span><a href="#local-6989586621679483588"><span class="hs-identifier hs-var">tag</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-operator hs-var">`T.append`</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679483352"><span class="hs-identifier hs-var">moreText</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483585"><span class="hs-identifier hs-var">moreText</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-116"></span><span>  </span><span class="annot"><span class="annottext">Constr -&gt; Either SystemTagError () -&gt; PropertyT IO ()
 forall b a (m :: * -&gt; *).
 (Buildable b, Data a, HasCallStack, MonadTest m) =&gt;
@@ -557,7 +557,7 @@ forall (m :: * -&gt; *).
 MonadError SystemTagError m =&gt;
 SystemTag -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkSystemTag</span></a></span><span> </span><span class="annot"><span class="annottext">SystemTag
-</span><a href="#local-6989586621679483351"><span class="hs-identifier hs-var">sysTagTooLong</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483584"><span class="hs-identifier hs-var">sysTagTooLong</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-117"></span><span>
 </span><span id="line-118"></span><span class="hs-comment">-- Make sure `checkSystemTag` fails on names that are non-ascii.</span><span>
 </span><span id="line-119"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#ts_prop_checkSystemTagNotAscii"><span class="hs-identifier hs-type">ts_prop_checkSystemTagNotAscii</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -574,8 +574,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-121"></span><span>  </span><span id="local-6989586621679483348"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679483348"><span class="hs-identifier hs-var">nonAscii</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-121"></span><span>  </span><span id="local-6989586621679483581"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679483581"><span class="hs-identifier hs-var">nonAscii</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-122"></span><span>    </span><span class="annot"><span class="annottext">Gen String -&gt; PropertyT IO String
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -617,13 +617,13 @@ forall i. Integral i =&gt; i
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">systemTagMaxLength</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">GenT Identity Char
 forall (m :: * -&gt; *). MonadGen m =&gt; m Char
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.unicodeAll</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-126"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483347"><span class="annot"><span class="annottext">sysTagNonascii :: SystemTag
-</span><a href="#local-6989586621679483347"><span class="hs-identifier hs-var hs-var">sysTagNonascii</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; SystemTag
+</span><span id="line-126"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483580"><span class="annot"><span class="annottext">sysTagNonascii :: SystemTag
+</span><a href="#local-6989586621679483580"><span class="hs-identifier hs-var hs-var">sysTagNonascii</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; SystemTag
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">SystemTag</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; SystemTag) -&gt; Text -&gt; SystemTag
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.pack</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679483348"><span class="hs-identifier hs-var">nonAscii</span></a></span><span>
+</span><a href="#local-6989586621679483581"><span class="hs-identifier hs-var">nonAscii</span></a></span><span>
 </span><span id="line-127"></span><span>  </span><span class="annot"><span class="annottext">Constr -&gt; Either SystemTagError () -&gt; PropertyT IO ()
 forall b a (m :: * -&gt; *).
 (Buildable b, Data a, HasCallStack, MonadTest m) =&gt;
@@ -634,7 +634,7 @@ forall (m :: * -&gt; *).
 MonadError SystemTagError m =&gt;
 SystemTag -&gt; m ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">checkSystemTag</span></a></span><span> </span><span class="annot"><span class="annottext">SystemTag
-</span><a href="#local-6989586621679483347"><span class="hs-identifier hs-var">sysTagNonascii</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483580"><span class="hs-identifier hs-var">sysTagNonascii</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-128"></span><span>
 </span><span id="line-129"></span><span class="annot"><a href="Test.Cardano.Chain.Update.Properties.html#tests"><span class="hs-identifier hs-type">tests</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSGroup"><span class="hs-identifier hs-type">TSGroup</span></a></span><span>
 </span><span id="line-130"></span><span id="tests"><span class="annot"><span class="annottext">tests :: TSGroup

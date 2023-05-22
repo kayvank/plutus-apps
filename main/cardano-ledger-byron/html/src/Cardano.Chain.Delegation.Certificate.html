@@ -87,10 +87,10 @@
 </span><span id="line-87"></span><span class="hs-comment">--   Each delegator can publish at most one 'Certificate' per 'EpochNumber', and</span><span>
 </span><span id="line-88"></span><span class="hs-comment">--   that 'EpochNumber' must correspond to the current or next 'EpochNumber' at</span><span>
 </span><span id="line-89"></span><span class="hs-comment">--   the time of publishing</span><span>
-</span><span id="line-90"></span><span id="local-6989586621679530350"><span id="local-6989586621679530351"></span></span><span class="hs-keyword">data</span><span> </span><span id="ACertificate"><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-var">ACertificate</span></a></span></span><span> </span><span id="local-6989586621679530463"><span class="annot"><a href="#local-6989586621679530463"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="UnsafeACertificate"><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-var">UnsafeACertificate</span></a></span></span><span>
+</span><span id="line-90"></span><span id="local-6989586621679530374"><span id="local-6989586621679530375"></span></span><span class="hs-keyword">data</span><span> </span><span id="ACertificate"><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-var">ACertificate</span></a></span></span><span> </span><span id="local-6989586621679530487"><span class="annot"><a href="#local-6989586621679530487"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="UnsafeACertificate"><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-var">UnsafeACertificate</span></a></span></span><span>
 </span><span id="line-91"></span><span>  </span><span class="hs-special">{</span><span> </span><span class="hs-comment">-- | The epoch from which the delegation is valid</span><span>
 </span><span id="line-92"></span><span>    </span><span id="aEpoch"><span class="annot"><span class="annottext">ACertificate a -&gt; Annotated EpochNumber a
-</span><a href="Cardano.Chain.Delegation.Certificate.html#aEpoch"><span class="hs-identifier hs-var hs-var">aEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">Annotated</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Slotting.EpochNumber.html#EpochNumber"><span class="hs-identifier hs-type">EpochNumber</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530463"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="Cardano.Chain.Delegation.Certificate.html#aEpoch"><span class="hs-identifier hs-var hs-var">aEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">Annotated</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Slotting.EpochNumber.html#EpochNumber"><span class="hs-identifier hs-type">EpochNumber</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530487"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-93"></span><span>    </span><span class="hs-comment">-- | The issuer of the certificate, who delegates their right to sign blocks</span><span>
 </span><span id="line-94"></span><span>    </span><span id="issuerVK"><span class="annot"><span class="annottext">ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#issuerVK"><span class="hs-identifier hs-var hs-var">issuerVK</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span class="hs-special">,</span><span>
@@ -101,9 +101,9 @@
 </span><span id="line-98"></span><span>    </span><span id="signature"><span class="annot"><span class="annottext">ACertificate a -&gt; Signature EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#signature"><span class="hs-keyword hs-var hs-var">signature</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">Signature</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Slotting.EpochNumber.html#EpochNumber"><span class="hs-identifier hs-type">EpochNumber</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-99"></span><span>    </span><span id="annotation"><span class="annot"><span class="annottext">ACertificate a -&gt; a
-</span><a href="Cardano.Chain.Delegation.Certificate.html#annotation"><span class="hs-identifier hs-var hs-var">annotation</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="#local-6989586621679530463"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><a href="Cardano.Chain.Delegation.Certificate.html#annotation"><span class="hs-identifier hs-var hs-var">annotation</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="#local-6989586621679530487"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-100"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-101"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679530340"><span id="local-6989586621679530342"><span class="annot"><span class="annottext">ACertificate a -&gt; ACertificate a -&gt; Bool
+</span><span id="line-101"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679530364"><span id="local-6989586621679530366"><span class="annot"><span class="annottext">ACertificate a -&gt; ACertificate a -&gt; Bool
 (ACertificate a -&gt; ACertificate a -&gt; Bool)
 -&gt; (ACertificate a -&gt; ACertificate a -&gt; Bool)
 -&gt; Eq (ACertificate a)
@@ -113,7 +113,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: forall a. Eq a =&gt; ACertificate a -&gt; ACertificate a -&gt; Bool
 == :: ACertificate a -&gt; ACertificate a -&gt; Bool
 $c== :: forall a. Eq a =&gt; ACertificate a -&gt; ACertificate a -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530324"><span id="local-6989586621679530326"><span id="local-6989586621679530328"><span id="local-6989586621679530330"><span id="local-6989586621679530332"><span id="local-6989586621679530334"><span id="local-6989586621679530336"><span class="annot"><span class="annottext">Eq (ACertificate a)
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530348"><span id="local-6989586621679530350"><span id="local-6989586621679530352"><span id="local-6989586621679530354"><span id="local-6989586621679530356"><span id="local-6989586621679530358"><span id="local-6989586621679530360"><span class="annot"><span class="annottext">Eq (ACertificate a)
 Eq (ACertificate a)
 -&gt; (ACertificate a -&gt; ACertificate a -&gt; Ordering)
 -&gt; (ACertificate a -&gt; ACertificate a -&gt; Bool)
@@ -161,7 +161,7 @@ $c&lt; :: forall a. Ord a =&gt; ACertificate a -&gt; ACertificate a -&gt; Bool
 compare :: ACertificate a -&gt; ACertificate a -&gt; Ordering
 $ccompare :: forall a. Ord a =&gt; ACertificate a -&gt; ACertificate a -&gt; Ordering
 $cp1Ord :: forall a. Ord a =&gt; Eq (ACertificate a)
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530317"><span id="local-6989586621679530319"><span id="local-6989586621679530321"><span class="annot"><span class="annottext">Int -&gt; ACertificate a -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530341"><span id="local-6989586621679530343"><span id="local-6989586621679530345"><span class="annot"><span class="annottext">Int -&gt; ACertificate a -&gt; ShowS
 [ACertificate a] -&gt; ShowS
 ACertificate a -&gt; String
 (Int -&gt; ACertificate a -&gt; ShowS)
@@ -190,7 +190,7 @@ forall a x. Rep (ACertificate a) x -&gt; ACertificate a
 forall a x. ACertificate a -&gt; Rep (ACertificate a) x
 $cto :: forall a x. Rep (ACertificate a) x -&gt; ACertificate a
 $cfrom :: forall a x. ACertificate a -&gt; Rep (ACertificate a) x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530309"><span id="local-6989586621679530311"><span class="annot"><span class="annottext">a -&gt; ACertificate b -&gt; ACertificate a
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530333"><span id="local-6989586621679530335"><span class="annot"><span class="annottext">a -&gt; ACertificate b -&gt; ACertificate a
 (a -&gt; b) -&gt; ACertificate a -&gt; ACertificate b
 (forall a b. (a -&gt; b) -&gt; ACertificate a -&gt; ACertificate b)
 -&gt; (forall a b. a -&gt; ACertificate b -&gt; ACertificate a)
@@ -205,13 +205,13 @@ $c&lt;$ :: forall a b. a -&gt; ACertificate b -&gt; ACertificate a
 fmap :: (a -&gt; b) -&gt; ACertificate a -&gt; ACertificate b
 $cfmap :: forall a b. (a -&gt; b) -&gt; ACertificate a -&gt; ACertificate b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-102"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679530306"><span class="annot"><span class="annottext">ACertificate a -&gt; ()
+</span><span id="line-102"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679530330"><span class="annot"><span class="annottext">ACertificate a -&gt; ()
 (ACertificate a -&gt; ()) -&gt; NFData (ACertificate a)
 forall a. NFData a =&gt; ACertificate a -&gt; ()
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: ACertificate a -&gt; ()
 $crnf :: forall a. NFData a =&gt; ACertificate a -&gt; ()
-</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530299"><span id="local-6989586621679530301"><span id="local-6989586621679530303"><span class="annot"><span class="annottext">Context -&gt; ACertificate a -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530323"><span id="local-6989586621679530325"><span id="local-6989586621679530327"><span class="annot"><span class="annottext">Context -&gt; ACertificate a -&gt; IO (Maybe ThunkInfo)
 Proxy (ACertificate a) -&gt; String
 (Context -&gt; ACertificate a -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; ACertificate a -&gt; IO (Maybe ThunkInfo))
@@ -239,7 +239,7 @@ Context -&gt; ACertificate a -&gt; IO (Maybe ThunkInfo)
 </span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-103"></span><span>
 </span><span id="line-104"></span><span class="hs-comment">-- Used for debugging purposes only</span><span>
-</span><span id="line-105"></span><span id="local-6989586621679530297"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530289"><span id="local-6989586621679530291"><span id="local-6989586621679530293"><span id="local-6989586621679530295"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530297"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530297"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span></span></span></span></span><span>
+</span><span id="line-105"></span><span id="local-6989586621679530321"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530313"><span id="local-6989586621679530315"><span id="local-6989586621679530317"><span id="local-6989586621679530319"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530321"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530321"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span></span></span></span></span><span>
 </span><span id="line-106"></span><span>
 </span><span id="line-107"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-108"></span><span class="hs-comment">-- Certificate Constructors</span><span>
@@ -254,11 +254,11 @@ Context -&gt; ACertificate a -&gt; IO (Maybe ThunkInfo)
 </span><span id="line-117"></span><span>  </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span><span>
 </span><span id="line-118"></span><span id="signCertificate"><span class="annot"><span class="annottext">signCertificate :: ProtocolMagicId
 -&gt; VerificationKey -&gt; EpochNumber -&gt; SafeSigner -&gt; Certificate
-</span><a href="Cardano.Chain.Delegation.Certificate.html#signCertificate"><span class="hs-identifier hs-var hs-var">signCertificate</span></a></span></span><span> </span><span id="local-6989586621679530287"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679530287"><span class="hs-identifier hs-var">protocolMagicId</span></a></span></span><span> </span><span id="local-6989586621679530286"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">delegateVK</span></a></span></span><span> </span><span id="local-6989586621679530285"><span class="annot"><span class="annottext">EpochNumber
-</span><a href="#local-6989586621679530285"><span class="hs-identifier hs-var">epochNumber</span></a></span></span><span> </span><span id="local-6989586621679530284"><span class="annot"><span class="annottext">SafeSigner
-</span><a href="#local-6989586621679530284"><span class="hs-identifier hs-var">safeSigner</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Chain.Delegation.Certificate.html#signCertificate"><span class="hs-identifier hs-var hs-var">signCertificate</span></a></span></span><span> </span><span id="local-6989586621679530311"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679530311"><span class="hs-identifier hs-var">protocolMagicId</span></a></span></span><span> </span><span id="local-6989586621679530310"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530310"><span class="hs-identifier hs-var">delegateVK</span></a></span></span><span> </span><span id="local-6989586621679530309"><span class="annot"><span class="annottext">EpochNumber
+</span><a href="#local-6989586621679530309"><span class="hs-identifier hs-var">epochNumber</span></a></span></span><span> </span><span id="local-6989586621679530308"><span class="annot"><span class="annottext">SafeSigner
+</span><a href="#local-6989586621679530308"><span class="hs-identifier hs-var">safeSigner</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-119"></span><span>  </span><span class="annot"><span class="annottext">UnsafeACertificate :: forall a.
 Annotated EpochNumber a
 -&gt; VerificationKey
@@ -271,33 +271,33 @@ Annotated EpochNumber a
 </span><a href="Cardano.Chain.Delegation.Certificate.html#aEpoch"><span class="hs-identifier hs-var">aEpoch</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochNumber -&gt; () -&gt; Annotated EpochNumber ()
 forall b a. b -&gt; a -&gt; Annotated b a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">Annotated</span></a></span><span> </span><span class="annot"><span class="annottext">EpochNumber
-</span><a href="#local-6989586621679530285"><span class="hs-identifier hs-var">epochNumber</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530309"><span class="hs-identifier hs-var">epochNumber</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-121"></span><span>      </span><span class="annot"><span class="annottext">issuerVK :: VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#issuerVK"><span class="hs-identifier hs-var">issuerVK</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SafeSigner -&gt; VerificationKey
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">safeToVerification</span></a></span><span> </span><span class="annot"><span class="annottext">SafeSigner
-</span><a href="#local-6989586621679530284"><span class="hs-identifier hs-var">safeSigner</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530308"><span class="hs-identifier hs-var">safeSigner</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-122"></span><span>      </span><span class="annot"><span class="annottext">delegateVK :: VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#delegateVK"><span class="hs-identifier hs-var">delegateVK</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">delegateVK</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530310"><span class="hs-identifier hs-var">delegateVK</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-123"></span><span>      </span><span class="annot"><span class="annottext">signature :: Signature EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#signature"><span class="hs-keyword hs-var">signature</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Signature ByteString -&gt; Signature EpochNumber
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">coerce</span></a></span><span> </span><span class="annot"><span class="annottext">Signature ByteString
-</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var">sig</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530307"><span class="hs-identifier hs-var">sig</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-124"></span><span>      </span><span class="annot"><span class="annottext">annotation :: ()
 </span><a href="Cardano.Chain.Delegation.Certificate.html#annotation"><span class="hs-identifier hs-var">annotation</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-125"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-126"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-127"></span><span>    </span><span id="local-6989586621679530283"><span class="annot"><span class="annottext">sig :: Signature ByteString
-</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-127"></span><span>    </span><span id="local-6989586621679530307"><span class="annot"><span class="annottext">sig :: Signature ByteString
+</span><a href="#local-6989586621679530307"><span class="hs-identifier hs-var hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-128"></span><span>      </span><span class="annot"><span class="annottext">ProtocolMagicId
 -&gt; SignTag -&gt; SafeSigner -&gt; ByteString -&gt; Signature ByteString
 forall a.
 ToCBOR a =&gt;
 ProtocolMagicId -&gt; SignTag -&gt; SafeSigner -&gt; a -&gt; Signature a
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">safeSign</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679530287"><span class="hs-identifier hs-var">protocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">SignTag
+</span><a href="#local-6989586621679530311"><span class="hs-identifier hs-var">protocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">SignTag
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">SignCertificate</span></a></span><span> </span><span class="annot"><span class="annottext">SafeSigner
-</span><a href="#local-6989586621679530284"><span class="hs-identifier hs-var">safeSigner</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; Signature ByteString)
+</span><a href="#local-6989586621679530308"><span class="hs-identifier hs-var">safeSigner</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; Signature ByteString)
 -&gt; ByteString -&gt; Signature ByteString
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
@@ -309,11 +309,11 @@ forall a. Monoid a =&gt; [a] -&gt; a
 </span><span id="line-131"></span><span>            </span><span class="annot"><span class="annottext">XPub -&gt; ByteString
 </span><a href="../../../../cardano-crypto/html/src"><span class="hs-identifier hs-var">CC.unXPub</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VerificationKey -&gt; XPub
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var hs-var">unVerificationKey</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">delegateVK</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530310"><span class="hs-identifier hs-var">delegateVK</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-132"></span><span>            </span><span class="annot"><span class="annottext">EpochNumber -&gt; ByteString
 forall a. ToCBOR a =&gt; a -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serialize'</span></a></span><span> </span><span class="annot"><span class="annottext">EpochNumber
-</span><a href="#local-6989586621679530285"><span class="hs-identifier hs-var">epochNumber</span></a></span><span>
+</span><a href="#local-6989586621679530309"><span class="hs-identifier hs-var">epochNumber</span></a></span><span>
 </span><span id="line-133"></span><span>          </span><span class="hs-special">]</span><span>
 </span><span id="line-134"></span><span>
 </span><span id="line-135"></span><span class="hs-comment">-- | Create a certificate using the provided signature.</span><span>
@@ -330,11 +330,11 @@ forall a. ToCBOR a =&gt; a -&gt; ByteString
 -&gt; VerificationKey
 -&gt; Signature EpochNumber
 -&gt; Certificate
-</span><a href="Cardano.Chain.Delegation.Certificate.html#unsafeCertificate"><span class="hs-identifier hs-var hs-var">unsafeCertificate</span></a></span></span><span> </span><span id="local-6989586621679530281"><span class="annot"><span class="annottext">EpochNumber
-</span><a href="#local-6989586621679530281"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span id="local-6989586621679530280"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530280"><span class="hs-identifier hs-var">ivk</span></a></span></span><span> </span><span id="local-6989586621679530279"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530279"><span class="hs-identifier hs-var">dvk</span></a></span></span><span> </span><span id="local-6989586621679530278"><span class="annot"><span class="annottext">Signature EpochNumber
-</span><a href="#local-6989586621679530278"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Annotated EpochNumber ()
+</span><a href="Cardano.Chain.Delegation.Certificate.html#unsafeCertificate"><span class="hs-identifier hs-var hs-var">unsafeCertificate</span></a></span></span><span> </span><span id="local-6989586621679530305"><span class="annot"><span class="annottext">EpochNumber
+</span><a href="#local-6989586621679530305"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span id="local-6989586621679530304"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530304"><span class="hs-identifier hs-var">ivk</span></a></span></span><span> </span><span id="local-6989586621679530303"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530303"><span class="hs-identifier hs-var">dvk</span></a></span></span><span> </span><span id="local-6989586621679530302"><span class="annot"><span class="annottext">Signature EpochNumber
+</span><a href="#local-6989586621679530302"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Annotated EpochNumber ()
 -&gt; VerificationKey
 -&gt; VerificationKey
 -&gt; Signature EpochNumber
@@ -350,16 +350,16 @@ Annotated EpochNumber a
 </span><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-var">UnsafeACertificate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">EpochNumber -&gt; () -&gt; Annotated EpochNumber ()
 forall b a. b -&gt; a -&gt; Annotated b a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">Annotated</span></a></span><span> </span><span class="annot"><span class="annottext">EpochNumber
-</span><a href="#local-6989586621679530281"><span class="hs-identifier hs-var">e</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530280"><span class="hs-identifier hs-var">ivk</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530279"><span class="hs-identifier hs-var">dvk</span></a></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber
-</span><a href="#local-6989586621679530278"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530305"><span class="hs-identifier hs-var">e</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530304"><span class="hs-identifier hs-var">ivk</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530303"><span class="hs-identifier hs-var">dvk</span></a></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber
+</span><a href="#local-6989586621679530302"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-145"></span><span>
 </span><span id="line-146"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-147"></span><span class="hs-comment">-- Certificate Accessor</span><span>
 </span><span id="line-148"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-149"></span><span>
-</span><span id="line-150"></span><span id="local-6989586621679530424"><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#epoch"><span class="hs-identifier hs-type">epoch</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530424"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Slotting.EpochNumber.html#EpochNumber"><span class="hs-identifier hs-type">EpochNumber</span></a></span></span><span>
+</span><span id="line-150"></span><span id="local-6989586621679530448"><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#epoch"><span class="hs-identifier hs-type">epoch</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530448"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Slotting.EpochNumber.html#EpochNumber"><span class="hs-identifier hs-type">EpochNumber</span></a></span></span><span>
 </span><span id="line-151"></span><span id="epoch"><span class="annot"><span class="annottext">epoch :: ACertificate a -&gt; EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#epoch"><span class="hs-identifier hs-var hs-var">epoch</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Annotated EpochNumber a -&gt; EpochNumber
 forall b a. Annotated b a -&gt; b
@@ -391,20 +391,20 @@ forall t. Decoded t =&gt; t -&gt; Hash (BaseType t)
 </span><span id="line-164"></span><span>  </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-165"></span><span id="isValid"><span class="annot"><span class="annottext">isValid :: Annotated ProtocolMagicId ByteString
 -&gt; ACertificate ByteString -&gt; Bool
-</span><a href="Cardano.Chain.Delegation.Certificate.html#isValid"><span class="hs-identifier hs-var hs-var">isValid</span></a></span></span><span> </span><span id="local-6989586621679530276"><span class="annot"><span class="annottext">Annotated ProtocolMagicId ByteString
-</span><a href="#local-6989586621679530276"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-type">UnsafeACertificate</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679530275"><span class="annot"><span class="annottext">Annotated EpochNumber ByteString
+</span><a href="Cardano.Chain.Delegation.Certificate.html#isValid"><span class="hs-identifier hs-var hs-var">isValid</span></a></span></span><span> </span><span id="local-6989586621679530300"><span class="annot"><span class="annottext">Annotated ProtocolMagicId ByteString
+</span><a href="#local-6989586621679530300"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-type">UnsafeACertificate</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679530299"><span class="annot"><span class="annottext">Annotated EpochNumber ByteString
 aEpoch :: Annotated EpochNumber ByteString
 aEpoch :: forall a. ACertificate a -&gt; Annotated EpochNumber a
-</span><a href="#local-6989586621679530275"><span class="hs-identifier hs-var hs-var">aEpoch</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530274"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530299"><span class="hs-identifier hs-var hs-var">aEpoch</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530298"><span class="annot"><span class="annottext">VerificationKey
 issuerVK :: VerificationKey
 issuerVK :: forall a. ACertificate a -&gt; VerificationKey
-</span><a href="#local-6989586621679530274"><span class="hs-identifier hs-var hs-var">issuerVK</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530273"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530298"><span class="hs-identifier hs-var hs-var">issuerVK</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530297"><span class="annot"><span class="annottext">VerificationKey
 delegateVK :: VerificationKey
 delegateVK :: forall a. ACertificate a -&gt; VerificationKey
-</span><a href="#local-6989586621679530273"><span class="hs-identifier hs-var hs-var">delegateVK</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530272"><span class="annot"><span class="annottext">Signature EpochNumber
+</span><a href="#local-6989586621679530297"><span class="hs-identifier hs-var hs-var">delegateVK</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530296"><span class="annot"><span class="annottext">Signature EpochNumber
 signature :: Signature EpochNumber
 signature :: forall a. ACertificate a -&gt; Signature EpochNumber
-</span><a href="#local-6989586621679530272"><span class="hs-keyword hs-var hs-var">signature</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679530296"><span class="hs-keyword hs-var hs-var">signature</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-166"></span><span>  </span><span class="annot"><span class="annottext">Annotated ProtocolMagicId ByteString
 -&gt; SignTag
 -&gt; VerificationKey
@@ -421,11 +421,11 @@ Annotated ProtocolMagicId ByteString
 -&gt; Bool
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">verifySignatureDecoded</span></a></span><span>
 </span><span id="line-167"></span><span>    </span><span class="annot"><span class="annottext">Annotated ProtocolMagicId ByteString
-</span><a href="#local-6989586621679530276"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679530300"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-168"></span><span>    </span><span class="annot"><span class="annottext">SignTag
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">SignCertificate</span></a></span><span>
 </span><span id="line-169"></span><span>    </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530274"><span class="hs-identifier hs-var">issuerVK</span></a></span><span>
+</span><a href="#local-6989586621679530298"><span class="hs-identifier hs-var">issuerVK</span></a></span><span>
 </span><span id="line-170"></span><span>    </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString
 forall a. ToCBOR a =&gt; a -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serialize'</span></a></span><span>
@@ -442,26 +442,26 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">XPub -&gt; ByteString
 </span><a href="../../../../cardano-crypto/html/src"><span class="hs-identifier hs-var">CC.unXPub</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VerificationKey -&gt; XPub
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var hs-var">unVerificationKey</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530273"><span class="hs-identifier hs-var">delegateVK</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530297"><span class="hs-identifier hs-var">delegateVK</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-172"></span><span>        </span><span class="annot"><span class="annottext">(ByteString -&gt; ByteString)
 -&gt; Annotated EpochNumber ByteString
 -&gt; Annotated EpochNumber ByteString
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Annotated EpochNumber ByteString
-</span><a href="#local-6989586621679530275"><span class="hs-identifier hs-var">aEpoch</span></a></span><span>
+</span><a href="#local-6989586621679530299"><span class="hs-identifier hs-var">aEpoch</span></a></span><span>
 </span><span id="line-173"></span><span>    </span><span class="hs-special">)</span><span>
 </span><span id="line-174"></span><span>    </span><span class="annot"><span class="annottext">Signature (BaseType (Annotated EpochNumber ByteString))
 Signature EpochNumber
-</span><a href="#local-6989586621679530272"><span class="hs-keyword hs-var">signature</span></a></span><span>
+</span><a href="#local-6989586621679530296"><span class="hs-keyword hs-var">signature</span></a></span><span>
 </span><span id="line-175"></span><span>
 </span><span id="line-176"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-177"></span><span class="hs-comment">-- Certificate Binary Serialization</span><span>
 </span><span id="line-178"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-179"></span><span>
-</span><span id="line-180"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530266"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-181"></span><span>  </span><span id="local-6989586621679530264"><span class="annot"><span class="annottext">toCBOR :: Certificate -&gt; Encoding
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679530262"><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530262"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-180"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530290"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-181"></span><span>  </span><span id="local-6989586621679530288"><span class="annot"><span class="annottext">toCBOR :: Certificate -&gt; Encoding
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679530286"><span class="annot"><span class="annottext">Certificate
+</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-182"></span><span>    </span><span class="annot"><span class="annottext">Word -&gt; Encoding
 </span><a href="../../../../cborg/html/src"><span class="hs-identifier hs-var">encodeListLen</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">4</span></span><span>
@@ -472,7 +472,7 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; EpochNumber
 forall a. ACertificate a -&gt; EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#epoch"><span class="hs-identifier hs-var">epoch</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530262"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-184"></span><span>      </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; Encoding
@@ -480,7 +480,7 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#issuerVK"><span class="hs-identifier hs-var hs-var">issuerVK</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530262"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-185"></span><span>      </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; Encoding
@@ -488,7 +488,7 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#delegateVK"><span class="hs-identifier hs-var hs-var">delegateVK</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530262"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-186"></span><span>      </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber -&gt; Encoding
@@ -496,13 +496,13 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; Signature EpochNumber
 forall a. ACertificate a -&gt; Signature EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#signature"><span class="hs-keyword hs-var hs-var">signature</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530262"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530286"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-187"></span><span>
-</span><span id="line-188"></span><span>  </span><span id="local-6989586621679530261"><span class="annot"><span class="annottext">encodedSizeExpr :: (forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
+</span><span id="line-188"></span><span>  </span><span id="local-6989586621679530285"><span class="annot"><span class="annottext">encodedSizeExpr :: (forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
 -&gt; Proxy Certificate -&gt; Size
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">encodedSizeExpr</span></a></span></span><span> </span><span id="local-6989586621679530259"><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679530259"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span id="local-6989586621679530258"><span class="annot"><span class="annottext">Proxy Certificate
-</span><a href="#local-6989586621679530258"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">encodedSizeExpr</span></a></span></span><span> </span><span id="local-6989586621679530283"><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
+</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span id="local-6989586621679530282"><span class="annot"><span class="annottext">Proxy Certificate
+</span><a href="#local-6989586621679530282"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-189"></span><span>    </span><span class="annot"><span class="annottext">Size
 </span><span class="hs-number">1</span></span><span>
 </span><span id="line-190"></span><span>      </span><span class="annot"><span class="annottext">Size -&gt; Size -&gt; Size
@@ -513,13 +513,13 @@ forall a.
 ToCBOR a =&gt;
 (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy a -&gt; Size
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">encodedSizeExpr</span></a></span><span> </span><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679530259"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; EpochNumber
+</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; EpochNumber
 forall a. ACertificate a -&gt; EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#epoch"><span class="hs-identifier hs-var">epoch</span></a></span><span> </span><span class="annot"><span class="annottext">(Certificate -&gt; EpochNumber)
 -&gt; Proxy Certificate -&gt; Proxy EpochNumber
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy Certificate
-</span><a href="#local-6989586621679530258"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530282"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-191"></span><span>      </span><span class="annot"><span class="annottext">Size -&gt; Size -&gt; Size
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">(forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
@@ -528,13 +528,13 @@ forall a.
 ToCBOR a =&gt;
 (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy a -&gt; Size
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">encodedSizeExpr</span></a></span><span> </span><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679530259"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
+</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#issuerVK"><span class="hs-identifier hs-var hs-var">issuerVK</span></a></span><span> </span><span class="annot"><span class="annottext">(Certificate -&gt; VerificationKey)
 -&gt; Proxy Certificate -&gt; Proxy VerificationKey
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy Certificate
-</span><a href="#local-6989586621679530258"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530282"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-192"></span><span>      </span><span class="annot"><span class="annottext">Size -&gt; Size -&gt; Size
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">(forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
@@ -543,13 +543,13 @@ forall a.
 ToCBOR a =&gt;
 (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy a -&gt; Size
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">encodedSizeExpr</span></a></span><span> </span><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679530259"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
+</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#delegateVK"><span class="hs-identifier hs-var hs-var">delegateVK</span></a></span><span> </span><span class="annot"><span class="annottext">(Certificate -&gt; VerificationKey)
 -&gt; Proxy Certificate -&gt; Proxy VerificationKey
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy Certificate
-</span><a href="#local-6989586621679530258"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530282"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-193"></span><span>      </span><span class="annot"><span class="annottext">Size -&gt; Size -&gt; Size
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">(forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
@@ -558,16 +558,16 @@ forall a.
 ToCBOR a =&gt;
 (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy a -&gt; Size
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">encodedSizeExpr</span></a></span><span> </span><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679530259"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; Signature EpochNumber
+</span><a href="#local-6989586621679530283"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Certificate -&gt; Signature EpochNumber
 forall a. ACertificate a -&gt; Signature EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#signature"><span class="hs-keyword hs-var hs-var">signature</span></a></span><span> </span><span class="annot"><span class="annottext">(Certificate -&gt; Signature EpochNumber)
 -&gt; Proxy Certificate -&gt; Proxy (Signature EpochNumber)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy Certificate
-</span><a href="#local-6989586621679530258"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530282"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-194"></span><span>
-</span><span id="line-195"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530253"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-196"></span><span>  </span><span id="local-6989586621679530251"><span class="annot"><span class="annottext">fromCBOR :: Decoder s Certificate
+</span><span id="line-195"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530277"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-196"></span><span>  </span><span id="local-6989586621679530275"><span class="annot"><span class="annottext">fromCBOR :: Decoder s Certificate
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ACertificate ByteSpan -&gt; Certificate
 forall (f :: * -&gt; *) a. Functor f =&gt; f a -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">void</span></a></span><span> </span><span class="annot"><span class="annottext">(ACertificate ByteSpan -&gt; Certificate)
@@ -579,15 +579,15 @@ Decoder s (ACertificate ByteSpan)
 forall a s. FromCBOR a =&gt; Decoder s a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">fromCBOR</span></a></span><span> </span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ByteSpan</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-197"></span><span>
-</span><span id="line-198"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530245"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ByteSpan</span></a></span><span class="hs-special">)</span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-199"></span><span>  </span><span id="local-6989586621679530244"><span class="annot"><span class="annottext">fromCBOR :: Decoder s (ACertificate ByteSpan)
-</span><a href="#local-6989586621679530244"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-200"></span><span>    </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">Annotated</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679530243"><span class="annot"><span class="annottext">Annotated EpochNumber ByteSpan
-</span><a href="#local-6989586621679530243"><span class="hs-identifier hs-var">e</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530242"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530242"><span class="hs-identifier hs-var">ivk</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530241"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530241"><span class="hs-identifier hs-var">dvk</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530240"><span class="annot"><span class="annottext">Signature EpochNumber
-</span><a href="#local-6989586621679530240"><span class="hs-identifier hs-var">sig</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679530239"><span class="annot"><span class="annottext">ByteSpan
-</span><a href="#local-6989586621679530239"><span class="hs-identifier hs-var">byteSpan</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Decoder
+</span><span id="line-198"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679530269"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ByteSpan</span></a></span><span class="hs-special">)</span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-199"></span><span>  </span><span id="local-6989586621679530268"><span class="annot"><span class="annottext">fromCBOR :: Decoder s (ACertificate ByteSpan)
+</span><a href="#local-6989586621679530268"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-200"></span><span>    </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">Annotated</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679530267"><span class="annot"><span class="annottext">Annotated EpochNumber ByteSpan
+</span><a href="#local-6989586621679530267"><span class="hs-identifier hs-var">e</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530266"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530266"><span class="hs-identifier hs-var">ivk</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530265"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530265"><span class="hs-identifier hs-var">dvk</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679530264"><span class="annot"><span class="annottext">Signature EpochNumber
+</span><a href="#local-6989586621679530264"><span class="hs-identifier hs-var">sig</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679530263"><span class="annot"><span class="annottext">ByteSpan
+</span><a href="#local-6989586621679530263"><span class="hs-identifier hs-var">byteSpan</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Decoder
   s
   (Annotated EpochNumber ByteSpan, VerificationKey, VerificationKey,
    Signature EpochNumber)
@@ -711,15 +711,15 @@ Annotated EpochNumber a
 -&gt; a
 -&gt; ACertificate a
 </span><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-var">UnsafeACertificate</span></a></span><span> </span><span class="annot"><span class="annottext">Annotated EpochNumber ByteSpan
-</span><a href="#local-6989586621679530243"><span class="hs-identifier hs-var">e</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530242"><span class="hs-identifier hs-var">ivk</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530241"><span class="hs-identifier hs-var">dvk</span></a></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber
-</span><a href="#local-6989586621679530240"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="annot"><span class="annottext">ByteSpan
-</span><a href="#local-6989586621679530239"><span class="hs-identifier hs-var">byteSpan</span></a></span><span>
+</span><a href="#local-6989586621679530267"><span class="hs-identifier hs-var">e</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530266"><span class="hs-identifier hs-var">ivk</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530265"><span class="hs-identifier hs-var">dvk</span></a></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber
+</span><a href="#local-6989586621679530264"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="annot"><span class="annottext">ByteSpan
+</span><a href="#local-6989586621679530263"><span class="hs-identifier hs-var">byteSpan</span></a></span><span>
 </span><span id="line-208"></span><span>
 </span><span id="line-209"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">Decoded</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-210"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="BaseType"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">BaseType</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span><span>
-</span><span id="line-211"></span><span>  </span><span id="local-6989586621679530236"><span class="annot"><span class="annottext">recoverBytes :: ACertificate ByteString -&gt; ByteString
+</span><span id="line-211"></span><span>  </span><span id="local-6989586621679530260"><span class="annot"><span class="annottext">recoverBytes :: ACertificate ByteString -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">recoverBytes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ACertificate ByteString -&gt; ByteString
 forall a. ACertificate a -&gt; a
 </span><a href="Cardano.Chain.Delegation.Certificate.html#annotation"><span class="hs-identifier hs-var hs-var">annotation</span></a></span><span>
@@ -728,12 +728,12 @@ forall a. ACertificate a -&gt; a
 </span><span id="line-214"></span><span class="hs-comment">-- Certificate Formatting</span><span>
 </span><span id="line-215"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-216"></span><span>
-</span><span id="line-217"></span><span id="local-6989586621679530234"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">B.Buildable</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530234"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-218"></span><span>  </span><span id="local-6989586621679530231"><span class="annot"><span class="annottext">build :: ACertificate a -&gt; Builder
-</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-type">UnsafeACertificate</span></a></span><span> </span><span id="local-6989586621679530229"><span class="annot"><span class="annottext">Annotated EpochNumber a
-</span><a href="#local-6989586621679530229"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span id="local-6989586621679530228"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530228"><span class="hs-identifier hs-var">iVK</span></a></span></span><span> </span><span id="local-6989586621679530227"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530227"><span class="hs-identifier hs-var">dVK</span></a></span></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber
+</span><span id="line-217"></span><span id="local-6989586621679530258"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">B.Buildable</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#ACertificate"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530258"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-218"></span><span>  </span><span id="local-6989586621679530255"><span class="annot"><span class="annottext">build :: ACertificate a -&gt; Builder
+</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#UnsafeACertificate"><span class="hs-identifier hs-type">UnsafeACertificate</span></a></span><span> </span><span id="local-6989586621679530253"><span class="annot"><span class="annottext">Annotated EpochNumber a
+</span><a href="#local-6989586621679530253"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span id="local-6989586621679530252"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530252"><span class="hs-identifier hs-var">iVK</span></a></span></span><span> </span><span id="local-6989586621679530251"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679530251"><span class="hs-identifier hs-var">dVK</span></a></span></span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber
 </span><span class="hs-identifier">_</span></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-219"></span><span>    </span><span class="annot"><span class="annottext">Format
@@ -820,20 +820,20 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-227"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Annotated EpochNumber a -&gt; EpochNumber
 forall b a. Annotated b a -&gt; b
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var">unAnnotated</span></a></span><span> </span><span class="annot"><span class="annottext">Annotated EpochNumber a
-</span><a href="#local-6989586621679530229"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530253"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-228"></span><span>      </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530228"><span class="hs-identifier hs-var">iVK</span></a></span><span>
+</span><a href="#local-6989586621679530252"><span class="hs-identifier hs-var">iVK</span></a></span><span>
 </span><span id="line-229"></span><span>      </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679530227"><span class="hs-identifier hs-var">dVK</span></a></span></span><span>
+</span><a href="#local-6989586621679530251"><span class="hs-identifier hs-var">dVK</span></a></span></span><span>
 </span><span id="line-230"></span><span>
 </span><span id="line-231"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-232"></span><span class="hs-comment">-- Certificate Canonical JSON</span><span>
 </span><span id="line-233"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-234"></span><span>
-</span><span id="line-235"></span><span id="local-6989586621679530226"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530226"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530226"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-236"></span><span>  </span><span id="local-6989586621679530223"><span class="annot"><span class="annottext">toJSON :: Certificate -&gt; m JSValue
-</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span id="local-6989586621679530221"><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530221"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-235"></span><span id="local-6989586621679530250"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530250"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530250"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-236"></span><span>  </span><span id="local-6989586621679530247"><span class="annot"><span class="annottext">toJSON :: Certificate -&gt; m JSValue
+</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span id="local-6989586621679530245"><span class="annot"><span class="annottext">Certificate
+</span><a href="#local-6989586621679530245"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-237"></span><span>    </span><span class="annot"><span class="annottext">[(JSString, m JSValue)] -&gt; m JSValue
 forall (m :: * -&gt; *).
 Monad m =&gt;
@@ -856,7 +856,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; EpochNumber
 forall a. ACertificate a -&gt; EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#epoch"><span class="hs-identifier hs-var">epoch</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530221"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530245"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-240"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;issuerPk&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; m JSValue
 forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
@@ -865,7 +865,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#issuerVK"><span class="hs-identifier hs-var hs-var">issuerVK</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530221"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530245"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-241"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;delegatePk&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; m JSValue
 forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
@@ -874,7 +874,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="Cardano.Chain.Delegation.Certificate.html#delegateVK"><span class="hs-identifier hs-var hs-var">delegateVK</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530221"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679530245"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-242"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;cert&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Signature EpochNumber -&gt; m JSValue
 forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
@@ -884,13 +884,13 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; Signature EpochNumber
 forall a. ACertificate a -&gt; Signature EpochNumber
 </span><a href="Cardano.Chain.Delegation.Certificate.html#signature"><span class="hs-keyword hs-var hs-var">signature</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679530221"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679530245"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-243"></span><span>      </span><span class="hs-special">]</span></span><span>
 </span><span id="line-244"></span><span>
-</span><span id="line-245"></span><span id="local-6989586621679530219"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier hs-type">SchemaError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530219"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530219"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-246"></span><span>  </span><span id="local-6989586621679530216"><span class="annot"><span class="annottext">fromJSON :: JSValue -&gt; m Certificate
-</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromJSON</span></a></span></span><span> </span><span id="local-6989586621679530214"><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679530214"><span class="hs-identifier hs-var">obj</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-245"></span><span id="local-6989586621679530243"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier hs-type">SchemaError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530243"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679530243"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Certificate.html#Certificate"><span class="hs-identifier hs-type">Certificate</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-246"></span><span>  </span><span id="local-6989586621679530240"><span class="annot"><span class="annottext">fromJSON :: JSValue -&gt; m Certificate
+</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromJSON</span></a></span></span><span> </span><span id="local-6989586621679530238"><span class="annot"><span class="annottext">JSValue
+</span><a href="#local-6989586621679530238"><span class="hs-identifier hs-var">obj</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-247"></span><span>    </span><span class="annot"><span class="annottext">EpochNumber
 -&gt; VerificationKey
 -&gt; VerificationKey
@@ -915,7 +915,7 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679530214"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679530238"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;omega&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-249"></span><span>      </span><span class="annot"><span class="annottext">m (VerificationKey
    -&gt; VerificationKey -&gt; Signature EpochNumber -&gt; Certificate)
@@ -927,7 +927,7 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679530214"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679530238"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;issuerPk&quot;</span></span><span>
 </span><span id="line-250"></span><span>      </span><span class="annot"><span class="annottext">m (VerificationKey -&gt; Signature EpochNumber -&gt; Certificate)
 -&gt; m VerificationKey -&gt; m (Signature EpochNumber -&gt; Certificate)
@@ -937,7 +937,7 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679530214"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679530238"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;delegatePk&quot;</span></span><span>
 </span><span id="line-251"></span><span>      </span><span class="annot"><span class="annottext">m (Signature EpochNumber -&gt; Certificate)
 -&gt; m (Signature EpochNumber) -&gt; m Certificate
@@ -947,6 +947,6 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679530214"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679530238"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;cert&quot;</span></span></span><span>
 </span><span id="line-252"></span></pre></body></html>

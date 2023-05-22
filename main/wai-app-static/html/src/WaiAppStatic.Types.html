@@ -37,7 +37,7 @@
 </span><span id="line-37"></span><span class="hs-comment">-- their storage system.</span><span>
 </span><span id="line-38"></span><span class="hs-keyword">newtype</span><span> </span><span id="Piece"><span class="annot"><a href="WaiAppStatic.Types.html#Piece"><span class="hs-identifier hs-var">Piece</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Piece"><span class="annot"><a href="WaiAppStatic.Types.html#Piece"><span class="hs-identifier hs-var">Piece</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="fromPiece"><span class="annot"><span class="annottext">Piece -&gt; Text
 </span><a href="WaiAppStatic.Types.html#fromPiece"><span class="hs-identifier hs-var hs-var">fromPiece</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-39"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679136013"><span id="local-6989586621679136015"><span id="local-6989586621679136017"><span class="annot"><span class="annottext">Int -&gt; Piece -&gt; ShowS
+</span><span id="line-39"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679136023"><span id="local-6989586621679136025"><span id="local-6989586621679136027"><span class="annot"><span class="annottext">Int -&gt; Piece -&gt; ShowS
 [Piece] -&gt; ShowS
 Piece -&gt; String
 (Int -&gt; Piece -&gt; ShowS)
@@ -50,14 +50,14 @@ show :: Piece -&gt; String
 $cshow :: Piece -&gt; String
 showsPrec :: Int -&gt; Piece -&gt; ShowS
 $cshowsPrec :: Int -&gt; Piece -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679136008"><span id="local-6989586621679136010"><span class="annot"><span class="annottext">Piece -&gt; Piece -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679136018"><span id="local-6989586621679136020"><span class="annot"><span class="annottext">Piece -&gt; Piece -&gt; Bool
 (Piece -&gt; Piece -&gt; Bool) -&gt; (Piece -&gt; Piece -&gt; Bool) -&gt; Eq Piece
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: Piece -&gt; Piece -&gt; Bool
 $c/= :: Piece -&gt; Piece -&gt; Bool
 == :: Piece -&gt; Piece -&gt; Bool
 $c== :: Piece -&gt; Piece -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679135992"><span id="local-6989586621679135994"><span id="local-6989586621679135996"><span id="local-6989586621679135998"><span id="local-6989586621679136000"><span id="local-6989586621679136002"><span id="local-6989586621679136004"><span class="annot"><span class="annottext">Eq Piece
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679136002"><span id="local-6989586621679136004"><span id="local-6989586621679136006"><span id="local-6989586621679136008"><span id="local-6989586621679136010"><span id="local-6989586621679136012"><span id="local-6989586621679136014"><span class="annot"><span class="annottext">Eq Piece
 Eq Piece
 -&gt; (Piece -&gt; Piece -&gt; Ordering)
 -&gt; (Piece -&gt; Piece -&gt; Bool)
@@ -102,20 +102,20 @@ $cp1Ord :: Eq Piece
 </span><span id="line-43"></span><span class="hs-comment">-- allow null pieces.</span><span>
 </span><span id="line-44"></span><span class="annot"><a href="WaiAppStatic.Types.html#toPiece"><span class="hs-identifier hs-type">toPiece</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="WaiAppStatic.Types.html#Piece"><span class="hs-identifier hs-type">Piece</span></a></span><span>
 </span><span id="line-45"></span><span id="toPiece"><span class="annot"><span class="annottext">toPiece :: Text -&gt; Maybe Piece
-</span><a href="WaiAppStatic.Types.html#toPiece"><span class="hs-identifier hs-var hs-var">toPiece</span></a></span></span><span> </span><span id="local-6989586621679135990"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679135990"><span class="hs-identifier hs-var">t</span></a></span></span><span>
+</span><a href="WaiAppStatic.Types.html#toPiece"><span class="hs-identifier hs-var hs-var">toPiece</span></a></span></span><span> </span><span id="local-6989586621679136000"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679136000"><span class="hs-identifier hs-var">t</span></a></span></span><span>
 </span><span id="line-46"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Bool
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.null</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679135990"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Piece -&gt; Maybe Piece
+</span><a href="#local-6989586621679136000"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Piece -&gt; Maybe Piece
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">(Piece -&gt; Maybe Piece) -&gt; Piece -&gt; Maybe Piece
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Piece
 </span><a href="WaiAppStatic.Types.html#Piece"><span class="hs-identifier hs-var">Piece</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679135990"><span class="hs-identifier hs-var">t</span></a></span><span>
+</span><a href="#local-6989586621679136000"><span class="hs-identifier hs-var">t</span></a></span><span>
 </span><span id="line-47"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Char
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.head</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679135990"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679136000"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'.'</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Piece
@@ -126,7 +126,7 @@ forall a. Maybe a
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'/'</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679135990"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Piece
+</span><a href="#local-6989586621679136000"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Piece
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-49"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
@@ -136,7 +136,7 @@ forall a. a -&gt; Maybe a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Piece
 </span><a href="WaiAppStatic.Types.html#Piece"><span class="hs-identifier hs-var">Piece</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679135990"><span class="hs-identifier hs-var">t</span></a></span><span>
+</span><a href="#local-6989586621679136000"><span class="hs-identifier hs-var">t</span></a></span><span>
 </span><span id="line-50"></span><span>
 </span><span id="line-51"></span><span class="hs-comment">-- | Construct a @Piece@ without input validation.</span><span>
 </span><span id="line-52"></span><span class="annot"><a href="WaiAppStatic.Types.html#unsafeToPiece"><span class="hs-identifier hs-type">unsafeToPiece</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="WaiAppStatic.Types.html#Piece"><span class="hs-identifier hs-type">Piece</span></a></span><span>

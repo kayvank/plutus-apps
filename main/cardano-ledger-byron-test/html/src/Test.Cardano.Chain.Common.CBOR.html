@@ -95,15 +95,15 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-93"></span><span>  </span><span id="local-6989586621679485912"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485912"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Address -&gt; PropertyT IO Address
+</span><span id="line-93"></span><span>  </span><span id="local-6989586621679486145"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679486145"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Address -&gt; PropertyT IO Address
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Address
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genAddress"><span class="hs-identifier hs-var">genAddress</span></a></span><span>
-</span><span id="line-94"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679485911"><span class="annot"><span class="annottext">crcEncodedBS :: ByteString
-</span><a href="#local-6989586621679485911"><span class="hs-identifier hs-var hs-var">crcEncodedBS</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
+</span><span id="line-94"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679486144"><span class="annot"><span class="annottext">crcEncodedBS :: ByteString
+</span><a href="#local-6989586621679486144"><span class="hs-identifier hs-var hs-var">crcEncodedBS</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serializeEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Encoding -&gt; ByteString)
 -&gt; (Address -&gt; Encoding) -&gt; Address -&gt; ByteString
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
@@ -114,7 +114,7 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">encodeCrcProtected</span></a></span><span> </span><span class="annot"><span class="annottext">(Address -&gt; ByteString) -&gt; Address -&gt; ByteString
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485912"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679486145"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-95"></span><span>  </span><span class="annot"><span class="annottext">Text
 -&gt; (forall s. Decoder s Address)
 -&gt; ByteString
@@ -126,7 +126,7 @@ Text
 </span><span class="hs-string">&quot;&quot;</span></span><span> </span><span class="annot"><span class="annottext">forall s. Decoder s Address
 forall s a. FromCBOR a =&gt; Decoder s a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">decodeCrcProtected</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679485911"><span class="hs-identifier hs-var">crcEncodedBS</span></a></span><span> </span><span class="annot"><span class="annottext">Either DecoderError Address
+</span><a href="#local-6989586621679486144"><span class="hs-identifier hs-var">crcEncodedBS</span></a></span><span> </span><span class="annot"><span class="annottext">Either DecoderError Address
 -&gt; Either DecoderError Address -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
@@ -134,7 +134,7 @@ a -&gt; a -&gt; m ()
 </span><a href="../../../../hedgehog/html/src"><span class="hs-operator hs-var">===</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; Either DecoderError Address
 forall a b. b -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Right</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485912"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679486145"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-96"></span><span>
 </span><span id="line-97"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-98"></span><span class="hs-comment">-- Address</span><span>
@@ -254,8 +254,8 @@ TestLimit -&gt; Gen a -&gt; (a -&gt; PropertyT IO ()) -&gt; TSProperty
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genAddress"><span class="hs-identifier hs-var">genAddress</span></a></span><span> </span><span class="annot"><span class="annottext">((Address -&gt; PropertyT IO ()) -&gt; TSProperty)
 -&gt; (Address -&gt; PropertyT IO ()) -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679485898"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485898"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679486131"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679486131"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-132"></span><span>    </span><span class="annot"><span class="annottext">CoverPercentage -&gt; LabelName -&gt; Bool -&gt; PropertyT IO ()
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -266,7 +266,7 @@ CoverPercentage -&gt; LabelName -&gt; Bool -&gt; m ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; Bool
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">isRedeemAddress</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485898"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621679486131"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-133"></span><span>    </span><span class="annot"><span class="annottext">CoverPercentage -&gt; LabelName -&gt; Bool -&gt; PropertyT IO ()
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -278,11 +278,11 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">not</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Address -&gt; Bool
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">isRedeemAddress</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485898"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679486131"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-134"></span><span>    </span><span class="annot"><span class="annottext">Text -&gt; Either DecoderError Address
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">decodeAddressBase58</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Address -&gt; Text
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">encodeAddressBase58</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485898"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Either DecoderError Address
+</span><a href="#local-6989586621679486131"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Either DecoderError Address
 -&gt; Either DecoderError Address -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
@@ -290,7 +290,7 @@ a -&gt; a -&gt; m ()
 </span><a href="../../../../hedgehog/html/src"><span class="hs-operator hs-var">===</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; Either DecoderError Address
 forall a b. b -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Right</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679485898"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621679486131"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-135"></span><span>
 </span><span id="line-136"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-137"></span><span class="hs-comment">-- AddrSpendingData</span><span>
@@ -316,15 +316,15 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">AddrSpendingData
-</span><a href="#local-6989586621679485895"><span class="hs-identifier hs-var">asd</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486128"><span class="hs-identifier hs-var">asd</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/AddrSpendingData_Redeem&quot;</span></span><span>
 </span><span id="line-148"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-149"></span><span>    </span><span id="local-6989586621679485895"><span class="annot"><span class="annottext">asd :: AddrSpendingData
-</span><a href="#local-6989586621679485895"><span class="hs-identifier hs-var hs-var">asd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey -&gt; AddrSpendingData
+</span><span id="line-149"></span><span>    </span><span id="local-6989586621679486128"><span class="annot"><span class="annottext">asd :: AddrSpendingData
+</span><a href="#local-6989586621679486128"><span class="hs-identifier hs-var hs-var">asd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey -&gt; AddrSpendingData
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">RedeemASD</span></a></span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey
-</span><a href="#local-6989586621679485893"><span class="hs-identifier hs-var">redeemVerificationKey</span></a></span><span>
-</span><span id="line-150"></span><span>    </span><span id="local-6989586621679485893"><span class="annot"><span class="annottext">redeemVerificationKey :: RedeemVerificationKey
-</span><a href="#local-6989586621679485893"><span class="hs-identifier hs-var hs-var">redeemVerificationKey</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679486126"><span class="hs-identifier hs-var">redeemVerificationKey</span></a></span><span>
+</span><span id="line-150"></span><span>    </span><span id="local-6989586621679486126"><span class="annot"><span class="annottext">redeemVerificationKey :: RedeemVerificationKey
+</span><a href="#local-6989586621679486126"><span class="hs-identifier hs-var hs-var">redeemVerificationKey</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-151"></span><span>      </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">(RedeemVerificationKey, RedeemSigningKey) -&gt; RedeemVerificationKey
 forall a b. (a, b) -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fst</span></a></span><span> </span><span class="annot"><span class="annottext">((RedeemVerificationKey, RedeemSigningKey)
@@ -342,9 +342,9 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. HasCallStack =&gt; Text -&gt; a
 </span><a href="../../../../protolude/html/src"><span class="hs-identifier hs-var">panic</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;golden_AddrSpendingData_Redeem: impossible&quot;</span></span><span>
-</span><span id="line-153"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679485890"><span class="annot"><span class="annottext">RedeemVerificationKey
-</span><a href="#local-6989586621679485890"><span class="hs-identifier hs-var">rk</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey
-</span><a href="#local-6989586621679485890"><span class="hs-identifier hs-var">rk</span></a></span><span>
+</span><span id="line-153"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679486123"><span class="annot"><span class="annottext">RedeemVerificationKey
+</span><a href="#local-6989586621679486123"><span class="hs-identifier hs-var">rk</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey
+</span><a href="#local-6989586621679486123"><span class="hs-identifier hs-var">rk</span></a></span><span>
 </span><span id="line-154"></span><span>
 </span><span id="line-155"></span><span class="annot"><a href="Test.Cardano.Chain.Common.CBOR.html#ts_roundTripAddrSpendingDataCBOR"><span class="hs-identifier hs-type">ts_roundTripAddrSpendingDataCBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
 </span><span id="line-156"></span><span id="ts_roundTripAddrSpendingDataCBOR"><span class="annot"><span class="annottext">ts_roundTripAddrSpendingDataCBOR :: TSProperty
@@ -413,11 +413,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">BlockCount
-</span><a href="#local-6989586621679485882"><span class="hs-identifier hs-var">bc</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486115"><span class="hs-identifier hs-var">bc</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/BlockCount&quot;</span></span><span>
 </span><span id="line-176"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-177"></span><span>    </span><span id="local-6989586621679485882"><span class="annot"><span class="annottext">bc :: BlockCount
-</span><a href="#local-6989586621679485882"><span class="hs-identifier hs-var hs-var">bc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; BlockCount
+</span><span id="line-177"></span><span>    </span><span id="local-6989586621679486115"><span class="annot"><span class="annottext">bc :: BlockCount
+</span><a href="#local-6989586621679486115"><span class="hs-identifier hs-var hs-var">bc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; BlockCount
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">BlockCount</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">999</span></span><span>
 </span><span id="line-178"></span><span>
@@ -448,11 +448,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">ChainDifficulty
-</span><a href="#local-6989586621679485878"><span class="hs-identifier hs-var">cd</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486111"><span class="hs-identifier hs-var">cd</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/ChainDifficulty&quot;</span></span><span>
 </span><span id="line-188"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-189"></span><span>    </span><span id="local-6989586621679485878"><span class="annot"><span class="annottext">cd :: ChainDifficulty
-</span><a href="#local-6989586621679485878"><span class="hs-identifier hs-var hs-var">cd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; ChainDifficulty
+</span><span id="line-189"></span><span>    </span><span id="local-6989586621679486111"><span class="annot"><span class="annottext">cd :: ChainDifficulty
+</span><a href="#local-6989586621679486111"><span class="hs-identifier hs-var hs-var">cd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; ChainDifficulty
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">ChainDifficulty</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">9999</span></span><span>
 </span><span id="line-190"></span><span>
@@ -485,11 +485,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485874"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486107"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/Lovelace&quot;</span></span><span>
 </span><span id="line-200"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-201"></span><span>    </span><span id="local-6989586621679485874"><span class="annot"><span class="annottext">c :: Lovelace
-</span><a href="#local-6989586621679485874"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KnownNat 9732, 9732 &lt;= 45000000000000000) =&gt; Lovelace
+</span><span id="line-201"></span><span>    </span><span id="local-6989586621679486107"><span class="annot"><span class="annottext">c :: Lovelace
+</span><a href="#local-6989586621679486107"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KnownNat 9732, 9732 &lt;= 45000000000000000) =&gt; Lovelace
 forall (n :: Nat). (KnownNat n, n &lt;= 45000000000000000) =&gt; Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkKnownLovelace</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-number">9732</span></span><span>
 </span><span id="line-202"></span><span>
@@ -542,11 +542,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">LovelacePortion
-</span><a href="#local-6989586621679485870"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486103"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/LovelacePortion&quot;</span></span><span>
 </span><span id="line-219"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-220"></span><span>    </span><span id="local-6989586621679485870"><span class="annot"><span class="annottext">c :: LovelacePortion
-</span><a href="#local-6989586621679485870"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; LovelacePortion
+</span><span id="line-220"></span><span>    </span><span id="local-6989586621679486103"><span class="annot"><span class="annottext">c :: LovelacePortion
+</span><a href="#local-6989586621679486103"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; LovelacePortion
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">rationalToLovelacePortion</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
 </span><span class="hs-number">9702e-15</span></span><span>
 </span><span id="line-221"></span><span>
@@ -611,21 +611,21 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">TxFeePolicy
-</span><a href="#local-6989586621679485865"><span class="hs-identifier hs-var">tfp</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486098"><span class="hs-identifier hs-var">tfp</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/TxFeePolicy_Linear&quot;</span></span><span>
 </span><span id="line-243"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-244"></span><span>    </span><span id="local-6989586621679485865"><span class="annot"><span class="annottext">tfp :: TxFeePolicy
-</span><a href="#local-6989586621679485865"><span class="hs-identifier hs-var hs-var">tfp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxSizeLinear -&gt; TxFeePolicy
+</span><span id="line-244"></span><span>    </span><span id="local-6989586621679486098"><span class="annot"><span class="annottext">tfp :: TxFeePolicy
+</span><a href="#local-6989586621679486098"><span class="hs-identifier hs-var hs-var">tfp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxSizeLinear -&gt; TxFeePolicy
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Lovelace -&gt; Rational -&gt; TxSizeLinear
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">TxSizeLinear</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485862"><span class="hs-identifier hs-var">c1</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679485861"><span class="hs-identifier hs-var">c2</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-245"></span><span>    </span><span id="local-6989586621679485862"><span class="annot"><span class="annottext">c1 :: Lovelace
-</span><a href="#local-6989586621679485862"><span class="hs-identifier hs-var hs-var">c1</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KnownNat 99, 99 &lt;= 45000000000000000) =&gt; Lovelace
+</span><a href="#local-6989586621679486095"><span class="hs-identifier hs-var">c1</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621679486094"><span class="hs-identifier hs-var">c2</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-245"></span><span>    </span><span id="local-6989586621679486095"><span class="annot"><span class="annottext">c1 :: Lovelace
+</span><a href="#local-6989586621679486095"><span class="hs-identifier hs-var hs-var">c1</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KnownNat 99, 99 &lt;= 45000000000000000) =&gt; Lovelace
 forall (n :: Nat). (KnownNat n, n &lt;= 45000000000000000) =&gt; Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkKnownLovelace</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-number">99</span></span><span>
-</span><span id="line-246"></span><span>    </span><span id="local-6989586621679485861"><span class="annot"><span class="annottext">c2 :: Rational
-</span><a href="#local-6989586621679485861"><span class="hs-identifier hs-var hs-var">c2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational
+</span><span id="line-246"></span><span>    </span><span id="local-6989586621679486094"><span class="annot"><span class="annottext">c2 :: Rational
+</span><a href="#local-6989586621679486094"><span class="hs-identifier hs-var hs-var">c2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational
 </span><span class="hs-number">777</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Rational</span></a></span><span>
 </span><span id="line-247"></span><span>
 </span><span id="line-248"></span><span class="annot"><a href="Test.Cardano.Chain.Common.CBOR.html#ts_roundTripTxFeePolicyCBOR"><span class="hs-identifier hs-type">ts_roundTripTxFeePolicyCBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -658,20 +658,20 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">TxSizeLinear
-</span><a href="#local-6989586621679485858"><span class="hs-identifier hs-var">tsl</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486091"><span class="hs-identifier hs-var">tsl</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/TxSizeLinear&quot;</span></span><span>
 </span><span id="line-258"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-259"></span><span>    </span><span id="local-6989586621679485858"><span class="annot"><span class="annottext">tsl :: TxSizeLinear
-</span><a href="#local-6989586621679485858"><span class="hs-identifier hs-var hs-var">tsl</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Rational -&gt; TxSizeLinear
+</span><span id="line-259"></span><span>    </span><span id="local-6989586621679486091"><span class="annot"><span class="annottext">tsl :: TxSizeLinear
+</span><a href="#local-6989586621679486091"><span class="hs-identifier hs-var hs-var">tsl</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Rational -&gt; TxSizeLinear
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">TxSizeLinear</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485857"><span class="hs-identifier hs-var">c1</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679485856"><span class="hs-identifier hs-var">c2</span></a></span><span>
-</span><span id="line-260"></span><span>    </span><span id="local-6989586621679485857"><span class="annot"><span class="annottext">c1 :: Lovelace
-</span><a href="#local-6989586621679485857"><span class="hs-identifier hs-var hs-var">c1</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KnownNat 99, 99 &lt;= 45000000000000000) =&gt; Lovelace
+</span><a href="#local-6989586621679486090"><span class="hs-identifier hs-var">c1</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621679486089"><span class="hs-identifier hs-var">c2</span></a></span><span>
+</span><span id="line-260"></span><span>    </span><span id="local-6989586621679486090"><span class="annot"><span class="annottext">c1 :: Lovelace
+</span><a href="#local-6989586621679486090"><span class="hs-identifier hs-var hs-var">c1</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KnownNat 99, 99 &lt;= 45000000000000000) =&gt; Lovelace
 forall (n :: Nat). (KnownNat n, n &lt;= 45000000000000000) =&gt; Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkKnownLovelace</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-number">99</span></span><span>
-</span><span id="line-261"></span><span>    </span><span id="local-6989586621679485856"><span class="annot"><span class="annottext">c2 :: Rational
-</span><a href="#local-6989586621679485856"><span class="hs-identifier hs-var hs-var">c2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational
+</span><span id="line-261"></span><span>    </span><span id="local-6989586621679486089"><span class="annot"><span class="annottext">c2 :: Rational
+</span><a href="#local-6989586621679486089"><span class="hs-identifier hs-var hs-var">c2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational
 </span><span class="hs-number">777</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Rational</span></a></span><span>
 </span><span id="line-262"></span><span>
 </span><span id="line-263"></span><span class="annot"><a href="Test.Cardano.Chain.Common.CBOR.html#ts_roundTripTxSizeLinearCBOR"><span class="hs-identifier hs-type">ts_roundTripTxSizeLinearCBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -703,11 +703,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">Attributes ()
-</span><a href="#local-6989586621679485853"><span class="hs-identifier hs-var">attrib</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486086"><span class="hs-identifier hs-var">attrib</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/Attributes&quot;</span></span><span>
 </span><span id="line-272"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-273"></span><span>    </span><span id="local-6989586621679485853"><span class="annot"><span class="annottext">attrib :: Attributes ()
-</span><a href="#local-6989586621679485853"><span class="hs-identifier hs-var hs-var">attrib</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">() -&gt; Attributes ()
+</span><span id="line-273"></span><span>    </span><span id="local-6989586621679486086"><span class="annot"><span class="annottext">attrib :: Attributes ()
+</span><a href="#local-6989586621679486086"><span class="hs-identifier hs-var hs-var">attrib</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">() -&gt; Attributes ()
 forall h. h -&gt; Attributes h
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkAttributes</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-274"></span><span>
@@ -742,11 +742,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">MerkleTree (Hash Raw)
-</span><a href="#local-6989586621679485850"><span class="hs-identifier hs-var">mTree</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486083"><span class="hs-identifier hs-var">mTree</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/MerkleTree&quot;</span></span><span>
 </span><span id="line-284"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-285"></span><span>    </span><span id="local-6989586621679485850"><span class="annot"><span class="annottext">mTree :: MerkleTree (Hash Raw)
-</span><a href="#local-6989586621679485850"><span class="hs-identifier hs-var hs-var">mTree</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Hash Raw] -&gt; MerkleTree (Hash Raw)
+</span><span id="line-285"></span><span>    </span><span id="local-6989586621679486083"><span class="annot"><span class="annottext">mTree :: MerkleTree (Hash Raw)
+</span><a href="#local-6989586621679486083"><span class="hs-identifier hs-var hs-var">mTree</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Hash Raw] -&gt; MerkleTree (Hash Raw)
 forall a. ToCBOR a =&gt; [a] -&gt; MerkleTree a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkMerkleTree</span></a></span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Raw -&gt; Hash Raw
 forall algo a.
@@ -788,11 +788,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">MerkleRoot (Hash Raw)
-</span><a href="#local-6989586621679485846"><span class="hs-identifier hs-var">mTree</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679486079"><span class="hs-identifier hs-var">mTree</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/common/MerkleRoot&quot;</span></span><span>
 </span><span id="line-296"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-297"></span><span>    </span><span id="local-6989586621679485846"><span class="annot"><span class="annottext">mTree :: MerkleRoot (Hash Raw)
-</span><a href="#local-6989586621679485846"><span class="hs-identifier hs-var hs-var">mTree</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">MerkleTree (Hash Raw) -&gt; MerkleRoot (Hash Raw)
+</span><span id="line-297"></span><span>    </span><span id="local-6989586621679486079"><span class="annot"><span class="annottext">mTree :: MerkleRoot (Hash Raw)
+</span><a href="#local-6989586621679486079"><span class="hs-identifier hs-var hs-var">mTree</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">MerkleTree (Hash Raw) -&gt; MerkleRoot (Hash Raw)
 forall a. MerkleTree a -&gt; MerkleRoot a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mtRoot</span></a></span><span> </span><span class="annot"><span class="annottext">(MerkleTree (Hash Raw) -&gt; MerkleRoot (Hash Raw))
 -&gt; MerkleTree (Hash Raw) -&gt; MerkleRoot (Hash Raw)
@@ -836,10 +836,10 @@ a -&gt; m ()
 </span><span id="line-306"></span><span class="annot"><a href="Test.Cardano.Chain.Common.CBOR.html#sizeEstimates"><span class="hs-identifier hs-type">sizeEstimates</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.Group</span></a></span><span>
 </span><span id="line-307"></span><span id="sizeEstimates"><span class="annot"><span class="annottext">sizeEstimates :: Group
 </span><a href="Test.Cardano.Chain.Common.CBOR.html#sizeEstimates"><span class="hs-identifier hs-var hs-var">sizeEstimates</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-308"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="#local-6989586621679485843"><span class="hs-identifier hs-type">check</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679485972"><span class="annot"><a href="#local-6989586621679485972"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679485972"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679485972"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679485972"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
-</span><span id="line-309"></span><span>      </span><span id="local-6989586621679485843"><span class="annot"><span class="annottext">check :: Gen a -&gt; Property
-</span><a href="#local-6989586621679485843"><span class="hs-identifier hs-var hs-var">check</span></a></span></span><span> </span><span id="local-6989586621679485842"><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679485842"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SizeTestConfig a -&gt; Property
+</span><span id="line-308"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="#local-6989586621679486076"><span class="hs-identifier hs-type">check</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679486205"><span class="annot"><a href="#local-6989586621679486205"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679486205"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679486205"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679486205"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
+</span><span id="line-309"></span><span>      </span><span id="local-6989586621679486076"><span class="annot"><span class="annottext">check :: Gen a -&gt; Property
+</span><a href="#local-6989586621679486076"><span class="hs-identifier hs-var hs-var">check</span></a></span></span><span> </span><span id="local-6989586621679486075"><span class="annot"><span class="annottext">Gen a
+</span><a href="#local-6989586621679486075"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SizeTestConfig a -&gt; Property
 forall a. ToCBOR a =&gt; SizeTestConfig a -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">sizeTest</span></a></span><span> </span><span class="annot"><span class="annottext">(SizeTestConfig a -&gt; Property) -&gt; SizeTestConfig a -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -847,11 +847,11 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">scfg</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">gen :: Gen a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679485842"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679486075"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-310"></span><span>
 </span><span id="line-311"></span><span>      </span><span class="hs-comment">-- Explicit bounds for types, based on the generators from Gen.</span><span>
-</span><span id="line-312"></span><span>      </span><span id="local-6989586621679485840"><span class="annot"><span class="annottext">attrUnitSize :: (TypeRep, SizeOverride)
-</span><a href="#local-6989586621679485840"><span class="hs-identifier hs-var hs-var">attrUnitSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-312"></span><span>      </span><span id="local-6989586621679486073"><span class="annot"><span class="annottext">attrUnitSize :: (TypeRep, SizeOverride)
+</span><a href="#local-6989586621679486073"><span class="hs-identifier hs-var hs-var">attrUnitSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-313"></span><span>        </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Proxy (Attributes ()) -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
 Typeable a =&gt;
@@ -863,8 +863,8 @@ forall k (t :: k). Proxy t
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">SizeConstant</span></a></span><span> </span><span class="annot"><span class="annottext">Size
 </span><span class="hs-number">1</span></span><span>
 </span><span id="line-315"></span><span>        </span><span class="hs-special">)</span><span>
-</span><span id="line-316"></span><span>      </span><span id="local-6989586621679485836"><span class="annot"><span class="annottext">attrAddrSize :: (TypeRep, SizeOverride)
-</span><a href="#local-6989586621679485836"><span class="hs-identifier hs-var hs-var">attrAddrSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-316"></span><span>      </span><span id="local-6989586621679486069"><span class="annot"><span class="annottext">attrAddrSize :: (TypeRep, SizeOverride)
+</span><a href="#local-6989586621679486069"><span class="hs-identifier hs-var hs-var">attrAddrSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-317"></span><span>        </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Proxy (Attributes AddrAttributes) -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
 Typeable a =&gt;
@@ -891,12 +891,12 @@ forall t. Text -&gt; t -&gt; Case t
 </span><span id="line-322"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;Lovelace&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; Property
 forall a. (Show a, ToCBOR a) =&gt; Gen a -&gt; Property
-</span><a href="#local-6989586621679485843"><span class="hs-identifier hs-var">check</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Lovelace
+</span><a href="#local-6989586621679486076"><span class="hs-identifier hs-var">check</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Lovelace
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genLovelace"><span class="hs-identifier hs-var">genLovelace</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-323"></span><span>          </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;BlockCount&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Gen BlockCount -&gt; Property
 forall a. (Show a, ToCBOR a) =&gt; Gen a -&gt; Property
-</span><a href="#local-6989586621679485843"><span class="hs-identifier hs-var">check</span></a></span><span> </span><span class="annot"><span class="annottext">Gen BlockCount
+</span><a href="#local-6989586621679486076"><span class="hs-identifier hs-var">check</span></a></span><span> </span><span class="annot"><span class="annottext">Gen BlockCount
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genBlockCount"><span class="hs-identifier hs-var">genBlockCount</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-324"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;Attributes ()&quot;</span></span><span class="hs-special">,</span><span>
@@ -919,7 +919,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679485840"><span class="hs-identifier hs-var">attrUnitSize</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679486073"><span class="hs-identifier hs-var">attrUnitSize</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-329"></span><span>                </span><span class="hs-special">}</span><span>
 </span><span id="line-330"></span><span>          </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-331"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
@@ -942,7 +942,7 @@ forall a. Gen a -&gt; Gen (Attributes a)
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679485836"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679486069"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-336"></span><span>                </span><span class="hs-special">}</span><span>
 </span><span id="line-337"></span><span>          </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-338"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
@@ -963,7 +963,7 @@ forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679485836"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679486069"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-343"></span><span>                </span><span class="hs-special">}</span><span>
 </span><span id="line-344"></span><span>          </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-345"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
@@ -1003,7 +1003,7 @@ forall k (t :: k). Proxy t
 </span><span id="line-357"></span><span>          </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;AddrType&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Gen AddrType -&gt; Property
 forall a. (Show a, ToCBOR a) =&gt; Gen a -&gt; Property
-</span><a href="#local-6989586621679485843"><span class="hs-identifier hs-var">check</span></a></span><span> </span><span class="annot"><span class="annottext">Gen AddrType
+</span><a href="#local-6989586621679486076"><span class="hs-identifier hs-var">check</span></a></span><span> </span><span class="annot"><span class="annottext">Gen AddrType
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genAddrType"><span class="hs-identifier hs-var">genAddrType</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-358"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-359"></span><span>

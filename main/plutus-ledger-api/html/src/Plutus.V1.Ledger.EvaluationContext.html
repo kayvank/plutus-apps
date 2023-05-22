@@ -79,13 +79,13 @@ Lens
 -&gt; CostModel CekMachineCosts (BuiltinCostModelBase MCostingFun)
 forall s t a b. ASetter s t a b -&gt; (a -&gt; b) -&gt; s -&gt; t
 </span><a href="../../../../lens/html/src"><span class="hs-operator hs-var">%~</span></a></span><span> </span><span class="annot"><span class="annottext">BuiltinCostModel -&gt; BuiltinCostModelBase MCostingFun
-</span><a href="#local-6989586621679745474"><span class="hs-identifier hs-var">omitV2Builtins</span></a></span><span>
+</span><a href="#local-6989586621679745640"><span class="hs-identifier hs-var">omitV2Builtins</span></a></span><span>
 </span><span id="line-38"></span><span>  </span><span class="hs-keyword">where</span><span>
 </span><span id="line-39"></span><span>    </span><span class="hs-comment">-- &quot;clears&quot; some fields of builtincostmodel by setting them to Nothing. See 'MCostingFun'.</span><span>
-</span><span id="line-40"></span><span>    </span><span class="annot"><a href="#local-6989586621679745474"><span class="hs-identifier hs-type">omitV2Builtins</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../plutus-core/html/src"><span class="hs-identifier hs-type">BuiltinCostModel</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../plutus-core/html/src"><span class="hs-identifier hs-type">BuiltinCostModelBase</span></a></span><span> </span><span class="annot"><a href="../../../../plutus-core/html/src"><span class="hs-identifier hs-type">MCostingFun</span></a></span><span>
-</span><span id="line-41"></span><span>    </span><span id="local-6989586621679745474"><span class="annot"><span class="annottext">omitV2Builtins :: BuiltinCostModel -&gt; BuiltinCostModelBase MCostingFun
-</span><a href="#local-6989586621679745474"><span class="hs-identifier hs-var hs-var">omitV2Builtins</span></a></span></span><span> </span><span id="local-6989586621679745473"><span class="annot"><span class="annottext">BuiltinCostModel
-</span><a href="#local-6989586621679745473"><span class="hs-identifier hs-var">bcm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-40"></span><span>    </span><span class="annot"><a href="#local-6989586621679745640"><span class="hs-identifier hs-type">omitV2Builtins</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../plutus-core/html/src"><span class="hs-identifier hs-type">BuiltinCostModel</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../plutus-core/html/src"><span class="hs-identifier hs-type">BuiltinCostModelBase</span></a></span><span> </span><span class="annot"><a href="../../../../plutus-core/html/src"><span class="hs-identifier hs-type">MCostingFun</span></a></span><span>
+</span><span id="line-41"></span><span>    </span><span id="local-6989586621679745640"><span class="annot"><span class="annottext">omitV2Builtins :: BuiltinCostModel -&gt; BuiltinCostModelBase MCostingFun
+</span><a href="#local-6989586621679745640"><span class="hs-identifier hs-var hs-var">omitV2Builtins</span></a></span></span><span> </span><span id="local-6989586621679745639"><span class="annot"><span class="annottext">BuiltinCostModel
+</span><a href="#local-6989586621679745639"><span class="hs-identifier hs-var">bcm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-42"></span><span>            </span><span class="hs-comment">-- transform all costing-functions to (Just costingFun)</span><span>
 </span><span id="line-43"></span><span>            </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(forall a. CostingFun a -&gt; MCostingFun a)
 -&gt; BuiltinCostModel -&gt; BuiltinCostModelBase MCostingFun
@@ -102,7 +102,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">CostingFun a -&gt; Maybe (CostingFun a)
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BuiltinCostModel
-</span><a href="#local-6989586621679745473"><span class="hs-identifier hs-var">bcm</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679745639"><span class="hs-identifier hs-var">bcm</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-44"></span><span>            </span><span class="hs-special">{</span><span>
 </span><span id="line-45"></span><span>              </span><span class="hs-comment">-- 'SerialiseData','EcdsaSecp256k1',SchnorrSecp256k1 builtins not available in V1</span><span>
 </span><span id="line-46"></span><span>              </span><span class="annot"><span class="annottext">paramSerialiseData :: MCostingFun ModelOneArgument

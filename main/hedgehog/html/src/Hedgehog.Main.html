@@ -12,8 +12,8 @@
 </span><span id="line-12"></span><span class="hs-comment">--</span><span>
 </span><span id="line-13"></span><span class="annot"><a href="Hedgehog.Main.html#defaultMain"><span class="hs-identifier hs-type">defaultMain</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-14"></span><span id="defaultMain"><span class="annot"><span class="annottext">defaultMain :: [IO Bool] -&gt; IO ()
-</span><a href="Hedgehog.Main.html#defaultMain"><span class="hs-identifier hs-var hs-var">defaultMain</span></a></span></span><span> </span><span id="local-6989586621679447327"><span class="annot"><span class="annottext">[IO Bool]
-</span><a href="#local-6989586621679447327"><span class="hs-identifier hs-var">tests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="Hedgehog.Main.html#defaultMain"><span class="hs-identifier hs-var hs-var">defaultMain</span></a></span></span><span> </span><span id="local-6989586621679447351"><span class="annot"><span class="annottext">[IO Bool]
+</span><a href="#local-6989586621679447351"><span class="hs-identifier hs-var">tests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-15"></span><span>  </span><span class="annot"><span class="annottext">Handle -&gt; BufferMode -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hSetBuffering</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">stdout</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
@@ -22,8 +22,8 @@
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hSetBuffering</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">stderr</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">LineBuffering</span></a></span><span>
-</span><span id="line-17"></span><span>  </span><span id="local-6989586621679447326"><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679447326"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[Bool] -&gt; Bool
+</span><span id="line-17"></span><span>  </span><span id="local-6989586621679447350"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679447350"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[Bool] -&gt; Bool
 forall (t :: * -&gt; *). Foldable t =&gt; t Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">and</span></a></span><span> </span><span class="annot"><span class="annottext">([Bool] -&gt; Bool) -&gt; IO [Bool] -&gt; IO Bool
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -32,11 +32,11 @@ forall (t :: * -&gt; *) (m :: * -&gt; *) a.
 (Traversable t, Monad m) =&gt;
 t (m a) -&gt; m (t a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">sequence</span></a></span><span> </span><span class="annot"><span class="annottext">[IO Bool]
-</span><a href="#local-6989586621679447327"><span class="hs-identifier hs-var">tests</span></a></span><span>
+</span><a href="#local-6989586621679447351"><span class="hs-identifier hs-var">tests</span></a></span><span>
 </span><span id="line-18"></span><span>  </span><span class="annot"><span class="annottext">Bool -&gt; IO () -&gt; IO ()
 forall (f :: * -&gt; *). Applicative f =&gt; Bool -&gt; f () -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">unless</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679447326"><span class="hs-identifier hs-var">result</span></a></span><span>
+</span><a href="#local-6989586621679447350"><span class="hs-identifier hs-var">result</span></a></span><span>
 </span><span id="line-19"></span><span>    </span><span class="annot"><span class="annottext">IO ()
 forall a. IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">exitFailure</span></a></span><span>

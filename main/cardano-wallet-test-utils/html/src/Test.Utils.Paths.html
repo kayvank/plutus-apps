@@ -43,31 +43,31 @@
 </span><span id="line-38"></span><span class="hs-comment">-- relative to the package root directory.</span><span>
 </span><span id="line-39"></span><span class="annot"><a href="Test.Utils.Paths.html#getTestDataPath"><span class="hs-identifier hs-type">getTestDataPath</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">FilePath</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Q</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-type">Exp</span></a></span><span>
 </span><span id="line-40"></span><span id="getTestDataPath"><span class="annot"><span class="annottext">getTestDataPath :: FilePath -&gt; Q Exp
-</span><a href="Test.Utils.Paths.html#getTestDataPath"><span class="hs-identifier hs-var hs-var">getTestDataPath</span></a></span></span><span> </span><span id="local-6989586621679138634"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679138634"><span class="hs-identifier hs-var">relPath</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-41"></span><span>    </span><span id="local-6989586621679138633"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679138633"><span class="hs-identifier hs-var">absPath</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; Q FilePath
+</span><a href="Test.Utils.Paths.html#getTestDataPath"><span class="hs-identifier hs-var hs-var">getTestDataPath</span></a></span></span><span> </span><span id="local-6989586621679138951"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679138951"><span class="hs-identifier hs-var">relPath</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-41"></span><span>    </span><span id="local-6989586621679138950"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679138950"><span class="hs-identifier hs-var">absPath</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; Q FilePath
 </span><a href="../../../../file-embed/html/src"><span class="hs-identifier hs-var">makeRelativeToProject</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679138634"><span class="hs-identifier hs-var">relPath</span></a></span><span>
-</span><span id="line-42"></span><span>    </span><span id="local-6989586621679138632"><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679138632"><span class="hs-identifier hs-var">useRel</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO Bool -&gt; Q Bool
+</span><a href="#local-6989586621679138951"><span class="hs-identifier hs-var">relPath</span></a></span><span>
+</span><span id="line-42"></span><span>    </span><span id="local-6989586621679138949"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679138949"><span class="hs-identifier hs-var">useRel</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO Bool -&gt; Q Bool
 forall (m :: * -&gt; *) a. MonadIO m =&gt; IO a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">liftIO</span></a></span><span> </span><span class="annot"><span class="annottext">IO Bool
 </span><a href="Test.Utils.Paths.html#inNixBuild"><span class="hs-identifier hs-var">inNixBuild</span></a></span><span>
 </span><span id="line-43"></span><span>    </span><span class="annot"><span class="annottext">FilePath -&gt; Q Exp
 forall a. Data a =&gt; a -&gt; Q Exp
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var">liftData</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679138632"><span class="hs-identifier hs-var">useRel</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679138634"><span class="hs-identifier hs-var">relPath</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679138633"><span class="hs-identifier hs-var">absPath</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679138949"><span class="hs-identifier hs-var">useRel</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679138951"><span class="hs-identifier hs-var">relPath</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679138950"><span class="hs-identifier hs-var">absPath</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-44"></span><span>
 </span><span id="line-45"></span><span class="hs-comment">-- | Infer from environment variables whether we are running within a Nix build</span><span>
 </span><span id="line-46"></span><span class="hs-comment">-- (and not just a nix-shell).</span><span>
 </span><span id="line-47"></span><span class="annot"><a href="Test.Utils.Paths.html#inNixBuild"><span class="hs-identifier hs-type">inNixBuild</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-48"></span><span id="inNixBuild"><span class="annot"><span class="annottext">inNixBuild :: IO Bool
 </span><a href="Test.Utils.Paths.html#inNixBuild"><span class="hs-identifier hs-var hs-var">inNixBuild</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-49"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679138631"><span class="annot"><span class="annottext">testEnv :: FilePath -&gt; IO Bool
-</span><a href="#local-6989586621679138631"><span class="hs-identifier hs-var hs-var">testEnv</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Maybe FilePath -&gt; Bool) -&gt; IO (Maybe FilePath) -&gt; IO Bool
+</span><span id="line-49"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679138948"><span class="annot"><span class="annottext">testEnv :: FilePath -&gt; IO Bool
+</span><a href="#local-6989586621679138948"><span class="hs-identifier hs-var hs-var">testEnv</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Maybe FilePath -&gt; Bool) -&gt; IO (Maybe FilePath) -&gt; IO Bool
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; (FilePath -&gt; Bool) -&gt; Maybe FilePath -&gt; Bool
 forall b a. b -&gt; (a -&gt; b) -&gt; Maybe a -&gt; b
@@ -82,19 +82,19 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Bool
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; IO (Maybe FilePath)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">lookupEnv</span></a></span><span>
-</span><span id="line-50"></span><span>    </span><span id="local-6989586621679138626"><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679138626"><span class="hs-identifier hs-var">haveNixBuildDir</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; IO Bool
-</span><a href="#local-6989586621679138631"><span class="hs-identifier hs-var">testEnv</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-50"></span><span>    </span><span id="local-6989586621679138943"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679138943"><span class="hs-identifier hs-var">haveNixBuildDir</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; IO Bool
+</span><a href="#local-6989586621679138948"><span class="hs-identifier hs-var">testEnv</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;NIX_BUILD_TOP&quot;</span></span><span>
-</span><span id="line-51"></span><span>    </span><span id="local-6989586621679138625"><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679138625"><span class="hs-identifier hs-var">inNixShell</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; IO Bool
-</span><a href="#local-6989586621679138631"><span class="hs-identifier hs-var">testEnv</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><span id="line-51"></span><span>    </span><span id="local-6989586621679138942"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679138942"><span class="hs-identifier hs-var">inNixShell</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; IO Bool
+</span><a href="#local-6989586621679138948"><span class="hs-identifier hs-var">testEnv</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;IN_NIX_SHELL&quot;</span></span><span>
 </span><span id="line-52"></span><span>    </span><span class="annot"><span class="annottext">Bool -&gt; IO Bool
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679138626"><span class="hs-identifier hs-var">haveNixBuildDir</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679138943"><span class="hs-identifier hs-var">haveNixBuildDir</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">not</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679138625"><span class="hs-identifier hs-var">inNixShell</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679138942"><span class="hs-identifier hs-var">inNixShell</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-53"></span></pre></body></html>

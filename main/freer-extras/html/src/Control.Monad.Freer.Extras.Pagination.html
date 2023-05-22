@@ -51,13 +51,13 @@ Here's a simple illustrative example:
 </span><span id="line-51"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Numeric.Natural</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Natural</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="hs-comment">-- | Query parameters for pagination.</span><span>
-</span><span id="line-54"></span><span id="local-6989586621679231329"><span id="local-6989586621679231330"></span></span><span class="hs-keyword">data</span><span> </span><span id="PageQuery"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-var">PageQuery</span></a></span></span><span> </span><span id="local-6989586621679231384"><span class="annot"><a href="#local-6989586621679231384"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PageQuery"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-var">PageQuery</span></a></span></span><span>
+</span><span id="line-54"></span><span id="local-6989586621679231481"><span id="local-6989586621679231482"></span></span><span class="hs-keyword">data</span><span> </span><span id="PageQuery"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-var">PageQuery</span></a></span></span><span> </span><span id="local-6989586621679231536"><span class="annot"><a href="#local-6989586621679231536"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PageQuery"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-var">PageQuery</span></a></span></span><span>
 </span><span id="line-55"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="pageQuerySize"><span class="annot"><span class="annottext">PageQuery a -&gt; PageSize
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#pageQuerySize"><span class="hs-identifier hs-var hs-var">pageQuerySize</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-type">PageSize</span></a></span><span> </span><span class="hs-comment">-- ^ Number of items per page.</span><span>
 </span><span id="line-56"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="pageQueryLastItem"><span class="annot"><span class="annottext">PageQuery a -&gt; Maybe a
-</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageQueryLastItem"><span class="hs-identifier hs-var hs-var">pageQueryLastItem</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231384"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-comment">-- ^ Last item of the queried page.</span><span>
+</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageQueryLastItem"><span class="hs-identifier hs-var hs-var">pageQueryLastItem</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231536"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-comment">-- ^ Last item of the queried page.</span><span>
 </span><span id="line-57"></span><span>    </span><span class="hs-special">}</span><span>
-</span><span id="line-58"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231322"><span id="local-6989586621679231324"><span class="annot"><span class="annottext">PageQuery a -&gt; PageQuery a -&gt; Bool
+</span><span id="line-58"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231474"><span id="local-6989586621679231476"><span class="annot"><span class="annottext">PageQuery a -&gt; PageQuery a -&gt; Bool
 (PageQuery a -&gt; PageQuery a -&gt; Bool)
 -&gt; (PageQuery a -&gt; PageQuery a -&gt; Bool) -&gt; Eq (PageQuery a)
 forall a. Eq a =&gt; PageQuery a -&gt; PageQuery a -&gt; Bool
@@ -66,7 +66,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: forall a. Eq a =&gt; PageQuery a -&gt; PageQuery a -&gt; Bool
 == :: PageQuery a -&gt; PageQuery a -&gt; Bool
 $c== :: forall a. Eq a =&gt; PageQuery a -&gt; PageQuery a -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231306"><span id="local-6989586621679231308"><span id="local-6989586621679231310"><span id="local-6989586621679231312"><span id="local-6989586621679231314"><span id="local-6989586621679231316"><span id="local-6989586621679231318"><span class="annot"><span class="annottext">Eq (PageQuery a)
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231458"><span id="local-6989586621679231460"><span id="local-6989586621679231462"><span id="local-6989586621679231464"><span id="local-6989586621679231466"><span id="local-6989586621679231468"><span id="local-6989586621679231470"><span class="annot"><span class="annottext">Eq (PageQuery a)
 Eq (PageQuery a)
 -&gt; (PageQuery a -&gt; PageQuery a -&gt; Ordering)
 -&gt; (PageQuery a -&gt; PageQuery a -&gt; Bool)
@@ -108,7 +108,7 @@ $c&lt; :: forall a. Ord a =&gt; PageQuery a -&gt; PageQuery a -&gt; Bool
 compare :: PageQuery a -&gt; PageQuery a -&gt; Ordering
 $ccompare :: forall a. Ord a =&gt; PageQuery a -&gt; PageQuery a -&gt; Ordering
 $cp1Ord :: forall a. Ord a =&gt; Eq (PageQuery a)
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231299"><span id="local-6989586621679231301"><span id="local-6989586621679231303"><span class="annot"><span class="annottext">Int -&gt; PageQuery a -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231451"><span id="local-6989586621679231453"><span id="local-6989586621679231455"><span class="annot"><span class="annottext">Int -&gt; PageQuery a -&gt; ShowS
 [PageQuery a] -&gt; ShowS
 PageQuery a -&gt; String
 (Int -&gt; PageQuery a -&gt; ShowS)
@@ -137,7 +137,7 @@ forall a x. Rep (PageQuery a) x -&gt; PageQuery a
 forall a x. PageQuery a -&gt; Rep (PageQuery a) x
 $cto :: forall a x. Rep (PageQuery a) x -&gt; PageQuery a
 $cfrom :: forall a x. PageQuery a -&gt; Rep (PageQuery a) x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231291"><span id="local-6989586621679231293"><span class="annot"><span class="annottext">a -&gt; PageQuery b -&gt; PageQuery a
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231443"><span id="local-6989586621679231445"><span class="annot"><span class="annottext">a -&gt; PageQuery b -&gt; PageQuery a
 (a -&gt; b) -&gt; PageQuery a -&gt; PageQuery b
 (forall a b. (a -&gt; b) -&gt; PageQuery a -&gt; PageQuery b)
 -&gt; (forall a b. a -&gt; PageQuery b -&gt; PageQuery a)
@@ -152,7 +152,7 @@ $c&lt;$ :: forall a b. a -&gt; PageQuery b -&gt; PageQuery a
 fmap :: (a -&gt; b) -&gt; PageQuery a -&gt; PageQuery b
 $cfmap :: forall a b. (a -&gt; b) -&gt; PageQuery a -&gt; PageQuery b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-59"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231282"><span id="local-6989586621679231284"><span id="local-6989586621679231286"><span id="local-6989586621679231288"><span class="annot"><span class="annottext">[PageQuery a] -&gt; Encoding
+</span><span id="line-59"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231434"><span id="local-6989586621679231436"><span id="local-6989586621679231438"><span id="local-6989586621679231440"><span class="annot"><span class="annottext">[PageQuery a] -&gt; Encoding
 [PageQuery a] -&gt; Value
 PageQuery a -&gt; Encoding
 PageQuery a -&gt; Value
@@ -179,7 +179,7 @@ toEncoding :: PageQuery a -&gt; Encoding
 $ctoEncoding :: forall a. ToJSON a =&gt; PageQuery a -&gt; Encoding
 toJSON :: PageQuery a -&gt; Value
 $ctoJSON :: forall a. ToJSON a =&gt; PageQuery a -&gt; Value
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231277"><span id="local-6989586621679231279"><span class="annot"><span class="annottext">Value -&gt; Parser [PageQuery a]
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231429"><span id="local-6989586621679231431"><span class="annot"><span class="annottext">Value -&gt; Parser [PageQuery a]
 Value -&gt; Parser (PageQuery a)
 (Value -&gt; Parser (PageQuery a))
 -&gt; (Value -&gt; Parser [PageQuery a]) -&gt; FromJSON (PageQuery a)
@@ -193,8 +193,8 @@ parseJSON :: Value -&gt; Parser (PageQuery a)
 $cparseJSON :: forall a. FromJSON a =&gt; Value -&gt; Parser (PageQuery a)
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-60"></span><span>
-</span><span id="line-61"></span><span id="local-6989586621679231275"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../data-default-class/html/src"><span class="hs-identifier hs-type">Default</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231275"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-62"></span><span>  </span><span id="local-6989586621679231272"><span class="annot"><span class="annottext">def :: PageQuery a
+</span><span id="line-61"></span><span id="local-6989586621679231427"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../data-default-class/html/src"><span class="hs-identifier hs-type">Default</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231427"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-62"></span><span>  </span><span id="local-6989586621679231424"><span class="annot"><span class="annottext">def :: PageQuery a
 </span><a href="../../../../data-default-class/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">def</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PageSize -&gt; Maybe a -&gt; PageQuery a
 forall a. PageSize -&gt; Maybe a -&gt; PageQuery a
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-var">PageQuery</span></a></span><span> </span><span class="annot"><span class="annottext">PageSize
@@ -203,9 +203,9 @@ forall a. Default a =&gt; a
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span></span><span>
 </span><span id="line-63"></span><span>
-</span><span id="line-64"></span><span id="local-6989586621679231269"><span id="local-6989586621679231270"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="PageSize"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-var">PageSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PageSize"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-var">PageSize</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="getPageSize"><span class="annot"><span class="annottext">PageSize -&gt; Natural
+</span><span id="line-64"></span><span id="local-6989586621679231421"><span id="local-6989586621679231422"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="PageSize"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-var">PageSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PageSize"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-var">PageSize</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="getPageSize"><span class="annot"><span class="annottext">PageSize -&gt; Natural
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#getPageSize"><span class="hs-identifier hs-var hs-var">getPageSize</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Natural</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-65"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231263"><span id="local-6989586621679231265"><span class="annot"><span class="annottext">PageSize -&gt; PageSize -&gt; Bool
+</span><span id="line-65"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231415"><span id="local-6989586621679231417"><span class="annot"><span class="annottext">PageSize -&gt; PageSize -&gt; Bool
 (PageSize -&gt; PageSize -&gt; Bool)
 -&gt; (PageSize -&gt; PageSize -&gt; Bool) -&gt; Eq PageSize
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -213,7 +213,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: PageSize -&gt; PageSize -&gt; Bool
 == :: PageSize -&gt; PageSize -&gt; Bool
 $c== :: PageSize -&gt; PageSize -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231248"><span id="local-6989586621679231250"><span id="local-6989586621679231252"><span id="local-6989586621679231254"><span id="local-6989586621679231256"><span id="local-6989586621679231258"><span id="local-6989586621679231260"><span class="annot"><span class="annottext">Eq PageSize
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231400"><span id="local-6989586621679231402"><span id="local-6989586621679231404"><span id="local-6989586621679231406"><span id="local-6989586621679231408"><span id="local-6989586621679231410"><span id="local-6989586621679231412"><span class="annot"><span class="annottext">Eq PageSize
 Eq PageSize
 -&gt; (PageSize -&gt; PageSize -&gt; Ordering)
 -&gt; (PageSize -&gt; PageSize -&gt; Bool)
@@ -251,7 +251,7 @@ $c&lt; :: PageSize -&gt; PageSize -&gt; Bool
 compare :: PageSize -&gt; PageSize -&gt; Ordering
 $ccompare :: PageSize -&gt; PageSize -&gt; Ordering
 $cp1Ord :: Eq PageSize
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231242"><span id="local-6989586621679231244"><span id="local-6989586621679231246"><span class="annot"><span class="annottext">Int -&gt; PageSize -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231394"><span id="local-6989586621679231396"><span id="local-6989586621679231398"><span class="annot"><span class="annottext">Int -&gt; PageSize -&gt; ShowS
 [PageSize] -&gt; ShowS
 PageSize -&gt; String
 (Int -&gt; PageSize -&gt; ShowS)
@@ -273,7 +273,7 @@ forall a.
 $cto :: forall x. Rep PageSize x -&gt; PageSize
 $cfrom :: forall x. PageSize -&gt; Rep PageSize x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-66"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231232"><span id="local-6989586621679231234"><span id="local-6989586621679231236"><span id="local-6989586621679231238"><span class="annot"><span class="annottext">[PageSize] -&gt; Encoding
+</span><span id="line-66"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231384"><span id="local-6989586621679231386"><span id="local-6989586621679231388"><span id="local-6989586621679231390"><span class="annot"><span class="annottext">[PageSize] -&gt; Encoding
 [PageSize] -&gt; Value
 PageSize -&gt; Encoding
 PageSize -&gt; Value
@@ -296,7 +296,7 @@ toEncoding :: PageSize -&gt; Encoding
 $ctoEncoding :: PageSize -&gt; Encoding
 toJSON :: PageSize -&gt; Value
 $ctoJSON :: PageSize -&gt; Value
-</span><a href="#local-6989586621679231232"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231228"><span id="local-6989586621679231230"><span class="annot"><span class="annottext">Value -&gt; Parser [PageSize]
+</span><a href="#local-6989586621679231384"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231380"><span id="local-6989586621679231382"><span class="annot"><span class="annottext">Value -&gt; Parser [PageSize]
 Value -&gt; Parser PageSize
 (Value -&gt; Parser PageSize)
 -&gt; (Value -&gt; Parser [PageSize]) -&gt; FromJSON PageSize
@@ -306,8 +306,8 @@ parseJSONList :: Value -&gt; Parser [PageSize]
 $cparseJSONList :: Value -&gt; Parser [PageSize]
 parseJSON :: Value -&gt; Parser PageSize
 $cparseJSON :: Value -&gt; Parser PageSize
-</span><a href="#local-6989586621679231228"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-67"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231214"><span id="local-6989586621679231216"><span id="local-6989586621679231218"><span id="local-6989586621679231220"><span id="local-6989586621679231222"><span id="local-6989586621679231224"><span id="local-6989586621679231226"><span class="annot"><span class="annottext">Integer -&gt; PageSize
+</span><a href="#local-6989586621679231380"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">)</span><span>
+</span><span id="line-67"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231366"><span id="local-6989586621679231368"><span id="local-6989586621679231370"><span id="local-6989586621679231372"><span id="local-6989586621679231374"><span id="local-6989586621679231376"><span id="local-6989586621679231378"><span class="annot"><span class="annottext">Integer -&gt; PageSize
 PageSize -&gt; PageSize
 PageSize -&gt; PageSize -&gt; PageSize
 (PageSize -&gt; PageSize -&gt; PageSize)
@@ -344,24 +344,24 @@ $c+ :: PageSize -&gt; PageSize -&gt; PageSize
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-68"></span><span>
 </span><span id="line-69"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../data-default-class/html/src"><span class="hs-identifier hs-type">Default</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-type">PageSize</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-70"></span><span>    </span><span id="local-6989586621679231211"><span class="annot"><span class="annottext">def :: PageSize
-</span><a href="#local-6989586621679231211"><span class="hs-identifier hs-var hs-var hs-var hs-var">def</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; PageSize
+</span><span id="line-70"></span><span>    </span><span id="local-6989586621679231363"><span class="annot"><span class="annottext">def :: PageSize
+</span><a href="#local-6989586621679231363"><span class="hs-identifier hs-var hs-var hs-var hs-var">def</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; PageSize
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-var">PageSize</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
 </span><span class="hs-number">50</span></span><span>
 </span><span id="line-71"></span><span>
 </span><span id="line-72"></span><span class="hs-comment">-- | Part of a collection.</span><span>
-</span><span id="line-73"></span><span id="local-6989586621679231209"><span id="local-6989586621679231210"></span></span><span class="hs-keyword">data</span><span> </span><span id="Page"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-var">Page</span></a></span></span><span> </span><span id="local-6989586621679231336"><span class="annot"><a href="#local-6989586621679231336"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Page"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-var">Page</span></a></span></span><span>
+</span><span id="line-73"></span><span id="local-6989586621679231361"><span id="local-6989586621679231362"></span></span><span class="hs-keyword">data</span><span> </span><span id="Page"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-var">Page</span></a></span></span><span> </span><span id="local-6989586621679231488"><span class="annot"><a href="#local-6989586621679231488"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Page"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-var">Page</span></a></span></span><span>
 </span><span id="line-74"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="currentPageQuery"><span class="annot"><span class="annottext">Page a -&gt; PageQuery a
-</span><a href="Control.Monad.Freer.Extras.Pagination.html#currentPageQuery"><span class="hs-identifier hs-var hs-var">currentPageQuery</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231336"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><a href="Control.Monad.Freer.Extras.Pagination.html#currentPageQuery"><span class="hs-identifier hs-var hs-var">currentPageQuery</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231488"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-75"></span><span>    </span><span class="hs-comment">-- ^ The 'PageQuery' which was used to request this 'Page'.</span><span>
 </span><span id="line-76"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="nextPageQuery"><span class="annot"><span class="annottext">Page a -&gt; Maybe (PageQuery a)
-</span><a href="Control.Monad.Freer.Extras.Pagination.html#nextPageQuery"><span class="hs-identifier hs-var hs-var">nextPageQuery</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231336"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="Control.Monad.Freer.Extras.Pagination.html#nextPageQuery"><span class="hs-identifier hs-var hs-var">nextPageQuery</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231488"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-77"></span><span>    </span><span class="hs-comment">-- ^ The 'PageQuery' to use to request the next 'Page'. Nothing if we requested the last page.</span><span>
 </span><span id="line-78"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="pageItems"><span class="annot"><span class="annottext">Page a -&gt; [a]
-</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageItems"><span class="hs-identifier hs-var hs-var">pageItems</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679231336"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">]</span><span>
+</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageItems"><span class="hs-identifier hs-var hs-var">pageItems</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="#local-6989586621679231488"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-79"></span><span>    </span><span class="hs-comment">-- ^ Items in the current 'Page'.</span><span>
 </span><span id="line-80"></span><span>    </span><span class="hs-special">}</span><span>
-</span><span id="line-81"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231201"><span id="local-6989586621679231203"><span class="annot"><span class="annottext">Page a -&gt; Page a -&gt; Bool
+</span><span id="line-81"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231353"><span id="local-6989586621679231355"><span class="annot"><span class="annottext">Page a -&gt; Page a -&gt; Bool
 (Page a -&gt; Page a -&gt; Bool)
 -&gt; (Page a -&gt; Page a -&gt; Bool) -&gt; Eq (Page a)
 forall a. Eq a =&gt; Page a -&gt; Page a -&gt; Bool
@@ -370,7 +370,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: forall a. Eq a =&gt; Page a -&gt; Page a -&gt; Bool
 == :: Page a -&gt; Page a -&gt; Bool
 $c== :: forall a. Eq a =&gt; Page a -&gt; Page a -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231186"><span id="local-6989586621679231188"><span id="local-6989586621679231190"><span id="local-6989586621679231192"><span id="local-6989586621679231194"><span id="local-6989586621679231196"><span id="local-6989586621679231198"><span class="annot"><span class="annottext">Eq (Page a)
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231338"><span id="local-6989586621679231340"><span id="local-6989586621679231342"><span id="local-6989586621679231344"><span id="local-6989586621679231346"><span id="local-6989586621679231348"><span id="local-6989586621679231350"><span class="annot"><span class="annottext">Eq (Page a)
 Eq (Page a)
 -&gt; (Page a -&gt; Page a -&gt; Ordering)
 -&gt; (Page a -&gt; Page a -&gt; Bool)
@@ -412,7 +412,7 @@ $c&lt; :: forall a. Ord a =&gt; Page a -&gt; Page a -&gt; Bool
 compare :: Page a -&gt; Page a -&gt; Ordering
 $ccompare :: forall a. Ord a =&gt; Page a -&gt; Page a -&gt; Ordering
 $cp1Ord :: forall a. Ord a =&gt; Eq (Page a)
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231180"><span id="local-6989586621679231182"><span id="local-6989586621679231184"><span class="annot"><span class="annottext">Int -&gt; Page a -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231332"><span id="local-6989586621679231334"><span id="local-6989586621679231336"><span class="annot"><span class="annottext">Int -&gt; Page a -&gt; ShowS
 [Page a] -&gt; ShowS
 Page a -&gt; String
 (Int -&gt; Page a -&gt; ShowS)
@@ -438,7 +438,7 @@ forall a x. Rep (Page a) x -&gt; Page a
 forall a x. Page a -&gt; Rep (Page a) x
 $cto :: forall a x. Rep (Page a) x -&gt; Page a
 $cfrom :: forall a x. Page a -&gt; Rep (Page a) x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231174"><span id="local-6989586621679231176"><span class="annot"><span class="annottext">a -&gt; Page b -&gt; Page a
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231326"><span id="local-6989586621679231328"><span class="annot"><span class="annottext">a -&gt; Page b -&gt; Page a
 (a -&gt; b) -&gt; Page a -&gt; Page b
 (forall a b. (a -&gt; b) -&gt; Page a -&gt; Page b)
 -&gt; (forall a b. a -&gt; Page b -&gt; Page a) -&gt; Functor Page
@@ -452,7 +452,7 @@ $c&lt;$ :: forall a b. a -&gt; Page b -&gt; Page a
 fmap :: (a -&gt; b) -&gt; Page a -&gt; Page b
 $cfmap :: forall a b. (a -&gt; b) -&gt; Page a -&gt; Page b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-82"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231166"><span id="local-6989586621679231168"><span id="local-6989586621679231170"><span id="local-6989586621679231172"><span class="annot"><span class="annottext">[Page a] -&gt; Encoding
+</span><span id="line-82"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679231318"><span id="local-6989586621679231320"><span id="local-6989586621679231322"><span id="local-6989586621679231324"><span class="annot"><span class="annottext">[Page a] -&gt; Encoding
 [Page a] -&gt; Value
 Page a -&gt; Encoding
 Page a -&gt; Value
@@ -479,7 +479,7 @@ toEncoding :: Page a -&gt; Encoding
 $ctoEncoding :: forall a. ToJSON a =&gt; Page a -&gt; Encoding
 toJSON :: Page a -&gt; Value
 $ctoJSON :: forall a. ToJSON a =&gt; Page a -&gt; Value
-</span><a href="#local-6989586621679231166"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231162"><span id="local-6989586621679231164"><span class="annot"><span class="annottext">Value -&gt; Parser [Page a]
+</span><a href="#local-6989586621679231318"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231314"><span id="local-6989586621679231316"><span class="annot"><span class="annottext">Value -&gt; Parser [Page a]
 Value -&gt; Parser (Page a)
 (Value -&gt; Parser (Page a))
 -&gt; (Value -&gt; Parser [Page a]) -&gt; FromJSON (Page a)
@@ -491,38 +491,38 @@ parseJSONList :: Value -&gt; Parser [Page a]
 $cparseJSONList :: forall a. FromJSON a =&gt; Value -&gt; Parser [Page a]
 parseJSON :: Value -&gt; Parser (Page a)
 $cparseJSON :: forall a. FromJSON a =&gt; Value -&gt; Parser (Page a)
-</span><a href="#local-6989586621679231162"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679231314"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-83"></span><span>
 </span><span id="line-84"></span><span class="hs-comment">-- | Given a 'Set', request the 'Page' with the given 'PageQuery'.</span><span>
-</span><span id="line-85"></span><span id="local-6989586621679231161"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#pageOf"><span class="hs-identifier hs-type">pageOf</span></a></span><span>
-</span><span id="line-86"></span><span>  </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Eq</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231161"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-87"></span><span>  </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231161"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-comment">-- ^ Pagination query parameters.</span><span>
-</span><span id="line-88"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Set</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231161"><span class="hs-identifier hs-type">a</span></a></span><span>
-</span><span id="line-89"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-type">Page</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231161"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-85"></span><span id="local-6989586621679231313"><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#pageOf"><span class="hs-identifier hs-type">pageOf</span></a></span><span>
+</span><span id="line-86"></span><span>  </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Eq</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231313"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-87"></span><span>  </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231313"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-comment">-- ^ Pagination query parameters.</span><span>
+</span><span id="line-88"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Set</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231313"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-89"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-type">Page</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679231313"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-90"></span><span id="pageOf"><span class="annot"><span class="annottext">pageOf :: PageQuery a -&gt; Set a -&gt; Page a
-</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageOf"><span class="hs-identifier hs-var hs-var">pageOf</span></a></span></span><span> </span><span id="local-6989586621679231160"><span class="annot"><span class="annottext">pageQuery :: PageQuery a
-</span><a href="#local-6989586621679231160"><span class="hs-identifier hs-var">pageQuery</span></a></span></span><span class="hs-glyph">@</span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">pageQuerySize :: forall a. PageQuery a -&gt; PageSize
-</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageQuerySize"><span class="hs-identifier hs-var">pageQuerySize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-type">PageSize</span></a></span><span> </span><span id="local-6989586621679231159"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621679231159"><span class="hs-identifier hs-var">ps</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231158"><span class="annot"><span class="annottext">Maybe a
+</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageOf"><span class="hs-identifier hs-var hs-var">pageOf</span></a></span></span><span> </span><span id="local-6989586621679231312"><span class="annot"><span class="annottext">pageQuery :: PageQuery a
+</span><a href="#local-6989586621679231312"><span class="hs-identifier hs-var">pageQuery</span></a></span></span><span class="hs-glyph">@</span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-type">PageQuery</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">pageQuerySize :: forall a. PageQuery a -&gt; PageSize
+</span><a href="Control.Monad.Freer.Extras.Pagination.html#pageQuerySize"><span class="hs-identifier hs-var">pageQuerySize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-type">PageSize</span></a></span><span> </span><span id="local-6989586621679231311"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621679231311"><span class="hs-identifier hs-var">ps</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679231310"><span class="annot"><span class="annottext">Maybe a
 pageQueryLastItem :: Maybe a
 pageQueryLastItem :: forall a. PageQuery a -&gt; Maybe a
-</span><a href="#local-6989586621679231158"><span class="hs-identifier hs-var hs-var">pageQueryLastItem</span></a></span></span><span> </span><span class="hs-special">}</span><span> </span><span id="local-6989586621679231157"><span class="annot"><span class="annottext">Set a
-</span><a href="#local-6989586621679231157"><span class="hs-identifier hs-var">items</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-91"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679231156"><span class="annot"><span class="annottext">ps' :: Int
-</span><a href="#local-6989586621679231156"><span class="hs-identifier hs-var hs-var">ps'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Int
+</span><a href="#local-6989586621679231310"><span class="hs-identifier hs-var hs-var">pageQueryLastItem</span></a></span></span><span> </span><span class="hs-special">}</span><span> </span><span id="local-6989586621679231309"><span class="annot"><span class="annottext">Set a
+</span><a href="#local-6989586621679231309"><span class="hs-identifier hs-var">items</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-91"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679231308"><span class="annot"><span class="annottext">ps' :: Int
+</span><a href="#local-6989586621679231308"><span class="hs-identifier hs-var hs-var">ps'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621679231159"><span class="hs-identifier hs-var">ps</span></a></span><span>
+</span><a href="#local-6989586621679231311"><span class="hs-identifier hs-var">ps</span></a></span><span>
 </span><span id="line-92"></span><span>        </span><span class="hs-comment">-- The extract the @PageSize + 1@ next elements after the last query</span><span>
 </span><span id="line-93"></span><span>        </span><span class="hs-comment">-- element. The @+1@ allows to now if there is a next page or not.</span><span>
-</span><span id="line-94"></span><span>        </span><span id="local-6989586621679231155"><span class="annot"><span class="annottext">pageItems :: [a]
-</span><a href="#local-6989586621679231155"><span class="hs-identifier hs-var hs-var">pageItems</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Maybe a
-</span><a href="#local-6989586621679231158"><span class="hs-identifier hs-var">pageQueryLastItem</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-94"></span><span>        </span><span id="local-6989586621679231307"><span class="annot"><span class="annottext">pageItems :: [a]
+</span><a href="#local-6989586621679231307"><span class="hs-identifier hs-var hs-var">pageItems</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Maybe a
+</span><a href="#local-6989586621679231310"><span class="hs-identifier hs-var">pageQueryLastItem</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-95"></span><span>                      </span><span class="annot"><span class="annottext">Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [a] -&gt; [a]
 forall a. Int -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">take</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679231156"><span class="hs-identifier hs-var">ps'</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679231308"><span class="hs-identifier hs-var">ps'</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">([a] -&gt; [a]) -&gt; [a] -&gt; [a]
@@ -530,12 +530,12 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Set a -&gt; [a]
 forall a. Set a -&gt; [a]
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Set.toList</span></a></span><span> </span><span class="annot"><span class="annottext">Set a
-</span><a href="#local-6989586621679231157"><span class="hs-identifier hs-var">items</span></a></span><span>
-</span><span id="line-96"></span><span>                      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679231151"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679231151"><span class="hs-identifier hs-var">i</span></a></span></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [a] -&gt; [a]
+</span><a href="#local-6989586621679231309"><span class="hs-identifier hs-var">items</span></a></span><span>
+</span><span id="line-96"></span><span>                      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679231303"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679231303"><span class="hs-identifier hs-var">i</span></a></span></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [a] -&gt; [a]
 forall a. Int -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">take</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679231156"><span class="hs-identifier hs-var">ps'</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679231308"><span class="hs-identifier hs-var">ps'</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">([a] -&gt; [a]) -&gt; [a] -&gt; [a]
@@ -550,31 +550,31 @@ forall a. (a -&gt; Bool) -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">dropWhile</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a -&gt; a -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">(/=)</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679231151"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">([a] -&gt; [a]) -&gt; [a] -&gt; [a]
+</span><a href="#local-6989586621679231303"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">([a] -&gt; [a]) -&gt; [a] -&gt; [a]
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Set a -&gt; [a]
 forall a. Set a -&gt; [a]
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Set.toList</span></a></span><span> </span><span class="annot"><span class="annottext">Set a
-</span><a href="#local-6989586621679231157"><span class="hs-identifier hs-var">items</span></a></span><span>
+</span><a href="#local-6989586621679231309"><span class="hs-identifier hs-var">items</span></a></span><span>
 </span><span id="line-97"></span><span>
-</span><span id="line-98"></span><span>        </span><span id="local-6989586621679231147"><span class="annot"><span class="annottext">nextLastItem :: Maybe a
-</span><a href="#local-6989586621679231147"><span class="hs-identifier hs-var hs-var">nextLastItem</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
+</span><span id="line-98"></span><span>        </span><span id="local-6989586621679231299"><span class="annot"><span class="annottext">nextLastItem :: Maybe a
+</span><a href="#local-6989586621679231299"><span class="hs-identifier hs-var hs-var">nextLastItem</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
 forall (f :: * -&gt; *). Alternative f =&gt; Bool -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">guard</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Set a -&gt; Int
 forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">length</span></a></span><span> </span><span class="annot"><span class="annottext">Set a
-</span><a href="#local-6989586621679231157"><span class="hs-identifier hs-var">items</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679231309"><span class="hs-identifier hs-var">items</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621679231159"><span class="hs-identifier hs-var">ps</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679231311"><span class="hs-identifier hs-var">ps</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-99"></span><span>                 </span><span class="annot"><span class="annottext">Maybe () -&gt; Maybe (NonEmpty a) -&gt; Maybe (NonEmpty a)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; m b -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[a] -&gt; Maybe (NonEmpty a)
 forall a. [a] -&gt; Maybe (NonEmpty a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">L.nonEmpty</span></a></span><span> </span><span class="annot"><span class="annottext">[a]
-</span><a href="#local-6989586621679231155"><span class="hs-identifier hs-var">pageItems</span></a></span><span>
+</span><a href="#local-6989586621679231307"><span class="hs-identifier hs-var">pageItems</span></a></span><span>
 </span><span id="line-100"></span><span>                 </span><span class="annot"><span class="annottext">Maybe (NonEmpty a) -&gt; (NonEmpty a -&gt; Maybe a) -&gt; Maybe a
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">[a] -&gt; Maybe a
@@ -593,7 +593,7 @@ forall a. NonEmpty a -&gt; NonEmpty a
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#Page"><span class="hs-identifier hs-type">Page</span></a></span><span>
 </span><span id="line-102"></span><span>        </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">currentPageQuery :: PageQuery a
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#currentPageQuery"><span class="hs-identifier hs-var">currentPageQuery</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PageQuery a
-</span><a href="#local-6989586621679231160"><span class="hs-identifier hs-var">pageQuery</span></a></span><span>
+</span><a href="#local-6989586621679231312"><span class="hs-identifier hs-var">pageQuery</span></a></span><span>
 </span><span id="line-103"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">nextPageQuery :: Maybe (PageQuery a)
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#nextPageQuery"><span class="hs-identifier hs-var">nextPageQuery</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(a -&gt; PageQuery a) -&gt; Maybe a -&gt; Maybe (PageQuery a)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -601,21 +601,21 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. PageSize -&gt; Maybe a -&gt; PageQuery a
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#PageQuery"><span class="hs-identifier hs-var">PageQuery</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Natural -&gt; PageSize
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#PageSize"><span class="hs-identifier hs-var">PageSize</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621679231159"><span class="hs-identifier hs-var">ps</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe a -&gt; PageQuery a) -&gt; (a -&gt; Maybe a) -&gt; a -&gt; PageQuery a
+</span><a href="#local-6989586621679231311"><span class="hs-identifier hs-var">ps</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe a -&gt; PageQuery a) -&gt; (a -&gt; Maybe a) -&gt; a -&gt; PageQuery a
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; Maybe a
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe a
-</span><a href="#local-6989586621679231147"><span class="hs-identifier hs-var">nextLastItem</span></a></span><span>
+</span><a href="#local-6989586621679231299"><span class="hs-identifier hs-var">nextLastItem</span></a></span><span>
 </span><span id="line-104"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">pageItems :: [a]
 </span><a href="Control.Monad.Freer.Extras.Pagination.html#pageItems"><span class="hs-identifier hs-var">pageItems</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Maybe a -&gt; Bool
 forall a. Maybe a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">isJust</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe a
-</span><a href="#local-6989586621679231147"><span class="hs-identifier hs-var">nextLastItem</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">[a] -&gt; [a]
+</span><a href="#local-6989586621679231299"><span class="hs-identifier hs-var">nextLastItem</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">[a] -&gt; [a]
 forall a. [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">init</span></a></span><span> </span><span class="annot"><span class="annottext">[a]
-</span><a href="#local-6989586621679231155"><span class="hs-identifier hs-var">pageItems</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">[a]
-</span><a href="#local-6989586621679231155"><span class="hs-identifier hs-var">pageItems</span></a></span><span>
+</span><a href="#local-6989586621679231307"><span class="hs-identifier hs-var">pageItems</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">[a]
+</span><a href="#local-6989586621679231307"><span class="hs-identifier hs-var">pageItems</span></a></span><span>
 </span><span id="line-105"></span><span>        </span><span class="hs-special">}</span><span>
 </span><span id="line-106"></span><span>
 </span><span id="line-107"></span></pre></body></html>

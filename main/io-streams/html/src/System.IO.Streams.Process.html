@@ -37,19 +37,19 @@
 -&gt; IO
      (OutputStream ByteString, InputStream ByteString,
       InputStream ByteString, ProcessHandle)
-</span><a href="System.IO.Streams.Process.html#runInteractiveCommand"><span class="hs-identifier hs-var hs-var">runInteractiveCommand</span></a></span></span><span> </span><span id="local-6989586621679083313"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679083313"><span class="hs-identifier hs-var">scmd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-37"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679083312"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083312"><span class="hs-identifier hs-var">hin</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083311"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083311"><span class="hs-identifier hs-var">hout</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083310"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083310"><span class="hs-identifier hs-var">herr</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083309"><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621679083309"><span class="hs-identifier hs-var">ph</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String -&gt; IO (Handle, Handle, Handle, ProcessHandle)
+</span><a href="System.IO.Streams.Process.html#runInteractiveCommand"><span class="hs-identifier hs-var hs-var">runInteractiveCommand</span></a></span></span><span> </span><span id="local-6989586621679083314"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679083314"><span class="hs-identifier hs-var">scmd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-37"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679083313"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679083313"><span class="hs-identifier hs-var">hin</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083312"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679083312"><span class="hs-identifier hs-var">hout</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083311"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679083311"><span class="hs-identifier hs-var">herr</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083310"><span class="annot"><span class="annottext">ProcessHandle
+</span><a href="#local-6989586621679083310"><span class="hs-identifier hs-var">ph</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String -&gt; IO (Handle, Handle, Handle, ProcessHandle)
 </span><a href="../../../../process/html/src"><span class="hs-identifier hs-var">P.runInteractiveCommand</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679083313"><span class="hs-identifier hs-var">scmd</span></a></span><span>
-</span><span id="line-38"></span><span>    </span><span id="local-6989586621679083307"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679083307"><span class="hs-identifier hs-var">sIn</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (OutputStream ByteString)
+</span><a href="#local-6989586621679083314"><span class="hs-identifier hs-var">scmd</span></a></span><span>
+</span><span id="line-38"></span><span>    </span><span id="local-6989586621679083308"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679083308"><span class="hs-identifier hs-var">sIn</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (OutputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToOutputStream"><span class="hs-identifier hs-var">Streams.handleToOutputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083312"><span class="hs-identifier hs-var">hin</span></a></span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
+</span><a href="#local-6989586621679083313"><span class="hs-identifier hs-var">hin</span></a></span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
 -&gt; (OutputStream ByteString -&gt; IO (OutputStream ByteString))
 -&gt; IO (OutputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -58,7 +58,7 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b a. IO b -&gt; OutputStream a -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Combinators.html#atEndOfOutput"><span class="hs-identifier hs-var">Streams.atEndOfOutput</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083312"><span class="hs-identifier hs-var">hin</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
+</span><a href="#local-6989586621679083313"><span class="hs-identifier hs-var">hin</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
 -&gt; (OutputStream ByteString -&gt; IO (OutputStream ByteString))
 -&gt; IO (OutputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -66,10 +66,10 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><span id="line-40"></span><span>            </span><span class="annot"><span class="annottext">OutputStream ByteString -&gt; IO (OutputStream ByteString)
 forall a. OutputStream a -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingOutputStream"><span class="hs-identifier hs-var">Streams.lockingOutputStream</span></a></span><span>
-</span><span id="line-41"></span><span>    </span><span id="local-6989586621679083303"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083303"><span class="hs-identifier hs-var">sOut</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
+</span><span id="line-41"></span><span>    </span><span id="local-6989586621679083304"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083304"><span class="hs-identifier hs-var">sOut</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var">Streams.handleToInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083311"><span class="hs-identifier hs-var">hout</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083312"><span class="hs-identifier hs-var">hout</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -78,7 +78,7 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b a. IO b -&gt; InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Combinators.html#atEndOfInput"><span class="hs-identifier hs-var">Streams.atEndOfInput</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083311"><span class="hs-identifier hs-var">hout</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083312"><span class="hs-identifier hs-var">hout</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -86,10 +86,10 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><span id="line-43"></span><span>            </span><span class="annot"><span class="annottext">InputStream ByteString -&gt; IO (InputStream ByteString)
 forall a. InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingInputStream"><span class="hs-identifier hs-var">Streams.lockingInputStream</span></a></span><span>
-</span><span id="line-44"></span><span>    </span><span id="local-6989586621679083299"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083299"><span class="hs-identifier hs-var">sErr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
+</span><span id="line-44"></span><span>    </span><span id="local-6989586621679083300"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083300"><span class="hs-identifier hs-var">sErr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var">Streams.handleToInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083310"><span class="hs-identifier hs-var">herr</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083311"><span class="hs-identifier hs-var">herr</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -98,7 +98,7 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b a. IO b -&gt; InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Combinators.html#atEndOfInput"><span class="hs-identifier hs-var">Streams.atEndOfInput</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083310"><span class="hs-identifier hs-var">herr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083311"><span class="hs-identifier hs-var">herr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -113,10 +113,10 @@ forall a. InputStream a -&gt; IO (InputStream a)
       InputStream ByteString, ProcessHandle)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679083307"><span class="hs-identifier hs-var">sIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083303"><span class="hs-identifier hs-var">sOut</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083299"><span class="hs-identifier hs-var">sErr</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621679083309"><span class="hs-identifier hs-var">ph</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679083308"><span class="hs-identifier hs-var">sIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083304"><span class="hs-identifier hs-var">sOut</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083300"><span class="hs-identifier hs-var">sErr</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ProcessHandle
+</span><a href="#local-6989586621679083310"><span class="hs-identifier hs-var">ph</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span>
 </span><span id="line-50"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -149,29 +149,29 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; IO
      (OutputStream ByteString, InputStream ByteString,
       InputStream ByteString, ProcessHandle)
-</span><a href="System.IO.Streams.Process.html#runInteractiveProcess"><span class="hs-identifier hs-var hs-var">runInteractiveProcess</span></a></span></span><span> </span><span id="local-6989586621679083297"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679083297"><span class="hs-identifier hs-var">cmd</span></a></span></span><span> </span><span id="local-6989586621679083296"><span class="annot"><span class="annottext">[String]
-</span><a href="#local-6989586621679083296"><span class="hs-identifier hs-var">args</span></a></span></span><span> </span><span id="local-6989586621679083295"><span class="annot"><span class="annottext">Maybe String
-</span><a href="#local-6989586621679083295"><span class="hs-identifier hs-var">wd</span></a></span></span><span> </span><span id="local-6989586621679083294"><span class="annot"><span class="annottext">Maybe [(String, String)]
-</span><a href="#local-6989586621679083294"><span class="hs-identifier hs-var">env</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-74"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679083293"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083293"><span class="hs-identifier hs-var">hin</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083292"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083292"><span class="hs-identifier hs-var">hout</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083291"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083291"><span class="hs-identifier hs-var">herr</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083290"><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621679083290"><span class="hs-identifier hs-var">ph</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="System.IO.Streams.Process.html#runInteractiveProcess"><span class="hs-identifier hs-var hs-var">runInteractiveProcess</span></a></span></span><span> </span><span id="local-6989586621679083298"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679083298"><span class="hs-identifier hs-var">cmd</span></a></span></span><span> </span><span id="local-6989586621679083297"><span class="annot"><span class="annottext">[String]
+</span><a href="#local-6989586621679083297"><span class="hs-identifier hs-var">args</span></a></span></span><span> </span><span id="local-6989586621679083296"><span class="annot"><span class="annottext">Maybe String
+</span><a href="#local-6989586621679083296"><span class="hs-identifier hs-var">wd</span></a></span></span><span> </span><span id="local-6989586621679083295"><span class="annot"><span class="annottext">Maybe [(String, String)]
+</span><a href="#local-6989586621679083295"><span class="hs-identifier hs-var">env</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-74"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679083294"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679083294"><span class="hs-identifier hs-var">hin</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083293"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679083293"><span class="hs-identifier hs-var">hout</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083292"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679083292"><span class="hs-identifier hs-var">herr</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679083291"><span class="annot"><span class="annottext">ProcessHandle
+</span><a href="#local-6989586621679083291"><span class="hs-identifier hs-var">ph</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">String
 -&gt; [String]
 -&gt; Maybe String
 -&gt; Maybe [(String, String)]
 -&gt; IO (Handle, Handle, Handle, ProcessHandle)
 </span><a href="../../../../process/html/src"><span class="hs-identifier hs-var">P.runInteractiveProcess</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679083297"><span class="hs-identifier hs-var">cmd</span></a></span><span> </span><span class="annot"><span class="annottext">[String]
-</span><a href="#local-6989586621679083296"><span class="hs-identifier hs-var">args</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe String
-</span><a href="#local-6989586621679083295"><span class="hs-identifier hs-var">wd</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe [(String, String)]
-</span><a href="#local-6989586621679083294"><span class="hs-identifier hs-var">env</span></a></span><span>
-</span><span id="line-75"></span><span>    </span><span id="local-6989586621679083288"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679083288"><span class="hs-identifier hs-var">sIn</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (OutputStream ByteString)
+</span><a href="#local-6989586621679083298"><span class="hs-identifier hs-var">cmd</span></a></span><span> </span><span class="annot"><span class="annottext">[String]
+</span><a href="#local-6989586621679083297"><span class="hs-identifier hs-var">args</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe String
+</span><a href="#local-6989586621679083296"><span class="hs-identifier hs-var">wd</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe [(String, String)]
+</span><a href="#local-6989586621679083295"><span class="hs-identifier hs-var">env</span></a></span><span>
+</span><span id="line-75"></span><span>    </span><span id="local-6989586621679083289"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679083289"><span class="hs-identifier hs-var">sIn</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (OutputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToOutputStream"><span class="hs-identifier hs-var">Streams.handleToOutputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083293"><span class="hs-identifier hs-var">hin</span></a></span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
+</span><a href="#local-6989586621679083294"><span class="hs-identifier hs-var">hin</span></a></span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
 -&gt; (OutputStream ByteString -&gt; IO (OutputStream ByteString))
 -&gt; IO (OutputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -180,7 +180,7 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b a. IO b -&gt; OutputStream a -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Combinators.html#atEndOfOutput"><span class="hs-identifier hs-var">Streams.atEndOfOutput</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083293"><span class="hs-identifier hs-var">hin</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
+</span><a href="#local-6989586621679083294"><span class="hs-identifier hs-var">hin</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (OutputStream ByteString)
 -&gt; (OutputStream ByteString -&gt; IO (OutputStream ByteString))
 -&gt; IO (OutputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -188,10 +188,10 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><span id="line-77"></span><span>            </span><span class="annot"><span class="annottext">OutputStream ByteString -&gt; IO (OutputStream ByteString)
 forall a. OutputStream a -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingOutputStream"><span class="hs-identifier hs-var">Streams.lockingOutputStream</span></a></span><span>
-</span><span id="line-78"></span><span>    </span><span id="local-6989586621679083287"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083287"><span class="hs-identifier hs-var">sOut</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
+</span><span id="line-78"></span><span>    </span><span id="local-6989586621679083288"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083288"><span class="hs-identifier hs-var">sOut</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var">Streams.handleToInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083292"><span class="hs-identifier hs-var">hout</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083293"><span class="hs-identifier hs-var">hout</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -200,7 +200,7 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b a. IO b -&gt; InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Combinators.html#atEndOfInput"><span class="hs-identifier hs-var">Streams.atEndOfInput</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083292"><span class="hs-identifier hs-var">hout</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083293"><span class="hs-identifier hs-var">hout</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -208,10 +208,10 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><span id="line-80"></span><span>            </span><span class="annot"><span class="annottext">InputStream ByteString -&gt; IO (InputStream ByteString)
 forall a. InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingInputStream"><span class="hs-identifier hs-var">Streams.lockingInputStream</span></a></span><span>
-</span><span id="line-81"></span><span>    </span><span id="local-6989586621679083286"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083286"><span class="hs-identifier hs-var">sErr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
+</span><span id="line-81"></span><span>    </span><span id="local-6989586621679083287"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083287"><span class="hs-identifier hs-var">sErr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var">Streams.handleToInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083291"><span class="hs-identifier hs-var">herr</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083292"><span class="hs-identifier hs-var">herr</span></a></span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -220,7 +220,7 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b a. IO b -&gt; InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Combinators.html#atEndOfInput"><span class="hs-identifier hs-var">Streams.atEndOfInput</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679083291"><span class="hs-identifier hs-var">herr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
+</span><a href="#local-6989586621679083292"><span class="hs-identifier hs-var">herr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">IO (InputStream ByteString)
 -&gt; (InputStream ByteString -&gt; IO (InputStream ByteString))
 -&gt; IO (InputStream ByteString)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -235,8 +235,8 @@ forall a. InputStream a -&gt; IO (InputStream a)
       InputStream ByteString, ProcessHandle)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679083288"><span class="hs-identifier hs-var">sIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083287"><span class="hs-identifier hs-var">sOut</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679083286"><span class="hs-identifier hs-var">sErr</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621679083290"><span class="hs-identifier hs-var">ph</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679083289"><span class="hs-identifier hs-var">sIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083288"><span class="hs-identifier hs-var">sOut</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679083287"><span class="hs-identifier hs-var">sErr</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ProcessHandle
+</span><a href="#local-6989586621679083291"><span class="hs-identifier hs-var">ph</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-85"></span></pre></body></html>

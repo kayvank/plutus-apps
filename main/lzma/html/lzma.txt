@@ -19,7 +19,7 @@
 --   <li><a>lzma-conduit</a> (for <a>conduit</a>)</li>
 --   </ul>
 @package lzma
-@version 0.0.0.4
+@version 0.0.1.0
 
 
 -- | Compression and decompression of data streams in the lzma/xz format
@@ -117,6 +117,9 @@ compressLevel :: CompressParams -> CompressionLevel
 --   <tt>lzmaCompLevel</tt> preset, see <tt>xz(1)</tt> man-page for
 --   details.
 compressLevelExtreme :: CompressParams -> Bool
+
+-- | Number of threads to use. It must be greater than zero.
+compressThreads :: CompressParams -> Int
 
 -- | Integrity check type (only supported when compressing <tt>.xz</tt>
 --   files)

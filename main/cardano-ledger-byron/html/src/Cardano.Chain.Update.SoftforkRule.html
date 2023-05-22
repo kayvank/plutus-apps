@@ -31,7 +31,7 @@
 </span><span id="line-31"></span><span class="hs-comment">--   Softfork resolution threshold is the portion of total stake such that if</span><span>
 </span><span id="line-32"></span><span class="hs-comment">--   total stake of issuers of blocks with some block version is greater than</span><span>
 </span><span id="line-33"></span><span class="hs-comment">--   this portion, this block version becomes adopted.</span><span>
-</span><span id="line-34"></span><span id="local-6989586621679533943"><span id="local-6989586621679533944"></span></span><span class="hs-keyword">data</span><span> </span><span id="SoftforkRule"><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-var">SoftforkRule</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SoftforkRule"><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-var">SoftforkRule</span></a></span></span><span>
+</span><span id="line-34"></span><span id="local-6989586621679533967"><span id="local-6989586621679533968"></span></span><span class="hs-keyword">data</span><span> </span><span id="SoftforkRule"><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-var">SoftforkRule</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SoftforkRule"><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-var">SoftforkRule</span></a></span></span><span>
 </span><span id="line-35"></span><span>  </span><span class="hs-special">{</span><span> </span><span class="hs-comment">-- | Initial threshold (right after proposal is confirmed).</span><span>
 </span><span id="line-36"></span><span>    </span><span id="srInitThd"><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srInitThd"><span class="hs-identifier hs-var hs-var">srInitThd</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="Cardano.Chain.Common.LovelacePortion.html#LovelacePortion"><span class="hs-identifier hs-type">LovelacePortion</span></a></span><span class="hs-special">,</span><span>
@@ -42,7 +42,7 @@
 </span><span id="line-40"></span><span>    </span><span id="srThdDecrement"><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srThdDecrement"><span class="hs-identifier hs-var hs-var">srThdDecrement</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="Cardano.Chain.Common.LovelacePortion.html#LovelacePortion"><span class="hs-identifier hs-type">LovelacePortion</span></a></span><span>
 </span><span id="line-41"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-42"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679533933"><span id="local-6989586621679533935"><span id="local-6989586621679533937"><span class="annot"><span class="annottext">Int -&gt; SoftforkRule -&gt; ShowS
+</span><span id="line-42"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679533957"><span id="local-6989586621679533959"><span id="local-6989586621679533961"><span class="annot"><span class="annottext">Int -&gt; SoftforkRule -&gt; ShowS
 [SoftforkRule] -&gt; ShowS
 SoftforkRule -&gt; String
 (Int -&gt; SoftforkRule -&gt; ShowS)
@@ -57,7 +57,7 @@ show :: SoftforkRule -&gt; String
 $cshow :: SoftforkRule -&gt; String
 showsPrec :: Int -&gt; SoftforkRule -&gt; ShowS
 $cshowsPrec :: Int -&gt; SoftforkRule -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679533928"><span id="local-6989586621679533930"><span class="annot"><span class="annottext">SoftforkRule -&gt; SoftforkRule -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679533952"><span id="local-6989586621679533954"><span class="annot"><span class="annottext">SoftforkRule -&gt; SoftforkRule -&gt; Bool
 (SoftforkRule -&gt; SoftforkRule -&gt; Bool)
 -&gt; (SoftforkRule -&gt; SoftforkRule -&gt; Bool) -&gt; Eq SoftforkRule
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -65,7 +65,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: SoftforkRule -&gt; SoftforkRule -&gt; Bool
 == :: SoftforkRule -&gt; SoftforkRule -&gt; Bool
 $c== :: SoftforkRule -&gt; SoftforkRule -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679533912"><span id="local-6989586621679533914"><span id="local-6989586621679533916"><span id="local-6989586621679533918"><span id="local-6989586621679533920"><span id="local-6989586621679533922"><span id="local-6989586621679533924"><span class="annot"><span class="annottext">Eq SoftforkRule
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679533936"><span id="local-6989586621679533938"><span id="local-6989586621679533940"><span id="local-6989586621679533942"><span id="local-6989586621679533944"><span id="local-6989586621679533946"><span id="local-6989586621679533948"><span class="annot"><span class="annottext">Eq SoftforkRule
 Eq SoftforkRule
 -&gt; (SoftforkRule -&gt; SoftforkRule -&gt; Ordering)
 -&gt; (SoftforkRule -&gt; SoftforkRule -&gt; Bool)
@@ -113,12 +113,12 @@ forall a.
 $cto :: forall x. Rep SoftforkRule x -&gt; SoftforkRule
 $cfrom :: forall x. SoftforkRule -&gt; Rep SoftforkRule x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-43"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679533906"><span class="annot"><span class="annottext">SoftforkRule -&gt; ()
+</span><span id="line-43"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679533930"><span class="annot"><span class="annottext">SoftforkRule -&gt; ()
 (SoftforkRule -&gt; ()) -&gt; NFData SoftforkRule
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: SoftforkRule -&gt; ()
 $crnf :: SoftforkRule -&gt; ()
-</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679533899"><span id="local-6989586621679533901"><span id="local-6989586621679533903"><span class="annot"><span class="annottext">Context -&gt; SoftforkRule -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679533923"><span id="local-6989586621679533925"><span id="local-6989586621679533927"><span class="annot"><span class="annottext">Context -&gt; SoftforkRule -&gt; IO (Maybe ThunkInfo)
 Proxy SoftforkRule -&gt; String
 (Context -&gt; SoftforkRule -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; SoftforkRule -&gt; IO (Maybe ThunkInfo))
@@ -138,9 +138,9 @@ $cnoThunks :: Context -&gt; SoftforkRule -&gt; IO (Maybe ThunkInfo)
 </span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-44"></span><span>
 </span><span id="line-45"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">B.Buildable</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-46"></span><span>  </span><span id="local-6989586621679533895"><span class="annot"><span class="annottext">build :: SoftforkRule -&gt; Builder
-</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span id="local-6989586621679533893"><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533893"><span class="hs-identifier hs-var">sr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-46"></span><span>  </span><span id="local-6989586621679533919"><span class="annot"><span class="annottext">build :: SoftforkRule -&gt; Builder
+</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span id="local-6989586621679533917"><span class="annot"><span class="annottext">SoftforkRule
+</span><a href="#local-6989586621679533917"><span class="hs-identifier hs-var">sr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-47"></span><span>    </span><span class="annot"><span class="annottext">Format
   Builder
   (LovelacePortion -&gt; LovelacePortion -&gt; LovelacePortion -&gt; Builder)
@@ -218,21 +218,21 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span class="hs-string">&quot;)&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-49"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srInitThd"><span class="hs-identifier hs-var hs-var">srInitThd</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533893"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679533917"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-50"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srMinThd"><span class="hs-identifier hs-var hs-var">srMinThd</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533893"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679533917"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-51"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srThdDecrement"><span class="hs-identifier hs-var hs-var">srThdDecrement</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533893"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679533917"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="hs-comment">-- Used for debugging purposes only</span><span>
-</span><span id="line-54"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679533884"><span id="local-6989586621679533886"><span id="local-6989586621679533888"><span id="local-6989586621679533890"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span></span></span></span></span><span>
+</span><span id="line-54"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679533908"><span id="local-6989586621679533910"><span id="local-6989586621679533912"><span id="local-6989586621679533914"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span></span></span></span></span><span>
 </span><span id="line-55"></span><span>
-</span><span id="line-56"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679533877"><span id="local-6989586621679533879"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-57"></span><span>  </span><span id="local-6989586621679533875"><span class="annot"><span class="annottext">toCBOR :: SoftforkRule -&gt; Encoding
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679533873"><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533873"><span class="hs-identifier hs-var">sr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-56"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679533901"><span id="local-6989586621679533903"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-57"></span><span>  </span><span id="local-6989586621679533899"><span class="annot"><span class="annottext">toCBOR :: SoftforkRule -&gt; Encoding
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679533897"><span class="annot"><span class="annottext">SoftforkRule
+</span><a href="#local-6989586621679533897"><span class="hs-identifier hs-var">sr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-58"></span><span>    </span><span class="annot"><span class="annottext">Word -&gt; Encoding
 </span><a href="../../../../cborg/html/src"><span class="hs-identifier hs-var">encodeListLen</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">3</span></span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
@@ -241,13 +241,13 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srInitThd"><span class="hs-identifier hs-var hs-var">srInitThd</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533873"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
+</span><a href="#local-6989586621679533897"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">LovelacePortion -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srMinThd"><span class="hs-identifier hs-var hs-var">srMinThd</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533873"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679533897"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-59"></span><span>      </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">LovelacePortion -&gt; Encoding
@@ -255,10 +255,10 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span>
 </span><span id="line-60"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srThdDecrement"><span class="hs-identifier hs-var hs-var">srThdDecrement</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533873"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679533897"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-61"></span><span>
-</span><span id="line-62"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679533869"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-63"></span><span>  </span><span id="local-6989586621679533867"><span class="annot"><span class="annottext">fromCBOR :: Decoder s SoftforkRule
+</span><span id="line-62"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679533893"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-63"></span><span>  </span><span id="local-6989586621679533891"><span class="annot"><span class="annottext">fromCBOR :: Decoder s SoftforkRule
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-64"></span><span>    </span><span class="annot"><span class="annottext">Text -&gt; Int -&gt; Decoder s ()
 forall s. Text -&gt; Int -&gt; Decoder s ()
@@ -287,10 +287,10 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 forall a s. FromCBOR a =&gt; Decoder s a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">fromCBOR</span></a></span><span>
 </span><span id="line-66"></span><span>
-</span><span id="line-67"></span><span id="local-6989586621679533864"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533864"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533864"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-68"></span><span>  </span><span id="local-6989586621679533861"><span class="annot"><span class="annottext">toJSON :: SoftforkRule -&gt; m JSValue
-</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span id="local-6989586621679533859"><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533859"><span class="hs-identifier hs-var">sr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-67"></span><span id="local-6989586621679533888"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533888"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533888"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-68"></span><span>  </span><span id="local-6989586621679533885"><span class="annot"><span class="annottext">toJSON :: SoftforkRule -&gt; m JSValue
+</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span id="local-6989586621679533883"><span class="annot"><span class="annottext">SoftforkRule
+</span><a href="#local-6989586621679533883"><span class="hs-identifier hs-var">sr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-69"></span><span>    </span><span class="annot"><span class="annottext">[(JSString, m JSValue)] -&gt; m JSValue
 forall (m :: * -&gt; *).
 Monad m =&gt;
@@ -303,7 +303,7 @@ forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srInitThd"><span class="hs-identifier hs-var hs-var">srInitThd</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533859"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679533883"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-71"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;minThd&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">LovelacePortion -&gt; m JSValue
 forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
@@ -311,7 +311,7 @@ forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srMinThd"><span class="hs-identifier hs-var hs-var">srMinThd</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533859"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679533883"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-72"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;thdDecrement&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">LovelacePortion -&gt; m JSValue
 forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
@@ -319,13 +319,13 @@ forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule -&gt; LovelacePortion
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#srThdDecrement"><span class="hs-identifier hs-var hs-var">srThdDecrement</span></a></span><span> </span><span class="annot"><span class="annottext">SoftforkRule
-</span><a href="#local-6989586621679533859"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679533883"><span class="hs-identifier hs-var">sr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-73"></span><span>      </span><span class="hs-special">]</span></span><span>
 </span><span id="line-74"></span><span>
-</span><span id="line-75"></span><span id="local-6989586621679533858"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier hs-type">SchemaError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533858"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533858"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-76"></span><span>  </span><span id="local-6989586621679533855"><span class="annot"><span class="annottext">fromJSON :: JSValue -&gt; m SoftforkRule
-</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromJSON</span></a></span></span><span> </span><span id="local-6989586621679533853"><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679533853"><span class="hs-identifier hs-var">obj</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-75"></span><span id="local-6989586621679533882"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier hs-type">SchemaError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533882"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679533882"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-type">SoftforkRule</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-76"></span><span>  </span><span id="local-6989586621679533879"><span class="annot"><span class="annottext">fromJSON :: JSValue -&gt; m SoftforkRule
+</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromJSON</span></a></span></span><span> </span><span id="local-6989586621679533877"><span class="annot"><span class="annottext">JSValue
+</span><a href="#local-6989586621679533877"><span class="hs-identifier hs-var">obj</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-77"></span><span>    </span><span class="annot"><span class="annottext">LovelacePortion
 -&gt; LovelacePortion -&gt; LovelacePortion -&gt; SoftforkRule
 </span><a href="Cardano.Chain.Update.SoftforkRule.html#SoftforkRule"><span class="hs-identifier hs-var">SoftforkRule</span></a></span><span>
@@ -339,7 +339,7 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679533853"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679533877"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;initThd&quot;</span></span><span>
 </span><span id="line-79"></span><span>      </span><span class="annot"><span class="annottext">m (LovelacePortion -&gt; LovelacePortion -&gt; SoftforkRule)
 -&gt; m LovelacePortion -&gt; m (LovelacePortion -&gt; SoftforkRule)
@@ -349,7 +349,7 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679533853"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679533877"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;minThd&quot;</span></span><span>
 </span><span id="line-80"></span><span>      </span><span class="annot"><span class="annottext">m (LovelacePortion -&gt; SoftforkRule)
 -&gt; m LovelacePortion -&gt; m SoftforkRule
@@ -359,6 +359,6 @@ forall (m :: * -&gt; *) a.
 (ReportSchemaErrors m, FromJSON m a) =&gt;
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span> </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679533853"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
+</span><a href="#local-6989586621679533877"><span class="hs-identifier hs-var">obj</span></a></span><span> </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;thdDecrement&quot;</span></span></span><span>
 </span><span id="line-81"></span></pre></body></html>

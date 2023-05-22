@@ -7,7 +7,7 @@
 --   Please see the documentation and README at
 --   <a>https://www.stackage.org/package/unliftio</a>
 @package unliftio
-@version 0.2.23.0
+@version 0.2.24.0
 
 
 -- | Lifted <a>Control.Concurrent.Chan</a>.
@@ -3227,6 +3227,11 @@ modifyTVar :: TVar a -> (a -> a) -> STM ()
 
 -- | Strict version of <a>modifyTVar</a>.
 modifyTVar' :: TVar a -> (a -> a) -> STM ()
+
+-- | Like <a>modifyTVar'</a> but the function is a simple state transition
+--   that can return a side value which is passed on as the result of the
+--   <a>STM</a>.
+stateTVar :: TVar s -> (s -> (a, s)) -> STM a
 
 -- | Swap the contents of a <a>TVar</a> for a new value.
 swapTVar :: TVar a -> a -> STM a

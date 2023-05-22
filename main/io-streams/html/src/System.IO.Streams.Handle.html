@@ -47,18 +47,18 @@
 </span><span id="line-45"></span><span class="hs-comment">-- if you would like this behaviour.</span><span>
 </span><span id="line-46"></span><span class="annot"><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-type">handleToInputStream</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="System.IO.Streams.Internal.html#InputStream"><span class="hs-identifier hs-type">InputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-47"></span><span id="handleToInputStream"><span class="annot"><span class="annottext">handleToInputStream :: Handle -&gt; IO (InputStream ByteString)
-</span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var hs-var">handleToInputStream</span></a></span></span><span> </span><span id="local-6989586621679081333"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081333"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO (Maybe ByteString) -&gt; IO (InputStream ByteString)
+</span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var hs-var">handleToInputStream</span></a></span></span><span> </span><span id="local-6989586621679081334"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679081334"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO (Maybe ByteString) -&gt; IO (InputStream ByteString)
 forall a. IO (Maybe a) -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Internal.html#makeInputStream"><span class="hs-identifier hs-var">makeInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">IO (Maybe ByteString)
-</span><a href="#local-6989586621679081332"><span class="hs-identifier hs-var">f</span></a></span><span>
+</span><a href="#local-6989586621679081333"><span class="hs-identifier hs-var">f</span></a></span><span>
 </span><span id="line-48"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-49"></span><span>    </span><span id="local-6989586621679081332"><span class="annot"><span class="annottext">f :: IO (Maybe ByteString)
-</span><a href="#local-6989586621679081332"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-50"></span><span>        </span><span id="local-6989586621679081331"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679081331"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; Int -&gt; IO ByteString
+</span><span id="line-49"></span><span>    </span><span id="local-6989586621679081333"><span class="annot"><span class="annottext">f :: IO (Maybe ByteString)
+</span><a href="#local-6989586621679081333"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-50"></span><span>        </span><span id="local-6989586621679081332"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679081332"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; Int -&gt; IO ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.hGetSome</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081333"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679081334"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><a href="System.IO.Streams.Handle.html#bUFSIZ"><span class="hs-identifier hs-var">bUFSIZ</span></a></span><span>
 </span><span id="line-51"></span><span>        </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; IO (Maybe ByteString)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -67,12 +67,12 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Bool
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.null</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679081331"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
+</span><a href="#local-6989586621679081332"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe ByteString
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679081331"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679081332"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span>
 </span><span id="line-54"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -88,28 +88,28 @@ forall a. a -&gt; Maybe a
 </span><span id="line-64"></span><span class="hs-comment">-- &gt; Streams.write (Just &quot;&quot;) os</span><span>
 </span><span id="line-65"></span><span class="annot"><a href="System.IO.Streams.Handle.html#handleToOutputStream"><span class="hs-identifier hs-type">handleToOutputStream</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="System.IO.Streams.Internal.html#OutputStream"><span class="hs-identifier hs-type">OutputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-66"></span><span id="handleToOutputStream"><span class="annot"><span class="annottext">handleToOutputStream :: Handle -&gt; IO (OutputStream ByteString)
-</span><a href="System.IO.Streams.Handle.html#handleToOutputStream"><span class="hs-identifier hs-var hs-var">handleToOutputStream</span></a></span></span><span> </span><span id="local-6989586621679081327"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081327"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Maybe ByteString -&gt; IO ()) -&gt; IO (OutputStream ByteString)
+</span><a href="System.IO.Streams.Handle.html#handleToOutputStream"><span class="hs-identifier hs-var hs-var">handleToOutputStream</span></a></span></span><span> </span><span id="local-6989586621679081328"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679081328"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Maybe ByteString -&gt; IO ()) -&gt; IO (OutputStream ByteString)
 forall a. (Maybe a -&gt; IO ()) -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Internal.html#makeOutputStream"><span class="hs-identifier hs-var">makeOutputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; IO ()
-</span><a href="#local-6989586621679081326"><span class="hs-identifier hs-var">f</span></a></span><span>
+</span><a href="#local-6989586621679081327"><span class="hs-identifier hs-var">f</span></a></span><span>
 </span><span id="line-67"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-68"></span><span>    </span><span id="local-6989586621679081326"><span class="annot"><span class="annottext">f :: Maybe ByteString -&gt; IO ()
-</span><a href="#local-6989586621679081326"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
+</span><span id="line-68"></span><span>    </span><span id="local-6989586621679081327"><span class="annot"><span class="annottext">f :: Maybe ByteString -&gt; IO ()
+</span><a href="#local-6989586621679081327"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hFlush</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081327"><span class="hs-identifier hs-var">h</span></a></span><span>
-</span><span id="line-69"></span><span>    </span><span class="annot"><a href="#local-6989586621679081326"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679081325"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679081325"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Bool
+</span><a href="#local-6989586621679081328"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><span id="line-69"></span><span>    </span><span class="annot"><a href="#local-6989586621679081327"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679081326"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679081326"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Bool
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.null</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679081325"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679081326"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-70"></span><span>                   </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hFlush</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081327"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621679081328"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-71"></span><span>                   </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; ByteString -&gt; IO ()
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.hPut</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081327"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679081325"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679081328"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679081326"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-72"></span><span>
 </span><span id="line-73"></span><span>
 </span><span id="line-74"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -130,16 +130,16 @@ forall a. (Maybe a -&gt; IO ()) -&gt; IO (OutputStream a)
 </span><span id="line-89"></span><span class="annot"><a href="System.IO.Streams.Handle.html#handleToStreams"><span class="hs-identifier hs-type">handleToStreams</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span>
 </span><span id="line-90"></span><span>                </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="System.IO.Streams.Internal.html#InputStream"><span class="hs-identifier hs-type">InputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="System.IO.Streams.Internal.html#OutputStream"><span class="hs-identifier hs-type">OutputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-91"></span><span id="handleToStreams"><span class="annot"><span class="annottext">handleToStreams :: Handle -&gt; IO (InputStream ByteString, OutputStream ByteString)
-</span><a href="System.IO.Streams.Handle.html#handleToStreams"><span class="hs-identifier hs-var hs-var">handleToStreams</span></a></span></span><span> </span><span id="local-6989586621679081323"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081323"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-92"></span><span>    </span><span id="local-6989586621679081322"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081322"><span class="hs-identifier hs-var">is</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
+</span><a href="System.IO.Streams.Handle.html#handleToStreams"><span class="hs-identifier hs-var hs-var">handleToStreams</span></a></span></span><span> </span><span id="local-6989586621679081324"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679081324"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-92"></span><span>    </span><span id="local-6989586621679081323"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679081323"><span class="hs-identifier hs-var">is</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (InputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToInputStream"><span class="hs-identifier hs-var">handleToInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081323"><span class="hs-identifier hs-var">h</span></a></span><span>
-</span><span id="line-93"></span><span>    </span><span id="local-6989586621679081321"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081321"><span class="hs-identifier hs-var">os</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (OutputStream ByteString)
+</span><a href="#local-6989586621679081324"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><span id="line-93"></span><span>    </span><span id="local-6989586621679081322"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081322"><span class="hs-identifier hs-var">os</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (OutputStream ByteString)
 </span><a href="System.IO.Streams.Handle.html#handleToOutputStream"><span class="hs-identifier hs-var">handleToOutputStream</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081323"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621679081324"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-94"></span><span>    </span><span class="annot"><span class="annottext">(InputStream ByteString, OutputStream ByteString)
 -&gt; IO (InputStream ByteString, OutputStream ByteString)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -149,8 +149,8 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; IO (InputStream ByteString, OutputStream ByteString)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081322"><span class="hs-identifier hs-var">is</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081321"><span class="hs-identifier hs-var">os</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679081323"><span class="hs-identifier hs-var">is</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081322"><span class="hs-identifier hs-var">os</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-95"></span><span>
 </span><span id="line-96"></span><span>
 </span><span id="line-97"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -164,21 +164,21 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-105"></span><span class="hs-comment">-- /Since: 1.0.2.0./</span><span>
 </span><span id="line-106"></span><span class="annot"><a href="System.IO.Streams.Handle.html#inputStreamToHandle"><span class="hs-identifier hs-type">inputStreamToHandle</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="System.IO.Streams.Internal.html#InputStream"><span class="hs-identifier hs-type">InputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span>
 </span><span id="line-107"></span><span id="inputStreamToHandle"><span class="annot"><span class="annottext">inputStreamToHandle :: InputStream ByteString -&gt; IO Handle
-</span><a href="System.IO.Streams.Handle.html#inputStreamToHandle"><span class="hs-identifier hs-var hs-var">inputStreamToHandle</span></a></span></span><span> </span><span id="local-6989586621679081320"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081320"><span class="hs-identifier hs-var">is0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-108"></span><span>    </span><span id="local-6989586621679081319"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081319"><span class="hs-identifier hs-var">is</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString -&gt; IO (InputStream ByteString)
+</span><a href="System.IO.Streams.Handle.html#inputStreamToHandle"><span class="hs-identifier hs-var hs-var">inputStreamToHandle</span></a></span></span><span> </span><span id="local-6989586621679081321"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679081321"><span class="hs-identifier hs-var">is0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-108"></span><span>    </span><span id="local-6989586621679081320"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679081320"><span class="hs-identifier hs-var">is</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString -&gt; IO (InputStream ByteString)
 forall a. InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingInputStream"><span class="hs-identifier hs-var">lockingInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081320"><span class="hs-identifier hs-var">is0</span></a></span><span>
-</span><span id="line-109"></span><span>    </span><span id="local-6989586621679081318"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081318"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679081321"><span class="hs-identifier hs-var">is0</span></a></span><span>
+</span><span id="line-109"></span><span>    </span><span id="local-6989586621679081319"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679081319"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
 -&gt; FilePath -&gt; Maybe TextEncoding -&gt; NewlineMode -&gt; IO Handle
 forall dev.
 (IODevice dev, BufferedIO dev, Typeable dev) =&gt;
 dev -&gt; FilePath -&gt; Maybe TextEncoding -&gt; NewlineMode -&gt; IO Handle
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.mkDuplexHandle</span></a></span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081319"><span class="hs-identifier hs-var">is</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679081320"><span class="hs-identifier hs-var">is</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;*input-stream*&quot;</span></span><span> </span><span class="annot"><span class="annottext">Maybe TextEncoding
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="annot"><span class="annottext">(NewlineMode -&gt; IO Handle) -&gt; NewlineMode -&gt; IO Handle
@@ -187,12 +187,12 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.noNewlineTranslation</span></a></span><span>
 </span><span id="line-110"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; BufferMode -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.hSetBuffering</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081318"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
+</span><a href="#local-6989586621679081319"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.NoBuffering</span></a></span><span>
 </span><span id="line-111"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; IO Handle
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081318"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621679081319"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-112"></span><span>
 </span><span id="line-113"></span><span>
 </span><span id="line-114"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -211,21 +211,21 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><span id="line-127"></span><span class="hs-comment">-- /Since: 1.0.2.0./</span><span>
 </span><span id="line-128"></span><span class="annot"><a href="System.IO.Streams.Handle.html#outputStreamToHandle"><span class="hs-identifier hs-type">outputStreamToHandle</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="System.IO.Streams.Internal.html#OutputStream"><span class="hs-identifier hs-type">OutputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span>
 </span><span id="line-129"></span><span id="outputStreamToHandle"><span class="annot"><span class="annottext">outputStreamToHandle :: OutputStream ByteString -&gt; IO Handle
-</span><a href="System.IO.Streams.Handle.html#outputStreamToHandle"><span class="hs-identifier hs-var hs-var">outputStreamToHandle</span></a></span></span><span> </span><span id="local-6989586621679081313"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081313"><span class="hs-identifier hs-var">os0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-130"></span><span>    </span><span id="local-6989586621679081312"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081312"><span class="hs-identifier hs-var">os</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString -&gt; IO (OutputStream ByteString)
+</span><a href="System.IO.Streams.Handle.html#outputStreamToHandle"><span class="hs-identifier hs-var hs-var">outputStreamToHandle</span></a></span></span><span> </span><span id="local-6989586621679081314"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081314"><span class="hs-identifier hs-var">os0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-130"></span><span>    </span><span id="local-6989586621679081313"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081313"><span class="hs-identifier hs-var">os</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString -&gt; IO (OutputStream ByteString)
 forall a. OutputStream a -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingOutputStream"><span class="hs-identifier hs-var">lockingOutputStream</span></a></span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081313"><span class="hs-identifier hs-var">os0</span></a></span><span>
-</span><span id="line-131"></span><span>    </span><span id="local-6989586621679081311"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081311"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081314"><span class="hs-identifier hs-var">os0</span></a></span><span>
+</span><span id="line-131"></span><span>    </span><span id="local-6989586621679081312"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679081312"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
 -&gt; FilePath -&gt; Maybe TextEncoding -&gt; NewlineMode -&gt; IO Handle
 forall dev.
 (IODevice dev, BufferedIO dev, Typeable dev) =&gt;
 dev -&gt; FilePath -&gt; Maybe TextEncoding -&gt; NewlineMode -&gt; IO Handle
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.mkDuplexHandle</span></a></span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081312"><span class="hs-identifier hs-var">os</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679081313"><span class="hs-identifier hs-var">os</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;*output-stream*&quot;</span></span><span> </span><span class="annot"><span class="annottext">Maybe TextEncoding
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="annot"><span class="annottext">(NewlineMode -&gt; IO Handle) -&gt; NewlineMode -&gt; IO Handle
@@ -234,14 +234,14 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.noNewlineTranslation</span></a></span><span>
 </span><span id="line-132"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; BufferMode -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.hSetBuffering</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081311"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
+</span><a href="#local-6989586621679081312"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.NoBuffering</span></a></span><span>
 </span><span id="line-133"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; IO Handle
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(Handle -&gt; IO Handle) -&gt; Handle -&gt; IO Handle
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081311"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621679081312"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-134"></span><span>
 </span><span id="line-135"></span><span>
 </span><span id="line-136"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -254,21 +254,21 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-143"></span><span class="hs-comment">-- /Since: 1.0.2.0./</span><span>
 </span><span id="line-144"></span><span class="annot"><a href="System.IO.Streams.Handle.html#streamPairToHandle"><span class="hs-identifier hs-type">streamPairToHandle</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="System.IO.Streams.Internal.html#InputStream"><span class="hs-identifier hs-type">InputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="System.IO.Streams.Internal.html#OutputStream"><span class="hs-identifier hs-type">OutputStream</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span>
 </span><span id="line-145"></span><span id="streamPairToHandle"><span class="annot"><span class="annottext">streamPairToHandle :: InputStream ByteString -&gt; OutputStream ByteString -&gt; IO Handle
-</span><a href="System.IO.Streams.Handle.html#streamPairToHandle"><span class="hs-identifier hs-var hs-var">streamPairToHandle</span></a></span></span><span> </span><span id="local-6989586621679081310"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081310"><span class="hs-identifier hs-var">is0</span></a></span></span><span> </span><span id="local-6989586621679081309"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081309"><span class="hs-identifier hs-var">os0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-146"></span><span>    </span><span id="local-6989586621679081308"><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081308"><span class="hs-identifier hs-var">is</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString -&gt; IO (InputStream ByteString)
+</span><a href="System.IO.Streams.Handle.html#streamPairToHandle"><span class="hs-identifier hs-var hs-var">streamPairToHandle</span></a></span></span><span> </span><span id="local-6989586621679081311"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679081311"><span class="hs-identifier hs-var">is0</span></a></span></span><span> </span><span id="local-6989586621679081310"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081310"><span class="hs-identifier hs-var">os0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-146"></span><span>    </span><span id="local-6989586621679081309"><span class="annot"><span class="annottext">InputStream ByteString
+</span><a href="#local-6989586621679081309"><span class="hs-identifier hs-var">is</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">InputStream ByteString -&gt; IO (InputStream ByteString)
 forall a. InputStream a -&gt; IO (InputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingInputStream"><span class="hs-identifier hs-var">lockingInputStream</span></a></span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081310"><span class="hs-identifier hs-var">is0</span></a></span><span>
-</span><span id="line-147"></span><span>    </span><span id="local-6989586621679081307"><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081307"><span class="hs-identifier hs-var">os</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString -&gt; IO (OutputStream ByteString)
+</span><a href="#local-6989586621679081311"><span class="hs-identifier hs-var">is0</span></a></span><span>
+</span><span id="line-147"></span><span>    </span><span id="local-6989586621679081308"><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081308"><span class="hs-identifier hs-var">os</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString -&gt; IO (OutputStream ByteString)
 forall a. OutputStream a -&gt; IO (OutputStream a)
 </span><a href="System.IO.Streams.Internal.html#lockingOutputStream"><span class="hs-identifier hs-var">lockingOutputStream</span></a></span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081309"><span class="hs-identifier hs-var">os0</span></a></span><span>
-</span><span id="line-148"></span><span>    </span><span id="local-6989586621679081306"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081306"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">SP (InputStream ByteString) (OutputStream ByteString)
+</span><a href="#local-6989586621679081310"><span class="hs-identifier hs-var">os0</span></a></span><span>
+</span><span id="line-148"></span><span>    </span><span id="local-6989586621679081307"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679081307"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">SP (InputStream ByteString) (OutputStream ByteString)
 -&gt; FilePath -&gt; Maybe TextEncoding -&gt; NewlineMode -&gt; IO Handle
 forall dev.
 (IODevice dev, BufferedIO dev, Typeable dev) =&gt;
@@ -278,8 +278,8 @@ dev -&gt; FilePath -&gt; Maybe TextEncoding -&gt; NewlineMode -&gt; IO Handle
 -&gt; SP (InputStream ByteString) (OutputStream ByteString)
 forall a b. a -&gt; b -&gt; SP a b
 </span><a href="System.IO.Streams.Internal.html#SP"><span class="hs-identifier hs-var">SP</span></a></span><span> </span><span class="annot"><span class="annottext">InputStream ByteString
-</span><a href="#local-6989586621679081308"><span class="hs-identifier hs-var">is</span></a></span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
-</span><a href="#local-6989586621679081307"><span class="hs-identifier hs-var">os</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679081309"><span class="hs-identifier hs-var">is</span></a></span><span> </span><span class="annot"><span class="annottext">OutputStream ByteString
+</span><a href="#local-6989586621679081308"><span class="hs-identifier hs-var">os</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;*stream*&quot;</span></span><span> </span><span class="annot"><span class="annottext">Maybe TextEncoding
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="annot"><span class="annottext">(NewlineMode -&gt; IO Handle) -&gt; NewlineMode -&gt; IO Handle
@@ -288,14 +288,14 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.noNewlineTranslation</span></a></span><span>
 </span><span id="line-149"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; BufferMode -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.hSetBuffering</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081306"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
+</span><a href="#local-6989586621679081307"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">BufferMode
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">H.NoBuffering</span></a></span><span>
 </span><span id="line-150"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; IO Handle
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(Handle -&gt; IO Handle) -&gt; Handle -&gt; IO Handle
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679081306"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621679081307"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-151"></span><span>
 </span><span id="line-152"></span><span>
 </span><span id="line-153"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>

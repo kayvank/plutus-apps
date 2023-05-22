@@ -62,9 +62,9 @@
 </span><span id="line-62"></span><span class="hs-comment">--   Equation on the transaction size), but in the future other policies may Be</span><span>
 </span><span id="line-63"></span><span class="hs-comment">--   added. To make this future-proof, we also have an &quot;unknown&quot; policy used By</span><span>
 </span><span id="line-64"></span><span class="hs-comment">--   older node versions (the ones that haven't updated yet).</span><span>
-</span><span id="line-65"></span><span id="local-6989586621679528265"><span id="local-6989586621679528266"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxFeePolicy"><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-var">TxFeePolicy</span></a></span></span><span>
+</span><span id="line-65"></span><span id="local-6989586621679528289"><span id="local-6989586621679528290"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxFeePolicy"><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-var">TxFeePolicy</span></a></span></span><span>
 </span><span id="line-66"></span><span>  </span><span class="hs-glyph">=</span><span> </span><span id="TxFeePolicyTxSizeLinear"><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-var">TxFeePolicyTxSizeLinear</span></a></span></span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="Cardano.Chain.Common.TxSizeLinear.html#TxSizeLinear"><span class="hs-identifier hs-type">TxSizeLinear</span></a></span><span>
-</span><span id="line-67"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528260"><span id="local-6989586621679528262"><span class="annot"><span class="annottext">TxFeePolicy -&gt; TxFeePolicy -&gt; Bool
+</span><span id="line-67"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528284"><span id="local-6989586621679528286"><span class="annot"><span class="annottext">TxFeePolicy -&gt; TxFeePolicy -&gt; Bool
 (TxFeePolicy -&gt; TxFeePolicy -&gt; Bool)
 -&gt; (TxFeePolicy -&gt; TxFeePolicy -&gt; Bool) -&gt; Eq TxFeePolicy
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -72,7 +72,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: TxFeePolicy -&gt; TxFeePolicy -&gt; Bool
 == :: TxFeePolicy -&gt; TxFeePolicy -&gt; Bool
 $c== :: TxFeePolicy -&gt; TxFeePolicy -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528244"><span id="local-6989586621679528246"><span id="local-6989586621679528248"><span id="local-6989586621679528250"><span id="local-6989586621679528252"><span id="local-6989586621679528254"><span id="local-6989586621679528256"><span class="annot"><span class="annottext">Eq TxFeePolicy
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528268"><span id="local-6989586621679528270"><span id="local-6989586621679528272"><span id="local-6989586621679528274"><span id="local-6989586621679528276"><span id="local-6989586621679528278"><span id="local-6989586621679528280"><span class="annot"><span class="annottext">Eq TxFeePolicy
 Eq TxFeePolicy
 -&gt; (TxFeePolicy -&gt; TxFeePolicy -&gt; Ordering)
 -&gt; (TxFeePolicy -&gt; TxFeePolicy -&gt; Bool)
@@ -110,7 +110,7 @@ $c&lt; :: TxFeePolicy -&gt; TxFeePolicy -&gt; Bool
 compare :: TxFeePolicy -&gt; TxFeePolicy -&gt; Ordering
 $ccompare :: TxFeePolicy -&gt; TxFeePolicy -&gt; Ordering
 $cp1Ord :: Eq TxFeePolicy
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528237"><span id="local-6989586621679528239"><span id="local-6989586621679528241"><span class="annot"><span class="annottext">Int -&gt; TxFeePolicy -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528261"><span id="local-6989586621679528263"><span id="local-6989586621679528265"><span class="annot"><span class="annottext">Int -&gt; TxFeePolicy -&gt; ShowS
 [TxFeePolicy] -&gt; ShowS
 TxFeePolicy -&gt; String
 (Int -&gt; TxFeePolicy -&gt; ShowS)
@@ -135,12 +135,12 @@ forall a.
 $cto :: forall x. Rep TxFeePolicy x -&gt; TxFeePolicy
 $cfrom :: forall x. TxFeePolicy -&gt; Rep TxFeePolicy x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-68"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528231"><span class="annot"><span class="annottext">TxFeePolicy -&gt; ()
+</span><span id="line-68"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528255"><span class="annot"><span class="annottext">TxFeePolicy -&gt; ()
 (TxFeePolicy -&gt; ()) -&gt; NFData TxFeePolicy
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: TxFeePolicy -&gt; ()
 $crnf :: TxFeePolicy -&gt; ()
-</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528224"><span id="local-6989586621679528226"><span id="local-6989586621679528228"><span class="annot"><span class="annottext">Context -&gt; TxFeePolicy -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528248"><span id="local-6989586621679528250"><span id="local-6989586621679528252"><span class="annot"><span class="annottext">Context -&gt; TxFeePolicy -&gt; IO (Maybe ThunkInfo)
 Proxy TxFeePolicy -&gt; String
 (Context -&gt; TxFeePolicy -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; TxFeePolicy -&gt; IO (Maybe ThunkInfo))
@@ -160,9 +160,9 @@ $cnoThunks :: Context -&gt; TxFeePolicy -&gt; IO (Maybe ThunkInfo)
 </span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-69"></span><span>
 </span><span id="line-70"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">B.Buildable</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-71"></span><span>  </span><span id="local-6989586621679528220"><span class="annot"><span class="annottext">build :: TxFeePolicy -&gt; Builder
-</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-type">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span id="local-6989586621679528218"><span class="annot"><span class="annottext">TxSizeLinear
-</span><a href="#local-6989586621679528218"><span class="hs-identifier hs-var">tsp</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-71"></span><span>  </span><span id="local-6989586621679528244"><span class="annot"><span class="annottext">build :: TxFeePolicy -&gt; Builder
+</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-type">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span id="local-6989586621679528242"><span class="annot"><span class="annottext">TxSizeLinear
+</span><a href="#local-6989586621679528242"><span class="hs-identifier hs-var">tsp</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-72"></span><span>    </span><span class="annot"><span class="annottext">Format Builder (TxSizeLinear -&gt; Builder) -&gt; TxSizeLinear -&gt; Builder
 forall a. Format Builder a -&gt; a
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">bprint</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Format (TxSizeLinear -&gt; Builder) (TxSizeLinear -&gt; Builder)
@@ -175,18 +175,18 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Format Builder (TxSizeLinear -&gt; Builder)
 forall a r. Buildable a =&gt; Format r (a -&gt; r)
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TxSizeLinear
-</span><a href="#local-6989586621679528218"><span class="hs-identifier hs-var">tsp</span></a></span><span>
+</span><a href="#local-6989586621679528242"><span class="hs-identifier hs-var">tsp</span></a></span><span>
 </span><span id="line-73"></span><span>
 </span><span id="line-74"></span><span class="hs-comment">-- Used for debugging purposes only</span><span>
-</span><span id="line-75"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528209"><span id="local-6989586621679528211"><span id="local-6989586621679528213"><span id="local-6989586621679528215"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span></span></span></span></span><span>
+</span><span id="line-75"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528233"><span id="local-6989586621679528235"><span id="local-6989586621679528237"><span id="local-6989586621679528239"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Aeson.ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span></span></span></span></span><span>
 </span><span id="line-76"></span><span>
-</span><span id="line-77"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528202"><span id="local-6989586621679528204"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-78"></span><span>  </span><span id="local-6989586621679528200"><span class="annot"><span class="annottext">toCBOR :: TxFeePolicy -&gt; Encoding
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679528198"><span class="annot"><span class="annottext">TxFeePolicy
-</span><a href="#local-6989586621679528198"><span class="hs-identifier hs-var">policy</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">TxFeePolicy
-</span><a href="#local-6989586621679528198"><span class="hs-identifier hs-var">policy</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-79"></span><span>    </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-type">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span id="local-6989586621679528197"><span class="annot"><span class="annottext">TxSizeLinear
-</span><a href="#local-6989586621679528197"><span class="hs-identifier hs-var">txSizeLinear</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-77"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528226"><span id="local-6989586621679528228"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-78"></span><span>  </span><span id="local-6989586621679528224"><span class="annot"><span class="annottext">toCBOR :: TxFeePolicy -&gt; Encoding
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679528222"><span class="annot"><span class="annottext">TxFeePolicy
+</span><a href="#local-6989586621679528222"><span class="hs-identifier hs-var">policy</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">TxFeePolicy
+</span><a href="#local-6989586621679528222"><span class="hs-identifier hs-var">policy</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-79"></span><span>    </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-type">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span id="local-6989586621679528221"><span class="annot"><span class="annottext">TxSizeLinear
+</span><a href="#local-6989586621679528221"><span class="hs-identifier hs-var">txSizeLinear</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-80"></span><span>      </span><span class="annot"><span class="annottext">Word -&gt; Encoding
 </span><a href="../../../../cborg/html/src"><span class="hs-identifier hs-var">encodeListLen</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">2</span></span><span>
@@ -201,22 +201,22 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">TxSizeLinear -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="Cardano.Chain.Common.CBOR.html#encodeKnownCborDataItem"><span class="hs-identifier hs-var">encodeKnownCborDataItem</span></a></span><span> </span><span class="annot"><span class="annottext">TxSizeLinear
-</span><a href="#local-6989586621679528197"><span class="hs-identifier hs-var">txSizeLinear</span></a></span><span>
+</span><a href="#local-6989586621679528221"><span class="hs-identifier hs-var">txSizeLinear</span></a></span><span>
 </span><span id="line-83"></span><span>
-</span><span id="line-84"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528193"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-85"></span><span>  </span><span id="local-6989586621679528191"><span class="annot"><span class="annottext">fromCBOR :: Decoder s TxFeePolicy
+</span><span id="line-84"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528217"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-85"></span><span>  </span><span id="local-6989586621679528215"><span class="annot"><span class="annottext">fromCBOR :: Decoder s TxFeePolicy
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-86"></span><span>    </span><span class="annot"><span class="annottext">Text -&gt; Int -&gt; Decoder s ()
 forall s. Text -&gt; Int -&gt; Decoder s ()
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">enforceSize</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;TxFeePolicy&quot;</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">2</span></span><span>
-</span><span id="line-87"></span><span>    </span><span id="local-6989586621679528189"><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679528189"><span class="hs-identifier hs-var">tag</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">forall s. FromCBOR Word8 =&gt; Decoder s Word8
+</span><span id="line-87"></span><span>    </span><span id="local-6989586621679528213"><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679528213"><span class="hs-identifier hs-var">tag</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">forall s. FromCBOR Word8 =&gt; Decoder s Word8
 forall a s. FromCBOR a =&gt; Decoder s a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">fromCBOR</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word8</span></a></span><span>
 </span><span id="line-88"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679528189"><span class="hs-identifier hs-var">tag</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679528213"><span class="hs-identifier hs-var">tag</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-89"></span><span>      </span><span class="annot"><span class="annottext">Word8
 </span><span class="hs-number">0</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TxSizeLinear -&gt; TxFeePolicy
 </span><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-var">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span class="annot"><span class="annottext">(TxSizeLinear -&gt; TxFeePolicy)
@@ -234,14 +234,14 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Word8 -&gt; DecoderError
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">DecoderErrorUnknownTag</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;TxFeePolicy&quot;</span></span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679528189"><span class="hs-identifier hs-var">tag</span></a></span><span>
+</span><a href="#local-6989586621679528213"><span class="hs-identifier hs-var">tag</span></a></span><span>
 </span><span id="line-91"></span><span>
-</span><span id="line-92"></span><span id="local-6989586621679528186"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528186"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528186"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-92"></span><span id="local-6989586621679528210"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528210"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528210"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-93"></span><span>  </span><span class="hs-comment">-- We multiply by 1e9 to keep compatibility with 'Nano' coefficients</span><span>
-</span><span id="line-94"></span><span>  </span><span id="local-6989586621679528183"><span class="annot"><span class="annottext">toJSON :: TxFeePolicy -&gt; m JSValue
-</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-type">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.TxSizeLinear.html#TxSizeLinear"><span class="hs-identifier hs-type">TxSizeLinear</span></a></span><span> </span><span id="local-6989586621679528180"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679528180"><span class="hs-identifier hs-var">summand</span></a></span></span><span> </span><span id="local-6989586621679528179"><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679528179"><span class="hs-identifier hs-var">multiplier</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-94"></span><span>  </span><span id="local-6989586621679528207"><span class="annot"><span class="annottext">toJSON :: TxFeePolicy -&gt; m JSValue
+</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-type">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.TxSizeLinear.html#TxSizeLinear"><span class="hs-identifier hs-type">TxSizeLinear</span></a></span><span> </span><span id="local-6989586621679528204"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679528204"><span class="hs-identifier hs-var">summand</span></a></span></span><span> </span><span id="local-6989586621679528203"><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621679528203"><span class="hs-identifier hs-var">multiplier</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-95"></span><span>    </span><span class="annot"><span class="annottext">[(JSString, m JSValue)] -&gt; m JSValue
 forall (m :: * -&gt; *).
 Monad m =&gt;
@@ -257,7 +257,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Integer
 </span><a href="Cardano.Chain.Common.Lovelace.html#lovelaceToInteger"><span class="hs-identifier hs-var">lovelaceToInteger</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679528180"><span class="hs-identifier hs-var">summand</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679528204"><span class="hs-identifier hs-var">summand</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-97"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;multiplier&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; m JSValue
 forall (m :: * -&gt; *) a. ToJSON m a =&gt; a -&gt; m JSValue
@@ -269,18 +269,18 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-number">1e9</span></span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Rational -&gt; Rational
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679528179"><span class="hs-identifier hs-var">multiplier</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679528203"><span class="hs-identifier hs-var">multiplier</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-98"></span><span>      </span><span class="hs-special">]</span></span><span>
 </span><span id="line-99"></span><span>
-</span><span id="line-100"></span><span id="local-6989586621679528176"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier hs-type">SchemaError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528176"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528176"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-100"></span><span id="local-6989586621679528200"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier hs-type">SchemaError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528200"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679528200"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicy"><span class="hs-identifier hs-type">TxFeePolicy</span></a></span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-101"></span><span>  </span><span class="hs-comment">-- We div by 1e9 to keep compatibility with 'Nano' coefficients</span><span>
-</span><span id="line-102"></span><span>  </span><span id="local-6989586621679528173"><span class="annot"><span class="annottext">fromJSON :: JSValue -&gt; m TxFeePolicy
-</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromJSON</span></a></span></span><span> </span><span id="local-6989586621679528171"><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679528171"><span class="hs-identifier hs-var">obj</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-103"></span><span>    </span><span id="local-6989586621679528170"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679528170"><span class="hs-identifier hs-var">summand</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-102"></span><span>  </span><span id="local-6989586621679528197"><span class="annot"><span class="annottext">fromJSON :: JSValue -&gt; m TxFeePolicy
+</span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromJSON</span></a></span></span><span> </span><span id="local-6989586621679528195"><span class="annot"><span class="annottext">JSValue
+</span><a href="#local-6989586621679528195"><span class="hs-identifier hs-var">obj</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-103"></span><span>    </span><span id="local-6989586621679528194"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679528194"><span class="hs-identifier hs-var">summand</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-104"></span><span>      </span><span class="annot"><span class="annottext">Either LovelaceError Lovelace -&gt; m Lovelace
-</span><a href="#local-6989586621679528169"><span class="hs-identifier hs-var">wrapLovelaceError</span></a></span><span> </span><span class="annot"><span class="annottext">(Either LovelaceError Lovelace -&gt; m Lovelace)
+</span><a href="#local-6989586621679528193"><span class="hs-identifier hs-var">wrapLovelaceError</span></a></span><span> </span><span class="annot"><span class="annottext">(Either LovelaceError Lovelace -&gt; m Lovelace)
 -&gt; (Word64 -&gt; Either LovelaceError Lovelace)
 -&gt; Word64
 -&gt; m Lovelace
@@ -305,11 +305,11 @@ forall (m :: * -&gt; *) a.
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span>
 </span><span id="line-106"></span><span>          </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679528171"><span class="hs-identifier hs-var">obj</span></a></span><span>
+</span><a href="#local-6989586621679528195"><span class="hs-identifier hs-var">obj</span></a></span><span>
 </span><span id="line-107"></span><span>          </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;summand&quot;</span></span><span>
-</span><span id="line-108"></span><span>    </span><span id="local-6989586621679528166"><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679528166"><span class="hs-identifier hs-var">multiplier</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-108"></span><span>    </span><span id="local-6989586621679528190"><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621679528190"><span class="hs-identifier hs-var">multiplier</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-109"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; Rational
 forall a. Integral a =&gt; a -&gt; a -&gt; Ratio a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">%</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
@@ -322,7 +322,7 @@ forall (m :: * -&gt; *) a.
 JSValue -&gt; JSString -&gt; m a
 </span><a href="../../../../canonical-json/html/src"><span class="hs-identifier hs-var">fromJSField</span></a></span><span>
 </span><span id="line-111"></span><span>          </span><span class="annot"><span class="annottext">JSValue
-</span><a href="#local-6989586621679528171"><span class="hs-identifier hs-var">obj</span></a></span><span>
+</span><a href="#local-6989586621679528195"><span class="hs-identifier hs-var">obj</span></a></span><span>
 </span><span id="line-112"></span><span>          </span><span class="annot"><span class="annottext">JSString
 </span><span class="hs-string">&quot;multiplier&quot;</span></span><span>
 </span><span id="line-113"></span><span>    </span><span class="annot"><span class="annottext">TxFeePolicy -&gt; m TxFeePolicy
@@ -332,12 +332,12 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TxSizeLinear -&gt; TxFeePolicy
 </span><a href="Cardano.Chain.Common.TxFeePolicy.html#TxFeePolicyTxSizeLinear"><span class="hs-identifier hs-var">TxFeePolicyTxSizeLinear</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Lovelace -&gt; Rational -&gt; TxSizeLinear
 </span><a href="Cardano.Chain.Common.TxSizeLinear.html#TxSizeLinear"><span class="hs-identifier hs-var">TxSizeLinear</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679528170"><span class="hs-identifier hs-var">summand</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679528166"><span class="hs-identifier hs-var">multiplier</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679528194"><span class="hs-identifier hs-var">summand</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621679528190"><span class="hs-identifier hs-var">multiplier</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-114"></span><span>    </span><span class="hs-keyword">where</span><span>
-</span><span id="line-115"></span><span>      </span><span class="annot"><a href="#local-6989586621679528169"><span class="hs-identifier hs-type">wrapLovelaceError</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.Lovelace.html#LovelaceError"><span class="hs-identifier hs-type">LovelaceError</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.Lovelace.html#Lovelace"><span class="hs-identifier hs-type">Lovelace</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679528176"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.Lovelace.html#Lovelace"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
-</span><span id="line-116"></span><span>      </span><span id="local-6989586621679528169"><span class="annot"><span class="annottext">wrapLovelaceError :: Either LovelaceError Lovelace -&gt; m Lovelace
-</span><a href="#local-6989586621679528169"><span class="hs-identifier hs-var hs-var">wrapLovelaceError</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-115"></span><span>      </span><span class="annot"><a href="#local-6989586621679528193"><span class="hs-identifier hs-type">wrapLovelaceError</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.Lovelace.html#LovelaceError"><span class="hs-identifier hs-type">LovelaceError</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.Lovelace.html#Lovelace"><span class="hs-identifier hs-type">Lovelace</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679528200"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.Lovelace.html#Lovelace"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
+</span><span id="line-116"></span><span>      </span><span id="local-6989586621679528193"><span class="annot"><span class="annottext">wrapLovelaceError :: Either LovelaceError Lovelace -&gt; m Lovelace
+</span><a href="#local-6989586621679528193"><span class="hs-identifier hs-var hs-var">wrapLovelaceError</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-117"></span><span>        </span><span class="annot"><span class="annottext">(LovelaceError -&gt; m Lovelace)
 -&gt; (Lovelace -&gt; m Lovelace)
 -&gt; Either LovelaceError Lovelace

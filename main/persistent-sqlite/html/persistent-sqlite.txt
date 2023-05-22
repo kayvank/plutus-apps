@@ -402,8 +402,8 @@ checkForeignKeys :: (MonadResource m, MonadReader env m, BackendCompatible SqlBa
 -- | Wrapper for persistent SqlBackends that carry the corresponding
 --   <a>Connection</a>.
 data RawSqlite backend
-persistentBackend :: forall backend_anhT backend_asEt. Lens (RawSqlite backend_anhT) (RawSqlite backend_asEt) backend_anhT backend_asEt
-rawSqliteConnection :: forall backend_anhT. Lens' (RawSqlite backend_anhT) Connection
+persistentBackend :: forall backend_ankr backend_asHf. Lens (RawSqlite backend_ankr) (RawSqlite backend_asHf) backend_ankr backend_asHf
+rawSqliteConnection :: forall backend_ankr. Lens' (RawSqlite backend_ankr) Connection
 
 -- | Like <a>withSqliteConnInfo</a>, but exposes the internal
 --   <a>Connection</a>. For power users who want to manually interact with

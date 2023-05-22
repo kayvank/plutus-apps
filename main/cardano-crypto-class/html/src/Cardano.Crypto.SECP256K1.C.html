@@ -73,8 +73,8 @@ forall a. IO a -&gt; IO a
 -&gt; IO (ForeignPtr SECP256k1Context) -&gt; ForeignPtr SECP256k1Context
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-61"></span><span>  </span><span id="local-6989586621679163028"><span class="annot"><span class="annottext">Ptr SECP256k1Context
-</span><a href="#local-6989586621679163028"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CUInt -&gt; IO (Ptr SECP256k1Context)
+</span><span id="line-61"></span><span>  </span><span id="local-6989586621679163037"><span class="annot"><span class="annottext">Ptr SECP256k1Context
+</span><a href="#local-6989586621679163037"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">CUInt -&gt; IO (Ptr SECP256k1Context)
 </span><a href="Cardano.Crypto.SECP256K1.C.html#secpContextCreate"><span class="hs-identifier hs-var">secpContextCreate</span></a></span><span> </span><span class="annot"><span class="annottext">CUInt
 </span><a href="Cardano.Crypto.SECP256K1.C.html#secpContextSignVerify"><span class="hs-identifier hs-var">secpContextSignVerify</span></a></span><span>
 </span><span id="line-62"></span><span>  </span><span class="annot"><span class="annottext">FinalizerPtr SECP256k1Context
@@ -82,7 +82,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a. FinalizerPtr a -&gt; Ptr a -&gt; IO (ForeignPtr a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">newForeignPtr</span></a></span><span> </span><span class="annot"><span class="annottext">FinalizerPtr SECP256k1Context
 </span><a href="Cardano.Crypto.SECP256K1.C.html#secpContextDestroy"><span class="hs-identifier hs-var">secpContextDestroy</span></a></span><span> </span><span class="annot"><span class="annottext">Ptr SECP256k1Context
-</span><a href="#local-6989586621679163028"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><a href="#local-6989586621679163037"><span class="hs-identifier hs-var">ctx</span></a></span><span>
 </span><span id="line-63"></span><span>
 </span><span id="line-64"></span><span class="hs-keyword">foreign</span><span> </span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-keyword">ccall</span></span><span> </span><span class="annot"><span class="hs-keyword">unsafe</span></span><span> </span><span class="annot"><span class="hs-string">&quot;secp256k1.h &amp;secp256k1_context_destroy&quot;</span></span><span>
 </span><span id="line-65"></span><span>  </span><span id="secpContextDestroy"><span class="annot"><a href="Cardano.Crypto.SECP256K1.C.html#secpContextDestroy"><span class="hs-identifier hs-var">secpContextDestroy</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">FinalizerPtr</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.SECP256K1.C.html#SECP256k1Context"><span class="hs-identifier hs-type">SECP256k1Context</span></a></span><span>

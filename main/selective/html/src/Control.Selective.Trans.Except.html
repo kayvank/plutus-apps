@@ -1,0 +1,1172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-pragma">{-# LANGUAGE CPP, GeneralizedNewtypeDeriving, DeriveTraversable, DerivingVia #-}</span><span>
+</span><span id="line-2"></span><span class="hs-comment">-----------------------------------------------------------------------------</span><span>
+</span><span id="line-3"></span><span class="hs-comment">-- |</span><span>
+</span><span id="line-4"></span><span class="hs-comment">-- Module     : Control.Selective.Trans.Except</span><span>
+</span><span id="line-5"></span><span class="hs-comment">-- Copyright  : (c) Andrey Mokhov 2018-2023</span><span>
+</span><span id="line-6"></span><span class="hs-comment">-- License    : MIT (see the file LICENSE)</span><span>
+</span><span id="line-7"></span><span class="hs-comment">-- Maintainer : andrey.mokhov@gmail.com</span><span>
+</span><span id="line-8"></span><span class="hs-comment">-- Stability  : experimental</span><span>
+</span><span id="line-9"></span><span class="hs-comment">--</span><span>
+</span><span id="line-10"></span><span class="hs-comment">-- This is a library for /selective applicative functors/, or just</span><span>
+</span><span id="line-11"></span><span class="hs-comment">-- /selective functors/ for short, an abstraction between applicative functors</span><span>
+</span><span id="line-12"></span><span class="hs-comment">-- and monads, introduced in this paper:</span><span>
+</span><span id="line-13"></span><span class="hs-comment">-- https://www.staff.ncl.ac.uk/andrey.mokhov/selective-functors.pdf.</span><span>
+</span><span id="line-14"></span><span class="hs-comment">--</span><span>
+</span><span id="line-15"></span><span class="hs-comment">-- This module defines a newtype around 'ExceptT' from @transformers@ with less</span><span>
+</span><span id="line-16"></span><span class="hs-comment">-- restrictive 'Applicative', 'Selective', and 'Alternative' implementations.</span><span>
+</span><span id="line-17"></span><span class="hs-comment">-- It supplies an @instance 'Selective' f =&gt; 'Selective' ('ExceptT' e f)@, which</span><span>
+</span><span id="line-18"></span><span class="hs-comment">-- makes 'ExceptT' a bona-fide 'Selective' transformer.</span><span>
+</span><span id="line-19"></span><span class="hs-comment">--</span><span>
+</span><span id="line-20"></span><span class="hs-comment">-- The API follows the API from the @transformers@ package, so it can be used as</span><span>
+</span><span id="line-21"></span><span class="hs-comment">-- a drop-in replacement. The documentation can be found in the</span><span>
+</span><span id="line-22"></span><span class="hs-comment">-- [@transformers@](https://hackage.haskell.org/package/transformers/docs/Control-Monad-Trans-Except.html) package.</span><span>
+</span><span id="line-23"></span><span class="hs-comment">-----------------------------------------------------------------------------</span><span>
+</span><span id="line-24"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Control.Selective.Trans.Except</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-25"></span><span>
+</span><span id="line-26"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Control.Applicative</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Alternative</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-27"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Control.Monad</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">MonadPlus</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-28"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Control.Monad.Fix</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">MonadFix</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-29"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Control.Monad.IO.Class</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">MonadIO</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-30"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Control.Monad.Zip</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">MonadZip</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-31"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Data.Functor.Classes</span></a></span><span>
+</span><span id="line-32"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Data.Functor.Contravariant</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Contravariant</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-33"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Data.Functor.Identity</span></a></span><span class="hs-cpp">
+#if MIN_VERSION_base(4,13,0)
+</span><span class="hs-comment">-- MonadFail is imported already</span><span class="hs-cpp">
+#else
+</span><span class="hs-keyword">import</span><span> </span><span class="hs-identifier">Control.Monad.Fail</span><span class="hs-cpp">
+#endif
+</span><span>
+</span><span id="line-40"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier">Control.Monad.Trans.Except</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">T</span></span><span>
+</span><span id="line-41"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier">Control.Monad.Trans.Class</span></a></span><span>
+</span><span id="line-42"></span><span>
+</span><span id="line-43"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Control.Selective.html"><span class="hs-identifier">Control.Selective</span></a></span><span>
+</span><span id="line-44"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier">Control.Monad.Signatures</span></a></span><span>
+</span><span id="line-45"></span><span>
+</span><span id="line-46"></span><span class="hs-comment">-- | A newtype wrapper around 'T.ExceptT' from @transformers@ that provides less</span><span>
+</span><span id="line-47"></span><span class="hs-comment">-- restrictive 'Applicative', 'Selective' and 'Alternative' instances.</span><span>
+</span><span id="line-48"></span><span class="hs-keyword">newtype</span><span> </span><span id="ExceptT"><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span></span><span> </span><span id="local-6989586621679061930"><span class="annot"><a href="#local-6989586621679061930"><span class="hs-identifier hs-type">e</span></a></span></span><span> </span><span id="local-6989586621679061929"><span class="annot"><a href="#local-6989586621679061929"><span class="hs-identifier hs-type">f</span></a></span></span><span> </span><span id="local-6989586621679061928"><span class="annot"><a href="#local-6989586621679061928"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ExceptT"><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unwrap"><span class="annot"><span class="annottext">ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">T.ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061930"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061929"><span class="hs-identifier hs-type">f</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061928"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-special">}</span><span>
+</span><span id="line-49"></span><span>  </span><span class="hs-keyword">deriving</span><span>
+</span><span id="line-50"></span><span>    </span><span class="hs-special">(</span><span> </span><span id="local-6989586621679061822"><span id="local-6989586621679061824"><span class="annot"><span class="annottext">a -&gt; ExceptT e f b -&gt; ExceptT e f a
+(a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+(forall a b. (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b)
+-&gt; (forall a b. a -&gt; ExceptT e f b -&gt; ExceptT e f a)
+-&gt; Functor (ExceptT e f)
+forall a b. a -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall a b. (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+forall e (f :: * -&gt; *) a b.
+Functor f =&gt;
+a -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall e (f :: * -&gt; *) a b.
+Functor f =&gt;
+(a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+forall (f :: * -&gt; *).
+(forall a b. (a -&gt; b) -&gt; f a -&gt; f b)
+-&gt; (forall a b. a -&gt; f b -&gt; f a) -&gt; Functor f
+&lt;$ :: a -&gt; ExceptT e f b -&gt; ExceptT e f a
+$c&lt;$ :: forall e (f :: * -&gt; *) a b.
+Functor f =&gt;
+a -&gt; ExceptT e f b -&gt; ExceptT e f a
+fmap :: (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+$cfmap :: forall e (f :: * -&gt; *) a b.
+Functor f =&gt;
+(a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061787"><span id="local-6989586621679061789"><span id="local-6989586621679061791"><span id="local-6989586621679061793"><span id="local-6989586621679061795"><span id="local-6989586621679061797"><span id="local-6989586621679061799"><span id="local-6989586621679061801"><span id="local-6989586621679061803"><span id="local-6989586621679061805"><span id="local-6989586621679061807"><span id="local-6989586621679061809"><span id="local-6989586621679061811"><span id="local-6989586621679061813"><span id="local-6989586621679061815"><span id="local-6989586621679061817"><span id="local-6989586621679061819"><span class="annot"><span class="annottext">a -&gt; ExceptT e f a -&gt; Bool
+ExceptT e f m -&gt; m
+ExceptT e f a -&gt; [a]
+ExceptT e f a -&gt; Bool
+ExceptT e f a -&gt; Int
+ExceptT e f a -&gt; a
+ExceptT e f a -&gt; a
+ExceptT e f a -&gt; a
+ExceptT e f a -&gt; a
+(a -&gt; m) -&gt; ExceptT e f a -&gt; m
+(a -&gt; m) -&gt; ExceptT e f a -&gt; m
+(a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+(a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+(b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+(b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+(a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+(a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+(forall m. Monoid m =&gt; ExceptT e f m -&gt; m)
+-&gt; (forall m a. Monoid m =&gt; (a -&gt; m) -&gt; ExceptT e f a -&gt; m)
+-&gt; (forall m a. Monoid m =&gt; (a -&gt; m) -&gt; ExceptT e f a -&gt; m)
+-&gt; (forall a b. (a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b)
+-&gt; (forall a b. (a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b)
+-&gt; (forall b a. (b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b)
+-&gt; (forall b a. (b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b)
+-&gt; (forall a. (a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a)
+-&gt; (forall a. (a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a)
+-&gt; (forall a. ExceptT e f a -&gt; [a])
+-&gt; (forall a. ExceptT e f a -&gt; Bool)
+-&gt; (forall a. ExceptT e f a -&gt; Int)
+-&gt; (forall a. Eq a =&gt; a -&gt; ExceptT e f a -&gt; Bool)
+-&gt; (forall a. Ord a =&gt; ExceptT e f a -&gt; a)
+-&gt; (forall a. Ord a =&gt; ExceptT e f a -&gt; a)
+-&gt; (forall a. Num a =&gt; ExceptT e f a -&gt; a)
+-&gt; (forall a. Num a =&gt; ExceptT e f a -&gt; a)
+-&gt; Foldable (ExceptT e f)
+forall a. Eq a =&gt; a -&gt; ExceptT e f a -&gt; Bool
+forall a. Num a =&gt; ExceptT e f a -&gt; a
+forall a. Ord a =&gt; ExceptT e f a -&gt; a
+forall m. Monoid m =&gt; ExceptT e f m -&gt; m
+forall a. ExceptT e f a -&gt; Bool
+forall a. ExceptT e f a -&gt; Int
+forall a. ExceptT e f a -&gt; [a]
+forall a. (a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+forall m a. Monoid m =&gt; (a -&gt; m) -&gt; ExceptT e f a -&gt; m
+forall b a. (b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+forall a b. (a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+forall e (f :: * -&gt; *) a.
+(Foldable f, Eq a) =&gt;
+a -&gt; ExceptT e f a -&gt; Bool
+forall e (f :: * -&gt; *) a. (Foldable f, Num a) =&gt; ExceptT e f a -&gt; a
+forall e (f :: * -&gt; *) a. (Foldable f, Ord a) =&gt; ExceptT e f a -&gt; a
+forall e (f :: * -&gt; *) m.
+(Foldable f, Monoid m) =&gt;
+ExceptT e f m -&gt; m
+forall e (f :: * -&gt; *) a. Foldable f =&gt; ExceptT e f a -&gt; Bool
+forall e (f :: * -&gt; *) a. Foldable f =&gt; ExceptT e f a -&gt; Int
+forall e (f :: * -&gt; *) a. Foldable f =&gt; ExceptT e f a -&gt; [a]
+forall e (f :: * -&gt; *) a.
+Foldable f =&gt;
+(a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+forall e (f :: * -&gt; *) m a.
+(Foldable f, Monoid m) =&gt;
+(a -&gt; m) -&gt; ExceptT e f a -&gt; m
+forall e (f :: * -&gt; *) b a.
+Foldable f =&gt;
+(b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+forall e (f :: * -&gt; *) a b.
+Foldable f =&gt;
+(a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+forall (t :: * -&gt; *).
+(forall m. Monoid m =&gt; t m -&gt; m)
+-&gt; (forall m a. Monoid m =&gt; (a -&gt; m) -&gt; t a -&gt; m)
+-&gt; (forall m a. Monoid m =&gt; (a -&gt; m) -&gt; t a -&gt; m)
+-&gt; (forall a b. (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b)
+-&gt; (forall a b. (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b)
+-&gt; (forall b a. (b -&gt; a -&gt; b) -&gt; b -&gt; t a -&gt; b)
+-&gt; (forall b a. (b -&gt; a -&gt; b) -&gt; b -&gt; t a -&gt; b)
+-&gt; (forall a. (a -&gt; a -&gt; a) -&gt; t a -&gt; a)
+-&gt; (forall a. (a -&gt; a -&gt; a) -&gt; t a -&gt; a)
+-&gt; (forall a. t a -&gt; [a])
+-&gt; (forall a. t a -&gt; Bool)
+-&gt; (forall a. t a -&gt; Int)
+-&gt; (forall a. Eq a =&gt; a -&gt; t a -&gt; Bool)
+-&gt; (forall a. Ord a =&gt; t a -&gt; a)
+-&gt; (forall a. Ord a =&gt; t a -&gt; a)
+-&gt; (forall a. Num a =&gt; t a -&gt; a)
+-&gt; (forall a. Num a =&gt; t a -&gt; a)
+-&gt; Foldable t
+product :: ExceptT e f a -&gt; a
+$cproduct :: forall e (f :: * -&gt; *) a. (Foldable f, Num a) =&gt; ExceptT e f a -&gt; a
+sum :: ExceptT e f a -&gt; a
+$csum :: forall e (f :: * -&gt; *) a. (Foldable f, Num a) =&gt; ExceptT e f a -&gt; a
+minimum :: ExceptT e f a -&gt; a
+$cminimum :: forall e (f :: * -&gt; *) a. (Foldable f, Ord a) =&gt; ExceptT e f a -&gt; a
+maximum :: ExceptT e f a -&gt; a
+$cmaximum :: forall e (f :: * -&gt; *) a. (Foldable f, Ord a) =&gt; ExceptT e f a -&gt; a
+elem :: a -&gt; ExceptT e f a -&gt; Bool
+$celem :: forall e (f :: * -&gt; *) a.
+(Foldable f, Eq a) =&gt;
+a -&gt; ExceptT e f a -&gt; Bool
+length :: ExceptT e f a -&gt; Int
+$clength :: forall e (f :: * -&gt; *) a. Foldable f =&gt; ExceptT e f a -&gt; Int
+null :: ExceptT e f a -&gt; Bool
+$cnull :: forall e (f :: * -&gt; *) a. Foldable f =&gt; ExceptT e f a -&gt; Bool
+toList :: ExceptT e f a -&gt; [a]
+$ctoList :: forall e (f :: * -&gt; *) a. Foldable f =&gt; ExceptT e f a -&gt; [a]
+foldl1 :: (a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+$cfoldl1 :: forall e (f :: * -&gt; *) a.
+Foldable f =&gt;
+(a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+foldr1 :: (a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+$cfoldr1 :: forall e (f :: * -&gt; *) a.
+Foldable f =&gt;
+(a -&gt; a -&gt; a) -&gt; ExceptT e f a -&gt; a
+foldl' :: (b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+$cfoldl' :: forall e (f :: * -&gt; *) b a.
+Foldable f =&gt;
+(b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+foldl :: (b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+$cfoldl :: forall e (f :: * -&gt; *) b a.
+Foldable f =&gt;
+(b -&gt; a -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+foldr' :: (a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+$cfoldr' :: forall e (f :: * -&gt; *) a b.
+Foldable f =&gt;
+(a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+foldr :: (a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+$cfoldr :: forall e (f :: * -&gt; *) a b.
+Foldable f =&gt;
+(a -&gt; b -&gt; b) -&gt; b -&gt; ExceptT e f a -&gt; b
+foldMap' :: (a -&gt; m) -&gt; ExceptT e f a -&gt; m
+$cfoldMap' :: forall e (f :: * -&gt; *) m a.
+(Foldable f, Monoid m) =&gt;
+(a -&gt; m) -&gt; ExceptT e f a -&gt; m
+foldMap :: (a -&gt; m) -&gt; ExceptT e f a -&gt; m
+$cfoldMap :: forall e (f :: * -&gt; *) m a.
+(Foldable f, Monoid m) =&gt;
+(a -&gt; m) -&gt; ExceptT e f a -&gt; m
+fold :: ExceptT e f m -&gt; m
+$cfold :: forall e (f :: * -&gt; *) m.
+(Foldable f, Monoid m) =&gt;
+ExceptT e f m -&gt; m
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Foldable</span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061776"><span id="local-6989586621679061778"><span id="local-6989586621679061780"><span id="local-6989586621679061782"><span class="annot"><span class="annottext">Functor (ExceptT e f)
+Foldable (ExceptT e f)
+Functor (ExceptT e f)
+-&gt; Foldable (ExceptT e f)
+-&gt; (forall (f :: * -&gt; *) a b.
+    Applicative f =&gt;
+    (a -&gt; f b) -&gt; ExceptT e f a -&gt; f (ExceptT e f b))
+-&gt; (forall (f :: * -&gt; *) a.
+    Applicative f =&gt;
+    ExceptT e f (f a) -&gt; f (ExceptT e f a))
+-&gt; (forall (m :: * -&gt; *) a b.
+    Monad m =&gt;
+    (a -&gt; m b) -&gt; ExceptT e f a -&gt; m (ExceptT e f b))
+-&gt; (forall (m :: * -&gt; *) a.
+    Monad m =&gt;
+    ExceptT e f (m a) -&gt; m (ExceptT e f a))
+-&gt; Traversable (ExceptT e f)
+(a -&gt; f b) -&gt; ExceptT e f a -&gt; f (ExceptT e f b)
+forall e (f :: * -&gt; *). Traversable f =&gt; Functor (ExceptT e f)
+forall e (f :: * -&gt; *). Traversable f =&gt; Foldable (ExceptT e f)
+forall e (f :: * -&gt; *) (m :: * -&gt; *) a.
+(Traversable f, Monad m) =&gt;
+ExceptT e f (m a) -&gt; m (ExceptT e f a)
+forall e (f :: * -&gt; *) (f :: * -&gt; *) a.
+(Traversable f, Applicative f) =&gt;
+ExceptT e f (f a) -&gt; f (ExceptT e f a)
+forall e (f :: * -&gt; *) (m :: * -&gt; *) a b.
+(Traversable f, Monad m) =&gt;
+(a -&gt; m b) -&gt; ExceptT e f a -&gt; m (ExceptT e f b)
+forall e (f :: * -&gt; *) (f :: * -&gt; *) a b.
+(Traversable f, Applicative f) =&gt;
+(a -&gt; f b) -&gt; ExceptT e f a -&gt; f (ExceptT e f b)
+forall (t :: * -&gt; *).
+Functor t
+-&gt; Foldable t
+-&gt; (forall (f :: * -&gt; *) a b.
+    Applicative f =&gt;
+    (a -&gt; f b) -&gt; t a -&gt; f (t b))
+-&gt; (forall (f :: * -&gt; *) a. Applicative f =&gt; t (f a) -&gt; f (t a))
+-&gt; (forall (m :: * -&gt; *) a b.
+    Monad m =&gt;
+    (a -&gt; m b) -&gt; t a -&gt; m (t b))
+-&gt; (forall (m :: * -&gt; *) a. Monad m =&gt; t (m a) -&gt; m (t a))
+-&gt; Traversable t
+forall (m :: * -&gt; *) a.
+Monad m =&gt;
+ExceptT e f (m a) -&gt; m (ExceptT e f a)
+forall (f :: * -&gt; *) a.
+Applicative f =&gt;
+ExceptT e f (f a) -&gt; f (ExceptT e f a)
+forall (m :: * -&gt; *) a b.
+Monad m =&gt;
+(a -&gt; m b) -&gt; ExceptT e f a -&gt; m (ExceptT e f b)
+forall (f :: * -&gt; *) a b.
+Applicative f =&gt;
+(a -&gt; f b) -&gt; ExceptT e f a -&gt; f (ExceptT e f b)
+sequence :: ExceptT e f (m a) -&gt; m (ExceptT e f a)
+$csequence :: forall e (f :: * -&gt; *) (m :: * -&gt; *) a.
+(Traversable f, Monad m) =&gt;
+ExceptT e f (m a) -&gt; m (ExceptT e f a)
+mapM :: (a -&gt; m b) -&gt; ExceptT e f a -&gt; m (ExceptT e f b)
+$cmapM :: forall e (f :: * -&gt; *) (m :: * -&gt; *) a b.
+(Traversable f, Monad m) =&gt;
+(a -&gt; m b) -&gt; ExceptT e f a -&gt; m (ExceptT e f b)
+sequenceA :: ExceptT e f (f a) -&gt; f (ExceptT e f a)
+$csequenceA :: forall e (f :: * -&gt; *) (f :: * -&gt; *) a.
+(Traversable f, Applicative f) =&gt;
+ExceptT e f (f a) -&gt; f (ExceptT e f a)
+traverse :: (a -&gt; f b) -&gt; ExceptT e f a -&gt; f (ExceptT e f b)
+$ctraverse :: forall e (f :: * -&gt; *) (f :: * -&gt; *) a b.
+(Traversable f, Applicative f) =&gt;
+(a -&gt; f b) -&gt; ExceptT e f a -&gt; f (ExceptT e f b)
+$cp2Traversable :: forall e (f :: * -&gt; *). Traversable f =&gt; Foldable (ExceptT e f)
+$cp1Traversable :: forall e (f :: * -&gt; *). Traversable f =&gt; Functor (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Traversable</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061768"><span id="local-6989586621679061770"><span id="local-6989586621679061772"><span class="annot"><span class="annottext">Applicative (ExceptT e f)
+a -&gt; ExceptT e f a
+Applicative (ExceptT e f)
+-&gt; (forall a b.
+    ExceptT e f a -&gt; (a -&gt; ExceptT e f b) -&gt; ExceptT e f b)
+-&gt; (forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b)
+-&gt; (forall a. a -&gt; ExceptT e f a)
+-&gt; Monad (ExceptT e f)
+ExceptT e f a -&gt; (a -&gt; ExceptT e f b) -&gt; ExceptT e f b
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+forall a. a -&gt; ExceptT e f a
+forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+forall a b. ExceptT e f a -&gt; (a -&gt; ExceptT e f b) -&gt; ExceptT e f b
+forall e (f :: * -&gt; *).
+(Selective f, Monad f) =&gt;
+Applicative (ExceptT e f)
+forall e (f :: * -&gt; *) a.
+(Selective f, Monad f) =&gt;
+a -&gt; ExceptT e f a
+forall e (f :: * -&gt; *) a b.
+(Selective f, Monad f) =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+forall e (f :: * -&gt; *) a b.
+(Selective f, Monad f) =&gt;
+ExceptT e f a -&gt; (a -&gt; ExceptT e f b) -&gt; ExceptT e f b
+forall (m :: * -&gt; *).
+Applicative m
+-&gt; (forall a b. m a -&gt; (a -&gt; m b) -&gt; m b)
+-&gt; (forall a b. m a -&gt; m b -&gt; m b)
+-&gt; (forall a. a -&gt; m a)
+-&gt; Monad m
+return :: a -&gt; ExceptT e f a
+$creturn :: forall e (f :: * -&gt; *) a.
+(Selective f, Monad f) =&gt;
+a -&gt; ExceptT e f a
+&gt;&gt; :: ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+$c&gt;&gt; :: forall e (f :: * -&gt; *) a b.
+(Selective f, Monad f) =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+&gt;&gt;= :: ExceptT e f a -&gt; (a -&gt; ExceptT e f b) -&gt; ExceptT e f b
+$c&gt;&gt;= :: forall e (f :: * -&gt; *) a b.
+(Selective f, Monad f) =&gt;
+ExceptT e f a -&gt; (a -&gt; ExceptT e f b) -&gt; ExceptT e f b
+$cp1Monad :: forall e (f :: * -&gt; *).
+(Selective f, Monad f) =&gt;
+Applicative (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monad</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061763"><span id="local-6989586621679061765"><span class="annot"><span class="annottext">b -&gt; ExceptT e f b -&gt; ExceptT e f a
+(a -&gt; b) -&gt; ExceptT e f b -&gt; ExceptT e f a
+(forall a b. (a -&gt; b) -&gt; ExceptT e f b -&gt; ExceptT e f a)
+-&gt; (forall b a. b -&gt; ExceptT e f b -&gt; ExceptT e f a)
+-&gt; Contravariant (ExceptT e f)
+forall b a. b -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall a b. (a -&gt; b) -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall e (f :: * -&gt; *) b a.
+Contravariant f =&gt;
+b -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall e (f :: * -&gt; *) a b.
+Contravariant f =&gt;
+(a -&gt; b) -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall (f :: * -&gt; *).
+(forall a b. (a -&gt; b) -&gt; f b -&gt; f a)
+-&gt; (forall b a. b -&gt; f b -&gt; f a) -&gt; Contravariant f
+&gt;$ :: b -&gt; ExceptT e f b -&gt; ExceptT e f a
+$c&gt;$ :: forall e (f :: * -&gt; *) b a.
+Contravariant f =&gt;
+b -&gt; ExceptT e f b -&gt; ExceptT e f a
+contramap :: (a -&gt; b) -&gt; ExceptT e f b -&gt; ExceptT e f a
+$ccontramap :: forall e (f :: * -&gt; *) a b.
+Contravariant f =&gt;
+(a -&gt; b) -&gt; ExceptT e f b -&gt; ExceptT e f a
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Contravariant</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061758"><span id="local-6989586621679061760"><span class="annot"><span class="annottext">ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+(ExceptT e f a -&gt; ExceptT e f a -&gt; Bool)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; Bool) -&gt; Eq (ExceptT e f a)
+forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
+forall e (f :: * -&gt; *) a.
+(Eq1 f, Eq e, Eq a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+/= :: ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+$c/= :: forall e (f :: * -&gt; *) a.
+(Eq1 f, Eq e, Eq a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+== :: ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+$c== :: forall e (f :: * -&gt; *) a.
+(Eq1 f, Eq e, Eq a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061742"><span id="local-6989586621679061744"><span id="local-6989586621679061746"><span id="local-6989586621679061748"><span id="local-6989586621679061750"><span id="local-6989586621679061752"><span id="local-6989586621679061754"><span class="annot"><span class="annottext">Eq (ExceptT e f a)
+Eq (ExceptT e f a)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; Ordering)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; Bool)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; Bool)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; Bool)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; Bool)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a)
+-&gt; (ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a)
+-&gt; Ord (ExceptT e f a)
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+ExceptT e f a -&gt; ExceptT e f a -&gt; Ordering
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+forall a.
+Eq a
+-&gt; (a -&gt; a -&gt; Ordering)
+-&gt; (a -&gt; a -&gt; Bool)
+-&gt; (a -&gt; a -&gt; Bool)
+-&gt; (a -&gt; a -&gt; Bool)
+-&gt; (a -&gt; a -&gt; Bool)
+-&gt; (a -&gt; a -&gt; a)
+-&gt; (a -&gt; a -&gt; a)
+-&gt; Ord a
+forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+Eq (ExceptT e f a)
+forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Ordering
+forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+min :: ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+$cmin :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+max :: ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+$cmax :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+&gt;= :: ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+$c&gt;= :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+&gt; :: ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+$c&gt; :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+&lt;= :: ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+$c&lt;= :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+&lt; :: ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+$c&lt; :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Bool
+compare :: ExceptT e f a -&gt; ExceptT e f a -&gt; Ordering
+$ccompare :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; Ordering
+$cp1Ord :: forall e (f :: * -&gt; *) a.
+(Ord1 f, Ord e, Ord a) =&gt;
+Eq (ExceptT e f a)
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061733"><span id="local-6989586621679061735"><span id="local-6989586621679061737"><span id="local-6989586621679061739"><span class="annot"><span class="annottext">ReadPrec [ExceptT e f a]
+ReadPrec (ExceptT e f a)
+Int -&gt; ReadS (ExceptT e f a)
+ReadS [ExceptT e f a]
+(Int -&gt; ReadS (ExceptT e f a))
+-&gt; ReadS [ExceptT e f a]
+-&gt; ReadPrec (ExceptT e f a)
+-&gt; ReadPrec [ExceptT e f a]
+-&gt; Read (ExceptT e f a)
+forall a.
+(Int -&gt; ReadS a)
+-&gt; ReadS [a] -&gt; ReadPrec a -&gt; ReadPrec [a] -&gt; Read a
+forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+ReadPrec [ExceptT e f a]
+forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+ReadPrec (ExceptT e f a)
+forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+Int -&gt; ReadS (ExceptT e f a)
+forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+ReadS [ExceptT e f a]
+readListPrec :: ReadPrec [ExceptT e f a]
+$creadListPrec :: forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+ReadPrec [ExceptT e f a]
+readPrec :: ReadPrec (ExceptT e f a)
+$creadPrec :: forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+ReadPrec (ExceptT e f a)
+readList :: ReadS [ExceptT e f a]
+$creadList :: forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+ReadS [ExceptT e f a]
+readsPrec :: Int -&gt; ReadS (ExceptT e f a)
+$creadsPrec :: forall e (f :: * -&gt; *) a.
+(Read1 f, Read e, Read a) =&gt;
+Int -&gt; ReadS (ExceptT e f a)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061726"><span id="local-6989586621679061728"><span id="local-6989586621679061730"><span class="annot"><span class="annottext">Int -&gt; ExceptT e f a -&gt; ShowS
+[ExceptT e f a] -&gt; ShowS
+ExceptT e f a -&gt; String
+(Int -&gt; ExceptT e f a -&gt; ShowS)
+-&gt; (ExceptT e f a -&gt; String)
+-&gt; ([ExceptT e f a] -&gt; ShowS)
+-&gt; Show (ExceptT e f a)
+forall a.
+(Int -&gt; a -&gt; ShowS) -&gt; (a -&gt; String) -&gt; ([a] -&gt; ShowS) -&gt; Show a
+forall e (f :: * -&gt; *) a.
+(Show1 f, Show e, Show a) =&gt;
+Int -&gt; ExceptT e f a -&gt; ShowS
+forall e (f :: * -&gt; *) a.
+(Show1 f, Show e, Show a) =&gt;
+[ExceptT e f a] -&gt; ShowS
+forall e (f :: * -&gt; *) a.
+(Show1 f, Show e, Show a) =&gt;
+ExceptT e f a -&gt; String
+showList :: [ExceptT e f a] -&gt; ShowS
+$cshowList :: forall e (f :: * -&gt; *) a.
+(Show1 f, Show e, Show a) =&gt;
+[ExceptT e f a] -&gt; ShowS
+show :: ExceptT e f a -&gt; String
+$cshow :: forall e (f :: * -&gt; *) a.
+(Show1 f, Show e, Show a) =&gt;
+ExceptT e f a -&gt; String
+showsPrec :: Int -&gt; ExceptT e f a -&gt; ShowS
+$cshowsPrec :: forall e (f :: * -&gt; *) a.
+(Show1 f, Show e, Show a) =&gt;
+Int -&gt; ExceptT e f a -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span>
+</span><span id="line-51"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061723"><span class="annot"><span class="annottext">m a -&gt; ExceptT e m a
+(forall (m :: * -&gt; *) a. Monad m =&gt; m a -&gt; ExceptT e m a)
+-&gt; MonadTrans (ExceptT e)
+forall e (m :: * -&gt; *) a. Monad m =&gt; m a -&gt; ExceptT e m a
+forall (m :: * -&gt; *) a. Monad m =&gt; m a -&gt; ExceptT e m a
+forall (t :: (* -&gt; *) -&gt; * -&gt; *).
+(forall (m :: * -&gt; *) a. Monad m =&gt; m a -&gt; t m a) -&gt; MonadTrans t
+lift :: m a -&gt; ExceptT e m a
+$clift :: forall e (m :: * -&gt; *) a. Monad m =&gt; m a -&gt; ExceptT e m a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">MonadTrans</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061719"><span class="annot"><span class="annottext">Monad (ExceptT e f)
+Monad (ExceptT e f)
+-&gt; (forall a. (a -&gt; ExceptT e f a) -&gt; ExceptT e f a)
+-&gt; MonadFix (ExceptT e f)
+(a -&gt; ExceptT e f a) -&gt; ExceptT e f a
+forall a. (a -&gt; ExceptT e f a) -&gt; ExceptT e f a
+forall e (f :: * -&gt; *).
+(Selective f, MonadFix f) =&gt;
+Monad (ExceptT e f)
+forall e (f :: * -&gt; *) a.
+(Selective f, MonadFix f) =&gt;
+(a -&gt; ExceptT e f a) -&gt; ExceptT e f a
+forall (m :: * -&gt; *).
+Monad m -&gt; (forall a. (a -&gt; m a) -&gt; m a) -&gt; MonadFix m
+mfix :: (a -&gt; ExceptT e f a) -&gt; ExceptT e f a
+$cmfix :: forall e (f :: * -&gt; *) a.
+(Selective f, MonadFix f) =&gt;
+(a -&gt; ExceptT e f a) -&gt; ExceptT e f a
+$cp1MonadFix :: forall e (f :: * -&gt; *).
+(Selective f, MonadFix f) =&gt;
+Monad (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadFix</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061715"><span class="annot"><span class="annottext">Monad (ExceptT e f)
+Monad (ExceptT e f)
+-&gt; (forall a. String -&gt; ExceptT e f a) -&gt; MonadFail (ExceptT e f)
+String -&gt; ExceptT e f a
+forall a. String -&gt; ExceptT e f a
+forall e (f :: * -&gt; *).
+(Selective f, MonadFail f) =&gt;
+Monad (ExceptT e f)
+forall e (f :: * -&gt; *) a.
+(Selective f, MonadFail f) =&gt;
+String -&gt; ExceptT e f a
+forall (m :: * -&gt; *).
+Monad m -&gt; (forall a. String -&gt; m a) -&gt; MonadFail m
+fail :: String -&gt; ExceptT e f a
+$cfail :: forall e (f :: * -&gt; *) a.
+(Selective f, MonadFail f) =&gt;
+String -&gt; ExceptT e f a
+$cp1MonadFail :: forall e (f :: * -&gt; *).
+(Selective f, MonadFail f) =&gt;
+Monad (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadFail</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061707"><span id="local-6989586621679061709"><span id="local-6989586621679061711"><span class="annot"><span class="annottext">Monad (ExceptT e f)
+Monad (ExceptT e f)
+-&gt; (forall a b.
+    ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f (a, b))
+-&gt; (forall a b c.
+    (a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c)
+-&gt; (forall a b.
+    ExceptT e f (a, b) -&gt; (ExceptT e f a, ExceptT e f b))
+-&gt; MonadZip (ExceptT e f)
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f (a, b)
+ExceptT e f (a, b) -&gt; (ExceptT e f a, ExceptT e f b)
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f (a, b)
+forall a b. ExceptT e f (a, b) -&gt; (ExceptT e f a, ExceptT e f b)
+forall a b c.
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+forall e (f :: * -&gt; *).
+(Selective f, MonadZip f) =&gt;
+Monad (ExceptT e f)
+forall e (f :: * -&gt; *) a b.
+(Selective f, MonadZip f) =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f (a, b)
+forall e (f :: * -&gt; *) a b.
+(Selective f, MonadZip f) =&gt;
+ExceptT e f (a, b) -&gt; (ExceptT e f a, ExceptT e f b)
+forall e (f :: * -&gt; *) a b c.
+(Selective f, MonadZip f) =&gt;
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+forall (m :: * -&gt; *).
+Monad m
+-&gt; (forall a b. m a -&gt; m b -&gt; m (a, b))
+-&gt; (forall a b c. (a -&gt; b -&gt; c) -&gt; m a -&gt; m b -&gt; m c)
+-&gt; (forall a b. m (a, b) -&gt; (m a, m b))
+-&gt; MonadZip m
+munzip :: ExceptT e f (a, b) -&gt; (ExceptT e f a, ExceptT e f b)
+$cmunzip :: forall e (f :: * -&gt; *) a b.
+(Selective f, MonadZip f) =&gt;
+ExceptT e f (a, b) -&gt; (ExceptT e f a, ExceptT e f b)
+mzipWith :: (a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+$cmzipWith :: forall e (f :: * -&gt; *) a b c.
+(Selective f, MonadZip f) =&gt;
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+mzip :: ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f (a, b)
+$cmzip :: forall e (f :: * -&gt; *) a b.
+(Selective f, MonadZip f) =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f (a, b)
+$cp1MonadZip :: forall e (f :: * -&gt; *).
+(Selective f, MonadZip f) =&gt;
+Monad (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">MonadZip</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061703"><span class="annot"><span class="annottext">Monad (ExceptT e f)
+Monad (ExceptT e f)
+-&gt; (forall a. IO a -&gt; ExceptT e f a) -&gt; MonadIO (ExceptT e f)
+IO a -&gt; ExceptT e f a
+forall a. IO a -&gt; ExceptT e f a
+forall e (f :: * -&gt; *).
+(Selective f, MonadIO f) =&gt;
+Monad (ExceptT e f)
+forall e (f :: * -&gt; *) a.
+(Selective f, MonadIO f) =&gt;
+IO a -&gt; ExceptT e f a
+forall (m :: * -&gt; *).
+Monad m -&gt; (forall a. IO a -&gt; m a) -&gt; MonadIO m
+liftIO :: IO a -&gt; ExceptT e f a
+$cliftIO :: forall e (f :: * -&gt; *) a.
+(Selective f, MonadIO f) =&gt;
+IO a -&gt; ExceptT e f a
+$cp1MonadIO :: forall e (f :: * -&gt; *).
+(Selective f, MonadIO f) =&gt;
+Monad (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadIO</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061696"><span id="local-6989586621679061698"><span class="annot"><span class="annottext">Monad (ExceptT e f)
+Alternative (ExceptT e f)
+ExceptT e f a
+Alternative (ExceptT e f)
+-&gt; Monad (ExceptT e f)
+-&gt; (forall a. ExceptT e f a)
+-&gt; (forall a. ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a)
+-&gt; MonadPlus (ExceptT e f)
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+forall a. ExceptT e f a
+forall a. ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+forall e (f :: * -&gt; *).
+(Selective f, Monoid e, Monad f) =&gt;
+Monad (ExceptT e f)
+forall e (f :: * -&gt; *).
+(Selective f, Monoid e, Monad f) =&gt;
+Alternative (ExceptT e f)
+forall e (f :: * -&gt; *) a.
+(Selective f, Monoid e, Monad f) =&gt;
+ExceptT e f a
+forall e (f :: * -&gt; *) a.
+(Selective f, Monoid e, Monad f) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+forall (m :: * -&gt; *).
+Alternative m
+-&gt; Monad m
+-&gt; (forall a. m a)
+-&gt; (forall a. m a -&gt; m a -&gt; m a)
+-&gt; MonadPlus m
+mplus :: ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+$cmplus :: forall e (f :: * -&gt; *) a.
+(Selective f, Monoid e, Monad f) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+mzero :: ExceptT e f a
+$cmzero :: forall e (f :: * -&gt; *) a.
+(Selective f, Monoid e, Monad f) =&gt;
+ExceptT e f a
+$cp2MonadPlus :: forall e (f :: * -&gt; *).
+(Selective f, Monoid e, Monad f) =&gt;
+Monad (ExceptT e f)
+$cp1MonadPlus :: forall e (f :: * -&gt; *).
+(Selective f, Monoid e, Monad f) =&gt;
+Alternative (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">MonadPlus</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061693"><span class="annot"><span class="annottext">(a -&gt; b -&gt; Bool) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Bool
+(forall a b.
+ (a -&gt; b -&gt; Bool) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Bool)
+-&gt; Eq1 (ExceptT e f)
+forall a b.
+(a -&gt; b -&gt; Bool) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Bool
+forall e (f :: * -&gt; *) a b.
+(Eq e, Eq1 f) =&gt;
+(a -&gt; b -&gt; Bool) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Bool
+forall (f :: * -&gt; *).
+(forall a b. (a -&gt; b -&gt; Bool) -&gt; f a -&gt; f b -&gt; Bool) -&gt; Eq1 f
+liftEq :: (a -&gt; b -&gt; Bool) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Bool
+$cliftEq :: forall e (f :: * -&gt; *) a b.
+(Eq e, Eq1 f) =&gt;
+(a -&gt; b -&gt; Bool) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Eq1</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061689"><span class="annot"><span class="annottext">Eq1 (ExceptT e f)
+Eq1 (ExceptT e f)
+-&gt; (forall a b.
+    (a -&gt; b -&gt; Ordering) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Ordering)
+-&gt; Ord1 (ExceptT e f)
+(a -&gt; b -&gt; Ordering) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Ordering
+forall a b.
+(a -&gt; b -&gt; Ordering) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Ordering
+forall e (f :: * -&gt; *). (Ord e, Ord1 f) =&gt; Eq1 (ExceptT e f)
+forall e (f :: * -&gt; *) a b.
+(Ord e, Ord1 f) =&gt;
+(a -&gt; b -&gt; Ordering) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Ordering
+forall (f :: * -&gt; *).
+Eq1 f
+-&gt; (forall a b. (a -&gt; b -&gt; Ordering) -&gt; f a -&gt; f b -&gt; Ordering)
+-&gt; Ord1 f
+liftCompare :: (a -&gt; b -&gt; Ordering) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Ordering
+$cliftCompare :: forall e (f :: * -&gt; *) a b.
+(Ord e, Ord1 f) =&gt;
+(a -&gt; b -&gt; Ordering) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; Ordering
+$cp1Ord1 :: forall e (f :: * -&gt; *). (Ord e, Ord1 f) =&gt; Eq1 (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">Ord1</span></a></span></span><span>
+</span><span id="line-52"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061680"><span id="local-6989586621679061682"><span id="local-6989586621679061684"><span id="local-6989586621679061686"><span class="annot"><span class="annottext">ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (ExceptT e f a)
+ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [ExceptT e f a]
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (ExceptT e f a)
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [ExceptT e f a]
+(forall a.
+ (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (ExceptT e f a))
+-&gt; (forall a.
+    (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [ExceptT e f a])
+-&gt; (forall a.
+    ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (ExceptT e f a))
+-&gt; (forall a.
+    ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [ExceptT e f a])
+-&gt; Read1 (ExceptT e f)
+forall a. ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [ExceptT e f a]
+forall a. ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (ExceptT e f a)
+forall a.
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (ExceptT e f a)
+forall a. (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [ExceptT e f a]
+forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [ExceptT e f a]
+forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (ExceptT e f a)
+forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (ExceptT e f a)
+forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [ExceptT e f a]
+forall (f :: * -&gt; *).
+(forall a. (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (f a))
+-&gt; (forall a. (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [f a])
+-&gt; (forall a. ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (f a))
+-&gt; (forall a. ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [f a])
+-&gt; Read1 f
+liftReadListPrec :: ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [ExceptT e f a]
+$cliftReadListPrec :: forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec [ExceptT e f a]
+liftReadPrec :: ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (ExceptT e f a)
+$cliftReadPrec :: forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+ReadPrec a -&gt; ReadPrec [a] -&gt; ReadPrec (ExceptT e f a)
+liftReadList :: (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [ExceptT e f a]
+$cliftReadList :: forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; ReadS [ExceptT e f a]
+liftReadsPrec :: (Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (ExceptT e f a)
+$cliftReadsPrec :: forall e (f :: * -&gt; *) a.
+(Read e, Read1 f) =&gt;
+(Int -&gt; ReadS a) -&gt; ReadS [a] -&gt; Int -&gt; ReadS (ExceptT e f a)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read1</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061675"><span id="local-6989586621679061677"><span class="annot"><span class="annottext">(Int -&gt; a -&gt; ShowS)
+-&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; ExceptT e f a -&gt; ShowS
+(Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [ExceptT e f a] -&gt; ShowS
+(forall a.
+ (Int -&gt; a -&gt; ShowS)
+ -&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; ExceptT e f a -&gt; ShowS)
+-&gt; (forall a.
+    (Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [ExceptT e f a] -&gt; ShowS)
+-&gt; Show1 (ExceptT e f)
+forall a.
+(Int -&gt; a -&gt; ShowS)
+-&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; ExceptT e f a -&gt; ShowS
+forall a.
+(Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [ExceptT e f a] -&gt; ShowS
+forall e (f :: * -&gt; *) a.
+(Show e, Show1 f) =&gt;
+(Int -&gt; a -&gt; ShowS)
+-&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; ExceptT e f a -&gt; ShowS
+forall e (f :: * -&gt; *) a.
+(Show e, Show1 f) =&gt;
+(Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [ExceptT e f a] -&gt; ShowS
+forall (f :: * -&gt; *).
+(forall a.
+ (Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; f a -&gt; ShowS)
+-&gt; (forall a.
+    (Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [f a] -&gt; ShowS)
+-&gt; Show1 f
+liftShowList :: (Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [ExceptT e f a] -&gt; ShowS
+$cliftShowList :: forall e (f :: * -&gt; *) a.
+(Show e, Show1 f) =&gt;
+(Int -&gt; a -&gt; ShowS) -&gt; ([a] -&gt; ShowS) -&gt; [ExceptT e f a] -&gt; ShowS
+liftShowsPrec :: (Int -&gt; a -&gt; ShowS)
+-&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; ExceptT e f a -&gt; ShowS
+$cliftShowsPrec :: forall e (f :: * -&gt; *) a.
+(Show e, Show1 f) =&gt;
+(Int -&gt; a -&gt; ShowS)
+-&gt; ([a] -&gt; ShowS) -&gt; Int -&gt; ExceptT e f a -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Show1</span></a></span></span></span><span> </span><span class="hs-special">)</span><span>
+</span><span id="line-53"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679061663"><span id="local-6989586621679061665"><span id="local-6989586621679061667"><span id="local-6989586621679061669"><span id="local-6989586621679061671"><span class="annot"><span class="annottext">Functor (ExceptT e f)
+a -&gt; ExceptT e f a
+Functor (ExceptT e f)
+-&gt; (forall a. a -&gt; ExceptT e f a)
+-&gt; (forall a b.
+    ExceptT e f (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b)
+-&gt; (forall a b c.
+    (a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c)
+-&gt; (forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b)
+-&gt; (forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f a)
+-&gt; Applicative (ExceptT e f)
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f a
+ExceptT e f (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+forall a. a -&gt; ExceptT e f a
+forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall a b. ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+forall a b. ExceptT e f (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+forall a b c.
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+forall (f :: * -&gt; *).
+Functor f
+-&gt; (forall a. a -&gt; f a)
+-&gt; (forall a b. f (a -&gt; b) -&gt; f a -&gt; f b)
+-&gt; (forall a b c. (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c)
+-&gt; (forall a b. f a -&gt; f b -&gt; f b)
+-&gt; (forall a b. f a -&gt; f b -&gt; f a)
+-&gt; Applicative f
+forall (f :: * -&gt; *) e. Selective f =&gt; Functor (ExceptT e f)
+forall (f :: * -&gt; *) e a. Selective f =&gt; a -&gt; ExceptT e f a
+forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f a
+forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+forall (f :: * -&gt; *) e a b c.
+Selective f =&gt;
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+&lt;* :: ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f a
+$c&lt;* :: forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f a
+*&gt; :: ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+$c*&gt; :: forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f b
+liftA2 :: (a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+$cliftA2 :: forall (f :: * -&gt; *) e a b c.
+Selective f =&gt;
+(a -&gt; b -&gt; c) -&gt; ExceptT e f a -&gt; ExceptT e f b -&gt; ExceptT e f c
+&lt;*&gt; :: ExceptT e f (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+$c&lt;*&gt; :: forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f (a -&gt; b) -&gt; ExceptT e f a -&gt; ExceptT e f b
+pure :: a -&gt; ExceptT e f a
+$cpure :: forall (f :: * -&gt; *) e a. Selective f =&gt; a -&gt; ExceptT e f a
+$cp1Applicative :: forall (f :: * -&gt; *) e. Selective f =&gt; Functor (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Applicative</span></a></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061659"><span class="annot"><span class="annottext">Applicative (ExceptT e f)
+Applicative (ExceptT e f)
+-&gt; (forall a b.
+    ExceptT e f (Either a b) -&gt; ExceptT e f (a -&gt; b) -&gt; ExceptT e f b)
+-&gt; Selective (ExceptT e f)
+ExceptT e f (Either a b) -&gt; ExceptT e f (a -&gt; b) -&gt; ExceptT e f b
+forall a b.
+ExceptT e f (Either a b) -&gt; ExceptT e f (a -&gt; b) -&gt; ExceptT e f b
+forall (f :: * -&gt; *).
+Applicative f
+-&gt; (forall a b. f (Either a b) -&gt; f (a -&gt; b) -&gt; f b) -&gt; Selective f
+forall (f :: * -&gt; *) e. Selective f =&gt; Applicative (ExceptT e f)
+forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f (Either a b) -&gt; ExceptT e f (a -&gt; b) -&gt; ExceptT e f b
+select :: ExceptT e f (Either a b) -&gt; ExceptT e f (a -&gt; b) -&gt; ExceptT e f b
+$cselect :: forall (f :: * -&gt; *) e a b.
+Selective f =&gt;
+ExceptT e f (Either a b) -&gt; ExceptT e f (a -&gt; b) -&gt; ExceptT e f b
+$cp1Selective :: forall (f :: * -&gt; *) e. Selective f =&gt; Applicative (ExceptT e f)
+</span><a href="Control.Selective.html#C%3ASelective"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">Selective</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679061649"><span id="local-6989586621679061651"><span id="local-6989586621679061653"><span id="local-6989586621679061655"><span class="annot"><span class="annottext">Applicative (ExceptT e f)
+ExceptT e f a
+Applicative (ExceptT e f)
+-&gt; (forall a. ExceptT e f a)
+-&gt; (forall a. ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a)
+-&gt; (forall a. ExceptT e f a -&gt; ExceptT e f [a])
+-&gt; (forall a. ExceptT e f a -&gt; ExceptT e f [a])
+-&gt; Alternative (ExceptT e f)
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+ExceptT e f a -&gt; ExceptT e f [a]
+ExceptT e f a -&gt; ExceptT e f [a]
+forall a. ExceptT e f a
+forall a. ExceptT e f a -&gt; ExceptT e f [a]
+forall a. ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+forall (f :: * -&gt; *).
+Applicative f
+-&gt; (forall a. f a)
+-&gt; (forall a. f a -&gt; f a -&gt; f a)
+-&gt; (forall a. f a -&gt; f [a])
+-&gt; (forall a. f a -&gt; f [a])
+-&gt; Alternative f
+forall (f :: * -&gt; *) e.
+(Selective f, Monoid e) =&gt;
+Applicative (ExceptT e f)
+forall (f :: * -&gt; *) e a. (Selective f, Monoid e) =&gt; ExceptT e f a
+forall (f :: * -&gt; *) e a.
+(Selective f, Monoid e) =&gt;
+ExceptT e f a -&gt; ExceptT e f [a]
+forall (f :: * -&gt; *) e a.
+(Selective f, Monoid e) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+many :: ExceptT e f a -&gt; ExceptT e f [a]
+$cmany :: forall (f :: * -&gt; *) e a.
+(Selective f, Monoid e) =&gt;
+ExceptT e f a -&gt; ExceptT e f [a]
+some :: ExceptT e f a -&gt; ExceptT e f [a]
+$csome :: forall (f :: * -&gt; *) e a.
+(Selective f, Monoid e) =&gt;
+ExceptT e f a -&gt; ExceptT e f [a]
+&lt;|&gt; :: ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+$c&lt;|&gt; :: forall (f :: * -&gt; *) e a.
+(Selective f, Monoid e) =&gt;
+ExceptT e f a -&gt; ExceptT e f a -&gt; ExceptT e f a
+empty :: ExceptT e f a
+$cempty :: forall (f :: * -&gt; *) e a. (Selective f, Monoid e) =&gt; ExceptT e f a
+$cp1Alternative :: forall (f :: * -&gt; *) e.
+(Selective f, Monoid e) =&gt;
+Applicative (ExceptT e f)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Alternative</span></a></span></span></span></span></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">via</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Selective.html#ComposeEither"><span class="hs-identifier hs-type">ComposeEither</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061929"><span class="hs-identifier hs-type">f</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061930"><span class="hs-identifier hs-type">e</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-54"></span><span>
+</span><span id="line-55"></span><span class="hs-comment">-- | Inject an 'T.ExceptT' value into the newtype wrapper.</span><span>
+</span><span id="line-56"></span><span id="local-6989586621679061644"><span id="local-6989586621679061645"><span id="local-6989586621679061646"><span class="annot"><a href="Control.Selective.Trans.Except.html#wrap"><span class="hs-identifier hs-type">wrap</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">T.ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061646"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061645"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061644"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061646"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061645"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061644"><span class="hs-identifier hs-type">a</span></a></span></span></span></span><span>
+</span><span id="line-57"></span><span id="wrap"><span class="annot"><span class="annottext">wrap :: ExceptT e m a -&gt; ExceptT e m a
+</span><a href="Control.Selective.Trans.Except.html#wrap"><span class="hs-identifier hs-var hs-var">wrap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span>
+</span><span id="line-58"></span><span>
+</span><span id="line-59"></span><span class="hs-keyword">type</span><span> </span><span id="Except"><span class="annot"><a href="Control.Selective.Trans.Except.html#Except"><span class="hs-identifier hs-var">Except</span></a></span></span><span> </span><span id="local-6989586621679061642"><span class="annot"><a href="#local-6989586621679061642"><span class="hs-identifier hs-type">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061642"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Identity</span></a></span><span>
+</span><span id="line-60"></span><span>
+</span><span id="line-61"></span><span id="local-6989586621679061639"><span id="local-6989586621679061640"><span id="local-6989586621679061641"><span class="annot"><a href="Control.Selective.Trans.Except.html#except"><span class="hs-identifier hs-type">except</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061641"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061640"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061639"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061640"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061641"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061639"><span class="hs-identifier hs-type">a</span></a></span></span></span></span><span>
+</span><span id="line-62"></span><span id="except"><span class="annot"><span class="annottext">except :: Either e a -&gt; ExceptT e m a
+</span><a href="Control.Selective.Trans.Except.html#except"><span class="hs-identifier hs-var hs-var">except</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e m a)
+-&gt; (Either e a -&gt; ExceptT e m a) -&gt; Either e a -&gt; ExceptT e m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Either e a -&gt; ExceptT e m a
+forall (m :: * -&gt; *) e a. Monad m =&gt; Either e a -&gt; ExceptT e m a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.except</span></a></span><span>
+</span><span id="line-63"></span><span>
+</span><span id="line-64"></span><span id="local-6989586621679061634"><span id="local-6989586621679061635"><span class="annot"><a href="Control.Selective.Trans.Except.html#runExcept"><span class="hs-identifier hs-type">runExcept</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#Except"><span class="hs-identifier hs-type">Except</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061635"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061634"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061635"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061634"><span class="hs-identifier hs-type">a</span></a></span></span></span><span>
+</span><span id="line-65"></span><span id="runExcept"><span class="annot"><span class="annottext">runExcept :: Except e a -&gt; Either e a
+</span><a href="Control.Selective.Trans.Except.html#runExcept"><span class="hs-identifier hs-var hs-var">runExcept</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Except e a -&gt; Either e a
+forall e a. Except e a -&gt; Either e a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.runExcept</span></a></span><span> </span><span class="annot"><span class="annottext">(Except e a -&gt; Either e a)
+-&gt; (Except e a -&gt; Except e a) -&gt; Except e a -&gt; Either e a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Except e a -&gt; Except e a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span>
+</span><span id="line-66"></span><span>
+</span><span id="line-67"></span><span id="local-6989586621679061628"><span id="local-6989586621679061629"><span id="local-6989586621679061630"><span id="local-6989586621679061631"><span class="annot"><a href="Control.Selective.Trans.Except.html#mapExcept"><span class="hs-identifier hs-type">mapExcept</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061631"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061630"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061629"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061628"><span class="hs-identifier hs-type">b</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#Except"><span class="hs-identifier hs-type">Except</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061631"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061630"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#Except"><span class="hs-identifier hs-type">Except</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061629"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061628"><span class="hs-identifier hs-type">b</span></a></span></span></span></span></span><span>
+</span><span id="line-68"></span><span id="mapExcept"><span class="annot"><span class="annottext">mapExcept :: (Either e a -&gt; Either e' b) -&gt; Except e a -&gt; Except e' b
+</span><a href="Control.Selective.Trans.Except.html#mapExcept"><span class="hs-identifier hs-var hs-var">mapExcept</span></a></span></span><span> </span><span id="local-6989586621679061626"><span class="annot"><span class="annottext">Either e a -&gt; Either e' b
+</span><a href="#local-6989586621679061626"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e' Identity b -&gt; Except e' b
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e' Identity b -&gt; Except e' b)
+-&gt; (Except e a -&gt; ExceptT e' Identity b)
+-&gt; Except e a
+-&gt; Except e' b
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(Either e a -&gt; Either e' b) -&gt; Except e a -&gt; ExceptT e' Identity b
+forall e a e' b.
+(Either e a -&gt; Either e' b) -&gt; Except e a -&gt; Except e' b
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.mapExcept</span></a></span><span> </span><span class="annot"><span class="annottext">Either e a -&gt; Either e' b
+</span><a href="#local-6989586621679061626"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(Except e a -&gt; ExceptT e' Identity b)
+-&gt; (Except e a -&gt; Except e a)
+-&gt; Except e a
+-&gt; ExceptT e' Identity b
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Except e a -&gt; Except e a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span>
+</span><span id="line-69"></span><span>
+</span><span id="line-70"></span><span id="local-6989586621679061622"><span id="local-6989586621679061623"><span id="local-6989586621679061624"><span class="annot"><a href="Control.Selective.Trans.Except.html#withExcept"><span class="hs-identifier hs-type">withExcept</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679061624"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679061623"><span class="hs-identifier hs-type">e'</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#Except"><span class="hs-identifier hs-type">Except</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061624"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061622"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#Except"><span class="hs-identifier hs-type">Except</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061623"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061622"><span class="hs-identifier hs-type">a</span></a></span></span></span></span><span>
+</span><span id="line-71"></span><span id="withExcept"><span class="annot"><span class="annottext">withExcept :: (e -&gt; e') -&gt; Except e a -&gt; Except e' a
+</span><a href="Control.Selective.Trans.Except.html#withExcept"><span class="hs-identifier hs-var hs-var">withExcept</span></a></span></span><span> </span><span id="local-6989586621679061620"><span class="annot"><span class="annottext">e -&gt; e'
+</span><a href="#local-6989586621679061620"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e' Identity a -&gt; Except e' a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e' Identity a -&gt; Except e' a)
+-&gt; (Except e a -&gt; ExceptT e' Identity a)
+-&gt; Except e a
+-&gt; Except e' a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(e -&gt; e') -&gt; Except e a -&gt; ExceptT e' Identity a
+forall e e' a. (e -&gt; e') -&gt; Except e a -&gt; Except e' a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.withExcept</span></a></span><span> </span><span class="annot"><span class="annottext">e -&gt; e'
+</span><a href="#local-6989586621679061620"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(Except e a -&gt; ExceptT e' Identity a)
+-&gt; (Except e a -&gt; Except e a)
+-&gt; Except e a
+-&gt; ExceptT e' Identity a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Except e a -&gt; Except e a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span>
+</span><span id="line-72"></span><span>
+</span><span id="line-73"></span><span id="local-6989586621679061616"><span id="local-6989586621679061617"><span id="local-6989586621679061618"><span class="annot"><a href="Control.Selective.Trans.Except.html#runExceptT"><span class="hs-identifier hs-type">runExceptT</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061618"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061617"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061616"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679061617"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061618"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061616"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span></span></span><span>
+</span><span id="line-74"></span><span id="runExceptT"><span class="annot"><span class="annottext">runExceptT :: ExceptT e m a -&gt; m (Either e a)
+</span><a href="Control.Selective.Trans.Except.html#runExceptT"><span class="hs-identifier hs-var hs-var">runExceptT</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; m (Either e a)
+forall e (m :: * -&gt; *) a. ExceptT e m a -&gt; m (Either e a)
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.runExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; m (Either e a))
+-&gt; (ExceptT e m a -&gt; ExceptT e m a)
+-&gt; ExceptT e m a
+-&gt; m (Either e a)
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span>
+</span><span id="line-75"></span><span>
+</span><span id="line-76"></span><span id="local-6989586621679061608"><span id="local-6989586621679061609"><span id="local-6989586621679061610"><span id="local-6989586621679061611"><span id="local-6989586621679061612"><span id="local-6989586621679061613"><span class="annot"><a href="Control.Selective.Trans.Except.html#mapExceptT"><span class="hs-identifier hs-type">mapExceptT</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679061613"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061612"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061611"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679061610"><span class="hs-identifier hs-type">n</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061609"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061608"><span class="hs-identifier hs-type">b</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061612"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061613"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061611"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061609"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061610"><span class="hs-identifier hs-type">n</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061608"><span class="hs-identifier hs-type">b</span></a></span></span></span></span></span></span></span><span>
+</span><span id="line-77"></span><span id="mapExceptT"><span class="annot"><span class="annottext">mapExceptT :: (m (Either e a) -&gt; n (Either e' b))
+-&gt; ExceptT e m a -&gt; ExceptT e' n b
+</span><a href="Control.Selective.Trans.Except.html#mapExceptT"><span class="hs-identifier hs-var hs-var">mapExceptT</span></a></span></span><span> </span><span id="local-6989586621679061606"><span class="annot"><span class="annottext">m (Either e a) -&gt; n (Either e' b)
+</span><a href="#local-6989586621679061606"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e' n b -&gt; ExceptT e' n b
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e' n b -&gt; ExceptT e' n b)
+-&gt; (ExceptT e m a -&gt; ExceptT e' n b)
+-&gt; ExceptT e m a
+-&gt; ExceptT e' n b
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(m (Either e a) -&gt; n (Either e' b))
+-&gt; ExceptT e m a -&gt; ExceptT e' n b
+forall (m :: * -&gt; *) e a (n :: * -&gt; *) e' b.
+(m (Either e a) -&gt; n (Either e' b))
+-&gt; ExceptT e m a -&gt; ExceptT e' n b
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.mapExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">m (Either e a) -&gt; n (Either e' b)
+</span><a href="#local-6989586621679061606"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e' n b)
+-&gt; (ExceptT e m a -&gt; ExceptT e m a)
+-&gt; ExceptT e m a
+-&gt; ExceptT e' n b
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span>
+</span><span id="line-78"></span><span>
+</span><span id="line-79"></span><span id="local-6989586621679061601"><span id="local-6989586621679061602"><span id="local-6989586621679061603"><span id="local-6989586621679061604"><span class="annot"><a href="Control.Selective.Trans.Except.html#withExceptT"><span class="hs-identifier hs-type">withExceptT</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Functor</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061604"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679061603"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679061602"><span class="hs-identifier hs-type">e'</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061603"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061604"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061601"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061602"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061604"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061601"><span class="hs-identifier hs-type">a</span></a></span></span></span></span></span><span>
+</span><span id="line-80"></span><span id="withExceptT"><span class="annot"><span class="annottext">withExceptT :: (e -&gt; e') -&gt; ExceptT e m a -&gt; ExceptT e' m a
+</span><a href="Control.Selective.Trans.Except.html#withExceptT"><span class="hs-identifier hs-var hs-var">withExceptT</span></a></span></span><span> </span><span id="local-6989586621679061599"><span class="annot"><span class="annottext">e -&gt; e'
+</span><a href="#local-6989586621679061599"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e' m a -&gt; ExceptT e' m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e' m a -&gt; ExceptT e' m a)
+-&gt; (ExceptT e m a -&gt; ExceptT e' m a)
+-&gt; ExceptT e m a
+-&gt; ExceptT e' m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(e -&gt; e') -&gt; ExceptT e m a -&gt; ExceptT e' m a
+forall (m :: * -&gt; *) e e' a.
+Functor m =&gt;
+(e -&gt; e') -&gt; ExceptT e m a -&gt; ExceptT e' m a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.withExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">e -&gt; e'
+</span><a href="#local-6989586621679061599"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e' m a)
+-&gt; (ExceptT e m a -&gt; ExceptT e m a)
+-&gt; ExceptT e m a
+-&gt; ExceptT e' m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span>
+</span><span id="line-81"></span><span>
+</span><span id="line-82"></span><span id="local-6989586621679061595"><span id="local-6989586621679061596"><span id="local-6989586621679061597"><span class="annot"><a href="Control.Selective.Trans.Except.html#throwE"><span class="hs-identifier hs-type">throwE</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061597"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679061596"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061596"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061597"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061595"><span class="hs-identifier hs-type">a</span></a></span></span></span></span><span>
+</span><span id="line-83"></span><span id="throwE"><span class="annot"><span class="annottext">throwE :: e -&gt; ExceptT e m a
+</span><a href="Control.Selective.Trans.Except.html#throwE"><span class="hs-identifier hs-var hs-var">throwE</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e m a)
+-&gt; (e -&gt; ExceptT e m a) -&gt; e -&gt; ExceptT e m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">e -&gt; ExceptT e m a
+forall (m :: * -&gt; *) e a. Monad m =&gt; e -&gt; ExceptT e m a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.throwE</span></a></span><span>
+</span><span id="line-84"></span><span>
+</span><span id="line-85"></span><span id="local-6989586621679061589"><span id="local-6989586621679061590"><span id="local-6989586621679061591"><span id="local-6989586621679061592"><span class="annot"><a href="Control.Selective.Trans.Except.html#catchE"><span class="hs-identifier hs-type">catchE</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061592"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061591"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061592"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061590"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679061591"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061589"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061592"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061590"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061589"><span class="hs-identifier hs-type">e'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061592"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061590"><span class="hs-identifier hs-type">a</span></a></span></span></span></span></span><span>
+</span><span id="line-86"></span><span id="catchE"><span class="annot"><span class="annottext">catchE :: ExceptT e m a -&gt; (e -&gt; ExceptT e' m a) -&gt; ExceptT e' m a
+</span><a href="Control.Selective.Trans.Except.html#catchE"><span class="hs-identifier hs-var hs-var">catchE</span></a></span></span><span> </span><span id="local-6989586621679061587"><span class="annot"><span class="annottext">ExceptT e m a
+</span><a href="#local-6989586621679061587"><span class="hs-identifier hs-var">action</span></a></span></span><span> </span><span id="local-6989586621679061586"><span class="annot"><span class="annottext">e -&gt; ExceptT e' m a
+</span><a href="#local-6989586621679061586"><span class="hs-identifier hs-var">continuation</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e' m a -&gt; ExceptT e' m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e' m a -&gt; ExceptT e' m a)
+-&gt; ExceptT e' m a -&gt; ExceptT e' m a
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; (e -&gt; ExceptT e' m a) -&gt; ExceptT e' m a
+forall (m :: * -&gt; *) e a e'.
+Monad m =&gt;
+ExceptT e m a -&gt; (e -&gt; ExceptT e' m a) -&gt; ExceptT e' m a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.catchE</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m a
+</span><a href="#local-6989586621679061587"><span class="hs-identifier hs-var">action</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExceptT e' m a -&gt; ExceptT e' m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e' m a -&gt; ExceptT e' m a)
+-&gt; (e -&gt; ExceptT e' m a) -&gt; e -&gt; ExceptT e' m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">e -&gt; ExceptT e' m a
+</span><a href="#local-6989586621679061586"><span class="hs-identifier hs-var">continuation</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-87"></span><span>
+</span><span id="line-88"></span><span id="local-6989586621679061581"><span id="local-6989586621679061582"><span id="local-6989586621679061583"><span id="local-6989586621679061584"><span class="annot"><a href="Control.Selective.Trans.Except.html#liftCallCC"><span class="hs-identifier hs-type">liftCallCC</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">CallCC</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061584"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061583"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061582"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061583"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061581"><span class="hs-identifier hs-type">b</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">CallCC</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061583"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061584"><span class="hs-identifier hs-type">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679061582"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061581"><span class="hs-identifier hs-type">b</span></a></span></span></span></span></span><span>
+</span><span id="line-89"></span><span id="liftCallCC"><span class="annot"><span class="annottext">liftCallCC :: CallCC m (Either e a) (Either e b) -&gt; CallCC (ExceptT e m) a b
+</span><a href="Control.Selective.Trans.Except.html#liftCallCC"><span class="hs-identifier hs-var hs-var">liftCallCC</span></a></span></span><span> </span><span id="local-6989586621679061579"><span class="annot"><span class="annottext">CallCC m (Either e a) (Either e b)
+</span><a href="#local-6989586621679061579"><span class="hs-identifier hs-var">callCC</span></a></span></span><span> </span><span id="local-6989586621679061578"><span class="annot"><span class="annottext">(a -&gt; ExceptT e m b) -&gt; ExceptT e m a
+</span><a href="#local-6989586621679061578"><span class="hs-identifier hs-var">caller</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e m a) -&gt; ExceptT e m a -&gt; ExceptT e m a
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">CallCC m (Either e a) (Either e b) -&gt; CallCC (ExceptT e m) a b
+forall (m :: * -&gt; *) e a b.
+CallCC m (Either e a) (Either e b) -&gt; CallCC (ExceptT e m) a b
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.liftCallCC</span></a></span><span> </span><span class="annot"><span class="annottext">CallCC m (Either e a) (Either e b)
+</span><a href="#local-6989586621679061579"><span class="hs-identifier hs-var">callCC</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#unwrap"><span class="hs-identifier hs-var hs-var">unwrap</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e m a)
+-&gt; ((a -&gt; ExceptT e m b) -&gt; ExceptT e m a)
+-&gt; (a -&gt; ExceptT e m b)
+-&gt; ExceptT e m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(a -&gt; ExceptT e m b) -&gt; ExceptT e m a
+</span><a href="#local-6989586621679061578"><span class="hs-identifier hs-var">caller</span></a></span><span> </span><span class="annot"><span class="annottext">((a -&gt; ExceptT e m b) -&gt; ExceptT e m a)
+-&gt; ((a -&gt; ExceptT e m b) -&gt; a -&gt; ExceptT e m b)
+-&gt; (a -&gt; ExceptT e m b)
+-&gt; ExceptT e m a
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExceptT e m b -&gt; ExceptT e m b
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m b -&gt; ExceptT e m b)
+-&gt; (a -&gt; ExceptT e m b) -&gt; a -&gt; ExceptT e m b
+forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-90"></span><span>
+</span><span id="line-91"></span><span id="local-6989586621679061573"><span id="local-6989586621679061574"><span id="local-6989586621679061575"><span id="local-6989586621679061576"><span class="annot"><a href="Control.Selective.Trans.Except.html#liftListen"><span class="hs-identifier hs-type">liftListen</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061576"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">Listen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061575"><span class="hs-identifier hs-type">w</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061576"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061574"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061573"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">Listen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061575"><span class="hs-identifier hs-type">w</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061574"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061576"><span class="hs-identifier hs-type">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679061573"><span class="hs-identifier hs-type">a</span></a></span></span></span></span></span><span>
+</span><span id="line-92"></span><span id="liftListen"><span class="annot"><span class="annottext">liftListen :: Listen w m (Either e a) -&gt; Listen w (ExceptT e m) a
+</span><a href="Control.Selective.Trans.Except.html#liftListen"><span class="hs-identifier hs-var hs-var">liftListen</span></a></span></span><span> </span><span id="local-6989586621679061571"><span class="annot"><span class="annottext">Listen w m (Either e a)
+</span><a href="#local-6989586621679061571"><span class="hs-identifier hs-var">listen</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span id="local-6989586621679061570"><span class="annot"><span class="annottext">ExceptT e m a
+</span><a href="#local-6989586621679061570"><span class="hs-identifier hs-var">action</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m (a, w) -&gt; ExceptT e m (a, w)
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m (a, w) -&gt; ExceptT e m (a, w))
+-&gt; ExceptT e m (a, w) -&gt; ExceptT e m (a, w)
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Listen w m (Either e a) -&gt; Listen w (ExceptT e m) a
+forall (m :: * -&gt; *) w e a.
+Monad m =&gt;
+Listen w m (Either e a) -&gt; Listen w (ExceptT e m) a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.liftListen</span></a></span><span> </span><span class="annot"><span class="annottext">Listen w m (Either e a)
+</span><a href="#local-6989586621679061571"><span class="hs-identifier hs-var">listen</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m a
+</span><a href="#local-6989586621679061570"><span class="hs-identifier hs-var">action</span></a></span><span>
+</span><span id="line-93"></span><span>
+</span><span id="line-94"></span><span id="local-6989586621679061565"><span id="local-6989586621679061566"><span id="local-6989586621679061567"><span id="local-6989586621679061568"><span class="annot"><a href="Control.Selective.Trans.Except.html#liftPass"><span class="hs-identifier hs-type">liftPass</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monad</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061568"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">Pass</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061567"><span class="hs-identifier hs-type">w</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061568"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061566"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061565"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">Pass</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061567"><span class="hs-identifier hs-type">w</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061566"><span class="hs-identifier hs-type">e</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679061568"><span class="hs-identifier hs-type">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679061565"><span class="hs-identifier hs-type">a</span></a></span></span></span></span></span><span>
+</span><span id="line-95"></span><span id="liftPass"><span class="annot"><span class="annottext">liftPass :: Pass w m (Either e a) -&gt; Pass w (ExceptT e m) a
+</span><a href="Control.Selective.Trans.Except.html#liftPass"><span class="hs-identifier hs-var hs-var">liftPass</span></a></span></span><span> </span><span id="local-6989586621679061563"><span class="annot"><span class="annottext">Pass w m (Either e a)
+</span><a href="#local-6989586621679061563"><span class="hs-identifier hs-var">pass</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span id="local-6989586621679061562"><span class="annot"><span class="annottext">ExceptT e m (a, w -&gt; w)
+</span><a href="#local-6989586621679061562"><span class="hs-identifier hs-var">action</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT e m a -&gt; ExceptT e m a
+forall e (f :: * -&gt; *) a. ExceptT e f a -&gt; ExceptT e f a
+</span><a href="Control.Selective.Trans.Except.html#ExceptT"><span class="hs-identifier hs-var">ExceptT</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT e m a -&gt; ExceptT e m a) -&gt; ExceptT e m a -&gt; ExceptT e m a
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Pass w m (Either e a) -&gt; Pass w (ExceptT e m) a
+forall (m :: * -&gt; *) w e a.
+Monad m =&gt;
+Pass w m (Either e a) -&gt; Pass w (ExceptT e m) a
+</span><a href="../../../../transformers/html/src"><span class="hs-identifier hs-var">T.liftPass</span></a></span><span> </span><span class="annot"><span class="annottext">Pass w m (Either e a)
+</span><a href="#local-6989586621679061563"><span class="hs-identifier hs-var">pass</span></a></span><span> </span><span class="annot"><span class="annottext">ExceptT e m (a, w -&gt; w)
+</span><a href="#local-6989586621679061562"><span class="hs-identifier hs-var">action</span></a></span><span>
+</span><span id="line-96"></span></pre></body></html>

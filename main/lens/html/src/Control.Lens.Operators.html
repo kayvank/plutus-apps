@@ -1,38 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-comment">-----------------------------------------------------------------------------</span><span>
-</span><span id="line-2"></span><span class="hs-comment">-- |</span><span>
-</span><span id="line-3"></span><span class="hs-comment">-- Module      :  Control.Lens.Operators</span><span>
-</span><span id="line-4"></span><span class="hs-comment">-- Copyright   :  (C) 2012-16 Edward Kmett</span><span>
-</span><span id="line-5"></span><span class="hs-comment">-- License     :  BSD-style (see the file LICENSE)</span><span>
-</span><span id="line-6"></span><span class="hs-comment">-- Maintainer  :  Edward Kmett &lt;ekmett@gmail.com&gt;</span><span>
-</span><span id="line-7"></span><span class="hs-comment">-- Stability   :  experimental</span><span>
-</span><span id="line-8"></span><span class="hs-comment">-- Portability :  non-portable</span><span>
-</span><span id="line-9"></span><span class="hs-comment">--</span><span>
-</span><span id="line-10"></span><span class="hs-comment">-- This module exists for users who like to work with qualified imports</span><span>
-</span><span id="line-11"></span><span class="hs-comment">-- but want access to the operators from Lens.</span><span>
-</span><span id="line-12"></span><span class="hs-comment">--</span><span>
-</span><span id="line-13"></span><span class="hs-comment">-- &gt; import qualified Control.Lens as L</span><span>
-</span><span id="line-14"></span><span class="hs-comment">-- &gt; import Control.Lens.Operators</span><span>
-</span><span id="line-15"></span><span class="hs-comment">----------------------------------------------------------------------------</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-comment">-----------------------------------------------------------------------------</span><span>
+</span><span id="line-2"></span><span class="hs-comment">-- |</span><span>
+</span><span id="line-3"></span><span class="hs-comment">-- Module      :  Control.Lens.Operators</span><span>
+</span><span id="line-4"></span><span class="hs-comment">-- Copyright   :  (C) 2012-16 Edward Kmett</span><span>
+</span><span id="line-5"></span><span class="hs-comment">-- License     :  BSD-style (see the file LICENSE)</span><span>
+</span><span id="line-6"></span><span class="hs-comment">-- Maintainer  :  Edward Kmett &lt;ekmett@gmail.com&gt;</span><span>
+</span><span id="line-7"></span><span class="hs-comment">-- Stability   :  experimental</span><span>
+</span><span id="line-8"></span><span class="hs-comment">-- Portability :  non-portable</span><span>
+</span><span id="line-9"></span><span class="hs-comment">--</span><span>
+</span><span id="line-10"></span><span class="hs-comment">-- This module exists for users who like to work with qualified imports</span><span>
+</span><span id="line-11"></span><span class="hs-comment">-- but want access to the operators from Lens.</span><span>
+</span><span id="line-12"></span><span class="hs-comment">--</span><span>
+</span><span id="line-13"></span><span class="hs-comment">-- &gt; import qualified Control.Lens as L</span><span>
+</span><span id="line-14"></span><span class="hs-comment">-- &gt; import Control.Lens.Operators</span><span>
+</span><span id="line-15"></span><span class="hs-comment">----------------------------------------------------------------------------</span><span>
 </span><span id="line-16"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Control.Lens.Operators</span><span>
-</span><span id="line-17"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="hs-comment">-- output from scripts/operators -h</span><span>
-</span><span id="line-18"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Cons&quot;</span></span><span>
+</span><span id="line-17"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="hs-comment">-- output from scripts/operators -h</span><span>
+</span><span id="line-18"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Cons&quot;</span></span><span>
 </span><span id="line-19"></span><span>    </span><span class="annot"><a href="Control.Lens.Cons.html#%3C%7C"><span class="hs-operator">(&lt;|)</span></a></span><span>
 </span><span id="line-20"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Cons.html#%7C%3E"><span class="hs-operator">(|&gt;)</span></a></span><span>
-</span><span id="line-21"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Fold&quot;</span></span><span>
+</span><span id="line-21"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Fold&quot;</span></span><span>
 </span><span id="line-22"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Fold.html#%5E.."><span class="hs-operator">(^..)</span></a></span><span>
 </span><span id="line-23"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Fold.html#%5E%3F"><span class="hs-operator">(^?)</span></a></span><span>
 </span><span id="line-24"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Fold.html#%5E%3F%21"><span class="hs-operator">(^?!)</span></a></span><span>
 </span><span id="line-25"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Fold.html#%5E%40.."><span class="hs-operator">(^@..)</span></a></span><span>
 </span><span id="line-26"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Fold.html#%5E%40%3F"><span class="hs-operator">(^@?)</span></a></span><span>
 </span><span id="line-27"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Fold.html#%5E%40%3F%21"><span class="hs-operator">(^@?!)</span></a></span><span>
-</span><span id="line-28"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Getter&quot;</span></span><span>
+</span><span id="line-28"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Getter&quot;</span></span><span>
 </span><span id="line-29"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Getter.html#%5E."><span class="hs-operator">(^.)</span></a></span><span>
 </span><span id="line-30"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Getter.html#%5E%40."><span class="hs-operator">(^@.)</span></a></span><span>
-</span><span id="line-31"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Indexed&quot;</span></span><span>
+</span><span id="line-31"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Indexed&quot;</span></span><span>
 </span><span id="line-32"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Indexed.html#%3C."><span class="hs-operator">(&lt;.)</span></a></span><span>
 </span><span id="line-33"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Indexed.html#.%3E"><span class="hs-operator">(.&gt;)</span></a></span><span>
 </span><span id="line-34"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Indexed.html#%3C.%3E"><span class="hs-operator">(&lt;.&gt;)</span></a></span><span>
-</span><span id="line-35"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Lens&quot;</span></span><span>
+</span><span id="line-35"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Lens&quot;</span></span><span>
 </span><span id="line-36"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Lens.html#%25%25~"><span class="hs-operator">(%%~)</span></a></span><span>
 </span><span id="line-37"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Lens.html#%25%25%3D"><span class="hs-operator">(%%=)</span></a></span><span>
 </span><span id="line-38"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator">(&amp;)</span></a></span><span>
@@ -105,11 +105,11 @@
 </span><span id="line-105"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Lens.html#%23%25%25%3D"><span class="hs-operator">(#%%=)</span></a></span><span>
 </span><span id="line-106"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Lens.html#%3C%23~"><span class="hs-operator">(&lt;#~)</span></a></span><span>
 </span><span id="line-107"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Lens.html#%3C%23%3D"><span class="hs-operator">(&lt;#=)</span></a></span><span>
-</span><span id="line-108"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Plated&quot;</span></span><span>
+</span><span id="line-108"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Plated&quot;</span></span><span>
 </span><span id="line-109"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Plated.html#..."><span class="hs-operator">(...)</span></a></span><span>
-</span><span id="line-110"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Review&quot;</span></span><span>
+</span><span id="line-110"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Review&quot;</span></span><span>
 </span><span id="line-111"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Review.html#%23"><span class="hs-operator">(#)</span></a></span><span>
-</span><span id="line-112"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Setter&quot;</span></span><span>
+</span><span id="line-112"></span><span>  </span><span class="annot"><span class="hs-comment">-- * &quot;Control.Lens.Setter&quot;</span></span><span>
 </span><span id="line-113"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Setter.html#%25~"><span class="hs-operator">(%~)</span></a></span><span>
 </span><span id="line-114"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Setter.html#.~"><span class="hs-operator">(.~)</span></a></span><span>
 </span><span id="line-115"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Control.Lens.Setter.html#%3F~"><span class="hs-operator">(?~)</span></a></span><span>

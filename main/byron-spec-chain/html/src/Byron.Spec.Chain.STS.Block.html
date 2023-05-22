@@ -30,7 +30,7 @@
 </span><span id="line-30"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../goblins/html/src"><span class="hs-identifier">Test.Goblin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../goblins/html/src"><span class="hs-identifier">AddShrinks</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../goblins/html/src"><span class="hs-identifier">Goblin</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-31"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../goblins/html/src"><span class="hs-identifier">Test.Goblin.TH</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../goblins/html/src"><span class="hs-identifier">deriveAddShrinks</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../goblins/html/src"><span class="hs-identifier">deriveGoblin</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-32"></span><span>
-</span><span id="line-33"></span><span id="local-6989586621679169907"><span id="local-6989586621679169908"></span></span><span class="hs-keyword">data</span><span> </span><span id="BlockHeader"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-var">BlockHeader</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockHeader"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-var">BlockHeader</span></a></span></span><span>
+</span><span id="line-33"></span><span id="local-6989586621679170140"><span id="local-6989586621679170141"></span></span><span class="hs-keyword">data</span><span> </span><span id="BlockHeader"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-var">BlockHeader</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockHeader"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-var">BlockHeader</span></a></span></span><span>
 </span><span id="line-34"></span><span>  </span><span class="hs-special">{</span><span> </span><span class="hs-comment">-- | Hash of the previous block header, or 'genesisHash' in case of</span><span>
 </span><span id="line-35"></span><span>    </span><span class="hs-comment">-- the first block in a chain.</span><span>
 </span><span id="line-36"></span><span>    </span><span id="_bhPrevHash"><span class="annot"><span class="annottext">BlockHeader -&gt; Hash
@@ -56,7 +56,7 @@
 </span><span id="line-49"></span><span>    </span><span class="hs-comment">-- TODO: BlockVersion &#8211; the protocol (block) version that created the block</span><span>
 </span><span id="line-50"></span><span>    </span><span class="hs-comment">-- TODO: SoftwareVersion &#8211; the software version that created the block</span><span>
 </span><span id="line-51"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-52"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169895"><span id="local-6989586621679169897"><span class="annot"><span class="annottext">BlockHeader -&gt; BlockHeader -&gt; Bool
+</span><span id="line-52"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679170128"><span id="local-6989586621679170130"><span class="annot"><span class="annottext">BlockHeader -&gt; BlockHeader -&gt; Bool
 (BlockHeader -&gt; BlockHeader -&gt; Bool)
 -&gt; (BlockHeader -&gt; BlockHeader -&gt; Bool) -&gt; Eq BlockHeader
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -73,7 +73,7 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep BlockHeader x -&gt; BlockHeader
 $cfrom :: forall x. BlockHeader -&gt; Rep BlockHeader x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679169885"><span id="local-6989586621679169887"><span id="local-6989586621679169889"><span class="annot"><span class="annottext">Int -&gt; BlockHeader -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679170118"><span id="local-6989586621679170120"><span id="local-6989586621679170122"><span class="annot"><span class="annottext">Int -&gt; BlockHeader -&gt; ShowS
 [BlockHeader] -&gt; ShowS
 BlockHeader -&gt; String
 (Int -&gt; BlockHeader -&gt; ShowS)
@@ -88,7 +88,7 @@ show :: BlockHeader -&gt; String
 $cshow :: BlockHeader -&gt; String
 showsPrec :: Int -&gt; BlockHeader -&gt; ShowS
 $cshowsPrec :: Int -&gt; BlockHeader -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="%24cBlockHeader"><span id="%24tBlockHeader"><span id="local-6989586621679169855"><span id="local-6989586621679169857"><span id="local-6989586621679169859"><span id="local-6989586621679169861"><span id="local-6989586621679169863"><span id="local-6989586621679169865"><span id="local-6989586621679169867"><span id="local-6989586621679169869"><span id="local-6989586621679169871"><span id="local-6989586621679169873"><span id="local-6989586621679169875"><span id="local-6989586621679169877"><span id="local-6989586621679169879"><span id="local-6989586621679169881"><span class="annot"><span class="annottext">Typeable BlockHeader
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="%24cBlockHeader"><span id="%24tBlockHeader"><span id="local-6989586621679170088"><span id="local-6989586621679170090"><span id="local-6989586621679170092"><span id="local-6989586621679170094"><span id="local-6989586621679170096"><span id="local-6989586621679170098"><span id="local-6989586621679170100"><span id="local-6989586621679170102"><span id="local-6989586621679170104"><span id="local-6989586621679170106"><span id="local-6989586621679170108"><span id="local-6989586621679170110"><span id="local-6989586621679170112"><span id="local-6989586621679170114"><span class="annot"><span class="annottext">Typeable BlockHeader
 DataType
 Constr
 Typeable BlockHeader
@@ -255,13 +255,13 @@ $cp1Data :: Typeable BlockHeader
 </span><span id="line-55"></span><span>
 </span><span id="line-56"></span><span class="hs-comment">-- We declare a specific instance here to avoid recursing into cardano-crypto</span><span>
 </span><span id="line-57"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-type">HasTypeReps</span></a></span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-type">BlockHeader</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-58"></span><span>  </span><span id="local-6989586621679169842"><span class="annot"><span class="annottext">typeReps :: BlockHeader -&gt; Seq TypeRep
-</span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">typeReps</span></a></span></span><span> </span><span id="local-6989586621679169840"><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-58"></span><span>  </span><span id="local-6989586621679170075"><span class="annot"><span class="annottext">typeReps :: BlockHeader -&gt; Seq TypeRep
+</span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">typeReps</span></a></span></span><span> </span><span id="local-6989586621679170073"><span class="annot"><span class="annottext">BlockHeader
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-59"></span><span>    </span><span class="annot"><span class="annottext">BlockHeader -&gt; TypeRep
 forall a. Typeable a =&gt; a -&gt; TypeRep
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">typeOf</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-60"></span><span>      </span><span class="annot"><span class="annottext">TypeRep -&gt; Seq TypeRep -&gt; Seq TypeRep
 forall a. a -&gt; Seq a -&gt; Seq a
 </span><a href="../../../../containers/html/src"><span class="hs-operator hs-var">&lt;|</span></a></span><span> </span><span class="annot"><span class="annottext">Hash -&gt; TypeRep
@@ -274,7 +274,7 @@ forall a. a -&gt; Seq a -&gt; Seq a
 </span><a href="../../../../containers/html/src"><span class="hs-operator hs-var">&lt;|</span></a></span><span> </span><span class="annot"><span class="annottext">Hash -&gt; TypeRep
 forall a. Typeable a =&gt; a -&gt; TypeRep
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">typeOf</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting Hash BlockHeader Hash
 Lens' BlockHeader Hash
@@ -284,7 +284,7 @@ forall a. a -&gt; Seq a -&gt; Seq a
 </span><a href="../../../../containers/html/src"><span class="hs-operator hs-var">&lt;|</span></a></span><span> </span><span class="annot"><span class="annottext">Hash -&gt; TypeRep
 forall a. Typeable a =&gt; a -&gt; TypeRep
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">typeOf</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting Hash BlockHeader Hash
 Lens' BlockHeader Hash
@@ -294,7 +294,7 @@ forall a. a -&gt; Seq a -&gt; Seq a
 </span><a href="../../../../containers/html/src"><span class="hs-operator hs-var">&lt;|</span></a></span><span> </span><span class="annot"><span class="annottext">Hash -&gt; TypeRep
 forall a. Typeable a =&gt; a -&gt; TypeRep
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">typeOf</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting Hash BlockHeader Hash
 Lens' BlockHeader Hash
@@ -304,7 +304,7 @@ forall a. a -&gt; Seq a -&gt; Seq a
 </span><a href="../../../../containers/html/src"><span class="hs-operator hs-var">&lt;|</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; Seq TypeRep
 forall a. HasTypeReps a =&gt; a -&gt; Seq TypeRep
 </span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var">typeReps</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Slot BlockHeader Slot -&gt; Slot
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Slot BlockHeader Slot -&gt; Slot
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting Slot BlockHeader Slot
 Lens' BlockHeader Slot
@@ -314,7 +314,7 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">VKey -&gt; Seq TypeRep
 forall a. HasTypeReps a =&gt; a -&gt; Seq TypeRep
 </span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var">typeReps</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting VKey BlockHeader VKey -&gt; VKey
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting VKey BlockHeader VKey -&gt; VKey
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting VKey BlockHeader VKey
 Lens' BlockHeader VKey
@@ -324,14 +324,14 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Sig Hash -&gt; Seq TypeRep
 forall a. HasTypeReps a =&gt; a -&gt; Seq TypeRep
 </span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var">typeReps</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169840"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader
+</span><a href="#local-6989586621679170073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader
 -&gt; Getting (Sig Hash) BlockHeader (Sig Hash) -&gt; Sig Hash
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting (Sig Hash) BlockHeader (Sig Hash)
 Lens' BlockHeader (Sig Hash)
 </span><a href="Byron.Spec.Chain.STS.Block.html#bhSig"><span class="hs-identifier hs-var">bhSig</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Sig</span></a></span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Hash</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-67"></span><span>
-</span><span id="line-68"></span><span id="local-6989586621679169837"><span id="local-6989586621679169838"></span></span><span class="hs-keyword">data</span><span> </span><span id="BlockBody"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-var">BlockBody</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockBody"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-var">BlockBody</span></a></span></span><span>
+</span><span id="line-68"></span><span id="local-6989586621679170070"><span id="local-6989586621679170071"></span></span><span class="hs-keyword">data</span><span> </span><span id="BlockBody"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-var">BlockBody</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockBody"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-var">BlockBody</span></a></span></span><span>
 </span><span id="line-69"></span><span>  </span><span class="hs-special">{</span><span> </span><span class="hs-comment">-- | Delegation certificates</span><span>
 </span><span id="line-70"></span><span>    </span><span id="_bDCerts"><span class="annot"><span class="annottext">BlockBody -&gt; [DCert]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bDCerts"><span class="hs-identifier hs-var hs-var">_bDCerts</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="hs-special">[</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">DCert</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
@@ -356,7 +356,7 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep BlockBody x -&gt; BlockBody
 $cfrom :: forall x. BlockBody -&gt; Rep BlockBody x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679169823"><span id="local-6989586621679169825"><span id="local-6989586621679169827"><span class="annot"><span class="annottext">Int -&gt; BlockBody -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679170056"><span id="local-6989586621679170058"><span id="local-6989586621679170060"><span class="annot"><span class="annottext">Int -&gt; BlockBody -&gt; ShowS
 [BlockBody] -&gt; ShowS
 BlockBody -&gt; String
 (Int -&gt; BlockBody -&gt; ShowS)
@@ -371,7 +371,7 @@ show :: BlockBody -&gt; String
 $cshow :: BlockBody -&gt; String
 showsPrec :: Int -&gt; BlockBody -&gt; ShowS
 $cshowsPrec :: Int -&gt; BlockBody -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="%24cBlockBody"><span id="%24tBlockBody"><span id="local-6989586621679169794"><span id="local-6989586621679169796"><span id="local-6989586621679169798"><span id="local-6989586621679169800"><span id="local-6989586621679169802"><span id="local-6989586621679169804"><span id="local-6989586621679169806"><span id="local-6989586621679169808"><span id="local-6989586621679169810"><span id="local-6989586621679169812"><span id="local-6989586621679169814"><span id="local-6989586621679169816"><span id="local-6989586621679169818"><span id="local-6989586621679169820"><span class="annot"><span class="annottext">Typeable BlockBody
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="%24cBlockBody"><span id="%24tBlockBody"><span id="local-6989586621679170027"><span id="local-6989586621679170029"><span id="local-6989586621679170031"><span id="local-6989586621679170033"><span id="local-6989586621679170035"><span id="local-6989586621679170037"><span id="local-6989586621679170039"><span id="local-6989586621679170041"><span id="local-6989586621679170043"><span id="local-6989586621679170045"><span id="local-6989586621679170047"><span id="local-6989586621679170049"><span id="local-6989586621679170051"><span id="local-6989586621679170053"><span class="annot"><span class="annottext">Typeable BlockBody
 DataType
 Constr
 Typeable BlockBody
@@ -532,11 +532,11 @@ $cp1Data :: Typeable BlockBody
 </span><span id="line-81"></span><span>
 </span><span id="line-82"></span><span id="bUtxo"><span id="bUpdVotes"><span id="bUpdProp"><span id="bProtVer"><span id="bDCerts"><span class="hs-identifier">makeLenses</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockBody</span></span></span></span></span></span><span>
 </span><span id="line-83"></span><span>
-</span><span id="line-84"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679169785"><span class="annot"><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-type">HasTypeReps</span></a></span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-type">BlockBody</span></a></span></span><span>
+</span><span id="line-84"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679170018"><span class="annot"><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-type">HasTypeReps</span></a></span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-type">BlockBody</span></a></span></span><span>
 </span><span id="line-85"></span><span>
 </span><span id="line-86"></span><span class="hs-comment">-- | A block in the chain. The specification only models regular blocks since</span><span>
 </span><span id="line-87"></span><span class="hs-comment">-- epoch boundary blocks will be largely ignored in the Byron-Shelley bridge.</span><span>
-</span><span id="line-88"></span><span id="local-6989586621679169783"><span id="local-6989586621679169784"></span></span><span class="hs-keyword">data</span><span> </span><span id="Block"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Block"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span>
+</span><span id="line-88"></span><span id="local-6989586621679170016"><span id="local-6989586621679170017"></span></span><span class="hs-keyword">data</span><span> </span><span id="Block"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Block"><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span>
 </span><span id="line-89"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_bHeader"><span class="annot"><span class="annottext">Block -&gt; BlockHeader
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bHeader"><span class="hs-identifier hs-var hs-var">_bHeader</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-type">BlockHeader</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-90"></span><span>    </span><span id="_bBody"><span class="annot"><span class="annottext">Block -&gt; BlockBody
@@ -550,7 +550,7 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep Block x -&gt; Block
 $cfrom :: forall x. Block -&gt; Rep Block x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679169772"><span id="local-6989586621679169774"><span id="local-6989586621679169776"><span class="annot"><span class="annottext">Int -&gt; Block -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679170005"><span id="local-6989586621679170007"><span id="local-6989586621679170009"><span class="annot"><span class="annottext">Int -&gt; Block -&gt; ShowS
 [Block] -&gt; ShowS
 Block -&gt; String
 (Int -&gt; Block -&gt; ShowS)
@@ -563,7 +563,7 @@ show :: Block -&gt; String
 $cshow :: Block -&gt; String
 showsPrec :: Int -&gt; Block -&gt; ShowS
 $cshowsPrec :: Int -&gt; Block -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="%24cBlock"><span id="%24tBlock"><span id="local-6989586621679169743"><span id="local-6989586621679169745"><span id="local-6989586621679169747"><span id="local-6989586621679169749"><span id="local-6989586621679169751"><span id="local-6989586621679169753"><span id="local-6989586621679169755"><span id="local-6989586621679169757"><span id="local-6989586621679169759"><span id="local-6989586621679169761"><span id="local-6989586621679169763"><span id="local-6989586621679169765"><span id="local-6989586621679169767"><span id="local-6989586621679169769"><span class="annot"><span class="annottext">Typeable Block
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="%24cBlock"><span id="%24tBlock"><span id="local-6989586621679169976"><span id="local-6989586621679169978"><span id="local-6989586621679169980"><span id="local-6989586621679169982"><span id="local-6989586621679169984"><span id="local-6989586621679169986"><span id="local-6989586621679169988"><span id="local-6989586621679169990"><span id="local-6989586621679169992"><span id="local-6989586621679169994"><span id="local-6989586621679169996"><span id="local-6989586621679169998"><span id="local-6989586621679170000"><span id="local-6989586621679170002"><span class="annot"><span class="annottext">Typeable Block
 DataType
 Constr
 Typeable Block
@@ -715,7 +715,7 @@ $cp1Data :: Typeable Block
 </span><span id="line-93"></span><span>
 </span><span id="line-94"></span><span id="bHeader"><span id="bBody"><span class="hs-identifier">makeLenses</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">Block</span></span></span><span>
 </span><span id="line-95"></span><span>
-</span><span id="line-96"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679169737"><span class="annot"><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-type">HasTypeReps</span></a></span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span></span><span>
+</span><span id="line-96"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679169970"><span class="annot"><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-type">HasTypeReps</span></a></span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span></span><span>
 </span><span id="line-97"></span><span>
 </span><span id="line-98"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#mkBlock"><span class="hs-identifier hs-type">mkBlock</span></a></span><span> </span><span class="hs-glyph">::</span><span>
 </span><span id="line-99"></span><span>  </span><span class="hs-comment">-- | Hash of the previous block</span><span>
@@ -745,102 +745,102 @@ $cp1Data :: Typeable Block
 -&gt; [Tx]
 -&gt; Block
 </span><a href="Byron.Spec.Chain.STS.Block.html#mkBlock"><span class="hs-identifier hs-var hs-var">mkBlock</span></a></span></span><span>
-</span><span id="line-117"></span><span>  </span><span id="local-6989586621679169735"><span class="annot"><span class="annottext">Hash
-</span><a href="#local-6989586621679169735"><span class="hs-identifier hs-var">prevHash</span></a></span></span><span>
-</span><span id="line-118"></span><span>  </span><span id="local-6989586621679169734"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621679169734"><span class="hs-identifier hs-var">currentSlot</span></a></span></span><span>
-</span><span id="line-119"></span><span>  </span><span id="local-6989586621679169733"><span class="annot"><span class="annottext">VKey
-</span><a href="#local-6989586621679169733"><span class="hs-identifier hs-var">issuer</span></a></span></span><span>
-</span><span id="line-120"></span><span>  </span><span id="local-6989586621679169732"><span class="annot"><span class="annottext">ProtVer
-</span><a href="#local-6989586621679169732"><span class="hs-identifier hs-var">version</span></a></span></span><span>
-</span><span id="line-121"></span><span>  </span><span id="local-6989586621679169731"><span class="annot"><span class="annottext">[DCert]
-</span><a href="#local-6989586621679169731"><span class="hs-identifier hs-var">delegationCerts</span></a></span></span><span>
-</span><span id="line-122"></span><span>  </span><span id="local-6989586621679169730"><span class="annot"><span class="annottext">Maybe UProp
-</span><a href="#local-6989586621679169730"><span class="hs-identifier hs-var">maybeUpdateProposal</span></a></span></span><span>
-</span><span id="line-123"></span><span>  </span><span id="local-6989586621679169729"><span class="annot"><span class="annottext">[Vote]
-</span><a href="#local-6989586621679169729"><span class="hs-identifier hs-var">updateProposalVotes</span></a></span></span><span>
-</span><span id="line-124"></span><span>  </span><span id="local-6989586621679169728"><span class="annot"><span class="annottext">[Tx]
-</span><a href="#local-6989586621679169728"><span class="hs-identifier hs-var">utxoTransactions</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; BlockBody -&gt; Block
+</span><span id="line-117"></span><span>  </span><span id="local-6989586621679169968"><span class="annot"><span class="annottext">Hash
+</span><a href="#local-6989586621679169968"><span class="hs-identifier hs-var">prevHash</span></a></span></span><span>
+</span><span id="line-118"></span><span>  </span><span id="local-6989586621679169967"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621679169967"><span class="hs-identifier hs-var">currentSlot</span></a></span></span><span>
+</span><span id="line-119"></span><span>  </span><span id="local-6989586621679169966"><span class="annot"><span class="annottext">VKey
+</span><a href="#local-6989586621679169966"><span class="hs-identifier hs-var">issuer</span></a></span></span><span>
+</span><span id="line-120"></span><span>  </span><span id="local-6989586621679169965"><span class="annot"><span class="annottext">ProtVer
+</span><a href="#local-6989586621679169965"><span class="hs-identifier hs-var">version</span></a></span></span><span>
+</span><span id="line-121"></span><span>  </span><span id="local-6989586621679169964"><span class="annot"><span class="annottext">[DCert]
+</span><a href="#local-6989586621679169964"><span class="hs-identifier hs-var">delegationCerts</span></a></span></span><span>
+</span><span id="line-122"></span><span>  </span><span id="local-6989586621679169963"><span class="annot"><span class="annottext">Maybe UProp
+</span><a href="#local-6989586621679169963"><span class="hs-identifier hs-var">maybeUpdateProposal</span></a></span></span><span>
+</span><span id="line-123"></span><span>  </span><span id="local-6989586621679169962"><span class="annot"><span class="annottext">[Vote]
+</span><a href="#local-6989586621679169962"><span class="hs-identifier hs-var">updateProposalVotes</span></a></span></span><span>
+</span><span id="line-124"></span><span>  </span><span id="local-6989586621679169961"><span class="annot"><span class="annottext">[Tx]
+</span><a href="#local-6989586621679169961"><span class="hs-identifier hs-var">utxoTransactions</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; BlockBody -&gt; Block
 </span><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-var">Block</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169727"><span class="hs-identifier hs-var">signedHeader</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169726"><span class="hs-identifier hs-var">body</span></a></span><span>
+</span><a href="#local-6989586621679169960"><span class="hs-identifier hs-var">signedHeader</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
+</span><a href="#local-6989586621679169959"><span class="hs-identifier hs-var">body</span></a></span><span>
 </span><span id="line-125"></span><span>    </span><span class="hs-keyword">where</span><span>
-</span><span id="line-126"></span><span>      </span><span id="local-6989586621679169727"><span class="annot"><span class="annottext">signedHeader :: BlockHeader
-</span><a href="#local-6989586621679169727"><span class="hs-identifier hs-var hs-var">signedHeader</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-126"></span><span>      </span><span id="local-6989586621679169960"><span class="annot"><span class="annottext">signedHeader :: BlockHeader
+</span><a href="#local-6989586621679169960"><span class="hs-identifier hs-var hs-var">signedHeader</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-127"></span><span>        </span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169725"><span class="hs-identifier hs-var">unsignedHeader</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">_bhSig :: Sig Hash
+</span><a href="#local-6989586621679169958"><span class="hs-identifier hs-var">unsignedHeader</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">_bhSig :: Sig Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhSig"><span class="hs-identifier hs-var">_bhSig</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Hash -&gt; Owner -&gt; Sig Hash
 forall a. a -&gt; Owner -&gt; Sig a
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">Sig</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader -&gt; Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#hashHeader"><span class="hs-identifier hs-var">hashHeader</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169725"><span class="hs-identifier hs-var">unsignedHeader</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VKey -&gt; Owner
+</span><a href="#local-6989586621679169958"><span class="hs-identifier hs-var">unsignedHeader</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VKey -&gt; Owner
 forall a. HasOwner a =&gt; a -&gt; Owner
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">owner</span></a></span><span> </span><span class="annot"><span class="annottext">VKey
-</span><a href="#local-6989586621679169733"><span class="hs-identifier hs-var">issuer</span></a></span><span class="hs-special">)</span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679169966"><span class="hs-identifier hs-var">issuer</span></a></span><span class="hs-special">)</span><span class="hs-special">}</span><span>
 </span><span id="line-128"></span><span>        </span><span class="hs-keyword">where</span><span>
-</span><span id="line-129"></span><span>          </span><span id="local-6989586621679169725"><span class="annot"><span class="annottext">unsignedHeader :: BlockHeader
-</span><a href="#local-6989586621679169725"><span class="hs-identifier hs-var hs-var">unsignedHeader</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-129"></span><span>          </span><span id="local-6989586621679169958"><span class="annot"><span class="annottext">unsignedHeader :: BlockHeader
+</span><a href="#local-6989586621679169958"><span class="hs-identifier hs-var hs-var">unsignedHeader</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-130"></span><span>            </span><span class="annot"><span class="annottext">BlockHeader :: Hash
 -&gt; Slot -&gt; VKey -&gt; Sig Hash -&gt; Hash -&gt; Hash -&gt; Hash -&gt; BlockHeader
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-type">BlockHeader</span></a></span><span>
 </span><span id="line-131"></span><span>              </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">_bhPrevHash :: Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhPrevHash"><span class="hs-identifier hs-var">_bhPrevHash</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Hash
-</span><a href="#local-6989586621679169735"><span class="hs-identifier hs-var">prevHash</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169968"><span class="hs-identifier hs-var">prevHash</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-132"></span><span>                </span><span class="annot"><span class="annottext">_bhSlot :: Slot
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhSlot"><span class="hs-identifier hs-var">_bhSlot</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621679169734"><span class="hs-identifier hs-var">currentSlot</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169967"><span class="hs-identifier hs-var">currentSlot</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-133"></span><span>                </span><span class="annot"><span class="annottext">_bhIssuer :: VKey
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhIssuer"><span class="hs-identifier hs-var">_bhIssuer</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VKey
-</span><a href="#local-6989586621679169733"><span class="hs-identifier hs-var">issuer</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169966"><span class="hs-identifier hs-var">issuer</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-134"></span><span>                </span><span class="annot"><span class="annottext">_bhSig :: Sig Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhSig"><span class="hs-identifier hs-var">_bhSig</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Sig Hash
-</span><a href="#local-6989586621679169723"><span class="hs-identifier hs-var">dummySig</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169956"><span class="hs-identifier hs-var">dummySig</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-135"></span><span>                </span><span class="annot"><span class="annottext">_bhUtxoHash :: Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhUtxoHash"><span class="hs-identifier hs-var">_bhUtxoHash</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[Tx] -&gt; Hash
 forall a. HasHash a =&gt; a -&gt; Hash
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">hash</span></a></span><span> </span><span class="annot"><span class="annottext">[Tx]
-</span><a href="#local-6989586621679169728"><span class="hs-identifier hs-var">utxoTransactions</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169961"><span class="hs-identifier hs-var">utxoTransactions</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-136"></span><span>                </span><span class="annot"><span class="annottext">_bhDlgHash :: Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhDlgHash"><span class="hs-identifier hs-var">_bhDlgHash</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[DCert] -&gt; Hash
 forall a. HasHash a =&gt; a -&gt; Hash
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">hash</span></a></span><span> </span><span class="annot"><span class="annottext">[DCert]
-</span><a href="#local-6989586621679169731"><span class="hs-identifier hs-var">delegationCerts</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169964"><span class="hs-identifier hs-var">delegationCerts</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-137"></span><span>                </span><span class="annot"><span class="annottext">_bhUpdHash :: Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhUpdHash"><span class="hs-identifier hs-var">_bhUpdHash</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(Maybe UProp, [Vote]) -&gt; Hash
 forall a. HasHash a =&gt; a -&gt; Hash
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">hash</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Maybe UProp
-</span><a href="#local-6989586621679169730"><span class="hs-identifier hs-var">maybeUpdateProposal</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">[Vote]
-</span><a href="#local-6989586621679169729"><span class="hs-identifier hs-var">updateProposalVotes</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169963"><span class="hs-identifier hs-var">maybeUpdateProposal</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">[Vote]
+</span><a href="#local-6989586621679169962"><span class="hs-identifier hs-var">updateProposalVotes</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-138"></span><span>              </span><span class="hs-special">}</span><span>
 </span><span id="line-139"></span><span>            </span><span class="hs-keyword">where</span><span>
-</span><span id="line-140"></span><span>              </span><span id="local-6989586621679169723"><span class="annot"><span class="annottext">dummySig :: Sig Hash
-</span><a href="#local-6989586621679169723"><span class="hs-identifier hs-var hs-var">dummySig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Hash -&gt; Owner -&gt; Sig Hash
+</span><span id="line-140"></span><span>              </span><span id="local-6989586621679169956"><span class="annot"><span class="annottext">dummySig :: Sig Hash
+</span><a href="#local-6989586621679169956"><span class="hs-identifier hs-var hs-var">dummySig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Hash -&gt; Owner -&gt; Sig Hash
 forall a. a -&gt; Owner -&gt; Sig a
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">Sig</span></a></span><span> </span><span class="annot"><span class="annottext">Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#genesisHash"><span class="hs-identifier hs-var">genesisHash</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VKey -&gt; Owner
 forall a. HasOwner a =&gt; a -&gt; Owner
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">owner</span></a></span><span> </span><span class="annot"><span class="annottext">VKey
-</span><a href="#local-6989586621679169733"><span class="hs-identifier hs-var">issuer</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169966"><span class="hs-identifier hs-var">issuer</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-141"></span><span>
-</span><span id="line-142"></span><span>      </span><span id="local-6989586621679169726"><span class="annot"><span class="annottext">body :: BlockBody
-</span><a href="#local-6989586621679169726"><span class="hs-identifier hs-var hs-var">body</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-142"></span><span>      </span><span id="local-6989586621679169959"><span class="annot"><span class="annottext">body :: BlockBody
+</span><a href="#local-6989586621679169959"><span class="hs-identifier hs-var hs-var">body</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-143"></span><span>        </span><span class="annot"><span class="annottext">BlockBody :: [DCert] -&gt; [Tx] -&gt; Maybe UProp -&gt; [Vote] -&gt; ProtVer -&gt; BlockBody
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-type">BlockBody</span></a></span><span>
 </span><span id="line-144"></span><span>          </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">_bProtVer :: ProtVer
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bProtVer"><span class="hs-identifier hs-var">_bProtVer</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ProtVer
-</span><a href="#local-6989586621679169732"><span class="hs-identifier hs-var">version</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169965"><span class="hs-identifier hs-var">version</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-145"></span><span>            </span><span class="annot"><span class="annottext">_bDCerts :: [DCert]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bDCerts"><span class="hs-identifier hs-var">_bDCerts</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[DCert]
-</span><a href="#local-6989586621679169731"><span class="hs-identifier hs-var">delegationCerts</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169964"><span class="hs-identifier hs-var">delegationCerts</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-146"></span><span>            </span><span class="annot"><span class="annottext">_bUpdProp :: Maybe UProp
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUpdProp"><span class="hs-identifier hs-var">_bUpdProp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe UProp
-</span><a href="#local-6989586621679169730"><span class="hs-identifier hs-var">maybeUpdateProposal</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169963"><span class="hs-identifier hs-var">maybeUpdateProposal</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-147"></span><span>            </span><span class="annot"><span class="annottext">_bUpdVotes :: [Vote]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUpdVotes"><span class="hs-identifier hs-var">_bUpdVotes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Vote]
-</span><a href="#local-6989586621679169729"><span class="hs-identifier hs-var">updateProposalVotes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169962"><span class="hs-identifier hs-var">updateProposalVotes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-148"></span><span>            </span><span class="annot"><span class="annottext">_bUtxo :: [Tx]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUtxo"><span class="hs-identifier hs-var">_bUtxo</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Tx]
-</span><a href="#local-6989586621679169728"><span class="hs-identifier hs-var">utxoTransactions</span></a></span><span>
+</span><a href="#local-6989586621679169961"><span class="hs-identifier hs-var">utxoTransactions</span></a></span><span>
 </span><span id="line-149"></span><span>          </span><span class="hs-special">}</span><span>
 </span><span id="line-150"></span><span>
 </span><span id="line-151"></span><span class="hs-comment">-- | Dummy genesis hash.</span><span>
@@ -862,9 +862,9 @@ forall a. Hashable a =&gt; a -&gt; Int
 </span><span id="line-156"></span><span class="hs-comment">-- | Protocol version endorsment</span><span>
 </span><span id="line-157"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#bEndorsment"><span class="hs-identifier hs-type">bEndorsment</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">ProtVer</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKey</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-158"></span><span id="bEndorsment"><span class="annot"><span class="annottext">bEndorsment :: Block -&gt; (ProtVer, VKey)
-</span><a href="Byron.Spec.Chain.STS.Block.html#bEndorsment"><span class="hs-identifier hs-var hs-var">bEndorsment</span></a></span></span><span> </span><span id="local-6989586621679169719"><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169719"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169719"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
+</span><a href="Byron.Spec.Chain.STS.Block.html#bEndorsment"><span class="hs-identifier hs-var hs-var">bEndorsment</span></a></span></span><span> </span><span id="local-6989586621679169952"><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169952"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169952"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockBody Block BlockBody
 Lens' Block BlockBody
@@ -873,7 +873,7 @@ forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting ProtVer BlockBody ProtVer
 Lens' BlockBody ProtVer
 </span><a href="Byron.Spec.Chain.STS.Block.html#bProtVer"><span class="hs-identifier hs-var">bProtVer</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169719"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockHeader Block BlockHeader -&gt; BlockHeader
+</span><a href="#local-6989586621679169952"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockHeader Block BlockHeader -&gt; BlockHeader
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockHeader Block BlockHeader
 Lens' Block BlockHeader
@@ -886,9 +886,9 @@ Lens' BlockHeader VKey
 </span><span id="line-160"></span><span class="hs-comment">-- | Slot the block is published in</span><span>
 </span><span id="line-161"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#bSlot"><span class="hs-identifier hs-type">bSlot</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Slot</span></a></span><span>
 </span><span id="line-162"></span><span id="bSlot"><span class="annot"><span class="annottext">bSlot :: Block -&gt; Slot
-</span><a href="Byron.Spec.Chain.STS.Block.html#bSlot"><span class="hs-identifier hs-var hs-var">bSlot</span></a></span></span><span> </span><span id="local-6989586621679169717"><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169717"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169717"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockHeader Block BlockHeader -&gt; BlockHeader
+</span><a href="Byron.Spec.Chain.STS.Block.html#bSlot"><span class="hs-identifier hs-var hs-var">bSlot</span></a></span></span><span> </span><span id="local-6989586621679169950"><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169950"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169950"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockHeader Block BlockHeader -&gt; BlockHeader
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockHeader Block BlockHeader
 Lens' Block BlockHeader
@@ -901,9 +901,9 @@ Lens' BlockHeader Slot
 </span><span id="line-164"></span><span class="hs-comment">-- | Block update payload</span><span>
 </span><span id="line-165"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#bUpdPayload"><span class="hs-identifier hs-type">bUpdPayload</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">UProp</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Vote</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span><span>
 </span><span id="line-166"></span><span id="bUpdPayload"><span class="annot"><span class="annottext">bUpdPayload :: Block -&gt; (Maybe UProp, [Vote])
-</span><a href="Byron.Spec.Chain.STS.Block.html#bUpdPayload"><span class="hs-identifier hs-var hs-var">bUpdPayload</span></a></span></span><span> </span><span id="local-6989586621679169715"><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169715"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169715"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
+</span><a href="Byron.Spec.Chain.STS.Block.html#bUpdPayload"><span class="hs-identifier hs-var hs-var">bUpdPayload</span></a></span></span><span> </span><span id="local-6989586621679169948"><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169948"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169948"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockBody Block BlockBody
 Lens' Block BlockBody
@@ -913,7 +913,7 @@ forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting (Maybe UProp) BlockBody (Maybe UProp)
 Lens' BlockBody (Maybe UProp)
 </span><a href="Byron.Spec.Chain.STS.Block.html#bUpdProp"><span class="hs-identifier hs-var">bUpdProp</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169715"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
+</span><a href="#local-6989586621679169948"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockBody Block BlockBody
 Lens' Block BlockBody
@@ -926,10 +926,10 @@ Lens' BlockBody [Vote]
 </span><span id="line-168"></span><span class="hs-comment">-- | Compute the abstract size (in words) that a block takes.</span><span>
 </span><span id="line-169"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#bSize"><span class="hs-identifier hs-type">bSize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Natural</span></a></span><span>
 </span><span id="line-170"></span><span id="bSize"><span class="annot"><span class="annottext">bSize :: Block -&gt; Natural
-</span><a href="Byron.Spec.Chain.STS.Block.html#bSize"><span class="hs-identifier hs-var hs-var">bSize</span></a></span></span><span> </span><span id="local-6989586621679169713"><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169713"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Natural
+</span><a href="Byron.Spec.Chain.STS.Block.html#bSize"><span class="hs-identifier hs-var hs-var">bSize</span></a></span></span><span> </span><span id="local-6989586621679169946"><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169946"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Natural
 </span><a href="Byron.Spec.Chain.STS.Block.html#bHeaderSize"><span class="hs-identifier hs-var">bHeaderSize</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169713"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockHeader Block BlockHeader -&gt; BlockHeader
+</span><a href="#local-6989586621679169946"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockHeader Block BlockHeader -&gt; BlockHeader
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockHeader Block BlockHeader
 Lens' Block BlockHeader
@@ -937,7 +937,7 @@ Lens' Block BlockHeader
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; Natural
 </span><a href="Byron.Spec.Chain.STS.Block.html#bBodySize"><span class="hs-identifier hs-var">bBodySize</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169713"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
+</span><a href="#local-6989586621679169946"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Block -&gt; Getting BlockBody Block BlockBody -&gt; BlockBody
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting BlockBody Block BlockBody
 Lens' Block BlockBody
@@ -953,10 +953,10 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">AccountingMap -&gt; BlockBody -&gt; Int
 forall a. HasTypeReps a =&gt; AccountingMap -&gt; a -&gt; Int
 </span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var">abstractSize</span></a></span><span> </span><span class="annot"><span class="annottext">AccountingMap
-</span><a href="#local-6989586621679169707"><span class="hs-identifier hs-var">costs</span></a></span><span>
+</span><a href="#local-6989586621679169940"><span class="hs-identifier hs-var">costs</span></a></span><span>
 </span><span id="line-175"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-176"></span><span>    </span><span id="local-6989586621679169707"><span class="annot"><span class="annottext">costs :: AccountingMap
-</span><a href="#local-6989586621679169707"><span class="hs-identifier hs-var hs-var">costs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-176"></span><span>    </span><span id="local-6989586621679169940"><span class="annot"><span class="annottext">costs :: AccountingMap
+</span><a href="#local-6989586621679169940"><span class="hs-identifier hs-var hs-var">costs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-177"></span><span>      </span><span class="annot"><span class="annottext">[(TypeRep, Int)] -&gt; AccountingMap
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.fromList</span></a></span><span>
@@ -1026,10 +1026,10 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">AccountingMap -&gt; BlockHeader -&gt; Int
 forall a. HasTypeReps a =&gt; AccountingMap -&gt; a -&gt; Int
 </span><a href="../../../../cardano-data/html/src"><span class="hs-identifier hs-var">abstractSize</span></a></span><span> </span><span class="annot"><span class="annottext">AccountingMap
-</span><a href="#local-6989586621679169705"><span class="hs-identifier hs-var">costs</span></a></span><span>
+</span><a href="#local-6989586621679169938"><span class="hs-identifier hs-var">costs</span></a></span><span>
 </span><span id="line-192"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-193"></span><span>    </span><span id="local-6989586621679169705"><span class="annot"><span class="annottext">costs :: AccountingMap
-</span><a href="#local-6989586621679169705"><span class="hs-identifier hs-var hs-var">costs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-193"></span><span>    </span><span id="local-6989586621679169938"><span class="annot"><span class="annottext">costs :: AccountingMap
+</span><a href="#local-6989586621679169938"><span class="hs-identifier hs-var hs-var">costs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-194"></span><span>      </span><span class="annot"><span class="annottext">[(TypeRep, Int)] -&gt; AccountingMap
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.fromList</span></a></span><span>
@@ -1062,8 +1062,8 @@ forall a. HasCallStack =&gt; a
 </span><span id="line-201"></span><span class="hs-comment">-- | Computes the hash of a header.</span><span>
 </span><span id="line-202"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#hashHeader"><span class="hs-identifier hs-type">hashHeader</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockHeader"><span class="hs-identifier hs-type">BlockHeader</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Hash</span></a></span><span>
 </span><span id="line-203"></span><span id="hashHeader"><span class="annot"><span class="annottext">hashHeader :: BlockHeader -&gt; Hash
-</span><a href="Byron.Spec.Chain.STS.Block.html#hashHeader"><span class="hs-identifier hs-var hs-var">hashHeader</span></a></span></span><span> </span><span id="local-6989586621679169704"><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169704"><span class="hs-identifier hs-var">bh</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Int -&gt; Hash
+</span><a href="Byron.Spec.Chain.STS.Block.html#hashHeader"><span class="hs-identifier hs-var hs-var">hashHeader</span></a></span></span><span> </span><span id="local-6989586621679169937"><span class="annot"><span class="annottext">BlockHeader
+</span><a href="#local-6989586621679169937"><span class="hs-identifier hs-var">bh</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Int -&gt; Hash
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">Hash</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe Int -&gt; Hash) -&gt; Maybe Int -&gt; Hash
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Maybe Int
@@ -1073,17 +1073,17 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">(Hash, Slot, VKey) -&gt; Int
 forall a. Hashable a =&gt; a -&gt; Int
 </span><a href="../../../../hashable/html/src"><span class="hs-identifier hs-var">H.hash</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169704"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
+</span><a href="#local-6989586621679169937"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Hash BlockHeader Hash -&gt; Hash
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting Hash BlockHeader Hash
 Lens' BlockHeader Hash
 </span><a href="Byron.Spec.Chain.STS.Block.html#bhPrevHash"><span class="hs-identifier hs-var">bhPrevHash</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169704"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Slot BlockHeader Slot -&gt; Slot
+</span><a href="#local-6989586621679169937"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting Slot BlockHeader Slot -&gt; Slot
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting Slot BlockHeader Slot
 Lens' BlockHeader Slot
 </span><a href="Byron.Spec.Chain.STS.Block.html#bhSlot"><span class="hs-identifier hs-var">bhSlot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169704"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting VKey BlockHeader VKey -&gt; VKey
+</span><a href="#local-6989586621679169937"><span class="hs-identifier hs-var">bh</span></a></span><span> </span><span class="annot"><span class="annottext">BlockHeader -&gt; Getting VKey BlockHeader VKey -&gt; VKey
 forall s a. s -&gt; Getting a s a -&gt; a
 </span><a href="../../../../microlens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">Getting VKey BlockHeader VKey
 Lens' BlockHeader VKey
@@ -1112,7 +1112,7 @@ forall a b. a -&gt; b -&gt; a
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
 </span><span id="line-218"></span><span>
 </span><span id="line-219"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../small-steps-test/html/src"><span class="hs-identifier hs-type">HasSizeInfo</span></a></span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-220"></span><span>  </span><span id="local-6989586621679169697"><span class="annot"><span class="annottext">isTrivial :: Block -&gt; Bool
+</span><span id="line-220"></span><span>  </span><span id="local-6989586621679169930"><span class="annot"><span class="annottext">isTrivial :: Block -&gt; Bool
 </span><a href="../../../../small-steps-test/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">isTrivial</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[DCert] -&gt; Bool
 forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">null</span></a></span><span> </span><span class="annot"><span class="annottext">([DCert] -&gt; Bool) -&gt; (Block -&gt; [DCert]) -&gt; Block -&gt; Bool
@@ -1140,9 +1140,9 @@ Lens' BlockBody [DCert]
 </span><span id="line-226"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-type">BlockBody</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockBody"><span class="hs-identifier hs-type">BlockBody</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-227"></span><span>  </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span>
 </span><span id="line-228"></span><span id="updateBody"><span class="annot"><span class="annottext">updateBody :: Block -&gt; (BlockBody -&gt; BlockBody) -&gt; Block
-</span><a href="Byron.Spec.Chain.STS.Block.html#updateBody"><span class="hs-identifier hs-var hs-var">updateBody</span></a></span></span><span> </span><span id="local-6989586621679169693"><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169693"><span class="hs-identifier hs-var">block</span></a></span></span><span> </span><span id="local-6989586621679169692"><span class="annot"><span class="annottext">BlockBody -&gt; BlockBody
-</span><a href="#local-6989586621679169692"><span class="hs-identifier hs-var">bodyUpdate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Byron.Spec.Chain.STS.Block.html#updateBody"><span class="hs-identifier hs-var hs-var">updateBody</span></a></span></span><span> </span><span id="local-6989586621679169926"><span class="annot"><span class="annottext">Block
+</span><a href="#local-6989586621679169926"><span class="hs-identifier hs-var">block</span></a></span></span><span> </span><span id="local-6989586621679169925"><span class="annot"><span class="annottext">BlockBody -&gt; BlockBody
+</span><a href="#local-6989586621679169925"><span class="hs-identifier hs-var">bodyUpdate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-229"></span><span>  </span><span class="annot"><span class="annottext">Hash
 -&gt; Slot
 -&gt; VKey
@@ -1160,7 +1160,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bHeader"><span class="hs-identifier hs-var hs-var">_bHeader</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; Hash) -&gt; Block -&gt; Hash
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169693"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169926"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-231"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader -&gt; Slot
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhSlot"><span class="hs-identifier hs-var hs-var">_bhSlot</span></a></span><span> </span><span class="annot"><span class="annottext">(BlockHeader -&gt; Slot) -&gt; (Block -&gt; BlockHeader) -&gt; Block -&gt; Slot
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -1168,7 +1168,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bHeader"><span class="hs-identifier hs-var hs-var">_bHeader</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; Slot) -&gt; Block -&gt; Slot
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169693"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169926"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-232"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockHeader -&gt; VKey
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bhIssuer"><span class="hs-identifier hs-var hs-var">_bhIssuer</span></a></span><span> </span><span class="annot"><span class="annottext">(BlockHeader -&gt; VKey) -&gt; (Block -&gt; BlockHeader) -&gt; Block -&gt; VKey
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -1176,28 +1176,28 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bHeader"><span class="hs-identifier hs-var hs-var">_bHeader</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; VKey) -&gt; Block -&gt; VKey
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169693"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169926"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-233"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockBody -&gt; ProtVer
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bProtVer"><span class="hs-identifier hs-var hs-var">_bProtVer</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169691"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169924"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-234"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockBody -&gt; [DCert]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bDCerts"><span class="hs-identifier hs-var hs-var">_bDCerts</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169691"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169924"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-235"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockBody -&gt; Maybe UProp
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUpdProp"><span class="hs-identifier hs-var hs-var">_bUpdProp</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169691"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169924"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-236"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockBody -&gt; [Vote]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUpdVotes"><span class="hs-identifier hs-var hs-var">_bUpdVotes</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169691"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169924"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-237"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockBody -&gt; [Tx]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUtxo"><span class="hs-identifier hs-var hs-var">_bUtxo</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169691"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169924"><span class="hs-identifier hs-var">newBody</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-238"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-239"></span><span>    </span><span id="local-6989586621679169691"><span class="annot"><span class="annottext">newBody :: BlockBody
-</span><a href="#local-6989586621679169691"><span class="hs-identifier hs-var hs-var">newBody</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; BlockBody
-</span><a href="#local-6989586621679169692"><span class="hs-identifier hs-var">bodyUpdate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block -&gt; BlockBody
+</span><span id="line-239"></span><span>    </span><span id="local-6989586621679169924"><span class="annot"><span class="annottext">newBody :: BlockBody
+</span><a href="#local-6989586621679169924"><span class="hs-identifier hs-var hs-var">newBody</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; BlockBody
+</span><a href="#local-6989586621679169925"><span class="hs-identifier hs-var">bodyUpdate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Block -&gt; BlockBody
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bBody"><span class="hs-identifier hs-var hs-var">_bBody</span></a></span><span> </span><span class="annot"><span class="annottext">Block
-</span><a href="#local-6989586621679169693"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679169926"><span class="hs-identifier hs-var">block</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-240"></span><span>
 </span><span id="line-241"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-242"></span><span class="hs-comment">-- Block statistics</span><span>
@@ -1219,7 +1219,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-255"></span><span>    </span><span id="blockStatsUpdProp"><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var hs-var">blockStatsUpdProp</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span>
 </span><span id="line-256"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-257"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169680"><span id="local-6989586621679169682"><span id="local-6989586621679169684"><span class="annot"><span class="annottext">Int -&gt; BlockStats -&gt; ShowS
+</span><span id="line-257"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169913"><span id="local-6989586621679169915"><span id="local-6989586621679169917"><span class="annot"><span class="annottext">Int -&gt; BlockStats -&gt; ShowS
 [BlockStats] -&gt; ShowS
 BlockStats -&gt; String
 (Int -&gt; BlockStats -&gt; ShowS)
@@ -1246,9 +1246,9 @@ $cshowsPrec :: Int -&gt; BlockStats -&gt; ShowS
 </span><span id="line-266"></span><span class="hs-comment">-- * Update proposals (0 or 1)</span><span>
 </span><span id="line-267"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#blockStats"><span class="hs-identifier hs-type">blockStats</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span>
 </span><span id="line-268"></span><span id="blockStats"><span class="annot"><span class="annottext">blockStats :: Block -&gt; BlockStats
-</span><a href="Byron.Spec.Chain.STS.Block.html#blockStats"><span class="hs-identifier hs-var hs-var">blockStats</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span id="local-6989586621679169678"><span class="annot"><span class="annottext">BlockHeader
-</span><a href="#local-6989586621679169678"><span class="hs-identifier hs-var">_header</span></a></span></span><span> </span><span id="local-6989586621679169677"><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169677"><span class="hs-identifier hs-var">body</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Byron.Spec.Chain.STS.Block.html#blockStats"><span class="hs-identifier hs-var hs-var">blockStats</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span id="local-6989586621679169911"><span class="annot"><span class="annottext">BlockHeader
+</span><a href="#local-6989586621679169911"><span class="hs-identifier hs-var">_header</span></a></span></span><span> </span><span id="local-6989586621679169910"><span class="annot"><span class="annottext">BlockBody
+</span><a href="#local-6989586621679169910"><span class="hs-identifier hs-var">body</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-269"></span><span>  </span><span class="annot"><span class="annottext">BlockStats :: Word -&gt; Word -&gt; Word -&gt; Word -&gt; BlockStats
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span>
 </span><span id="line-270"></span><span>    </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">blockStatsUtxo :: Word
@@ -1262,7 +1262,7 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; [Tx]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUtxo"><span class="hs-identifier hs-var hs-var">_bUtxo</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169677"><span class="hs-identifier hs-var">body</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169910"><span class="hs-identifier hs-var">body</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-271"></span><span>      </span><span class="annot"><span class="annottext">blockStatsDCerts :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var">blockStatsDCerts</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
@@ -1274,7 +1274,7 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; [DCert]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bDCerts"><span class="hs-identifier hs-var hs-var">_bDCerts</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169677"><span class="hs-identifier hs-var">body</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169910"><span class="hs-identifier hs-var">body</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-272"></span><span>      </span><span class="annot"><span class="annottext">blockStatsUpdVotes :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var">blockStatsUpdVotes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
@@ -1286,7 +1286,7 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; [Vote]
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUpdVotes"><span class="hs-identifier hs-var hs-var">_bUpdVotes</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169677"><span class="hs-identifier hs-var">body</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169910"><span class="hs-identifier hs-var">body</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-273"></span><span>      </span><span class="annot"><span class="annottext">blockStatsUpdProp :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var">blockStatsUpdProp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word -&gt; (UProp -&gt; Word) -&gt; Maybe UProp -&gt; Word
 forall b a. b -&gt; (a -&gt; b) -&gt; Maybe a -&gt; b
@@ -1298,7 +1298,7 @@ forall a b. a -&gt; b -&gt; a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody -&gt; Maybe UProp
 </span><a href="Byron.Spec.Chain.STS.Block.html#_bUpdProp"><span class="hs-identifier hs-var hs-var">_bUpdProp</span></a></span><span> </span><span class="annot"><span class="annottext">BlockBody
-</span><a href="#local-6989586621679169677"><span class="hs-identifier hs-var">body</span></a></span><span>
+</span><a href="#local-6989586621679169910"><span class="hs-identifier hs-var">body</span></a></span><span>
 </span><span id="line-274"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-275"></span><span>
 </span><span id="line-276"></span><span class="hs-comment">-- | Block stats for an entire chain</span><span>
@@ -1311,9 +1311,9 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="Byron.Spec.Chain.STS.Block.html#chainBlockStats"><span class="hs-identifier hs-var hs-var">chainBlockStats</span></a></span></span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (BlockStats, BlockStats, BlockStats)
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
-</span><span id="line-283"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#chainBlockStats"><span class="hs-identifier hs-var">chainBlockStats</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169673"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169673"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-type">:</span></a></span><span> </span><span id="local-6989586621679169672"><span class="annot"><span class="annottext">[BlockStats]
-</span><a href="#local-6989586621679169672"><span class="hs-identifier hs-var">bs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(BlockStats, BlockStats, BlockStats)
+</span><span id="line-283"></span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#chainBlockStats"><span class="hs-identifier hs-var">chainBlockStats</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169906"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169906"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-type">:</span></a></span><span> </span><span id="local-6989586621679169905"><span class="annot"><span class="annottext">[BlockStats]
+</span><a href="#local-6989586621679169905"><span class="hs-identifier hs-var">bs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(BlockStats, BlockStats, BlockStats)
 -&gt; Maybe (BlockStats, BlockStats, BlockStats)
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">((BlockStats, BlockStats, BlockStats)
@@ -1327,81 +1327,81 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; Word
 -&gt; [BlockStats]
 -&gt; (BlockStats, BlockStats, BlockStats)
-</span><a href="#local-6989586621679169671"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169673"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169673"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169673"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679169904"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169906"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169906"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169906"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">[BlockStats]
-</span><a href="#local-6989586621679169672"><span class="hs-identifier hs-var">bs</span></a></span><span>
+</span><a href="#local-6989586621679169905"><span class="hs-identifier hs-var">bs</span></a></span><span>
 </span><span id="line-284"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-285"></span><span>    </span><span class="annot"><a href="#local-6989586621679169671"><span class="hs-identifier hs-type">go</span></a></span><span> </span><span class="hs-glyph">::</span><span>
+</span><span id="line-285"></span><span>    </span><span class="annot"><a href="#local-6989586621679169904"><span class="hs-identifier hs-type">go</span></a></span><span> </span><span class="hs-glyph">::</span><span>
 </span><span id="line-286"></span><span>      </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-comment">-- Minimum</span><span>
 </span><span id="line-287"></span><span>      </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-comment">-- Maximum</span><span>
 </span><span id="line-288"></span><span>      </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-comment">-- Sum</span><span>
 </span><span id="line-289"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-comment">-- Count</span><span>
 </span><span id="line-290"></span><span>      </span><span class="hs-special">[</span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-291"></span><span>      </span><span class="hs-special">(</span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-292"></span><span>    </span><span id="local-6989586621679169671"><span class="annot"><span class="annottext">go :: BlockStats
+</span><span id="line-292"></span><span>    </span><span id="local-6989586621679169904"><span class="annot"><span class="annottext">go :: BlockStats
 -&gt; BlockStats
 -&gt; BlockStats
 -&gt; Word
 -&gt; [BlockStats]
 -&gt; (BlockStats, BlockStats, BlockStats)
-</span><a href="#local-6989586621679169671"><span class="hs-identifier hs-var hs-var">go</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169670"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169670"><span class="hs-identifier hs-var">sMin</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169669"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169669"><span class="hs-identifier hs-var">sMax</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169668"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169668"><span class="hs-identifier hs-var">sSum</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169667"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169667"><span class="hs-identifier hs-var">cnt</span></a></span></span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679169904"><span class="hs-identifier hs-var hs-var">go</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169903"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169903"><span class="hs-identifier hs-var">sMin</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169902"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169902"><span class="hs-identifier hs-var">sMax</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169901"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169901"><span class="hs-identifier hs-var">sSum</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169900"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679169900"><span class="hs-identifier hs-var">cnt</span></a></span></span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-293"></span><span>      </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169670"><span class="hs-identifier hs-var">sMin</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169903"><span class="hs-identifier hs-var">sMin</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-294"></span><span>        </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169669"><span class="hs-identifier hs-var">sMax</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169902"><span class="hs-identifier hs-var">sMax</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-295"></span><span>        </span><span class="annot"><span class="annottext">BlockStats :: Word -&gt; Word -&gt; Word -&gt; Word -&gt; BlockStats
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span>
 </span><span id="line-296"></span><span>          </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">blockStatsUtxo :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUtxo"><span class="hs-identifier hs-var">blockStatsUtxo</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUtxo"><span class="hs-identifier hs-var hs-var">blockStatsUtxo</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169668"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679169901"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Integral a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`div`</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169667"><span class="hs-identifier hs-var">cnt</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169900"><span class="hs-identifier hs-var">cnt</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-297"></span><span>            </span><span class="annot"><span class="annottext">blockStatsDCerts :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var">blockStatsDCerts</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var hs-var">blockStatsDCerts</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169668"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679169901"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Integral a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`div`</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169667"><span class="hs-identifier hs-var">cnt</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169900"><span class="hs-identifier hs-var">cnt</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-298"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdVotes :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var">blockStatsUpdVotes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var hs-var">blockStatsUpdVotes</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169668"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679169901"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Integral a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`div`</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169667"><span class="hs-identifier hs-var">cnt</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169900"><span class="hs-identifier hs-var">cnt</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-299"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdProp :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var">blockStatsUpdProp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var hs-var">blockStatsUpdProp</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169668"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679169901"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Integral a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`div`</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169667"><span class="hs-identifier hs-var">cnt</span></a></span><span>
+</span><a href="#local-6989586621679169900"><span class="hs-identifier hs-var">cnt</span></a></span><span>
 </span><span id="line-300"></span><span>          </span><span class="hs-special">}</span><span>
 </span><span id="line-301"></span><span>      </span><span class="hs-special">)</span><span>
-</span><span id="line-302"></span><span>    </span><span class="annot"><a href="#local-6989586621679169671"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169665"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169665"><span class="hs-identifier hs-var">sMin</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169664"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169664"><span class="hs-identifier hs-var">sMax</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169663"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169663"><span class="hs-identifier hs-var">sSum</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169662"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169662"><span class="hs-identifier hs-var">cnt</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169661"><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-type">:</span></a></span><span> </span><span id="local-6989586621679169660"><span class="annot"><span class="annottext">[BlockStats]
-</span><a href="#local-6989586621679169660"><span class="hs-identifier hs-var">bs'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-302"></span><span>    </span><span class="annot"><a href="#local-6989586621679169904"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169898"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169898"><span class="hs-identifier hs-var">sMin</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169897"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169897"><span class="hs-identifier hs-var">sMax</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169896"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169896"><span class="hs-identifier hs-var">sSum</span></a></span></span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679169895"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679169895"><span class="hs-identifier hs-var">cnt</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679169894"><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-type">:</span></a></span><span> </span><span id="local-6989586621679169893"><span class="annot"><span class="annottext">[BlockStats]
+</span><a href="#local-6989586621679169893"><span class="hs-identifier hs-var">bs'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-303"></span><span>      </span><span class="annot"><span class="annottext">BlockStats
 -&gt; BlockStats
 -&gt; BlockStats
 -&gt; Word
 -&gt; [BlockStats]
 -&gt; (BlockStats, BlockStats, BlockStats)
-</span><a href="#local-6989586621679169671"><span class="hs-identifier hs-var">go</span></a></span><span>
+</span><a href="#local-6989586621679169904"><span class="hs-identifier hs-var">go</span></a></span><span>
 </span><span id="line-304"></span><span>        </span><span class="annot"><span class="annottext">BlockStats :: Word -&gt; Word -&gt; Word -&gt; Word -&gt; BlockStats
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span>
 </span><span id="line-305"></span><span>          </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">blockStatsUtxo :: Word
@@ -1412,8 +1412,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUtxo"><span class="hs-identifier hs-var hs-var">blockStatsUtxo</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169665"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169898"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-306"></span><span>            </span><span class="annot"><span class="annottext">blockStatsDCerts :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var">blockStatsDCerts</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Ord a =&gt; a -&gt; a -&gt; a
@@ -1422,8 +1422,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var hs-var">blockStatsDCerts</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169665"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169898"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-307"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdVotes :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var">blockStatsUpdVotes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Ord a =&gt; a -&gt; a -&gt; a
@@ -1432,8 +1432,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var hs-var">blockStatsUpdVotes</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169665"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169898"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-308"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdProp :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var">blockStatsUpdProp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Ord a =&gt; a -&gt; a -&gt; a
@@ -1442,8 +1442,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var hs-var">blockStatsUpdProp</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169665"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span>
+</span><a href="#local-6989586621679169898"><span class="hs-identifier hs-var">sMin</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span>
 </span><span id="line-309"></span><span>          </span><span class="hs-special">}</span><span>
 </span><span id="line-310"></span><span>        </span><span class="annot"><span class="annottext">BlockStats :: Word -&gt; Word -&gt; Word -&gt; Word -&gt; BlockStats
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span>
@@ -1455,8 +1455,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUtxo"><span class="hs-identifier hs-var hs-var">blockStatsUtxo</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169664"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169897"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-312"></span><span>            </span><span class="annot"><span class="annottext">blockStatsDCerts :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var">blockStatsDCerts</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Ord a =&gt; a -&gt; a -&gt; a
@@ -1465,8 +1465,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var hs-var">blockStatsDCerts</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169664"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169897"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-313"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdVotes :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var">blockStatsUpdVotes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Ord a =&gt; a -&gt; a -&gt; a
@@ -1475,8 +1475,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var hs-var">blockStatsUpdVotes</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169664"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169897"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-314"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdProp :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var">blockStatsUpdProp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Ord a =&gt; a -&gt; a -&gt; a
@@ -1485,8 +1485,8 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var hs-var">blockStatsUpdProp</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169664"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span>
+</span><a href="#local-6989586621679169897"><span class="hs-identifier hs-var">sMax</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span>
 </span><span id="line-315"></span><span>          </span><span class="hs-special">}</span><span>
 </span><span id="line-316"></span><span>        </span><span class="annot"><span class="annottext">BlockStats :: Word -&gt; Word -&gt; Word -&gt; Word -&gt; BlockStats
 </span><a href="Byron.Spec.Chain.STS.Block.html#BlockStats"><span class="hs-identifier hs-type">BlockStats</span></a></span><span>
@@ -1498,8 +1498,8 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUtxo"><span class="hs-identifier hs-var hs-var">blockStatsUtxo</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169663"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169896"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-318"></span><span>            </span><span class="annot"><span class="annottext">blockStatsDCerts :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var">blockStatsDCerts</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Num a =&gt; a -&gt; a -&gt; a
@@ -1508,8 +1508,8 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsDCerts"><span class="hs-identifier hs-var hs-var">blockStatsDCerts</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169663"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169896"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-319"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdVotes :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var">blockStatsUpdVotes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Num a =&gt; a -&gt; a -&gt; a
@@ -1518,8 +1518,8 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdVotes"><span class="hs-identifier hs-var hs-var">blockStatsUpdVotes</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169663"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679169896"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-320"></span><span>            </span><span class="annot"><span class="annottext">blockStatsUpdProp :: Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var">blockStatsUpdProp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Num a =&gt; a -&gt; a -&gt; a
@@ -1528,30 +1528,30 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 forall b c a. (b -&gt; b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`on`</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats -&gt; Word
 </span><a href="Byron.Spec.Chain.STS.Block.html#blockStatsUpdProp"><span class="hs-identifier hs-var hs-var">blockStatsUpdProp</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169663"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
-</span><a href="#local-6989586621679169661"><span class="hs-identifier hs-var">b'</span></a></span><span>
+</span><a href="#local-6989586621679169896"><span class="hs-identifier hs-var">sSum</span></a></span><span> </span><span class="annot"><span class="annottext">BlockStats
+</span><a href="#local-6989586621679169894"><span class="hs-identifier hs-var">b'</span></a></span><span>
 </span><span id="line-321"></span><span>          </span><span class="hs-special">}</span><span>
 </span><span id="line-322"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679169662"><span class="hs-identifier hs-var">cnt</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679169895"><span class="hs-identifier hs-var">cnt</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-323"></span><span>        </span><span class="annot"><span class="annottext">[BlockStats]
-</span><a href="#local-6989586621679169660"><span class="hs-identifier hs-var">bs'</span></a></span><span>
+</span><a href="#local-6989586621679169893"><span class="hs-identifier hs-var">bs'</span></a></span><span>
 </span><span id="line-324"></span><span>
 </span><span id="line-325"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-326"></span><span class="hs-comment">-- Goblins instances</span><span>
 </span><span id="line-327"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-328"></span><span>
-</span><span id="line-329"></span><span id="local-6989586621679169651"><span id="local-6989586621679169653"><span id="local-6989586621679169657"><span class="hs-identifier">deriveGoblin</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">Block</span></span></span></span><span>
-</span><span id="line-330"></span><span id="local-6989586621679169641"><span id="local-6989586621679169643"><span id="local-6989586621679169647"><span class="hs-identifier">deriveGoblin</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockBody</span></span></span></span><span>
-</span><span id="line-331"></span><span id="local-6989586621679169634"><span id="local-6989586621679169636"><span id="local-6989586621679169640"><span class="hs-identifier">deriveGoblin</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockHeader</span></span></span></span><span>
+</span><span id="line-329"></span><span id="local-6989586621679169884"><span id="local-6989586621679169886"><span id="local-6989586621679169890"><span class="hs-identifier">deriveGoblin</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">Block</span></span></span></span><span>
+</span><span id="line-330"></span><span id="local-6989586621679169874"><span id="local-6989586621679169876"><span id="local-6989586621679169880"><span class="hs-identifier">deriveGoblin</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockBody</span></span></span></span><span>
+</span><span id="line-331"></span><span id="local-6989586621679169867"><span id="local-6989586621679169869"><span id="local-6989586621679169873"><span class="hs-identifier">deriveGoblin</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockHeader</span></span></span></span><span>
 </span><span id="line-332"></span><span>
 </span><span id="line-333"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-334"></span><span class="hs-comment">-- AddShrinks instances</span><span>
 </span><span id="line-335"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-336"></span><span>
-</span><span id="line-337"></span><span id="local-6989586621679169632"><span class="hs-identifier">deriveAddShrinks</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">Block</span></span><span>
-</span><span id="line-338"></span><span id="local-6989586621679169628"><span class="hs-identifier">deriveAddShrinks</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockBody</span></span><span>
-</span><span id="line-339"></span><span id="local-6989586621679169626"><span class="hs-identifier">deriveAddShrinks</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockHeader</span></span><span>
+</span><span id="line-337"></span><span id="local-6989586621679169865"><span class="hs-identifier">deriveAddShrinks</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">Block</span></span><span>
+</span><span id="line-338"></span><span id="local-6989586621679169861"><span class="hs-identifier">deriveAddShrinks</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockBody</span></span><span>
+</span><span id="line-339"></span><span id="local-6989586621679169859"><span class="hs-identifier">deriveAddShrinks</span><span> </span><span class="hs-special">''</span><span class="hs-identifier">BlockHeader</span></span><span>
 </span><span id="line-340"></span></pre></body></html>

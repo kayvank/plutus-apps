@@ -10,17 +10,17 @@ module Cardano.Node.Emulator.TimeSlot
 -- | Datatype to configure the length (ms) of one slot and the beginning of
 --   the first slot.
 data SlotConfig
-SlotConfig :: Integer -> POSIXTime -> SlotConfig
+SlotConfig :: !Integer -> !POSIXTime -> SlotConfig
 
 -- | Length (number of milliseconds) of one slot
-[scSlotLength] :: SlotConfig -> Integer
+[scSlotLength] :: SlotConfig -> !Integer
 
 -- | Beginning of slot 0 (in milliseconds)
-[scSlotZeroTime] :: SlotConfig -> POSIXTime
+[scSlotZeroTime] :: SlotConfig -> !POSIXTime
 data SlotConversionError
-SlotOutOfRange :: Slot -> (Slot, POSIXTime) -> SlotConversionError
-[requestedSlot] :: SlotConversionError -> Slot
-[horizon] :: SlotConversionError -> (Slot, POSIXTime)
+SlotOutOfRange :: !Slot -> !(Slot, POSIXTime) -> SlotConversionError
+[requestedSlot] :: SlotConversionError -> !Slot
+[horizon] :: SlotConversionError -> !(Slot, POSIXTime)
 
 -- | Convert a <a>SlotRange</a> to a <a>POSIXTimeRange</a> given a
 --   <a>SlotConfig</a>. The resulting <a>POSIXTimeRange</a> refers to the
@@ -77,12 +77,12 @@ instance GHC.Classes.Eq Cardano.Node.Emulator.TimeSlot.SlotConfig
 --   configuration.
 module Cardano.Node.Emulator.Params
 data Params
-Params :: SlotConfig -> PParams -> NetworkId -> Params
-[pSlotConfig] :: Params -> SlotConfig
+Params :: !SlotConfig -> !PParams -> !NetworkId -> Params
+[pSlotConfig] :: Params -> !SlotConfig
 
 -- | Convert <a>Params</a> to cardano-ledger <a>PParams</a>
-[emulatorPParams] :: Params -> PParams
-[pNetworkId] :: Params -> NetworkId
+[emulatorPParams] :: Params -> !PParams
+[pNetworkId] :: Params -> !NetworkId
 paramsWithProtocolsParameters :: SlotConfig -> ProtocolParameters -> NetworkId -> Params
 slotConfigL :: Lens' Params SlotConfig
 emulatorPParamsL :: Lens' Params PParams
@@ -115,7 +115,7 @@ emulatorEpochSize :: EpochSize
 -- | A sensible default <a>Globals</a> value for the emulator
 emulatorGlobals :: Params -> Globals
 
--- | A sensible default <a>EraHistory</a> value for the emulator
+-- | A sensible default <tt>EraHistory</tt> value for the emulator
 emulatorEraHistory :: Params -> EraHistory CardanoMode
 instance Data.Aeson.Types.ToJSON.ToJSON Cardano.Node.Emulator.Params.Params
 instance Data.Aeson.Types.FromJSON.FromJSON Cardano.Node.Emulator.Params.Params
@@ -137,11 +137,11 @@ type EmulatorBlock = [Validated (Tx EmulatorEra)]
 
 -- | State of the ledger with configuration, mempool, and the blockchain.
 data EmulatedLedgerState
-EmulatedLedgerState :: MempoolEnv EmulatorEra -> MempoolState EmulatorEra -> EmulatorBlock -> [EmulatorBlock] -> EmulatedLedgerState
-[_ledgerEnv] :: EmulatedLedgerState -> MempoolEnv EmulatorEra
-[_memPoolState] :: EmulatedLedgerState -> MempoolState EmulatorEra
-[_currentBlock] :: EmulatedLedgerState -> EmulatorBlock
-[_previousBlocks] :: EmulatedLedgerState -> [EmulatorBlock]
+EmulatedLedgerState :: !MempoolEnv EmulatorEra -> !MempoolState EmulatorEra -> !EmulatorBlock -> ![EmulatorBlock] -> EmulatedLedgerState
+[_ledgerEnv] :: EmulatedLedgerState -> !MempoolEnv EmulatorEra
+[_memPoolState] :: EmulatedLedgerState -> !MempoolState EmulatorEra
+[_currentBlock] :: EmulatedLedgerState -> !EmulatorBlock
+[_previousBlocks] :: EmulatedLedgerState -> ![EmulatorBlock]
 
 -- | The amount of value held by a transaction output.
 newtype Coin
@@ -201,9 +201,9 @@ module Cardano.Node.Emulator.Generators
 --   plutus-ledger (in particular, <a>unspentOutputs</a>) we note the
 --   unspent outputs of the chain when it is first created.
 data Mockchain
-Mockchain :: [CardanoTx] -> Map TxOutRef TxOut -> Params -> Mockchain
+Mockchain :: [CardanoTx] -> Map TxIn TxOut -> Params -> Mockchain
 [mockchainInitialTxPool] :: Mockchain -> [CardanoTx]
-[mockchainUtxo] :: Mockchain -> Map TxOutRef TxOut
+[mockchainUtxo] :: Mockchain -> Map TxIn TxOut
 [mockchainParams] :: Mockchain -> Params
 
 -- | Generate a mockchain using the default <a>GeneratorModel</a>.
@@ -219,19 +219,14 @@ emptyChain :: Mockchain
 
 -- | The parameters for the generators in this module.
 data GeneratorModel
-GeneratorModel :: Map PaymentPubKey Lovelace -> Set PaymentPubKey -> Maybe Natural -> GeneratorModel
+GeneratorModel :: !Map PaymentPubKey Lovelace -> !Set PaymentPubKey -> !Maybe Natural -> GeneratorModel
 
 -- | Value created at the beginning of the blockchain.
-[gmInitialBalance] :: GeneratorModel -> Map PaymentPubKey Lovelace
+[gmInitialBalance] :: GeneratorModel -> !Map PaymentPubKey Lovelace
 
 -- | Public keys that are to be used for generating transactions.
-[gmPubKeys] :: GeneratorModel -> Set PaymentPubKey
-[gmMaxCollateralInputs] :: GeneratorModel -> Maybe Natural
-
--- | A transaction input, consisting of a transaction output reference and
---   an input type with data witnesses.
-data TxInputWitnessed
-TxInputWitnessed :: !TxOutRef -> !TxInType -> TxInputWitnessed
+[gmPubKeys] :: GeneratorModel -> !Set PaymentPubKey
+[gmMaxCollateralInputs] :: GeneratorModel -> !Maybe Natural
 
 -- | A generator model with some sensible defaults.
 generatorModel :: GeneratorModel
@@ -246,8 +241,8 @@ genValidTransactionBody :: Mockchain -> Gen (TxBodyContent BuildTx BabbageEra)
 --   Fails if the there are no unspent outputs, or if the total value of
 --   the unspent outputs is smaller than the estimated fee.
 genValidTransaction' :: GeneratorModel -> Mockchain -> Gen CardanoTx
-genValidTransactionSpending :: [TxInputWitnessed] -> Value -> Gen CardanoTx
-genValidTransactionSpending' :: GeneratorModel -> [TxInputWitnessed] -> Value -> Gen CardanoTx
+genValidTransactionSpending :: [TxIn] -> Value -> Gen CardanoTx
+genValidTransactionSpending' :: GeneratorModel -> [TxIn] -> Value -> Gen CardanoTx
 
 -- | A transaction with no inputs that mints some value (to be used at the
 --   beginning of a blockchain).
@@ -352,7 +347,7 @@ makeAutoBalancedTransaction :: Params -> UTxO EmulatorEra -> CardanoBuildTx -> C
 --   is similarly balanced. Unlike <a>makeAutoBalancedTransaction</a> this
 --   function also balances non-Ada.
 makeAutoBalancedTransactionWithUtxoProvider :: Monad m => Params -> UtxoIndex -> CardanoAddress -> UtxoProvider m -> (forall a. CardanoLedgerError -> m a) -> CardanoBuildTx -> m (Tx BabbageEra)
-utxoProviderFromWalletOutputs :: Map TxOutRef TxOut -> UtxoProvider (Either BalancingError)
+utxoProviderFromWalletOutputs :: UtxoIndex -> CardanoBuildTx -> UtxoProvider (Either BalancingError)
 data BalancingError
 
 -- | Not enough extra inputs available to balance a transaction.
@@ -377,29 +372,30 @@ module Cardano.Node.Emulator.Chain
 data ChainEvent
 
 -- | A transaction has been validated and added to the blockchain.
-TxnValidate :: TxId -> CardanoTx -> [Text] -> ChainEvent
+TxnValidate :: !TxId -> !CardanoTx -> ![Text] -> ChainEvent
 
 -- | A transaction failed to validate. The <tt>Value</tt> indicates the
 --   amount of collateral stored in the transaction.
-TxnValidationFail :: ValidationPhase -> TxId -> CardanoTx -> ValidationError -> Value -> [Text] -> ChainEvent
-SlotAdd :: Slot -> ChainEvent
+TxnValidationFail :: !ValidationPhase -> !TxId -> !CardanoTx -> !ValidationError -> !Value -> ![Text] -> ChainEvent
+SlotAdd :: !Slot -> ChainEvent
+chainEventOnChainTx :: ChainEvent -> Maybe OnChainTx
 
 -- | A pool of transactions which have yet to be validated.
 type TxPool = [CardanoTx]
 data ChainState
-ChainState :: Blockchain -> TxPool -> UtxoIndex -> Slot -> ChainState
+ChainState :: !Blockchain -> !TxPool -> !UtxoIndex -> !Slot -> ChainState
 
 -- | The current chain, with the newest transactions first in the list.
-[_chainNewestFirst] :: ChainState -> Blockchain
+[_chainNewestFirst] :: ChainState -> !Blockchain
 
 -- | The pool of pending transactions.
-[_txPool] :: ChainState -> TxPool
+[_txPool] :: ChainState -> !TxPool
 
 -- | The UTxO index, used for validation.
-[_index] :: ChainState -> UtxoIndex
+[_index] :: ChainState -> !UtxoIndex
 
 -- | The current slot number
-[_chainCurrentSlot] :: ChainState -> Slot
+[_chainCurrentSlot] :: ChainState -> !Slot
 emptyChainState :: ChainState
 txPool :: Lens' ChainState TxPool
 index :: Lens' ChainState UtxoIndex
@@ -428,20 +424,20 @@ handleChain :: Members ChainEffs effs => Params -> ChainEffect ~> Eff effs
 
 -- | The result of validating a block.
 data ValidatedBlock
-ValidatedBlock :: Block -> [ChainEvent] -> UtxoIndex -> ValidatedBlock
+ValidatedBlock :: !Block -> ![ChainEvent] -> !UtxoIndex -> ValidatedBlock
 
 -- | The transactions that have been validated in this block.
-[vlbValid] :: ValidatedBlock -> Block
+[vlbValid] :: ValidatedBlock -> !Block
 
 -- | Transaction validation events for the transactions in this block.
-[vlbEvents] :: ValidatedBlock -> [ChainEvent]
+[vlbEvents] :: ValidatedBlock -> ![ChainEvent]
 
 -- | The updated UTxO index after processing the block
-[vlbIndex] :: ValidatedBlock -> UtxoIndex
+[vlbIndex] :: ValidatedBlock -> !UtxoIndex
 data ValidationCtx
-ValidationCtx :: UtxoIndex -> Params -> ValidationCtx
-[vctxIndex] :: ValidationCtx -> UtxoIndex
-[vctxParams] :: ValidationCtx -> Params
+ValidationCtx :: !UtxoIndex -> !Params -> ValidationCtx
+[vctxIndex] :: ValidationCtx -> !UtxoIndex
+[vctxParams] :: ValidationCtx -> !Params
 
 -- | Validate a block given the current slot and UTxO index, returning the
 --   valid transactions, success/failure events and the updated UTxO set.
@@ -471,4 +467,142 @@ instance GHC.Generics.Generic Cardano.Node.Emulator.Chain.ChainState
 instance GHC.Show.Show Cardano.Node.Emulator.Chain.ChainState
 instance Prettyprinter.Internal.Pretty Cardano.Node.Emulator.Chain.ChainEvent
 
+module Cardano.Node.Emulator.MTL.LogMessages
+data EmulatorMsg
+GenericMsg :: Value -> EmulatorMsg
+TxBalanceMsg :: TxBalanceMsg -> EmulatorMsg
+ChainEvent :: ChainEvent -> EmulatorMsg
+data TxBalanceMsg
+BalancingUnbalancedTx :: CardanoBuildTx -> UtxoIndex -> TxBalanceMsg
+FinishedBalancing :: CardanoTx -> TxBalanceMsg
+SigningTx :: CardanoTx -> TxBalanceMsg
+SubmittingTx :: CardanoTx -> TxBalanceMsg
+ValidationFailed :: ValidationPhase -> TxId -> CardanoTx -> ValidationError -> Value -> [Text] -> TxBalanceMsg
+_ValidationFailed :: Prism' TxBalanceMsg (ValidationPhase, TxId, CardanoTx, ValidationError, Value, [Text])
+_SubmittingTx :: Prism' TxBalanceMsg CardanoTx
+_SigningTx :: Prism' TxBalanceMsg CardanoTx
+_FinishedBalancing :: Prism' TxBalanceMsg CardanoTx
+_BalancingUnbalancedTx :: Prism' TxBalanceMsg (CardanoBuildTx, UtxoIndex)
+instance Data.Aeson.Types.FromJSON.FromJSON Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
+instance Data.Aeson.Types.ToJSON.ToJSON Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
+instance GHC.Generics.Generic Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
+instance GHC.Show.Show Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
+instance GHC.Classes.Eq Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
+instance Data.Aeson.Types.FromJSON.FromJSON Cardano.Node.Emulator.MTL.LogMessages.EmulatorMsg
+instance Data.Aeson.Types.ToJSON.ToJSON Cardano.Node.Emulator.MTL.LogMessages.EmulatorMsg
+instance GHC.Generics.Generic Cardano.Node.Emulator.MTL.LogMessages.EmulatorMsg
+instance GHC.Show.Show Cardano.Node.Emulator.MTL.LogMessages.EmulatorMsg
+instance GHC.Classes.Eq Cardano.Node.Emulator.MTL.LogMessages.EmulatorMsg
+instance Prettyprinter.Internal.Pretty Cardano.Node.Emulator.MTL.LogMessages.EmulatorMsg
+instance Prettyprinter.Internal.Pretty Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
+
 module Cardano.Node.Emulator
+
+
+-- | If you want to run the node emulator without using the
+--   <tt>Contract</tt> monad, this module provides a simple MTL-based
+--   interface.
+module Cardano.Node.Emulator.MTL
+
+-- | Queue the transaction, it will be processed when <tt>nextSlot</tt> is
+--   called.
+queueTx :: MonadEmulator m => CardanoTx -> m ()
+
+-- | Process the queued transactions and increase the slot number.
+nextSlot :: MonadEmulator m => m ()
+
+-- | Get the current slot number of the emulated node.
+currentSlot :: MonadEmulator m => m Slot
+
+-- | Call <a>nextSlot</a> until the current slot number equals or exceeds
+--   the given slot number.
+awaitSlot :: MonadEmulator m => Slot -> m ()
+
+-- | Query the unspent transaction outputs at the given address.
+utxosAt :: MonadEmulator m => CardanoAddress -> m (Map TxOutRef DecoratedTxOut)
+
+-- | Query the total value of the unspent transaction outputs at the given
+--   address.
+fundsAt :: MonadEmulator m => CardanoAddress -> m Value
+
+-- | Balance an unbalanced transaction, using funds from the given wallet
+--   if needed, and returning any remaining value to the same wallet.
+balanceTx :: MonadEmulator m => UtxoIndex -> CardanoAddress -> CardanoBuildTx -> m CardanoTx
+
+-- | Sign a transaction with the given signatures.
+signTx :: (MonadEmulator m, Foldable f) => f PaymentPrivateKey -> CardanoTx -> m CardanoTx
+
+-- | Balance a transaction, sign it with the given signatures, and finally
+--   queue it.
+submitUnbalancedTx :: (MonadEmulator m, Foldable f) => UtxoIndex -> CardanoAddress -> f PaymentPrivateKey -> CardanoBuildTx -> m CardanoTx
+submitTxConfirmed :: (MonadEmulator m, Foldable f) => UtxoIndex -> CardanoAddress -> f PaymentPrivateKey -> CardanoBuildTx -> m CardanoTx
+
+-- | Create a transaction that transfers funds from one address to another,
+--   and sign and submit it.
+payToAddress :: MonadEmulator m => (CardanoAddress, PaymentPrivateKey) -> CardanoAddress -> Value -> m TxId
+
+-- | Log a message at the <tt>Debug</tt> level
+logDebug :: (ToJSON a, MonadEmulator m) => a -> m ()
+
+-- | Log a message at the <tt>Info</tt> level
+logInfo :: (ToJSON a, MonadEmulator m) => a -> m ()
+
+-- | Log a message at the <tt>Warning</tt> level
+logWarn :: (ToJSON a, MonadEmulator m) => a -> m ()
+
+-- | Log a message at the <tt>Error</tt> level
+logError :: (ToJSON a, MonadEmulator m) => a -> m ()
+data EmulatorState
+EmulatorState :: !ChainState -> !AddressMap -> EmulatorState
+esChainState :: Lens' EmulatorState ChainState
+esAddressMap :: Lens' EmulatorState AddressMap
+data EmulatorError
+BalancingError :: !BalancingError -> EmulatorError
+ValidationError :: !ValidationErrorInPhase -> EmulatorError
+ToCardanoError :: !ToCardanoError -> EmulatorError
+type EmulatorLogs = Seq (LogMessage EmulatorMsg)
+data EmulatorMsg
+GenericMsg :: Value -> EmulatorMsg
+TxBalanceMsg :: TxBalanceMsg -> EmulatorMsg
+ChainEvent :: ChainEvent -> EmulatorMsg
+data LogMessage a
+LogMessage :: LogLevel -> a -> LogMessage a
+[_logLevel] :: LogMessage a -> LogLevel
+[_logMessageContent] :: LogMessage a -> a
+type MonadEmulator m = (MonadRWS Params EmulatorLogs EmulatorState m, MonadError EmulatorError m)
+type EmulatorT m = ExceptT EmulatorError (RWST Params EmulatorLogs EmulatorState m)
+type EmulatorM = EmulatorT Identity
+emptyEmulatorState :: EmulatorState
+emptyEmulatorStateWithInitialDist :: Map CardanoAddress Value -> EmulatorState
+getParams :: MonadEmulator m => m Params
+handleChain :: MonadEmulator m => Eff [ChainControlEffect, ChainEffect] a -> m a
+instance GHC.Show.Show Cardano.Node.Emulator.MTL.EmulatorError
+instance GHC.Show.Show Cardano.Node.Emulator.MTL.EmulatorState
+
+module Cardano.Node.Emulator.MTL.Test
+
+-- | Test the number of validated transactions and the total number of
+--   transactions. Returns a failure message if the numbers don't match up.
+hasValidatedTransactionCountOfTotal :: Int -> Int -> EmulatorLogs -> Maybe String
+
+-- | Render the logs in a format useful for debugging why a test failed.
+renderLogs :: EmulatorLogs -> Text
+
+-- | Sanity check a <a>ContractModel</a>. Ensures that wallet balances are
+--   not always unchanged.
+propSanityCheckModel :: forall state. ContractModel state => Property
+
+-- | Sanity check a <a>ContractModel</a>. Ensures that all assertions in
+--   the property generation succeed.
+propSanityCheckAssertions :: forall state. ContractModel state => Actions state -> Property
+
+-- | Run <a>Actions</a> in the emulator and check that the model and the
+--   emulator agree on the final wallet balance changes. Starts with
+--   100.000.000 Ada for each wallet and the default parameters.
+propRunActions_ :: forall state. RunModel state EmulatorM => Actions state -> Property
+propRunActions :: forall state. RunModel state EmulatorM => (ModelState state -> EmulatorLogs -> Maybe String) -> Actions state -> Property
+propRunActionsWithOptions :: forall state. RunModel state EmulatorM => Map CardanoAddress Value -> Params -> (ModelState state -> EmulatorLogs -> Maybe String) -> Actions state -> Property
+chainStateToChainIndex :: NetworkId -> ChainState -> ChainIndex
+chainStateToContractModelChainState :: ChainState -> ChainState
+instance Test.QuickCheck.ContractModel.Internal.IsRunnable Cardano.Node.Emulator.MTL.EmulatorM
+instance Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex Cardano.Node.Emulator.MTL.EmulatorM

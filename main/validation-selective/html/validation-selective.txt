@@ -14,7 +14,7 @@
 --       | Success a
 --   </pre>
 @package validation-selective
-@version 0.1.0.2
+@version 0.2.0.0
 
 
 -- | Helpful combinators to work with <a>Validation</a> data type.
@@ -631,10 +631,10 @@ instance (GHC.Classes.Eq e, GHC.Classes.Eq a) => GHC.Classes.Eq (Validation.Vali
 instance (Validation.NoValidationMonadError, GHC.Base.Semigroup e) => GHC.Base.Monad (Validation.Validation e)
 instance GHC.Base.Functor (Validation.Validation e)
 instance (GHC.Base.Semigroup e, GHC.Base.Semigroup a) => GHC.Base.Semigroup (Validation.Validation e a)
-instance (GHC.Base.Semigroup e, GHC.Base.Semigroup a, GHC.Base.Monoid a) => GHC.Base.Monoid (Validation.Validation e a)
+instance (GHC.Base.Semigroup e, GHC.Base.Monoid a) => GHC.Base.Monoid (Validation.Validation e a)
 instance GHC.Base.Semigroup e => GHC.Base.Applicative (Validation.Validation e)
 instance GHC.Base.Semigroup e => Control.Selective.Selective (Validation.Validation e)
-instance (GHC.Base.Semigroup e, GHC.Base.Monoid e) => GHC.Base.Alternative (Validation.Validation e)
+instance GHC.Base.Monoid e => GHC.Base.Alternative (Validation.Validation e)
 instance Data.Foldable.Foldable (Validation.Validation e)
 instance Data.Traversable.Traversable (Validation.Validation e)
 instance Data.Bifunctor.Bifunctor Validation.Validation

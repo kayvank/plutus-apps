@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24maxtag_Ig36pSkYWaUH03IoGNg6x5"><span id="%24tag2con_Ig36pSkYWaUH03IoGNg6x5"><span id="%24con2tag_Ig36pSkYWaUH03IoGNg6x5"></span></span></span><span class="hs-pragma">{-# LANGUAGE GeneralizedNewtypeDeriving #-}</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24maxtag_3gHRNfquLv5BIJ0oY37v8a"><span id="%24tag2con_3gHRNfquLv5BIJ0oY37v8a"><span id="%24con2tag_3gHRNfquLv5BIJ0oY37v8a"></span></span></span><span class="hs-pragma">{-# LANGUAGE GeneralizedNewtypeDeriving #-}</span><span>
 </span><span id="line-2"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Database.Beam.Backend.SQL.Types</span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-3"></span><span>
 </span><span id="line-4"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier">Data.Aeson</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Json</span></span><span>
 </span><span id="line-5"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Data.Bits</span></a></span><span>
 </span><span id="line-6"></span><span>
 </span><span id="line-7"></span><span class="hs-keyword">data</span><span> </span><span id="SqlNull"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlNull"><span class="hs-identifier hs-var">SqlNull</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SqlNull"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlNull"><span class="hs-identifier hs-var">SqlNull</span></a></span></span><span>
-</span><span id="line-8"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679459659"><span id="local-6989586621679459661"><span id="local-6989586621679459663"><span class="annot"><span class="annottext">Int -&gt; SqlNull -&gt; ShowS
+</span><span id="line-8"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679459666"><span id="local-6989586621679459668"><span id="local-6989586621679459670"><span class="annot"><span class="annottext">Int -&gt; SqlNull -&gt; ShowS
 [SqlNull] -&gt; ShowS
 SqlNull -&gt; String
 (Int -&gt; SqlNull -&gt; ShowS)
@@ -18,7 +18,7 @@ show :: SqlNull -&gt; String
 $cshow :: SqlNull -&gt; String
 showsPrec :: Int -&gt; SqlNull -&gt; ShowS
 $cshowsPrec :: Int -&gt; SqlNull -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459654"><span id="local-6989586621679459656"><span class="annot"><span class="annottext">SqlNull -&gt; SqlNull -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459661"><span id="local-6989586621679459663"><span class="annot"><span class="annottext">SqlNull -&gt; SqlNull -&gt; Bool
 (SqlNull -&gt; SqlNull -&gt; Bool)
 -&gt; (SqlNull -&gt; SqlNull -&gt; Bool) -&gt; Eq SqlNull
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -26,7 +26,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: SqlNull -&gt; SqlNull -&gt; Bool
 == :: SqlNull -&gt; SqlNull -&gt; Bool
 $c== :: SqlNull -&gt; SqlNull -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459638"><span id="local-6989586621679459640"><span id="local-6989586621679459642"><span id="local-6989586621679459644"><span id="local-6989586621679459646"><span id="local-6989586621679459648"><span id="local-6989586621679459650"><span class="annot"><span class="annottext">Eq SqlNull
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459645"><span id="local-6989586621679459647"><span id="local-6989586621679459649"><span id="local-6989586621679459651"><span id="local-6989586621679459653"><span id="local-6989586621679459655"><span id="local-6989586621679459657"><span class="annot"><span class="annottext">Eq SqlNull
 Eq SqlNull
 -&gt; (SqlNull -&gt; SqlNull -&gt; Ordering)
 -&gt; (SqlNull -&gt; SqlNull -&gt; Bool)
@@ -64,14 +64,14 @@ $c&lt; :: SqlNull -&gt; SqlNull -&gt; Bool
 compare :: SqlNull -&gt; SqlNull -&gt; Ordering
 $ccompare :: SqlNull -&gt; SqlNull -&gt; Ordering
 $cp1Ord :: Eq SqlNull
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459633"><span id="local-6989586621679459635"><span class="annot"><span class="annottext">SqlNull
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459640"><span id="local-6989586621679459642"><span class="annot"><span class="annottext">SqlNull
 SqlNull -&gt; SqlNull -&gt; Bounded SqlNull
 forall a. a -&gt; a -&gt; Bounded a
 maxBound :: SqlNull
 $cmaxBound :: SqlNull
 minBound :: SqlNull
 $cminBound :: SqlNull
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Bounded</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459616"><span id="local-6989586621679459618"><span id="local-6989586621679459620"><span id="local-6989586621679459622"><span id="local-6989586621679459624"><span id="local-6989586621679459626"><span id="local-6989586621679459628"><span id="local-6989586621679459630"><span class="annot"><span class="annottext">Int -&gt; SqlNull
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Bounded</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459623"><span id="local-6989586621679459625"><span id="local-6989586621679459627"><span id="local-6989586621679459629"><span id="local-6989586621679459631"><span id="local-6989586621679459633"><span id="local-6989586621679459635"><span id="local-6989586621679459637"><span class="annot"><span class="annottext">Int -&gt; SqlNull
 SqlNull -&gt; Int
 SqlNull -&gt; [SqlNull]
 SqlNull -&gt; SqlNull
@@ -114,7 +114,7 @@ succ :: SqlNull -&gt; SqlNull
 $csucc :: SqlNull -&gt; SqlNull
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></a></span></span></span></span></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-9"></span><span class="hs-keyword">newtype</span><span> </span><span id="SqlBitString"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlBitString"><span class="hs-identifier hs-var">SqlBitString</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SqlBitString"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlBitString"><span class="hs-identifier hs-var">SqlBitString</span></a></span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
-</span><span id="line-10"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679459608"><span id="local-6989586621679459610"><span id="local-6989586621679459612"><span class="annot"><span class="annottext">Int -&gt; SqlBitString -&gt; ShowS
+</span><span id="line-10"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679459615"><span id="local-6989586621679459617"><span id="local-6989586621679459619"><span class="annot"><span class="annottext">Int -&gt; SqlBitString -&gt; ShowS
 [SqlBitString] -&gt; ShowS
 SqlBitString -&gt; String
 (Int -&gt; SqlBitString -&gt; ShowS)
@@ -129,7 +129,7 @@ show :: SqlBitString -&gt; String
 $cshow :: SqlBitString -&gt; String
 showsPrec :: Int -&gt; SqlBitString -&gt; ShowS
 $cshowsPrec :: Int -&gt; SqlBitString -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459604"><span id="local-6989586621679459606"><span class="annot"><span class="annottext">SqlBitString -&gt; SqlBitString -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459611"><span id="local-6989586621679459613"><span class="annot"><span class="annottext">SqlBitString -&gt; SqlBitString -&gt; Bool
 (SqlBitString -&gt; SqlBitString -&gt; Bool)
 -&gt; (SqlBitString -&gt; SqlBitString -&gt; Bool) -&gt; Eq SqlBitString
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -137,7 +137,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: SqlBitString -&gt; SqlBitString -&gt; Bool
 == :: SqlBitString -&gt; SqlBitString -&gt; Bool
 $c== :: SqlBitString -&gt; SqlBitString -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459589"><span id="local-6989586621679459591"><span id="local-6989586621679459593"><span id="local-6989586621679459595"><span id="local-6989586621679459597"><span id="local-6989586621679459599"><span id="local-6989586621679459601"><span class="annot"><span class="annottext">Eq SqlBitString
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459596"><span id="local-6989586621679459598"><span id="local-6989586621679459600"><span id="local-6989586621679459602"><span id="local-6989586621679459604"><span id="local-6989586621679459606"><span id="local-6989586621679459608"><span class="annot"><span class="annottext">Eq SqlBitString
 Eq SqlBitString
 -&gt; (SqlBitString -&gt; SqlBitString -&gt; Ordering)
 -&gt; (SqlBitString -&gt; SqlBitString -&gt; Bool)
@@ -175,7 +175,7 @@ $c&lt; :: SqlBitString -&gt; SqlBitString -&gt; Bool
 compare :: SqlBitString -&gt; SqlBitString -&gt; Ordering
 $ccompare :: SqlBitString -&gt; SqlBitString -&gt; Ordering
 $cp1Ord :: Eq SqlBitString
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459573"><span id="local-6989586621679459575"><span id="local-6989586621679459577"><span id="local-6989586621679459579"><span id="local-6989586621679459581"><span id="local-6989586621679459583"><span id="local-6989586621679459585"><span id="local-6989586621679459587"><span class="annot"><span class="annottext">Int -&gt; SqlBitString
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459580"><span id="local-6989586621679459582"><span id="local-6989586621679459584"><span id="local-6989586621679459586"><span id="local-6989586621679459588"><span id="local-6989586621679459590"><span id="local-6989586621679459592"><span id="local-6989586621679459594"><span class="annot"><span class="annottext">Int -&gt; SqlBitString
 SqlBitString -&gt; Int
 SqlBitString -&gt; [SqlBitString]
 SqlBitString -&gt; SqlBitString
@@ -216,7 +216,7 @@ pred :: SqlBitString -&gt; SqlBitString
 $cpred :: SqlBitString -&gt; SqlBitString
 succ :: SqlBitString -&gt; SqlBitString
 $csucc :: SqlBitString -&gt; SqlBitString
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></a></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459528"><span id="local-6989586621679459530"><span id="local-6989586621679459532"><span id="local-6989586621679459534"><span id="local-6989586621679459536"><span id="local-6989586621679459538"><span id="local-6989586621679459540"><span id="local-6989586621679459542"><span id="local-6989586621679459544"><span id="local-6989586621679459546"><span id="local-6989586621679459548"><span id="local-6989586621679459550"><span id="local-6989586621679459552"><span id="local-6989586621679459554"><span id="local-6989586621679459556"><span id="local-6989586621679459558"><span id="local-6989586621679459560"><span id="local-6989586621679459562"><span id="local-6989586621679459564"><span id="local-6989586621679459566"><span id="local-6989586621679459568"><span id="local-6989586621679459570"><span class="annot"><span class="annottext">Eq SqlBitString
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></a></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459535"><span id="local-6989586621679459537"><span id="local-6989586621679459539"><span id="local-6989586621679459541"><span id="local-6989586621679459543"><span id="local-6989586621679459545"><span id="local-6989586621679459547"><span id="local-6989586621679459549"><span id="local-6989586621679459551"><span id="local-6989586621679459553"><span id="local-6989586621679459555"><span id="local-6989586621679459557"><span id="local-6989586621679459559"><span id="local-6989586621679459561"><span id="local-6989586621679459563"><span id="local-6989586621679459565"><span id="local-6989586621679459567"><span id="local-6989586621679459569"><span id="local-6989586621679459571"><span id="local-6989586621679459573"><span id="local-6989586621679459575"><span id="local-6989586621679459577"><span class="annot"><span class="annottext">Eq SqlBitString
 SqlBitString
 Eq SqlBitString
 -&gt; (SqlBitString -&gt; SqlBitString -&gt; SqlBitString)
@@ -322,9 +322,9 @@ $c.&amp;. :: SqlBitString -&gt; SqlBitString -&gt; SqlBitString
 $cp1Bits :: Eq SqlBitString
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Bits</span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-11"></span><span>
-</span><span id="line-12"></span><span class="hs-keyword">newtype</span><span> </span><span id="SqlSerial"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-var">SqlSerial</span></a></span></span><span> </span><span id="local-6989586621679459676"><span class="annot"><a href="#local-6989586621679459676"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SqlSerial"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-var">SqlSerial</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unSerial"><span class="annot"><span class="annottext">SqlSerial a -&gt; a
-</span><a href="Database.Beam.Backend.SQL.Types.html#unSerial"><span class="hs-identifier hs-var hs-var">unSerial</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="#local-6989586621679459676"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-13"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679459519"><span id="local-6989586621679459521"><span id="local-6989586621679459523"><span class="annot"><span class="annottext">Int -&gt; SqlSerial a -&gt; ShowS
+</span><span id="line-12"></span><span class="hs-keyword">newtype</span><span> </span><span id="SqlSerial"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-var">SqlSerial</span></a></span></span><span> </span><span id="local-6989586621679459683"><span class="annot"><a href="#local-6989586621679459683"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SqlSerial"><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-var">SqlSerial</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unSerial"><span class="annot"><span class="annottext">SqlSerial a -&gt; a
+</span><a href="Database.Beam.Backend.SQL.Types.html#unSerial"><span class="hs-identifier hs-var hs-var">unSerial</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="#local-6989586621679459683"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-special">}</span><span>
+</span><span id="line-13"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679459526"><span id="local-6989586621679459528"><span id="local-6989586621679459530"><span class="annot"><span class="annottext">Int -&gt; SqlSerial a -&gt; ShowS
 [SqlSerial a] -&gt; ShowS
 SqlSerial a -&gt; String
 (Int -&gt; SqlSerial a -&gt; ShowS)
@@ -342,7 +342,7 @@ show :: SqlSerial a -&gt; String
 $cshow :: forall a. Show a =&gt; SqlSerial a -&gt; String
 showsPrec :: Int -&gt; SqlSerial a -&gt; ShowS
 $cshowsPrec :: forall a. Show a =&gt; Int -&gt; SqlSerial a -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459511"><span id="local-6989586621679459513"><span id="local-6989586621679459515"><span id="local-6989586621679459517"><span class="annot"><span class="annottext">ReadPrec [SqlSerial a]
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459518"><span id="local-6989586621679459520"><span id="local-6989586621679459522"><span id="local-6989586621679459524"><span class="annot"><span class="annottext">ReadPrec [SqlSerial a]
 ReadPrec (SqlSerial a)
 Int -&gt; ReadS (SqlSerial a)
 ReadS [SqlSerial a]
@@ -366,7 +366,7 @@ readList :: ReadS [SqlSerial a]
 $creadList :: forall a. Read a =&gt; ReadS [SqlSerial a]
 readsPrec :: Int -&gt; ReadS (SqlSerial a)
 $creadsPrec :: forall a. Read a =&gt; Int -&gt; ReadS (SqlSerial a)
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459506"><span id="local-6989586621679459508"><span class="annot"><span class="annottext">SqlSerial a -&gt; SqlSerial a -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459513"><span id="local-6989586621679459515"><span class="annot"><span class="annottext">SqlSerial a -&gt; SqlSerial a -&gt; Bool
 (SqlSerial a -&gt; SqlSerial a -&gt; Bool)
 -&gt; (SqlSerial a -&gt; SqlSerial a -&gt; Bool) -&gt; Eq (SqlSerial a)
 forall a. Eq a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; Bool
@@ -375,7 +375,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: forall a. Eq a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; Bool
 == :: SqlSerial a -&gt; SqlSerial a -&gt; Bool
 $c== :: forall a. Eq a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459491"><span id="local-6989586621679459493"><span id="local-6989586621679459495"><span id="local-6989586621679459497"><span id="local-6989586621679459499"><span id="local-6989586621679459501"><span id="local-6989586621679459503"><span class="annot"><span class="annottext">Eq (SqlSerial a)
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459498"><span id="local-6989586621679459500"><span id="local-6989586621679459502"><span id="local-6989586621679459504"><span id="local-6989586621679459506"><span id="local-6989586621679459508"><span id="local-6989586621679459510"><span class="annot"><span class="annottext">Eq (SqlSerial a)
 Eq (SqlSerial a)
 -&gt; (SqlSerial a -&gt; SqlSerial a -&gt; Ordering)
 -&gt; (SqlSerial a -&gt; SqlSerial a -&gt; Bool)
@@ -417,7 +417,7 @@ $c&lt; :: forall a. Ord a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; Bool
 compare :: SqlSerial a -&gt; SqlSerial a -&gt; Ordering
 $ccompare :: forall a. Ord a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; Ordering
 $cp1Ord :: forall a. Ord a =&gt; Eq (SqlSerial a)
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459477"><span id="local-6989586621679459479"><span id="local-6989586621679459481"><span id="local-6989586621679459483"><span id="local-6989586621679459485"><span id="local-6989586621679459487"><span id="local-6989586621679459489"><span class="annot"><span class="annottext">Integer -&gt; SqlSerial a
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459484"><span id="local-6989586621679459486"><span id="local-6989586621679459488"><span id="local-6989586621679459490"><span id="local-6989586621679459492"><span id="local-6989586621679459494"><span id="local-6989586621679459496"><span class="annot"><span class="annottext">Integer -&gt; SqlSerial a
 SqlSerial a -&gt; SqlSerial a
 SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
 (SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a)
@@ -454,7 +454,7 @@ $c* :: forall a. Num a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
 $c- :: forall a. Num a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
 + :: SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
 $c+ :: forall a. Num a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459460"><span id="local-6989586621679459462"><span id="local-6989586621679459464"><span id="local-6989586621679459466"><span id="local-6989586621679459468"><span id="local-6989586621679459470"><span id="local-6989586621679459472"><span class="annot"><span class="annottext">Enum (SqlSerial a)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459467"><span id="local-6989586621679459469"><span id="local-6989586621679459471"><span id="local-6989586621679459473"><span id="local-6989586621679459475"><span id="local-6989586621679459477"><span id="local-6989586621679459479"><span class="annot"><span class="annottext">Enum (SqlSerial a)
 Real (SqlSerial a)
 Real (SqlSerial a)
 -&gt; Enum (SqlSerial a)
@@ -507,7 +507,7 @@ quot :: SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
 $cquot :: forall a. Integral a =&gt; SqlSerial a -&gt; SqlSerial a -&gt; SqlSerial a
 $cp2Integral :: forall a. Integral a =&gt; Enum (SqlSerial a)
 $cp1Integral :: forall a. Integral a =&gt; Real (SqlSerial a)
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Integral</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459455"><span class="annot"><span class="annottext">Num (SqlSerial a)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Integral</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459462"><span class="annot"><span class="annottext">Num (SqlSerial a)
 Ord (SqlSerial a)
 Num (SqlSerial a)
 -&gt; Ord (SqlSerial a)
@@ -522,7 +522,7 @@ toRational :: SqlSerial a -&gt; Rational
 $ctoRational :: forall a. Real a =&gt; SqlSerial a -&gt; Rational
 $cp2Real :: forall a. Real a =&gt; Ord (SqlSerial a)
 $cp1Real :: forall a. Real a =&gt; Num (SqlSerial a)
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Real</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459438"><span id="local-6989586621679459440"><span id="local-6989586621679459442"><span id="local-6989586621679459444"><span id="local-6989586621679459446"><span id="local-6989586621679459448"><span id="local-6989586621679459450"><span id="local-6989586621679459452"><span class="annot"><span class="annottext">Int -&gt; SqlSerial a
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Real</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679459445"><span id="local-6989586621679459447"><span id="local-6989586621679459449"><span id="local-6989586621679459451"><span id="local-6989586621679459453"><span id="local-6989586621679459455"><span id="local-6989586621679459457"><span id="local-6989586621679459459"><span class="annot"><span class="annottext">Int -&gt; SqlSerial a
 SqlSerial a -&gt; Int
 SqlSerial a -&gt; [SqlSerial a]
 SqlSerial a -&gt; SqlSerial a
@@ -575,29 +575,29 @@ succ :: SqlSerial a -&gt; SqlSerial a
 $csucc :: forall a. Enum a =&gt; SqlSerial a -&gt; SqlSerial a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></a></span></span></span></span></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-14"></span><span>
-</span><span id="line-15"></span><span id="local-6989586621679459437"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679459434"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459437"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.FromJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459437"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-16"></span><span>  </span><span id="local-6989586621679459432"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser (SqlSerial a)
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span id="local-6989586621679459430"><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679459430"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; SqlSerial a
+</span><span id="line-15"></span><span id="local-6989586621679459444"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679459441"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.FromJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459444"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.FromJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459444"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-16"></span><span>  </span><span id="local-6989586621679459439"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser (SqlSerial a)
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span id="local-6989586621679459437"><span class="annot"><span class="annottext">Value
+</span><a href="#local-6989586621679459437"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; SqlSerial a
 forall a. a -&gt; SqlSerial a
 </span><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-var">SqlSerial</span></a></span><span> </span><span class="annot"><span class="annottext">(a -&gt; SqlSerial a) -&gt; Parser a -&gt; Parser (SqlSerial a)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Parser a
 forall a. FromJSON a =&gt; Value -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">Json.parseJSON</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679459430"><span class="hs-identifier hs-var">a</span></a></span></span><span>
-</span><span id="line-17"></span><span id="local-6989586621679459428"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679459422"><span id="local-6989586621679459424"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459428"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.ToJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459428"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-18"></span><span>  </span><span id="local-6989586621679459420"><span class="annot"><span class="annottext">toJSON :: SqlSerial a -&gt; Value
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span id="local-6989586621679459418"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679459418"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Value
+</span><a href="#local-6989586621679459437"><span class="hs-identifier hs-var">a</span></a></span></span><span>
+</span><span id="line-17"></span><span id="local-6989586621679459435"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679459429"><span id="local-6989586621679459431"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.ToJSON</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459435"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Json.ToJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679459435"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-18"></span><span>  </span><span id="local-6989586621679459427"><span class="annot"><span class="annottext">toJSON :: SqlSerial a -&gt; Value
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span id="local-6989586621679459425"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679459425"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">Json.toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679459418"><span class="hs-identifier hs-var">a</span></a></span><span>
-</span><span id="line-19"></span><span>  </span><span id="local-6989586621679459417"><span class="annot"><span class="annottext">toEncoding :: SqlSerial a -&gt; Encoding
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toEncoding</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span id="local-6989586621679459415"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679459415"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Encoding
+</span><a href="#local-6989586621679459425"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><span id="line-19"></span><span>  </span><span id="local-6989586621679459424"><span class="annot"><span class="annottext">toEncoding :: SqlSerial a -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toEncoding</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Beam.Backend.SQL.Types.html#SqlSerial"><span class="hs-identifier hs-type">SqlSerial</span></a></span><span> </span><span id="local-6989586621679459422"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679459422"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Encoding
 forall a. ToJSON a =&gt; a -&gt; Encoding
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">Json.toEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679459415"><span class="hs-identifier hs-var">a</span></a></span></span><span>
+</span><a href="#local-6989586621679459422"><span class="hs-identifier hs-var">a</span></a></span></span><span>
 </span><span id="line-20"></span><span>
 </span><span id="line-21"></span></pre></body></html>

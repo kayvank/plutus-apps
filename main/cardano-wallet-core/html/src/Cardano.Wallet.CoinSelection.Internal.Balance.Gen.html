@@ -81,8 +81,8 @@ forall a. SelectionLimitOf a
 </span><span id="line-62"></span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#shrinkSelectionLimit"><span class="hs-identifier hs-type">shrinkSelectionLimit</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionLimit"><span class="hs-identifier hs-type">SelectionLimit</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionLimit"><span class="hs-identifier hs-type">SelectionLimit</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-63"></span><span id="shrinkSelectionLimit"><span class="annot"><span class="annottext">shrinkSelectionLimit :: SelectionLimit -&gt; [SelectionLimit]
 </span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#shrinkSelectionLimit"><span class="hs-identifier hs-var hs-var">shrinkSelectionLimit</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
-</span><span id="line-64"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#MaximumInputLimit"><span class="hs-identifier hs-type">MaximumInputLimit</span></a></span><span> </span><span id="local-6989586621682435148"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682435148"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-64"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#MaximumInputLimit"><span class="hs-identifier hs-type">MaximumInputLimit</span></a></span><span> </span><span id="local-6989586621682435432"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682435432"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-65"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; SelectionLimit
 forall a. a -&gt; SelectionLimitOf a
 </span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#MaximumInputLimit"><span class="hs-identifier hs-var">MaximumInputLimit</span></a></span><span> </span><span class="annot"><span class="annottext">(Int -&gt; SelectionLimit)
@@ -98,7 +98,7 @@ forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; NonNegative Int
 forall a. a -&gt; NonNegative a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">NonNegative</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682435148"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682435432"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-66"></span><span>    </span><span class="annot"><span class="annottext">SelectionLimit
 </span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#NoLimit"><span class="hs-identifier hs-var">NoLimit</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-67"></span><span>        </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
@@ -107,10 +107,10 @@ forall a. a -&gt; NonNegative a
 </span><span id="line-70"></span><span class="hs-comment">-- Selection skeletons</span><span>
 </span><span id="line-71"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-72"></span><span>
-</span><span id="line-73"></span><span id="local-6989586621682435146"><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#genSelectionSkeleton"><span class="hs-identifier hs-type">genSelectionSkeleton</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Context.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435146"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionSkeleton"><span class="hs-identifier hs-type">SelectionSkeleton</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435146"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-73"></span><span id="local-6989586621682435430"><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#genSelectionSkeleton"><span class="hs-identifier hs-type">genSelectionSkeleton</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Context.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435430"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionSkeleton"><span class="hs-identifier hs-type">SelectionSkeleton</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435430"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-74"></span><span id="genSelectionSkeleton"><span class="annot"><span class="annottext">genSelectionSkeleton :: Gen (Address ctx) -&gt; Gen (SelectionSkeleton ctx)
-</span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#genSelectionSkeleton"><span class="hs-identifier hs-var hs-var">genSelectionSkeleton</span></a></span></span><span> </span><span id="local-6989586621682435145"><span class="annot"><span class="annottext">Gen (Address ctx)
-</span><a href="#local-6989586621682435145"><span class="hs-identifier hs-var">genAddress</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#genSelectionSkeleton"><span class="hs-identifier hs-var hs-var">genSelectionSkeleton</span></a></span></span><span> </span><span id="local-6989586621682435429"><span class="annot"><span class="annottext">Gen (Address ctx)
+</span><a href="#local-6989586621682435429"><span class="hs-identifier hs-var">genAddress</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
 -&gt; [(Address ctx, TokenBundle)]
 -&gt; [Set AssetId]
 -&gt; SelectionSkeleton ctx
@@ -130,7 +130,7 @@ Int
       -&gt; [Set AssetId] -&gt; SelectionSkeleton ctx)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Int
-</span><a href="#local-6989586621682435143"><span class="hs-identifier hs-var">genSkeletonInputCount</span></a></span><span>
+</span><a href="#local-6989586621682435427"><span class="hs-identifier hs-var">genSkeletonInputCount</span></a></span><span>
 </span><span id="line-76"></span><span>    </span><span class="annot"><span class="annottext">Gen
   ([(Address ctx, TokenBundle)]
    -&gt; [Set AssetId] -&gt; SelectionSkeleton ctx)
@@ -138,15 +138,15 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 -&gt; Gen ([Set AssetId] -&gt; SelectionSkeleton ctx)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen [(Address ctx, TokenBundle)]
-</span><a href="#local-6989586621682435142"><span class="hs-identifier hs-var">genSkeletonOutputs</span></a></span><span>
+</span><a href="#local-6989586621682435426"><span class="hs-identifier hs-var">genSkeletonOutputs</span></a></span><span>
 </span><span id="line-77"></span><span>    </span><span class="annot"><span class="annottext">Gen ([Set AssetId] -&gt; SelectionSkeleton ctx)
 -&gt; Gen [Set AssetId] -&gt; Gen (SelectionSkeleton ctx)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen [Set AssetId]
-</span><a href="#local-6989586621682435141"><span class="hs-identifier hs-var">genSkeletonChange</span></a></span><span>
+</span><a href="#local-6989586621682435425"><span class="hs-identifier hs-var">genSkeletonChange</span></a></span><span>
 </span><span id="line-78"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-79"></span><span>    </span><span id="local-6989586621682435143"><span class="annot"><span class="annottext">genSkeletonInputCount :: Gen Int
-</span><a href="#local-6989586621682435143"><span class="hs-identifier hs-var hs-var">genSkeletonInputCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-79"></span><span>    </span><span id="local-6989586621682435427"><span class="annot"><span class="annottext">genSkeletonInputCount :: Gen Int
+</span><a href="#local-6989586621682435427"><span class="hs-identifier hs-var hs-var">genSkeletonInputCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-80"></span><span>        </span><span class="annot"><span class="annottext">NonNegative Int -&gt; Int
 forall a. NonNegative a -&gt; a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var hs-var">getNonNegative</span></a></span><span> </span><span class="annot"><span class="annottext">(NonNegative Int -&gt; Int) -&gt; Gen (NonNegative Int) -&gt; Gen Int
@@ -154,20 +154,20 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Arbitrary (NonNegative Int) =&gt; Gen (NonNegative Int)
 forall a. Arbitrary a =&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">arbitrary</span></a></span><span> </span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">NonNegative</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-81"></span><span>    </span><span id="local-6989586621682435142"><span class="annot"><span class="annottext">genSkeletonOutputs :: Gen [(Address ctx, TokenBundle)]
-</span><a href="#local-6989586621682435142"><span class="hs-identifier hs-var hs-var">genSkeletonOutputs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-81"></span><span>    </span><span id="local-6989586621682435426"><span class="annot"><span class="annottext">genSkeletonOutputs :: Gen [(Address ctx, TokenBundle)]
+</span><a href="#local-6989586621682435426"><span class="hs-identifier hs-var hs-var">genSkeletonOutputs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-82"></span><span>        </span><span class="annot"><span class="annottext">Gen (Address ctx, TokenBundle) -&gt; Gen [(Address ctx, TokenBundle)]
 forall a. Gen a -&gt; Gen [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">listOf</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (Address ctx, TokenBundle)
-</span><a href="#local-6989586621682435140"><span class="hs-identifier hs-var">genSkeletonOutput</span></a></span><span>
-</span><span id="line-83"></span><span>    </span><span id="local-6989586621682435140"><span class="annot"><span class="annottext">genSkeletonOutput :: Gen (Address ctx, TokenBundle)
-</span><a href="#local-6989586621682435140"><span class="hs-identifier hs-var hs-var">genSkeletonOutput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682435424"><span class="hs-identifier hs-var">genSkeletonOutput</span></a></span><span>
+</span><span id="line-83"></span><span>    </span><span id="local-6989586621682435424"><span class="annot"><span class="annottext">genSkeletonOutput :: Gen (Address ctx, TokenBundle)
+</span><a href="#local-6989586621682435424"><span class="hs-identifier hs-var hs-var">genSkeletonOutput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span>
 </span><span id="line-84"></span><span>        </span><span class="annot"><span class="annottext">(Address ctx -&gt; TokenBundle -&gt; (Address ctx, TokenBundle))
 -&gt; Gen (Address ctx)
 -&gt; Gen (TokenBundle -&gt; (Address ctx, TokenBundle))
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (Address ctx)
-</span><a href="#local-6989586621682435145"><span class="hs-identifier hs-var">genAddress</span></a></span><span>
+</span><a href="#local-6989586621682435429"><span class="hs-identifier hs-var">genAddress</span></a></span><span>
 </span><span id="line-85"></span><span>        </span><span class="annot"><span class="annottext">Gen (TokenBundle -&gt; (Address ctx, TokenBundle))
 -&gt; Gen TokenBundle -&gt; Gen (Address ctx, TokenBundle)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
@@ -176,8 +176,8 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 forall a. Gen a -&gt; (a -&gt; Bool) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-operator hs-var">`suchThat`</span></a></span><span> </span><span class="annot"><span class="annottext">TokenBundle -&gt; Bool
 </span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#tokenBundleHasNonZeroCoin"><span class="hs-identifier hs-var">tokenBundleHasNonZeroCoin</span></a></span><span>
-</span><span id="line-86"></span><span>    </span><span id="local-6989586621682435141"><span class="annot"><span class="annottext">genSkeletonChange :: Gen [Set AssetId]
-</span><a href="#local-6989586621682435141"><span class="hs-identifier hs-var hs-var">genSkeletonChange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-86"></span><span>    </span><span id="local-6989586621682435425"><span class="annot"><span class="annottext">genSkeletonChange :: Gen [Set AssetId]
+</span><a href="#local-6989586621682435425"><span class="hs-identifier hs-var hs-var">genSkeletonChange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-87"></span><span>        </span><span class="annot"><span class="annottext">Gen (Set AssetId) -&gt; Gen [Set AssetId]
 forall a. Gen a -&gt; Gen [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">listOf</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[AssetId] -&gt; Set AssetId
@@ -189,13 +189,13 @@ forall a. Gen a -&gt; Gen [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">listOf</span></a></span><span> </span><span class="annot"><span class="annottext">Gen AssetId
 </span><a href="Cardano.Wallet.Primitive.Types.TokenMap.Gen.html#genAssetId"><span class="hs-identifier hs-var">genAssetId</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-88"></span><span>
-</span><span id="line-89"></span><span id="local-6989586621682435137"><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#shrinkSelectionSkeleton"><span class="hs-identifier hs-type">shrinkSelectionSkeleton</span></a></span><span>
-</span><span id="line-90"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Context.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435137"><span class="hs-identifier hs-type">ctx</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Context.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435137"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span><span>
-</span><span id="line-91"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionSkeleton"><span class="hs-identifier hs-type">SelectionSkeleton</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435137"><span class="hs-identifier hs-type">ctx</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionSkeleton"><span class="hs-identifier hs-type">SelectionSkeleton</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435137"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span></span><span>
+</span><span id="line-89"></span><span id="local-6989586621682435421"><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#shrinkSelectionSkeleton"><span class="hs-identifier hs-type">shrinkSelectionSkeleton</span></a></span><span>
+</span><span id="line-90"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Context.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435421"><span class="hs-identifier hs-type">ctx</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Context.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435421"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span><span>
+</span><span id="line-91"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionSkeleton"><span class="hs-identifier hs-type">SelectionSkeleton</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435421"><span class="hs-identifier hs-type">ctx</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.html#SelectionSkeleton"><span class="hs-identifier hs-type">SelectionSkeleton</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682435421"><span class="hs-identifier hs-type">ctx</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span></span><span>
 </span><span id="line-92"></span><span id="shrinkSelectionSkeleton"><span class="annot"><span class="annottext">shrinkSelectionSkeleton :: (Address ctx -&gt; [Address ctx])
 -&gt; SelectionSkeleton ctx -&gt; [SelectionSkeleton ctx]
-</span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#shrinkSelectionSkeleton"><span class="hs-identifier hs-var hs-var">shrinkSelectionSkeleton</span></a></span></span><span> </span><span id="local-6989586621682435136"><span class="annot"><span class="annottext">Address ctx -&gt; [Address ctx]
-</span><a href="#local-6989586621682435136"><span class="hs-identifier hs-var">shrinkAddress</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NP (I -.-&gt; []) '[Int, [(Address ctx, TokenBundle)], [Set AssetId]]
+</span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#shrinkSelectionSkeleton"><span class="hs-identifier hs-var hs-var">shrinkSelectionSkeleton</span></a></span></span><span> </span><span id="local-6989586621682435420"><span class="annot"><span class="annottext">Address ctx -&gt; [Address ctx]
+</span><a href="#local-6989586621682435420"><span class="hs-identifier hs-var">shrinkAddress</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NP (I -.-&gt; []) '[Int, [(Address ctx, TokenBundle)], [Set AssetId]]
 -&gt; SelectionSkeleton ctx -&gt; [SelectionSkeleton ctx]
 forall a (xs :: [*]).
 (Generic a, GFrom a, GTo a, GCode a ~ '[xs]) =&gt;
@@ -209,7 +209,7 @@ NP (I -.-&gt; []) xs -&gt; a -&gt; [a]
 -&gt; [SelectionSkeleton ctx]
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-operator hs-var">&lt;@&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
-</span><a href="#local-6989586621682435135"><span class="hs-identifier hs-var">shrinkSkeletonInputCount</span></a></span><span>
+</span><a href="#local-6989586621682435419"><span class="hs-identifier hs-var">shrinkSkeletonInputCount</span></a></span><span>
 </span><span id="line-94"></span><span>    </span><span class="annot"><span class="annottext">(Int -&gt; [Int])
 -&gt; NP (I -.-&gt; []) '[[(Address ctx, TokenBundle)], [Set AssetId]]
 -&gt; NP
@@ -217,14 +217,14 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall x (xs :: [*]).
 (x -&gt; [x]) -&gt; NP (I -.-&gt; []) xs -&gt; NP (I -.-&gt; []) (x : xs)
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-operator hs-var">&lt;:&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[(Address ctx, TokenBundle)] -&gt; [[(Address ctx, TokenBundle)]]
-</span><a href="#local-6989586621682435134"><span class="hs-identifier hs-var">shrinkSkeletonOutputs</span></a></span><span>
+</span><a href="#local-6989586621682435418"><span class="hs-identifier hs-var">shrinkSkeletonOutputs</span></a></span><span>
 </span><span id="line-95"></span><span>    </span><span class="annot"><span class="annottext">([(Address ctx, TokenBundle)] -&gt; [[(Address ctx, TokenBundle)]])
 -&gt; NP (I -.-&gt; []) '[[Set AssetId]]
 -&gt; NP (I -.-&gt; []) '[[(Address ctx, TokenBundle)], [Set AssetId]]
 forall x (xs :: [*]).
 (x -&gt; [x]) -&gt; NP (I -.-&gt; []) xs -&gt; NP (I -.-&gt; []) (x : xs)
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-operator hs-var">&lt;:&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[Set AssetId] -&gt; [[Set AssetId]]
-</span><a href="#local-6989586621682435133"><span class="hs-identifier hs-var">shrinkSkeletonChange</span></a></span><span>
+</span><a href="#local-6989586621682435417"><span class="hs-identifier hs-var">shrinkSkeletonChange</span></a></span><span>
 </span><span id="line-96"></span><span>    </span><span class="annot"><span class="annottext">([Set AssetId] -&gt; [[Set AssetId]])
 -&gt; NP (I -.-&gt; []) '[] -&gt; NP (I -.-&gt; []) '[[Set AssetId]]
 forall x (xs :: [*]).
@@ -233,20 +233,20 @@ forall x (xs :: [*]).
 forall k (a :: k -&gt; *). NP a '[]
 </span><a href="../../../../sop-core/html/src"><span class="hs-identifier hs-var">Nil</span></a></span><span>
 </span><span id="line-97"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-98"></span><span>    </span><span id="local-6989586621682435135"><span class="annot"><span class="annottext">shrinkSkeletonInputCount :: Int -&gt; [Int]
-</span><a href="#local-6989586621682435135"><span class="hs-identifier hs-var hs-var">shrinkSkeletonInputCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-98"></span><span>    </span><span id="local-6989586621682435419"><span class="annot"><span class="annottext">shrinkSkeletonInputCount :: Int -&gt; [Int]
+</span><a href="#local-6989586621682435419"><span class="hs-identifier hs-var hs-var">shrinkSkeletonInputCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-99"></span><span>        </span><span class="annot"><span class="annottext">Arbitrary Int =&gt; Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
-</span><span id="line-100"></span><span>    </span><span id="local-6989586621682435134"><span class="annot"><span class="annottext">shrinkSkeletonOutputs :: [(Address ctx, TokenBundle)] -&gt; [[(Address ctx, TokenBundle)]]
-</span><a href="#local-6989586621682435134"><span class="hs-identifier hs-var hs-var">shrinkSkeletonOutputs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-100"></span><span>    </span><span id="local-6989586621682435418"><span class="annot"><span class="annottext">shrinkSkeletonOutputs :: [(Address ctx, TokenBundle)] -&gt; [[(Address ctx, TokenBundle)]]
+</span><a href="#local-6989586621682435418"><span class="hs-identifier hs-var hs-var">shrinkSkeletonOutputs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-101"></span><span>        </span><span class="annot"><span class="annottext">((Address ctx, TokenBundle) -&gt; [(Address ctx, TokenBundle)])
 -&gt; [(Address ctx, TokenBundle)] -&gt; [[(Address ctx, TokenBundle)]]
 forall a. (a -&gt; [a]) -&gt; [a] -&gt; [[a]]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrinkList</span></a></span><span> </span><span class="annot"><span class="annottext">(Address ctx, TokenBundle) -&gt; [(Address ctx, TokenBundle)]
-</span><a href="#local-6989586621682435131"><span class="hs-identifier hs-var">shrinkSkeletonOutput</span></a></span><span>
-</span><span id="line-102"></span><span>    </span><span id="local-6989586621682435131"><span class="annot"><span class="annottext">shrinkSkeletonOutput :: (Address ctx, TokenBundle) -&gt; [(Address ctx, TokenBundle)]
-</span><a href="#local-6989586621682435131"><span class="hs-identifier hs-var hs-var">shrinkSkeletonOutput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682435415"><span class="hs-identifier hs-var">shrinkSkeletonOutput</span></a></span><span>
+</span><span id="line-102"></span><span>    </span><span id="local-6989586621682435415"><span class="annot"><span class="annottext">shrinkSkeletonOutput :: (Address ctx, TokenBundle) -&gt; [(Address ctx, TokenBundle)]
+</span><a href="#local-6989586621682435415"><span class="hs-identifier hs-var hs-var">shrinkSkeletonOutput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-103"></span><span>        </span><span class="annot"><span class="annottext">NP (I -.-&gt; []) '[Address ctx, TokenBundle]
 -&gt; (Address ctx, TokenBundle) -&gt; [(Address ctx, TokenBundle)]
 forall a (xs :: [*]).
@@ -260,7 +260,7 @@ NP (I -.-&gt; []) xs -&gt; a -&gt; [a]
 -&gt; [(Address ctx, TokenBundle)]
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-operator hs-var">&lt;@&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Address ctx -&gt; [Address ctx]
-</span><a href="#local-6989586621682435136"><span class="hs-identifier hs-var">shrinkAddress</span></a></span><span>
+</span><a href="#local-6989586621682435420"><span class="hs-identifier hs-var">shrinkAddress</span></a></span><span>
 </span><span id="line-105"></span><span>            </span><span class="annot"><span class="annottext">(Address ctx -&gt; [Address ctx])
 -&gt; NP (I -.-&gt; []) '[TokenBundle]
 -&gt; NP (I -.-&gt; []) '[Address ctx, TokenBundle]
@@ -281,8 +281,8 @@ forall x (xs :: [*]).
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-operator hs-var">&lt;:&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">NP (I -.-&gt; []) '[]
 forall k (a :: k -&gt; *). NP a '[]
 </span><a href="../../../../sop-core/html/src"><span class="hs-identifier hs-var">Nil</span></a></span><span>
-</span><span id="line-107"></span><span>    </span><span id="local-6989586621682435133"><span class="annot"><span class="annottext">shrinkSkeletonChange :: [Set AssetId] -&gt; [[Set AssetId]]
-</span><a href="#local-6989586621682435133"><span class="hs-identifier hs-var hs-var">shrinkSkeletonChange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-107"></span><span>    </span><span id="local-6989586621682435417"><span class="annot"><span class="annottext">shrinkSkeletonChange :: [Set AssetId] -&gt; [[Set AssetId]]
+</span><a href="#local-6989586621682435417"><span class="hs-identifier hs-var hs-var">shrinkSkeletonChange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-108"></span><span>        </span><span class="annot"><span class="annottext">(Set AssetId -&gt; [Set AssetId]) -&gt; [Set AssetId] -&gt; [[Set AssetId]]
 forall a. (a -&gt; [a]) -&gt; [a] -&gt; [[a]]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrinkList</span></a></span><span> </span><span class="annot"><span class="annottext">((Set AssetId -&gt; [Set AssetId])
@@ -309,10 +309,10 @@ forall a. (a -&gt; [a]) -&gt; [a] -&gt; [[a]]
 </span><span id="line-110"></span><span>
 </span><span id="line-111"></span><span class="annot"><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#tokenBundleHasNonZeroCoin"><span class="hs-identifier hs-type">tokenBundleHasNonZeroCoin</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-112"></span><span id="tokenBundleHasNonZeroCoin"><span class="annot"><span class="annottext">tokenBundleHasNonZeroCoin :: TokenBundle -&gt; Bool
-</span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#tokenBundleHasNonZeroCoin"><span class="hs-identifier hs-var hs-var">tokenBundleHasNonZeroCoin</span></a></span></span><span> </span><span id="local-6989586621682435129"><span class="annot"><span class="annottext">TokenBundle
-</span><a href="#local-6989586621682435129"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TokenBundle -&gt; Coin
+</span><a href="Cardano.Wallet.CoinSelection.Internal.Balance.Gen.html#tokenBundleHasNonZeroCoin"><span class="hs-identifier hs-var hs-var">tokenBundleHasNonZeroCoin</span></a></span></span><span> </span><span id="local-6989586621682435413"><span class="annot"><span class="annottext">TokenBundle
+</span><a href="#local-6989586621682435413"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TokenBundle -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#getCoin"><span class="hs-identifier hs-var">TokenBundle.getCoin</span></a></span><span> </span><span class="annot"><span class="annottext">TokenBundle
-</span><a href="#local-6989586621682435129"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Coin -&gt; Coin -&gt; Bool
+</span><a href="#local-6989586621682435413"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">Coin -&gt; Coin -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">/=</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">Natural

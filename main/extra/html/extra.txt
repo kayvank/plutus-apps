@@ -15,7 +15,7 @@
 --   Users are recommended to replace <a>Data.List</a> imports with
 --   <a>Data.List.Extra</a> if they need the extra functionality.
 @package extra
-@version 1.7.12
+@version 1.7.13
 
 
 -- | This module extends <a>Data.IORef</a> with operations forcing the
@@ -34,6 +34,20 @@ atomicModifyIORef_ :: IORef a -> (a -> a) -> IO ()
 
 -- | Variant of <a>atomicModifyIORef'</a> which ignores the return value
 atomicModifyIORef'_ :: IORef a -> (a -> a) -> IO ()
+
+
+-- | Extra functions for working with monoids.
+module Data.Monoid.Extra
+
+-- | Like <a>when</a>, but operating on a <a>Monoid</a>. If the first
+--   argument is <a>True</a> returns the second, otherwise returns
+--   <a>mempty</a>.
+--   
+--   <pre>
+--   mwhen True  "test" == "test"
+--   mwhen False "test" == ""
+--   </pre>
+mwhen :: Monoid a => Bool -> a -> a
 
 
 -- | Extra functions for working with pairs and triples. Some of these
@@ -895,16 +909,16 @@ zipWithFrom :: Enum a => (a -> b -> c) -> a -> [b] -> [c]
 --   </pre>
 zipWithLongest :: (Maybe a -> Maybe b -> c) -> [a] -> [b] -> [c]
 
--- | Replace a subsequence everywhere it occurs. The first argument must
---   not be the empty list.
+-- | Replace a subsequence everywhere it occurs.
 --   
 --   <pre>
 --   replace "el" "_" "Hello Bella" == "H_lo B_la"
 --   replace "el" "e" "Hello"       == "Helo"
---   replace "" "e" "Hello"         == undefined
---   \xs ys -&gt; not (null xs) ==&gt; replace xs xs ys == ys
+--   replace "" "x" "Hello"         == "xHxexlxlxox"
+--   replace "" "x" ""              == "x"
+--   \xs ys -&gt; replace xs xs ys == ys
 --   </pre>
-replace :: (Partial, Eq a) => [a] -> [a] -> [a] -> [a]
+replace :: Eq a => [a] -> [a] -> [a] -> [a]
 
 -- | Merge two lists which are assumed to be ordered.
 --   
@@ -3257,16 +3271,16 @@ zipWithFrom :: Enum a => (a -> b -> c) -> a -> [b] -> [c]
 --   </pre>
 zipWithLongest :: (Maybe a -> Maybe b -> c) -> [a] -> [b] -> [c]
 
--- | Replace a subsequence everywhere it occurs. The first argument must
---   not be the empty list.
+-- | Replace a subsequence everywhere it occurs.
 --   
 --   <pre>
 --   replace "el" "_" "Hello Bella" == "H_lo B_la"
 --   replace "el" "e" "Hello"       == "Helo"
---   replace "" "e" "Hello"         == undefined
---   \xs ys -&gt; not (null xs) ==&gt; replace xs xs ys == ys
+--   replace "" "x" "Hello"         == "xHxexlxlxox"
+--   replace "" "x" ""              == "x"
+--   \xs ys -&gt; replace xs xs ys == ys
 --   </pre>
-replace :: (Partial, Eq a) => [a] -> [a] -> [a] -> [a]
+replace :: Eq a => [a] -> [a] -> [a] -> [a]
 
 -- | Merge two lists which are assumed to be ordered.
 --   
@@ -3330,6 +3344,16 @@ maximumOn1 :: Ord b => (a -> b) -> NonEmpty a -> a
 -- | A version of <a>minimum1</a> where the comparison is done on some
 --   extracted value.
 minimumOn1 :: Ord b => (a -> b) -> NonEmpty a -> a
+
+-- | Like <a>when</a>, but operating on a <a>Monoid</a>. If the first
+--   argument is <a>True</a> returns the second, otherwise returns
+--   <a>mempty</a>.
+--   
+--   <pre>
+--   mwhen True  "test" == "test"
+--   mwhen False "test" == ""
+--   </pre>
+mwhen :: Monoid a => Bool -> a -> a
 
 -- | Update the first component of a pair.
 --   

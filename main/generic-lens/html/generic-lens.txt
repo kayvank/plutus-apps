@@ -12,7 +12,7 @@
 --   interface, supporting an opaque optic type, see
 --   <tt><a>generic-optics</a></tt>.
 @package generic-lens
-@version 2.2.1.0
+@version 2.2.2.0
 
 module Data.Generics.Internal.VL
 
@@ -667,9 +667,10 @@ type Field' name s a = Field name s s a a
 class Constructor name s t a b | name s -> a, name t -> b
 constructorPrism :: Constructor name s t a b => Prism s t a b
 type Constructor' name s a = Constructor name s s a a
-instance forall k1 k2 k3 (capital :: GHC.Types.Bool) (name :: GHC.Types.Symbol) (p :: k1 -> k2 -> *) (f :: k3 -> k2) (s :: k1) (t :: k3) (a :: k1) (b :: k3) pafb psft. (capital GHC.Types.~ Data.Generics.Labels.BeginsWithCapital name, Data.Generics.Labels.IsLabelHelper capital name p f s t a b, pafb GHC.Types.~ p a (f b), psft GHC.Types.~ p s (f t)) => GHC.OverloadedLabels.IsLabel name (pafb -> psft)
-instance forall k (f :: * -> *) (name :: k) s t a b. (GHC.Base.Functor f, Data.Generics.Labels.Field name s t a b) => Data.Generics.Labels.IsLabelHelper 'GHC.Types.False name (->) f s t a b
-instance (GHC.Base.Applicative f, Data.Profunctor.Choice.Choice p, Data.Generics.Labels.Constructor name s t a b, name' GHC.Types.~ GHC.TypeLits.AppendSymbol "_" name) => Data.Generics.Labels.IsLabelHelper 'GHC.Types.True name' p f s t a b
+instance forall k1 k2 k3 (labelType :: Data.Generics.Labels.LabelType) (name :: GHC.Types.Symbol) (p :: k1 -> k2 -> *) (f :: k3 -> k2) (s :: k1) (t :: k3) (a :: k1) (b :: k3) pafb psft. (labelType GHC.Types.~ Data.Generics.Labels.ClassifyLabel name, Data.Generics.Labels.IsLabelHelper labelType name p f s t a b, pafb GHC.Types.~ p a (f b), psft GHC.Types.~ p s (f t)) => GHC.OverloadedLabels.IsLabel name (pafb -> psft)
+instance forall k (f :: * -> *) (name :: k) s t a b. (GHC.Base.Functor f, Data.Generics.Labels.Field name s t a b) => Data.Generics.Labels.IsLabelHelper 'Data.Generics.Labels.FieldType name (->) f s t a b
+instance (GHC.Base.Applicative f, Data.Profunctor.Choice.Choice p, Data.Generics.Labels.Constructor name s t a b, name' GHC.Types.~ GHC.TypeLits.AppendSymbol "_" name) => Data.Generics.Labels.IsLabelHelper 'Data.Generics.Labels.LegacyConstrType name' p f s t a b
+instance forall k (f :: * -> *) (p :: * -> * -> *) (name :: k) s t a b. (GHC.Base.Applicative f, Data.Profunctor.Choice.Choice p, Data.Generics.Labels.Constructor name s t a b) => Data.Generics.Labels.IsLabelHelper 'Data.Generics.Labels.ConstrType name p f s t a b
 instance Data.Generics.Sum.Constructors.AsConstructor name s t a b => Data.Generics.Labels.Constructor name s t a b
 instance Data.Generics.Sum.Constructors.AsConstructor' name s a => Data.Generics.Labels.Constructor name s s a a
 instance Data.Generics.Product.Fields.HasField name s t a b => Data.Generics.Labels.Field name s t a b

@@ -24,67 +24,67 @@
 </span><span id="line-24"></span><span class="hs-comment">-- Since 3.0.7</span><span>
 </span><span id="line-25"></span><span class="annot"><a href="Network.Wai.Middleware.ForceSSL.html#forceSSL"><span class="hs-identifier hs-type">forceSSL</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Middleware</span></a></span><span>
 </span><span id="line-26"></span><span id="forceSSL"><span class="annot"><span class="annottext">forceSSL :: Middleware
-</span><a href="Network.Wai.Middleware.ForceSSL.html#forceSSL"><span class="hs-identifier hs-var hs-var">forceSSL</span></a></span></span><span> </span><span id="local-6989586621679120557"><span class="annot"><span class="annottext">Application
-</span><a href="#local-6989586621679120557"><span class="hs-identifier hs-var">app</span></a></span></span><span> </span><span id="local-6989586621679120556"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120556"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span id="local-6989586621679120555"><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621679120555"><span class="hs-identifier hs-var">sendResponse</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.Wai.Middleware.ForceSSL.html#forceSSL"><span class="hs-identifier hs-var hs-var">forceSSL</span></a></span></span><span> </span><span id="local-6989586621679120583"><span class="annot"><span class="annottext">Application
+</span><a href="#local-6989586621679120583"><span class="hs-identifier hs-var">app</span></a></span></span><span> </span><span id="local-6989586621679120582"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679120582"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span id="local-6989586621679120581"><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621679120581"><span class="hs-identifier hs-var">sendResponse</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-27"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Request -&gt; Bool
 </span><a href="Network.Wai.Request.html#appearsSecure"><span class="hs-identifier hs-var">appearsSecure</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120556"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Request -&gt; Maybe Response
+</span><a href="#local-6989586621679120582"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Request -&gt; Maybe Response
 </span><a href="Network.Wai.Middleware.ForceSSL.html#redirectResponse"><span class="hs-identifier hs-var">redirectResponse</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120556"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679120582"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-28"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679120553"><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621679120553"><span class="hs-identifier hs-var">resp</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621679120555"><span class="hs-identifier hs-var">sendResponse</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621679120553"><span class="hs-identifier hs-var">resp</span></a></span><span>
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679120579"><span class="annot"><span class="annottext">Response
+</span><a href="#local-6989586621679120579"><span class="hs-identifier hs-var">resp</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621679120581"><span class="hs-identifier hs-var">sendResponse</span></a></span><span> </span><span class="annot"><span class="annottext">Response
+</span><a href="#local-6989586621679120579"><span class="hs-identifier hs-var">resp</span></a></span><span>
 </span><span id="line-29"></span><span>        </span><span class="annot"><span class="annottext">(Bool, Maybe Response)
 </span><span class="hs-identifier">_</span></span><span>                  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Application
-</span><a href="#local-6989586621679120557"><span class="hs-identifier hs-var">app</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120556"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621679120555"><span class="hs-identifier hs-var">sendResponse</span></a></span><span>
+</span><a href="#local-6989586621679120583"><span class="hs-identifier hs-var">app</span></a></span><span> </span><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679120582"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621679120581"><span class="hs-identifier hs-var">sendResponse</span></a></span><span>
 </span><span id="line-30"></span><span>
 </span><span id="line-31"></span><span class="annot"><a href="Network.Wai.Middleware.ForceSSL.html#redirectResponse"><span class="hs-identifier hs-type">redirectResponse</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Response</span></a></span><span>
 </span><span id="line-32"></span><span id="redirectResponse"><span class="annot"><span class="annottext">redirectResponse :: Request -&gt; Maybe Response
-</span><a href="Network.Wai.Middleware.ForceSSL.html#redirectResponse"><span class="hs-identifier hs-var hs-var">redirectResponse</span></a></span></span><span> </span><span id="local-6989586621679120552"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120552"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-33"></span><span>  </span><span id="local-6989586621679120551"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679120551"><span class="hs-identifier hs-var">host</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Request -&gt; Maybe ByteString
+</span><a href="Network.Wai.Middleware.ForceSSL.html#redirectResponse"><span class="hs-identifier hs-var hs-var">redirectResponse</span></a></span></span><span> </span><span id="local-6989586621679120578"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679120578"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-33"></span><span>  </span><span id="local-6989586621679120577"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679120577"><span class="hs-identifier hs-var">host</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Request -&gt; Maybe ByteString
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var hs-var">requestHeaderHost</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120552"><span class="hs-identifier hs-var">req</span></a></span><span>
+</span><a href="#local-6989586621679120578"><span class="hs-identifier hs-var">req</span></a></span><span>
 </span><span id="line-34"></span><span>  </span><span class="annot"><span class="annottext">Response -&gt; Maybe Response
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(Response -&gt; Maybe Response) -&gt; Response -&gt; Maybe Response
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Status -&gt; ResponseHeaders -&gt; Builder -&gt; Response
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var">responseBuilder</span></a></span><span> </span><span class="annot"><span class="annottext">Status
-</span><a href="#local-6989586621679120549"><span class="hs-identifier hs-var">status</span></a></span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><span class="annottext">HeaderName
+</span><a href="#local-6989586621679120575"><span class="hs-identifier hs-var">status</span></a></span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><span class="annottext">HeaderName
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var">hLocation</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString
-</span><a href="#local-6989586621679120548"><span class="hs-identifier hs-var">location</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679120551"><span class="hs-identifier hs-var">host</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">Builder
+</span><a href="#local-6989586621679120574"><span class="hs-identifier hs-var">location</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679120577"><span class="hs-identifier hs-var">host</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">Builder
 forall a. Monoid a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span>
 </span><span id="line-35"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-36"></span><span>    </span><span id="local-6989586621679120548"><span class="annot"><span class="annottext">location :: ByteString -&gt; ByteString
-</span><a href="#local-6989586621679120548"><span class="hs-identifier hs-var hs-var">location</span></a></span></span><span> </span><span id="local-6989586621679120547"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679120547"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><span id="line-36"></span><span>    </span><span id="local-6989586621679120574"><span class="annot"><span class="annottext">location :: ByteString -&gt; ByteString
+</span><a href="#local-6989586621679120574"><span class="hs-identifier hs-var hs-var">location</span></a></span></span><span> </span><span id="local-6989586621679120573"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679120573"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;https://&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679120547"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
+</span><a href="#local-6989586621679120573"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; ByteString
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var hs-var">rawPathInfo</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120552"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
+</span><a href="#local-6989586621679120578"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; ByteString
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var hs-var">rawQueryString</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120552"><span class="hs-identifier hs-var">req</span></a></span><span>
-</span><span id="line-37"></span><span>    </span><span id="local-6989586621679120549"><span class="annot"><span class="annottext">status :: Status
-</span><a href="#local-6989586621679120549"><span class="hs-identifier hs-var hs-var">status</span></a></span></span><span>
+</span><a href="#local-6989586621679120578"><span class="hs-identifier hs-var">req</span></a></span><span>
+</span><span id="line-37"></span><span>    </span><span id="local-6989586621679120575"><span class="annot"><span class="annottext">status :: Status
+</span><a href="#local-6989586621679120575"><span class="hs-identifier hs-var hs-var">status</span></a></span></span><span>
 </span><span id="line-38"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Request -&gt; ByteString
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var hs-var">requestMethod</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679120552"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
+</span><a href="#local-6989586621679120578"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var">methodGet</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Status

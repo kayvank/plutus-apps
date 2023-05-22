@@ -37,7 +37,7 @@
 </span><span id="line-37"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Compat.html"><span class="hs-identifier">Database.PostgreSQL.Simple.Compat</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator">(&lt;&gt;)</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Compat.html#fromPico"><span class="hs-identifier">fromPico</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-38"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Unsafe.Coerce</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">unsafeCoerce</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-39"></span><span>
-</span><span id="line-40"></span><span id="local-6989586621679127697"><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-type">liftB</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">FixedPrim</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679127697"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679127697"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-40"></span><span id="local-6989586621679127704"><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-type">liftB</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">FixedPrim</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679127704"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679127704"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-41"></span><span id="liftB"><span class="annot"><span class="annottext">liftB :: FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var hs-var">liftB</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim a -&gt; BoundedPrim a
 forall a. FixedPrim a -&gt; BoundedPrim a
@@ -45,10 +45,10 @@ forall a. FixedPrim a -&gt; BoundedPrim a
 </span><span id="line-42"></span><span>
 </span><span id="line-43"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digit"><span class="hs-identifier hs-type">digit</span></a></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">FixedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
 </span><span id="line-44"></span><span id="digit"><span class="annot"><span class="annottext">digit :: FixedPrim Int
-</span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digit"><span class="hs-identifier hs-var hs-var">digit</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679127694"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127694"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char
+</span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digit"><span class="hs-identifier hs-var hs-var">digit</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679127701"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679127701"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">chr</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127694"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679127701"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">48</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Char) -&gt; FixedPrim Char -&gt; FixedPrim Int
@@ -116,11 +116,11 @@ forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">char8</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Char -&gt; BoundedPrim Int64 -&gt; BoundedPrim (Char, Int64)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int64
-</span><a href="#local-6989586621679127687"><span class="hs-identifier hs-var">trunc12</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127694"><span class="hs-identifier hs-var">trunc12</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-57"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-58"></span><span>    </span><span class="annot"><a href="#local-6989586621679127687"><span class="hs-identifier hs-type">trunc12</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Int64</span></a></span><span>
-</span><span id="line-59"></span><span>    </span><span id="local-6989586621679127687"><span class="annot"><span class="annottext">trunc12 :: BoundedPrim Int64
-</span><a href="#local-6989586621679127687"><span class="hs-identifier hs-var hs-var">trunc12</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int64 -&gt; (Int64, Int64)
+</span><span id="line-58"></span><span>    </span><span class="annot"><a href="#local-6989586621679127694"><span class="hs-identifier hs-type">trunc12</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Int64</span></a></span><span>
+</span><span id="line-59"></span><span>    </span><span id="local-6989586621679127694"><span class="annot"><span class="annottext">trunc12 :: BoundedPrim Int64
+</span><a href="#local-6989586621679127694"><span class="hs-identifier hs-var hs-var">trunc12</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int64 -&gt; (Int64, Int64)
 forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`quotRem`</span></a></span><span> </span><span class="annot"><span class="annottext">Int64
 </span><span class="hs-number">1000000</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Int64 -&gt; (Int64, Int64))
@@ -134,9 +134,9 @@ forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">condB</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64
-</span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span id="local-6989586621679127686"><span class="annot"><span class="annottext">Int64
-</span><a href="#local-6989586621679127686"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int64
-</span><a href="#local-6989586621679127686"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Int64 -&gt; Int64 -&gt; Bool
+</span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span id="local-6989586621679127693"><span class="annot"><span class="annottext">Int64
+</span><a href="#local-6989586621679127693"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int64
+</span><a href="#local-6989586621679127693"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Int64 -&gt; Int64 -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Int64
 </span><span class="hs-number">0</span></span><span class="hs-special">)</span><span>
@@ -146,24 +146,24 @@ forall a b. (a, b) -&gt; a
 -&gt; BoundedPrim Int64 -&gt; BoundedPrim (Int64, Int64)
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int64
-</span><a href="#local-6989586621679127685"><span class="hs-identifier hs-var">trunc6</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127692"><span class="hs-identifier hs-var">trunc6</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-62"></span><span>                    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">FixedPrim Int64 -&gt; BoundedPrim Int64
 forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var">liftB</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int64
-</span><a href="#local-6989586621679127684"><span class="hs-identifier hs-var">digits6</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int64
+</span><a href="#local-6989586621679127691"><span class="hs-identifier hs-var">digits6</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int64
 -&gt; BoundedPrim Int64 -&gt; BoundedPrim (Int64, Int64)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int64
-</span><a href="#local-6989586621679127685"><span class="hs-identifier hs-var">trunc6</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127692"><span class="hs-identifier hs-var">trunc6</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-63"></span><span>
-</span><span id="line-64"></span><span>    </span><span id="local-6989586621679127683"><span class="annot"><span class="annottext">digitB :: BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var hs-var">digitB</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim Int -&gt; BoundedPrim Int
+</span><span id="line-64"></span><span>    </span><span id="local-6989586621679127690"><span class="annot"><span class="annottext">digitB :: BoundedPrim Int
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var hs-var">digitB</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim Int -&gt; BoundedPrim Int
 forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var">liftB</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digit"><span class="hs-identifier hs-var">digit</span></a></span><span>
 </span><span id="line-65"></span><span>
-</span><span id="line-66"></span><span>    </span><span id="local-6989586621679127684"><span class="annot"><span class="annottext">digits6 :: FixedPrim Int64
-</span><a href="#local-6989586621679127684"><span class="hs-identifier hs-var hs-var">digits6</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int
+</span><span id="line-66"></span><span>    </span><span id="local-6989586621679127691"><span class="annot"><span class="annottext">digits6 :: FixedPrim Int64
+</span><a href="#local-6989586621679127691"><span class="hs-identifier hs-var hs-var">digits6</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">(Int64 -&gt; Int) -&gt; (Int -&gt; (Int, Int)) -&gt; Int64 -&gt; (Int, Int)
 forall k (cat :: k -&gt; k -&gt; *) (a :: k) (b :: k) (c :: k).
@@ -175,12 +175,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Int64 -&gt; (Int, Int)) -&gt; FixedPrim (Int, Int) -&gt; FixedPrim Int64
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">FixedPrim Int
-</span><a href="#local-6989586621679127682"><span class="hs-identifier hs-var">digits5</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int -&gt; FixedPrim Int -&gt; FixedPrim (Int, Int)
+</span><a href="#local-6989586621679127689"><span class="hs-identifier hs-var">digits5</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int -&gt; FixedPrim Int -&gt; FixedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digit"><span class="hs-identifier hs-var">digit</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-67"></span><span>    </span><span id="local-6989586621679127682"><span class="annot"><span class="annottext">digits5 :: FixedPrim Int
-</span><a href="#local-6989586621679127682"><span class="hs-identifier hs-var hs-var">digits5</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>                   </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; (Int, Int)
+</span><span id="line-67"></span><span>    </span><span id="local-6989586621679127689"><span class="annot"><span class="annottext">digits5 :: FixedPrim Int
+</span><a href="#local-6989586621679127689"><span class="hs-identifier hs-var hs-var">digits5</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>                   </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; (Int, Int)
 forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`quotRem`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; (Int, Int)) -&gt; FixedPrim (Int, Int) -&gt; FixedPrim Int
@@ -191,8 +191,8 @@ forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digit"><span class="hs-identifier hs-var">digit</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-68"></span><span>
-</span><span id="line-69"></span><span>    </span><span id="local-6989586621679127685"><span class="annot"><span class="annottext">trunc6 :: BoundedPrim Int64
-</span><a href="#local-6989586621679127685"><span class="hs-identifier hs-var hs-var">trunc6</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int
+</span><span id="line-69"></span><span>    </span><span id="local-6989586621679127692"><span class="annot"><span class="annottext">trunc6 :: BoundedPrim Int64
+</span><a href="#local-6989586621679127692"><span class="hs-identifier hs-var hs-var">trunc6</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">(Int64 -&gt; Int) -&gt; (Int -&gt; (Int, Int)) -&gt; Int64 -&gt; (Int, Int)
 forall k (cat :: k -&gt; k -&gt; *) (a :: k) (b :: k) (c :: k).
@@ -205,12 +205,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 -&gt; BoundedPrim (Int, Int) -&gt; BoundedPrim Int64
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127681"><span class="hs-identifier hs-var">trunc5</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-70"></span><span>    </span><span id="local-6989586621679127681"><span class="annot"><span class="annottext">trunc5 :: BoundedPrim Int
-</span><a href="#local-6989586621679127681"><span class="hs-identifier hs-var hs-var">trunc5</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><a href="#local-6989586621679127688"><span class="hs-identifier hs-var">trunc5</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-70"></span><span>    </span><span id="local-6989586621679127688"><span class="annot"><span class="annottext">trunc5 :: BoundedPrim Int
+</span><a href="#local-6989586621679127688"><span class="hs-identifier hs-var hs-var">trunc5</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -225,12 +225,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><span class="hs-number">10000</span></span><span class="hs-special">)</span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; (Int, Int)) -&gt; BoundedPrim (Int, Int) -&gt; BoundedPrim Int
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127680"><span class="hs-identifier hs-var">trunc4</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-71"></span><span>    </span><span id="local-6989586621679127680"><span class="annot"><span class="annottext">trunc4 :: BoundedPrim Int
-</span><a href="#local-6989586621679127680"><span class="hs-identifier hs-var hs-var">trunc4</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><a href="#local-6989586621679127687"><span class="hs-identifier hs-var">trunc4</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-71"></span><span>    </span><span id="local-6989586621679127687"><span class="annot"><span class="annottext">trunc4 :: BoundedPrim Int
+</span><a href="#local-6989586621679127687"><span class="hs-identifier hs-var hs-var">trunc4</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -245,12 +245,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><span class="hs-number">1000</span></span><span class="hs-special">)</span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; (Int, Int)) -&gt; BoundedPrim (Int, Int) -&gt; BoundedPrim Int
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127679"><span class="hs-identifier hs-var">trunc3</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-72"></span><span>    </span><span id="local-6989586621679127679"><span class="annot"><span class="annottext">trunc3 :: BoundedPrim Int
-</span><a href="#local-6989586621679127679"><span class="hs-identifier hs-var hs-var">trunc3</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><a href="#local-6989586621679127686"><span class="hs-identifier hs-var">trunc3</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-72"></span><span>    </span><span id="local-6989586621679127686"><span class="annot"><span class="annottext">trunc3 :: BoundedPrim Int
+</span><a href="#local-6989586621679127686"><span class="hs-identifier hs-var hs-var">trunc3</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -265,12 +265,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><span class="hs-number">100</span></span><span class="hs-special">)</span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; (Int, Int)) -&gt; BoundedPrim (Int, Int) -&gt; BoundedPrim Int
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127678"><span class="hs-identifier hs-var">trunc2</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-73"></span><span>    </span><span id="local-6989586621679127678"><span class="annot"><span class="annottext">trunc2 :: BoundedPrim Int
-</span><a href="#local-6989586621679127678"><span class="hs-identifier hs-var hs-var">trunc2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><a href="#local-6989586621679127685"><span class="hs-identifier hs-var">trunc2</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-73"></span><span>    </span><span id="local-6989586621679127685"><span class="annot"><span class="annottext">trunc2 :: BoundedPrim Int
+</span><a href="#local-6989586621679127685"><span class="hs-identifier hs-var hs-var">trunc2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -285,12 +285,12 @@ forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span>  </span><span class="annot"><span class="annottext">(Int -&gt; (Int, Int)) -&gt; BoundedPrim (Int, Int) -&gt; BoundedPrim Int
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var">digitB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127677"><span class="hs-identifier hs-var">trunc1</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-74"></span><span>    </span><span id="local-6989586621679127677"><span class="annot"><span class="annottext">trunc1 :: BoundedPrim Int
-</span><a href="#local-6989586621679127677"><span class="hs-identifier hs-var hs-var">trunc1</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><a href="#local-6989586621679127684"><span class="hs-identifier hs-var">trunc1</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-74"></span><span>    </span><span id="local-6989586621679127684"><span class="annot"><span class="annottext">trunc1 :: BoundedPrim Int
+</span><a href="#local-6989586621679127684"><span class="hs-identifier hs-var hs-var">trunc1</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -300,7 +300,7 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-number">0</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
 forall a. BoundedPrim a
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">emptyB</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127683"><span class="hs-identifier hs-var">digitB</span></a></span><span>
+</span><a href="#local-6989586621679127690"><span class="hs-identifier hs-var">digitB</span></a></span><span>
 </span><span id="line-75"></span><span>
 </span><span id="line-76"></span><span>
 </span><span id="line-77"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#year"><span class="hs-identifier hs-type">year</span></a></span><span>  </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Int32</span></a></span><span>
@@ -314,40 +314,40 @@ forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int32
 </span><span class="hs-number">10000</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int32
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">int32Dec</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int32 -&gt; Int
-</span><a href="#local-6989586621679127675"><span class="hs-identifier hs-var">checkBCE</span></a></span><span> </span><span class="annot"><span class="annottext">(Int32 -&gt; Int) -&gt; BoundedPrim Int -&gt; BoundedPrim Int32
+</span><a href="#local-6989586621679127682"><span class="hs-identifier hs-var">checkBCE</span></a></span><span> </span><span class="annot"><span class="annottext">(Int32 -&gt; Int) -&gt; BoundedPrim Int -&gt; BoundedPrim Int32
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int -&gt; BoundedPrim Int
 forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var">liftB</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digits4"><span class="hs-identifier hs-var">digits4</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-79"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-80"></span><span>    </span><span class="annot"><a href="#local-6989586621679127675"><span class="hs-identifier hs-type">checkBCE</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Int32</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
-</span><span id="line-81"></span><span>    </span><span id="local-6989586621679127675"><span class="annot"><span class="annottext">checkBCE :: Int32 -&gt; Int
-</span><a href="#local-6989586621679127675"><span class="hs-identifier hs-var hs-var">checkBCE</span></a></span></span><span> </span><span id="local-6989586621679127674"><span class="annot"><span class="annottext">Int32
-</span><a href="#local-6989586621679127674"><span class="hs-identifier hs-var">y</span></a></span></span><span>
+</span><span id="line-80"></span><span>    </span><span class="annot"><a href="#local-6989586621679127682"><span class="hs-identifier hs-type">checkBCE</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Int32</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
+</span><span id="line-81"></span><span>    </span><span id="local-6989586621679127682"><span class="annot"><span class="annottext">checkBCE :: Int32 -&gt; Int
+</span><a href="#local-6989586621679127682"><span class="hs-identifier hs-var hs-var">checkBCE</span></a></span></span><span> </span><span id="local-6989586621679127681"><span class="annot"><span class="annottext">Int32
+</span><a href="#local-6989586621679127681"><span class="hs-identifier hs-var">y</span></a></span></span><span>
 </span><span id="line-82"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Int32
-</span><a href="#local-6989586621679127674"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Int32 -&gt; Int32 -&gt; Bool
+</span><a href="#local-6989586621679127681"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Int32 -&gt; Int32 -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int32
 </span><span class="hs-number">0</span></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int32 -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Int32
-</span><a href="#local-6989586621679127674"><span class="hs-identifier hs-var">y</span></a></span><span>
+</span><a href="#local-6989586621679127681"><span class="hs-identifier hs-var">y</span></a></span><span>
 </span><span id="line-83"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Char] -&gt; Int
 forall a. HasCallStack =&gt; [Char] -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">error</span></a></span><span> </span><span class="annot"><span class="annottext">[Char]
-</span><a href="#local-6989586621679127671"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621679127678"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-84"></span><span>
-</span><span id="line-85"></span><span>    </span><span id="local-6989586621679127671"><span class="annot"><span class="annottext">msg :: [Char]
-</span><a href="#local-6989586621679127671"><span class="hs-identifier hs-var hs-var">msg</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Char]
+</span><span id="line-85"></span><span>    </span><span id="local-6989586621679127678"><span class="annot"><span class="annottext">msg :: [Char]
+</span><a href="#local-6989586621679127678"><span class="hs-identifier hs-var hs-var">msg</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Char]
 </span><span class="hs-string">&quot;Database.PostgreSQL.Simple.Time.Printer.year:  years BCE not supported&quot;</span></span><span>
 </span><span id="line-86"></span><span>
 </span><span id="line-87"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#day"><span class="hs-identifier hs-type">day</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">Day</span></a></span><span>
 </span><span id="line-88"></span><span id="day"><span class="annot"><span class="annottext">day :: BoundedPrim Day
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#day"><span class="hs-identifier hs-var hs-var">day</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Day -&gt; (Int32, (Char, (Int, (Char, Int))))
 forall a. Num a =&gt; Day -&gt; (a, (Char, (Int, (Char, Int))))
-</span><a href="#local-6989586621679127670"><span class="hs-identifier hs-var">toYMD</span></a></span><span> </span><span class="annot"><span class="annottext">(Day -&gt; (Int32, (Char, (Int, (Char, Int)))))
+</span><a href="#local-6989586621679127677"><span class="hs-identifier hs-var">toYMD</span></a></span><span> </span><span class="annot"><span class="annottext">(Day -&gt; (Int32, (Char, (Int, (Char, Int)))))
 -&gt; BoundedPrim (Int32, (Char, (Int, (Char, Int))))
 -&gt; BoundedPrim Day
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
@@ -374,48 +374,48 @@ forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Int
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digits2"><span class="hs-identifier hs-var">digits2</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-89"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-90"></span><span>    </span><span id="local-6989586621679127670"><span class="annot"><span class="annottext">toYMD :: Day -&gt; (a, (Char, (Int, (Char, Int))))
-</span><a href="#local-6989586621679127670"><span class="hs-identifier hs-var hs-var">toYMD</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Day -&gt; (Integer, Int, Int)
+</span><span id="line-90"></span><span>    </span><span id="local-6989586621679127677"><span class="annot"><span class="annottext">toYMD :: Day -&gt; (a, (Char, (Int, (Char, Int))))
+</span><a href="#local-6989586621679127677"><span class="hs-identifier hs-var hs-var">toYMD</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Day -&gt; (Integer, Int, Int)
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">toGregorian</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; a
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679127669"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679127669"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">,</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679127668"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127668"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">,</span><span class="hs-glyph">!</span><span id="local-6989586621679127667"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127667"><span class="hs-identifier hs-var">d</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679127669"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679127676"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679127676"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">,</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679127675"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679127675"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">,</span><span class="hs-glyph">!</span><span id="local-6989586621679127674"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679127674"><span class="hs-identifier hs-var">d</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679127676"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'-'</span></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127668"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679127675"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'-'</span></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127667"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127674"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-91"></span><span>
 </span><span id="line-92"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#timeOfDay"><span class="hs-identifier hs-type">timeOfDay</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">TimeOfDay</span></a></span><span>
 </span><span id="line-93"></span><span id="timeOfDay"><span class="annot"><span class="annottext">timeOfDay :: BoundedPrim TimeOfDay
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#timeOfDay"><span class="hs-identifier hs-var hs-var">timeOfDay</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TimeOfDay -&gt; ((Int, (Char, (Int, Char))), Pico)
-</span><a href="#local-6989586621679127666"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(TimeOfDay -&gt; ((Int, (Char, (Int, Char))), Pico))
+</span><a href="#local-6989586621679127673"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(TimeOfDay -&gt; ((Int, (Char, (Int, Char))), Pico))
 -&gt; BoundedPrim ((Int, (Char, (Int, Char))), Pico)
 -&gt; BoundedPrim TimeOfDay
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim (Int, (Char, (Int, Char)))
-</span><a href="#local-6989586621679127665"><span class="hs-identifier hs-var">hh_mm_</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim (Int, (Char, (Int, Char)))
+</span><a href="#local-6989586621679127672"><span class="hs-identifier hs-var">hh_mm_</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim (Int, (Char, (Int, Char)))
 -&gt; BoundedPrim Pico
 -&gt; BoundedPrim ((Int, (Char, (Int, Char))), Pico)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Pico
-</span><a href="#local-6989586621679127664"><span class="hs-identifier hs-var">ss</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127671"><span class="hs-identifier hs-var">ss</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-94"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-95"></span><span>    </span><span id="local-6989586621679127666"><span class="annot"><span class="annottext">f :: TimeOfDay -&gt; ((Int, (Char, (Int, Char))), Pico)
-</span><a href="#local-6989586621679127666"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">TimeOfDay</span></a></span><span> </span><span id="local-6989586621679127662"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127662"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span id="local-6989586621679127661"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127661"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621679127660"><span class="annot"><span class="annottext">Pico
-</span><a href="#local-6989586621679127660"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>  </span><span class="hs-glyph">=</span><span>  </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127662"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
+</span><span id="line-95"></span><span>    </span><span id="local-6989586621679127673"><span class="annot"><span class="annottext">f :: TimeOfDay -&gt; ((Int, (Char, (Int, Char))), Pico)
+</span><a href="#local-6989586621679127673"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">TimeOfDay</span></a></span><span> </span><span id="local-6989586621679127669"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679127669"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span id="local-6989586621679127668"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679127668"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621679127667"><span class="annot"><span class="annottext">Pico
+</span><a href="#local-6989586621679127667"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>  </span><span class="hs-glyph">=</span><span>  </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679127669"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">':'</span></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679127661"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679127668"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">':'</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">,</span><span class="annot"><span class="annottext">Pico
-</span><a href="#local-6989586621679127660"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127667"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-96"></span><span>
-</span><span id="line-97"></span><span>    </span><span id="local-6989586621679127665"><span class="annot"><span class="annottext">hh_mm_ :: BoundedPrim (Int, (Char, (Int, Char)))
-</span><a href="#local-6989586621679127665"><span class="hs-identifier hs-var hs-var">hh_mm_</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim (Int, (Char, (Int, Char)))
+</span><span id="line-97"></span><span>    </span><span id="local-6989586621679127672"><span class="annot"><span class="annottext">hh_mm_ :: BoundedPrim (Int, (Char, (Int, Char)))
+</span><a href="#local-6989586621679127672"><span class="hs-identifier hs-var hs-var">hh_mm_</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim (Int, (Char, (Int, Char)))
 -&gt; BoundedPrim (Int, (Char, (Int, Char)))
 forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var">liftB</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">FixedPrim Int
@@ -433,13 +433,13 @@ forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Char
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">char8</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-98"></span><span>
-</span><span id="line-99"></span><span>    </span><span id="local-6989586621679127664"><span class="annot"><span class="annottext">ss :: BoundedPrim Pico
-</span><a href="#local-6989586621679127664"><span class="hs-identifier hs-var hs-var">ss</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679127659"><span class="annot"><span class="annottext">Pico
-</span><a href="#local-6989586621679127659"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Int64
+</span><span id="line-99"></span><span>    </span><span id="local-6989586621679127671"><span class="annot"><span class="annottext">ss :: BoundedPrim Pico
+</span><a href="#local-6989586621679127671"><span class="hs-identifier hs-var hs-var">ss</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679127666"><span class="annot"><span class="annottext">Pico
+</span><a href="#local-6989586621679127666"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Int64
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Pico -&gt; Integer
 </span><a href="Database.PostgreSQL.Simple.Compat.html#fromPico"><span class="hs-identifier hs-var">fromPico</span></a></span><span> </span><span class="annot"><span class="annottext">Pico
-</span><a href="#local-6989586621679127659"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int64 -&gt; Int64 -&gt; (Int64, Int64)
+</span><a href="#local-6989586621679127666"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int64 -&gt; Int64 -&gt; (Int64, Int64)
 forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`quotRem`</span></a></span><span> </span><span class="annot"><span class="annottext">Int64
 </span><span class="hs-number">1000000000000</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Pico -&gt; (Int64, Int64))
@@ -465,10 +465,10 @@ forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var hs-var">timeZoneMinutes</span></a></span><span> </span><span class="annot"><span class="annottext">(TimeZone -&gt; Int) -&gt; BoundedPrim Int -&gt; BoundedPrim TimeZone
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127658"><span class="hs-identifier hs-var">tz</span></a></span><span>
+</span><a href="#local-6989586621679127665"><span class="hs-identifier hs-var">tz</span></a></span><span>
 </span><span id="line-104"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-105"></span><span>    </span><span id="local-6989586621679127658"><span class="annot"><span class="annottext">tz :: BoundedPrim Int
-</span><a href="#local-6989586621679127658"><span class="hs-identifier hs-var hs-var">tz</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><span id="line-105"></span><span>    </span><span id="local-6989586621679127665"><span class="annot"><span class="annottext">tz :: BoundedPrim Int
+</span><a href="#local-6989586621679127665"><span class="hs-identifier hs-var hs-var">tz</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -479,7 +479,7 @@ forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-char">'+'</span></span><span> </span><span class="annot"><span class="annottext">(Int -&gt; (Char, Int)) -&gt; BoundedPrim (Char, Int) -&gt; BoundedPrim Int
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim (Char, Int)
-</span><a href="#local-6989586621679127657"><span class="hs-identifier hs-var">tzh</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679127664"><span class="hs-identifier hs-var">tzh</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'-'</span></span><span> </span><span class="annot"><span class="annottext">(Int -&gt; (Char, Int)) -&gt; (Int -&gt; Int) -&gt; Int -&gt; (Char, Int)
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int
@@ -487,10 +487,10 @@ forall a. Num a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">negate</span></a></span><span> </span><span class="annot"><span class="annottext">(Int -&gt; (Char, Int)) -&gt; BoundedPrim (Char, Int) -&gt; BoundedPrim Int
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim (Char, Int)
-</span><a href="#local-6989586621679127657"><span class="hs-identifier hs-var">tzh</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127664"><span class="hs-identifier hs-var">tzh</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-106"></span><span>
-</span><span id="line-107"></span><span>    </span><span id="local-6989586621679127657"><span class="annot"><span class="annottext">tzh :: BoundedPrim (Char, Int)
-</span><a href="#local-6989586621679127657"><span class="hs-identifier hs-var hs-var">tzh</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim Char -&gt; BoundedPrim Char
+</span><span id="line-107"></span><span>    </span><span id="local-6989586621679127664"><span class="annot"><span class="annottext">tzh :: BoundedPrim (Char, Int)
+</span><a href="#local-6989586621679127664"><span class="hs-identifier hs-var hs-var">tzh</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FixedPrim Char -&gt; BoundedPrim Char
 forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var">liftB</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Char
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">char8</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Char -&gt; BoundedPrim Int -&gt; BoundedPrim (Char, Int)
@@ -506,10 +506,10 @@ forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#digits2"><span class="hs-identifier hs-var">digits2</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim (Int, Int)
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int
-</span><a href="#local-6989586621679127655"><span class="hs-identifier hs-var">tzm</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127662"><span class="hs-identifier hs-var">tzm</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-108"></span><span>
-</span><span id="line-109"></span><span>    </span><span id="local-6989586621679127655"><span class="annot"><span class="annottext">tzm :: BoundedPrim Int
-</span><a href="#local-6989586621679127655"><span class="hs-identifier hs-var hs-var">tzm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
+</span><span id="line-109"></span><span>    </span><span id="local-6989586621679127662"><span class="annot"><span class="annottext">tzm :: BoundedPrim Int
+</span><a href="#local-6989586621679127662"><span class="hs-identifier hs-var hs-var">tzm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Bool)
 -&gt; BoundedPrim Int -&gt; BoundedPrim Int -&gt; BoundedPrim Int
 forall a.
 (a -&gt; Bool) -&gt; BoundedPrim a -&gt; BoundedPrim a -&gt; BoundedPrim a
@@ -532,7 +532,7 @@ forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><span id="line-111"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#utcTime"><span class="hs-identifier hs-type">utcTime</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">UTCTime</span></a></span><span>
 </span><span id="line-112"></span><span id="utcTime"><span class="annot"><span class="annottext">utcTime :: BoundedPrim UTCTime
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#utcTime"><span class="hs-identifier hs-var hs-var">utcTime</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; (Day, (Char, (TimeOfDay, Char)))
-</span><a href="#local-6989586621679127654"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(UTCTime -&gt; (Day, (Char, (TimeOfDay, Char))))
+</span><a href="#local-6989586621679127661"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(UTCTime -&gt; (Day, (Char, (TimeOfDay, Char))))
 -&gt; BoundedPrim (Day, (Char, (TimeOfDay, Char)))
 -&gt; BoundedPrim UTCTime
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
@@ -556,20 +556,20 @@ forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 forall a. FixedPrim a -&gt; BoundedPrim a
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#liftB"><span class="hs-identifier hs-var">liftB</span></a></span><span> </span><span class="annot"><span class="annottext">FixedPrim Char
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">char8</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-113"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679127654"><span class="annot"><span class="annottext">f :: UTCTime -&gt; (Day, (Char, (TimeOfDay, Char)))
-</span><a href="#local-6989586621679127654"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">UTCTime</span></a></span><span> </span><span id="local-6989586621679127652"><span class="annot"><span class="annottext">Day
-</span><a href="#local-6989586621679127652"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">DiffTime -&gt; TimeOfDay
-</span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">timeToTimeOfDay</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span id="local-6989586621679127651"><span class="annot"><span class="annottext">TimeOfDay
-</span><a href="#local-6989586621679127651"><span class="hs-identifier hs-var">tod</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Day
-</span><a href="#local-6989586621679127652"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
+</span><span id="line-113"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679127661"><span class="annot"><span class="annottext">f :: UTCTime -&gt; (Day, (Char, (TimeOfDay, Char)))
+</span><a href="#local-6989586621679127661"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">UTCTime</span></a></span><span> </span><span id="local-6989586621679127659"><span class="annot"><span class="annottext">Day
+</span><a href="#local-6989586621679127659"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">DiffTime -&gt; TimeOfDay
+</span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">timeToTimeOfDay</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span id="local-6989586621679127658"><span class="annot"><span class="annottext">TimeOfDay
+</span><a href="#local-6989586621679127658"><span class="hs-identifier hs-var">tod</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Day
+</span><a href="#local-6989586621679127659"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">' '</span></span><span class="hs-special">,</span><span class="hs-special">(</span><span class="annot"><span class="annottext">TimeOfDay
-</span><a href="#local-6989586621679127651"><span class="hs-identifier hs-var">tod</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679127658"><span class="hs-identifier hs-var">tod</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'Z'</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-114"></span><span>
 </span><span id="line-115"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#localTime"><span class="hs-identifier hs-type">localTime</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">LocalTime</span></a></span><span>
 </span><span id="line-116"></span><span id="localTime"><span class="annot"><span class="annottext">localTime :: BoundedPrim LocalTime
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#localTime"><span class="hs-identifier hs-var hs-var">localTime</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">LocalTime -&gt; (Day, (Char, TimeOfDay))
-</span><a href="#local-6989586621679127650"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(LocalTime -&gt; (Day, (Char, TimeOfDay)))
+</span><a href="#local-6989586621679127657"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(LocalTime -&gt; (Day, (Char, TimeOfDay)))
 -&gt; BoundedPrim (Day, (Char, TimeOfDay)) -&gt; BoundedPrim LocalTime
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim Day
@@ -585,18 +585,18 @@ forall a. FixedPrim a -&gt; BoundedPrim a
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim TimeOfDay
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#timeOfDay"><span class="hs-identifier hs-var">timeOfDay</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-117"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679127650"><span class="annot"><span class="annottext">f :: LocalTime -&gt; (Day, (Char, TimeOfDay))
-</span><a href="#local-6989586621679127650"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">LocalTime</span></a></span><span> </span><span id="local-6989586621679127648"><span class="annot"><span class="annottext">Day
-</span><a href="#local-6989586621679127648"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span id="local-6989586621679127647"><span class="annot"><span class="annottext">TimeOfDay
-</span><a href="#local-6989586621679127647"><span class="hs-identifier hs-var">tod</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Day
-</span><a href="#local-6989586621679127648"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
+</span><span id="line-117"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679127657"><span class="annot"><span class="annottext">f :: LocalTime -&gt; (Day, (Char, TimeOfDay))
+</span><a href="#local-6989586621679127657"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">LocalTime</span></a></span><span> </span><span id="local-6989586621679127655"><span class="annot"><span class="annottext">Day
+</span><a href="#local-6989586621679127655"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span id="local-6989586621679127654"><span class="annot"><span class="annottext">TimeOfDay
+</span><a href="#local-6989586621679127654"><span class="hs-identifier hs-var">tod</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Day
+</span><a href="#local-6989586621679127655"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">' '</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TimeOfDay
-</span><a href="#local-6989586621679127647"><span class="hs-identifier hs-var">tod</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127654"><span class="hs-identifier hs-var">tod</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-118"></span><span>
 </span><span id="line-119"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#zonedTime"><span class="hs-identifier hs-type">zonedTime</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BoundedPrim</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">ZonedTime</span></a></span><span>
 </span><span id="line-120"></span><span id="zonedTime"><span class="annot"><span class="annottext">zonedTime :: BoundedPrim ZonedTime
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#zonedTime"><span class="hs-identifier hs-var hs-var">zonedTime</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ZonedTime -&gt; (LocalTime, TimeZone)
-</span><a href="#local-6989586621679127646"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(ZonedTime -&gt; (LocalTime, TimeZone))
+</span><a href="#local-6989586621679127653"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(ZonedTime -&gt; (LocalTime, TimeZone))
 -&gt; BoundedPrim (LocalTime, TimeZone) -&gt; BoundedPrim ZonedTime
 forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f b
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;$&lt;</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BoundedPrim LocalTime
@@ -605,20 +605,20 @@ forall (f :: * -&gt; *) b a. Contravariant f =&gt; (b -&gt; a) -&gt; f a -&gt; f
 forall (f :: * -&gt; *) a b. Monoidal f =&gt; f a -&gt; f b -&gt; f (a, b)
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">&gt;*&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim TimeZone
 </span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#timeZone"><span class="hs-identifier hs-var">timeZone</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-121"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679127646"><span class="annot"><span class="annottext">f :: ZonedTime -&gt; (LocalTime, TimeZone)
-</span><a href="#local-6989586621679127646"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">ZonedTime</span></a></span><span> </span><span id="local-6989586621679127644"><span class="annot"><span class="annottext">LocalTime
-</span><a href="#local-6989586621679127644"><span class="hs-identifier hs-var">lt</span></a></span></span><span> </span><span id="local-6989586621679127643"><span class="annot"><span class="annottext">TimeZone
-</span><a href="#local-6989586621679127643"><span class="hs-identifier hs-var">tz</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">LocalTime
-</span><a href="#local-6989586621679127644"><span class="hs-identifier hs-var">lt</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TimeZone
-</span><a href="#local-6989586621679127643"><span class="hs-identifier hs-var">tz</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-121"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679127653"><span class="annot"><span class="annottext">f :: ZonedTime -&gt; (LocalTime, TimeZone)
+</span><a href="#local-6989586621679127653"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">ZonedTime</span></a></span><span> </span><span id="local-6989586621679127651"><span class="annot"><span class="annottext">LocalTime
+</span><a href="#local-6989586621679127651"><span class="hs-identifier hs-var">lt</span></a></span></span><span> </span><span id="local-6989586621679127650"><span class="annot"><span class="annottext">TimeZone
+</span><a href="#local-6989586621679127650"><span class="hs-identifier hs-var">tz</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">LocalTime
+</span><a href="#local-6989586621679127651"><span class="hs-identifier hs-var">lt</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TimeZone
+</span><a href="#local-6989586621679127650"><span class="hs-identifier hs-var">tz</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-122"></span><span>
 </span><span id="line-123"></span><span>
 </span><span id="line-124"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#nominalDiffTime"><span class="hs-identifier hs-type">nominalDiffTime</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">NominalDiffTime</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">Builder</span></a></span><span>
 </span><span id="line-125"></span><span id="nominalDiffTime"><span class="annot"><span class="annottext">nominalDiffTime :: NominalDiffTime -&gt; Builder
-</span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#nominalDiffTime"><span class="hs-identifier hs-var hs-var">nominalDiffTime</span></a></span></span><span> </span><span id="local-6989586621679127642"><span class="annot"><span class="annottext">NominalDiffTime
-</span><a href="#local-6989586621679127642"><span class="hs-identifier hs-var">xy</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Builder
+</span><a href="Database.PostgreSQL.Simple.Time.Internal.Printer.html#nominalDiffTime"><span class="hs-identifier hs-var hs-var">nominalDiffTime</span></a></span></span><span> </span><span id="local-6989586621679127649"><span class="annot"><span class="annottext">NominalDiffTime
+</span><a href="#local-6989586621679127649"><span class="hs-identifier hs-var">xy</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Builder
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">integerDec</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679127641"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Builder -&gt; Builder -&gt; Builder
+</span><a href="#local-6989586621679127648"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Builder -&gt; Builder -&gt; Builder
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">BoundedPrim Int64 -&gt; Int64 -&gt; Builder
 forall a. BoundedPrim a -&gt; a -&gt; Builder
@@ -628,15 +628,15 @@ forall a. Num a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">abs</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; Int64
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679127639"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679127646"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-126"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-127"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679127641"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679127641"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621679127639"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679127639"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Pico -&gt; Integer
+</span><span id="line-127"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679127648"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679127648"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621679127646"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679127646"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Pico -&gt; Integer
 </span><a href="Database.PostgreSQL.Simple.Compat.html#fromPico"><span class="hs-identifier hs-var">fromPico</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">NominalDiffTime -&gt; Pico
 forall a b. a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">unsafeCoerce</span></a></span><span> </span><span class="annot"><span class="annottext">NominalDiffTime
-</span><a href="#local-6989586621679127642"><span class="hs-identifier hs-var">xy</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; (Integer, Integer)
+</span><a href="#local-6989586621679127649"><span class="hs-identifier hs-var">xy</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; (Integer, Integer)
 forall a. Integral a =&gt; a -&gt; a -&gt; (a, a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`quotRem`</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">1000000000000</span></span><span>

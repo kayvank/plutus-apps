@@ -6,7 +6,7 @@
 --   
 --   Get terminal window height and width without ncurses dependency.
 @package terminal-size
-@version 0.3.3
+@version 0.3.4
 
 
 -- | Get terminal window height and width without ncurses dependency
@@ -50,8 +50,13 @@ size :: Integral n => IO (Maybe (Window n))
 --   </pre>
 fdSize :: Integral n => Fd -> IO (Maybe (Window n))
 
--- | <i>Not available on Windows:</i> Same as <a>fdSize</a>, but takes
---   <a>Handle</a> instead of <a>Fd</a> (file descriptor).
+-- | Same as <a>fdSize</a>, but takes <a>Handle</a> instead of <a>Fd</a>
+--   (file descriptor).
+--   
+--   Note that on Windows with shells that use the native console API
+--   (cmd.exe, PowerShell) this works only for output handles like
+--   <tt>stdout</tt> and <tt>stderr</tt>; for input handles like
+--   <tt>stdin</tt> it always returns <a>Nothing</a>.
 --   
 --   <pre>
 --   &gt;&gt;&gt; import System.Console.Terminal.Size

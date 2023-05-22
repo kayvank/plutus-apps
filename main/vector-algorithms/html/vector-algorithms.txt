@@ -7,7 +7,7 @@
 --   Efficient algorithms for sorting vector arrays. At some stage other
 --   vector algorithms may be added.
 @package vector-algorithms
-@version 0.8.0.4
+@version 0.9.0.1.0.0.0.0.1
 
 
 -- | Optimal sorts for very small array sizes, or for small numbers of
@@ -54,8 +54,14 @@ module Data.Vector.Algorithms.Insertion
 -- | Sorts an entire array using the default comparison for the type
 sort :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m ()
 
+-- | A variant on <a>sort</a> that returns a vector of unique elements.
+sortUniq :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m (v (PrimState m) e)
+
 -- | Sorts an entire array using a given comparison
 sortBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m ()
+
+-- | A variant on <a>sortBy</a> which returns a vector of unique elements.
+sortUniqBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)
 
 -- | Sorts the portion of an array delimited by [l,u)
 sortByBounds :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> Int -> Int -> m ()
@@ -77,8 +83,14 @@ module Data.Vector.Algorithms.Merge
 -- | Sorts an array using the default comparison.
 sort :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m ()
 
+-- | A variant on <a>sort</a> that returns a vector of unique elements.
+sortUniq :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m (v (PrimState m) e)
+
 -- | Sorts an array using a custom comparison.
 sortBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m ()
+
+-- | A variant on <a>sortBy</a> which returns a vector of unique elements.
+sortUniqBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)
 
 -- | A type of comparisons between two values of a given type.
 type Comparison e = e -> e -> Ordering
@@ -106,10 +118,16 @@ module Data.Vector.Algorithms.AmericanFlag
 --   sufficiently small arrays.
 sort :: forall e m v. (PrimMonad m, MVector v e, Lexicographic e, Ord e) => v (PrimState m) e -> m ()
 
+-- | A variant on <a>sort</a> that returns a vector of unique elements.
+sortUniq :: forall e m v. (PrimMonad m, MVector v e, Lexicographic e, Ord e) => v (PrimState m) e -> m (v (PrimState m) e)
+
 -- | A fully parameterized version of the sorting algorithm. Again, this
 --   function takes both radix information and a comparison, because the
 --   algorithms falls back to insertion sort for small arrays.
 sortBy :: (PrimMonad m, MVector v e) => Comparison e -> (e -> Int -> Bool) -> Int -> (Int -> e -> Int) -> v (PrimState m) e -> m ()
+
+-- | A variant on <a>sortBy</a> which returns a vector of unique elements.
+sortUniqBy :: (PrimMonad m, MVector v e) => Comparison e -> (e -> Int -> Bool) -> Int -> (Int -> e -> Int) -> v (PrimState m) e -> m (v (PrimState m) e)
 
 -- | Given a representative of a stripe and an index number, this function
 --   determines whether to stop sorting.
@@ -159,8 +177,14 @@ module Data.Vector.Algorithms.Heap
 -- | Sorts an entire array using the default ordering.
 sort :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m ()
 
+-- | A variant on <a>sort</a> that returns a vector of unique elements.
+sortUniq :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m (v (PrimState m) e)
+
 -- | Sorts an entire array using a custom ordering.
 sortBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m ()
+
+-- | A variant on <a>sortBy</a> which returns a vector of unique elements.
+sortUniqBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)
 
 -- | Sorts a portion of an array [l,u) using a custom ordering
 sortByBounds :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> Int -> Int -> m ()
@@ -257,8 +281,15 @@ module Data.Vector.Algorithms.Intro
 -- | Sorts an entire array using the default ordering.
 sort :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m ()
 
--- | Sorts an entire array using a custom ordering.
+-- | A variant on <a>sort</a> that returns a vector of unique elements.
+sortUniq :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m (v (PrimState m) e)
+
+-- | A variant on <a>sortBy</a> which returns a vector of unique elements.
 sortBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m ()
+
+-- | Sorts an entire array using a custom ordering returning a vector of
+--   the unique elements.
+sortUniqBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)
 
 -- | Sorts a portion of an array [l,u) using a custom ordering
 sortByBounds :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> Int -> Int -> m ()
@@ -398,7 +429,7 @@ binarySearchRBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m)
 --   element could be inserted while preserving sortedness.
 binarySearchRByBounds :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> e -> Int -> Int -> m Int
 
--- | Given a predicate that is guaraneteed to be monotone on the given
+-- | Given a predicate that is guaranteed to be monotone on the given
 --   vector, finds the first index at which the predicate returns True, or
 --   the length of the array if the predicate is false for the entire
 --   array.
@@ -444,6 +475,27 @@ gallopingSearchRightPBounds :: (PrimMonad m, MVector v e) => (e -> Bool) -> v (P
 
 -- | A type of comparisons between two values of a given type.
 type Comparison e = e -> e -> Ordering
+
+module Data.Vector.Algorithms
+
+-- | The <a>nub</a> function which removes duplicate elements from a
+--   vector.
+nub :: forall v e. (Vector v e, Ord e) => v e -> v e
+
+-- | A version of <a>nub</a> with a custom comparison predicate.
+--   
+--   <i>Note:</i> This function makes use of <tt>sortByUniq</tt> using the
+--   intro sort algorithm.
+nubBy :: forall v e. Vector v e => Comparison e -> v e -> v e
+
+-- | The <a>nubByMut</a> function takes in an in-place sort algorithm and
+--   uses it to do a de-deduplicated sort. It then uses this to remove
+--   duplicate elements from the input.
+--   
+--   <i>Note:</i> Since this algorithm needs the original input and so
+--   copies before sorting in-place. As such, it is safe to use on
+--   immutable inputs.
+nubByMut :: forall m v e. (PrimMonad m, MVector v e) => (Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)) -> Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)
 
 
 -- | Timsort is a complex, adaptive, bottom-up merge sort. It is designed
@@ -534,7 +586,13 @@ module Data.Vector.Algorithms.Tim
 -- | Sorts an array using the default comparison.
 sort :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m ()
 
+-- | A variant on <a>sort</a> that returns a vector of unique elements.
+sortUniq :: (PrimMonad m, MVector v e, Ord e) => v (PrimState m) e -> m (v (PrimState m) e)
+
 -- | Sorts an array using a custom comparison.
 sortBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m ()
+
+-- | A variant on <a>sortBy</a> which returns a vector of unique elements.
+sortUniqBy :: (PrimMonad m, MVector v e) => Comparison e -> v (PrimState m) e -> m (v (PrimState m) e)
 instance GHC.Show.Show Data.Vector.Algorithms.Tim.Order
 instance GHC.Classes.Eq Data.Vector.Algorithms.Tim.Order

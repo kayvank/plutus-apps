@@ -18,9 +18,9 @@
 </span><span id="line-18"></span><span class="hs-comment">-- | The 0-based index of the block in the blockchain.</span><span>
 </span><span id="line-19"></span><span class="hs-comment">-- BlockNo is &lt;= SlotNo and is only equal at slot N if there is a block</span><span>
 </span><span id="line-20"></span><span class="hs-comment">-- for every slot where N &lt;= SlotNo.</span><span>
-</span><span id="line-21"></span><span id="local-6989586621679104419"><span id="local-6989586621679104420"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="BlockNo"><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-var">BlockNo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockNo"><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-var">BlockNo</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unBlockNo"><span class="annot"><span class="annottext">BlockNo -&gt; Word64
+</span><span id="line-21"></span><span id="local-6989586621679104441"><span id="local-6989586621679104442"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="BlockNo"><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-var">BlockNo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="BlockNo"><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-var">BlockNo</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unBlockNo"><span class="annot"><span class="annottext">BlockNo -&gt; Word64
 </span><a href="Cardano.Slotting.Block.html#unBlockNo"><span class="hs-identifier hs-var hs-var">unBlockNo</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679104413"><span id="local-6989586621679104415"><span class="annot"><span class="annottext">BlockNo -&gt; BlockNo -&gt; Bool
+</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679104435"><span id="local-6989586621679104437"><span class="annot"><span class="annottext">BlockNo -&gt; BlockNo -&gt; Bool
 (BlockNo -&gt; BlockNo -&gt; Bool)
 -&gt; (BlockNo -&gt; BlockNo -&gt; Bool) -&gt; Eq BlockNo
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -28,7 +28,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: BlockNo -&gt; BlockNo -&gt; Bool
 == :: BlockNo -&gt; BlockNo -&gt; Bool
 $c== :: BlockNo -&gt; BlockNo -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104397"><span id="local-6989586621679104399"><span id="local-6989586621679104401"><span id="local-6989586621679104403"><span id="local-6989586621679104405"><span id="local-6989586621679104407"><span id="local-6989586621679104409"><span class="annot"><span class="annottext">Eq BlockNo
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104419"><span id="local-6989586621679104421"><span id="local-6989586621679104423"><span id="local-6989586621679104425"><span id="local-6989586621679104427"><span id="local-6989586621679104429"><span id="local-6989586621679104431"><span class="annot"><span class="annottext">Eq BlockNo
 Eq BlockNo
 -&gt; (BlockNo -&gt; BlockNo -&gt; Ordering)
 -&gt; (BlockNo -&gt; BlockNo -&gt; Bool)
@@ -75,7 +75,7 @@ forall a.
 $cto :: forall x. Rep BlockNo x -&gt; BlockNo
 $cfrom :: forall x. BlockNo -&gt; Rep BlockNo x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-23"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621679104387"><span id="local-6989586621679104389"><span id="local-6989586621679104391"><span class="annot"><span class="annottext">Int -&gt; BlockNo -&gt; ShowS
+</span><span id="line-23"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621679104409"><span id="local-6989586621679104411"><span id="local-6989586621679104413"><span class="annot"><span class="annottext">Int -&gt; BlockNo -&gt; ShowS
 [BlockNo] -&gt; ShowS
 BlockNo -&gt; String
 (Int -&gt; BlockNo -&gt; ShowS)
@@ -89,7 +89,7 @@ $cshow :: BlockNo -&gt; String
 showsPrec :: Int -&gt; BlockNo -&gt; ShowS
 $cshowsPrec :: Int -&gt; BlockNo -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span> </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../quiet/html/src"><span class="hs-identifier hs-type">Quiet</span></a></span><span> </span><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-type">BlockNo</span></a></span><span>
-</span><span id="line-24"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679104370"><span id="local-6989586621679104372"><span id="local-6989586621679104374"><span id="local-6989586621679104376"><span id="local-6989586621679104378"><span id="local-6989586621679104380"><span id="local-6989586621679104382"><span id="local-6989586621679104384"><span class="annot"><span class="annottext">Int -&gt; BlockNo
+</span><span id="line-24"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679104392"><span id="local-6989586621679104394"><span id="local-6989586621679104396"><span id="local-6989586621679104398"><span id="local-6989586621679104400"><span id="local-6989586621679104402"><span id="local-6989586621679104404"><span id="local-6989586621679104406"><span class="annot"><span class="annottext">Int -&gt; BlockNo
 BlockNo -&gt; Int
 BlockNo -&gt; [BlockNo]
 BlockNo -&gt; BlockNo
@@ -130,14 +130,14 @@ pred :: BlockNo -&gt; BlockNo
 $cpred :: BlockNo -&gt; BlockNo
 succ :: BlockNo -&gt; BlockNo
 $csucc :: BlockNo -&gt; BlockNo
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></a></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104365"><span id="local-6989586621679104367"><span class="annot"><span class="annottext">BlockNo
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></a></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104387"><span id="local-6989586621679104389"><span class="annot"><span class="annottext">BlockNo
 BlockNo -&gt; BlockNo -&gt; Bounded BlockNo
 forall a. a -&gt; a -&gt; Bounded a
 maxBound :: BlockNo
 $cmaxBound :: BlockNo
 minBound :: BlockNo
 $cminBound :: BlockNo
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Bounded</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104350"><span id="local-6989586621679104352"><span id="local-6989586621679104354"><span id="local-6989586621679104356"><span id="local-6989586621679104358"><span id="local-6989586621679104360"><span id="local-6989586621679104362"><span class="annot"><span class="annottext">Integer -&gt; BlockNo
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Bounded</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104372"><span id="local-6989586621679104374"><span id="local-6989586621679104376"><span id="local-6989586621679104378"><span id="local-6989586621679104380"><span id="local-6989586621679104382"><span id="local-6989586621679104384"><span class="annot"><span class="annottext">Integer -&gt; BlockNo
 BlockNo -&gt; BlockNo
 BlockNo -&gt; BlockNo -&gt; BlockNo
 (BlockNo -&gt; BlockNo -&gt; BlockNo)
@@ -171,7 +171,7 @@ $c* :: BlockNo -&gt; BlockNo -&gt; BlockNo
 $c- :: BlockNo -&gt; BlockNo -&gt; BlockNo
 + :: BlockNo -&gt; BlockNo -&gt; BlockNo
 $c+ :: BlockNo -&gt; BlockNo -&gt; BlockNo
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104341"><span id="local-6989586621679104343"><span id="local-6989586621679104345"><span id="local-6989586621679104347"><span class="annot"><span class="annottext">Decoder s BlockNo
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104363"><span id="local-6989586621679104365"><span id="local-6989586621679104367"><span id="local-6989586621679104369"><span class="annot"><span class="annottext">Decoder s BlockNo
 Decoder s [BlockNo]
 [BlockNo] -&gt; Encoding
 BlockNo -&gt; Encoding
@@ -196,7 +196,7 @@ decode :: Decoder s BlockNo
 $cdecode :: forall s. Decoder s BlockNo
 encode :: BlockNo -&gt; Encoding
 $cencode :: BlockNo -&gt; Encoding
-</span><a href="../../../../serialise/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Serialise</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104334"><span id="local-6989586621679104336"><span id="local-6989586621679104338"><span class="annot"><span class="annottext">Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../serialise/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Serialise</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104356"><span id="local-6989586621679104358"><span id="local-6989586621679104360"><span class="annot"><span class="annottext">Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo)
 Proxy BlockNo -&gt; String
 (Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo))
@@ -213,26 +213,26 @@ wNoThunks :: Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo)
 $cwNoThunks :: Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo)
 noThunks :: Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo)
 $cnoThunks :: Context -&gt; BlockNo -&gt; IO (Maybe ThunkInfo)
-</span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104331"><span class="annot"><span class="annottext">BlockNo -&gt; ()
+</span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679104353"><span class="annot"><span class="annottext">BlockNo -&gt; ()
 (BlockNo -&gt; ()) -&gt; NFData BlockNo
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: BlockNo -&gt; ()
 $crnf :: BlockNo -&gt; ()
 </span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-25"></span><span>
-</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679104325"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-type">BlockNo</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-27"></span><span>  </span><span id="local-6989586621679104323"><span class="annot"><span class="annottext">toCBOR :: BlockNo -&gt; Encoding
+</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679104347"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-type">BlockNo</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621679104345"><span class="annot"><span class="annottext">toCBOR :: BlockNo -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BlockNo -&gt; Encoding
 forall a. Serialise a =&gt; a -&gt; Encoding
 </span><a href="../../../../serialise/html/src"><span class="hs-identifier hs-var">encode</span></a></span><span>
-</span><span id="line-28"></span><span>  </span><span id="local-6989586621679104320"><span class="annot"><span class="annottext">encodedSizeExpr :: (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy BlockNo -&gt; Size
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">encodedSizeExpr</span></a></span></span><span> </span><span id="local-6989586621679104318"><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679104318"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy Word64 -&gt; Size
+</span><span id="line-28"></span><span>  </span><span id="local-6989586621679104342"><span class="annot"><span class="annottext">encodedSizeExpr :: (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy BlockNo -&gt; Size
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">encodedSizeExpr</span></a></span></span><span> </span><span id="local-6989586621679104340"><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
+</span><a href="#local-6989586621679104340"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy Word64 -&gt; Size
 forall a.
 ToCBOR a =&gt;
 (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy a -&gt; Size
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">encodedSizeExpr</span></a></span><span> </span><span class="annot"><span class="annottext">forall t. ToCBOR t =&gt; Proxy t -&gt; Size
-</span><a href="#local-6989586621679104318"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="annot"><span class="annottext">(Proxy Word64 -&gt; Size)
+</span><a href="#local-6989586621679104340"><span class="hs-identifier hs-var">size</span></a></span><span> </span><span class="annot"><span class="annottext">(Proxy Word64 -&gt; Size)
 -&gt; (Proxy BlockNo -&gt; Proxy Word64) -&gt; Proxy BlockNo -&gt; Size
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(BlockNo -&gt; Word64) -&gt; Proxy BlockNo -&gt; Proxy Word64
@@ -240,8 +240,8 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="annot"><span class="annottext">BlockNo -&gt; Word64
 </span><a href="Cardano.Slotting.Block.html#unBlockNo"><span class="hs-identifier hs-var hs-var">unBlockNo</span></a></span><span>
 </span><span id="line-29"></span><span>
-</span><span id="line-30"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679104313"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-type">BlockNo</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-31"></span><span>  </span><span id="local-6989586621679104311"><span class="annot"><span class="annottext">fromCBOR :: Decoder s BlockNo
+</span><span id="line-30"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679104335"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Slotting.Block.html#BlockNo"><span class="hs-identifier hs-type">BlockNo</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-31"></span><span>  </span><span id="local-6989586621679104333"><span class="annot"><span class="annottext">fromCBOR :: Decoder s BlockNo
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Decoder s BlockNo
 forall a s. Serialise a =&gt; Decoder s a
 </span><a href="../../../../serialise/html/src"><span class="hs-identifier hs-var">decode</span></a></span><span>

@@ -51,8 +51,8 @@
 </span><span id="line-51"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier">Data.Text.IO</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">TIO</span></span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="annot"><a href="Test.Integration.Scenario.CLI.Port.html#spec"><span class="hs-identifier hs-type">spec</span></a></span><span>
-</span><span id="line-54"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621682954271"><span class="annot"><a href="#local-6989586621682954271"><span class="hs-identifier hs-type">s</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-type">HasType</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621682954271"><span class="hs-identifier hs-type">s</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-55"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-type">SpecWith</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682954271"><span class="hs-identifier hs-type">s</span></a></span><span>
+</span><span id="line-54"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621682954556"><span class="annot"><a href="#local-6989586621682954556"><span class="hs-identifier hs-type">s</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-type">HasType</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621682954556"><span class="hs-identifier hs-type">s</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-55"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-type">SpecWith</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682954556"><span class="hs-identifier hs-type">s</span></a></span><span>
 </span><span id="line-56"></span><span id="spec"><span class="annot"><span class="annottext">spec :: SpecWith s
 </span><a href="Test.Integration.Scenario.CLI.Port.html#spec"><span class="hs-identifier hs-var hs-var">spec</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; SpecWith s -&gt; SpecWith s
 forall a. HasCallStack =&gt; String -&gt; SpecWith a -&gt; SpecWith a
@@ -60,23 +60,23 @@ forall a. HasCallStack =&gt; String -&gt; SpecWith a -&gt; SpecWith a
 </span><span class="hs-string">&quot;COMMON_CLI_PORTS&quot;</span></span><span> </span><span class="annot"><span class="annottext">(SpecWith s -&gt; SpecWith s) -&gt; SpecWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-57"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="#local-6989586621682954270"><span class="hs-identifier hs-type">overPort</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621682954350"><span class="annot"><a href="#local-6989586621682954350"><span class="hs-identifier hs-type">sym</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-type">HasType</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682954350"><span class="hs-identifier hs-type">sym</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621682954271"><span class="hs-identifier hs-type">s</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621682954271"><span class="hs-identifier hs-type">s</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621682954271"><span class="hs-identifier hs-type">s</span></a></span><span>
-</span><span id="line-58"></span><span>        </span><span id="local-6989586621682954270"><span class="annot"><span class="annottext">overPort :: (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var hs-var">overPort</span></a></span></span><span> </span><span id="local-6989586621682954269"><span class="annot"><span class="annottext">Int -&gt; Int
-</span><a href="#local-6989586621682954269"><span class="hs-identifier hs-var">fn</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Port sym -&gt; Identity (Port sym)) -&gt; s -&gt; Identity s)
+</span><span id="line-57"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="#local-6989586621682954555"><span class="hs-identifier hs-type">overPort</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621682954635"><span class="annot"><a href="#local-6989586621682954635"><span class="hs-identifier hs-type">sym</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-type">HasType</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682954635"><span class="hs-identifier hs-type">sym</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621682954556"><span class="hs-identifier hs-type">s</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621682954556"><span class="hs-identifier hs-type">s</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621682954556"><span class="hs-identifier hs-type">s</span></a></span><span>
+</span><span id="line-58"></span><span>        </span><span id="local-6989586621682954555"><span class="annot"><span class="annottext">overPort :: (Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var hs-var">overPort</span></a></span></span><span> </span><span id="local-6989586621682954554"><span class="annot"><span class="annottext">Int -&gt; Int
+</span><a href="#local-6989586621682954554"><span class="hs-identifier hs-var">fn</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Port sym -&gt; Identity (Port sym)) -&gt; s -&gt; Identity s)
 -&gt; (Port sym -&gt; Port sym) -&gt; s -&gt; s
 forall a b s t.
 ((a -&gt; Identity b) -&gt; s -&gt; Identity t) -&gt; (a -&gt; b) -&gt; s -&gt; t
 </span><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-var">over</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">forall s. HasType (Port sym) s =&gt; Lens s s (Port sym) (Port sym)
 forall a s. HasType a s =&gt; Lens s s a a
-</span><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-var">typed</span></a></span><span> </span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682954350"><span class="hs-identifier hs-type">sym</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span id="local-6989586621682954267"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682954267"><span class="hs-identifier hs-var">p</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Port sym
+</span><a href="../../../../generic-lens/html/src"><span class="hs-identifier hs-var">typed</span></a></span><span> </span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682954635"><span class="hs-identifier hs-type">sym</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-type">Port</span></a></span><span> </span><span id="local-6989586621682954552"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682954552"><span class="hs-identifier hs-var">p</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Port sym
 forall (tag :: Symbol). Int -&gt; Port tag
 </span><a href="../../../../cardano-wallet-cli/html/src"><span class="hs-identifier hs-var">Port</span></a></span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Port sym) -&gt; Int -&gt; Port sym
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int
-</span><a href="#local-6989586621682954269"><span class="hs-identifier hs-var">fn</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682954267"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682954554"><span class="hs-identifier hs-var">fn</span></a></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682954552"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; ActionWith s -&gt; SpecWith s
 forall ctx.
@@ -85,20 +85,20 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (wallet list)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954266"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954266"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-61"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954265"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954265"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954551"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954551"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-61"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954550"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954550"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954266"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-62"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954263"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954263"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954551"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-62"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954548"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954548"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-63"></span><span>            </span><span class="annot"><span class="annottext">s -&gt; IO (ExitCode, Stdout, Stderr)
@@ -106,11 +106,11 @@ forall r s (m :: * -&gt; *).
 (CmdResult r, HasType (Port &quot;wallet&quot;) s, MonadIO m) =&gt;
 s -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#listWalletsViaCLI"><span class="hs-identifier hs-var">listWalletsViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954265"><span class="hs-identifier hs-var">ctx'</span></a></span><span>
+</span><a href="#local-6989586621682954550"><span class="hs-identifier hs-var">ctx'</span></a></span><span>
 </span><span id="line-64"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-65"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-66"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954263"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954548"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -125,36 +125,36 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (wallet create)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954259"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954259"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ResourceT IO () -&gt; IO ()
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954544"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954544"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ResourceT IO () -&gt; IO ()
 forall (m :: * -&gt; *) a. MonadUnliftIO m =&gt; ResourceT m a -&gt; m a
 </span><a href="../../../../resourcet/html/src"><span class="hs-identifier hs-var">runResourceT</span></a></span><span> </span><span class="annot"><span class="annottext">(ResourceT IO () -&gt; IO ()) -&gt; ResourceT IO () -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-69"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954258"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954258"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><span id="line-69"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954543"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954543"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954259"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-70"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954257"><span class="annot"><span class="annottext">name :: String
-</span><a href="#local-6989586621682954257"><span class="hs-identifier hs-var hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954544"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-70"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954542"><span class="annot"><span class="annottext">name :: String
+</span><a href="#local-6989586621682954542"><span class="hs-identifier hs-var hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Wallet created via CLI&quot;</span></span><span>
-</span><span id="line-71"></span><span>        </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span id="local-6989586621682954256"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954256"><span class="hs-identifier hs-var">mnemonics</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; ResourceT IO Stdout
+</span><span id="line-71"></span><span>        </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span id="local-6989586621682954541"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954541"><span class="hs-identifier hs-var">mnemonics</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; ResourceT IO Stdout
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#generateMnemonicsViaCLI"><span class="hs-identifier hs-var">generateMnemonicsViaCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;--size&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;15&quot;</span></span><span class="hs-special">]</span><span>
-</span><span id="line-72"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954255"><span class="annot"><span class="annottext">pwd :: String
-</span><a href="#local-6989586621682954255"><span class="hs-identifier hs-var hs-var">pwd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
+</span><span id="line-72"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954540"><span class="annot"><span class="annottext">pwd :: String
+</span><a href="#local-6989586621682954540"><span class="hs-identifier hs-var hs-var">pwd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Secure passphrase&quot;</span></span><span>
-</span><span id="line-73"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954254"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954254"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><span id="line-73"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954539"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954539"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-74"></span><span>            </span><span class="annot"><span class="annottext">s
@@ -172,15 +172,15 @@ s
 -&gt; String
 -&gt; ResourceT m (ExitCode, String, Text)
 </span><a href="Test.Integration.Framework.DSL.html#createWalletViaCLI"><span class="hs-identifier hs-var">createWalletViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954258"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954257"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954256"><span class="hs-identifier hs-var">mnemonics</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954543"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954542"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954541"><span class="hs-identifier hs-var">mnemonics</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n&quot;</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954255"><span class="hs-identifier hs-var">pwd</span></a></span><span>
+</span><a href="#local-6989586621682954540"><span class="hs-identifier hs-var">pwd</span></a></span><span>
 </span><span id="line-75"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-76"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-77"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954254"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; ResourceT IO ()
+</span><a href="#local-6989586621682954539"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; ResourceT IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -195,26 +195,26 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (wallet get)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954253"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954253"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-80"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954252"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954252"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954538"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954538"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-80"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954537"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954537"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954253"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-81"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954251"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954251"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><a href="#local-6989586621682954538"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-81"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954536"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954536"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
-</span><span id="line-82"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954249"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954249"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><span id="line-82"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954534"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954534"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-83"></span><span>            </span><span class="annot"><span class="annottext">s -&gt; String -&gt; IO (ExitCode, Stdout, Stderr)
@@ -222,12 +222,12 @@ forall r s (m :: * -&gt; *).
 (CmdResult r, HasType (Port &quot;wallet&quot;) s, MonadIO m) =&gt;
 s -&gt; String -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#getWalletViaCLI"><span class="hs-identifier hs-var">getWalletViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954252"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954251"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682954537"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954536"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-84"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-85"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-86"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954249"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954534"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -242,26 +242,26 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (wallet delete)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954248"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954248"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-89"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954247"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954247"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954533"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954533"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-89"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954532"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954532"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954248"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-90"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954246"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954246"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><a href="#local-6989586621682954533"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-90"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954531"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954531"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
-</span><span id="line-91"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954245"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954245"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><span id="line-91"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954530"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954530"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-92"></span><span>            </span><span class="annot"><span class="annottext">s -&gt; String -&gt; IO (ExitCode, Stdout, Stderr)
@@ -269,12 +269,12 @@ forall r s (m :: * -&gt; *).
 (CmdResult r, HasType (Port &quot;wallet&quot;) s, MonadIO m) =&gt;
 s -&gt; String -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#deleteWalletViaCLI"><span class="hs-identifier hs-var">deleteWalletViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954247"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954246"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682954532"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954531"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-93"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-94"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-95"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954245"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954530"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -289,26 +289,26 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (wallet update)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954244"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954244"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-98"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954243"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954243"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954529"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954529"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-98"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954528"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954528"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954244"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-99"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954242"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954242"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><a href="#local-6989586621682954529"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-99"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954527"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954527"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
-</span><span id="line-100"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954241"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954241"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><span id="line-100"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954526"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954526"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-101"></span><span>            </span><span class="annot"><span class="annottext">s -&gt; [String] -&gt; IO (ExitCode, Stdout, Stderr)
@@ -316,13 +316,13 @@ forall r s (m :: * -&gt; *).
 (CmdResult r, HasType (Port &quot;wallet&quot;) s, MonadIO m) =&gt;
 s -&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#updateWalletNameViaCLI"><span class="hs-identifier hs-var">updateWalletNameViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954243"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954242"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954528"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954527"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;My Wallet&quot;</span></span><span class="hs-special">]</span><span>
 </span><span id="line-102"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-103"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-104"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954241"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954526"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -337,25 +337,25 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (transction create)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954240"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954240"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-107"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954239"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954239"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954525"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954525"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-107"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954524"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954524"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954240"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-108"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954238"><span class="annot"><span class="annottext">addr :: String
-</span><a href="#local-6989586621682954238"><span class="hs-identifier hs-var hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682954525"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-108"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954523"><span class="annot"><span class="annottext">addr :: String
+</span><a href="#local-6989586621682954523"><span class="hs-identifier hs-var hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-109"></span><span>                </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;37btjrVyb4KFjfnPUjgDKLiATLxgwBbeMAEr4vxgkq4Ea5nR6evtX99x2\
                 \QFcF8ApLM4aqCLGvhHQyRJ4JHk4zVKxNeEtTJaPCeB86LndU2YvKUTEEm&quot;</span></span><span>
-</span><span id="line-111"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954237"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954237"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><span id="line-111"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954522"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954522"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-112"></span><span>            </span><span class="annot"><span class="annottext">s -&gt; String -&gt; [String] -&gt; IO (ExitCode, String, Text)
@@ -363,7 +363,7 @@ forall s (m :: * -&gt; *).
 (HasType (Port &quot;wallet&quot;) s, MonadIO m) =&gt;
 s -&gt; String -&gt; [String] -&gt; m (ExitCode, String, Text)
 </span><a href="Test.Integration.Framework.DSL.html#postTransactionViaCLI"><span class="hs-identifier hs-var">postTransactionViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954239"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954524"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><a href="Test.Integration.Scenario.CLI.Port.html#passphrase"><span class="hs-identifier hs-var">passphrase</span></a></span><span>
 </span><span id="line-113"></span><span>                </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
@@ -375,12 +375,12 @@ forall a. Int -&gt; a -&gt; [a]
 </span><span class="hs-string">&quot;14@&quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954238"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621682954523"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-115"></span><span>                </span><span class="hs-special">]</span><span>
 </span><span id="line-116"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-117"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-118"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954237"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954522"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -395,26 +395,26 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;PORT_01 - Can't reach server with wrong port (address list)&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954235"><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954235"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-121"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954234"><span class="annot"><span class="annottext">ctx' :: s
-</span><a href="#local-6989586621682954234"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682954520"><span class="annot"><span class="annottext">s
+</span><a href="#local-6989586621682954520"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-121"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954519"><span class="annot"><span class="annottext">ctx' :: s
+</span><a href="#local-6989586621682954519"><span class="hs-identifier hs-var hs-var">ctx'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Int) -&gt; s -&gt; s
 forall (sym :: Symbol).
 HasType (Port sym) s =&gt;
 (Int -&gt; Int) -&gt; s -&gt; s
-</span><a href="#local-6989586621682954270"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621682954555"><span class="hs-identifier hs-var">overPort</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-string">&quot;wallet&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954235"><span class="hs-identifier hs-var">ctx</span></a></span><span>
-</span><span id="line-122"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954233"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954233"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><a href="#local-6989586621682954520"><span class="hs-identifier hs-var">ctx</span></a></span><span>
+</span><span id="line-122"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954518"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954518"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
-</span><span id="line-123"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954232"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954232"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><span id="line-123"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621682954517"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954517"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-124"></span><span>            </span><span class="annot"><span class="annottext">s -&gt; [String] -&gt; IO (ExitCode, Stdout, Stderr)
@@ -422,12 +422,12 @@ forall r s (m :: * -&gt; *).
 (CmdResult r, HasType (Port &quot;wallet&quot;) s, MonadIO m) =&gt;
 s -&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#listAddressesViaCLI"><span class="hs-identifier hs-var">listAddressesViaCLI</span></a></span><span> </span><span class="annot"><span class="annottext">s
-</span><a href="#local-6989586621682954234"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954233"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682954519"><span class="hs-identifier hs-var">ctx'</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954518"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-125"></span><span>        </span><span class="hs-comment">-- on Windows seems that not whole stderr is available to Stderr</span><span>
 </span><span id="line-126"></span><span>        </span><span class="hs-comment">-- hence asserting only for exit code</span><span>
 </span><span id="line-127"></span><span>        </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954232"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954517"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -446,15 +446,15 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-130"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExitCode
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954231"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954231"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954516"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954516"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-131"></span><span>            </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#cardanoWalletCLI"><span class="hs-identifier hs-var">cardanoWalletCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;list&quot;</span></span><span class="hs-special">]</span><span>
 </span><span id="line-132"></span><span>        </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954231"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954516"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -470,26 +470,26 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-135"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954229"><span class="annot"><span class="annottext">args :: [String]
-</span><a href="#local-6989586621682954229"><span class="hs-identifier hs-var hs-var">args</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
+</span><span id="line-135"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954514"><span class="annot"><span class="annottext">args :: [String]
+</span><a href="#local-6989586621682954514"><span class="hs-identifier hs-var hs-var">args</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;create&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;from-recovery-phrase&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;myWallet&quot;</span></span><span class="hs-special">]</span><span>
-</span><span id="line-136"></span><span>        </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span id="local-6989586621682954228"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954228"><span class="hs-identifier hs-var">mnemonics</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; IO Stdout
+</span><span id="line-136"></span><span>        </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span id="local-6989586621682954513"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954513"><span class="hs-identifier hs-var">mnemonics</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; IO Stdout
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#generateMnemonicsViaCLI"><span class="hs-identifier hs-var">generateMnemonicsViaCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;--size&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;15&quot;</span></span><span class="hs-special">]</span><span>
-</span><span id="line-137"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954227"><span class="annot"><span class="annottext">pwd :: String
-</span><a href="#local-6989586621682954227"><span class="hs-identifier hs-var hs-var">pwd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
+</span><span id="line-137"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954512"><span class="annot"><span class="annottext">pwd :: String
+</span><a href="#local-6989586621682954512"><span class="hs-identifier hs-var hs-var">pwd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Secure passphrase&quot;</span></span><span>
-</span><span id="line-138"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954226"><span class="annot"><span class="annottext">process :: CreateProcess
-</span><a href="#local-6989586621682954226"><span class="hs-identifier hs-var hs-var">process</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; CreateProcess
+</span><span id="line-138"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954511"><span class="annot"><span class="annottext">process :: CreateProcess
+</span><a href="#local-6989586621682954511"><span class="hs-identifier hs-var hs-var">process</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; CreateProcess
 </span><a href="Test.Integration.Framework.DSL.html#proc%27"><span class="hs-identifier hs-var">proc'</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><a href="Test.Integration.Framework.DSL.html#commandName"><span class="hs-identifier hs-var">commandName</span></a></span><span> </span><span class="annot"><span class="annottext">[String]
-</span><a href="#local-6989586621682954229"><span class="hs-identifier hs-var">args</span></a></span><span>
+</span><a href="#local-6989586621682954514"><span class="hs-identifier hs-var">args</span></a></span><span>
 </span><span id="line-139"></span><span>        </span><span class="annot"><span class="annottext">CreateProcess
 -&gt; (Maybe Handle
     -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; IO ())
@@ -501,46 +501,46 @@ CreateProcess
     -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; m a)
 -&gt; m a
 </span><a href="../../../../unliftio/html/src"><span class="hs-identifier hs-var">withCreateProcess</span></a></span><span> </span><span class="annot"><span class="annottext">CreateProcess
-</span><a href="#local-6989586621682954226"><span class="hs-identifier hs-var">process</span></a></span><span> </span><span class="annot"><span class="annottext">((Maybe Handle
+</span><a href="#local-6989586621682954511"><span class="hs-identifier hs-var">process</span></a></span><span> </span><span class="annot"><span class="annottext">((Maybe Handle
   -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; IO ())
  -&gt; IO ())
 -&gt; (Maybe Handle
     -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; IO ())
 -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954225"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954224"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954224"><span class="hs-identifier hs-var">stderr</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682954223"><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621682954223"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954510"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954509"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621682954509"><span class="hs-identifier hs-var">stderr</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682954508"><span class="annot"><span class="annottext">ProcessHandle
+</span><a href="#local-6989586621682954508"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-140"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hPutStr</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954228"><span class="hs-identifier hs-var">mnemonics</span></a></span><span>
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954513"><span class="hs-identifier hs-var">mnemonics</span></a></span><span>
 </span><span id="line-141"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hPutStr</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n&quot;</span></span><span>
 </span><span id="line-142"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hPutStr</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954227"><span class="hs-identifier hs-var">pwd</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954512"><span class="hs-identifier hs-var">pwd</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-143"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hPutStr</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954227"><span class="hs-identifier hs-var">pwd</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954512"><span class="hs-identifier hs-var">pwd</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-144"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hFlush</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span><span>
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span><span>
 </span><span id="line-145"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954225"><span class="hs-identifier hs-var">stdin</span></a></span><span>
+</span><a href="#local-6989586621682954510"><span class="hs-identifier hs-var">stdin</span></a></span><span>
 </span><span id="line-146"></span><span>            </span><span class="annot"><span class="annottext">IO ExitCode -&gt; IO ()
 forall (f :: * -&gt; *) a. Functor f =&gt; f a -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">void</span></a></span><span> </span><span class="annot"><span class="annottext">(IO ExitCode -&gt; IO ()) -&gt; IO ExitCode -&gt; IO ()
@@ -548,16 +548,16 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ProcessHandle -&gt; IO ExitCode
 forall (m :: * -&gt; *). MonadIO m =&gt; ProcessHandle -&gt; m ExitCode
 </span><a href="../../../../unliftio/html/src"><span class="hs-identifier hs-var">waitForProcess</span></a></span><span> </span><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621682954223"><span class="hs-identifier hs-var">h</span></a></span><span>
-</span><span id="line-147"></span><span>            </span><span id="local-6989586621682954222"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954222"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; String
+</span><a href="#local-6989586621682954508"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><span id="line-147"></span><span>            </span><span id="local-6989586621682954507"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954507"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; String
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.unpack</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; String) -&gt; IO Text -&gt; IO String
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">TIO.hGetContents</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954224"><span class="hs-identifier hs-var">stderr</span></a></span><span>
+</span><a href="#local-6989586621682954509"><span class="hs-identifier hs-var">stderr</span></a></span><span>
 </span><span id="line-148"></span><span>            </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954222"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954507"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -573,24 +573,24 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-151"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954218"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954218"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><span id="line-151"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954503"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954503"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
 </span><span id="line-152"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExitCode
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954217"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954217"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954502"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954502"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-153"></span><span>            </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#cardanoWalletCLI"><span class="hs-identifier hs-var">cardanoWalletCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;get&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954218"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682954503"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-154"></span><span>        </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954217"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954502"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -606,24 +606,24 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-157"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954216"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954216"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><span id="line-157"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954501"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954501"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
 </span><span id="line-158"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExitCode
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954215"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954215"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954500"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954500"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-159"></span><span>            </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#cardanoWalletCLI"><span class="hs-identifier hs-var">cardanoWalletCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;delete&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954216"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682954501"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-160"></span><span>        </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954215"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954500"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -639,26 +639,26 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-163"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954214"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954214"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><span id="line-163"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954499"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954499"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
 </span><span id="line-164"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExitCode
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954213"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954213"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954498"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954498"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-165"></span><span>            </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#cardanoWalletCLI"><span class="hs-identifier hs-var">cardanoWalletCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;wallet&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;update&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;name&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954214"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954499"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;My Wallet&quot;</span></span><span class="hs-special">]</span><span>
 </span><span id="line-166"></span><span>        </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954213"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954498"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -674,13 +674,13 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-169"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954212"><span class="annot"><span class="annottext">addr :: String
-</span><a href="#local-6989586621682954212"><span class="hs-identifier hs-var hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-169"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954497"><span class="annot"><span class="annottext">addr :: String
+</span><a href="#local-6989586621682954497"><span class="hs-identifier hs-var hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-170"></span><span>                </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;37btjrVyb4KFjfnPUjgDKLiATLxgwBbeMAEr4vxgkq4Ea5nR6evtX99x2\
                 \QFcF8ApLM4aqCLGvhHQyRJ4JHk4zVKxNeEtTJaPCeB86LndU2YvKUTEEm&quot;</span></span><span>
-</span><span id="line-172"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954211"><span class="annot"><span class="annottext">args :: [String]
-</span><a href="#local-6989586621682954211"><span class="hs-identifier hs-var hs-var">args</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-172"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954496"><span class="annot"><span class="annottext">args :: [String]
+</span><a href="#local-6989586621682954496"><span class="hs-identifier hs-var hs-var">args</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-173"></span><span>                </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;create&quot;</span></span><span>
@@ -693,13 +693,13 @@ forall a. Int -&gt; a -&gt; [a]
 </span><span class="hs-string">&quot;14@&quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954212"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621682954497"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-175"></span><span>                </span><span class="hs-special">]</span><span>
-</span><span id="line-176"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954210"><span class="annot"><span class="annottext">process :: CreateProcess
-</span><a href="#local-6989586621682954210"><span class="hs-identifier hs-var hs-var">process</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; CreateProcess
+</span><span id="line-176"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954495"><span class="annot"><span class="annottext">process :: CreateProcess
+</span><a href="#local-6989586621682954495"><span class="hs-identifier hs-var hs-var">process</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; CreateProcess
 </span><a href="Test.Integration.Framework.DSL.html#proc%27"><span class="hs-identifier hs-var">proc'</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><a href="Test.Integration.Framework.DSL.html#commandName"><span class="hs-identifier hs-var">commandName</span></a></span><span> </span><span class="annot"><span class="annottext">[String]
-</span><a href="#local-6989586621682954211"><span class="hs-identifier hs-var">args</span></a></span><span>
+</span><a href="#local-6989586621682954496"><span class="hs-identifier hs-var">args</span></a></span><span>
 </span><span id="line-177"></span><span>        </span><span class="annot"><span class="annottext">CreateProcess
 -&gt; (Maybe Handle
     -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; IO ())
@@ -711,31 +711,31 @@ CreateProcess
     -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; m a)
 -&gt; m a
 </span><a href="../../../../unliftio/html/src"><span class="hs-identifier hs-var">withCreateProcess</span></a></span><span> </span><span class="annot"><span class="annottext">CreateProcess
-</span><a href="#local-6989586621682954210"><span class="hs-identifier hs-var">process</span></a></span><span> </span><span class="annot"><span class="annottext">((Maybe Handle
+</span><a href="#local-6989586621682954495"><span class="hs-identifier hs-var">process</span></a></span><span> </span><span class="annot"><span class="annottext">((Maybe Handle
   -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; IO ())
  -&gt; IO ())
 -&gt; (Maybe Handle
     -&gt; Maybe Handle -&gt; Maybe Handle -&gt; ProcessHandle -&gt; IO ())
 -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954209"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954209"><span class="hs-identifier hs-var">stdin</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954208"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954208"><span class="hs-identifier hs-var">stderr</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682954207"><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621682954207"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954494"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621682954494"><span class="hs-identifier hs-var">stdin</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682954493"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621682954493"><span class="hs-identifier hs-var">stderr</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682954492"><span class="annot"><span class="annottext">ProcessHandle
+</span><a href="#local-6989586621682954492"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-178"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hPutStr</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954209"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954494"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><a href="Test.Integration.Scenario.CLI.Port.html#passphrase"><span class="hs-identifier hs-var">passphrase</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;\n&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-179"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hFlush</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954209"><span class="hs-identifier hs-var">stdin</span></a></span><span>
+</span><a href="#local-6989586621682954494"><span class="hs-identifier hs-var">stdin</span></a></span><span>
 </span><span id="line-180"></span><span>            </span><span class="annot"><span class="annottext">Handle -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">hClose</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954209"><span class="hs-identifier hs-var">stdin</span></a></span><span>
+</span><a href="#local-6989586621682954494"><span class="hs-identifier hs-var">stdin</span></a></span><span>
 </span><span id="line-181"></span><span>            </span><span class="annot"><span class="annottext">IO ExitCode -&gt; IO ()
 forall (f :: * -&gt; *) a. Functor f =&gt; f a -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">void</span></a></span><span> </span><span class="annot"><span class="annottext">(IO ExitCode -&gt; IO ()) -&gt; IO ExitCode -&gt; IO ()
@@ -743,16 +743,16 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ProcessHandle -&gt; IO ExitCode
 forall (m :: * -&gt; *). MonadIO m =&gt; ProcessHandle -&gt; m ExitCode
 </span><a href="../../../../unliftio/html/src"><span class="hs-identifier hs-var">waitForProcess</span></a></span><span> </span><span class="annot"><span class="annottext">ProcessHandle
-</span><a href="#local-6989586621682954207"><span class="hs-identifier hs-var">h</span></a></span><span>
-</span><span id="line-182"></span><span>            </span><span id="local-6989586621682954206"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954206"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; String
+</span><a href="#local-6989586621682954492"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><span id="line-182"></span><span>            </span><span id="local-6989586621682954491"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954491"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; String
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.unpack</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; String) -&gt; IO Text -&gt; IO String
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">TIO.hGetContents</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621682954208"><span class="hs-identifier hs-var">stderr</span></a></span><span>
+</span><a href="#local-6989586621682954493"><span class="hs-identifier hs-var">stderr</span></a></span><span>
 </span><span id="line-183"></span><span>            </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954206"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954491"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -768,24 +768,24 @@ String -&gt; ActionWith ctx -&gt; SpecWith ctx
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-186"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954205"><span class="annot"><span class="annottext">wid :: String
-</span><a href="#local-6989586621682954205"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+</span><span id="line-186"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954490"><span class="annot"><span class="annottext">wid :: String
+</span><a href="#local-6989586621682954490"><span class="hs-identifier hs-var hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
 </span><span id="line-187"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExitCode
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">ExitCode</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954204"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954204"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954489"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954489"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-188"></span><span>            </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#cardanoWalletCLI"><span class="hs-identifier hs-var">cardanoWalletCLI</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;address&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;list&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954205"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682954490"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-189"></span><span>        </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954204"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954489"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()
@@ -798,8 +798,8 @@ forall a. HasCallStack =&gt; String -&gt; SpecWith a -&gt; SpecWith a
 </span><span class="hs-string">&quot;PORT_04 - Fail nicely when port is out-of-bounds&quot;</span></span><span> </span><span class="annot"><span class="annottext">(SpecWith s -&gt; SpecWith s) -&gt; SpecWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-192"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954203"><span class="annot"><span class="annottext">tests :: [(String, String, Int)]
-</span><a href="#local-6989586621682954203"><span class="hs-identifier hs-var hs-var">tests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-192"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954488"><span class="annot"><span class="annottext">tests :: [(String, String, Int)]
+</span><a href="#local-6989586621682954488"><span class="hs-identifier hs-var hs-var">tests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-193"></span><span>                </span><span class="hs-special">[</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;serve&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;--port&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Port Any -&gt; Int
@@ -827,38 +827,38 @@ forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
 (Foldable t, Monad m) =&gt;
 t a -&gt; (a -&gt; m b) -&gt; m ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">forM_</span></a></span><span> </span><span class="annot"><span class="annottext">[(String, String, Int)]
-</span><a href="#local-6989586621682954203"><span class="hs-identifier hs-var">tests</span></a></span><span> </span><span class="annot"><span class="annottext">(((String, String, Int) -&gt; SpecWith s) -&gt; SpecWith s)
+</span><a href="#local-6989586621682954488"><span class="hs-identifier hs-var">tests</span></a></span><span> </span><span class="annot"><span class="annottext">(((String, String, Int) -&gt; SpecWith s) -&gt; SpecWith s)
 -&gt; ((String, String, Int) -&gt; SpecWith s) -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682954200"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954200"><span class="hs-identifier hs-var">cmd</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682954199"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954199"><span class="hs-identifier hs-var">opt</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682954198"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682954198"><span class="hs-identifier hs-var">port</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954197"><span class="annot"><span class="annottext">args :: [String]
-</span><a href="#local-6989586621682954197"><span class="hs-identifier hs-var hs-var">args</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954200"><span class="hs-identifier hs-var">cmd</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954199"><span class="hs-identifier hs-var">opt</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int -&gt; String
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682954485"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954485"><span class="hs-identifier hs-var">cmd</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682954484"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954484"><span class="hs-identifier hs-var">opt</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682954483"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682954483"><span class="hs-identifier hs-var">port</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682954482"><span class="annot"><span class="annottext">args :: [String]
+</span><a href="#local-6989586621682954482"><span class="hs-identifier hs-var hs-var">args</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954485"><span class="hs-identifier hs-var">cmd</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954484"><span class="hs-identifier hs-var">opt</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682954198"><span class="hs-identifier hs-var">port</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-keyword">in</span><span>
+</span><a href="#local-6989586621682954483"><span class="hs-identifier hs-var">port</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-keyword">in</span><span>
 </span><span id="line-197"></span><span>            </span><span class="annot"><span class="annottext">String -&gt; ActionWith s -&gt; SpecWith s
 forall ctx.
 HasCallStack =&gt;
 String -&gt; ActionWith ctx -&gt; SpecWith ctx
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">it</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[String] -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">unwords</span></a></span><span> </span><span class="annot"><span class="annottext">[String]
-</span><a href="#local-6989586621682954197"><span class="hs-identifier hs-var">args</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
+</span><a href="#local-6989586621682954482"><span class="hs-identifier hs-var">args</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(ActionWith s -&gt; SpecWith s) -&gt; ActionWith s -&gt; SpecWith s
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">s
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-198"></span><span>                </span><span class="hs-special">(</span><span id="local-6989586621682954194"><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954194"><span class="hs-identifier hs-var">exit</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954193"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954193"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
+</span><span id="line-198"></span><span>                </span><span class="hs-special">(</span><span id="local-6989586621682954479"><span class="annot"><span class="annottext">ExitCode
+</span><a href="#local-6989586621682954479"><span class="hs-identifier hs-var">exit</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../command/html/src"><span class="hs-identifier hs-type">Stderr</span></a></span><span> </span><span id="local-6989586621682954478"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621682954478"><span class="hs-identifier hs-var">err</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; IO (ExitCode, Stdout, Stderr)
 forall r (m :: * -&gt; *). (CmdResult r, MonadIO m) =&gt; [String] -&gt; m r
 </span><a href="Test.Integration.Framework.DSL.html#cardanoWalletCLI"><span class="hs-identifier hs-var">cardanoWalletCLI</span></a></span><span> </span><span class="annot"><span class="annottext">[String]
-</span><a href="#local-6989586621682954197"><span class="hs-identifier hs-var">args</span></a></span><span>
+</span><a href="#local-6989586621682954482"><span class="hs-identifier hs-var">args</span></a></span><span>
 </span><span id="line-199"></span><span>                </span><span class="annot"><span class="annottext">ExitCode
-</span><a href="#local-6989586621682954194"><span class="hs-identifier hs-var">exit</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
+</span><a href="#local-6989586621682954479"><span class="hs-identifier hs-var">exit</span></a></span><span> </span><span class="annot"><span class="annottext">ExitCode -&gt; ExitCode -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 a -&gt; a -&gt; m ()
@@ -866,7 +866,7 @@ a -&gt; a -&gt; m ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">ExitFailure</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span>
 </span><span id="line-200"></span><span>                </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621682954193"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621682954478"><span class="hs-identifier hs-var">err</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; IO ()
 forall (m :: * -&gt; *) a.
 (HasCallStack, MonadIO m, Show a, Eq a) =&gt;
 [a] -&gt; [a] -&gt; m ()

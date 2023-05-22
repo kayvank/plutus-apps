@@ -1,48 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-pragma">{-# LANGUAGE CPP #-}</span><span>
-</span><span id="line-2"></span><span class="hs-comment">-----------------------------------------------------------------------------</span><span>
-</span><span id="line-3"></span><span class="hs-comment">-- |</span><span>
-</span><span id="line-4"></span><span class="hs-comment">-- Module      :  Control.Lens</span><span>
-</span><span id="line-5"></span><span class="hs-comment">-- Copyright   :  (C) 2012-16 Edward Kmett</span><span>
-</span><span id="line-6"></span><span class="hs-comment">-- License     :  BSD-style (see the file LICENSE)</span><span>
-</span><span id="line-7"></span><span class="hs-comment">-- Maintainer  :  Edward Kmett &lt;ekmett@gmail.com&gt;</span><span>
-</span><span id="line-8"></span><span class="hs-comment">-- Stability   :  experimental</span><span>
-</span><span id="line-9"></span><span class="hs-comment">-- Portability :  non-portable</span><span>
-</span><span id="line-10"></span><span class="hs-comment">--</span><span>
-</span><span id="line-11"></span><span class="hs-comment">-- Usage:</span><span>
-</span><span id="line-12"></span><span class="hs-comment">--</span><span>
-</span><span id="line-13"></span><span class="hs-comment">-- You can derive lenses automatically for many data types:</span><span>
-</span><span id="line-14"></span><span class="hs-comment">--</span><span>
-</span><span id="line-15"></span><span class="hs-comment">-- @</span><span>
-</span><span id="line-16"></span><span class="hs-comment">-- import Control.Lens</span><span>
-</span><span id="line-17"></span><span class="hs-comment">-- </span><span>
-</span><span id="line-18"></span><span class="hs-comment">-- data FooBar a</span><span>
-</span><span id="line-19"></span><span class="hs-comment">--   = Foo { _x :: ['Int'], _y :: a }</span><span>
-</span><span id="line-20"></span><span class="hs-comment">--   | Bar { _x :: ['Int'] }</span><span>
-</span><span id="line-21"></span><span class="hs-comment">-- 'makeLenses' ''FooBar</span><span>
-</span><span id="line-22"></span><span class="hs-comment">-- @</span><span>
-</span><span id="line-23"></span><span class="hs-comment">--</span><span>
-</span><span id="line-24"></span><span class="hs-comment">-- This defines the following lenses:</span><span>
-</span><span id="line-25"></span><span class="hs-comment">--</span><span>
-</span><span id="line-26"></span><span class="hs-comment">-- @</span><span>
-</span><span id="line-27"></span><span class="hs-comment">-- x :: 'Lens'' (FooBar a) ['Int']</span><span>
-</span><span id="line-28"></span><span class="hs-comment">-- y :: 'Traversal' (FooBar a) (FooBar b) a b</span><span>
-</span><span id="line-29"></span><span class="hs-comment">-- @</span><span>
-</span><span id="line-30"></span><span class="hs-comment">--</span><span>
-</span><span id="line-31"></span><span class="hs-comment">-- You can then access the value of @_x@ with ('^.'), the value of @_y@ &#8211;</span><span>
-</span><span id="line-32"></span><span class="hs-comment">-- with ('^?') or ('^?!') (since it can fail), set the values with ('.~'),</span><span>
-</span><span id="line-33"></span><span class="hs-comment">-- modify them with ('%~'), and use almost any other combinator that is</span><span>
-</span><span id="line-34"></span><span class="hs-comment">-- re-exported here on those fields.</span><span>
-</span><span id="line-35"></span><span class="hs-comment">--</span><span>
-</span><span id="line-36"></span><span class="hs-comment">-- The combinators here have unusually specific type signatures, so for</span><span>
-</span><span id="line-37"></span><span class="hs-comment">-- particularly tricky ones, the simpler type signatures you might want to</span><span>
-</span><span id="line-38"></span><span class="hs-comment">-- pretend the combinators have are specified as well.</span><span>
-</span><span id="line-39"></span><span class="hs-comment">--</span><span>
-</span><span id="line-40"></span><span class="hs-comment">-- More information on how to use lenses is available on the lens wiki:</span><span>
-</span><span id="line-41"></span><span class="hs-comment">--</span><span>
-</span><span id="line-42"></span><span class="hs-comment">-- &lt;http://github.com/ekmett/lens/wiki&gt;</span><span>
-</span><span id="line-43"></span><span class="hs-comment">--</span><span>
-</span><span id="line-44"></span><span class="hs-comment">-- &lt;&lt;Hierarchy.png&gt;&gt;</span><span>
-</span><span id="line-45"></span><span class="hs-comment">----------------------------------------------------------------------------</span><span>
+</span><span id="line-2"></span><span class="hs-comment">-----------------------------------------------------------------------------</span><span>
+</span><span id="line-3"></span><span class="hs-comment">-- |</span><span>
+</span><span id="line-4"></span><span class="hs-comment">-- Module      :  Control.Lens</span><span>
+</span><span id="line-5"></span><span class="hs-comment">-- Copyright   :  (C) 2012-16 Edward Kmett</span><span>
+</span><span id="line-6"></span><span class="hs-comment">-- License     :  BSD-style (see the file LICENSE)</span><span>
+</span><span id="line-7"></span><span class="hs-comment">-- Maintainer  :  Edward Kmett &lt;ekmett@gmail.com&gt;</span><span>
+</span><span id="line-8"></span><span class="hs-comment">-- Stability   :  experimental</span><span>
+</span><span id="line-9"></span><span class="hs-comment">-- Portability :  non-portable</span><span>
+</span><span id="line-10"></span><span class="hs-comment">--</span><span>
+</span><span id="line-11"></span><span class="hs-comment">-- Usage:</span><span>
+</span><span id="line-12"></span><span class="hs-comment">--</span><span>
+</span><span id="line-13"></span><span class="hs-comment">-- You can derive lenses automatically for many data types:</span><span>
+</span><span id="line-14"></span><span class="hs-comment">--</span><span>
+</span><span id="line-15"></span><span class="hs-comment">-- @</span><span>
+</span><span id="line-16"></span><span class="hs-comment">-- import Control.Lens</span><span>
+</span><span id="line-17"></span><span class="hs-comment">-- </span><span>
+</span><span id="line-18"></span><span class="hs-comment">-- data FooBar a</span><span>
+</span><span id="line-19"></span><span class="hs-comment">--   = Foo { _x :: ['Int'], _y :: a }</span><span>
+</span><span id="line-20"></span><span class="hs-comment">--   | Bar { _x :: ['Int'] }</span><span>
+</span><span id="line-21"></span><span class="hs-comment">-- 'makeLenses' ''FooBar</span><span>
+</span><span id="line-22"></span><span class="hs-comment">-- @</span><span>
+</span><span id="line-23"></span><span class="hs-comment">--</span><span>
+</span><span id="line-24"></span><span class="hs-comment">-- This defines the following lenses:</span><span>
+</span><span id="line-25"></span><span class="hs-comment">--</span><span>
+</span><span id="line-26"></span><span class="hs-comment">-- @</span><span>
+</span><span id="line-27"></span><span class="hs-comment">-- x :: 'Lens'' (FooBar a) ['Int']</span><span>
+</span><span id="line-28"></span><span class="hs-comment">-- y :: 'Traversal' (FooBar a) (FooBar b) a b</span><span>
+</span><span id="line-29"></span><span class="hs-comment">-- @</span><span>
+</span><span id="line-30"></span><span class="hs-comment">--</span><span>
+</span><span id="line-31"></span><span class="hs-comment">-- You can then access the value of @_x@ with ('^.'), the value of @_y@ &#8211;</span><span>
+</span><span id="line-32"></span><span class="hs-comment">-- with ('^?') or ('^?!') (since it can fail), set the values with ('.~'),</span><span>
+</span><span id="line-33"></span><span class="hs-comment">-- modify them with ('%~'), and use almost any other combinator that is</span><span>
+</span><span id="line-34"></span><span class="hs-comment">-- re-exported here on those fields.</span><span>
+</span><span id="line-35"></span><span class="hs-comment">--</span><span>
+</span><span id="line-36"></span><span class="hs-comment">-- The combinators here have unusually specific type signatures, so for</span><span>
+</span><span id="line-37"></span><span class="hs-comment">-- particularly tricky ones, the simpler type signatures you might want to</span><span>
+</span><span id="line-38"></span><span class="hs-comment">-- pretend the combinators have are specified as well.</span><span>
+</span><span id="line-39"></span><span class="hs-comment">--</span><span>
+</span><span id="line-40"></span><span class="hs-comment">-- More information on how to use lenses is available on the lens wiki:</span><span>
+</span><span id="line-41"></span><span class="hs-comment">--</span><span>
+</span><span id="line-42"></span><span class="hs-comment">-- &lt;http://github.com/ekmett/lens/wiki&gt;</span><span>
+</span><span id="line-43"></span><span class="hs-comment">--</span><span>
+</span><span id="line-44"></span><span class="hs-comment">-- &lt;&lt;Hierarchy.png&gt;&gt;</span><span>
+</span><span id="line-45"></span><span class="hs-comment">----------------------------------------------------------------------------</span><span>
 </span><span id="line-46"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Control.Lens</span><span>
 </span><span id="line-47"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="hs-keyword">module</span><span> </span><span class="annot"><a href="Control.Lens.At.html"><span class="hs-identifier">Control.Lens.At</span></a></span><span>
 </span><span id="line-48"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="hs-keyword">module</span><span> </span><span class="annot"><a href="Control.Lens.Cons.html"><span class="hs-identifier">Control.Lens.Cons</span></a></span><span>

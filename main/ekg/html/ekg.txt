@@ -8,7 +8,7 @@
 --   provides a simple way to integrate a monitoring server into any
 --   application.
 @package ekg
-@version 0.4.0.15
+@version 0.4.0.15.0.0.0.0.1
 
 
 -- | This module defines a type for mutable, integer-valued counters.
@@ -123,6 +123,12 @@ serverMetricStore :: Server -> Store
 --   <a>registerGcMetrics</a>.
 forkServer :: ByteString -> Int -> IO Server
 
+-- | Create a server with prefined metrics from <a>registerGcMetrics</a>,
+--   listening on all interfaces. If you are running EKG on a private
+--   network (including virtual private network), it may be appropriate to
+--   bind to all interfaces, not only localhost.
+forkServerNoHostname :: Int -> IO Server
+
 -- | Start an HTTP server in a new thread. The server replies to GET
 --   requests to the given host and port. The host argument can be either a
 --   numeric network address (dotted quad for IPv4, colon-separated hex for
@@ -145,6 +151,11 @@ forkServer :: ByteString -> Int -> IO Server
 --   metrics registered by <a>forkServer</a>, you might want to register
 --   them yourself.
 forkServerWith :: Store -> ByteString -> Int -> IO Server
+
+-- | Start an HTTP server in a new thread, with the specified metrics
+--   store, listening on all interfaces. Other than accepting requests to
+--   any hostname, this is the same as <a>forkServerWith</a>.
+forkServerNoHostnameWith :: Store -> Int -> IO Server
 
 -- | Return a new, zero-initialized counter associated with the given name
 --   and server. Multiple calls to <a>getCounter</a> with the same

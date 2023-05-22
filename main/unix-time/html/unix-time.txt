@@ -6,7 +6,7 @@
 --   
 --   Fast parser/formatter/utilities for Unix time
 @package unix-time
-@version 0.4.8
+@version 0.4.9
 
 module Data.UnixTime
 
@@ -121,7 +121,7 @@ diffUnixTime :: UnixTime -> UnixTime -> UnixDiffTime
 -- | Adding difference to <a>UnixTime</a>.
 --   
 --   <pre>
---   &gt;&gt;&gt; UnixTime 100 2000 `addUnixDiffTime` microSecondsToUnixDiffTime (-1003000)
+--   &gt;&gt;&gt; UnixTime 100 2000 `addUnixDiffTime` microSecondsToUnixDiffTime ((-1003000) :: Int)
 --   UnixTime {utSeconds = 98, utMicroSeconds = 999000}
 --   </pre>
 addUnixDiffTime :: UnixTime -> UnixDiffTime -> UnixTime
@@ -129,7 +129,7 @@ addUnixDiffTime :: UnixTime -> UnixDiffTime -> UnixTime
 -- | Creating difference from seconds.
 --   
 --   <pre>
---   &gt;&gt;&gt; secondsToUnixDiffTime 100
+--   &gt;&gt;&gt; secondsToUnixDiffTime (100 :: Int)
 --   UnixDiffTime {udtSeconds = 100, udtMicroSeconds = 0}
 --   </pre>
 secondsToUnixDiffTime :: Integral a => a -> UnixDiffTime
@@ -137,12 +137,12 @@ secondsToUnixDiffTime :: Integral a => a -> UnixDiffTime
 -- | Creating difference from micro seconds.
 --   
 --   <pre>
---   &gt;&gt;&gt; microSecondsToUnixDiffTime 12345678
+--   &gt;&gt;&gt; microSecondsToUnixDiffTime (12345678 :: Int)
 --   UnixDiffTime {udtSeconds = 12, udtMicroSeconds = 345678}
 --   </pre>
 --   
 --   <pre>
---   &gt;&gt;&gt; microSecondsToUnixDiffTime (-12345678)
+--   &gt;&gt;&gt; microSecondsToUnixDiffTime ((-12345678) :: Int)
 --   UnixDiffTime {udtSeconds = -12, udtMicroSeconds = -345678}
 --   </pre>
 microSecondsToUnixDiffTime :: Integral a => a -> UnixDiffTime

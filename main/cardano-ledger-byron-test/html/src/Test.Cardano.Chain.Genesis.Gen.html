@@ -69,8 +69,8 @@
 </span><span id="line-69"></span><span>
 </span><span id="line-70"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genConfig"><span class="hs-identifier hs-type">genConfig</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Config</span></a></span><span>
 </span><span id="line-71"></span><span id="genConfig"><span class="annot"><span class="annottext">genConfig :: ProtocolMagicId -&gt; Gen Config
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genConfig"><span class="hs-identifier hs-var hs-var">genConfig</span></a></span></span><span> </span><span id="local-6989586621679482685"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482685"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genConfig"><span class="hs-identifier hs-var hs-var">genConfig</span></a></span></span><span> </span><span id="local-6989586621679482918"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679482918"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-72"></span><span>  </span><span class="annot"><span class="annottext">GenesisData
 -&gt; GenesisHash
 -&gt; RequiresNetworkMagic
@@ -90,7 +90,7 @@
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity GenesisData
 </span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisData"><span class="hs-identifier hs-var">genGenesisData</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482685"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679482918"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-74"></span><span>    </span><span class="annot"><span class="annottext">GenT
   Identity
   (GenesisHash
@@ -115,8 +115,8 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-77"></span><span>
 </span><span id="line-78"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisData"><span class="hs-identifier hs-type">genCanonicalGenesisData</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">GenesisData</span></a></span><span>
 </span><span id="line-79"></span><span id="genCanonicalGenesisData"><span class="annot"><span class="annottext">genCanonicalGenesisData :: ProtocolMagicId -&gt; GenT Identity GenesisData
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisData"><span class="hs-identifier hs-var hs-var">genCanonicalGenesisData</span></a></span></span><span> </span><span id="local-6989586621679482682"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482682"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisData"><span class="hs-identifier hs-var hs-var">genCanonicalGenesisData</span></a></span></span><span> </span><span id="local-6989586621679482915"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679482915"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-80"></span><span>  </span><span class="annot"><span class="annottext">GenesisKeyHashes
 -&gt; GenesisDelegation
 -&gt; UTCTime
@@ -173,7 +173,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity GenesisDelegation
 </span><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisDelegation"><span class="hs-identifier hs-var">genCanonicalGenesisDelegation</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482682"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679482915"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-83"></span><span>    </span><span class="annot"><span class="annottext">GenT
   Identity
   (UTCTime
@@ -238,7 +238,7 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
      Identity (ProtocolMagicId -&gt; GenesisAvvmBalances -&gt; GenesisData)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity BlockCount
-</span><a href="#local-6989586621679482679"><span class="hs-identifier hs-var">genBlockCount'</span></a></span><span>
+</span><a href="#local-6989586621679482912"><span class="hs-identifier hs-var">genBlockCount'</span></a></span><span>
 </span><span id="line-87"></span><span>    </span><span class="annot"><span class="annottext">GenT
   Identity (ProtocolMagicId -&gt; GenesisAvvmBalances -&gt; GenesisData)
 -&gt; GenT Identity ProtocolMagicId
@@ -252,9 +252,9 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity GenesisAvvmBalances
 </span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisAvvmBalances"><span class="hs-identifier hs-var">genGenesisAvvmBalances</span></a></span><span>
 </span><span id="line-89"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-90"></span><span>    </span><span class="annot"><a href="#local-6989586621679482679"><span class="hs-identifier hs-type">genBlockCount'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">BlockCount</span></a></span><span>
-</span><span id="line-91"></span><span>    </span><span id="local-6989586621679482679"><span class="annot"><span class="annottext">genBlockCount' :: GenT Identity BlockCount
-</span><a href="#local-6989586621679482679"><span class="hs-identifier hs-var hs-var">genBlockCount'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; BlockCount
+</span><span id="line-90"></span><span>    </span><span class="annot"><a href="#local-6989586621679482912"><span class="hs-identifier hs-type">genBlockCount'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">BlockCount</span></a></span><span>
+</span><span id="line-91"></span><span>    </span><span id="local-6989586621679482912"><span class="annot"><span class="annottext">genBlockCount' :: GenT Identity BlockCount
+</span><a href="#local-6989586621679482912"><span class="hs-identifier hs-var hs-var">genBlockCount'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; BlockCount
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">BlockCount</span></a></span><span> </span><span class="annot"><span class="annottext">(Word64 -&gt; BlockCount)
 -&gt; GenT Identity Word64 -&gt; GenT Identity BlockCount
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -268,18 +268,18 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><span id="line-92"></span><span>
 </span><span id="line-93"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisDelegation"><span class="hs-identifier hs-type">genCanonicalGenesisDelegation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">GenesisDelegation</span></a></span><span>
 </span><span id="line-94"></span><span id="genCanonicalGenesisDelegation"><span class="annot"><span class="annottext">genCanonicalGenesisDelegation :: ProtocolMagicId -&gt; GenT Identity GenesisDelegation
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisDelegation"><span class="hs-identifier hs-var hs-var">genCanonicalGenesisDelegation</span></a></span></span><span> </span><span id="local-6989586621679482675"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482675"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genCanonicalGenesisDelegation"><span class="hs-identifier hs-var hs-var">genCanonicalGenesisDelegation</span></a></span></span><span> </span><span id="local-6989586621679482908"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679482908"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-95"></span><span>  </span><span class="annot"><span class="annottext">[Certificate] -&gt; GenesisDelegation
-</span><a href="#local-6989586621679482674"><span class="hs-identifier hs-var">mkGenesisDelegation'</span></a></span><span> </span><span class="annot"><span class="annottext">([Certificate] -&gt; GenesisDelegation)
+</span><a href="#local-6989586621679482907"><span class="hs-identifier hs-var">mkGenesisDelegation'</span></a></span><span> </span><span class="annot"><span class="annottext">([Certificate] -&gt; GenesisDelegation)
 -&gt; GenT Identity [Certificate] -&gt; GenT Identity GenesisDelegation
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity [Certificate]
 </span><a href="Test.Cardano.Chain.Delegation.Gen.html#genCanonicalCertificateDistinctList"><span class="hs-identifier hs-var">genCanonicalCertificateDistinctList</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482675"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679482908"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-96"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-97"></span><span>    </span><span id="local-6989586621679482674"><span class="annot"><span class="annottext">mkGenesisDelegation' :: [Certificate] -&gt; GenesisDelegation
-</span><a href="#local-6989586621679482674"><span class="hs-identifier hs-var hs-var">mkGenesisDelegation'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-97"></span><span>    </span><span id="local-6989586621679482907"><span class="annot"><span class="annottext">mkGenesisDelegation' :: [Certificate] -&gt; GenesisDelegation
+</span><a href="#local-6989586621679482907"><span class="hs-identifier hs-var hs-var">mkGenesisDelegation'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-98"></span><span>      </span><span class="annot"><span class="annottext">(GenesisDelegationError -&gt; GenesisDelegation)
 -&gt; (GenesisDelegation -&gt; GenesisDelegation)
 -&gt; Either GenesisDelegationError GenesisDelegation
@@ -318,8 +318,8 @@ MonadError GenesisDelegationError m =&gt;
 </span><span id="line-99"></span><span>
 </span><span id="line-100"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisData"><span class="hs-identifier hs-type">genGenesisData</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">GenesisData</span></a></span><span>
 </span><span id="line-101"></span><span id="genGenesisData"><span class="annot"><span class="annottext">genGenesisData :: ProtocolMagicId -&gt; GenT Identity GenesisData
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisData"><span class="hs-identifier hs-var hs-var">genGenesisData</span></a></span></span><span> </span><span id="local-6989586621679482669"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482669"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisData"><span class="hs-identifier hs-var hs-var">genGenesisData</span></a></span></span><span> </span><span id="local-6989586621679482902"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679482902"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-102"></span><span>  </span><span class="annot"><span class="annottext">GenesisKeyHashes
 -&gt; GenesisDelegation
 -&gt; UTCTime
@@ -376,7 +376,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity GenesisDelegation
 </span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisDelegation"><span class="hs-identifier hs-var">genGenesisDelegation</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482669"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679482902"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-105"></span><span>    </span><span class="annot"><span class="annottext">GenT
   Identity
   (UTCTime
@@ -490,17 +490,17 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-118"></span><span>
 </span><span id="line-119"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisDelegation"><span class="hs-identifier hs-type">genGenesisDelegation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">GenesisDelegation</span></a></span><span>
 </span><span id="line-120"></span><span id="genGenesisDelegation"><span class="annot"><span class="annottext">genGenesisDelegation :: ProtocolMagicId -&gt; GenT Identity GenesisDelegation
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisDelegation"><span class="hs-identifier hs-var hs-var">genGenesisDelegation</span></a></span></span><span> </span><span id="local-6989586621679482664"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482664"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Certificate] -&gt; GenesisDelegation
-</span><a href="#local-6989586621679482663"><span class="hs-identifier hs-var">mkGenesisDelegation'</span></a></span><span> </span><span class="annot"><span class="annottext">([Certificate] -&gt; GenesisDelegation)
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisDelegation"><span class="hs-identifier hs-var hs-var">genGenesisDelegation</span></a></span></span><span> </span><span id="local-6989586621679482897"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679482897"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Certificate] -&gt; GenesisDelegation
+</span><a href="#local-6989586621679482896"><span class="hs-identifier hs-var">mkGenesisDelegation'</span></a></span><span> </span><span class="annot"><span class="annottext">([Certificate] -&gt; GenesisDelegation)
 -&gt; GenT Identity [Certificate] -&gt; GenT Identity GenesisDelegation
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity [Certificate]
 </span><a href="Test.Cardano.Chain.Delegation.Gen.html#genCertificateDistinctList"><span class="hs-identifier hs-var">genCertificateDistinctList</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482664"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679482897"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-121"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-122"></span><span>    </span><span id="local-6989586621679482663"><span class="annot"><span class="annottext">mkGenesisDelegation' :: [Certificate] -&gt; GenesisDelegation
-</span><a href="#local-6989586621679482663"><span class="hs-identifier hs-var hs-var">mkGenesisDelegation'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-122"></span><span>    </span><span id="local-6989586621679482896"><span class="annot"><span class="annottext">mkGenesisDelegation' :: [Certificate] -&gt; GenesisDelegation
+</span><a href="#local-6989586621679482896"><span class="hs-identifier hs-var hs-var">mkGenesisDelegation'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-123"></span><span>      </span><span class="annot"><span class="annottext">(GenesisDelegationError -&gt; GenesisDelegation)
 -&gt; (GenesisDelegation -&gt; GenesisDelegation)
 -&gt; Either GenesisDelegationError GenesisDelegation
@@ -624,8 +624,8 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-139"></span><span>
 </span><span id="line-140"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisSpec"><span class="hs-identifier hs-type">genGenesisSpec</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">GenesisSpec</span></a></span><span>
 </span><span id="line-141"></span><span id="genGenesisSpec"><span class="annot"><span class="annottext">genGenesisSpec :: ProtocolMagicId -&gt; Gen GenesisSpec
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisSpec"><span class="hs-identifier hs-var hs-var">genGenesisSpec</span></a></span></span><span> </span><span id="local-6989586621679482655"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482655"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Text -&gt; GenesisSpec)
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisSpec"><span class="hs-identifier hs-var hs-var">genGenesisSpec</span></a></span></span><span> </span><span id="local-6989586621679482888"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679482888"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Text -&gt; GenesisSpec)
 -&gt; (GenesisSpec -&gt; GenesisSpec)
 -&gt; Either Text GenesisSpec
 -&gt; GenesisSpec
@@ -644,10 +644,10 @@ forall (cat :: * -&gt; * -&gt; *) a. Category cat =&gt; cat a a
 -&gt; GenT Identity (Either Text GenesisSpec) -&gt; Gen GenesisSpec
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Either Text GenesisSpec)
-</span><a href="#local-6989586621679482653"><span class="hs-identifier hs-var">mkGenSpec</span></a></span><span>
+</span><a href="#local-6989586621679482886"><span class="hs-identifier hs-var">mkGenSpec</span></a></span><span>
 </span><span id="line-142"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-143"></span><span>    </span><span id="local-6989586621679482653"><span class="annot"><span class="annottext">mkGenSpec :: GenT Identity (Either Text GenesisSpec)
-</span><a href="#local-6989586621679482653"><span class="hs-identifier hs-var hs-var">mkGenSpec</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-143"></span><span>    </span><span id="local-6989586621679482886"><span class="annot"><span class="annottext">mkGenSpec :: GenT Identity (Either Text GenesisSpec)
+</span><a href="#local-6989586621679482886"><span class="hs-identifier hs-var hs-var">mkGenSpec</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-144"></span><span>      </span><span class="annot"><span class="annottext">GenesisAvvmBalances
 -&gt; GenesisDelegation
 -&gt; ProtocolParameters
@@ -694,7 +694,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity GenesisDelegation
 </span><a href="Test.Cardano.Chain.Genesis.Gen.html#genGenesisDelegation"><span class="hs-identifier hs-var">genGenesisDelegation</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679482655"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679482888"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-147"></span><span>        </span><span class="annot"><span class="annottext">GenT
   Identity
   (ProtocolParameters
@@ -864,15 +864,15 @@ forall (m :: * -&gt; *). MonadGen m =&gt; m Char
 </span><span id="line-175"></span><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#genUTCTime"><span class="hs-identifier hs-type">genUTCTime</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">UTCTime</span></a></span><span>
 </span><span id="line-176"></span><span id="genUTCTime"><span class="annot"><span class="annottext">genUTCTime :: GenT Identity UTCTime
 </span><a href="Test.Cardano.Chain.Genesis.Gen.html#genUTCTime"><span class="hs-identifier hs-var hs-var">genUTCTime</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-177"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679482642"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679482642"><span class="hs-identifier hs-var">jday</span></a></span></span><span> </span><span id="local-6989586621679482641"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679482641"><span class="hs-identifier hs-var">seconds</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-177"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679482875"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679482875"><span class="hs-identifier hs-var">jday</span></a></span></span><span> </span><span id="local-6989586621679482874"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679482874"><span class="hs-identifier hs-var">seconds</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-178"></span><span>      </span><span class="annot"><span class="annottext">Day -&gt; DiffTime -&gt; UTCTime
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">UTCTime</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; Day
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">ModifiedJulianDay</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679482642"><span class="hs-identifier hs-var">jday</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; DiffTime
+</span><a href="#local-6989586621679482875"><span class="hs-identifier hs-var">jday</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer -&gt; DiffTime
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">secondsToDiffTime</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679482641"><span class="hs-identifier hs-var">seconds</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679482874"><span class="hs-identifier hs-var">seconds</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-179"></span><span>  </span><span class="hs-special">)</span><span>
 </span><span id="line-180"></span><span>    </span><span class="annot"><span class="annottext">(Integer -&gt; Integer -&gt; UTCTime)
 -&gt; GenT Identity Integer -&gt; GenT Identity (Integer -&gt; UTCTime)
@@ -899,11 +899,11 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><span id="line-184"></span><span class="hs-comment">-- Helper Generators</span><span>
 </span><span id="line-185"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-186"></span><span>
-</span><span id="line-187"></span><span id="local-6989586621679482737"><span id="local-6989586621679482738"><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#customMapGen"><span class="hs-identifier hs-type">customMapGen</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Ord</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482738"><span class="hs-identifier hs-type">k</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482738"><span class="hs-identifier hs-type">k</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482737"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482738"><span class="hs-identifier hs-type">k</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482737"><span class="hs-identifier hs-type">v</span></a></span><span class="hs-special">)</span></span></span><span>
+</span><span id="line-187"></span><span id="local-6989586621679482970"><span id="local-6989586621679482971"><span class="annot"><a href="Test.Cardano.Chain.Genesis.Gen.html#customMapGen"><span class="hs-identifier hs-type">customMapGen</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Ord</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482971"><span class="hs-identifier hs-type">k</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482971"><span class="hs-identifier hs-type">k</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482970"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482971"><span class="hs-identifier hs-type">k</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679482970"><span class="hs-identifier hs-type">v</span></a></span><span class="hs-special">)</span></span></span><span>
 </span><span id="line-188"></span><span id="customMapGen"><span class="annot"><span class="annottext">customMapGen :: Gen k -&gt; Gen v -&gt; Gen (Map k v)
-</span><a href="Test.Cardano.Chain.Genesis.Gen.html#customMapGen"><span class="hs-identifier hs-var hs-var">customMapGen</span></a></span></span><span> </span><span id="local-6989586621679482637"><span class="annot"><span class="annottext">Gen k
-</span><a href="#local-6989586621679482637"><span class="hs-identifier hs-var">keyGen</span></a></span></span><span> </span><span id="local-6989586621679482636"><span class="annot"><span class="annottext">Gen v
-</span><a href="#local-6989586621679482636"><span class="hs-identifier hs-var">valGen</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Genesis.Gen.html#customMapGen"><span class="hs-identifier hs-var hs-var">customMapGen</span></a></span></span><span> </span><span id="local-6989586621679482870"><span class="annot"><span class="annottext">Gen k
+</span><a href="#local-6989586621679482870"><span class="hs-identifier hs-var">keyGen</span></a></span></span><span> </span><span id="local-6989586621679482869"><span class="annot"><span class="annottext">Gen v
+</span><a href="#local-6989586621679482869"><span class="hs-identifier hs-var">valGen</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-189"></span><span>  </span><span class="annot"><span class="annottext">[(k, v)] -&gt; Map k v
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="annot"><span class="annottext">([(k, v)] -&gt; Map k v) -&gt; GenT Identity [(k, v)] -&gt; Gen (Map k v)
@@ -917,8 +917,8 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(k -&gt; v -&gt; (k, v)) -&gt; Gen k -&gt; GenT Identity (v -&gt; (k, v))
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen k
-</span><a href="#local-6989586621679482637"><span class="hs-identifier hs-var">keyGen</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (v -&gt; (k, v)) -&gt; Gen v -&gt; GenT Identity (k, v)
+</span><a href="#local-6989586621679482870"><span class="hs-identifier hs-var">keyGen</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (v -&gt; (k, v)) -&gt; Gen v -&gt; GenT Identity (k, v)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen v
-</span><a href="#local-6989586621679482636"><span class="hs-identifier hs-var">valGen</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679482869"><span class="hs-identifier hs-var">valGen</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-190"></span></pre></body></html>

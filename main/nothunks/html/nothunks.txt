@@ -9,7 +9,7 @@
 --   which can then be used in assertions. This can be invaluable in
 --   avoiding memory leaks, or tracking down existing ones.
 @package nothunks
-@version 0.1.3
+@version 0.1.4
 
 module NoThunks.Class
 
@@ -113,7 +113,7 @@ showTypeOf :: (NoThunks a, Generic a, GShowTypeOf (Rep a)) => Proxy a -> String
 --   allows to get source spans from closures. If we could take advantage
 --   of that, we could not only show the type of the unexpected thunk, but
 --   also where it got allocated.
-data ThunkInfo
+newtype ThunkInfo
 ThunkInfo :: Context -> ThunkInfo
 [thunkContext] :: ThunkInfo -> Context
 

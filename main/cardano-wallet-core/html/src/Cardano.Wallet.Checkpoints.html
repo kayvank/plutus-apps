@@ -91,11 +91,11 @@ is clear that the data cannot exist at the genesis point
     Checkpoints
 -------------------------------------------------------------------------------}</span><span>
 </span><span id="line-93"></span><span class="hs-comment">-- | Collection of checkpoints indexed by 'Slot'.</span><span>
-</span><span id="line-94"></span><span id="local-6989586621682459603"><span id="local-6989586621682459604"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Checkpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-var">Checkpoints</span></a></span></span><span> </span><span id="local-6989586621682459688"><span class="annot"><a href="#local-6989586621682459688"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Checkpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-var">Checkpoints</span></a></span></span><span>
+</span><span id="line-94"></span><span id="local-6989586621682459887"><span id="local-6989586621682459888"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Checkpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-var">Checkpoints</span></a></span></span><span> </span><span id="local-6989586621682459972"><span class="annot"><a href="#local-6989586621682459972"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Checkpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-var">Checkpoints</span></a></span></span><span>
 </span><span id="line-95"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="checkpoints"><span class="annot"><span class="annottext">Checkpoints a -&gt; Map Slot a
-</span><a href="Cardano.Wallet.Checkpoints.html#checkpoints"><span class="hs-identifier hs-var hs-var">checkpoints</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459688"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><a href="Cardano.Wallet.Checkpoints.html#checkpoints"><span class="hs-identifier hs-var hs-var">checkpoints</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459972"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-96"></span><span>    </span><span class="hs-comment">-- ^ Map of checkpoints. Always contains the genesis checkpoint.</span><span>
-</span><span id="line-97"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682459598"><span id="local-6989586621682459600"><span class="annot"><span class="annottext">Checkpoints a -&gt; Checkpoints a -&gt; Bool
+</span><span id="line-97"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682459882"><span id="local-6989586621682459884"><span class="annot"><span class="annottext">Checkpoints a -&gt; Checkpoints a -&gt; Bool
 (Checkpoints a -&gt; Checkpoints a -&gt; Bool)
 -&gt; (Checkpoints a -&gt; Checkpoints a -&gt; Bool) -&gt; Eq (Checkpoints a)
 forall a. Eq a =&gt; Checkpoints a -&gt; Checkpoints a -&gt; Bool
@@ -104,7 +104,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: forall a. Eq a =&gt; Checkpoints a -&gt; Checkpoints a -&gt; Bool
 == :: Checkpoints a -&gt; Checkpoints a -&gt; Bool
 $c== :: forall a. Eq a =&gt; Checkpoints a -&gt; Checkpoints a -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span id="local-6989586621682459591"><span id="local-6989586621682459593"><span id="local-6989586621682459595"><span class="annot"><span class="annottext">Int -&gt; Checkpoints a -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span id="local-6989586621682459875"><span id="local-6989586621682459877"><span id="local-6989586621682459879"><span class="annot"><span class="annottext">Int -&gt; Checkpoints a -&gt; ShowS
 [Checkpoints a] -&gt; ShowS
 Checkpoints a -&gt; String
 (Int -&gt; Checkpoints a -&gt; ShowS)
@@ -144,7 +144,7 @@ $cfrom :: forall a x. Checkpoints a -&gt; Rep (Checkpoints a) x
 </span><span id="line-105"></span><span class="hs-comment">--   but the checkpoint after that.</span><span>
 </span><span id="line-106"></span><span class="hs-comment">--   Hence, this function does not check whether the genesis checkpoint</span><span>
 </span><span id="line-107"></span><span class="hs-comment">--   is in the list of checkpoints.</span><span>
-</span><span id="line-108"></span><span id="local-6989586621682459586"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#loadCheckpoints"><span class="hs-identifier hs-type">loadCheckpoints</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621682459586"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459586"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-108"></span><span id="local-6989586621682459870"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#loadCheckpoints"><span class="hs-identifier hs-type">loadCheckpoints</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621682459870"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459870"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-109"></span><span id="loadCheckpoints"><span class="annot"><span class="annottext">loadCheckpoints :: [(Slot, a)] -&gt; Checkpoints a
 </span><a href="Cardano.Wallet.Checkpoints.html#loadCheckpoints"><span class="hs-identifier hs-var hs-var">loadCheckpoints</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map Slot a -&gt; Checkpoints a
 forall a. Map Slot a -&gt; Checkpoints a
@@ -156,10 +156,10 @@ forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.fromList</span></a></span><span>
 </span><span id="line-110"></span><span>
 </span><span id="line-111"></span><span class="hs-comment">-- | Begin with the genesis checkpoint.</span><span>
-</span><span id="line-112"></span><span id="local-6989586621682459583"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#fromGenesis"><span class="hs-identifier hs-type">fromGenesis</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="#local-6989586621682459583"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459583"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-112"></span><span id="local-6989586621682459867"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#fromGenesis"><span class="hs-identifier hs-type">fromGenesis</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="#local-6989586621682459867"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459867"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-113"></span><span id="fromGenesis"><span class="annot"><span class="annottext">fromGenesis :: a -&gt; Checkpoints a
-</span><a href="Cardano.Wallet.Checkpoints.html#fromGenesis"><span class="hs-identifier hs-var hs-var">fromGenesis</span></a></span></span><span> </span><span id="local-6989586621682459582"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682459582"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map Slot a -&gt; Checkpoints a
+</span><a href="Cardano.Wallet.Checkpoints.html#fromGenesis"><span class="hs-identifier hs-var hs-var">fromGenesis</span></a></span></span><span> </span><span id="local-6989586621682459866"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621682459866"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map Slot a -&gt; Checkpoints a
 forall a. Map Slot a -&gt; Checkpoints a
 </span><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-var">Checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">(Map Slot a -&gt; Checkpoints a) -&gt; Map Slot a -&gt; Checkpoints a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -168,14 +168,14 @@ forall k a. k -&gt; a -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.singleton</span></a></span><span> </span><span class="annot"><span class="annottext">Slot
 forall t. WithOrigin t
 </span><a href="../../../../cardano-slotting/html/src"><span class="hs-identifier hs-var">W.Origin</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682459582"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><a href="#local-6989586621682459866"><span class="hs-identifier hs-var">a</span></a></span><span>
 </span><span id="line-114"></span><span>
 </span><span id="line-115"></span><span class="hs-comment">-- | Get the checkpoint with the largest 'SlotNo'.</span><span>
-</span><span id="line-116"></span><span id="local-6989586621682459579"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#getLatest"><span class="hs-identifier hs-type">getLatest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459579"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621682459579"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-116"></span><span id="local-6989586621682459863"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#getLatest"><span class="hs-identifier hs-type">getLatest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459863"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621682459863"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-117"></span><span id="getLatest"><span class="annot"><span class="annottext">getLatest :: Checkpoints a -&gt; (Slot, a)
 </span><a href="Cardano.Wallet.Checkpoints.html#getLatest"><span class="hs-identifier hs-var hs-var">getLatest</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (Slot, a) -&gt; (Slot, a)
 forall a. Maybe a -&gt; a
-</span><a href="#local-6989586621682459578"><span class="hs-identifier hs-var">from</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe (Slot, a) -&gt; (Slot, a))
+</span><a href="#local-6989586621682459862"><span class="hs-identifier hs-var">from</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe (Slot, a) -&gt; (Slot, a))
 -&gt; (Checkpoints a -&gt; Maybe (Slot, a)) -&gt; Checkpoints a -&gt; (Slot, a)
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Map Slot a -&gt; Maybe (Slot, a)
@@ -195,10 +195,10 @@ forall a s. ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; s -&gt; a
    -&gt; Checkpoints a -&gt; Const (Map Slot a) (Checkpoints a))
 (Map Slot a -&gt; Const (Map Slot a) (Map Slot a))
 -&gt; Checkpoints a -&gt; Const (Map Slot a) (Checkpoints a)
-</span><a href="#local-6989586621682459576"><span class="hs-var">#checkpoints</span></a></span><span>
+</span><a href="#local-6989586621682459860"><span class="hs-var">#checkpoints</span></a></span><span>
 </span><span id="line-118"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-119"></span><span>    </span><span id="local-6989586621682459578"><span class="annot"><span class="annottext">from :: Maybe a -&gt; a
-</span><a href="#local-6989586621682459578"><span class="hs-identifier hs-var hs-var">from</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Maybe a -&gt; a
+</span><span id="line-119"></span><span>    </span><span id="local-6989586621682459862"><span class="annot"><span class="annottext">from :: Maybe a -&gt; a
+</span><a href="#local-6989586621682459862"><span class="hs-identifier hs-var hs-var">from</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Maybe a -&gt; a
 forall a. a -&gt; Maybe a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromMaybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String -&gt; a
 forall a. HasCallStack =&gt; String -&gt; a
@@ -206,18 +206,18 @@ forall a. HasCallStack =&gt; String -&gt; a
 </span><span class="hs-string">&quot;getLatest: there should always be at least a genesis checkpoint&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-120"></span><span>
 </span><span id="line-121"></span><span class="hs-comment">-- | Find the nearest 'Checkpoint' that is either at the given point or before.</span><span>
-</span><span id="line-122"></span><span id="local-6989586621682459574"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#findNearestPoint"><span class="hs-identifier hs-type">findNearestPoint</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459574"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span></span><span>
+</span><span id="line-122"></span><span id="local-6989586621682459858"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#findNearestPoint"><span class="hs-identifier hs-type">findNearestPoint</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459858"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span></span><span>
 </span><span id="line-123"></span><span id="findNearestPoint"><span class="annot"><span class="annottext">findNearestPoint :: Checkpoints a -&gt; Slot -&gt; Maybe Slot
-</span><a href="Cardano.Wallet.Checkpoints.html#findNearestPoint"><span class="hs-identifier hs-var hs-var">findNearestPoint</span></a></span></span><span> </span><span id="local-6989586621682459573"><span class="annot"><span class="annottext">Checkpoints a
-</span><a href="#local-6989586621682459573"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621682459572"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459572"><span class="hs-identifier hs-var">key</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Slot, a) -&gt; Slot
+</span><a href="Cardano.Wallet.Checkpoints.html#findNearestPoint"><span class="hs-identifier hs-var hs-var">findNearestPoint</span></a></span></span><span> </span><span id="local-6989586621682459857"><span class="annot"><span class="annottext">Checkpoints a
+</span><a href="#local-6989586621682459857"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621682459856"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621682459856"><span class="hs-identifier hs-var">key</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Slot, a) -&gt; Slot
 forall a b. (a, b) -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fst</span></a></span><span> </span><span class="annot"><span class="annottext">((Slot, a) -&gt; Slot) -&gt; Maybe (Slot, a) -&gt; Maybe Slot
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; Map Slot a -&gt; Maybe (Slot, a)
 forall k v. Ord k =&gt; k -&gt; Map k v -&gt; Maybe (k, v)
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.lookupLE</span></a></span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459572"><span class="hs-identifier hs-var">key</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">((Map Slot a -&gt; Const (Map Slot a) (Map Slot a))
+</span><a href="#local-6989586621682459856"><span class="hs-identifier hs-var">key</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">((Map Slot a -&gt; Const (Map Slot a) (Map Slot a))
  -&gt; Checkpoints a -&gt; Const (Map Slot a) (Checkpoints a))
 -&gt; Checkpoints a -&gt; Map Slot a
 forall a s. ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; s -&gt; a
@@ -227,16 +227,16 @@ forall a s. ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; s -&gt; a
    -&gt; Checkpoints a -&gt; Const (Map Slot a) (Checkpoints a))
 (Map Slot a -&gt; Const (Map Slot a) (Map Slot a))
 -&gt; Checkpoints a -&gt; Const (Map Slot a) (Checkpoints a)
-</span><a href="#local-6989586621682459569"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">Checkpoints a
-</span><a href="#local-6989586621682459573"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682459853"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">Checkpoints a
+</span><a href="#local-6989586621682459857"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-124"></span><span>
 </span><span id="line-125"></span><span class="hs-comment">{-------------------------------------------------------------------------------
     Delta type for Checkpoints
 -------------------------------------------------------------------------------}</span><span>
-</span><span id="line-128"></span><span class="hs-keyword">type</span><span> </span><span id="DeltasCheckpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltasCheckpoints"><span class="hs-identifier hs-var">DeltasCheckpoints</span></a></span></span><span> </span><span id="local-6989586621682459568"><span class="annot"><a href="#local-6989586621682459568"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459568"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">]</span><span>
+</span><span id="line-128"></span><span class="hs-keyword">type</span><span> </span><span id="DeltasCheckpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltasCheckpoints"><span class="hs-identifier hs-var">DeltasCheckpoints</span></a></span></span><span> </span><span id="local-6989586621682459852"><span class="annot"><a href="#local-6989586621682459852"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459852"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-129"></span><span>
-</span><span id="line-130"></span><span class="hs-keyword">data</span><span> </span><span id="DeltaCheckpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-var">DeltaCheckpoints</span></a></span></span><span> </span><span id="local-6989586621682459567"><span class="annot"><a href="#local-6989586621682459567"><span class="hs-identifier hs-type">a</span></a></span></span><span>
-</span><span id="line-131"></span><span>    </span><span class="hs-glyph">=</span><span> </span><span id="PutCheckpoint"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#PutCheckpoint"><span class="hs-identifier hs-var">PutCheckpoint</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459567"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-130"></span><span class="hs-keyword">data</span><span> </span><span id="DeltaCheckpoints"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-var">DeltaCheckpoints</span></a></span></span><span> </span><span id="local-6989586621682459851"><span class="annot"><a href="#local-6989586621682459851"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-131"></span><span>    </span><span class="hs-glyph">=</span><span> </span><span id="PutCheckpoint"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#PutCheckpoint"><span class="hs-identifier hs-var">PutCheckpoint</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459851"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-132"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span id="RollbackTo"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RollbackTo"><span class="hs-identifier hs-var">RollbackTo</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span>
 </span><span id="line-133"></span><span>        </span><span class="hs-comment">-- Rolls back to the latest checkpoint at or before this slot.</span><span>
 </span><span id="line-134"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span id="RestrictTo"><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RestrictTo"><span class="hs-identifier hs-var">RestrictTo</span></a></span></span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#Slot"><span class="hs-identifier hs-type">W.Slot</span></a></span><span class="hs-special">]</span><span>
@@ -244,13 +244,13 @@ forall a s. ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; s -&gt; a
 </span><span id="line-136"></span><span>        </span><span class="hs-comment">-- the checkpoints that are already present.</span><span>
 </span><span id="line-137"></span><span>        </span><span class="hs-comment">-- The genesis checkpoint will always be present.</span><span>
 </span><span id="line-138"></span><span>
-</span><span id="line-139"></span><span id="local-6989586621682459563"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Delta</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459563"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-140"></span><span>    </span><span class="hs-keyword">type</span><span> </span><span id="Base"><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Base</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459563"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459563"><span class="hs-identifier hs-type">a</span></a></span><span>
-</span><span id="line-141"></span><span>    </span><span id="local-6989586621682459560"><span class="annot"><span class="annottext">apply :: DeltaCheckpoints a
+</span><span id="line-139"></span><span id="local-6989586621682459847"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Delta</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459847"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-140"></span><span>    </span><span class="hs-keyword">type</span><span> </span><span id="Base"><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Base</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459847"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#Checkpoints"><span class="hs-identifier hs-type">Checkpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459847"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-141"></span><span>    </span><span id="local-6989586621682459844"><span class="annot"><span class="annottext">apply :: DeltaCheckpoints a
 -&gt; Base (DeltaCheckpoints a) -&gt; Base (DeltaCheckpoints a)
-</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">apply</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#PutCheckpoint"><span class="hs-identifier hs-type">PutCheckpoint</span></a></span><span> </span><span id="local-6989586621682459558"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459558"><span class="hs-identifier hs-var">pt</span></a></span></span><span> </span><span id="local-6989586621682459557"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682459557"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Identity (Map Slot a))
+</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">apply</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#PutCheckpoint"><span class="hs-identifier hs-type">PutCheckpoint</span></a></span><span> </span><span id="local-6989586621682459842"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621682459842"><span class="hs-identifier hs-var">pt</span></a></span></span><span> </span><span id="local-6989586621682459841"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621682459841"><span class="hs-identifier hs-var">a</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Identity (Map Slot a))
  -&gt; Checkpoints a -&gt; Identity (Checkpoints a))
 -&gt; (Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a
 forall a b s t.
@@ -261,16 +261,16 @@ forall a b s t.
    -&gt; Checkpoints a -&gt; Identity (Checkpoints a))
 (Map Slot a -&gt; Identity (Map Slot a))
 -&gt; Checkpoints a -&gt; Identity (Checkpoints a)
-</span><a href="#local-6989586621682459556"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a)
+</span><a href="#local-6989586621682459840"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a)
 -&gt; (Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; a -&gt; Map Slot a -&gt; Map Slot a
 forall k a. Ord k =&gt; k -&gt; a -&gt; Map k a -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.insert</span></a></span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459558"><span class="hs-identifier hs-var">pt</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682459557"><span class="hs-identifier hs-var">a</span></a></span><span>
-</span><span id="line-142"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RollbackTo"><span class="hs-identifier hs-type">RollbackTo</span></a></span><span> </span><span id="local-6989586621682459554"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459554"><span class="hs-identifier hs-var">pt</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Identity (Map Slot a))
+</span><a href="#local-6989586621682459842"><span class="hs-identifier hs-var">pt</span></a></span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621682459841"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><span id="line-142"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RollbackTo"><span class="hs-identifier hs-type">RollbackTo</span></a></span><span> </span><span id="local-6989586621682459838"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621682459838"><span class="hs-identifier hs-var">pt</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Identity (Map Slot a))
  -&gt; Checkpoints a -&gt; Identity (Checkpoints a))
 -&gt; (Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a
 forall a b s t.
@@ -281,21 +281,21 @@ forall a b s t.
    -&gt; Checkpoints a -&gt; Identity (Checkpoints a))
 (Map Slot a -&gt; Identity (Map Slot a))
 -&gt; Checkpoints a -&gt; Identity (Checkpoints a)
-</span><a href="#local-6989586621682459553"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a)
+</span><a href="#local-6989586621682459837"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a)
 -&gt; (Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-143"></span><span>        </span><span class="annot"><span class="annottext">(Slot -&gt; a -&gt; Bool) -&gt; Map Slot a -&gt; Map Slot a
 forall k a. (k -&gt; a -&gt; Bool) -&gt; Map k a -&gt; Map k a
-</span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.filterWithKey</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682459551"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459551"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.filterWithKey</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682459835"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621682459835"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459551"><span class="hs-identifier hs-var">k</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; Slot -&gt; Bool
+</span><a href="#local-6989586621682459835"><span class="hs-identifier hs-var">k</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; Slot -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459554"><span class="hs-identifier hs-var">pt</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-144"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RestrictTo"><span class="hs-identifier hs-type">RestrictTo</span></a></span><span> </span><span id="local-6989586621682459549"><span class="annot"><span class="annottext">[Slot]
-</span><a href="#local-6989586621682459549"><span class="hs-identifier hs-var">pts</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Identity (Map Slot a))
+</span><a href="#local-6989586621682459838"><span class="hs-identifier hs-var">pt</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-144"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RestrictTo"><span class="hs-identifier hs-type">RestrictTo</span></a></span><span> </span><span id="local-6989586621682459833"><span class="annot"><span class="annottext">[Slot]
+</span><a href="#local-6989586621682459833"><span class="hs-identifier hs-var">pts</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Identity (Map Slot a))
  -&gt; Checkpoints a -&gt; Identity (Checkpoints a))
 -&gt; (Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a
 forall a b s t.
@@ -306,15 +306,15 @@ forall a b s t.
    -&gt; Checkpoints a -&gt; Identity (Checkpoints a))
 (Map Slot a -&gt; Identity (Map Slot a))
 -&gt; Checkpoints a -&gt; Identity (Checkpoints a)
-</span><a href="#local-6989586621682459548"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a)
+</span><a href="#local-6989586621682459832"><span class="hs-var">#checkpoints</span></a></span><span> </span><span class="annot"><span class="annottext">((Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a)
 -&gt; (Map Slot a -&gt; Map Slot a) -&gt; Checkpoints a -&gt; Checkpoints a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682459547"><span class="annot"><span class="annottext">Map Slot a
-</span><a href="#local-6989586621682459547"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682459831"><span class="annot"><span class="annottext">Map Slot a
+</span><a href="#local-6989586621682459831"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-145"></span><span>        </span><span class="annot"><span class="annottext">Map Slot a -&gt; Set Slot -&gt; Map Slot a
 forall k a. Ord k =&gt; Map k a -&gt; Set k -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.restrictKeys</span></a></span><span> </span><span class="annot"><span class="annottext">Map Slot a
-</span><a href="#local-6989586621682459547"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">(Set Slot -&gt; Map Slot a) -&gt; Set Slot -&gt; Map Slot a
+</span><a href="#local-6989586621682459831"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">(Set Slot -&gt; Map Slot a) -&gt; Set Slot -&gt; Map Slot a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">[Slot] -&gt; Set Slot
 forall a. Ord a =&gt; [a] -&gt; Set a
@@ -323,35 +323,35 @@ forall t. WithOrigin t
 </span><a href="../../../../cardano-slotting/html/src"><span class="hs-identifier hs-var">W.Origin</span></a></span><span class="annot"><span class="annottext">Slot -&gt; [Slot] -&gt; [Slot]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span class="annot"><span class="annottext">[Slot]
-</span><a href="#local-6989586621682459549"><span class="hs-identifier hs-var">pts</span></a></span><span class="hs-special">)</span></span><span>
+</span><a href="#local-6989586621682459833"><span class="hs-identifier hs-var">pts</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-146"></span><span>
-</span><span id="line-147"></span><span id="local-6989586621682459544"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">Buildable</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459544"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-148"></span><span>    </span><span id="local-6989586621682459541"><span class="annot"><span class="annottext">build :: DeltaCheckpoints a -&gt; Builder
-</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#PutCheckpoint"><span class="hs-identifier hs-type">PutCheckpoint</span></a></span><span> </span><span id="local-6989586621682459539"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459539"><span class="hs-identifier hs-var">slot</span></a></span></span><span> </span><span class="annot"><span class="annottext">a
+</span><span id="line-147"></span><span id="local-6989586621682459828"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">Buildable</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#DeltaCheckpoints"><span class="hs-identifier hs-type">DeltaCheckpoints</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682459828"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-148"></span><span>    </span><span id="local-6989586621682459825"><span class="annot"><span class="annottext">build :: DeltaCheckpoints a -&gt; Builder
+</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#PutCheckpoint"><span class="hs-identifier hs-type">PutCheckpoint</span></a></span><span> </span><span id="local-6989586621682459823"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621682459823"><span class="hs-identifier hs-var">slot</span></a></span></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Builder
 </span><span class="hs-string">&quot;PutCheckpoint &quot;</span></span><span> </span><span class="annot"><span class="annottext">Builder -&gt; Builder -&gt; Builder
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; Builder
 forall p. Buildable p =&gt; p -&gt; Builder
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459539"><span class="hs-identifier hs-var">slot</span></a></span><span>
-</span><span id="line-149"></span><span>    </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RollbackTo"><span class="hs-identifier hs-type">RollbackTo</span></a></span><span> </span><span id="local-6989586621682459538"><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459538"><span class="hs-identifier hs-var">slot</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Builder
+</span><a href="#local-6989586621682459823"><span class="hs-identifier hs-var">slot</span></a></span><span>
+</span><span id="line-149"></span><span>    </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RollbackTo"><span class="hs-identifier hs-type">RollbackTo</span></a></span><span> </span><span id="local-6989586621682459822"><span class="annot"><span class="annottext">Slot
+</span><a href="#local-6989586621682459822"><span class="hs-identifier hs-var">slot</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Builder
 </span><span class="hs-string">&quot;RollbackTo &quot;</span></span><span> </span><span class="annot"><span class="annottext">Builder -&gt; Builder -&gt; Builder
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Slot -&gt; Builder
 forall p. Buildable p =&gt; p -&gt; Builder
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="annot"><span class="annottext">Slot
-</span><a href="#local-6989586621682459538"><span class="hs-identifier hs-var">slot</span></a></span><span>
-</span><span id="line-150"></span><span>    </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RestrictTo"><span class="hs-identifier hs-type">RestrictTo</span></a></span><span> </span><span id="local-6989586621682459537"><span class="annot"><span class="annottext">[Slot]
-</span><a href="#local-6989586621682459537"><span class="hs-identifier hs-var">slots</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Builder
+</span><a href="#local-6989586621682459822"><span class="hs-identifier hs-var">slot</span></a></span><span>
+</span><span id="line-150"></span><span>    </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#RestrictTo"><span class="hs-identifier hs-type">RestrictTo</span></a></span><span> </span><span id="local-6989586621682459821"><span class="annot"><span class="annottext">[Slot]
+</span><a href="#local-6989586621682459821"><span class="hs-identifier hs-var">slots</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Builder
 </span><span class="hs-string">&quot;RestrictTo &quot;</span></span><span> </span><span class="annot"><span class="annottext">Builder -&gt; Builder -&gt; Builder
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[Slot] -&gt; Builder
 forall (f :: * -&gt; *) a. (Foldable f, Buildable a) =&gt; f a -&gt; Builder
 </span><a href="../../../../fmt/html/src"><span class="hs-identifier hs-var">listF</span></a></span><span> </span><span class="annot"><span class="annottext">[Slot]
-</span><a href="#local-6989586621682459537"><span class="hs-identifier hs-var">slots</span></a></span></span><span>
+</span><a href="#local-6989586621682459821"><span class="hs-identifier hs-var">slots</span></a></span></span><span>
 </span><span id="line-151"></span><span>
 </span><span id="line-152"></span><span class="hs-comment">{-------------------------------------------------------------------------------
     Checkpoint hygiene
@@ -413,94 +413,94 @@ forall (f :: * -&gt; *) a. (Foldable f, Buildable a) =&gt; f a -&gt; Builder
 </span><span id="line-209"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word32</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-210"></span><span>        </span><span class="hs-comment">-- ^ The list of checkpoint heights that should be kept in DB.</span><span>
 </span><span id="line-211"></span><span id="sparseCheckpoints"><span class="annot"><span class="annottext">sparseCheckpoints :: SparseCheckpointsConfig -&gt; Quantity &quot;block&quot; Word32 -&gt; [Word32]
-</span><a href="Cardano.Wallet.Checkpoints.html#sparseCheckpoints"><span class="hs-identifier hs-var hs-var">sparseCheckpoints</span></a></span></span><span> </span><span id="local-6989586621682459536"><span class="annot"><span class="annottext">SparseCheckpointsConfig
-</span><a href="#local-6989586621682459536"><span class="hs-identifier hs-var">cfg</span></a></span></span><span> </span><span id="local-6989586621682459535"><span class="annot"><span class="annottext">Quantity &quot;block&quot; Word32
-</span><a href="#local-6989586621682459535"><span class="hs-identifier hs-var">blkH</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Checkpoints.html#sparseCheckpoints"><span class="hs-identifier hs-var hs-var">sparseCheckpoints</span></a></span></span><span> </span><span id="local-6989586621682459820"><span class="annot"><span class="annottext">SparseCheckpointsConfig
+</span><a href="#local-6989586621682459820"><span class="hs-identifier hs-var">cfg</span></a></span></span><span> </span><span id="local-6989586621682459819"><span class="annot"><span class="annottext">Quantity &quot;block&quot; Word32
+</span><a href="#local-6989586621682459819"><span class="hs-identifier hs-var">blkH</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span>
 </span><span id="line-212"></span><span>    </span><span class="hs-keyword">let</span><span>
-</span><span id="line-213"></span><span>        </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span class="hs-special">{</span><span id="local-6989586621682459533"><span class="annot"><span class="annottext">Word8
+</span><span id="line-213"></span><span>        </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span class="hs-special">{</span><span id="local-6989586621682459817"><span class="annot"><span class="annottext">Word8
 edgeSize :: SparseCheckpointsConfig -&gt; Word8
 edgeSize :: Word8
-</span><a href="Cardano.Wallet.Checkpoints.html#edgeSize"><span class="hs-identifier hs-var hs-var">edgeSize</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621682459531"><span class="annot"><span class="annottext">Word32
+</span><a href="Cardano.Wallet.Checkpoints.html#edgeSize"><span class="hs-identifier hs-var hs-var">edgeSize</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621682459815"><span class="annot"><span class="annottext">Word32
 epochStability :: SparseCheckpointsConfig -&gt; Word32
 epochStability :: Word32
 </span><a href="Cardano.Wallet.Checkpoints.html#epochStability"><span class="hs-identifier hs-var hs-var">epochStability</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SparseCheckpointsConfig
-</span><a href="#local-6989586621682459536"><span class="hs-identifier hs-var">cfg</span></a></span><span>
-</span><span id="line-214"></span><span>        </span><span id="local-6989586621682459529"><span class="annot"><span class="annottext">g :: Word32
-</span><a href="#local-6989586621682459529"><span class="hs-identifier hs-var hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SparseCheckpointsConfig -&gt; Word32
+</span><a href="#local-6989586621682459820"><span class="hs-identifier hs-var">cfg</span></a></span><span>
+</span><span id="line-214"></span><span>        </span><span id="local-6989586621682459813"><span class="annot"><span class="annottext">g :: Word32
+</span><a href="#local-6989586621682459813"><span class="hs-identifier hs-var hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SparseCheckpointsConfig -&gt; Word32
 </span><a href="Cardano.Wallet.Checkpoints.html#gapSize"><span class="hs-identifier hs-var">gapSize</span></a></span><span> </span><span class="annot"><span class="annottext">SparseCheckpointsConfig
-</span><a href="#local-6989586621682459536"><span class="hs-identifier hs-var">cfg</span></a></span><span>
-</span><span id="line-215"></span><span>        </span><span id="local-6989586621682459528"><span class="annot"><span class="annottext">h :: Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Quantity &quot;block&quot; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459820"><span class="hs-identifier hs-var">cfg</span></a></span><span>
+</span><span id="line-215"></span><span>        </span><span id="local-6989586621682459812"><span class="annot"><span class="annottext">h :: Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Quantity &quot;block&quot; Word32 -&gt; Word32
 forall (unit :: Symbol) a. Quantity unit a -&gt; a
 </span><a href="Data.Quantity.html#getQuantity"><span class="hs-identifier hs-var hs-var">getQuantity</span></a></span><span> </span><span class="annot"><span class="annottext">Quantity &quot;block&quot; Word32
-</span><a href="#local-6989586621682459535"><span class="hs-identifier hs-var">blkH</span></a></span><span>
-</span><span id="line-216"></span><span>        </span><span id="local-6989586621682459526"><span class="annot"><span class="annottext">e :: Word32
-</span><a href="#local-6989586621682459526"><span class="hs-identifier hs-var hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word32
+</span><a href="#local-6989586621682459819"><span class="hs-identifier hs-var">blkH</span></a></span><span>
+</span><span id="line-216"></span><span>        </span><span id="local-6989586621682459810"><span class="annot"><span class="annottext">e :: Word32
+</span><a href="#local-6989586621682459810"><span class="hs-identifier hs-var hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word32
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621682459533"><span class="hs-identifier hs-var">edgeSize</span></a></span><span>
+</span><a href="#local-6989586621682459817"><span class="hs-identifier hs-var">edgeSize</span></a></span><span>
 </span><span id="line-217"></span><span>
-</span><span id="line-218"></span><span>        </span><span id="local-6989586621682459525"><span class="annot"><span class="annottext">minH :: Word32
-</span><a href="#local-6989586621682459525"><span class="hs-identifier hs-var hs-var">minH</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-219"></span><span>            </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682459524"><span class="annot"><span class="annottext">x :: Word32
-</span><a href="#local-6989586621682459524"><span class="hs-identifier hs-var hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Bool
+</span><span id="line-218"></span><span>        </span><span id="local-6989586621682459809"><span class="annot"><span class="annottext">minH :: Word32
+</span><a href="#local-6989586621682459809"><span class="hs-identifier hs-var hs-var">minH</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-219"></span><span>            </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682459808"><span class="annot"><span class="annottext">x :: Word32
+</span><a href="#local-6989586621682459808"><span class="hs-identifier hs-var hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459531"><span class="hs-identifier hs-var">epochStability</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459815"><span class="hs-identifier hs-var">epochStability</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459529"><span class="hs-identifier hs-var">g</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459813"><span class="hs-identifier hs-var">g</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">0</span></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459531"><span class="hs-identifier hs-var">epochStability</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459815"><span class="hs-identifier hs-var">epochStability</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459529"><span class="hs-identifier hs-var">g</span></a></span><span>
+</span><a href="#local-6989586621682459813"><span class="hs-identifier hs-var">g</span></a></span><span>
 </span><span id="line-220"></span><span>            </span><span class="hs-keyword">in</span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459529"><span class="hs-identifier hs-var">g</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459813"><span class="hs-identifier hs-var">g</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459524"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459808"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Integral a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`div`</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459529"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682459813"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-221"></span><span>
-</span><span id="line-222"></span><span>        </span><span id="local-6989586621682459519"><span class="annot"><span class="annottext">initial :: Word32
-</span><a href="#local-6989586621682459519"><span class="hs-identifier hs-var hs-var">initial</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32
+</span><span id="line-222"></span><span>        </span><span id="local-6989586621682459803"><span class="annot"><span class="annottext">initial :: Word32
+</span><a href="#local-6989586621682459803"><span class="hs-identifier hs-var hs-var">initial</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">0</span></span><span>
-</span><span id="line-223"></span><span>        </span><span id="local-6989586621682459518"><span class="annot"><span class="annottext">longTerm :: [Word32]
-</span><a href="#local-6989586621682459518"><span class="hs-identifier hs-var hs-var">longTerm</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459525"><span class="hs-identifier hs-var">minH</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459525"><span class="hs-identifier hs-var">minH</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><span id="line-223"></span><span>        </span><span id="local-6989586621682459802"><span class="annot"><span class="annottext">longTerm :: [Word32]
+</span><a href="#local-6989586621682459802"><span class="hs-identifier hs-var hs-var">longTerm</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459809"><span class="hs-identifier hs-var">minH</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459809"><span class="hs-identifier hs-var">minH</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459529"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-glyph">..</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">]</span><span>
-</span><span id="line-224"></span><span>        </span><span id="local-6989586621682459517"><span class="annot"><span class="annottext">shortTerm :: [Word32]
-</span><a href="#local-6989586621682459517"><span class="hs-identifier hs-var hs-var">shortTerm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Bool
+</span><a href="#local-6989586621682459813"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-glyph">..</span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">]</span><span>
+</span><span id="line-224"></span><span>        </span><span id="local-6989586621682459801"><span class="annot"><span class="annottext">shortTerm :: [Word32]
+</span><a href="#local-6989586621682459801"><span class="hs-identifier hs-var hs-var">shortTerm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459526"><span class="hs-identifier hs-var">e</span></a></span><span>
+</span><a href="#local-6989586621682459810"><span class="hs-identifier hs-var">e</span></a></span><span>
 </span><span id="line-225"></span><span>            </span><span class="hs-keyword">then</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">0</span></span><span class="hs-glyph">..</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-226"></span><span>            </span><span class="hs-keyword">else</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459526"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459810"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459526"><span class="hs-identifier hs-var">e</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459810"><span class="hs-identifier hs-var">e</span></a></span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">1</span></span><span class="hs-glyph">..</span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459528"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682459812"><span class="hs-identifier hs-var">h</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-227"></span><span>    </span><span class="hs-keyword">in</span><span>
 </span><span id="line-228"></span><span>        </span><span class="annot"><span class="annottext">[Word32] -&gt; [Word32]
 forall a. Ord a =&gt; [a] -&gt; [a]
@@ -509,13 +509,13 @@ forall a. Eq a =&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">L.nub</span></a></span><span> </span><span class="annot"><span class="annottext">([Word32] -&gt; [Word32]) -&gt; [Word32] -&gt; [Word32]
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459519"><span class="hs-identifier hs-var">initial</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; [Word32] -&gt; [Word32]
+</span><a href="#local-6989586621682459803"><span class="hs-identifier hs-var">initial</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; [Word32] -&gt; [Word32]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[Word32]
-</span><a href="#local-6989586621682459518"><span class="hs-identifier hs-var">longTerm</span></a></span><span> </span><span class="annot"><span class="annottext">[Word32] -&gt; [Word32] -&gt; [Word32]
+</span><a href="#local-6989586621682459802"><span class="hs-identifier hs-var">longTerm</span></a></span><span> </span><span class="annot"><span class="annottext">[Word32] -&gt; [Word32] -&gt; [Word32]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">[Word32]
-</span><a href="#local-6989586621682459517"><span class="hs-identifier hs-var">shortTerm</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682459801"><span class="hs-identifier hs-var">shortTerm</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-229"></span><span>
 </span><span id="line-230"></span><span class="hs-comment">-- | Captures the configuration for the `sparseCheckpoints` function.</span><span>
 </span><span id="line-231"></span><span class="hs-comment">--</span><span>
@@ -528,7 +528,7 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="Cardano.Wallet.Checkpoints.html#edgeSize"><span class="hs-identifier hs-var hs-var">edgeSize</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word8</span></a></span><span>
 </span><span id="line-238"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="epochStability"><span class="annot"><span class="annottext">SparseCheckpointsConfig -&gt; Word32
 </span><a href="Cardano.Wallet.Checkpoints.html#epochStability"><span class="hs-identifier hs-var hs-var">epochStability</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word32</span></a></span><span>
-</span><span id="line-239"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621682459509"><span id="local-6989586621682459511"><span id="local-6989586621682459513"><span class="annot"><span class="annottext">Int -&gt; SparseCheckpointsConfig -&gt; ShowS
+</span><span id="line-239"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621682459793"><span id="local-6989586621682459795"><span id="local-6989586621682459797"><span class="annot"><span class="annottext">Int -&gt; SparseCheckpointsConfig -&gt; ShowS
 [SparseCheckpointsConfig] -&gt; ShowS
 SparseCheckpointsConfig -&gt; String
 (Int -&gt; SparseCheckpointsConfig -&gt; ShowS)
@@ -548,8 +548,8 @@ $cshowsPrec :: Int -&gt; SparseCheckpointsConfig -&gt; ShowS
 </span><span id="line-241"></span><span class="hs-comment">-- | A sensible default to use in production. See also 'SparseCheckpointsConfig'</span><span>
 </span><span id="line-242"></span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#defaultSparseCheckpointsConfig"><span class="hs-identifier hs-type">defaultSparseCheckpointsConfig</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Data.Quantity.html#Quantity"><span class="hs-identifier hs-type">Quantity</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;block&quot;</span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word32</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span>
 </span><span id="line-243"></span><span id="defaultSparseCheckpointsConfig"><span class="annot"><span class="annottext">defaultSparseCheckpointsConfig :: Quantity &quot;block&quot; Word32 -&gt; SparseCheckpointsConfig
-</span><a href="Cardano.Wallet.Checkpoints.html#defaultSparseCheckpointsConfig"><span class="hs-identifier hs-var hs-var">defaultSparseCheckpointsConfig</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Data.Quantity.html#Quantity"><span class="hs-identifier hs-type">Quantity</span></a></span><span> </span><span id="local-6989586621682459507"><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459507"><span class="hs-identifier hs-var">epochStability</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Checkpoints.html#defaultSparseCheckpointsConfig"><span class="hs-identifier hs-var hs-var">defaultSparseCheckpointsConfig</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Data.Quantity.html#Quantity"><span class="hs-identifier hs-type">Quantity</span></a></span><span> </span><span id="local-6989586621682459791"><span class="annot"><span class="annottext">Word32
+</span><a href="#local-6989586621682459791"><span class="hs-identifier hs-var">epochStability</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-244"></span><span>    </span><span class="annot"><span class="annottext">SparseCheckpointsConfig :: Word8 -&gt; Word32 -&gt; SparseCheckpointsConfig
 </span><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span>
 </span><span id="line-245"></span><span>        </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">edgeSize :: Word8
@@ -558,7 +558,7 @@ $cshowsPrec :: Int -&gt; SparseCheckpointsConfig -&gt; ShowS
 </span><span id="line-246"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word32
 epochStability :: Word32
 epochStability :: Word32
-</span><a href="#local-6989586621682459507"><span class="hs-identifier hs-var hs-var">epochStability</span></a></span><span>
+</span><a href="#local-6989586621682459791"><span class="hs-identifier hs-var hs-var">epochStability</span></a></span><span>
 </span><span id="line-247"></span><span>        </span><span class="hs-special">}</span><span>
 </span><span id="line-248"></span><span>
 </span><span id="line-249"></span><span class="hs-comment">-- | A reasonable gap size used internally in 'sparseCheckpoints'.</span><span>
@@ -579,12 +579,12 @@ epochStability :: Word32
 </span><span id="line-264"></span><span class="hs-comment">-- up in case of large rollbacks.</span><span>
 </span><span id="line-265"></span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#gapSize"><span class="hs-identifier hs-type">gapSize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word32</span></a></span><span>
 </span><span id="line-266"></span><span id="gapSize"><span class="annot"><span class="annottext">gapSize :: SparseCheckpointsConfig -&gt; Word32
-</span><a href="Cardano.Wallet.Checkpoints.html#gapSize"><span class="hs-identifier hs-var hs-var">gapSize</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span class="hs-special">{</span><span id="local-6989586621682459506"><span class="annot"><span class="annottext">Word32
+</span><a href="Cardano.Wallet.Checkpoints.html#gapSize"><span class="hs-identifier hs-var hs-var">gapSize</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.Checkpoints.html#SparseCheckpointsConfig"><span class="hs-identifier hs-type">SparseCheckpointsConfig</span></a></span><span class="hs-special">{</span><span id="local-6989586621682459790"><span class="annot"><span class="annottext">Word32
 epochStability :: Word32
 epochStability :: SparseCheckpointsConfig -&gt; Word32
-</span><a href="#local-6989586621682459506"><span class="hs-identifier hs-var hs-var">epochStability</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682459790"><span class="hs-identifier hs-var hs-var">epochStability</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-267"></span><span>    </span><span class="annot"><span class="annottext">Word32
-</span><a href="#local-6989586621682459506"><span class="hs-identifier hs-var">epochStability</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
+</span><a href="#local-6989586621682459790"><span class="hs-identifier hs-var">epochStability</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Word32 -&gt; Word32
 forall a. Integral a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`div`</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">3</span></span><span>

@@ -35,19 +35,19 @@
 </span><span id="line-32"></span><span class="hs-comment">-- @since 3.1.9</span><span>
 </span><span id="line-33"></span><span class="annot"><a href="Network.Wai.Middleware.HealthCheckEndpoint.html#voidEndpoint"><span class="hs-identifier hs-type">voidEndpoint</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Middleware</span></a></span><span>
 </span><span id="line-34"></span><span id="voidEndpoint"><span class="annot"><span class="annottext">voidEndpoint :: ByteString -&gt; Middleware
-</span><a href="Network.Wai.Middleware.HealthCheckEndpoint.html#voidEndpoint"><span class="hs-identifier hs-var hs-var">voidEndpoint</span></a></span></span><span> </span><span id="local-6989586621679118985"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679118985"><span class="hs-identifier hs-var">endpointPath</span></a></span></span><span> </span><span id="local-6989586621679118984"><span class="annot"><span class="annottext">Application
-</span><a href="#local-6989586621679118984"><span class="hs-identifier hs-var">router</span></a></span></span><span> </span><span id="local-6989586621679118983"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679118983"><span class="hs-identifier hs-var">request</span></a></span></span><span> </span><span id="local-6989586621679118982"><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621679118982"><span class="hs-identifier hs-var">respond</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.Wai.Middleware.HealthCheckEndpoint.html#voidEndpoint"><span class="hs-identifier hs-var hs-var">voidEndpoint</span></a></span></span><span> </span><span id="local-6989586621679119011"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679119011"><span class="hs-identifier hs-var">endpointPath</span></a></span></span><span> </span><span id="local-6989586621679119010"><span class="annot"><span class="annottext">Application
+</span><a href="#local-6989586621679119010"><span class="hs-identifier hs-var">router</span></a></span></span><span> </span><span id="local-6989586621679119009"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679119009"><span class="hs-identifier hs-var">request</span></a></span></span><span> </span><span id="local-6989586621679119008"><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621679119008"><span class="hs-identifier hs-var">respond</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-35"></span><span>  </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Request -&gt; ByteString
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var hs-var">rawPathInfo</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679118983"><span class="hs-identifier hs-var">request</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
+</span><a href="#local-6989586621679119009"><span class="hs-identifier hs-var">request</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679118985"><span class="hs-identifier hs-var">endpointPath</span></a></span><span>
+</span><a href="#local-6989586621679119011"><span class="hs-identifier hs-var">endpointPath</span></a></span><span>
 </span><span id="line-36"></span><span>    </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621679118982"><span class="hs-identifier hs-var">respond</span></a></span><span> </span><span class="annot"><span class="annottext">(Response -&gt; IO ResponseReceived)
+</span><a href="#local-6989586621679119008"><span class="hs-identifier hs-var">respond</span></a></span><span> </span><span class="annot"><span class="annottext">(Response -&gt; IO ResponseReceived)
 -&gt; Response -&gt; IO ResponseReceived
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Status -&gt; ResponseHeaders -&gt; ByteString -&gt; Response
@@ -57,7 +57,7 @@ forall a. Monoid a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;-&quot;</span></span><span>
 </span><span id="line-37"></span><span>    </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Application
-</span><a href="#local-6989586621679118984"><span class="hs-identifier hs-var">router</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679118983"><span class="hs-identifier hs-var">request</span></a></span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621679118982"><span class="hs-identifier hs-var">respond</span></a></span><span>
+</span><a href="#local-6989586621679119010"><span class="hs-identifier hs-var">router</span></a></span><span> </span><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679119009"><span class="hs-identifier hs-var">request</span></a></span><span> </span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621679119008"><span class="hs-identifier hs-var">respond</span></a></span><span>
 </span><span id="line-38"></span></pre></body></html>

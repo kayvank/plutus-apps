@@ -1,28 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-pragma">{-# LANGUAGE DeriveFoldable     #-}</span><span>
-</span><span id="line-2"></span><span class="hs-pragma">{-# LANGUAGE DeriveFunctor      #-}</span><span>
-</span><span id="line-3"></span><span class="hs-pragma">{-# LANGUAGE DerivingStrategies #-}</span><span>
-</span><span id="line-4"></span><span class="hs-pragma">{-# LANGUAGE DeriveTraversable  #-}</span><span>
-</span><span id="line-5"></span><span class="hs-pragma">{-# LANGUAGE PolyKinds          #-}</span><span>
-</span><span id="line-6"></span><span class="hs-pragma">{-# LANGUAGE TypeFamilies       #-}</span><span>
-</span><span id="line-7"></span><span>
-</span><span id="line-8"></span><span class="hs-pragma">{-# OPTIONS_GHC -fno-warn-orphans #-}</span><span>
-</span><span id="line-9"></span><span>
-</span><span id="line-10"></span><span class="hs-comment">-- | Orphan instances for external types/classes</span><span>
-</span><span id="line-11"></span><span>
-</span><span id="line-12"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Test.Cardano.Prelude.Orphans</span><span>
-</span><span id="line-13"></span><span>  </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-14"></span><span class="hs-keyword">where</span><span>
-</span><span id="line-15"></span><span>
-</span><span id="line-16"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier">Cardano.Prelude</span></a></span><span>
-</span><span id="line-17"></span><span>
-</span><span id="line-18"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier">Crypto.Random</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Rand</span></span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-pragma">{-# LANGUAGE DeriveFoldable #-}</span><span>
+</span><span id="line-2"></span><span class="hs-pragma">{-# LANGUAGE DeriveFunctor #-}</span><span>
+</span><span id="line-3"></span><span class="hs-pragma">{-# LANGUAGE DeriveTraversable #-}</span><span>
+</span><span id="line-4"></span><span class="hs-pragma">{-# LANGUAGE DerivingStrategies #-}</span><span>
+</span><span id="line-5"></span><span class="hs-pragma">{-# LANGUAGE PolyKinds #-}</span><span>
+</span><span id="line-6"></span><span class="hs-pragma">{-# LANGUAGE TypeFamilies #-}</span><span>
+</span><span id="line-7"></span><span class="hs-pragma">{-# OPTIONS_GHC -fno-warn-orphans #-}</span><span>
+</span><span id="line-8"></span><span>
+</span><span id="line-9"></span><span class="hs-comment">-- | Orphan instances for external types/classes</span><span>
+</span><span id="line-10"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Test.Cardano.Prelude.Orphans</span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-11"></span><span class="hs-keyword">where</span><span>
+</span><span id="line-12"></span><span>
+</span><span id="line-13"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../cardano-prelude/html/src"><span class="hs-identifier">Cardano.Prelude</span></a></span><span>
+</span><span id="line-14"></span><span>
+</span><span id="line-15"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier">Crypto.Random</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Rand</span></span><span>
+</span><span id="line-16"></span><span>
+</span><span id="line-17"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier">Test.QuickCheck</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier">Gen</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-18"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier">Test.QuickCheck</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">QC</span></span><span>
 </span><span id="line-19"></span><span>
-</span><span id="line-20"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier">Test.QuickCheck</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier">Gen</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-21"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier">Test.QuickCheck</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">QC</span></span><span>
-</span><span id="line-22"></span><span>
-</span><span id="line-23"></span><span>
-</span><span id="line-24"></span><span class="hs-keyword">data</span><span> </span><span id="Five"><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-var">Five</span></a></span></span><span> </span><span id="local-6989586621679117272"><span class="annot"><a href="#local-6989586621679117272"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Five"><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-var">Five</span></a></span></span><span> </span><span class="annot"><a href="#local-6989586621679117272"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117272"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117272"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117272"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117272"><span class="hs-identifier hs-type">a</span></a></span><span>
-</span><span id="line-25"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679117240"><span id="local-6989586621679117242"><span class="annot"><span class="annottext">a -&gt; Five b -&gt; Five a
+</span><span id="line-20"></span><span class="hs-keyword">data</span><span> </span><span id="Five"><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-var">Five</span></a></span></span><span> </span><span id="local-6989586621679117279"><span class="annot"><a href="#local-6989586621679117279"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Five"><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-var">Five</span></a></span></span><span> </span><span class="annot"><a href="#local-6989586621679117279"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117279"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117279"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117279"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117279"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-21"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679117247"><span id="local-6989586621679117249"><span class="annot"><span class="annottext">a -&gt; Five b -&gt; Five a
 (a -&gt; b) -&gt; Five a -&gt; Five b
 (forall a b. (a -&gt; b) -&gt; Five a -&gt; Five b)
 -&gt; (forall a b. a -&gt; Five b -&gt; Five a) -&gt; Functor Five
@@ -35,7 +31,7 @@ forall (f :: * -&gt; *).
 $c&lt;$ :: forall a b. a -&gt; Five b -&gt; Five a
 fmap :: (a -&gt; b) -&gt; Five a -&gt; Five b
 $cfmap :: forall a b. (a -&gt; b) -&gt; Five a -&gt; Five b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679117205"><span id="local-6989586621679117207"><span id="local-6989586621679117209"><span id="local-6989586621679117211"><span id="local-6989586621679117213"><span id="local-6989586621679117215"><span id="local-6989586621679117217"><span id="local-6989586621679117219"><span id="local-6989586621679117221"><span id="local-6989586621679117223"><span id="local-6989586621679117225"><span id="local-6989586621679117227"><span id="local-6989586621679117229"><span id="local-6989586621679117231"><span id="local-6989586621679117233"><span id="local-6989586621679117235"><span id="local-6989586621679117237"><span class="annot"><span class="annottext">Five a -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679117212"><span id="local-6989586621679117214"><span id="local-6989586621679117216"><span id="local-6989586621679117218"><span id="local-6989586621679117220"><span id="local-6989586621679117222"><span id="local-6989586621679117224"><span id="local-6989586621679117226"><span id="local-6989586621679117228"><span id="local-6989586621679117230"><span id="local-6989586621679117232"><span id="local-6989586621679117234"><span id="local-6989586621679117236"><span id="local-6989586621679117238"><span id="local-6989586621679117240"><span id="local-6989586621679117242"><span id="local-6989586621679117244"><span class="annot"><span class="annottext">Five a -&gt; Bool
 (a -&gt; m) -&gt; Five a -&gt; m
 (a -&gt; b -&gt; b) -&gt; b -&gt; Five a -&gt; b
 (forall m. Monoid m =&gt; Five m -&gt; m)
@@ -120,7 +116,7 @@ foldMap :: (a -&gt; m) -&gt; Five a -&gt; m
 $cfoldMap :: forall m a. Monoid m =&gt; (a -&gt; m) -&gt; Five a -&gt; m
 fold :: Five m -&gt; m
 $cfold :: forall m. Monoid m =&gt; Five m -&gt; m
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Foldable</span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679117194"><span id="local-6989586621679117196"><span id="local-6989586621679117198"><span id="local-6989586621679117200"><span class="annot"><span class="annottext">Functor Five
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Foldable</span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679117201"><span id="local-6989586621679117203"><span id="local-6989586621679117205"><span id="local-6989586621679117207"><span class="annot"><span class="annottext">Functor Five
 Foldable Five
 Functor Five
 -&gt; Foldable Five
@@ -171,29 +167,29 @@ Applicative f =&gt;
 $cp2Traversable :: Foldable Five
 $cp1Traversable :: Functor Five
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Traversable</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-26"></span><span>
-</span><span id="line-27"></span><span id="local-6989586621679117259"><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#five"><span class="hs-identifier hs-type">five</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="#local-6989586621679117259"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-type">Five</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117259"><span class="hs-identifier hs-type">a</span></a></span></span><span>
-</span><span id="line-28"></span><span id="five"><span class="annot"><span class="annottext">five :: a -&gt; Five a
-</span><a href="Test.Cardano.Prelude.Orphans.html#five"><span class="hs-identifier hs-var hs-var">five</span></a></span></span><span> </span><span id="local-6989586621679117191"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a -&gt; a -&gt; a -&gt; Five a
+</span><span id="line-22"></span><span>
+</span><span id="line-23"></span><span id="local-6989586621679117266"><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#five"><span class="hs-identifier hs-type">five</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="#local-6989586621679117266"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-type">Five</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679117266"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-24"></span><span id="five"><span class="annot"><span class="annottext">five :: a -&gt; Five a
+</span><a href="Test.Cardano.Prelude.Orphans.html#five"><span class="hs-identifier hs-var hs-var">five</span></a></span></span><span> </span><span id="local-6989586621679117198"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679117198"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a -&gt; a -&gt; a -&gt; Five a
 forall a. a -&gt; a -&gt; a -&gt; a -&gt; a -&gt; Five a
 </span><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-var">Five</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span><span>
-</span><span id="line-29"></span><span>
-</span><span id="line-30"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-type">Rand.MonadRandom</span></a></span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-31"></span><span>  </span><span id="local-6989586621679117187"><span class="annot"><span class="annottext">getRandomBytes :: Int -&gt; Gen byteArray
-</span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">getRandomBytes</span></a></span></span><span> </span><span id="local-6989586621679117185"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679117185"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-32"></span><span>    </span><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-type">Five</span></a></span><span> </span><span id="local-6989586621679117184"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117184"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span id="local-6989586621679117183"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117183"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span id="local-6989586621679117182"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117182"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621679117181"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117181"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span id="local-6989586621679117180"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117180"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Five (Gen Word64) -&gt; Gen (Five Word64)
+</span><a href="#local-6989586621679117198"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679117198"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679117198"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679117198"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679117198"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><span id="line-25"></span><span>
+</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-type">Rand.MonadRandom</span></a></span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621679117194"><span class="annot"><span class="annottext">getRandomBytes :: Int -&gt; Gen byteArray
+</span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">getRandomBytes</span></a></span></span><span> </span><span id="local-6989586621679117192"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679117192"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-28"></span><span>    </span><span class="annot"><a href="Test.Cardano.Prelude.Orphans.html#Five"><span class="hs-identifier hs-type">Five</span></a></span><span> </span><span id="local-6989586621679117191"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span id="local-6989586621679117190"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117190"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span id="local-6989586621679117189"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117189"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621679117188"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117188"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span id="local-6989586621679117187"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117187"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Five (Gen Word64) -&gt; Gen (Five Word64)
 forall (t :: * -&gt; *) (f :: * -&gt; *) a.
 (Traversable t, Applicative f) =&gt;
 t (f a) -&gt; f (t a)
@@ -216,7 +212,7 @@ forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">minBound</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
 forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maxBound</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-33"></span><span>    </span><span class="annot"><span class="annottext">byteArray -&gt; Gen byteArray
+</span><span id="line-29"></span><span>    </span><span class="annot"><span class="annottext">byteArray -&gt; Gen byteArray
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(byteArray -&gt; Gen byteArray) -&gt; byteArray -&gt; Gen byteArray
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -230,11 +226,11 @@ forall gen byteArray.
 (DRG gen, ByteArray byteArray) =&gt;
 Int -&gt; gen -&gt; (byteArray, gen)
 </span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var">Rand.randomBytesGenerate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679117185"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(Word64, Word64, Word64, Word64, Word64) -&gt; ChaChaDRG
+</span><a href="#local-6989586621679117192"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(Word64, Word64, Word64, Word64, Word64) -&gt; ChaChaDRG
 </span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var">Rand.drgNewTest</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117184"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117183"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117182"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117181"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679117180"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-34"></span></pre></body></html>
+</span><a href="#local-6989586621679117191"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117190"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117189"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117188"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679117187"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-30"></span></pre></body></html>

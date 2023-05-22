@@ -31,7 +31,7 @@
 </span><span id="line-31"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-32"></span><span class="hs-keyword">data</span><span> </span><span id="Protocol"><span class="annot"><a href="Network.WebSockets.Protocol.html#Protocol"><span class="hs-identifier hs-var">Protocol</span></a></span></span><span>
 </span><span id="line-33"></span><span>    </span><span class="hs-glyph">=</span><span> </span><span id="Hybi13"><span class="annot"><a href="Network.WebSockets.Protocol.html#Hybi13"><span class="hs-identifier hs-var">Hybi13</span></a></span></span><span>
-</span><span id="line-34"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679072677"><span id="local-6989586621679072679"><span id="local-6989586621679072681"><span class="annot"><span class="annottext">Int -&gt; Protocol -&gt; ShowS
+</span><span id="line-34"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679072681"><span id="local-6989586621679072683"><span id="local-6989586621679072685"><span class="annot"><span class="annottext">Int -&gt; Protocol -&gt; ShowS
 [Protocol] -&gt; ShowS
 Protocol -&gt; String
 (Int -&gt; Protocol -&gt; ShowS)
@@ -72,18 +72,18 @@ $cshowsPrec :: Int -&gt; Protocol -&gt; ShowS
 </span><span id="line-52"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-53"></span><span class="annot"><a href="Network.WebSockets.Protocol.html#compatible"><span class="hs-identifier hs-type">compatible</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.WebSockets.Protocol.html#Protocol"><span class="hs-identifier hs-type">Protocol</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Network.WebSockets.Http.html#RequestHead"><span class="hs-identifier hs-type">RequestHead</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-54"></span><span id="compatible"><span class="annot"><span class="annottext">compatible :: Protocol -&gt; RequestHead -&gt; Bool
-</span><a href="Network.WebSockets.Protocol.html#compatible"><span class="hs-identifier hs-var hs-var">compatible</span></a></span></span><span> </span><span id="local-6989586621679072674"><span class="annot"><span class="annottext">Protocol
-</span><a href="#local-6989586621679072674"><span class="hs-identifier hs-var">protocol</span></a></span></span><span> </span><span id="local-6989586621679072673"><span class="annot"><span class="annottext">RequestHead
-</span><a href="#local-6989586621679072673"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">RequestHead -&gt; Maybe ByteString
+</span><a href="Network.WebSockets.Protocol.html#compatible"><span class="hs-identifier hs-var hs-var">compatible</span></a></span></span><span> </span><span id="local-6989586621679072678"><span class="annot"><span class="annottext">Protocol
+</span><a href="#local-6989586621679072678"><span class="hs-identifier hs-var">protocol</span></a></span></span><span> </span><span id="local-6989586621679072677"><span class="annot"><span class="annottext">RequestHead
+</span><a href="#local-6989586621679072677"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">RequestHead -&gt; Maybe ByteString
 </span><a href="Network.WebSockets.Http.html#getRequestSecWebSocketVersion"><span class="hs-identifier hs-var">getRequestSecWebSocketVersion</span></a></span><span> </span><span class="annot"><span class="annottext">RequestHead
-</span><a href="#local-6989586621679072673"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-55"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679072671"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679072671"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679072671"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [ByteString] -&gt; Bool
+</span><a href="#local-6989586621679072677"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-55"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679072675"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679072675"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679072675"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [ByteString] -&gt; Bool
 forall (t :: * -&gt; *) a. (Foldable t, Eq a) =&gt; a -&gt; t a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`elem`</span></a></span><span> </span><span class="annot"><span class="annottext">Protocol -&gt; [ByteString]
 </span><a href="Network.WebSockets.Protocol.html#headerVersions"><span class="hs-identifier hs-var">headerVersions</span></a></span><span> </span><span class="annot"><span class="annottext">Protocol
-</span><a href="#local-6989586621679072674"><span class="hs-identifier hs-var">protocol</span></a></span><span>
+</span><a href="#local-6989586621679072678"><span class="hs-identifier hs-var">protocol</span></a></span><span>
 </span><span id="line-56"></span><span>    </span><span class="annot"><span class="annottext">Maybe ByteString
 </span><span class="hs-identifier">_</span></span><span>      </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>  </span><span class="hs-comment">-- Whatever?</span><span>
@@ -129,13 +129,13 @@ forall (t :: * -&gt; *) a. (Foldable t, Eq a) =&gt; a -&gt; t a -&gt; Bool
 </span><span id="line-83"></span><span id="decodeMessages"><span class="annot"><span class="annottext">decodeMessages :: Protocol
 -&gt; SizeLimit -&gt; SizeLimit -&gt; Stream -&gt; IO (IO (Maybe Message))
 </span><a href="Network.WebSockets.Protocol.html#decodeMessages"><span class="hs-identifier hs-var hs-var">decodeMessages</span></a></span></span><span> </span><span class="annot"><span class="annottext">Protocol
-</span><a href="Network.WebSockets.Protocol.html#Hybi13"><span class="hs-identifier hs-var">Hybi13</span></a></span><span> </span><span id="local-6989586621679072666"><span class="annot"><span class="annottext">SizeLimit
-</span><a href="#local-6989586621679072666"><span class="hs-identifier hs-var">frameLimit</span></a></span></span><span> </span><span id="local-6989586621679072665"><span class="annot"><span class="annottext">SizeLimit
-</span><a href="#local-6989586621679072665"><span class="hs-identifier hs-var">messageLimit</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.WebSockets.Protocol.html#Hybi13"><span class="hs-identifier hs-var">Hybi13</span></a></span><span> </span><span id="local-6989586621679072670"><span class="annot"><span class="annottext">SizeLimit
+</span><a href="#local-6989586621679072670"><span class="hs-identifier hs-var">frameLimit</span></a></span></span><span> </span><span id="local-6989586621679072669"><span class="annot"><span class="annottext">SizeLimit
+</span><a href="#local-6989586621679072669"><span class="hs-identifier hs-var">messageLimit</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-84"></span><span>    </span><span class="annot"><span class="annottext">SizeLimit -&gt; SizeLimit -&gt; Stream -&gt; IO (IO (Maybe Message))
 </span><a href="Network.WebSockets.Hybi13.html#decodeMessages"><span class="hs-identifier hs-var">Hybi13.decodeMessages</span></a></span><span> </span><span class="annot"><span class="annottext">SizeLimit
-</span><a href="#local-6989586621679072666"><span class="hs-identifier hs-var">frameLimit</span></a></span><span> </span><span class="annot"><span class="annottext">SizeLimit
-</span><a href="#local-6989586621679072665"><span class="hs-identifier hs-var">messageLimit</span></a></span><span>
+</span><a href="#local-6989586621679072670"><span class="hs-identifier hs-var">frameLimit</span></a></span><span> </span><span class="annot"><span class="annottext">SizeLimit
+</span><a href="#local-6989586621679072669"><span class="hs-identifier hs-var">messageLimit</span></a></span><span>
 </span><span id="line-85"></span><span>
 </span><span id="line-86"></span><span>
 </span><span id="line-87"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>

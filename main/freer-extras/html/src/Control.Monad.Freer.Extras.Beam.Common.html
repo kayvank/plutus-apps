@@ -19,14 +19,14 @@
 </span><span id="line-19"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">GHC.Generics</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-20"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier">Prettyprinter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier">Pretty</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier">colon</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-operator">(&lt;+&gt;)</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-21"></span><span>
-</span><span id="line-22"></span><span class="hs-keyword">type</span><span> </span><span id="BeamableDb"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamableDb"><span class="hs-identifier hs-var">BeamableDb</span></a></span></span><span> </span><span id="local-6989586621679229786"><span class="annot"><a href="#local-6989586621679229786"><span class="hs-identifier hs-type">db</span></a></span></span><span> </span><span id="local-6989586621679229785"><span class="annot"><a href="#local-6989586621679229785"><span class="hs-identifier hs-type">table</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">Beamable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679229785"><span class="hs-identifier hs-type">table</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">FieldsFulfillConstraint</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">BeamSqlBackendCanSerialize</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679229786"><span class="hs-identifier hs-type">db</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679229785"><span class="hs-identifier hs-type">table</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-22"></span><span class="hs-keyword">type</span><span> </span><span id="BeamableDb"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamableDb"><span class="hs-identifier hs-var">BeamableDb</span></a></span></span><span> </span><span id="local-6989586621679229938"><span class="annot"><a href="#local-6989586621679229938"><span class="hs-identifier hs-type">db</span></a></span></span><span> </span><span id="local-6989586621679229937"><span class="annot"><a href="#local-6989586621679229937"><span class="hs-identifier hs-type">table</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">Beamable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679229937"><span class="hs-identifier hs-type">table</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">FieldsFulfillConstraint</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">BeamSqlBackendCanSerialize</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679229938"><span class="hs-identifier hs-type">db</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679229937"><span class="hs-identifier hs-type">table</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-23"></span><span>
 </span><span id="line-24"></span><span>
 </span><span id="line-25"></span><span class="hs-keyword">type</span><span> </span><span id="BeamThreadingArg"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamThreadingArg"><span class="hs-identifier hs-var">BeamThreadingArg</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">QNested</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">QNested</span></a></span><span> </span><span class="annot"><a href="../../../../beam-core/html/src"><span class="hs-identifier hs-type">QBaseScope</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-26"></span><span>
-</span><span id="line-27"></span><span id="local-6989586621679229782"><span id="local-6989586621679229783"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="BeamError"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamError"><span class="hs-identifier hs-var">BeamError</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-27"></span><span id="local-6989586621679229934"><span id="local-6989586621679229935"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="BeamError"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamError"><span class="hs-identifier hs-var">BeamError</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-28"></span><span>  </span><span id="SqlError"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlError"><span class="hs-identifier hs-var">SqlError</span></a></span></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
-</span><span id="line-29"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229777"><span id="local-6989586621679229779"><span class="annot"><span class="annottext">BeamError -&gt; BeamError -&gt; Bool
+</span><span id="line-29"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229929"><span id="local-6989586621679229931"><span class="annot"><span class="annottext">BeamError -&gt; BeamError -&gt; Bool
 (BeamError -&gt; BeamError -&gt; Bool)
 -&gt; (BeamError -&gt; BeamError -&gt; Bool) -&gt; Eq BeamError
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -34,7 +34,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: BeamError -&gt; BeamError -&gt; Bool
 == :: BeamError -&gt; BeamError -&gt; Bool
 $c== :: BeamError -&gt; BeamError -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229770"><span id="local-6989586621679229772"><span id="local-6989586621679229774"><span class="annot"><span class="annottext">Int -&gt; BeamError -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229922"><span id="local-6989586621679229924"><span id="local-6989586621679229926"><span class="annot"><span class="annottext">Int -&gt; BeamError -&gt; ShowS
 [BeamError] -&gt; ShowS
 BeamError -&gt; String
 (Int -&gt; BeamError -&gt; ShowS)
@@ -58,7 +58,7 @@ forall a.
 $cto :: forall x. Rep BeamError x -&gt; BeamError
 $cfrom :: forall x. BeamError -&gt; Rep BeamError x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-30"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229762"><span id="local-6989586621679229764"><span class="annot"><span class="annottext">Value -&gt; Parser [BeamError]
+</span><span id="line-30"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229914"><span id="local-6989586621679229916"><span class="annot"><span class="annottext">Value -&gt; Parser [BeamError]
 Value -&gt; Parser BeamError
 (Value -&gt; Parser BeamError)
 -&gt; (Value -&gt; Parser [BeamError]) -&gt; FromJSON BeamError
@@ -68,7 +68,7 @@ parseJSONList :: Value -&gt; Parser [BeamError]
 $cparseJSONList :: Value -&gt; Parser [BeamError]
 parseJSON :: Value -&gt; Parser BeamError
 $cparseJSON :: Value -&gt; Parser BeamError
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229753"><span id="local-6989586621679229755"><span id="local-6989586621679229757"><span id="local-6989586621679229759"><span class="annot"><span class="annottext">[BeamError] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229905"><span id="local-6989586621679229907"><span id="local-6989586621679229909"><span id="local-6989586621679229911"><span class="annot"><span class="annottext">[BeamError] -&gt; Encoding
 [BeamError] -&gt; Value
 BeamError -&gt; Encoding
 BeamError -&gt; Value
@@ -91,7 +91,7 @@ toEncoding :: BeamError -&gt; Encoding
 $ctoEncoding :: BeamError -&gt; Encoding
 toJSON :: BeamError -&gt; Value
 $ctoJSON :: BeamError -&gt; Value
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229748"><span id="local-6989586621679229750"><span class="annot"><span class="annottext">TracingVerbosity -&gt; BeamError -&gt; Object
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229900"><span id="local-6989586621679229902"><span class="annot"><span class="annottext">TracingVerbosity -&gt; BeamError -&gt; Object
 BeamError -&gt; Object -&gt; Text
 (TracingVerbosity -&gt; BeamError -&gt; Object)
 -&gt; (BeamError -&gt; Object -&gt; Text) -&gt; ToObject BeamError
@@ -104,13 +104,13 @@ toObject :: TracingVerbosity -&gt; BeamError -&gt; Object
 $ctoObject :: TracingVerbosity -&gt; BeamError -&gt; Object
 </span><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">ToObject</span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-31"></span><span>
-</span><span id="line-32"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679229739"><span id="local-6989586621679229741"><span id="local-6989586621679229743"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Exception</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamError"><span class="hs-identifier hs-type">BeamError</span></a></span></span></span></span><span>
+</span><span id="line-32"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679229891"><span id="local-6989586621679229893"><span id="local-6989586621679229895"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Exception</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamError"><span class="hs-identifier hs-type">BeamError</span></a></span></span></span></span><span>
 </span><span id="line-33"></span><span>
-</span><span id="line-34"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679229735"><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-type">Pretty</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamError"><span class="hs-identifier hs-type">BeamError</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-35"></span><span>  </span><span id="local-6989586621679229733"><span class="annot"><span class="annottext">pretty :: BeamError -&gt; Doc ann
+</span><span id="line-34"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679229887"><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-type">Pretty</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamError"><span class="hs-identifier hs-type">BeamError</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-35"></span><span>  </span><span id="local-6989586621679229885"><span class="annot"><span class="annottext">pretty :: BeamError -&gt; Doc ann
 </span><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">pretty</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
-</span><span id="line-36"></span><span>    </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span id="local-6989586621679229731"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679229731"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Doc ann
+</span><span id="line-36"></span><span>    </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span id="local-6989586621679229883"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679229883"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Doc ann
 </span><span class="hs-string">&quot;SqlError (via Beam)&quot;</span></span><span> </span><span class="annot"><span class="annottext">Doc ann -&gt; Doc ann -&gt; Doc ann
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Doc ann
@@ -120,11 +120,11 @@ forall ann. Doc ann -&gt; Doc ann -&gt; Doc ann
 </span><a href="../../../../prettyprinter/html/src"><span class="hs-operator hs-var">&lt;+&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Doc ann
 forall a ann. Pretty a =&gt; a -&gt; Doc ann
 </span><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-var">pretty</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679229731"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679229883"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-37"></span><span>
-</span><span id="line-38"></span><span id="local-6989586621679229729"><span id="local-6989586621679229730"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="BeamLog"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamLog"><span class="hs-identifier hs-var">BeamLog</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-38"></span><span id="local-6989586621679229881"><span id="local-6989586621679229882"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="BeamLog"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamLog"><span class="hs-identifier hs-var">BeamLog</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-39"></span><span>  </span><span id="SqlLog"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlLog"><span class="hs-identifier hs-var">SqlLog</span></a></span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span>
-</span><span id="line-40"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229724"><span id="local-6989586621679229726"><span class="annot"><span class="annottext">BeamLog -&gt; BeamLog -&gt; Bool
+</span><span id="line-40"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229876"><span id="local-6989586621679229878"><span class="annot"><span class="annottext">BeamLog -&gt; BeamLog -&gt; Bool
 (BeamLog -&gt; BeamLog -&gt; Bool)
 -&gt; (BeamLog -&gt; BeamLog -&gt; Bool) -&gt; Eq BeamLog
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -132,7 +132,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: BeamLog -&gt; BeamLog -&gt; Bool
 == :: BeamLog -&gt; BeamLog -&gt; Bool
 $c== :: BeamLog -&gt; BeamLog -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229718"><span id="local-6989586621679229720"><span id="local-6989586621679229722"><span class="annot"><span class="annottext">Int -&gt; BeamLog -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229870"><span id="local-6989586621679229872"><span id="local-6989586621679229874"><span class="annot"><span class="annottext">Int -&gt; BeamLog -&gt; ShowS
 [BeamLog] -&gt; ShowS
 BeamLog -&gt; String
 (Int -&gt; BeamLog -&gt; ShowS)
@@ -154,7 +154,7 @@ forall a.
 $cto :: forall x. Rep BeamLog x -&gt; BeamLog
 $cfrom :: forall x. BeamLog -&gt; Rep BeamLog x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-41"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229712"><span id="local-6989586621679229714"><span class="annot"><span class="annottext">Value -&gt; Parser [BeamLog]
+</span><span id="line-41"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229864"><span id="local-6989586621679229866"><span class="annot"><span class="annottext">Value -&gt; Parser [BeamLog]
 Value -&gt; Parser BeamLog
 (Value -&gt; Parser BeamLog)
 -&gt; (Value -&gt; Parser [BeamLog]) -&gt; FromJSON BeamLog
@@ -164,7 +164,7 @@ parseJSONList :: Value -&gt; Parser [BeamLog]
 $cparseJSONList :: Value -&gt; Parser [BeamLog]
 parseJSON :: Value -&gt; Parser BeamLog
 $cparseJSON :: Value -&gt; Parser BeamLog
-</span><a href="#local-6989586621679229712"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229704"><span id="local-6989586621679229706"><span id="local-6989586621679229708"><span id="local-6989586621679229710"><span class="annot"><span class="annottext">[BeamLog] -&gt; Encoding
+</span><a href="#local-6989586621679229864"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229856"><span id="local-6989586621679229858"><span id="local-6989586621679229860"><span id="local-6989586621679229862"><span class="annot"><span class="annottext">[BeamLog] -&gt; Encoding
 [BeamLog] -&gt; Value
 BeamLog -&gt; Encoding
 BeamLog -&gt; Value
@@ -187,7 +187,7 @@ toEncoding :: BeamLog -&gt; Encoding
 $ctoEncoding :: BeamLog -&gt; Encoding
 toJSON :: BeamLog -&gt; Value
 $ctoJSON :: BeamLog -&gt; Value
-</span><a href="#local-6989586621679229704"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229700"><span id="local-6989586621679229702"><span class="annot"><span class="annottext">TracingVerbosity -&gt; BeamLog -&gt; Object
+</span><a href="#local-6989586621679229856"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229852"><span id="local-6989586621679229854"><span class="annot"><span class="annottext">TracingVerbosity -&gt; BeamLog -&gt; Object
 BeamLog -&gt; Object -&gt; Text
 (TracingVerbosity -&gt; BeamLog -&gt; Object)
 -&gt; (BeamLog -&gt; Object -&gt; Text) -&gt; ToObject BeamLog
@@ -198,13 +198,13 @@ textTransformer :: BeamLog -&gt; Object -&gt; Text
 $ctextTransformer :: BeamLog -&gt; Object -&gt; Text
 toObject :: TracingVerbosity -&gt; BeamLog -&gt; Object
 $ctoObject :: TracingVerbosity -&gt; BeamLog -&gt; Object
-</span><a href="#local-6989586621679229700"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">ToObject</span></a></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679229852"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">ToObject</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-42"></span><span>
-</span><span id="line-43"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679229697"><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-type">Pretty</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamLog"><span class="hs-identifier hs-type">BeamLog</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-44"></span><span>  </span><span id="local-6989586621679229696"><span class="annot"><span class="annottext">pretty :: BeamLog -&gt; Doc ann
-</span><a href="#local-6989586621679229696"><span class="hs-identifier hs-var hs-var hs-var hs-var">pretty</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
-</span><span id="line-45"></span><span>    </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlLog"><span class="hs-identifier hs-type">SqlLog</span></a></span><span> </span><span id="local-6989586621679229695"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679229695"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Doc ann
+</span><span id="line-43"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679229849"><span class="annot"><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-type">Pretty</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamLog"><span class="hs-identifier hs-type">BeamLog</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-44"></span><span>  </span><span id="local-6989586621679229848"><span class="annot"><span class="annottext">pretty :: BeamLog -&gt; Doc ann
+</span><a href="#local-6989586621679229848"><span class="hs-identifier hs-var hs-var hs-var hs-var">pretty</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
+</span><span id="line-45"></span><span>    </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlLog"><span class="hs-identifier hs-type">SqlLog</span></a></span><span> </span><span id="local-6989586621679229847"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679229847"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Doc ann
 </span><span class="hs-string">&quot;SqlLog&quot;</span></span><span> </span><span class="annot"><span class="annottext">Doc ann -&gt; Doc ann -&gt; Doc ann
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Doc ann
@@ -214,5 +214,5 @@ forall ann. Doc ann -&gt; Doc ann -&gt; Doc ann
 </span><a href="../../../../prettyprinter/html/src"><span class="hs-operator hs-var">&lt;+&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Doc ann
 forall a ann. Pretty a =&gt; a -&gt; Doc ann
 </span><a href="../../../../prettyprinter/html/src"><span class="hs-identifier hs-var">pretty</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679229695"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679229847"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-46"></span></pre></body></html>

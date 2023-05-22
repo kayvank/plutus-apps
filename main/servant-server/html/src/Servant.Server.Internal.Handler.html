@@ -27,10 +27,10 @@
 </span><span id="line-27"></span><span class="hs-keyword">import</span><span>           </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html"><span class="hs-identifier">Servant.Server.Internal.ServerError</span></a></span><span>
 </span><span id="line-28"></span><span>                 </span><span class="hs-special">(</span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier">ServerError</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#errBody"><span class="hs-identifier">errBody</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#err500"><span class="hs-identifier">err500</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-29"></span><span>
-</span><span id="line-30"></span><span id="local-6989586621679129254"><span id="local-6989586621679129255"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Handler"><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span></span><span> </span><span id="local-6989586621679129277"><span class="annot"><a href="#local-6989586621679129277"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Handler"><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="runHandler%27"><span class="annot"><span class="annottext">Handler a -&gt; ExceptT ServerError IO a
-</span><a href="Servant.Server.Internal.Handler.html#runHandler%27"><span class="hs-identifier hs-var hs-var">runHandler'</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129277"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-special">}</span><span>
+</span><span id="line-30"></span><span id="local-6989586621679129267"><span id="local-6989586621679129268"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Handler"><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span></span><span> </span><span id="local-6989586621679129290"><span class="annot"><a href="#local-6989586621679129290"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Handler"><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="runHandler%27"><span class="annot"><span class="annottext">Handler a -&gt; ExceptT ServerError IO a
+</span><a href="Servant.Server.Internal.Handler.html#runHandler%27"><span class="hs-identifier hs-var hs-var">runHandler'</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129290"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-special">}</span><span>
 </span><span id="line-31"></span><span>  </span><span class="hs-keyword">deriving</span><span>
-</span><span id="line-32"></span><span>    </span><span class="hs-special">(</span><span> </span><span id="local-6989586621679129248"><span id="local-6989586621679129250"><span class="annot"><span class="annottext">a -&gt; Handler b -&gt; Handler a
+</span><span id="line-32"></span><span>    </span><span class="hs-special">(</span><span> </span><span id="local-6989586621679129261"><span id="local-6989586621679129263"><span class="annot"><span class="annottext">a -&gt; Handler b -&gt; Handler a
 (a -&gt; b) -&gt; Handler a -&gt; Handler b
 (forall a b. (a -&gt; b) -&gt; Handler a -&gt; Handler b)
 -&gt; (forall a b. a -&gt; Handler b -&gt; Handler a) -&gt; Functor Handler
@@ -43,7 +43,7 @@ forall (f :: * -&gt; *).
 $c&lt;$ :: forall a b. a -&gt; Handler b -&gt; Handler a
 fmap :: (a -&gt; b) -&gt; Handler a -&gt; Handler b
 $cfmap :: forall a b. (a -&gt; b) -&gt; Handler a -&gt; Handler b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129236"><span id="local-6989586621679129238"><span id="local-6989586621679129240"><span id="local-6989586621679129242"><span id="local-6989586621679129244"><span class="annot"><span class="annottext">Functor Handler
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129249"><span id="local-6989586621679129251"><span id="local-6989586621679129253"><span id="local-6989586621679129255"><span id="local-6989586621679129257"><span class="annot"><span class="annottext">Functor Handler
 a -&gt; Handler a
 Functor Handler
 -&gt; (forall a. a -&gt; Handler a)
@@ -81,7 +81,7 @@ $c&lt;*&gt; :: forall a b. Handler (a -&gt; b) -&gt; Handler a -&gt; Handler b
 pure :: a -&gt; Handler a
 $cpure :: forall a. a -&gt; Handler a
 $cp1Applicative :: Functor Handler
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Applicative</span></a></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129228"><span id="local-6989586621679129230"><span id="local-6989586621679129232"><span class="annot"><span class="annottext">Applicative Handler
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Applicative</span></a></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129241"><span id="local-6989586621679129243"><span id="local-6989586621679129245"><span class="annot"><span class="annottext">Applicative Handler
 a -&gt; Handler a
 Applicative Handler
 -&gt; (forall a b. Handler a -&gt; (a -&gt; Handler b) -&gt; Handler b)
@@ -106,7 +106,7 @@ $c&gt;&gt; :: forall a b. Handler a -&gt; Handler b -&gt; Handler b
 &gt;&gt;= :: Handler a -&gt; (a -&gt; Handler b) -&gt; Handler b
 $c&gt;&gt;= :: forall a b. Handler a -&gt; (a -&gt; Handler b) -&gt; Handler b
 $cp1Monad :: Applicative Handler
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monad</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129224"><span class="annot"><span class="annottext">Monad Handler
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monad</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129237"><span class="annot"><span class="annottext">Monad Handler
 Monad Handler -&gt; (forall a. IO a -&gt; Handler a) -&gt; MonadIO Handler
 IO a -&gt; Handler a
 forall a. IO a -&gt; Handler a
@@ -127,8 +127,8 @@ forall a x. Handler a -&gt; Rep (Handler a) x
 $cto :: forall a x. Rep (Handler a) x -&gt; Handler a
 $cfrom :: forall a x. Handler a -&gt; Rep (Handler a) x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span>
-</span><span id="line-33"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129215"><span id="local-6989586621679129217"><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span></span></span><span>
-</span><span id="line-34"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129211"><span class="annot"><span class="annottext">Monad Handler
+</span><span id="line-33"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129228"><span id="local-6989586621679129230"><span class="annot"><a href="../../../../mtl/html/src"><span class="hs-identifier hs-type">MonadError</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span></span></span><span>
+</span><span id="line-34"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129224"><span class="annot"><span class="annottext">Monad Handler
 e -&gt; Handler a
 Monad Handler
 -&gt; (forall e a. Exception e =&gt; e -&gt; Handler a)
@@ -139,7 +139,7 @@ Monad m -&gt; (forall e a. Exception e =&gt; e -&gt; m a) -&gt; MonadThrow m
 throwM :: e -&gt; Handler a
 $cthrowM :: forall e a. Exception e =&gt; e -&gt; Handler a
 $cp1MonadThrow :: Monad Handler
-</span><a href="../../../../exceptions/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadThrow</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129207"><span class="annot"><span class="annottext">MonadThrow Handler
+</span><a href="../../../../exceptions/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadThrow</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129220"><span class="annot"><span class="annottext">MonadThrow Handler
 MonadThrow Handler
 -&gt; (forall e a.
     Exception e =&gt;
@@ -158,7 +158,7 @@ $ccatch :: forall e a.
 Exception e =&gt;
 Handler a -&gt; (e -&gt; Handler a) -&gt; Handler a
 $cp1MonadCatch :: MonadThrow Handler
-</span><a href="../../../../exceptions/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadCatch</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129199"><span id="local-6989586621679129201"><span id="local-6989586621679129203"><span class="annot"><span class="annottext">MonadCatch Handler
+</span><a href="../../../../exceptions/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var">MonadCatch</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679129212"><span id="local-6989586621679129214"><span id="local-6989586621679129216"><span class="annot"><span class="annottext">MonadCatch Handler
 MonadCatch Handler
 -&gt; (forall b.
     ((forall a. Handler a -&gt; Handler a) -&gt; Handler b) -&gt; Handler b)
@@ -210,19 +210,19 @@ $cp1MonadMask :: MonadCatch Handler
 </span><span id="line-35"></span><span>    </span><span class="hs-special">)</span><span>
 </span><span id="line-36"></span><span>
 </span><span id="line-37"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">MonadFail</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-38"></span><span>  </span><span id="local-6989586621679129194"><span class="annot"><span class="annottext">fail :: String -&gt; Handler a
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fail</span></a></span></span><span> </span><span id="local-6989586621679129193"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679129193"><span class="hs-identifier hs-var">str</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ServerError -&gt; Handler a
+</span><span id="line-38"></span><span>  </span><span id="local-6989586621679129207"><span class="annot"><span class="annottext">fail :: String -&gt; Handler a
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fail</span></a></span></span><span> </span><span id="local-6989586621679129206"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679129206"><span class="hs-identifier hs-var">str</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ServerError -&gt; Handler a
 forall e (m :: * -&gt; *) a. MonadError e m =&gt; e -&gt; m a
 </span><a href="../../../../mtl/html/src"><span class="hs-identifier hs-var">throwError</span></a></span><span> </span><span class="annot"><span class="annottext">ServerError
 </span><a href="Servant.Server.Internal.ServerError.html#err500"><span class="hs-identifier hs-var">err500</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">errBody :: ByteString
 </span><a href="Servant.Server.Internal.ServerError.html#errBody"><span class="hs-identifier hs-var">errBody</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; ByteString
 forall a. IsString a =&gt; String -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromString</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679129193"><span class="hs-identifier hs-var">str</span></a></span><span> </span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679129206"><span class="hs-identifier hs-var">str</span></a></span><span> </span><span class="hs-special">}</span><span>
 </span><span id="line-39"></span><span>
 </span><span id="line-40"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../transformers-base/html/src"><span class="hs-identifier hs-type">MonadBase</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-41"></span><span>  </span><span id="local-6989586621679129186"><span class="annot"><span class="annottext">liftBase :: IO &#945; -&gt; Handler &#945;
+</span><span id="line-41"></span><span>  </span><span id="local-6989586621679129199"><span class="annot"><span class="annottext">liftBase :: IO &#945; -&gt; Handler &#945;
 </span><a href="../../../../transformers-base/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">liftBase</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT ServerError IO &#945; -&gt; Handler &#945;
 forall a. ExceptT ServerError IO a -&gt; Handler a
 </span><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT ServerError IO &#945; -&gt; Handler &#945;)
@@ -233,23 +233,23 @@ forall (b :: * -&gt; *) (m :: * -&gt; *) &#945;. MonadBase b m =&gt; b &#945; -&
 </span><a href="../../../../transformers-base/html/src"><span class="hs-identifier hs-var">liftBase</span></a></span><span>
 </span><span id="line-42"></span><span>
 </span><span id="line-43"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-type">MonadBaseControl</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-44"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="StM"><span class="annot"><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var">StM</span></a></span></span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span id="local-6989586621679129179"><span class="annot"><a href="#local-6989586621679129179"><span class="hs-identifier hs-type hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129179"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-44"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="StM"><span class="annot"><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var">StM</span></a></span></span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span id="local-6989586621679129192"><span class="annot"><a href="#local-6989586621679129192"><span class="hs-identifier hs-type hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129192"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-45"></span><span>
 </span><span id="line-46"></span><span>  </span><span class="hs-comment">-- liftBaseWith :: (RunInBase Handler IO -&gt; IO a) -&gt; Handler a</span><span>
-</span><span id="line-47"></span><span>  </span><span id="local-6989586621679129178"><span class="annot"><span class="annottext">liftBaseWith :: (RunInBase Handler IO -&gt; IO a) -&gt; Handler a
-</span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">liftBaseWith</span></a></span></span><span> </span><span id="local-6989586621679129176"><span class="annot"><span class="annottext">RunInBase Handler IO -&gt; IO a
-</span><a href="#local-6989586621679129176"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; Handler a
+</span><span id="line-47"></span><span>  </span><span id="local-6989586621679129191"><span class="annot"><span class="annottext">liftBaseWith :: (RunInBase Handler IO -&gt; IO a) -&gt; Handler a
+</span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">liftBaseWith</span></a></span></span><span> </span><span id="local-6989586621679129189"><span class="annot"><span class="annottext">RunInBase Handler IO -&gt; IO a
+</span><a href="#local-6989586621679129189"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; Handler a
 forall a. ExceptT ServerError IO a -&gt; Handler a
 </span><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(RunInBase (ExceptT ServerError IO) IO -&gt; IO a)
 -&gt; ExceptT ServerError IO a
 forall (b :: * -&gt; *) (m :: * -&gt; *) a.
 MonadBaseControl b m =&gt;
 (RunInBase m b -&gt; b a) -&gt; m a
-</span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var">liftBaseWith</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679129175"><span class="annot"><span class="annottext">RunInBase (ExceptT ServerError IO) IO
-</span><a href="#local-6989586621679129175"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">RunInBase Handler IO -&gt; IO a
-</span><a href="#local-6989586621679129176"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; IO (Either ServerError a)
+</span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var">liftBaseWith</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679129188"><span class="annot"><span class="annottext">RunInBase (ExceptT ServerError IO) IO
+</span><a href="#local-6989586621679129188"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">RunInBase Handler IO -&gt; IO a
+</span><a href="#local-6989586621679129189"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; IO (Either ServerError a)
 RunInBase (ExceptT ServerError IO) IO
-</span><a href="#local-6989586621679129175"><span class="hs-identifier hs-var">g</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT ServerError IO a -&gt; IO (Either ServerError a))
+</span><a href="#local-6989586621679129188"><span class="hs-identifier hs-var">g</span></a></span><span> </span><span class="annot"><span class="annottext">(ExceptT ServerError IO a -&gt; IO (Either ServerError a))
 -&gt; (Handler a -&gt; ExceptT ServerError IO a)
 -&gt; Handler a
 -&gt; IO (Either ServerError a)
@@ -259,9 +259,9 @@ forall a. Handler a -&gt; ExceptT ServerError IO a
 </span><a href="Servant.Server.Internal.Handler.html#runHandler%27"><span class="hs-identifier hs-var hs-var">runHandler'</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span>  </span><span class="hs-comment">-- restoreM :: StM Handler a -&gt; Handler a</span><span>
-</span><span id="line-50"></span><span>  </span><span id="local-6989586621679129174"><span class="annot"><span class="annottext">restoreM :: StM Handler a -&gt; Handler a
-</span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">restoreM</span></a></span></span><span> </span><span id="local-6989586621679129172"><span class="annot"><span class="annottext">StM Handler a
-</span><a href="#local-6989586621679129172"><span class="hs-identifier hs-var">st</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; Handler a
+</span><span id="line-50"></span><span>  </span><span id="local-6989586621679129187"><span class="annot"><span class="annottext">restoreM :: StM Handler a -&gt; Handler a
+</span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">restoreM</span></a></span></span><span> </span><span id="local-6989586621679129185"><span class="annot"><span class="annottext">StM Handler a
+</span><a href="#local-6989586621679129185"><span class="hs-identifier hs-var">st</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; Handler a
 forall a. ExceptT ServerError IO a -&gt; Handler a
 </span><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-var">Handler</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">StM (ExceptT ServerError IO) a -&gt; ExceptT ServerError IO a
 forall (b :: * -&gt; *) (m :: * -&gt; *) a.
@@ -269,9 +269,9 @@ MonadBaseControl b m =&gt;
 StM m a -&gt; m a
 </span><a href="../../../../monad-control/html/src"><span class="hs-identifier hs-var">restoreM</span></a></span><span> </span><span class="annot"><span class="annottext">StM (ExceptT ServerError IO) a
 StM Handler a
-</span><a href="#local-6989586621679129172"><span class="hs-identifier hs-var">st</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679129185"><span class="hs-identifier hs-var">st</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-51"></span><span>
-</span><span id="line-52"></span><span id="local-6989586621679129171"><span class="annot"><a href="Servant.Server.Internal.Handler.html#runHandler"><span class="hs-identifier hs-type">runHandler</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129171"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129171"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-52"></span><span id="local-6989586621679129184"><span class="annot"><a href="Servant.Server.Internal.Handler.html#runHandler"><span class="hs-identifier hs-type">runHandler</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Servant.Server.Internal.Handler.html#Handler"><span class="hs-identifier hs-type">Handler</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129184"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="Servant.Server.Internal.ServerError.html#ServerError"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679129184"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-53"></span><span id="runHandler"><span class="annot"><span class="annottext">runHandler :: Handler a -&gt; IO (Either ServerError a)
 </span><a href="Servant.Server.Internal.Handler.html#runHandler"><span class="hs-identifier hs-var hs-var">runHandler</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ExceptT ServerError IO a -&gt; IO (Either ServerError a)
 forall e (m :: * -&gt; *) a. ExceptT e m a -&gt; m (Either e a)

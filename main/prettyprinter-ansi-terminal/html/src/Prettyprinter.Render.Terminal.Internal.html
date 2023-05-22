@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_B9oXZsE4q7QCEuFettIxQa"><span id="%24con2tag_9yVAJqgTwffLlBRqISFhqj"><span id="%24con2tag_KR2MCxO7rHr5QPyi8ydXIn"></span></span></span><span class="hs-pragma">{-# LANGUAGE CPP               #-}</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_3A4ApymtyPXD3Un0RxHeXr"><span id="%24con2tag_7VRgzq5EnyY7QyfDTdWpyI"><span id="%24con2tag_61ELPuA1y0KLGRrDtTyF5w"></span></span></span><span class="hs-pragma">{-# LANGUAGE CPP               #-}</span><span>
 </span><span id="line-2"></span><span class="hs-pragma">{-# LANGUAGE OverloadedStrings #-}</span><span>
 </span><span id="line-3"></span><span>
 </span><span id="line-4"></span><span class="hs-pragma">{-# OPTIONS_HADDOCK not-home #-}</span><span class="hs-cpp">
@@ -1128,7 +1128,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">AnsiStyle -&gt; [SGR]
 </span><a href="#local-6989586621679038523"><span class="hs-identifier hs-var">stylesToSgrs</span></a></span><span>
 </span><span id="line-301"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-302"></span><span>    </span><span class="annot"><a href="#local-6989586621679038523"><span class="hs-identifier hs-type">stylesToSgrs</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#AnsiStyle"><span class="hs-identifier hs-type">AnsiStyle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-type">ANSI.SGR</span></a></span><span class="hs-special">]</span><span>
+</span><span id="line-302"></span><span>    </span><span class="annot"><a href="#local-6989586621679038523"><span class="hs-identifier hs-type">stylesToSgrs</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#AnsiStyle"><span class="hs-identifier hs-type">AnsiStyle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-type">ANSI.SGR</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-303"></span><span>    </span><span id="local-6989586621679038523"><span class="annot"><span class="annottext">stylesToSgrs :: AnsiStyle -&gt; [SGR]
 </span><a href="#local-6989586621679038523"><span class="hs-identifier hs-var hs-var">stylesToSgrs</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#SetAnsiStyle"><span class="hs-identifier hs-type">SetAnsiStyle</span></a></span><span> </span><span id="local-6989586621679038522"><span class="annot"><span class="annottext">Maybe (Intensity, Color)
 </span><a href="#local-6989586621679038522"><span class="hs-identifier hs-var">fg</span></a></span></span><span> </span><span id="local-6989586621679038521"><span class="annot"><span class="annottext">Maybe (Intensity, Color)
@@ -1141,15 +1141,15 @@ forall a. [Maybe a] -&gt; [a]
 </span><span id="line-304"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">SGR -&gt; Maybe SGR
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">SGR
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Reset</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Reset</span></a></span><span>
 </span><span id="line-305"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">((Intensity, Color) -&gt; SGR)
 -&gt; Maybe (Intensity, Color) -&gt; Maybe SGR
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621679038515"><span class="annot"><span class="annottext">Intensity
 </span><a href="#local-6989586621679038515"><span class="hs-identifier hs-var">intensity</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679038514"><span class="annot"><span class="annottext">Color
 </span><a href="#local-6989586621679038514"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ConsoleLayer -&gt; ColorIntensity -&gt; Color -&gt; SGR
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.SetColor</span></a></span><span> </span><span class="annot"><span class="annottext">ConsoleLayer
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Foreground</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Intensity -&gt; ColorIntensity
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.SetColor</span></a></span><span> </span><span class="annot"><span class="annottext">ConsoleLayer
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Foreground</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Intensity -&gt; ColorIntensity
 </span><a href="#local-6989586621679038511"><span class="hs-identifier hs-var">convertIntensity</span></a></span><span> </span><span class="annot"><span class="annottext">Intensity
 </span><a href="#local-6989586621679038515"><span class="hs-identifier hs-var">intensity</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Color -&gt; Color
 </span><a href="#local-6989586621679038510"><span class="hs-identifier hs-var">convertColor</span></a></span><span> </span><span class="annot"><span class="annottext">Color
@@ -1161,8 +1161,8 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621679038509"><span class="annot"><span class="annottext">Intensity
 </span><a href="#local-6989586621679038509"><span class="hs-identifier hs-var">intensity</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679038508"><span class="annot"><span class="annottext">Color
 </span><a href="#local-6989586621679038508"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ConsoleLayer -&gt; ColorIntensity -&gt; Color -&gt; SGR
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.SetColor</span></a></span><span> </span><span class="annot"><span class="annottext">ConsoleLayer
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Background</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Intensity -&gt; ColorIntensity
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.SetColor</span></a></span><span> </span><span class="annot"><span class="annottext">ConsoleLayer
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Background</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Intensity -&gt; ColorIntensity
 </span><a href="#local-6989586621679038511"><span class="hs-identifier hs-var">convertIntensity</span></a></span><span> </span><span class="annot"><span class="annottext">Intensity
 </span><a href="#local-6989586621679038509"><span class="hs-identifier hs-var">intensity</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Color -&gt; Color
 </span><a href="#local-6989586621679038510"><span class="hs-identifier hs-var">convertColor</span></a></span><span> </span><span class="annot"><span class="annottext">Color
@@ -1172,66 +1172,66 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">Bold
 </span><span class="hs-identifier">_</span></span><span>              </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ConsoleIntensity -&gt; SGR
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.SetConsoleIntensity</span></a></span><span> </span><span class="annot"><span class="annottext">ConsoleIntensity
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.BoldIntensity</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe Bold
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.SetConsoleIntensity</span></a></span><span> </span><span class="annot"><span class="annottext">ConsoleIntensity
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.BoldIntensity</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe Bold
 </span><a href="#local-6989586621679038520"><span class="hs-identifier hs-var">b</span></a></span><span>
 </span><span id="line-308"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(Italicized -&gt; SGR) -&gt; Maybe Italicized -&gt; Maybe SGR
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">Italicized
 </span><span class="hs-identifier">_</span></span><span>              </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; SGR
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.SetItalicized</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.SetItalicized</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe Italicized
 </span><a href="#local-6989586621679038519"><span class="hs-identifier hs-var">i</span></a></span><span>
 </span><span id="line-309"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(Underlined -&gt; SGR) -&gt; Maybe Underlined -&gt; Maybe SGR
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">Underlined
 </span><span class="hs-identifier">_</span></span><span>              </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Underlining -&gt; SGR
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.SetUnderlining</span></a></span><span> </span><span class="annot"><span class="annottext">Underlining
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.SingleUnderline</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe Underlined
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.SetUnderlining</span></a></span><span> </span><span class="annot"><span class="annottext">Underlining
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.SingleUnderline</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe Underlined
 </span><a href="#local-6989586621679038518"><span class="hs-identifier hs-var">u</span></a></span><span>
 </span><span id="line-310"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-311"></span><span>
-</span><span id="line-312"></span><span>    </span><span class="annot"><a href="#local-6989586621679038511"><span class="hs-identifier hs-type">convertIntensity</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#Intensity"><span class="hs-identifier hs-type">Intensity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-type">ANSI.ColorIntensity</span></a></span><span>
+</span><span id="line-312"></span><span>    </span><span class="annot"><a href="#local-6989586621679038511"><span class="hs-identifier hs-type">convertIntensity</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#Intensity"><span class="hs-identifier hs-type">Intensity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-type">ANSI.ColorIntensity</span></a></span><span>
 </span><span id="line-313"></span><span>    </span><span id="local-6989586621679038511"><span class="annot"><span class="annottext">convertIntensity :: Intensity -&gt; ColorIntensity
 </span><a href="#local-6989586621679038511"><span class="hs-identifier hs-var hs-var">convertIntensity</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679038501"><span class="annot"><span class="annottext">Intensity
 </span><a href="#local-6989586621679038501"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Intensity
 </span><a href="#local-6989586621679038501"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-314"></span><span>        </span><span class="annot"><span class="annottext">Intensity
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Vivid"><span class="hs-identifier hs-var">Vivid</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ColorIntensity
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Vivid</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Vivid</span></a></span><span>
 </span><span id="line-315"></span><span>        </span><span class="annot"><span class="annottext">Intensity
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Dull"><span class="hs-identifier hs-var">Dull</span></a></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ColorIntensity
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Dull</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Dull</span></a></span><span>
 </span><span id="line-316"></span><span>
-</span><span id="line-317"></span><span>    </span><span class="annot"><a href="#local-6989586621679038510"><span class="hs-identifier hs-type">convertColor</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#Color"><span class="hs-identifier hs-type">Color</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-type">ANSI.Color</span></a></span><span>
+</span><span id="line-317"></span><span>    </span><span class="annot"><a href="#local-6989586621679038510"><span class="hs-identifier hs-type">convertColor</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Prettyprinter.Render.Terminal.Internal.html#Color"><span class="hs-identifier hs-type">Color</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-type">ANSI.Color</span></a></span><span>
 </span><span id="line-318"></span><span>    </span><span id="local-6989586621679038510"><span class="annot"><span class="annottext">convertColor :: Color -&gt; Color
 </span><a href="#local-6989586621679038510"><span class="hs-identifier hs-var hs-var">convertColor</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679038498"><span class="annot"><span class="annottext">Color
 </span><a href="#local-6989586621679038498"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Color
 </span><a href="#local-6989586621679038498"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-319"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Black"><span class="hs-identifier hs-var">Black</span></a></span><span>   </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Black</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Black</span></a></span><span>
 </span><span id="line-320"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Red"><span class="hs-identifier hs-var">Red</span></a></span><span>     </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Red</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Red</span></a></span><span>
 </span><span id="line-321"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Green"><span class="hs-identifier hs-var">Green</span></a></span><span>   </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Green</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Green</span></a></span><span>
 </span><span id="line-322"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Yellow"><span class="hs-identifier hs-var">Yellow</span></a></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Yellow</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Yellow</span></a></span><span>
 </span><span id="line-323"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Blue"><span class="hs-identifier hs-var">Blue</span></a></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Blue</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Blue</span></a></span><span>
 </span><span id="line-324"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Magenta"><span class="hs-identifier hs-var">Magenta</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Magenta</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Magenta</span></a></span><span>
 </span><span id="line-325"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#Cyan"><span class="hs-identifier hs-var">Cyan</span></a></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.Cyan</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.Cyan</span></a></span><span>
 </span><span id="line-326"></span><span>        </span><span class="annot"><span class="annottext">Color
 </span><a href="Prettyprinter.Render.Terminal.Internal.html#White"><span class="hs-identifier hs-var">White</span></a></span><span>   </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Color
-</span><a href="../../../../ansi-terminal/html/src"><span class="hs-identifier hs-var">ANSI.White</span></a></span><span>
+</span><a href="../../../../ansi-terminal-types/html/src"><span class="hs-identifier hs-var">ANSI.White</span></a></span><span>
 </span><span id="line-327"></span><span>
 </span><span id="line-328"></span><span>
 </span><span id="line-329"></span><span>

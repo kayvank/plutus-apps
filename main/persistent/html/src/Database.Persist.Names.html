@@ -15,8 +15,8 @@
 </span><span id="line-15"></span><span class="hs-comment">-- | Convenience operations for working with '-NameDB' types.</span><span>
 </span><span id="line-16"></span><span class="hs-comment">--</span><span>
 </span><span id="line-17"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
-</span><span id="line-18"></span><span class="hs-keyword">class</span><span> </span><span id="DatabaseName"><span class="annot"><a href="Database.Persist.Names.html#DatabaseName"><span class="hs-identifier hs-var">DatabaseName</span></a></span></span><span> </span><span id="local-6989586621679921575"><span class="annot"><a href="#local-6989586621679921575"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-19"></span><span>    </span><span id="local-6989586621679921577"><span id="escapeWith"><span class="annot"><a href="Database.Persist.Names.html#escapeWith"><span class="hs-identifier hs-type">escapeWith</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679921577"><span class="hs-identifier hs-type">str</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679921575"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679921577"><span class="hs-identifier hs-type">str</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-18"></span><span class="hs-keyword">class</span><span> </span><span id="DatabaseName"><span class="annot"><a href="Database.Persist.Names.html#DatabaseName"><span class="hs-identifier hs-var">DatabaseName</span></a></span></span><span> </span><span id="local-6989586621679921744"><span class="annot"><a href="#local-6989586621679921744"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-19"></span><span>    </span><span id="local-6989586621679921746"><span id="escapeWith"><span class="annot"><a href="Database.Persist.Names.html#escapeWith"><span class="hs-identifier hs-type">escapeWith</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679921746"><span class="hs-identifier hs-type">str</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679921744"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679921746"><span class="hs-identifier hs-type">str</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-20"></span><span>
 </span><span id="line-21"></span><span class="hs-comment">-- | An 'EntityNameDB' represents the datastore-side name that @persistent@</span><span>
 </span><span id="line-22"></span><span class="hs-comment">-- will use for an entity.</span><span>
@@ -24,7 +24,7 @@
 </span><span id="line-24"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
 </span><span id="line-25"></span><span class="hs-keyword">newtype</span><span> </span><span id="FieldNameDB"><span class="annot"><a href="Database.Persist.Names.html#FieldNameDB"><span class="hs-identifier hs-var">FieldNameDB</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="FieldNameDB"><span class="annot"><a href="Database.Persist.Names.html#FieldNameDB"><span class="hs-identifier hs-var">FieldNameDB</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unFieldNameDB"><span class="annot"><span class="annottext">FieldNameDB -&gt; Text
 </span><a href="Database.Persist.Names.html#unFieldNameDB"><span class="hs-identifier hs-var hs-var">unFieldNameDB</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-26"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921558"><span id="local-6989586621679921560"><span id="local-6989586621679921562"><span class="annot"><span class="annottext">Int -&gt; FieldNameDB -&gt; ShowS
+</span><span id="line-26"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921727"><span id="local-6989586621679921729"><span id="local-6989586621679921731"><span class="annot"><span class="annottext">Int -&gt; FieldNameDB -&gt; ShowS
 [FieldNameDB] -&gt; ShowS
 FieldNameDB -&gt; String
 (Int -&gt; FieldNameDB -&gt; ShowS)
@@ -39,7 +39,7 @@ show :: FieldNameDB -&gt; String
 $cshow :: FieldNameDB -&gt; String
 showsPrec :: Int -&gt; FieldNameDB -&gt; ShowS
 $cshowsPrec :: Int -&gt; FieldNameDB -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921553"><span id="local-6989586621679921555"><span class="annot"><span class="annottext">FieldNameDB -&gt; FieldNameDB -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921722"><span id="local-6989586621679921724"><span class="annot"><span class="annottext">FieldNameDB -&gt; FieldNameDB -&gt; Bool
 (FieldNameDB -&gt; FieldNameDB -&gt; Bool)
 -&gt; (FieldNameDB -&gt; FieldNameDB -&gt; Bool) -&gt; Eq FieldNameDB
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -47,7 +47,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: FieldNameDB -&gt; FieldNameDB -&gt; Bool
 == :: FieldNameDB -&gt; FieldNameDB -&gt; Bool
 $c== :: FieldNameDB -&gt; FieldNameDB -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921544"><span id="local-6989586621679921546"><span id="local-6989586621679921548"><span id="local-6989586621679921550"><span class="annot"><span class="annottext">ReadPrec [FieldNameDB]
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921713"><span id="local-6989586621679921715"><span id="local-6989586621679921717"><span id="local-6989586621679921719"><span class="annot"><span class="annottext">ReadPrec [FieldNameDB]
 ReadPrec FieldNameDB
 Int -&gt; ReadS FieldNameDB
 ReadS [FieldNameDB]
@@ -67,7 +67,7 @@ readList :: ReadS [FieldNameDB]
 $creadList :: ReadS [FieldNameDB]
 readsPrec :: Int -&gt; ReadS FieldNameDB
 $creadsPrec :: Int -&gt; ReadS FieldNameDB
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921528"><span id="local-6989586621679921530"><span id="local-6989586621679921532"><span id="local-6989586621679921534"><span id="local-6989586621679921536"><span id="local-6989586621679921538"><span id="local-6989586621679921540"><span class="annot"><span class="annottext">Eq FieldNameDB
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921697"><span id="local-6989586621679921699"><span id="local-6989586621679921701"><span id="local-6989586621679921703"><span id="local-6989586621679921705"><span id="local-6989586621679921707"><span id="local-6989586621679921709"><span class="annot"><span class="annottext">Eq FieldNameDB
 Eq FieldNameDB
 -&gt; (FieldNameDB -&gt; FieldNameDB -&gt; Ordering)
 -&gt; (FieldNameDB -&gt; FieldNameDB -&gt; Bool)
@@ -105,7 +105,7 @@ $c&lt; :: FieldNameDB -&gt; FieldNameDB -&gt; Bool
 compare :: FieldNameDB -&gt; FieldNameDB -&gt; Ordering
 $ccompare :: FieldNameDB -&gt; FieldNameDB -&gt; Ordering
 $cp1Ord :: Eq FieldNameDB
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921523"><span id="local-6989586621679921525"><span class="annot"><span class="annottext">FieldNameDB -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921692"><span id="local-6989586621679921694"><span class="annot"><span class="annottext">FieldNameDB -&gt; Q Exp
 FieldNameDB -&gt; Q (TExp FieldNameDB)
 (FieldNameDB -&gt; Q Exp)
 -&gt; (FieldNameDB -&gt; Q (TExp FieldNameDB)) -&gt; Lift FieldNameDB
@@ -118,12 +118,12 @@ $clift :: FieldNameDB -&gt; Q Exp
 </span><span id="line-27"></span><span>
 </span><span id="line-28"></span><span class="hs-comment">-- | @since 2.12.0.0</span><span>
 </span><span id="line-29"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="Database.Persist.Names.html#DatabaseName"><span class="hs-identifier hs-type">DatabaseName</span></a></span><span> </span><span class="annot"><a href="Database.Persist.Names.html#FieldNameDB"><span class="hs-identifier hs-type">FieldNameDB</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-30"></span><span>    </span><span id="local-6989586621679921519"><span class="annot"><span class="annottext">escapeWith :: (Text -&gt; str) -&gt; FieldNameDB -&gt; str
-</span><a href="#local-6989586621679921519"><span class="hs-identifier hs-var hs-var hs-var hs-var">escapeWith</span></a></span></span><span> </span><span id="local-6989586621679921518"><span class="annot"><span class="annottext">Text -&gt; str
-</span><a href="#local-6989586621679921518"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Persist.Names.html#FieldNameDB"><span class="hs-identifier hs-type">FieldNameDB</span></a></span><span> </span><span id="local-6989586621679921517"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679921517"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; str
-</span><a href="#local-6989586621679921518"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679921517"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><span id="line-30"></span><span>    </span><span id="local-6989586621679921688"><span class="annot"><span class="annottext">escapeWith :: (Text -&gt; str) -&gt; FieldNameDB -&gt; str
+</span><a href="#local-6989586621679921688"><span class="hs-identifier hs-var hs-var hs-var hs-var">escapeWith</span></a></span></span><span> </span><span id="local-6989586621679921687"><span class="annot"><span class="annottext">Text -&gt; str
+</span><a href="#local-6989586621679921687"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Persist.Names.html#FieldNameDB"><span class="hs-identifier hs-type">FieldNameDB</span></a></span><span> </span><span id="local-6989586621679921686"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679921686"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; str
+</span><a href="#local-6989586621679921687"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679921686"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-31"></span><span>
 </span><span id="line-32"></span><span class="hs-comment">-- | A 'FieldNameHS' represents the Haskell-side name that @persistent@</span><span>
 </span><span id="line-33"></span><span class="hs-comment">-- will use for a field.</span><span>
@@ -131,7 +131,7 @@ $clift :: FieldNameDB -&gt; Q Exp
 </span><span id="line-35"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
 </span><span id="line-36"></span><span class="hs-keyword">newtype</span><span> </span><span id="FieldNameHS"><span class="annot"><a href="Database.Persist.Names.html#FieldNameHS"><span class="hs-identifier hs-var">FieldNameHS</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="FieldNameHS"><span class="annot"><a href="Database.Persist.Names.html#FieldNameHS"><span class="hs-identifier hs-var">FieldNameHS</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unFieldNameHS"><span class="annot"><span class="annottext">FieldNameHS -&gt; Text
 </span><a href="Database.Persist.Names.html#unFieldNameHS"><span class="hs-identifier hs-var hs-var">unFieldNameHS</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-37"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921509"><span id="local-6989586621679921511"><span id="local-6989586621679921513"><span class="annot"><span class="annottext">Int -&gt; FieldNameHS -&gt; ShowS
+</span><span id="line-37"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921678"><span id="local-6989586621679921680"><span id="local-6989586621679921682"><span class="annot"><span class="annottext">Int -&gt; FieldNameHS -&gt; ShowS
 [FieldNameHS] -&gt; ShowS
 FieldNameHS -&gt; String
 (Int -&gt; FieldNameHS -&gt; ShowS)
@@ -146,7 +146,7 @@ show :: FieldNameHS -&gt; String
 $cshow :: FieldNameHS -&gt; String
 showsPrec :: Int -&gt; FieldNameHS -&gt; ShowS
 $cshowsPrec :: Int -&gt; FieldNameHS -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921505"><span id="local-6989586621679921507"><span class="annot"><span class="annottext">FieldNameHS -&gt; FieldNameHS -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921674"><span id="local-6989586621679921676"><span class="annot"><span class="annottext">FieldNameHS -&gt; FieldNameHS -&gt; Bool
 (FieldNameHS -&gt; FieldNameHS -&gt; Bool)
 -&gt; (FieldNameHS -&gt; FieldNameHS -&gt; Bool) -&gt; Eq FieldNameHS
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -154,7 +154,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: FieldNameHS -&gt; FieldNameHS -&gt; Bool
 == :: FieldNameHS -&gt; FieldNameHS -&gt; Bool
 $c== :: FieldNameHS -&gt; FieldNameHS -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921497"><span id="local-6989586621679921499"><span id="local-6989586621679921501"><span id="local-6989586621679921503"><span class="annot"><span class="annottext">ReadPrec [FieldNameHS]
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921666"><span id="local-6989586621679921668"><span id="local-6989586621679921670"><span id="local-6989586621679921672"><span class="annot"><span class="annottext">ReadPrec [FieldNameHS]
 ReadPrec FieldNameHS
 Int -&gt; ReadS FieldNameHS
 ReadS [FieldNameHS]
@@ -174,7 +174,7 @@ readList :: ReadS [FieldNameHS]
 $creadList :: ReadS [FieldNameHS]
 readsPrec :: Int -&gt; ReadS FieldNameHS
 $creadsPrec :: Int -&gt; ReadS FieldNameHS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921482"><span id="local-6989586621679921484"><span id="local-6989586621679921486"><span id="local-6989586621679921488"><span id="local-6989586621679921490"><span id="local-6989586621679921492"><span id="local-6989586621679921494"><span class="annot"><span class="annottext">Eq FieldNameHS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921651"><span id="local-6989586621679921653"><span id="local-6989586621679921655"><span id="local-6989586621679921657"><span id="local-6989586621679921659"><span id="local-6989586621679921661"><span id="local-6989586621679921663"><span class="annot"><span class="annottext">Eq FieldNameHS
 Eq FieldNameHS
 -&gt; (FieldNameHS -&gt; FieldNameHS -&gt; Ordering)
 -&gt; (FieldNameHS -&gt; FieldNameHS -&gt; Bool)
@@ -212,7 +212,7 @@ $c&lt; :: FieldNameHS -&gt; FieldNameHS -&gt; Bool
 compare :: FieldNameHS -&gt; FieldNameHS -&gt; Ordering
 $ccompare :: FieldNameHS -&gt; FieldNameHS -&gt; Ordering
 $cp1Ord :: Eq FieldNameHS
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921478"><span id="local-6989586621679921480"><span class="annot"><span class="annottext">FieldNameHS -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921647"><span id="local-6989586621679921649"><span class="annot"><span class="annottext">FieldNameHS -&gt; Q Exp
 FieldNameHS -&gt; Q (TExp FieldNameHS)
 (FieldNameHS -&gt; Q Exp)
 -&gt; (FieldNameHS -&gt; Q (TExp FieldNameHS)) -&gt; Lift FieldNameHS
@@ -229,7 +229,7 @@ $clift :: FieldNameHS -&gt; Q Exp
 </span><span id="line-42"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
 </span><span id="line-43"></span><span class="hs-keyword">newtype</span><span> </span><span id="EntityNameHS"><span class="annot"><a href="Database.Persist.Names.html#EntityNameHS"><span class="hs-identifier hs-var">EntityNameHS</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="EntityNameHS"><span class="annot"><a href="Database.Persist.Names.html#EntityNameHS"><span class="hs-identifier hs-var">EntityNameHS</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unEntityNameHS"><span class="annot"><span class="annottext">EntityNameHS -&gt; Text
 </span><a href="Database.Persist.Names.html#unEntityNameHS"><span class="hs-identifier hs-var hs-var">unEntityNameHS</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-44"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921470"><span id="local-6989586621679921472"><span id="local-6989586621679921474"><span class="annot"><span class="annottext">Int -&gt; EntityNameHS -&gt; ShowS
+</span><span id="line-44"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921639"><span id="local-6989586621679921641"><span id="local-6989586621679921643"><span class="annot"><span class="annottext">Int -&gt; EntityNameHS -&gt; ShowS
 [EntityNameHS] -&gt; ShowS
 EntityNameHS -&gt; String
 (Int -&gt; EntityNameHS -&gt; ShowS)
@@ -244,7 +244,7 @@ show :: EntityNameHS -&gt; String
 $cshow :: EntityNameHS -&gt; String
 showsPrec :: Int -&gt; EntityNameHS -&gt; ShowS
 $cshowsPrec :: Int -&gt; EntityNameHS -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921466"><span id="local-6989586621679921468"><span class="annot"><span class="annottext">EntityNameHS -&gt; EntityNameHS -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921635"><span id="local-6989586621679921637"><span class="annot"><span class="annottext">EntityNameHS -&gt; EntityNameHS -&gt; Bool
 (EntityNameHS -&gt; EntityNameHS -&gt; Bool)
 -&gt; (EntityNameHS -&gt; EntityNameHS -&gt; Bool) -&gt; Eq EntityNameHS
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -252,7 +252,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: EntityNameHS -&gt; EntityNameHS -&gt; Bool
 == :: EntityNameHS -&gt; EntityNameHS -&gt; Bool
 $c== :: EntityNameHS -&gt; EntityNameHS -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921458"><span id="local-6989586621679921460"><span id="local-6989586621679921462"><span id="local-6989586621679921464"><span class="annot"><span class="annottext">ReadPrec [EntityNameHS]
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921627"><span id="local-6989586621679921629"><span id="local-6989586621679921631"><span id="local-6989586621679921633"><span class="annot"><span class="annottext">ReadPrec [EntityNameHS]
 ReadPrec EntityNameHS
 Int -&gt; ReadS EntityNameHS
 ReadS [EntityNameHS]
@@ -272,7 +272,7 @@ readList :: ReadS [EntityNameHS]
 $creadList :: ReadS [EntityNameHS]
 readsPrec :: Int -&gt; ReadS EntityNameHS
 $creadsPrec :: Int -&gt; ReadS EntityNameHS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921443"><span id="local-6989586621679921445"><span id="local-6989586621679921447"><span id="local-6989586621679921449"><span id="local-6989586621679921451"><span id="local-6989586621679921453"><span id="local-6989586621679921455"><span class="annot"><span class="annottext">Eq EntityNameHS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921612"><span id="local-6989586621679921614"><span id="local-6989586621679921616"><span id="local-6989586621679921618"><span id="local-6989586621679921620"><span id="local-6989586621679921622"><span id="local-6989586621679921624"><span class="annot"><span class="annottext">Eq EntityNameHS
 Eq EntityNameHS
 -&gt; (EntityNameHS -&gt; EntityNameHS -&gt; Ordering)
 -&gt; (EntityNameHS -&gt; EntityNameHS -&gt; Bool)
@@ -310,7 +310,7 @@ $c&lt; :: EntityNameHS -&gt; EntityNameHS -&gt; Bool
 compare :: EntityNameHS -&gt; EntityNameHS -&gt; Ordering
 $ccompare :: EntityNameHS -&gt; EntityNameHS -&gt; Ordering
 $cp1Ord :: Eq EntityNameHS
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921439"><span id="local-6989586621679921441"><span class="annot"><span class="annottext">EntityNameHS -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921608"><span id="local-6989586621679921610"><span class="annot"><span class="annottext">EntityNameHS -&gt; Q Exp
 EntityNameHS -&gt; Q (TExp EntityNameHS)
 (EntityNameHS -&gt; Q Exp)
 -&gt; (EntityNameHS -&gt; Q (TExp EntityNameHS)) -&gt; Lift EntityNameHS
@@ -327,7 +327,7 @@ $clift :: EntityNameHS -&gt; Q Exp
 </span><span id="line-49"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
 </span><span id="line-50"></span><span class="hs-keyword">newtype</span><span> </span><span id="EntityNameDB"><span class="annot"><a href="Database.Persist.Names.html#EntityNameDB"><span class="hs-identifier hs-var">EntityNameDB</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="EntityNameDB"><span class="annot"><a href="Database.Persist.Names.html#EntityNameDB"><span class="hs-identifier hs-var">EntityNameDB</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unEntityNameDB"><span class="annot"><span class="annottext">EntityNameDB -&gt; Text
 </span><a href="Database.Persist.Names.html#unEntityNameDB"><span class="hs-identifier hs-var hs-var">unEntityNameDB</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-51"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921431"><span id="local-6989586621679921433"><span id="local-6989586621679921435"><span class="annot"><span class="annottext">Int -&gt; EntityNameDB -&gt; ShowS
+</span><span id="line-51"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921600"><span id="local-6989586621679921602"><span id="local-6989586621679921604"><span class="annot"><span class="annottext">Int -&gt; EntityNameDB -&gt; ShowS
 [EntityNameDB] -&gt; ShowS
 EntityNameDB -&gt; String
 (Int -&gt; EntityNameDB -&gt; ShowS)
@@ -342,7 +342,7 @@ show :: EntityNameDB -&gt; String
 $cshow :: EntityNameDB -&gt; String
 showsPrec :: Int -&gt; EntityNameDB -&gt; ShowS
 $cshowsPrec :: Int -&gt; EntityNameDB -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921427"><span id="local-6989586621679921429"><span class="annot"><span class="annottext">EntityNameDB -&gt; EntityNameDB -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921596"><span id="local-6989586621679921598"><span class="annot"><span class="annottext">EntityNameDB -&gt; EntityNameDB -&gt; Bool
 (EntityNameDB -&gt; EntityNameDB -&gt; Bool)
 -&gt; (EntityNameDB -&gt; EntityNameDB -&gt; Bool) -&gt; Eq EntityNameDB
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -350,7 +350,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: EntityNameDB -&gt; EntityNameDB -&gt; Bool
 == :: EntityNameDB -&gt; EntityNameDB -&gt; Bool
 $c== :: EntityNameDB -&gt; EntityNameDB -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921419"><span id="local-6989586621679921421"><span id="local-6989586621679921423"><span id="local-6989586621679921425"><span class="annot"><span class="annottext">ReadPrec [EntityNameDB]
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921588"><span id="local-6989586621679921590"><span id="local-6989586621679921592"><span id="local-6989586621679921594"><span class="annot"><span class="annottext">ReadPrec [EntityNameDB]
 ReadPrec EntityNameDB
 Int -&gt; ReadS EntityNameDB
 ReadS [EntityNameDB]
@@ -370,7 +370,7 @@ readList :: ReadS [EntityNameDB]
 $creadList :: ReadS [EntityNameDB]
 readsPrec :: Int -&gt; ReadS EntityNameDB
 $creadsPrec :: Int -&gt; ReadS EntityNameDB
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921404"><span id="local-6989586621679921406"><span id="local-6989586621679921408"><span id="local-6989586621679921410"><span id="local-6989586621679921412"><span id="local-6989586621679921414"><span id="local-6989586621679921416"><span class="annot"><span class="annottext">Eq EntityNameDB
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921573"><span id="local-6989586621679921575"><span id="local-6989586621679921577"><span id="local-6989586621679921579"><span id="local-6989586621679921581"><span id="local-6989586621679921583"><span id="local-6989586621679921585"><span class="annot"><span class="annottext">Eq EntityNameDB
 Eq EntityNameDB
 -&gt; (EntityNameDB -&gt; EntityNameDB -&gt; Ordering)
 -&gt; (EntityNameDB -&gt; EntityNameDB -&gt; Bool)
@@ -408,7 +408,7 @@ $c&lt; :: EntityNameDB -&gt; EntityNameDB -&gt; Bool
 compare :: EntityNameDB -&gt; EntityNameDB -&gt; Ordering
 $ccompare :: EntityNameDB -&gt; EntityNameDB -&gt; Ordering
 $cp1Ord :: Eq EntityNameDB
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921400"><span id="local-6989586621679921402"><span class="annot"><span class="annottext">EntityNameDB -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921569"><span id="local-6989586621679921571"><span class="annot"><span class="annottext">EntityNameDB -&gt; Q Exp
 EntityNameDB -&gt; Q (TExp EntityNameDB)
 (EntityNameDB -&gt; Q Exp)
 -&gt; (EntityNameDB -&gt; Q (TExp EntityNameDB)) -&gt; Lift EntityNameDB
@@ -420,12 +420,12 @@ $clift :: EntityNameDB -&gt; Q Exp
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Lift</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="Database.Persist.Names.html#DatabaseName"><span class="hs-identifier hs-type">DatabaseName</span></a></span><span> </span><span class="annot"><a href="Database.Persist.Names.html#EntityNameDB"><span class="hs-identifier hs-type">EntityNameDB</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-54"></span><span>    </span><span id="local-6989586621679921398"><span class="annot"><span class="annottext">escapeWith :: (Text -&gt; str) -&gt; EntityNameDB -&gt; str
-</span><a href="#local-6989586621679921398"><span class="hs-identifier hs-var hs-var hs-var hs-var">escapeWith</span></a></span></span><span> </span><span id="local-6989586621679921397"><span class="annot"><span class="annottext">Text -&gt; str
-</span><a href="#local-6989586621679921397"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Persist.Names.html#EntityNameDB"><span class="hs-identifier hs-type">EntityNameDB</span></a></span><span> </span><span id="local-6989586621679921396"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679921396"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; str
-</span><a href="#local-6989586621679921397"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679921396"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><span id="line-54"></span><span>    </span><span id="local-6989586621679921567"><span class="annot"><span class="annottext">escapeWith :: (Text -&gt; str) -&gt; EntityNameDB -&gt; str
+</span><a href="#local-6989586621679921567"><span class="hs-identifier hs-var hs-var hs-var hs-var">escapeWith</span></a></span></span><span> </span><span id="local-6989586621679921566"><span class="annot"><span class="annottext">Text -&gt; str
+</span><a href="#local-6989586621679921566"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Persist.Names.html#EntityNameDB"><span class="hs-identifier hs-type">EntityNameDB</span></a></span><span> </span><span id="local-6989586621679921565"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679921565"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; str
+</span><a href="#local-6989586621679921566"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679921565"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-55"></span><span>
 </span><span id="line-56"></span><span class="hs-comment">-- | A 'ConstraintNameDB' represents the datastore-side name that @persistent@</span><span>
 </span><span id="line-57"></span><span class="hs-comment">-- will use for a constraint.</span><span>
@@ -433,7 +433,7 @@ $clift :: EntityNameDB -&gt; Q Exp
 </span><span id="line-59"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
 </span><span id="line-60"></span><span class="hs-keyword">newtype</span><span> </span><span id="ConstraintNameDB"><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameDB"><span class="hs-identifier hs-var">ConstraintNameDB</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ConstraintNameDB"><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameDB"><span class="hs-identifier hs-var">ConstraintNameDB</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unConstraintNameDB"><span class="annot"><span class="annottext">ConstraintNameDB -&gt; Text
 </span><a href="Database.Persist.Names.html#unConstraintNameDB"><span class="hs-identifier hs-var hs-var">unConstraintNameDB</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-61"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921388"><span id="local-6989586621679921390"><span id="local-6989586621679921392"><span class="annot"><span class="annottext">Int -&gt; ConstraintNameDB -&gt; ShowS
+</span><span id="line-61"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921557"><span id="local-6989586621679921559"><span id="local-6989586621679921561"><span class="annot"><span class="annottext">Int -&gt; ConstraintNameDB -&gt; ShowS
 [ConstraintNameDB] -&gt; ShowS
 ConstraintNameDB -&gt; String
 (Int -&gt; ConstraintNameDB -&gt; ShowS)
@@ -448,7 +448,7 @@ show :: ConstraintNameDB -&gt; String
 $cshow :: ConstraintNameDB -&gt; String
 showsPrec :: Int -&gt; ConstraintNameDB -&gt; ShowS
 $cshowsPrec :: Int -&gt; ConstraintNameDB -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921384"><span id="local-6989586621679921386"><span class="annot"><span class="annottext">ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921553"><span id="local-6989586621679921555"><span class="annot"><span class="annottext">ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool
 (ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool)
 -&gt; (ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool)
 -&gt; Eq ConstraintNameDB
@@ -457,7 +457,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool
 == :: ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool
 $c== :: ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921376"><span id="local-6989586621679921378"><span id="local-6989586621679921380"><span id="local-6989586621679921382"><span class="annot"><span class="annottext">ReadPrec [ConstraintNameDB]
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921545"><span id="local-6989586621679921547"><span id="local-6989586621679921549"><span id="local-6989586621679921551"><span class="annot"><span class="annottext">ReadPrec [ConstraintNameDB]
 ReadPrec ConstraintNameDB
 Int -&gt; ReadS ConstraintNameDB
 ReadS [ConstraintNameDB]
@@ -477,7 +477,7 @@ readList :: ReadS [ConstraintNameDB]
 $creadList :: ReadS [ConstraintNameDB]
 readsPrec :: Int -&gt; ReadS ConstraintNameDB
 $creadsPrec :: Int -&gt; ReadS ConstraintNameDB
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921361"><span id="local-6989586621679921363"><span id="local-6989586621679921365"><span id="local-6989586621679921367"><span id="local-6989586621679921369"><span id="local-6989586621679921371"><span id="local-6989586621679921373"><span class="annot"><span class="annottext">Eq ConstraintNameDB
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921530"><span id="local-6989586621679921532"><span id="local-6989586621679921534"><span id="local-6989586621679921536"><span id="local-6989586621679921538"><span id="local-6989586621679921540"><span id="local-6989586621679921542"><span class="annot"><span class="annottext">Eq ConstraintNameDB
 Eq ConstraintNameDB
 -&gt; (ConstraintNameDB -&gt; ConstraintNameDB -&gt; Ordering)
 -&gt; (ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool)
@@ -515,7 +515,7 @@ $c&lt; :: ConstraintNameDB -&gt; ConstraintNameDB -&gt; Bool
 compare :: ConstraintNameDB -&gt; ConstraintNameDB -&gt; Ordering
 $ccompare :: ConstraintNameDB -&gt; ConstraintNameDB -&gt; Ordering
 $cp1Ord :: Eq ConstraintNameDB
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921357"><span id="local-6989586621679921359"><span class="annot"><span class="annottext">ConstraintNameDB -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921526"><span id="local-6989586621679921528"><span class="annot"><span class="annottext">ConstraintNameDB -&gt; Q Exp
 ConstraintNameDB -&gt; Q (TExp ConstraintNameDB)
 (ConstraintNameDB -&gt; Q Exp)
 -&gt; (ConstraintNameDB -&gt; Q (TExp ConstraintNameDB))
@@ -529,12 +529,12 @@ $clift :: ConstraintNameDB -&gt; Q Exp
 </span><span id="line-62"></span><span>
 </span><span id="line-63"></span><span class="hs-comment">-- | @since 2.12.0.0</span><span>
 </span><span id="line-64"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="Database.Persist.Names.html#DatabaseName"><span class="hs-identifier hs-type">DatabaseName</span></a></span><span> </span><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameDB"><span class="hs-identifier hs-type">ConstraintNameDB</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-65"></span><span>  </span><span id="local-6989586621679921355"><span class="annot"><span class="annottext">escapeWith :: (Text -&gt; str) -&gt; ConstraintNameDB -&gt; str
-</span><a href="#local-6989586621679921355"><span class="hs-identifier hs-var hs-var hs-var hs-var">escapeWith</span></a></span></span><span> </span><span id="local-6989586621679921354"><span class="annot"><span class="annottext">Text -&gt; str
-</span><a href="#local-6989586621679921354"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameDB"><span class="hs-identifier hs-type">ConstraintNameDB</span></a></span><span> </span><span id="local-6989586621679921353"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679921353"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; str
-</span><a href="#local-6989586621679921354"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621679921353"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><span id="line-65"></span><span>  </span><span id="local-6989586621679921524"><span class="annot"><span class="annottext">escapeWith :: (Text -&gt; str) -&gt; ConstraintNameDB -&gt; str
+</span><a href="#local-6989586621679921524"><span class="hs-identifier hs-var hs-var hs-var hs-var">escapeWith</span></a></span></span><span> </span><span id="local-6989586621679921523"><span class="annot"><span class="annottext">Text -&gt; str
+</span><a href="#local-6989586621679921523"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameDB"><span class="hs-identifier hs-type">ConstraintNameDB</span></a></span><span> </span><span id="local-6989586621679921522"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679921522"><span class="hs-identifier hs-var">n</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; str
+</span><a href="#local-6989586621679921523"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621679921522"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-66"></span><span>
 </span><span id="line-67"></span><span class="hs-comment">-- | An 'ConstraintNameHS' represents the Haskell-side name that @persistent@</span><span>
 </span><span id="line-68"></span><span class="hs-comment">-- will use for a constraint.</span><span>
@@ -542,7 +542,7 @@ $clift :: ConstraintNameDB -&gt; Q Exp
 </span><span id="line-70"></span><span class="hs-comment">-- @since 2.12.0.0</span><span>
 </span><span id="line-71"></span><span class="hs-keyword">newtype</span><span> </span><span id="ConstraintNameHS"><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameHS"><span class="hs-identifier hs-var">ConstraintNameHS</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ConstraintNameHS"><span class="annot"><a href="Database.Persist.Names.html#ConstraintNameHS"><span class="hs-identifier hs-var">ConstraintNameHS</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unConstraintNameHS"><span class="annot"><span class="annottext">ConstraintNameHS -&gt; Text
 </span><a href="Database.Persist.Names.html#unConstraintNameHS"><span class="hs-identifier hs-var hs-var">unConstraintNameHS</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-72"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921345"><span id="local-6989586621679921347"><span id="local-6989586621679921349"><span class="annot"><span class="annottext">Int -&gt; ConstraintNameHS -&gt; ShowS
+</span><span id="line-72"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679921514"><span id="local-6989586621679921516"><span id="local-6989586621679921518"><span class="annot"><span class="annottext">Int -&gt; ConstraintNameHS -&gt; ShowS
 [ConstraintNameHS] -&gt; ShowS
 ConstraintNameHS -&gt; String
 (Int -&gt; ConstraintNameHS -&gt; ShowS)
@@ -557,7 +557,7 @@ show :: ConstraintNameHS -&gt; String
 $cshow :: ConstraintNameHS -&gt; String
 showsPrec :: Int -&gt; ConstraintNameHS -&gt; ShowS
 $cshowsPrec :: Int -&gt; ConstraintNameHS -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921341"><span id="local-6989586621679921343"><span class="annot"><span class="annottext">ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921510"><span id="local-6989586621679921512"><span class="annot"><span class="annottext">ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool
 (ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool)
 -&gt; (ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool)
 -&gt; Eq ConstraintNameHS
@@ -566,7 +566,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool
 == :: ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool
 $c== :: ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921333"><span id="local-6989586621679921335"><span id="local-6989586621679921337"><span id="local-6989586621679921339"><span class="annot"><span class="annottext">ReadPrec [ConstraintNameHS]
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921502"><span id="local-6989586621679921504"><span id="local-6989586621679921506"><span id="local-6989586621679921508"><span class="annot"><span class="annottext">ReadPrec [ConstraintNameHS]
 ReadPrec ConstraintNameHS
 Int -&gt; ReadS ConstraintNameHS
 ReadS [ConstraintNameHS]
@@ -586,7 +586,7 @@ readList :: ReadS [ConstraintNameHS]
 $creadList :: ReadS [ConstraintNameHS]
 readsPrec :: Int -&gt; ReadS ConstraintNameHS
 $creadsPrec :: Int -&gt; ReadS ConstraintNameHS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921318"><span id="local-6989586621679921320"><span id="local-6989586621679921322"><span id="local-6989586621679921324"><span id="local-6989586621679921326"><span id="local-6989586621679921328"><span id="local-6989586621679921330"><span class="annot"><span class="annottext">Eq ConstraintNameHS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921487"><span id="local-6989586621679921489"><span id="local-6989586621679921491"><span id="local-6989586621679921493"><span id="local-6989586621679921495"><span id="local-6989586621679921497"><span id="local-6989586621679921499"><span class="annot"><span class="annottext">Eq ConstraintNameHS
 Eq ConstraintNameHS
 -&gt; (ConstraintNameHS -&gt; ConstraintNameHS -&gt; Ordering)
 -&gt; (ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool)
@@ -624,7 +624,7 @@ $c&lt; :: ConstraintNameHS -&gt; ConstraintNameHS -&gt; Bool
 compare :: ConstraintNameHS -&gt; ConstraintNameHS -&gt; Ordering
 $ccompare :: ConstraintNameHS -&gt; ConstraintNameHS -&gt; Ordering
 $cp1Ord :: Eq ConstraintNameHS
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921314"><span id="local-6989586621679921316"><span class="annot"><span class="annottext">ConstraintNameHS -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679921483"><span id="local-6989586621679921485"><span class="annot"><span class="annottext">ConstraintNameHS -&gt; Q Exp
 ConstraintNameHS -&gt; Q (TExp ConstraintNameHS)
 (ConstraintNameHS -&gt; Q Exp)
 -&gt; (ConstraintNameHS -&gt; Q (TExp ConstraintNameHS))

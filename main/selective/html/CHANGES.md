@@ -1,5 +1,15 @@
 # Change log
 
+## 0.6
+
+* Start supporting GHC 9.4. See #66.
+* Add `ComposeTraversable`. See #65.
+* Make the `Applicative` instance of `ComposeEither` more interesting by relying
+  on the `Selective f` constraint. See #64.
+* Make the `Lift` instance lazier. See #63.
+* Stop supporting GHC <= 8.6. See #62.
+* Add `Control.Selective.Trans.Except` transformer. See #39.
+
 ## 0.5
 
 * Allow `transformers-0.6`, see #47.

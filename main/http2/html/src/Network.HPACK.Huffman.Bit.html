@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_KMybhROV5eK9j7LAl9tIpe"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Network.HPACK.Huffman.Bit</span><span> </span><span class="hs-special">(</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_AEebOV4DdrCAMkLyZXHeBN"></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Network.HPACK.Huffman.Bit</span><span> </span><span class="hs-special">(</span><span>
 </span><span id="line-2"></span><span>  </span><span class="annot"><span class="hs-comment">-- * Bits</span></span><span>
 </span><span id="line-3"></span><span>    </span><span class="annot"><a href="Network.HPACK.Huffman.Bit.html#B"><span class="hs-identifier">B</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span>
 </span><span id="line-4"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Network.HPACK.Huffman.Bit.html#Bits"><span class="hs-identifier">Bits</span></a></span><span>
@@ -10,14 +10,14 @@
 </span><span id="line-10"></span><span class="hs-comment">-- | Data type for Bit.</span><span>
 </span><span id="line-11"></span><span class="hs-keyword">data</span><span> </span><span id="B"><span class="annot"><a href="Network.HPACK.Huffman.Bit.html#B"><span class="hs-identifier hs-var">B</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="F"><span class="annot"><a href="Network.HPACK.Huffman.Bit.html#F"><span class="hs-identifier hs-var">F</span></a></span></span><span> </span><span class="hs-comment">-- ^ Zero</span><span>
 </span><span id="line-12"></span><span>       </span><span class="hs-glyph">|</span><span> </span><span id="T"><span class="annot"><a href="Network.HPACK.Huffman.Bit.html#T"><span class="hs-identifier hs-var">T</span></a></span></span><span> </span><span class="hs-comment">-- ^ One</span><span>
-</span><span id="line-13"></span><span>       </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679087570"><span id="local-6989586621679087572"><span class="annot"><span class="annottext">B -&gt; B -&gt; Bool
+</span><span id="line-13"></span><span>       </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679087574"><span id="local-6989586621679087576"><span class="annot"><span class="annottext">B -&gt; B -&gt; Bool
 (B -&gt; B -&gt; Bool) -&gt; (B -&gt; B -&gt; Bool) -&gt; Eq B
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: B -&gt; B -&gt; Bool
 $c/= :: B -&gt; B -&gt; Bool
 == :: B -&gt; B -&gt; Bool
 $c== :: B -&gt; B -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span id="local-6989586621679087554"><span id="local-6989586621679087556"><span id="local-6989586621679087558"><span id="local-6989586621679087560"><span id="local-6989586621679087562"><span id="local-6989586621679087564"><span id="local-6989586621679087566"><span class="annot"><span class="annottext">Eq B
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span id="local-6989586621679087558"><span id="local-6989586621679087560"><span id="local-6989586621679087562"><span id="local-6989586621679087564"><span id="local-6989586621679087566"><span id="local-6989586621679087568"><span id="local-6989586621679087570"><span class="annot"><span class="annottext">Eq B
 Eq B
 -&gt; (B -&gt; B -&gt; Ordering)
 -&gt; (B -&gt; B -&gt; Bool)
@@ -55,7 +55,7 @@ $c&lt; :: B -&gt; B -&gt; Bool
 compare :: B -&gt; B -&gt; Ordering
 $ccompare :: B -&gt; B -&gt; Ordering
 $cp1Ord :: Eq B
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span id="local-6989586621679087547"><span id="local-6989586621679087549"><span id="local-6989586621679087551"><span class="annot"><span class="annottext">Int -&gt; B -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span id="local-6989586621679087551"><span id="local-6989586621679087553"><span id="local-6989586621679087555"><span class="annot"><span class="annottext">Int -&gt; B -&gt; ShowS
 [B] -&gt; ShowS
 B -&gt; String
 (Int -&gt; B -&gt; ShowS) -&gt; (B -&gt; String) -&gt; ([B] -&gt; ShowS) -&gt; Show B
@@ -93,16 +93,16 @@ $cshowsPrec :: Int -&gt; B -&gt; ShowS
 forall (t :: * -&gt; *) b a.
 Foldable t =&gt;
 (b -&gt; a -&gt; b) -&gt; b -&gt; t a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">foldl'</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679087543"><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679087543"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621679087542"><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679087542"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679087543"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Word8
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">foldl'</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679087547"><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679087547"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621679087546"><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679087546"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679087547"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Word8
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><span class="hs-number">2</span></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Word8
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679087542"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679087546"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word8
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">([Word8] -&gt; Word8) -&gt; ([B] -&gt; [Word8]) -&gt; [B] -&gt; Word8
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(B -&gt; Word8) -&gt; [B] -&gt; [Word8]

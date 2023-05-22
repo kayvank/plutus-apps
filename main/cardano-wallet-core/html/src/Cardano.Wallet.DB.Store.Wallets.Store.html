@@ -76,23 +76,23 @@ SqlPersistT
   IO
   (Either
      SomeException (Base (DeltaMap WalletId DeltaTxMetaHistory)))
-</span><a href="#local-6989586621682458397"><span class="hs-identifier hs-var">load</span></a></span><span>
+</span><a href="#local-6989586621682458681"><span class="hs-identifier hs-var">load</span></a></span><span>
 </span><span id="line-67"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">writeS :: Base (DeltaMap WalletId DeltaTxMetaHistory) -&gt; SqlPersistT IO ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">writeS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory -&gt; SqlPersistT IO ()
 Base (DeltaMap WalletId DeltaTxMetaHistory) -&gt; SqlPersistT IO ()
-</span><a href="#local-6989586621682458395"><span class="hs-identifier hs-var">write</span></a></span><span>
+</span><a href="#local-6989586621682458679"><span class="hs-identifier hs-var">write</span></a></span><span>
 </span><span id="line-68"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">updateS :: Base (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">updateS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Base (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 forall p.
 p -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
-</span><a href="#local-6989586621682458393"><span class="hs-identifier hs-var">update</span></a></span><span>
+</span><a href="#local-6989586621682458677"><span class="hs-identifier hs-var">update</span></a></span><span>
 </span><span id="line-69"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-70"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-71"></span><span>    </span><span id="local-6989586621682458395"><span class="annot"><span class="annottext">write :: Map WalletId TxMetaHistory -&gt; SqlPersistT IO ()
-</span><a href="#local-6989586621682458395"><span class="hs-identifier hs-var hs-var">write</span></a></span></span><span> </span><span id="local-6989586621682458392"><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
-</span><a href="#local-6989586621682458392"><span class="hs-identifier hs-var">reset</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(WalletId, TxMetaHistory)]
+</span><span id="line-71"></span><span>    </span><span id="local-6989586621682458679"><span class="annot"><span class="annottext">write :: Map WalletId TxMetaHistory -&gt; SqlPersistT IO ()
+</span><a href="#local-6989586621682458679"><span class="hs-identifier hs-var hs-var">write</span></a></span></span><span> </span><span id="local-6989586621682458676"><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
+</span><a href="#local-6989586621682458676"><span class="hs-identifier hs-var">reset</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(WalletId, TxMetaHistory)]
 -&gt; ((WalletId, TxMetaHistory) -&gt; SqlPersistT IO ())
 -&gt; SqlPersistT IO ()
 forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
@@ -101,37 +101,37 @@ t a -&gt; (a -&gt; m b) -&gt; m ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">forM_</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory -&gt; [(WalletId, TxMetaHistory)]
 forall k a. Map k a -&gt; [(k, a)]
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.assocs</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
-</span><a href="#local-6989586621682458392"><span class="hs-identifier hs-var">reset</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(((WalletId, TxMetaHistory) -&gt; SqlPersistT IO ())
+</span><a href="#local-6989586621682458676"><span class="hs-identifier hs-var">reset</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(((WalletId, TxMetaHistory) -&gt; SqlPersistT IO ())
  -&gt; SqlPersistT IO ())
 -&gt; ((WalletId, TxMetaHistory) -&gt; SqlPersistT IO ())
 -&gt; SqlPersistT IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682458390"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458390"><span class="hs-identifier hs-var">wid</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621682458389"><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682458389"><span class="hs-identifier hs-var">metas</span></a></span></span><span class="hs-special">)</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682458674"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458674"><span class="hs-identifier hs-var">wid</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621682458673"><span class="annot"><span class="annottext">TxMetaHistory
+</span><a href="#local-6989586621682458673"><span class="hs-identifier hs-var">metas</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-72"></span><span>        </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxMetaHistory
 -&gt; Base DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">writeS</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">WalletId -&gt; Store (SqlPersistT IO) DeltaTxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#mkStoreMetaTransactions"><span class="hs-identifier hs-var">mkStoreMetaTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458390"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458674"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
 TxMetaHistory
-</span><a href="#local-6989586621682458389"><span class="hs-identifier hs-var">metas</span></a></span><span>
-</span><span id="line-73"></span><span>    </span><span id="local-6989586621682458393"><span class="annot"><span class="annottext">update :: p -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
-</span><a href="#local-6989586621682458393"><span class="hs-identifier hs-var hs-var">update</span></a></span></span><span> </span><span class="annot"><span class="annottext">p
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Insert</span></a></span><span> </span><span id="local-6989586621682458387"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458387"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458386"><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
-</span><a href="#local-6989586621682458386"><span class="hs-identifier hs-var">metas</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682458673"><span class="hs-identifier hs-var">metas</span></a></span><span>
+</span><span id="line-73"></span><span>    </span><span id="local-6989586621682458677"><span class="annot"><span class="annottext">update :: p -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
+</span><a href="#local-6989586621682458677"><span class="hs-identifier hs-var hs-var">update</span></a></span></span><span> </span><span class="annot"><span class="annottext">p
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Insert</span></a></span><span> </span><span id="local-6989586621682458671"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458671"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458670"><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458670"><span class="hs-identifier hs-var">metas</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-74"></span><span>        </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxMetaHistory
 -&gt; Base DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">writeS</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">WalletId -&gt; Store (SqlPersistT IO) DeltaTxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#mkStoreMetaTransactions"><span class="hs-identifier hs-var">mkStoreMetaTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458387"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
-</span><a href="#local-6989586621682458386"><span class="hs-identifier hs-var">metas</span></a></span><span>
-</span><span id="line-75"></span><span>    </span><span class="annot"><a href="#local-6989586621682458393"><span class="hs-identifier hs-var">update</span></a></span><span> </span><span class="annot"><span class="annottext">p
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Delete</span></a></span><span> </span><span id="local-6989586621682458384"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458384"><span class="hs-identifier hs-var">wid</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="#local-6989586621682458671"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458670"><span class="hs-identifier hs-var">metas</span></a></span><span>
+</span><span id="line-75"></span><span>    </span><span class="annot"><a href="#local-6989586621682458677"><span class="hs-identifier hs-var">update</span></a></span><span> </span><span class="annot"><span class="annottext">p
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Delete</span></a></span><span> </span><span id="local-6989586621682458668"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458668"><span class="hs-identifier hs-var">wid</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-76"></span><span>        </span><span class="annot"><span class="annottext">[Filter TxMeta] -&gt; SqlPersistT IO ()
 forall backend (m :: * -&gt; *) record.
 (PersistQueryWrite backend, MonadIO m,
@@ -144,11 +144,11 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458384"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="hs-special">]</span><span>
-</span><span id="line-77"></span><span>    </span><span class="annot"><a href="#local-6989586621682458393"><span class="hs-identifier hs-var">update</span></a></span><span> </span><span class="annot"><span class="annottext">p
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Adjust</span></a></span><span> </span><span id="local-6989586621682458382"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458382"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458381"><span class="annot"><span class="annottext">DeltaTxMetaHistory
-</span><a href="#local-6989586621682458381"><span class="hs-identifier hs-var">da</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682458668"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="hs-special">]</span><span>
+</span><span id="line-77"></span><span>    </span><span class="annot"><a href="#local-6989586621682458677"><span class="hs-identifier hs-var">update</span></a></span><span> </span><span class="annot"><span class="annottext">p
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Adjust</span></a></span><span> </span><span id="local-6989586621682458666"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458666"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458665"><span class="annot"><span class="annottext">DeltaTxMetaHistory
+</span><a href="#local-6989586621682458665"><span class="hs-identifier hs-var">da</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-78"></span><span>        </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxMetaHistory
 -&gt; Base DeltaTxMetaHistory
 -&gt; DeltaTxMetaHistory
@@ -156,17 +156,17 @@ EntityField v typ -&gt; typ -&gt; Filter v
 forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">updateS</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">WalletId -&gt; Store (SqlPersistT IO) DeltaTxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#mkStoreMetaTransactions"><span class="hs-identifier hs-var">mkStoreMetaTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458382"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458666"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
 forall a. HasCallStack =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">undefined</span></a></span><span> </span><span class="annot"><span class="annottext">DeltaTxMetaHistory
-</span><a href="#local-6989586621682458381"><span class="hs-identifier hs-var">da</span></a></span><span>
-</span><span id="line-79"></span><span>    </span><span class="annot"><a href="#local-6989586621682458397"><span class="hs-identifier hs-type">load</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span>
+</span><a href="#local-6989586621682458665"><span class="hs-identifier hs-var">da</span></a></span><span>
+</span><span id="line-79"></span><span>    </span><span class="annot"><a href="#local-6989586621682458681"><span class="hs-identifier hs-type">load</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span>
 </span><span id="line-80"></span><span>            </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span>
 </span><span id="line-81"></span><span>            </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">SomeException</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map.Map</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#WalletId"><span class="hs-identifier hs-type">W.WalletId</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-82"></span><span>    </span><span id="local-6989586621682458397"><span class="annot"><span class="annottext">load :: SqlPersistT IO (Either SomeException (Map WalletId TxMetaHistory))
-</span><a href="#local-6989586621682458397"><span class="hs-identifier hs-var hs-var">load</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-83"></span><span>        </span><span id="local-6989586621682458379"><span class="annot"><span class="annottext">[WalletId]
-</span><a href="#local-6989586621682458379"><span class="hs-identifier hs-var">wids</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[WalletId] -&gt; [WalletId]
+</span><span id="line-82"></span><span>    </span><span id="local-6989586621682458681"><span class="annot"><span class="annottext">load :: SqlPersistT IO (Either SomeException (Map WalletId TxMetaHistory))
+</span><a href="#local-6989586621682458681"><span class="hs-identifier hs-var hs-var">load</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-83"></span><span>        </span><span id="local-6989586621682458663"><span class="annot"><span class="annottext">[WalletId]
+</span><a href="#local-6989586621682458663"><span class="hs-identifier hs-var">wids</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[WalletId] -&gt; [WalletId]
 forall a. Eq a =&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">nub</span></a></span><span> </span><span class="annot"><span class="annottext">([WalletId] -&gt; [WalletId])
 -&gt; ([Entity TxMeta] -&gt; [WalletId]) -&gt; [Entity TxMeta] -&gt; [WalletId]
@@ -183,7 +183,7 @@ forall a s. ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; s -&gt; a
    -&gt; TxMeta -&gt; Const WalletId TxMeta)
 (WalletId -&gt; Const WalletId WalletId)
 -&gt; TxMeta -&gt; Const WalletId TxMeta
-</span><a href="#local-6989586621682458377"><span class="hs-var">#txMetaWalletId</span></a></span><span> </span><span class="annot"><span class="annottext">(TxMeta -&gt; WalletId)
+</span><a href="#local-6989586621682458661"><span class="hs-var">#txMetaWalletId</span></a></span><span> </span><span class="annot"><span class="annottext">(TxMeta -&gt; WalletId)
 -&gt; (Entity TxMeta -&gt; TxMeta) -&gt; Entity TxMeta -&gt; WalletId
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Entity TxMeta -&gt; TxMeta
@@ -215,8 +215,8 @@ forall e (m :: * -&gt; *) a. ExceptT e m a -&gt; m (Either e a)
      IO (Either SomeException (Map WalletId TxMetaHistory))
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-86"></span><span>            </span><span id="local-6989586621682458375"><span class="annot"><span class="annottext">[TxMetaHistory]
-</span><a href="#local-6989586621682458375"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[WalletId]
+</span><span id="line-86"></span><span>            </span><span id="local-6989586621682458659"><span class="annot"><span class="annottext">[TxMetaHistory]
+</span><a href="#local-6989586621682458659"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[WalletId]
 -&gt; (WalletId
     -&gt; ExceptT SomeException (SqlPersistT IO) TxMetaHistory)
 -&gt; ExceptT SomeException (SqlPersistT IO) [TxMetaHistory]
@@ -224,7 +224,7 @@ forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
 (Traversable t, Monad m) =&gt;
 t a -&gt; (a -&gt; m b) -&gt; m (t b)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">forM</span></a></span><span> </span><span class="annot"><span class="annottext">[WalletId]
-</span><a href="#local-6989586621682458379"><span class="hs-identifier hs-var">wids</span></a></span><span> </span><span class="annot"><span class="annottext">((WalletId -&gt; ExceptT SomeException (SqlPersistT IO) TxMetaHistory)
+</span><a href="#local-6989586621682458663"><span class="hs-identifier hs-var">wids</span></a></span><span> </span><span class="annot"><span class="annottext">((WalletId -&gt; ExceptT SomeException (SqlPersistT IO) TxMetaHistory)
  -&gt; ExceptT SomeException (SqlPersistT IO) [TxMetaHistory])
 -&gt; (WalletId
     -&gt; ExceptT SomeException (SqlPersistT IO) TxMetaHistory)
@@ -271,8 +271,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">[WalletId] -&gt; [TxMetaHistory] -&gt; [(WalletId, TxMetaHistory)]
 forall a b. [a] -&gt; [b] -&gt; [(a, b)]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">zip</span></a></span><span> </span><span class="annot"><span class="annottext">[WalletId]
-</span><a href="#local-6989586621682458379"><span class="hs-identifier hs-var">wids</span></a></span><span> </span><span class="annot"><span class="annottext">[TxMetaHistory]
-</span><a href="#local-6989586621682458375"><span class="hs-identifier hs-var">xs</span></a></span><span>
+</span><a href="#local-6989586621682458663"><span class="hs-identifier hs-var">wids</span></a></span><span> </span><span class="annot"><span class="annottext">[TxMetaHistory]
+</span><a href="#local-6989586621682458659"><span class="hs-identifier hs-var">xs</span></a></span><span>
 </span><span id="line-88"></span><span>
 </span><span id="line-89"></span><span class="hs-comment">-- | Store for 'DeltaTxWalletsHistory'.</span><span>
 </span><span id="line-90"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Store.html#mkStoreTxWalletsHistory"><span class="hs-identifier hs-type">mkStoreTxWalletsHistory</span></a></span><span>
@@ -327,34 +327,34 @@ Store m da -&gt; m (Either SomeException (Base da))
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">loadS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Store.html#mkStoreWalletsMeta"><span class="hs-identifier hs-var">mkStoreWalletsMeta</span></a></span><span>
 </span><span id="line-96"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">writeS :: Base DeltaTxWalletsHistory -&gt; SqlPersistT IO ()
-</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">writeS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682458373"><span class="annot"><a href="#local-6989586621682458373"><span class="hs-identifier hs-var">txHistory</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621682458372"><span class="annot"><a href="#local-6989586621682458372"><span class="hs-identifier hs-var">txMetaHistory</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">writeS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682458657"><span class="annot"><a href="#local-6989586621682458657"><span class="hs-identifier hs-var">txHistory</span></a></span></span><span class="hs-special">,</span><span id="local-6989586621682458656"><span class="annot"><a href="#local-6989586621682458656"><span class="hs-identifier hs-var">txMetaHistory</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-97"></span><span>            </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxHistory
 -&gt; Base DeltaTxHistory -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">writeS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxHistory
 </span><a href="Cardano.Wallet.DB.Store.Transactions.Store.html#mkStoreTransactions"><span class="hs-identifier hs-var">mkStoreTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">Base DeltaTxHistory
 TxHistory
-</span><a href="#local-6989586621682458373"><span class="hs-identifier hs-var">txHistory</span></a></span><span>
+</span><a href="#local-6989586621682458657"><span class="hs-identifier hs-var">txHistory</span></a></span><span>
 </span><span id="line-98"></span><span>            </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; Base (DeltaMap WalletId DeltaTxMetaHistory) -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">writeS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Store.html#mkStoreWalletsMeta"><span class="hs-identifier hs-var">mkStoreWalletsMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
 Base (DeltaMap WalletId DeltaTxMetaHistory)
-</span><a href="#local-6989586621682458372"><span class="hs-identifier hs-var">txMetaHistory</span></a></span><span>
+</span><a href="#local-6989586621682458656"><span class="hs-identifier hs-var">txMetaHistory</span></a></span><span>
 </span><span id="line-99"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">updateS :: Base DeltaTxWalletsHistory
 -&gt; DeltaTxWalletsHistory -&gt; SqlPersistT IO ()
-</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">updateS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682458371"><span class="annot"><a href="#local-6989586621682458371"><span class="hs-identifier hs-var">txh</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Transactions.Model.html#TxHistoryF"><span class="hs-identifier hs-type">TxHistoryF</span></a></span><span> </span><span id="local-6989586621682458369"><span class="annot"><a href="#local-6989586621682458369"><span class="hs-identifier hs-var">mtxh</span></a></span></span><span class="hs-special">)</span><span class="hs-special">,</span><span id="local-6989586621682458368"><span class="annot"><a href="#local-6989586621682458368"><span class="hs-identifier hs-var">mtxmh</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
-</span><span id="line-100"></span><span>            </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#ExpandTxWalletsHistory"><span class="hs-identifier hs-type">ExpandTxWalletsHistory</span></a></span><span> </span><span id="local-6989586621682458366"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458366"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458365"><span class="annot"><span class="annottext">[(Tx, TxMeta)]
-</span><a href="#local-6989586621682458365"><span class="hs-identifier hs-var">cs</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">updateS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682458655"><span class="annot"><a href="#local-6989586621682458655"><span class="hs-identifier hs-var">txh</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Transactions.Model.html#TxHistoryF"><span class="hs-identifier hs-type">TxHistoryF</span></a></span><span> </span><span id="local-6989586621682458653"><span class="annot"><a href="#local-6989586621682458653"><span class="hs-identifier hs-var">mtxh</span></a></span></span><span class="hs-special">)</span><span class="hs-special">,</span><span id="local-6989586621682458652"><span class="annot"><a href="#local-6989586621682458652"><span class="hs-identifier hs-var">mtxmh</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
+</span><span id="line-100"></span><span>            </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#ExpandTxWalletsHistory"><span class="hs-identifier hs-type">ExpandTxWalletsHistory</span></a></span><span> </span><span id="local-6989586621682458650"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458650"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458649"><span class="annot"><span class="annottext">[(Tx, TxMeta)]
+</span><a href="#local-6989586621682458649"><span class="hs-identifier hs-var">cs</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-101"></span><span>                </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxHistory
 -&gt; Base DeltaTxHistory -&gt; DeltaTxHistory -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">updateS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxHistory
 </span><a href="Cardano.Wallet.DB.Store.Transactions.Store.html#mkStoreTransactions"><span class="hs-identifier hs-var">mkStoreTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">Base DeltaTxHistory
 TxHistory
-</span><a href="#local-6989586621682458371"><span class="hs-identifier hs-var">txh</span></a></span><span>
+</span><a href="#local-6989586621682458655"><span class="hs-identifier hs-var">txh</span></a></span><span>
 </span><span id="line-102"></span><span>                    </span><span class="annot"><span class="annottext">(DeltaTxHistory -&gt; SqlPersistT IO ())
 -&gt; DeltaTxHistory -&gt; SqlPersistT IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -371,7 +371,7 @@ forall a b. (a, b) -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fst</span></a></span><span> </span><span class="annot"><span class="annottext">((Tx, TxMeta) -&gt; Tx) -&gt; [(Tx, TxMeta)] -&gt; [Tx]
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
-</span><a href="#local-6989586621682458365"><span class="hs-identifier hs-var">cs</span></a></span><span>
+</span><a href="#local-6989586621682458649"><span class="hs-identifier hs-var">cs</span></a></span><span>
 </span><span id="line-105"></span><span>                </span><span class="hs-comment">-- see also Store.Wallets.Model.garbageCollectEmptyWallets</span><span>
 </span><span id="line-106"></span><span>                </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; Base (DeltaMap WalletId DeltaTxMetaHistory)
@@ -381,35 +381,35 @@ forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">updateS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Store.html#mkStoreWalletsMeta"><span class="hs-identifier hs-var">mkStoreWalletsMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
 Base (DeltaMap WalletId DeltaTxMetaHistory)
-</span><a href="#local-6989586621682458368"><span class="hs-identifier hs-var">mtxmh</span></a></span><span>
+</span><a href="#local-6989586621682458652"><span class="hs-identifier hs-var">mtxmh</span></a></span><span>
 </span><span id="line-107"></span><span>                    </span><span class="annot"><span class="annottext">(DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ())
 -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; Map WalletId TxMetaHistory -&gt; Maybe TxMetaHistory
 forall k a. Ord k =&gt; k -&gt; Map k a -&gt; Maybe a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.lookup</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458366"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
-</span><a href="#local-6989586621682458368"><span class="hs-identifier hs-var">mtxmh</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621682458650"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
+</span><a href="#local-6989586621682458652"><span class="hs-identifier hs-var">mtxmh</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-108"></span><span>                        </span><span class="annot"><span class="annottext">Maybe TxMetaHistory
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-109"></span><span>                            </span><span class="annot"><span class="annottext">WalletId
 -&gt; Base DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall key da. key -&gt; Base da -&gt; DeltaMap key da
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Insert</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458366"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">(Base DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory)
+</span><a href="#local-6989586621682458650"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">(Base DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; Base DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; [(Tx, TxMeta)] -&gt; TxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaHistory"><span class="hs-identifier hs-var">mkTxMetaHistory</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458366"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
-</span><a href="#local-6989586621682458365"><span class="hs-identifier hs-var">cs</span></a></span><span>
+</span><a href="#local-6989586621682458650"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
+</span><a href="#local-6989586621682458649"><span class="hs-identifier hs-var">cs</span></a></span><span>
 </span><span id="line-110"></span><span>                        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-111"></span><span>                            </span><span class="annot"><span class="annottext">WalletId
 -&gt; DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall key da. key -&gt; da -&gt; DeltaMap key da
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Adjust</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458366"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682458650"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-112"></span><span>                            </span><span class="annot"><span class="annottext">(DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -420,11 +420,11 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; [(Tx, TxMeta)] -&gt; TxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaHistory"><span class="hs-identifier hs-var">mkTxMetaHistory</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458366"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
-</span><a href="#local-6989586621682458365"><span class="hs-identifier hs-var">cs</span></a></span><span>
-</span><span id="line-114"></span><span>            </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#ChangeTxMetaWalletsHistory"><span class="hs-identifier hs-type">ChangeTxMetaWalletsHistory</span></a></span><span> </span><span id="local-6989586621682458360"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458360"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458359"><span class="annot"><span class="annottext">ManipulateTxMetaHistory
-</span><a href="#local-6989586621682458359"><span class="hs-identifier hs-var">change</span></a></span></span><span>
+</span><a href="#local-6989586621682458650"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
+</span><a href="#local-6989586621682458649"><span class="hs-identifier hs-var">cs</span></a></span><span>
+</span><span id="line-114"></span><span>            </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#ChangeTxMetaWalletsHistory"><span class="hs-identifier hs-type">ChangeTxMetaWalletsHistory</span></a></span><span> </span><span id="local-6989586621682458644"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458644"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458643"><span class="annot"><span class="annottext">ManipulateTxMetaHistory
+</span><a href="#local-6989586621682458643"><span class="hs-identifier hs-var">change</span></a></span></span><span>
 </span><span id="line-115"></span><span>                </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; Base (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; DeltaMap WalletId DeltaTxMetaHistory
@@ -433,7 +433,7 @@ forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">updateS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Store.html#mkStoreWalletsMeta"><span class="hs-identifier hs-var">mkStoreWalletsMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
 Base (DeltaMap WalletId DeltaTxMetaHistory)
-</span><a href="#local-6989586621682458368"><span class="hs-identifier hs-var">mtxmh</span></a></span><span>
+</span><a href="#local-6989586621682458652"><span class="hs-identifier hs-var">mtxmh</span></a></span><span>
 </span><span id="line-116"></span><span>                </span><span class="annot"><span class="annottext">(DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ())
 -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -441,13 +441,13 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall key da. key -&gt; da -&gt; DeltaMap key da
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Adjust</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458360"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682458644"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-117"></span><span>                </span><span class="annot"><span class="annottext">(DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; DeltaTxMetaHistory -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ManipulateTxMetaHistory -&gt; DeltaTxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-var">Manipulate</span></a></span><span> </span><span class="annot"><span class="annottext">ManipulateTxMetaHistory
-</span><a href="#local-6989586621682458359"><span class="hs-identifier hs-var">change</span></a></span><span>
+</span><a href="#local-6989586621682458643"><span class="hs-identifier hs-var">change</span></a></span><span>
 </span><span id="line-118"></span><span>            </span><span class="annot"><span class="annottext">DeltaTxWalletsHistory
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#GarbageCollectTxWalletsHistory"><span class="hs-identifier hs-var">GarbageCollectTxWalletsHistory</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(TxId -&gt; SqlPersistT IO ()) -&gt; [TxId] -&gt; SqlPersistT IO ()
 forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
@@ -460,7 +460,7 @@ forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">updateS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) DeltaTxHistory
 </span><a href="Cardano.Wallet.DB.Store.Transactions.Store.html#mkStoreTransactions"><span class="hs-identifier hs-var">mkStoreTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">Base DeltaTxHistory
 TxHistory
-</span><a href="#local-6989586621682458371"><span class="hs-identifier hs-var">txh</span></a></span><span> </span><span class="annot"><span class="annottext">(DeltaTxHistory -&gt; SqlPersistT IO ())
+</span><a href="#local-6989586621682458655"><span class="hs-identifier hs-var">txh</span></a></span><span> </span><span class="annot"><span class="annottext">(DeltaTxHistory -&gt; SqlPersistT IO ())
 -&gt; (TxId -&gt; DeltaTxHistory) -&gt; TxId -&gt; SqlPersistT IO ()
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">TxId -&gt; DeltaTxHistory
@@ -477,15 +477,15 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; Set TxId -&gt; Map TxId (TxRelationF 'Without)
 forall k a. Ord k =&gt; Map k a -&gt; Set k -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.withoutKeys</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId (TxRelationF 'Without)
-</span><a href="#local-6989586621682458369"><span class="hs-identifier hs-var">mtxh</span></a></span><span>
+</span><a href="#local-6989586621682458653"><span class="hs-identifier hs-var">mtxh</span></a></span><span>
 </span><span id="line-122"></span><span>                </span><span class="annot"><span class="annottext">(Set TxId -&gt; Map TxId (TxRelationF 'Without))
 -&gt; Set TxId -&gt; Map TxId (TxRelationF 'Without)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory -&gt; Set TxId
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#walletsLinkedTransactions"><span class="hs-identifier hs-var">walletsLinkedTransactions</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
-</span><a href="#local-6989586621682458368"><span class="hs-identifier hs-var">mtxmh</span></a></span><span>
-</span><span id="line-123"></span><span>            </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#RemoveWallet"><span class="hs-identifier hs-type">RemoveWallet</span></a></span><span> </span><span id="local-6989586621682458352"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458352"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
+</span><a href="#local-6989586621682458652"><span class="hs-identifier hs-var">mtxmh</span></a></span><span>
+</span><span id="line-123"></span><span>            </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Wallets.Model.html#RemoveWallet"><span class="hs-identifier hs-type">RemoveWallet</span></a></span><span> </span><span id="local-6989586621682458636"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458636"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; Base (DeltaMap WalletId DeltaTxMetaHistory)
 -&gt; DeltaMap WalletId DeltaTxMetaHistory
 -&gt; SqlPersistT IO ()
@@ -493,13 +493,13 @@ forall (m :: * -&gt; *) da. Store m da -&gt; Base da -&gt; da -&gt; m ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var">updateS</span></a></span><span> </span><span class="annot"><span class="annottext">Store (SqlPersistT IO) (DeltaMap WalletId DeltaTxMetaHistory)
 </span><a href="Cardano.Wallet.DB.Store.Wallets.Store.html#mkStoreWalletsMeta"><span class="hs-identifier hs-var">mkStoreWalletsMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Map WalletId TxMetaHistory
 Base (DeltaMap WalletId DeltaTxMetaHistory)
-</span><a href="#local-6989586621682458368"><span class="hs-identifier hs-var">mtxmh</span></a></span><span> </span><span class="annot"><span class="annottext">(DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ())
+</span><a href="#local-6989586621682458652"><span class="hs-identifier hs-var">mtxmh</span></a></span><span> </span><span class="annot"><span class="annottext">(DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ())
 -&gt; DeltaMap WalletId DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; DeltaMap WalletId DeltaTxMetaHistory
 forall key da. key -&gt; DeltaMap key da
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Delete</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458352"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682458636"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-124"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-125"></span><span>
 </span><span id="line-126"></span></pre></body></html>

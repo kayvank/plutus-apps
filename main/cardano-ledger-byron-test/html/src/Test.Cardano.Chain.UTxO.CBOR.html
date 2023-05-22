@@ -86,11 +86,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621679484197"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679484430"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/utxo/Tx&quot;</span></span><span>
 </span><span id="line-84"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-85"></span><span>    </span><span id="local-6989586621679484197"><span class="annot"><span class="annottext">tx :: Tx
-</span><a href="#local-6989586621679484197"><span class="hs-identifier hs-var hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NonEmpty TxIn -&gt; NonEmpty TxOut -&gt; TxAttributes -&gt; Tx
+</span><span id="line-85"></span><span>    </span><span id="local-6989586621679484430"><span class="annot"><span class="annottext">tx :: Tx
+</span><a href="#local-6989586621679484430"><span class="hs-identifier hs-var hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NonEmpty TxIn -&gt; NonEmpty TxOut -&gt; TxAttributes -&gt; Tx
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">UnsafeTx</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty TxIn
 </span><a href="Test.Cardano.Chain.UTxO.Example.html#exampleTxInList"><span class="hs-identifier hs-var">exampleTxInList</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty TxOut
 </span><a href="Test.Cardano.Chain.UTxO.Example.html#exampleTxOutList"><span class="hs-identifier hs-var">exampleTxOutList</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">() -&gt; TxAttributes
@@ -123,11 +123,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">TxAttributes
-</span><a href="#local-6989586621679484193"><span class="hs-identifier hs-var">txA</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679484426"><span class="hs-identifier hs-var">txA</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/utxo/TxAttributes&quot;</span></span><span>
 </span><span id="line-96"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-97"></span><span>    </span><span id="local-6989586621679484193"><span class="annot"><span class="annottext">txA :: TxAttributes
-</span><a href="#local-6989586621679484193"><span class="hs-identifier hs-var hs-var">txA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">() -&gt; TxAttributes
+</span><span id="line-97"></span><span>    </span><span id="local-6989586621679484426"><span class="annot"><span class="annottext">txA :: TxAttributes
+</span><a href="#local-6989586621679484426"><span class="hs-identifier hs-var hs-var">txA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">() -&gt; TxAttributes
 forall h. h -&gt; Attributes h
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkAttributes</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-98"></span><span>
@@ -304,12 +304,12 @@ forall a.
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span>
 </span><span id="line-157"></span><span>    </span><span class="annot"><span class="annottext">TxInWitness
-</span><a href="#local-6989586621679484181"><span class="hs-identifier hs-var">vkWitness</span></a></span><span>
+</span><a href="#local-6989586621679484414"><span class="hs-identifier hs-var">vkWitness</span></a></span><span>
 </span><span id="line-158"></span><span>    </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/utxo/TxInWitness_VKWitness&quot;</span></span><span>
 </span><span id="line-159"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-160"></span><span>    </span><span id="local-6989586621679484181"><span class="annot"><span class="annottext">vkWitness :: TxInWitness
-</span><a href="#local-6989586621679484181"><span class="hs-identifier hs-var hs-var">vkWitness</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; TxSig -&gt; TxInWitness
+</span><span id="line-160"></span><span>    </span><span id="local-6989586621679484414"><span class="annot"><span class="annottext">vkWitness :: TxInWitness
+</span><a href="#local-6989586621679484414"><span class="hs-identifier hs-var hs-var">vkWitness</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; TxSig -&gt; TxInWitness
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">VKWitness</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">exampleVerificationKey</span></a></span><span> </span><span class="annot"><span class="annottext">TxSig
 </span><a href="Test.Cardano.Chain.UTxO.Example.html#exampleTxSig"><span class="hs-identifier hs-var">exampleTxSig</span></a></span><span>
@@ -323,12 +323,12 @@ forall a.
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span>
 </span><span id="line-165"></span><span>    </span><span class="annot"><span class="annottext">TxInWitness
-</span><a href="#local-6989586621679484178"><span class="hs-identifier hs-var">redeemWitness</span></a></span><span>
+</span><a href="#local-6989586621679484411"><span class="hs-identifier hs-var">redeemWitness</span></a></span><span>
 </span><span id="line-166"></span><span>    </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/utxo/TxInWitness_RedeemWitness&quot;</span></span><span>
 </span><span id="line-167"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-168"></span><span>    </span><span id="local-6989586621679484178"><span class="annot"><span class="annottext">redeemWitness :: TxInWitness
-</span><a href="#local-6989586621679484178"><span class="hs-identifier hs-var hs-var">redeemWitness</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey -&gt; RedeemSignature TxSigData -&gt; TxInWitness
+</span><span id="line-168"></span><span>    </span><span id="local-6989586621679484411"><span class="annot"><span class="annottext">redeemWitness :: TxInWitness
+</span><a href="#local-6989586621679484411"><span class="hs-identifier hs-var hs-var">redeemWitness</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey -&gt; RedeemSignature TxSigData -&gt; TxInWitness
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">RedeemWitness</span></a></span><span> </span><span class="annot"><span class="annottext">RedeemVerificationKey
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">exampleRedeemVerificationKey</span></a></span><span> </span><span class="annot"><span class="annottext">RedeemSignature TxSigData
 </span><a href="Test.Cardano.Chain.UTxO.Example.html#exampleRedeemSignature"><span class="hs-identifier hs-var">exampleRedeemSignature</span></a></span><span>
@@ -500,11 +500,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">TxSig
-</span><a href="#local-6989586621679484165"><span class="hs-identifier hs-var">txSigGold</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679484398"><span class="hs-identifier hs-var">txSigGold</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/utxo/TxSig&quot;</span></span><span>
 </span><span id="line-225"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-226"></span><span>    </span><span id="local-6989586621679484165"><span class="annot"><span class="annottext">txSigGold :: TxSig
-</span><a href="#local-6989586621679484165"><span class="hs-identifier hs-var hs-var">txSigGold</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-226"></span><span>    </span><span id="local-6989586621679484398"><span class="annot"><span class="annottext">txSigGold :: TxSig
+</span><a href="#local-6989586621679484398"><span class="hs-identifier hs-var hs-var">txSigGold</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-227"></span><span>      </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; SignTag -&gt; SigningKey -&gt; TxSigData -&gt; TxSig
 forall a.
 ToCBOR a =&gt;
@@ -692,10 +692,10 @@ a -&gt; m ()
 </span><span id="line-294"></span><span class="annot"><a href="Test.Cardano.Chain.UTxO.CBOR.html#sizeEstimates"><span class="hs-identifier hs-type">sizeEstimates</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.Group</span></a></span><span>
 </span><span id="line-295"></span><span id="sizeEstimates"><span class="annot"><span class="annottext">sizeEstimates :: Group
 </span><a href="Test.Cardano.Chain.UTxO.CBOR.html#sizeEstimates"><span class="hs-identifier hs-var hs-var">sizeEstimates</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-296"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679484263"><span class="annot"><a href="#local-6989586621679484152"><span class="hs-identifier hs-type">sizeTestGen</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679484263"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679484263"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679484263"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span></span><span>
-</span><span id="line-297"></span><span>      </span><span id="local-6989586621679484152"><span class="annot"><span class="annottext">sizeTestGen :: Gen a -&gt; Property
-</span><a href="#local-6989586621679484152"><span class="hs-identifier hs-var hs-var">sizeTestGen</span></a></span></span><span> </span><span id="local-6989586621679484151"><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679484151"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SizeTestConfig a -&gt; Property
+</span><span id="line-296"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679484496"><span class="annot"><a href="#local-6989586621679484385"><span class="hs-identifier hs-type">sizeTestGen</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679484496"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679484496"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679484496"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span></span><span>
+</span><span id="line-297"></span><span>      </span><span id="local-6989586621679484385"><span class="annot"><span class="annottext">sizeTestGen :: Gen a -&gt; Property
+</span><a href="#local-6989586621679484385"><span class="hs-identifier hs-var hs-var">sizeTestGen</span></a></span></span><span> </span><span id="local-6989586621679484384"><span class="annot"><span class="annottext">Gen a
+</span><a href="#local-6989586621679484384"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SizeTestConfig a -&gt; Property
 forall a. ToCBOR a =&gt; SizeTestConfig a -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">sizeTest</span></a></span><span> </span><span class="annot"><span class="annottext">(SizeTestConfig a -&gt; Property) -&gt; SizeTestConfig a -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -703,15 +703,15 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">scfg</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">gen :: Gen a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679484151"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-298"></span><span>      </span><span id="local-6989586621679484149"><span class="annot"><span class="annottext">pm :: ProtocolMagicId
-</span><a href="#local-6989586621679484149"><span class="hs-identifier hs-var hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; ProtocolMagicId
+</span><a href="#local-6989586621679484384"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">}</span><span>
+</span><span id="line-298"></span><span>      </span><span id="local-6989586621679484382"><span class="annot"><span class="annottext">pm :: ProtocolMagicId
+</span><a href="#local-6989586621679484382"><span class="hs-identifier hs-var hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; ProtocolMagicId
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">ProtocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">0</span></span><span>
 </span><span id="line-299"></span><span>
 </span><span id="line-300"></span><span>      </span><span class="hs-comment">-- Explicit bounds for types, based on the generators from Gen.</span><span>
-</span><span id="line-301"></span><span>      </span><span id="local-6989586621679484148"><span class="annot"><span class="annottext">attrUnitSize :: (TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484148"><span class="hs-identifier hs-var hs-var">attrUnitSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Proxy TxAttributes -&gt; TypeRep
+</span><span id="line-301"></span><span>      </span><span id="local-6989586621679484381"><span class="annot"><span class="annottext">attrUnitSize :: (TypeRep, SizeOverride)
+</span><a href="#local-6989586621679484381"><span class="hs-identifier hs-var hs-var">attrUnitSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Proxy TxAttributes -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
 Typeable a =&gt;
 proxy a -&gt; TypeRep
@@ -720,8 +720,8 @@ forall k (t :: k). Proxy t
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Attributes</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Size -&gt; SizeOverride
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">SizeConstant</span></a></span><span> </span><span class="annot"><span class="annottext">Size
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
-</span><span id="line-302"></span><span>      </span><span id="local-6989586621679484144"><span class="annot"><span class="annottext">attrAddrSize :: (TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484144"><span class="hs-identifier hs-var hs-var">attrAddrSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-302"></span><span>      </span><span id="local-6989586621679484377"><span class="annot"><span class="annottext">attrAddrSize :: (TypeRep, SizeOverride)
+</span><a href="#local-6989586621679484377"><span class="hs-identifier hs-var hs-var">attrAddrSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-303"></span><span>        </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Proxy (Attributes AddrAttributes) -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
 Typeable a =&gt;
@@ -741,8 +741,8 @@ forall t. Text -&gt; t -&gt; Case t
 </span><span class="hs-string">&quot;max&quot;</span></span><span> </span><span class="annot"><span class="annottext">Size
 </span><span class="hs-number">1024</span></span><span class="hs-special">]</span><span class="hs-special">)</span><span>
 </span><span id="line-305"></span><span>        </span><span class="hs-special">)</span><span>
-</span><span id="line-306"></span><span>      </span><span id="local-6989586621679484142"><span class="annot"><span class="annottext">txSigSize :: (TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484142"><span class="hs-identifier hs-var hs-var">txSigSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Proxy TxSig -&gt; TypeRep
+</span><span id="line-306"></span><span>      </span><span id="local-6989586621679484375"><span class="annot"><span class="annottext">txSigSize :: (TypeRep, SizeOverride)
+</span><a href="#local-6989586621679484375"><span class="hs-identifier hs-var hs-var">txSigSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Proxy TxSig -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
 Typeable a =&gt;
 proxy a -&gt; TypeRep
@@ -758,7 +758,7 @@ forall k (t :: k). Proxy t
 </span><span id="line-309"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;TxId&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Gen (Hash Tx) -&gt; Property
 forall a. (Show a, ToCBOR a) =&gt; Gen a -&gt; Property
-</span><a href="#local-6989586621679484152"><span class="hs-identifier hs-var">sizeTestGen</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (Hash Tx)
+</span><a href="#local-6989586621679484385"><span class="hs-identifier hs-var">sizeTestGen</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (Hash Tx)
 </span><a href="Test.Cardano.Chain.UTxO.Gen.html#genTxId"><span class="hs-identifier hs-var">genTxId</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-310"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;Tx&quot;</span></span><span class="hs-special">,</span><span>
@@ -777,11 +777,11 @@ forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484148"><span class="hs-identifier hs-var">attrUnitSize</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484144"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679484381"><span class="hs-identifier hs-var">attrUnitSize</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
+</span><a href="#local-6989586621679484377"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
 </span><span id="line-315"></span><span>                  </span><span class="annot"><span class="annottext">computedCtx :: Tx -&gt; Map TypeRep SizeOverride
-</span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">computedCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679484137"><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621679484137"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">computedCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679484370"><span class="annot"><span class="annottext">Tx
+</span><a href="#local-6989586621679484370"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-316"></span><span>                    </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span>
@@ -803,7 +803,7 @@ forall a. HasLength a =&gt; a -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Tx -&gt; NonEmpty TxIn
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">txInputs</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621679484137"><span class="hs-identifier hs-var">tx</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484370"><span class="hs-identifier hs-var">tx</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-319"></span><span>                        </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-320"></span><span>                        </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Proxy (LengthOf [TxOut]) -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
@@ -823,7 +823,7 @@ forall a. HasLength a =&gt; a -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Tx -&gt; NonEmpty TxOut
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">txOutputs</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621679484137"><span class="hs-identifier hs-var">tx</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484370"><span class="hs-identifier hs-var">tx</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-322"></span><span>                        </span><span class="hs-special">)</span><span>
 </span><span id="line-323"></span><span>                      </span><span class="hs-special">]</span><span>
 </span><span id="line-324"></span><span>                </span><span class="hs-special">}</span><span>
@@ -831,7 +831,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-326"></span><span>          </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;TxIn&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Gen TxIn -&gt; Property
 forall a. (Show a, ToCBOR a) =&gt; Gen a -&gt; Property
-</span><a href="#local-6989586621679484152"><span class="hs-identifier hs-var">sizeTestGen</span></a></span><span> </span><span class="annot"><span class="annottext">Gen TxIn
+</span><a href="#local-6989586621679484385"><span class="hs-identifier hs-var">sizeTestGen</span></a></span><span> </span><span class="annot"><span class="annottext">Gen TxIn
 </span><a href="Test.Cardano.Chain.UTxO.Gen.html#genTxIn"><span class="hs-identifier hs-var">genTxIn</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-327"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;TxOut&quot;</span></span><span class="hs-special">,</span><span>
@@ -849,7 +849,7 @@ forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484144"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679484377"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">]</span><span class="hs-special">}</span><span>
 </span><span id="line-330"></span><span>          </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-331"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;TxAux&quot;</span></span><span class="hs-special">,</span><span>
@@ -865,17 +865,17 @@ forall a. Show a =&gt; SizeTestConfig a
 </span><span id="line-334"></span><span>                </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">gen :: Gen TxAux
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; Gen TxAux
 </span><a href="Test.Cardano.Chain.UTxO.Gen.html#genTxAux"><span class="hs-identifier hs-var">genTxAux</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679484149"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679484382"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-335"></span><span>                  </span><span class="annot"><span class="annottext">addlCtx :: Map TypeRep SizeOverride
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484148"><span class="hs-identifier hs-var">attrUnitSize</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484144"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484142"><span class="hs-identifier hs-var">txSigSize</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679484381"><span class="hs-identifier hs-var">attrUnitSize</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
+</span><a href="#local-6989586621679484377"><span class="hs-identifier hs-var">attrAddrSize</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
+</span><a href="#local-6989586621679484375"><span class="hs-identifier hs-var">txSigSize</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
 </span><span id="line-336"></span><span>                  </span><span class="annot"><span class="annottext">computedCtx :: TxAux -&gt; Map TypeRep SizeOverride
-</span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">computedCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679484133"><span class="annot"><span class="annottext">TxAux
-</span><a href="#local-6989586621679484133"><span class="hs-identifier hs-var">ta</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">computedCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679484366"><span class="annot"><span class="annottext">TxAux
+</span><a href="#local-6989586621679484366"><span class="hs-identifier hs-var">ta</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-337"></span><span>                    </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span>
@@ -901,7 +901,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TxAux -&gt; Tx
 forall a. ATxAux a -&gt; Tx
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">taTx</span></a></span><span> </span><span class="annot"><span class="annottext">TxAux
-</span><a href="#local-6989586621679484133"><span class="hs-identifier hs-var">ta</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484366"><span class="hs-identifier hs-var">ta</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-340"></span><span>                        </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-341"></span><span>                        </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Proxy (LengthOf TxWitness) -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
@@ -922,7 +922,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TxAux -&gt; TxWitness
 forall a. ATxAux a -&gt; TxWitness
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">taWitness</span></a></span><span> </span><span class="annot"><span class="annottext">TxAux
-</span><a href="#local-6989586621679484133"><span class="hs-identifier hs-var">ta</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484366"><span class="hs-identifier hs-var">ta</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-343"></span><span>                        </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-344"></span><span>                        </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Proxy (LengthOf [TxOut]) -&gt; TypeRep
 forall k (proxy :: k -&gt; *) (a :: k).
@@ -946,7 +946,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TxAux -&gt; Tx
 forall a. ATxAux a -&gt; Tx
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">taTx</span></a></span><span> </span><span class="annot"><span class="annottext">TxAux
-</span><a href="#local-6989586621679484133"><span class="hs-identifier hs-var">ta</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484366"><span class="hs-identifier hs-var">ta</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-346"></span><span>                        </span><span class="hs-special">)</span><span>
 </span><span id="line-347"></span><span>                      </span><span class="hs-special">]</span><span>
 </span><span id="line-348"></span><span>                </span><span class="hs-special">}</span><span>
@@ -964,16 +964,16 @@ forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">scfg</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">gen :: Gen TxInWitness
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; Gen TxInWitness
 </span><a href="Test.Cardano.Chain.UTxO.Gen.html#genTxInWitness"><span class="hs-identifier hs-var">genTxInWitness</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679484149"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">addlCtx :: Map TypeRep SizeOverride
+</span><a href="#local-6989586621679484382"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">addlCtx :: Map TypeRep SizeOverride
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484142"><span class="hs-identifier hs-var">txSigSize</span></a></span><span class="hs-special">]</span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679484375"><span class="hs-identifier hs-var">txSigSize</span></a></span><span class="hs-special">]</span><span class="hs-special">}</span><span>
 </span><span id="line-353"></span><span>          </span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-354"></span><span>          </span><span class="hs-special">(</span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;TxSigData&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Gen TxSigData -&gt; Property
 forall a. (Show a, ToCBOR a) =&gt; Gen a -&gt; Property
-</span><a href="#local-6989586621679484152"><span class="hs-identifier hs-var">sizeTestGen</span></a></span><span> </span><span class="annot"><span class="annottext">Gen TxSigData
+</span><a href="#local-6989586621679484385"><span class="hs-identifier hs-var">sizeTestGen</span></a></span><span> </span><span class="annot"><span class="annottext">Gen TxSigData
 </span><a href="Test.Cardano.Chain.UTxO.Gen.html#genTxSigData"><span class="hs-identifier hs-var">genTxSigData</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-355"></span><span>          </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">PropertyName
 </span><span class="hs-string">&quot;Signature TxSigData&quot;</span></span><span class="hs-special">,</span><span>
@@ -988,11 +988,11 @@ forall a. Show a =&gt; SizeTestConfig a
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">scfg</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">gen :: Gen TxSig
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; Gen TxSig
 </span><a href="Test.Cardano.Chain.UTxO.Gen.html#genTxSig"><span class="hs-identifier hs-var">genTxSig</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679484149"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">addlCtx :: Map TypeRep SizeOverride
+</span><a href="#local-6989586621679484382"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">addlCtx :: Map TypeRep SizeOverride
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">addlCtx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(TypeRep, SizeOverride)] -&gt; Map TypeRep SizeOverride
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">M.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TypeRep, SizeOverride)
-</span><a href="#local-6989586621679484142"><span class="hs-identifier hs-var">txSigSize</span></a></span><span class="hs-special">]</span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679484375"><span class="hs-identifier hs-var">txSigSize</span></a></span><span class="hs-special">]</span><span class="hs-special">}</span><span>
 </span><span id="line-358"></span><span>          </span><span class="hs-special">)</span><span>
 </span><span id="line-359"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-360"></span><span>

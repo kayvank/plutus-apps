@@ -13,9 +13,9 @@
 </span><span id="line-13"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">Servant.Docs</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">DocCapture</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToCapture</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToSample</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">samples</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-14"></span><span>
 </span><span id="line-15"></span><span class="hs-comment">-- | Id (hash) of the transaction</span><span>
-</span><span id="line-16"></span><span id="local-6989586621681198696"><span id="local-6989586621681198697"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="TxHash"><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-var">TxHash</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxHash"><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-var">TxHash</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unTxHash"><span class="annot"><span class="annottext">TxHash -&gt; Text
+</span><span id="line-16"></span><span id="local-6989586621681198703"><span id="local-6989586621681198704"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="TxHash"><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-var">TxHash</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxHash"><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-var">TxHash</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unTxHash"><span class="annot"><span class="annottext">TxHash -&gt; Text
 </span><a href="Blockfrost.Types.Shared.TxHash.html#unTxHash"><span class="hs-identifier hs-var hs-var">unTxHash</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-17"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681198688"><span id="local-6989586621681198690"><span id="local-6989586621681198692"><span class="annot"><span class="annottext">Int -&gt; TxHash -&gt; ShowS
+</span><span id="line-17"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681198695"><span id="local-6989586621681198697"><span id="local-6989586621681198699"><span class="annot"><span class="annottext">Int -&gt; TxHash -&gt; ShowS
 [TxHash] -&gt; ShowS
 TxHash -&gt; String
 (Int -&gt; TxHash -&gt; ShowS)
@@ -28,7 +28,7 @@ show :: TxHash -&gt; String
 $cshow :: TxHash -&gt; String
 showsPrec :: Int -&gt; TxHash -&gt; ShowS
 $cshowsPrec :: Int -&gt; TxHash -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681198683"><span id="local-6989586621681198685"><span class="annot"><span class="annottext">TxHash -&gt; TxHash -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681198690"><span id="local-6989586621681198692"><span class="annot"><span class="annottext">TxHash -&gt; TxHash -&gt; Bool
 (TxHash -&gt; TxHash -&gt; Bool)
 -&gt; (TxHash -&gt; TxHash -&gt; Bool) -&gt; Eq TxHash
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -36,7 +36,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: TxHash -&gt; TxHash -&gt; Bool
 == :: TxHash -&gt; TxHash -&gt; Bool
 $c== :: TxHash -&gt; TxHash -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681198667"><span id="local-6989586621681198669"><span id="local-6989586621681198671"><span id="local-6989586621681198673"><span id="local-6989586621681198675"><span id="local-6989586621681198677"><span id="local-6989586621681198679"><span class="annot"><span class="annottext">Eq TxHash
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681198674"><span id="local-6989586621681198676"><span id="local-6989586621681198678"><span id="local-6989586621681198680"><span id="local-6989586621681198682"><span id="local-6989586621681198684"><span id="local-6989586621681198686"><span class="annot"><span class="annottext">Eq TxHash
 Eq TxHash
 -&gt; (TxHash -&gt; TxHash -&gt; Ordering)
 -&gt; (TxHash -&gt; TxHash -&gt; Bool)
@@ -83,7 +83,7 @@ forall a.
 $cto :: forall x. Rep TxHash x -&gt; TxHash
 $cfrom :: forall x. TxHash -&gt; Rep TxHash x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-18"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681198657"><span id="local-6989586621681198659"><span id="local-6989586621681198661"><span class="annot"><span class="annottext">ByteString -&gt; Either Text TxHash
+</span><span id="line-18"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681198664"><span id="local-6989586621681198666"><span id="local-6989586621681198668"><span class="annot"><span class="annottext">ByteString -&gt; Either Text TxHash
 Text -&gt; Either Text TxHash
 (Text -&gt; Either Text TxHash)
 -&gt; (ByteString -&gt; Either Text TxHash)
@@ -100,7 +100,7 @@ parseHeader :: ByteString -&gt; Either Text TxHash
 $cparseHeader :: ByteString -&gt; Either Text TxHash
 parseUrlPiece :: Text -&gt; Either Text TxHash
 $cparseUrlPiece :: Text -&gt; Either Text TxHash
-</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromHttpApiData</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681198648"><span id="local-6989586621681198650"><span id="local-6989586621681198652"><span id="local-6989586621681198654"><span class="annot"><span class="annottext">TxHash -&gt; ByteString
+</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromHttpApiData</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681198655"><span id="local-6989586621681198657"><span id="local-6989586621681198659"><span id="local-6989586621681198661"><span class="annot"><span class="annottext">TxHash -&gt; ByteString
 TxHash -&gt; Builder
 TxHash -&gt; Text
 (TxHash -&gt; Text)
@@ -125,30 +125,30 @@ $ctoUrlPiece :: TxHash -&gt; Text
 </span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToHttpApiData</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-19"></span><span>
 </span><span id="line-20"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">IsString</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-21"></span><span>  </span><span id="local-6989586621681198644"><span class="annot"><span class="annottext">fromString :: String -&gt; TxHash
+</span><span id="line-21"></span><span>  </span><span id="local-6989586621681198651"><span class="annot"><span class="annottext">fromString :: String -&gt; TxHash
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromString</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; TxHash
 </span><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-var">TxHash</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; TxHash) -&gt; (String -&gt; Text) -&gt; String -&gt; TxHash
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">Data.Text.pack</span></a></span><span>
 </span><span id="line-22"></span><span>
-</span><span id="line-23"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681198636"><span id="local-6989586621681198638"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-24"></span><span>  </span><span id="local-6989586621681198634"><span class="annot"><span class="annottext">toJSON :: TxHash -&gt; Value
+</span><span id="line-23"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681198643"><span id="local-6989586621681198645"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-24"></span><span>  </span><span id="local-6989586621681198641"><span class="annot"><span class="annottext">toJSON :: TxHash -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; Value) -&gt; (TxHash -&gt; Text) -&gt; TxHash -&gt; Value
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">TxHash -&gt; Text
 </span><a href="Blockfrost.Types.Shared.TxHash.html#unTxHash"><span class="hs-identifier hs-var hs-var">unTxHash</span></a></span><span>
-</span><span id="line-25"></span><span>  </span><span id="local-6989586621681198632"><span class="annot"><span class="annottext">toEncoding :: TxHash -&gt; Encoding
+</span><span id="line-25"></span><span>  </span><span id="local-6989586621681198639"><span class="annot"><span class="annottext">toEncoding :: TxHash -&gt; Encoding
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toEncoding</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Encoding
 forall a. ToJSON a =&gt; a -&gt; Encoding
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; Encoding) -&gt; (TxHash -&gt; Text) -&gt; TxHash -&gt; Encoding
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">TxHash -&gt; Text
 </span><a href="Blockfrost.Types.Shared.TxHash.html#unTxHash"><span class="hs-identifier hs-var hs-var">unTxHash</span></a></span><span>
-</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681198628"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-27"></span><span>  </span><span id="local-6989586621681198626"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser TxHash
+</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681198635"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621681198633"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser TxHash
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Text -&gt; TxHash) -&gt; Parser Text -&gt; Parser TxHash
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; TxHash
@@ -160,7 +160,7 @@ forall a. FromJSON a =&gt; Value -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">parseJSON</span></a></span><span>
 </span><span id="line-28"></span><span>
 </span><span id="line-29"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-30"></span><span>    </span><span id="local-6989586621681198621"><span class="annot"><span class="annottext">toSamples :: Proxy TxHash -&gt; [(Text, TxHash)]
+</span><span id="line-30"></span><span>    </span><span id="local-6989586621681198628"><span class="annot"><span class="annottext">toSamples :: Proxy TxHash -&gt; [(Text, TxHash)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy TxHash
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[TxHash] -&gt; [(Text, TxHash)]
 forall a. [a] -&gt; [(Text, a)]
@@ -179,7 +179,7 @@ forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
 </span><span id="line-34"></span><span>      </span><span class="hs-special">]</span><span>
 </span><span id="line-35"></span><span>
 </span><span id="line-36"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToCapture</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant/html/src"><span class="hs-identifier hs-type">Capture</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;hash&quot;</span></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-37"></span><span>  </span><span id="local-6989586621681198617"><span class="annot"><span class="annottext">toCapture :: Proxy (Capture &quot;hash&quot; TxHash) -&gt; DocCapture
+</span><span id="line-37"></span><span>  </span><span id="local-6989586621681198624"><span class="annot"><span class="annottext">toCapture :: Proxy (Capture &quot;hash&quot; TxHash) -&gt; DocCapture
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCapture</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy (Capture &quot;hash&quot; TxHash)
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; DocCapture
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var">DocCapture</span></a></span><span> </span><span class="annot"><span class="annottext">String

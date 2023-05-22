@@ -17,7 +17,7 @@
 </span><span id="line-17"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">Servant.Docs</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToSample</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">samples</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">singleSample</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-18"></span><span>
 </span><span id="line-19"></span><span class="hs-comment">-- | Information about an account, identified by its stake address</span><span>
-</span><span id="line-20"></span><span id="local-6989586621681202388"><span id="local-6989586621681202389"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountInfo"><span class="hs-identifier hs-var">AccountInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountInfo"><span class="hs-identifier hs-var">AccountInfo</span></a></span></span><span>
+</span><span id="line-20"></span><span id="local-6989586621681202395"><span id="local-6989586621681202396"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountInfo"><span class="hs-identifier hs-var">AccountInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountInfo"><span class="hs-identifier hs-var">AccountInfo</span></a></span></span><span>
 </span><span id="line-21"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountInfoStakeAddress"><span class="annot"><span class="annottext">AccountInfo -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountInfoStakeAddress"><span class="hs-identifier hs-var hs-var">_accountInfoStakeAddress</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 stake address</span><span>
 </span><span id="line-22"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountInfoActive"><span class="annot"><span class="annottext">AccountInfo -&gt; Bool
@@ -39,7 +39,7 @@
 </span><span id="line-30"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountInfoPoolId"><span class="annot"><span class="annottext">AccountInfo -&gt; Maybe PoolId
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountInfoPoolId"><span class="hs-identifier hs-var hs-var">_accountInfoPoolId</span></a></span></span><span>             </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.PoolId.html#PoolId"><span class="hs-identifier hs-type">PoolId</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 pool ID that owns the account</span><span>
 </span><span id="line-31"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-32"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202371"><span id="local-6989586621681202373"><span id="local-6989586621681202375"><span class="annot"><span class="annottext">Int -&gt; AccountInfo -&gt; ShowS
+</span><span id="line-32"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202378"><span id="local-6989586621681202380"><span id="local-6989586621681202382"><span class="annot"><span class="annottext">Int -&gt; AccountInfo -&gt; ShowS
 [AccountInfo] -&gt; ShowS
 AccountInfo -&gt; String
 (Int -&gt; AccountInfo -&gt; ShowS)
@@ -54,7 +54,7 @@ show :: AccountInfo -&gt; String
 $cshow :: AccountInfo -&gt; String
 showsPrec :: Int -&gt; AccountInfo -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountInfo -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202366"><span id="local-6989586621681202368"><span class="annot"><span class="annottext">AccountInfo -&gt; AccountInfo -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202373"><span id="local-6989586621681202375"><span class="annot"><span class="annottext">AccountInfo -&gt; AccountInfo -&gt; Bool
 (AccountInfo -&gt; AccountInfo -&gt; Bool)
 -&gt; (AccountInfo -&gt; AccountInfo -&gt; Bool) -&gt; Eq AccountInfo
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -72,7 +72,7 @@ forall a.
 $cto :: forall x. Rep AccountInfo x -&gt; AccountInfo
 $cfrom :: forall x. AccountInfo -&gt; Rep AccountInfo x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-33"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202358"><span id="local-6989586621681202360"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountInfo]
+</span><span id="line-33"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202365"><span id="local-6989586621681202367"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountInfo]
 Value -&gt; Parser AccountInfo
 (Value -&gt; Parser AccountInfo)
 -&gt; (Value -&gt; Parser [AccountInfo]) -&gt; FromJSON AccountInfo
@@ -82,7 +82,7 @@ parseJSONList :: Value -&gt; Parser [AccountInfo]
 $cparseJSONList :: Value -&gt; Parser [AccountInfo]
 parseJSON :: Value -&gt; Parser AccountInfo
 $cparseJSON :: Value -&gt; Parser AccountInfo
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202349"><span id="local-6989586621681202351"><span id="local-6989586621681202353"><span id="local-6989586621681202355"><span class="annot"><span class="annottext">[AccountInfo] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202356"><span id="local-6989586621681202358"><span id="local-6989586621681202360"><span id="local-6989586621681202362"><span class="annot"><span class="annottext">[AccountInfo] -&gt; Encoding
 [AccountInfo] -&gt; Value
 AccountInfo -&gt; Encoding
 AccountInfo -&gt; Value
@@ -109,7 +109,7 @@ $ctoJSON :: AccountInfo -&gt; Value
 </span><span id="line-34"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountInfo&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountInfo"><span class="hs-identifier hs-type">AccountInfo</span></a></span><span>
 </span><span id="line-35"></span><span>
 </span><span id="line-36"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountInfo"><span class="hs-identifier hs-type">AccountInfo</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-37"></span><span>  </span><span id="local-6989586621681202341"><span class="annot"><span class="annottext">toSamples :: Proxy AccountInfo -&gt; [(Text, AccountInfo)]
+</span><span id="line-37"></span><span>  </span><span id="local-6989586621681202348"><span class="annot"><span class="annottext">toSamples :: Proxy AccountInfo -&gt; [(Text, AccountInfo)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountInfo)] -&gt; Proxy AccountInfo -&gt; [(Text, AccountInfo)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountInfo)]
@@ -172,7 +172,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-48"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-49"></span><span>
 </span><span id="line-50"></span><span class="hs-comment">-- | Reward received by an account</span><span>
-</span><span id="line-51"></span><span id="local-6989586621681202338"><span id="local-6989586621681202339"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountReward"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountReward"><span class="hs-identifier hs-var">AccountReward</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountReward"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountReward"><span class="hs-identifier hs-var">AccountReward</span></a></span></span><span>
+</span><span id="line-51"></span><span id="local-6989586621681202345"><span id="local-6989586621681202346"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountReward"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountReward"><span class="hs-identifier hs-var">AccountReward</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountReward"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountReward"><span class="hs-identifier hs-var">AccountReward</span></a></span></span><span>
 </span><span id="line-52"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountRewardEpoch"><span class="annot"><span class="annottext">AccountReward -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountRewardEpoch"><span class="hs-identifier hs-var hs-var">_accountRewardEpoch</span></a></span></span><span>  </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch of the associated reward</span><span>
 </span><span id="line-53"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountRewardAmount"><span class="annot"><span class="annottext">AccountReward -&gt; Lovelaces
@@ -180,7 +180,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-54"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountRewardPoolId"><span class="annot"><span class="annottext">AccountReward -&gt; PoolId
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountRewardPoolId"><span class="hs-identifier hs-var hs-var">_accountRewardPoolId</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.PoolId.html#PoolId"><span class="hs-identifier hs-type">PoolId</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 pool ID being delegated to</span><span>
 </span><span id="line-55"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-56"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202328"><span id="local-6989586621681202330"><span id="local-6989586621681202332"><span class="annot"><span class="annottext">Int -&gt; AccountReward -&gt; ShowS
+</span><span id="line-56"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202335"><span id="local-6989586621681202337"><span id="local-6989586621681202339"><span class="annot"><span class="annottext">Int -&gt; AccountReward -&gt; ShowS
 [AccountReward] -&gt; ShowS
 AccountReward -&gt; String
 (Int -&gt; AccountReward -&gt; ShowS)
@@ -195,7 +195,7 @@ show :: AccountReward -&gt; String
 $cshow :: AccountReward -&gt; String
 showsPrec :: Int -&gt; AccountReward -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountReward -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202324"><span id="local-6989586621681202326"><span class="annot"><span class="annottext">AccountReward -&gt; AccountReward -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202331"><span id="local-6989586621681202333"><span class="annot"><span class="annottext">AccountReward -&gt; AccountReward -&gt; Bool
 (AccountReward -&gt; AccountReward -&gt; Bool)
 -&gt; (AccountReward -&gt; AccountReward -&gt; Bool) -&gt; Eq AccountReward
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -213,7 +213,7 @@ forall a.
 $cto :: forall x. Rep AccountReward x -&gt; AccountReward
 $cfrom :: forall x. AccountReward -&gt; Rep AccountReward x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-57"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202318"><span id="local-6989586621681202320"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountReward]
+</span><span id="line-57"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202325"><span id="local-6989586621681202327"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountReward]
 Value -&gt; Parser AccountReward
 (Value -&gt; Parser AccountReward)
 -&gt; (Value -&gt; Parser [AccountReward]) -&gt; FromJSON AccountReward
@@ -223,7 +223,7 @@ parseJSONList :: Value -&gt; Parser [AccountReward]
 $cparseJSONList :: Value -&gt; Parser [AccountReward]
 parseJSON :: Value -&gt; Parser AccountReward
 $cparseJSON :: Value -&gt; Parser AccountReward
-</span><a href="#local-6989586621681202318"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202310"><span id="local-6989586621681202312"><span id="local-6989586621681202314"><span id="local-6989586621681202316"><span class="annot"><span class="annottext">[AccountReward] -&gt; Encoding
+</span><a href="#local-6989586621681202325"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202317"><span id="local-6989586621681202319"><span id="local-6989586621681202321"><span id="local-6989586621681202323"><span class="annot"><span class="annottext">[AccountReward] -&gt; Encoding
 [AccountReward] -&gt; Value
 AccountReward -&gt; Encoding
 AccountReward -&gt; Value
@@ -246,12 +246,12 @@ toEncoding :: AccountReward -&gt; Encoding
 $ctoEncoding :: AccountReward -&gt; Encoding
 toJSON :: AccountReward -&gt; Value
 $ctoJSON :: AccountReward -&gt; Value
-</span><a href="#local-6989586621681202310"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202317"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-58"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountReward&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountReward"><span class="hs-identifier hs-type">AccountReward</span></a></span><span>
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountReward"><span class="hs-identifier hs-type">AccountReward</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-61"></span><span>  </span><span id="local-6989586621681202308"><span class="annot"><span class="annottext">toSamples :: Proxy AccountReward -&gt; [(Text, AccountReward)]
-</span><a href="#local-6989586621681202308"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountReward)]
+</span><span id="line-61"></span><span>  </span><span id="local-6989586621681202315"><span class="annot"><span class="annottext">toSamples :: Proxy AccountReward -&gt; [(Text, AccountReward)]
+</span><a href="#local-6989586621681202315"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountReward)]
 -&gt; Proxy AccountReward -&gt; [(Text, AccountReward)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountReward)]
@@ -314,7 +314,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-82"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-83"></span><span>
 </span><span id="line-84"></span><span class="hs-comment">-- | History of accounts stake delegation</span><span>
-</span><span id="line-85"></span><span id="local-6989586621681202306"><span id="local-6989586621681202307"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountHistory"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountHistory"><span class="hs-identifier hs-var">AccountHistory</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountHistory"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountHistory"><span class="hs-identifier hs-var">AccountHistory</span></a></span></span><span>
+</span><span id="line-85"></span><span id="local-6989586621681202313"><span id="local-6989586621681202314"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountHistory"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountHistory"><span class="hs-identifier hs-var">AccountHistory</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountHistory"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountHistory"><span class="hs-identifier hs-var">AccountHistory</span></a></span></span><span>
 </span><span id="line-86"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountHistoryActiveEpoch"><span class="annot"><span class="annottext">AccountHistory -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountHistoryActiveEpoch"><span class="hs-identifier hs-var hs-var">_accountHistoryActiveEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch in which the stake was active</span><span>
 </span><span id="line-87"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountHistoryAmount"><span class="annot"><span class="annottext">AccountHistory -&gt; Lovelaces
@@ -322,7 +322,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-88"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountHistoryPoolId"><span class="annot"><span class="annottext">AccountHistory -&gt; PoolId
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountHistoryPoolId"><span class="hs-identifier hs-var hs-var">_accountHistoryPoolId</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.PoolId.html#PoolId"><span class="hs-identifier hs-type">PoolId</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 ID of pool being delegated to</span><span>
 </span><span id="line-89"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-90"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202296"><span id="local-6989586621681202298"><span id="local-6989586621681202300"><span class="annot"><span class="annottext">Int -&gt; AccountHistory -&gt; ShowS
+</span><span id="line-90"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202303"><span id="local-6989586621681202305"><span id="local-6989586621681202307"><span class="annot"><span class="annottext">Int -&gt; AccountHistory -&gt; ShowS
 [AccountHistory] -&gt; ShowS
 AccountHistory -&gt; String
 (Int -&gt; AccountHistory -&gt; ShowS)
@@ -337,7 +337,7 @@ show :: AccountHistory -&gt; String
 $cshow :: AccountHistory -&gt; String
 showsPrec :: Int -&gt; AccountHistory -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountHistory -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202292"><span id="local-6989586621681202294"><span class="annot"><span class="annottext">AccountHistory -&gt; AccountHistory -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202299"><span id="local-6989586621681202301"><span class="annot"><span class="annottext">AccountHistory -&gt; AccountHistory -&gt; Bool
 (AccountHistory -&gt; AccountHistory -&gt; Bool)
 -&gt; (AccountHistory -&gt; AccountHistory -&gt; Bool) -&gt; Eq AccountHistory
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -355,7 +355,7 @@ forall a.
 $cto :: forall x. Rep AccountHistory x -&gt; AccountHistory
 $cfrom :: forall x. AccountHistory -&gt; Rep AccountHistory x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-91"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202286"><span id="local-6989586621681202288"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountHistory]
+</span><span id="line-91"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202293"><span id="local-6989586621681202295"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountHistory]
 Value -&gt; Parser AccountHistory
 (Value -&gt; Parser AccountHistory)
 -&gt; (Value -&gt; Parser [AccountHistory]) -&gt; FromJSON AccountHistory
@@ -365,7 +365,7 @@ parseJSONList :: Value -&gt; Parser [AccountHistory]
 $cparseJSONList :: Value -&gt; Parser [AccountHistory]
 parseJSON :: Value -&gt; Parser AccountHistory
 $cparseJSON :: Value -&gt; Parser AccountHistory
-</span><a href="#local-6989586621681202286"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202278"><span id="local-6989586621681202280"><span id="local-6989586621681202282"><span id="local-6989586621681202284"><span class="annot"><span class="annottext">[AccountHistory] -&gt; Encoding
+</span><a href="#local-6989586621681202293"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202285"><span id="local-6989586621681202287"><span id="local-6989586621681202289"><span id="local-6989586621681202291"><span class="annot"><span class="annottext">[AccountHistory] -&gt; Encoding
 [AccountHistory] -&gt; Value
 AccountHistory -&gt; Encoding
 AccountHistory -&gt; Value
@@ -388,12 +388,12 @@ toEncoding :: AccountHistory -&gt; Encoding
 $ctoEncoding :: AccountHistory -&gt; Encoding
 toJSON :: AccountHistory -&gt; Value
 $ctoJSON :: AccountHistory -&gt; Value
-</span><a href="#local-6989586621681202278"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202285"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-92"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountHistory&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountHistory"><span class="hs-identifier hs-type">AccountHistory</span></a></span><span>
 </span><span id="line-93"></span><span>
 </span><span id="line-94"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountHistory"><span class="hs-identifier hs-type">AccountHistory</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-95"></span><span>  </span><span id="local-6989586621681202276"><span class="annot"><span class="annottext">toSamples :: Proxy AccountHistory -&gt; [(Text, AccountHistory)]
-</span><a href="#local-6989586621681202276"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountHistory)]
+</span><span id="line-95"></span><span>  </span><span id="local-6989586621681202283"><span class="annot"><span class="annottext">toSamples :: Proxy AccountHistory -&gt; [(Text, AccountHistory)]
+</span><a href="#local-6989586621681202283"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountHistory)]
 -&gt; Proxy AccountHistory -&gt; [(Text, AccountHistory)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountHistory)]
@@ -432,7 +432,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-106"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-107"></span><span>
 </span><span id="line-108"></span><span class="hs-comment">-- | Account delegations and associated transaction IDs</span><span>
-</span><span id="line-109"></span><span id="local-6989586621681202274"><span id="local-6989586621681202275"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountDelegation"><span class="hs-identifier hs-var">AccountDelegation</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountDelegation"><span class="hs-identifier hs-var">AccountDelegation</span></a></span></span><span>
+</span><span id="line-109"></span><span id="local-6989586621681202281"><span id="local-6989586621681202282"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountDelegation"><span class="hs-identifier hs-var">AccountDelegation</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountDelegation"><span class="hs-identifier hs-var">AccountDelegation</span></a></span></span><span>
 </span><span id="line-110"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountDelegationActiveEpoch"><span class="annot"><span class="annottext">AccountDelegation -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountDelegationActiveEpoch"><span class="hs-identifier hs-var hs-var">_accountDelegationActiveEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch in which the delegation becomes active</span><span>
 </span><span id="line-111"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountDelegationTxHash"><span class="annot"><span class="annottext">AccountDelegation -&gt; TxHash
@@ -442,7 +442,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-113"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountDelegationPoolId"><span class="annot"><span class="annottext">AccountDelegation -&gt; PoolId
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountDelegationPoolId"><span class="hs-identifier hs-var hs-var">_accountDelegationPoolId</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.PoolId.html#PoolId"><span class="hs-identifier hs-type">PoolId</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 ID of pool being delegated to</span><span>
 </span><span id="line-114"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-115"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202263"><span id="local-6989586621681202265"><span id="local-6989586621681202267"><span class="annot"><span class="annottext">Int -&gt; AccountDelegation -&gt; ShowS
+</span><span id="line-115"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202270"><span id="local-6989586621681202272"><span id="local-6989586621681202274"><span class="annot"><span class="annottext">Int -&gt; AccountDelegation -&gt; ShowS
 [AccountDelegation] -&gt; ShowS
 AccountDelegation -&gt; String
 (Int -&gt; AccountDelegation -&gt; ShowS)
@@ -457,7 +457,7 @@ show :: AccountDelegation -&gt; String
 $cshow :: AccountDelegation -&gt; String
 showsPrec :: Int -&gt; AccountDelegation -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountDelegation -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202259"><span id="local-6989586621681202261"><span class="annot"><span class="annottext">AccountDelegation -&gt; AccountDelegation -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202266"><span id="local-6989586621681202268"><span class="annot"><span class="annottext">AccountDelegation -&gt; AccountDelegation -&gt; Bool
 (AccountDelegation -&gt; AccountDelegation -&gt; Bool)
 -&gt; (AccountDelegation -&gt; AccountDelegation -&gt; Bool)
 -&gt; Eq AccountDelegation
@@ -476,7 +476,7 @@ forall a.
 $cto :: forall x. Rep AccountDelegation x -&gt; AccountDelegation
 $cfrom :: forall x. AccountDelegation -&gt; Rep AccountDelegation x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-116"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202253"><span id="local-6989586621681202255"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountDelegation]
+</span><span id="line-116"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202260"><span id="local-6989586621681202262"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountDelegation]
 Value -&gt; Parser AccountDelegation
 (Value -&gt; Parser AccountDelegation)
 -&gt; (Value -&gt; Parser [AccountDelegation])
@@ -487,7 +487,7 @@ parseJSONList :: Value -&gt; Parser [AccountDelegation]
 $cparseJSONList :: Value -&gt; Parser [AccountDelegation]
 parseJSON :: Value -&gt; Parser AccountDelegation
 $cparseJSON :: Value -&gt; Parser AccountDelegation
-</span><a href="#local-6989586621681202253"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202245"><span id="local-6989586621681202247"><span id="local-6989586621681202249"><span id="local-6989586621681202251"><span class="annot"><span class="annottext">[AccountDelegation] -&gt; Encoding
+</span><a href="#local-6989586621681202260"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202252"><span id="local-6989586621681202254"><span id="local-6989586621681202256"><span id="local-6989586621681202258"><span class="annot"><span class="annottext">[AccountDelegation] -&gt; Encoding
 [AccountDelegation] -&gt; Value
 AccountDelegation -&gt; Encoding
 AccountDelegation -&gt; Value
@@ -510,12 +510,12 @@ toEncoding :: AccountDelegation -&gt; Encoding
 $ctoEncoding :: AccountDelegation -&gt; Encoding
 toJSON :: AccountDelegation -&gt; Value
 $ctoJSON :: AccountDelegation -&gt; Value
-</span><a href="#local-6989586621681202245"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202252"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-117"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountDelegation&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountDelegation"><span class="hs-identifier hs-type">AccountDelegation</span></a></span><span>
 </span><span id="line-118"></span><span>
 </span><span id="line-119"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountDelegation"><span class="hs-identifier hs-type">AccountDelegation</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-120"></span><span>  </span><span id="local-6989586621681202243"><span class="annot"><span class="annottext">toSamples :: Proxy AccountDelegation -&gt; [(Text, AccountDelegation)]
-</span><a href="#local-6989586621681202243"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountDelegation)]
+</span><span id="line-120"></span><span>  </span><span id="local-6989586621681202250"><span class="annot"><span class="annottext">toSamples :: Proxy AccountDelegation -&gt; [(Text, AccountDelegation)]
+</span><a href="#local-6989586621681202250"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountDelegation)]
 -&gt; Proxy AccountDelegation -&gt; [(Text, AccountDelegation)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountDelegation)]
@@ -560,8 +560,8 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-133"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-134"></span><span>
 </span><span id="line-135"></span><span class="hs-comment">-- | Registration action</span><span>
-</span><span id="line-136"></span><span id="local-6989586621681202241"><span id="local-6989586621681202242"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountRegistrationAction"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistrationAction"><span class="hs-identifier hs-var">AccountRegistrationAction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Registered"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#Registered"><span class="hs-identifier hs-var">Registered</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Deregistered"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#Deregistered"><span class="hs-identifier hs-var">Deregistered</span></a></span></span><span>
-</span><span id="line-137"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202233"><span id="local-6989586621681202235"><span id="local-6989586621681202237"><span class="annot"><span class="annottext">Int -&gt; AccountRegistrationAction -&gt; ShowS
+</span><span id="line-136"></span><span id="local-6989586621681202248"><span id="local-6989586621681202249"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountRegistrationAction"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistrationAction"><span class="hs-identifier hs-var">AccountRegistrationAction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Registered"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#Registered"><span class="hs-identifier hs-var">Registered</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Deregistered"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#Deregistered"><span class="hs-identifier hs-var">Deregistered</span></a></span></span><span>
+</span><span id="line-137"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202240"><span id="local-6989586621681202242"><span id="local-6989586621681202244"><span class="annot"><span class="annottext">Int -&gt; AccountRegistrationAction -&gt; ShowS
 [AccountRegistrationAction] -&gt; ShowS
 AccountRegistrationAction -&gt; String
 (Int -&gt; AccountRegistrationAction -&gt; ShowS)
@@ -576,7 +576,7 @@ show :: AccountRegistrationAction -&gt; String
 $cshow :: AccountRegistrationAction -&gt; String
 showsPrec :: Int -&gt; AccountRegistrationAction -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountRegistrationAction -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202229"><span id="local-6989586621681202231"><span class="annot"><span class="annottext">AccountRegistrationAction -&gt; AccountRegistrationAction -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202236"><span id="local-6989586621681202238"><span class="annot"><span class="annottext">AccountRegistrationAction -&gt; AccountRegistrationAction -&gt; Bool
 (AccountRegistrationAction -&gt; AccountRegistrationAction -&gt; Bool)
 -&gt; (AccountRegistrationAction -&gt; AccountRegistrationAction -&gt; Bool)
 -&gt; Eq AccountRegistrationAction
@@ -601,7 +601,7 @@ Rep AccountRegistrationAction x -&gt; AccountRegistrationAction
 $cfrom :: forall x.
 AccountRegistrationAction -&gt; Rep AccountRegistrationAction x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-138"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202223"><span id="local-6989586621681202225"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountRegistrationAction]
+</span><span id="line-138"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202230"><span id="local-6989586621681202232"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountRegistrationAction]
 Value -&gt; Parser AccountRegistrationAction
 (Value -&gt; Parser AccountRegistrationAction)
 -&gt; (Value -&gt; Parser [AccountRegistrationAction])
@@ -612,7 +612,7 @@ parseJSONList :: Value -&gt; Parser [AccountRegistrationAction]
 $cparseJSONList :: Value -&gt; Parser [AccountRegistrationAction]
 parseJSON :: Value -&gt; Parser AccountRegistrationAction
 $cparseJSON :: Value -&gt; Parser AccountRegistrationAction
-</span><a href="#local-6989586621681202223"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202215"><span id="local-6989586621681202217"><span id="local-6989586621681202219"><span id="local-6989586621681202221"><span class="annot"><span class="annottext">[AccountRegistrationAction] -&gt; Encoding
+</span><a href="#local-6989586621681202230"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202222"><span id="local-6989586621681202224"><span id="local-6989586621681202226"><span id="local-6989586621681202228"><span class="annot"><span class="annottext">[AccountRegistrationAction] -&gt; Encoding
 [AccountRegistrationAction] -&gt; Value
 AccountRegistrationAction -&gt; Encoding
 AccountRegistrationAction -&gt; Value
@@ -635,13 +635,13 @@ toEncoding :: AccountRegistrationAction -&gt; Encoding
 $ctoEncoding :: AccountRegistrationAction -&gt; Encoding
 toJSON :: AccountRegistrationAction -&gt; Value
 $ctoJSON :: AccountRegistrationAction -&gt; Value
-</span><a href="#local-6989586621681202215"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202222"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-139"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">ConstructorTagModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.Opts.html#ToLower"><span class="hs-identifier hs-type">ToLower</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistrationAction"><span class="hs-identifier hs-type">AccountRegistrationAction</span></a></span><span>
 </span><span id="line-140"></span><span>
 </span><span id="line-141"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistrationAction"><span class="hs-identifier hs-type">AccountRegistrationAction</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-142"></span><span>  </span><span id="local-6989586621681202211"><span class="annot"><span class="annottext">toSamples :: Proxy AccountRegistrationAction
+</span><span id="line-142"></span><span>  </span><span id="local-6989586621681202218"><span class="annot"><span class="annottext">toSamples :: Proxy AccountRegistrationAction
 -&gt; [(Text, AccountRegistrationAction)]
-</span><a href="#local-6989586621681202211"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountRegistrationAction)]
+</span><a href="#local-6989586621681202218"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountRegistrationAction)]
 -&gt; Proxy AccountRegistrationAction
 -&gt; [(Text, AccountRegistrationAction)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
@@ -659,13 +659,13 @@ forall a. [a] -&gt; [(Text, a)]
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#Deregistered"><span class="hs-identifier hs-var">Deregistered</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-143"></span><span>
 </span><span id="line-144"></span><span class="hs-comment">-- | Account (de)registration</span><span>
-</span><span id="line-145"></span><span id="local-6989586621681202209"><span id="local-6989586621681202210"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountRegistration"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistration"><span class="hs-identifier hs-var">AccountRegistration</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountRegistration"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistration"><span class="hs-identifier hs-var">AccountRegistration</span></a></span></span><span>
+</span><span id="line-145"></span><span id="local-6989586621681202216"><span id="local-6989586621681202217"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountRegistration"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistration"><span class="hs-identifier hs-var">AccountRegistration</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountRegistration"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistration"><span class="hs-identifier hs-var">AccountRegistration</span></a></span></span><span>
 </span><span id="line-146"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountRegistrationAction"><span class="annot"><span class="annottext">AccountRegistration -&gt; AccountRegistrationAction
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountRegistrationAction"><span class="hs-identifier hs-var hs-var">_accountRegistrationAction</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistrationAction"><span class="hs-identifier hs-type">AccountRegistrationAction</span></a></span><span> </span><span class="hs-comment">-- ^ Action in the certificate</span><span>
 </span><span id="line-147"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountRegistrationTxHash"><span class="annot"><span class="annottext">AccountRegistration -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountRegistrationTxHash"><span class="hs-identifier hs-var hs-var">_accountRegistrationTxHash</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Hash of the transaction containing the (de)registration certificate</span><span>
 </span><span id="line-148"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-149"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202200"><span id="local-6989586621681202202"><span id="local-6989586621681202204"><span class="annot"><span class="annottext">Int -&gt; AccountRegistration -&gt; ShowS
+</span><span id="line-149"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202207"><span id="local-6989586621681202209"><span id="local-6989586621681202211"><span class="annot"><span class="annottext">Int -&gt; AccountRegistration -&gt; ShowS
 [AccountRegistration] -&gt; ShowS
 AccountRegistration -&gt; String
 (Int -&gt; AccountRegistration -&gt; ShowS)
@@ -680,7 +680,7 @@ show :: AccountRegistration -&gt; String
 $cshow :: AccountRegistration -&gt; String
 showsPrec :: Int -&gt; AccountRegistration -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountRegistration -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202196"><span id="local-6989586621681202198"><span class="annot"><span class="annottext">AccountRegistration -&gt; AccountRegistration -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202203"><span id="local-6989586621681202205"><span class="annot"><span class="annottext">AccountRegistration -&gt; AccountRegistration -&gt; Bool
 (AccountRegistration -&gt; AccountRegistration -&gt; Bool)
 -&gt; (AccountRegistration -&gt; AccountRegistration -&gt; Bool)
 -&gt; Eq AccountRegistration
@@ -699,7 +699,7 @@ forall a.
 $cto :: forall x. Rep AccountRegistration x -&gt; AccountRegistration
 $cfrom :: forall x. AccountRegistration -&gt; Rep AccountRegistration x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-150"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202190"><span id="local-6989586621681202192"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountRegistration]
+</span><span id="line-150"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202197"><span id="local-6989586621681202199"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountRegistration]
 Value -&gt; Parser AccountRegistration
 (Value -&gt; Parser AccountRegistration)
 -&gt; (Value -&gt; Parser [AccountRegistration])
@@ -710,7 +710,7 @@ parseJSONList :: Value -&gt; Parser [AccountRegistration]
 $cparseJSONList :: Value -&gt; Parser [AccountRegistration]
 parseJSON :: Value -&gt; Parser AccountRegistration
 $cparseJSON :: Value -&gt; Parser AccountRegistration
-</span><a href="#local-6989586621681202190"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202182"><span id="local-6989586621681202184"><span id="local-6989586621681202186"><span id="local-6989586621681202188"><span class="annot"><span class="annottext">[AccountRegistration] -&gt; Encoding
+</span><a href="#local-6989586621681202197"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202189"><span id="local-6989586621681202191"><span id="local-6989586621681202193"><span id="local-6989586621681202195"><span class="annot"><span class="annottext">[AccountRegistration] -&gt; Encoding
 [AccountRegistration] -&gt; Value
 AccountRegistration -&gt; Encoding
 AccountRegistration -&gt; Value
@@ -733,12 +733,12 @@ toEncoding :: AccountRegistration -&gt; Encoding
 $ctoEncoding :: AccountRegistration -&gt; Encoding
 toJSON :: AccountRegistration -&gt; Value
 $ctoJSON :: AccountRegistration -&gt; Value
-</span><a href="#local-6989586621681202182"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202189"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-151"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountRegistration&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistration"><span class="hs-identifier hs-type">AccountRegistration</span></a></span><span>
 </span><span id="line-152"></span><span>
 </span><span id="line-153"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountRegistration"><span class="hs-identifier hs-type">AccountRegistration</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-154"></span><span>  </span><span id="local-6989586621681202180"><span class="annot"><span class="annottext">toSamples :: Proxy AccountRegistration -&gt; [(Text, AccountRegistration)]
-</span><a href="#local-6989586621681202180"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountRegistration)]
+</span><span id="line-154"></span><span>  </span><span id="local-6989586621681202187"><span class="annot"><span class="annottext">toSamples :: Proxy AccountRegistration -&gt; [(Text, AccountRegistration)]
+</span><a href="#local-6989586621681202187"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountRegistration)]
 -&gt; Proxy AccountRegistration -&gt; [(Text, AccountRegistration)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountRegistration)]
@@ -771,13 +771,13 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-163"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-164"></span><span>
 </span><span id="line-165"></span><span class="hs-comment">-- | Withdrawal from an account</span><span>
-</span><span id="line-166"></span><span id="local-6989586621681202178"><span id="local-6989586621681202179"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountWithdrawal"><span class="hs-identifier hs-var">AccountWithdrawal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountWithdrawal"><span class="hs-identifier hs-var">AccountWithdrawal</span></a></span></span><span>
+</span><span id="line-166"></span><span id="local-6989586621681202185"><span id="local-6989586621681202186"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountWithdrawal"><span class="hs-identifier hs-var">AccountWithdrawal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountWithdrawal"><span class="hs-identifier hs-var">AccountWithdrawal</span></a></span></span><span>
 </span><span id="line-167"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountWithdrawalAmount"><span class="annot"><span class="annottext">AccountWithdrawal -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountWithdrawalAmount"><span class="hs-identifier hs-var hs-var">_accountWithdrawalAmount</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ Withdrawal amount in Lovelaces</span><span>
 </span><span id="line-168"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountWithdrawalTxHash"><span class="annot"><span class="annottext">AccountWithdrawal -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountWithdrawalTxHash"><span class="hs-identifier hs-var hs-var">_accountWithdrawalTxHash</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Hash of the transaction containing the withdrawal</span><span>
 </span><span id="line-169"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-170"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202169"><span id="local-6989586621681202171"><span id="local-6989586621681202173"><span class="annot"><span class="annottext">Int -&gt; AccountWithdrawal -&gt; ShowS
+</span><span id="line-170"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202176"><span id="local-6989586621681202178"><span id="local-6989586621681202180"><span class="annot"><span class="annottext">Int -&gt; AccountWithdrawal -&gt; ShowS
 [AccountWithdrawal] -&gt; ShowS
 AccountWithdrawal -&gt; String
 (Int -&gt; AccountWithdrawal -&gt; ShowS)
@@ -792,7 +792,7 @@ show :: AccountWithdrawal -&gt; String
 $cshow :: AccountWithdrawal -&gt; String
 showsPrec :: Int -&gt; AccountWithdrawal -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountWithdrawal -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202165"><span id="local-6989586621681202167"><span class="annot"><span class="annottext">AccountWithdrawal -&gt; AccountWithdrawal -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202172"><span id="local-6989586621681202174"><span class="annot"><span class="annottext">AccountWithdrawal -&gt; AccountWithdrawal -&gt; Bool
 (AccountWithdrawal -&gt; AccountWithdrawal -&gt; Bool)
 -&gt; (AccountWithdrawal -&gt; AccountWithdrawal -&gt; Bool)
 -&gt; Eq AccountWithdrawal
@@ -811,7 +811,7 @@ forall a.
 $cto :: forall x. Rep AccountWithdrawal x -&gt; AccountWithdrawal
 $cfrom :: forall x. AccountWithdrawal -&gt; Rep AccountWithdrawal x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-171"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202159"><span id="local-6989586621681202161"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountWithdrawal]
+</span><span id="line-171"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202166"><span id="local-6989586621681202168"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountWithdrawal]
 Value -&gt; Parser AccountWithdrawal
 (Value -&gt; Parser AccountWithdrawal)
 -&gt; (Value -&gt; Parser [AccountWithdrawal])
@@ -822,7 +822,7 @@ parseJSONList :: Value -&gt; Parser [AccountWithdrawal]
 $cparseJSONList :: Value -&gt; Parser [AccountWithdrawal]
 parseJSON :: Value -&gt; Parser AccountWithdrawal
 $cparseJSON :: Value -&gt; Parser AccountWithdrawal
-</span><a href="#local-6989586621681202159"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202151"><span id="local-6989586621681202153"><span id="local-6989586621681202155"><span id="local-6989586621681202157"><span class="annot"><span class="annottext">[AccountWithdrawal] -&gt; Encoding
+</span><a href="#local-6989586621681202166"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202158"><span id="local-6989586621681202160"><span id="local-6989586621681202162"><span id="local-6989586621681202164"><span class="annot"><span class="annottext">[AccountWithdrawal] -&gt; Encoding
 [AccountWithdrawal] -&gt; Value
 AccountWithdrawal -&gt; Encoding
 AccountWithdrawal -&gt; Value
@@ -845,12 +845,12 @@ toEncoding :: AccountWithdrawal -&gt; Encoding
 $ctoEncoding :: AccountWithdrawal -&gt; Encoding
 toJSON :: AccountWithdrawal -&gt; Value
 $ctoJSON :: AccountWithdrawal -&gt; Value
-</span><a href="#local-6989586621681202151"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202158"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-172"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountWithdrawal&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountWithdrawal"><span class="hs-identifier hs-type">AccountWithdrawal</span></a></span><span>
 </span><span id="line-173"></span><span>
 </span><span id="line-174"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountWithdrawal"><span class="hs-identifier hs-type">AccountWithdrawal</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-175"></span><span>  </span><span id="local-6989586621681202149"><span class="annot"><span class="annottext">toSamples :: Proxy AccountWithdrawal -&gt; [(Text, AccountWithdrawal)]
-</span><a href="#local-6989586621681202149"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountWithdrawal)]
+</span><span id="line-175"></span><span>  </span><span id="local-6989586621681202156"><span class="annot"><span class="annottext">toSamples :: Proxy AccountWithdrawal -&gt; [(Text, AccountWithdrawal)]
+</span><a href="#local-6989586621681202156"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountWithdrawal)]
 -&gt; Proxy AccountWithdrawal -&gt; [(Text, AccountWithdrawal)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountWithdrawal)]
@@ -883,13 +883,13 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-184"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-185"></span><span>
 </span><span id="line-186"></span><span class="hs-comment">-- | Account MIR (Move Instantaneous Reward)</span><span>
-</span><span id="line-187"></span><span id="local-6989586621681202147"><span id="local-6989586621681202148"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountMir"><span class="hs-identifier hs-var">AccountMir</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountMir"><span class="hs-identifier hs-var">AccountMir</span></a></span></span><span>
+</span><span id="line-187"></span><span id="local-6989586621681202154"><span id="local-6989586621681202155"></span></span><span class="hs-keyword">data</span><span> </span><span id="AccountMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountMir"><span class="hs-identifier hs-var">AccountMir</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AccountMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountMir"><span class="hs-identifier hs-var">AccountMir</span></a></span></span><span>
 </span><span id="line-188"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_accountMirAmount"><span class="annot"><span class="annottext">AccountMir -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountMirAmount"><span class="hs-identifier hs-var hs-var">_accountMirAmount</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ MIR amount in Lovelaces</span><span>
 </span><span id="line-189"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_accountMirTxHash"><span class="annot"><span class="annottext">AccountMir -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_accountMirTxHash"><span class="hs-identifier hs-var hs-var">_accountMirTxHash</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Hash of the transaction containing the MIR</span><span>
 </span><span id="line-190"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-191"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202138"><span id="local-6989586621681202140"><span id="local-6989586621681202142"><span class="annot"><span class="annottext">Int -&gt; AccountMir -&gt; ShowS
+</span><span id="line-191"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202145"><span id="local-6989586621681202147"><span id="local-6989586621681202149"><span class="annot"><span class="annottext">Int -&gt; AccountMir -&gt; ShowS
 [AccountMir] -&gt; ShowS
 AccountMir -&gt; String
 (Int -&gt; AccountMir -&gt; ShowS)
@@ -904,7 +904,7 @@ show :: AccountMir -&gt; String
 $cshow :: AccountMir -&gt; String
 showsPrec :: Int -&gt; AccountMir -&gt; ShowS
 $cshowsPrec :: Int -&gt; AccountMir -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202134"><span id="local-6989586621681202136"><span class="annot"><span class="annottext">AccountMir -&gt; AccountMir -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202141"><span id="local-6989586621681202143"><span class="annot"><span class="annottext">AccountMir -&gt; AccountMir -&gt; Bool
 (AccountMir -&gt; AccountMir -&gt; Bool)
 -&gt; (AccountMir -&gt; AccountMir -&gt; Bool) -&gt; Eq AccountMir
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -921,7 +921,7 @@ forall a.
 $cto :: forall x. Rep AccountMir x -&gt; AccountMir
 $cfrom :: forall x. AccountMir -&gt; Rep AccountMir x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-192"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202128"><span id="local-6989586621681202130"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountMir]
+</span><span id="line-192"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202135"><span id="local-6989586621681202137"><span class="annot"><span class="annottext">Value -&gt; Parser [AccountMir]
 Value -&gt; Parser AccountMir
 (Value -&gt; Parser AccountMir)
 -&gt; (Value -&gt; Parser [AccountMir]) -&gt; FromJSON AccountMir
@@ -931,7 +931,7 @@ parseJSONList :: Value -&gt; Parser [AccountMir]
 $cparseJSONList :: Value -&gt; Parser [AccountMir]
 parseJSON :: Value -&gt; Parser AccountMir
 $cparseJSON :: Value -&gt; Parser AccountMir
-</span><a href="#local-6989586621681202128"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202120"><span id="local-6989586621681202122"><span id="local-6989586621681202124"><span id="local-6989586621681202126"><span class="annot"><span class="annottext">[AccountMir] -&gt; Encoding
+</span><a href="#local-6989586621681202135"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202127"><span id="local-6989586621681202129"><span id="local-6989586621681202131"><span id="local-6989586621681202133"><span class="annot"><span class="annottext">[AccountMir] -&gt; Encoding
 [AccountMir] -&gt; Value
 AccountMir -&gt; Encoding
 AccountMir -&gt; Value
@@ -954,12 +954,12 @@ toEncoding :: AccountMir -&gt; Encoding
 $ctoEncoding :: AccountMir -&gt; Encoding
 toJSON :: AccountMir -&gt; Value
 $ctoJSON :: AccountMir -&gt; Value
-</span><a href="#local-6989586621681202120"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202127"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-193"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_accountMir&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountMir"><span class="hs-identifier hs-type">AccountMir</span></a></span><span>
 </span><span id="line-194"></span><span>
 </span><span id="line-195"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AccountMir"><span class="hs-identifier hs-type">AccountMir</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-196"></span><span>  </span><span id="local-6989586621681202118"><span class="annot"><span class="annottext">toSamples :: Proxy AccountMir -&gt; [(Text, AccountMir)]
-</span><a href="#local-6989586621681202118"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountMir)] -&gt; Proxy AccountMir -&gt; [(Text, AccountMir)]
+</span><span id="line-196"></span><span>  </span><span id="local-6989586621681202125"><span class="annot"><span class="annottext">toSamples :: Proxy AccountMir -&gt; [(Text, AccountMir)]
+</span><a href="#local-6989586621681202125"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AccountMir)] -&gt; Proxy AccountMir -&gt; [(Text, AccountMir)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AccountMir)] -&gt; Proxy AccountMir -&gt; [(Text, AccountMir)])
 -&gt; [(Text, AccountMir)] -&gt; Proxy AccountMir -&gt; [(Text, AccountMir)]
@@ -988,9 +988,9 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-205"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-206"></span><span>
 </span><span id="line-207"></span><span class="hs-comment">-- | Address associated with an account address</span><span>
-</span><span id="line-208"></span><span id="local-6989586621681202116"><span id="local-6989586621681202117"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="AddressAssociated"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AddressAssociated"><span class="hs-identifier hs-var">AddressAssociated</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressAssociated"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AddressAssociated"><span class="hs-identifier hs-var">AddressAssociated</span></a></span></span><span> </span><span class="hs-special">{</span><span id="_addressAssociatedAddress"><span class="annot"><span class="annottext">AddressAssociated -&gt; Address
+</span><span id="line-208"></span><span id="local-6989586621681202123"><span id="local-6989586621681202124"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="AddressAssociated"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AddressAssociated"><span class="hs-identifier hs-var">AddressAssociated</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressAssociated"><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AddressAssociated"><span class="hs-identifier hs-var">AddressAssociated</span></a></span></span><span> </span><span class="hs-special">{</span><span id="_addressAssociatedAddress"><span class="annot"><span class="annottext">AddressAssociated -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Accounts.html#_addressAssociatedAddress"><span class="hs-identifier hs-var hs-var">_addressAssociatedAddress</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-209"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202110"><span id="local-6989586621681202112"><span class="annot"><span class="annottext">AddressAssociated -&gt; AddressAssociated -&gt; Bool
+</span><span id="line-209"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202117"><span id="local-6989586621681202119"><span class="annot"><span class="annottext">AddressAssociated -&gt; AddressAssociated -&gt; Bool
 (AddressAssociated -&gt; AddressAssociated -&gt; Bool)
 -&gt; (AddressAssociated -&gt; AddressAssociated -&gt; Bool)
 -&gt; Eq AddressAssociated
@@ -999,7 +999,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: AddressAssociated -&gt; AddressAssociated -&gt; Bool
 == :: AddressAssociated -&gt; AddressAssociated -&gt; Bool
 $c== :: AddressAssociated -&gt; AddressAssociated -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202104"><span id="local-6989586621681202106"><span id="local-6989586621681202108"><span class="annot"><span class="annottext">Int -&gt; AddressAssociated -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202111"><span id="local-6989586621681202113"><span id="local-6989586621681202115"><span class="annot"><span class="annottext">Int -&gt; AddressAssociated -&gt; ShowS
 [AddressAssociated] -&gt; ShowS
 AddressAssociated -&gt; String
 (Int -&gt; AddressAssociated -&gt; ShowS)
@@ -1024,7 +1024,7 @@ forall a.
 $cto :: forall x. Rep AddressAssociated x -&gt; AddressAssociated
 $cfrom :: forall x. AddressAssociated -&gt; Rep AddressAssociated x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-210"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202098"><span id="local-6989586621681202100"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressAssociated]
+</span><span id="line-210"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202105"><span id="local-6989586621681202107"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressAssociated]
 Value -&gt; Parser AddressAssociated
 (Value -&gt; Parser AddressAssociated)
 -&gt; (Value -&gt; Parser [AddressAssociated])
@@ -1035,7 +1035,7 @@ parseJSONList :: Value -&gt; Parser [AddressAssociated]
 $cparseJSONList :: Value -&gt; Parser [AddressAssociated]
 parseJSON :: Value -&gt; Parser AddressAssociated
 $cparseJSON :: Value -&gt; Parser AddressAssociated
-</span><a href="#local-6989586621681202098"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202090"><span id="local-6989586621681202092"><span id="local-6989586621681202094"><span id="local-6989586621681202096"><span class="annot"><span class="annottext">[AddressAssociated] -&gt; Encoding
+</span><a href="#local-6989586621681202105"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202097"><span id="local-6989586621681202099"><span id="local-6989586621681202101"><span id="local-6989586621681202103"><span class="annot"><span class="annottext">[AddressAssociated] -&gt; Encoding
 [AddressAssociated] -&gt; Value
 AddressAssociated -&gt; Encoding
 AddressAssociated -&gt; Value
@@ -1058,12 +1058,12 @@ toEncoding :: AddressAssociated -&gt; Encoding
 $ctoEncoding :: AddressAssociated -&gt; Encoding
 toJSON :: AddressAssociated -&gt; Value
 $ctoJSON :: AddressAssociated -&gt; Value
-</span><a href="#local-6989586621681202090"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681202097"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-211"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_addressAssociated&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AddressAssociated"><span class="hs-identifier hs-type">AddressAssociated</span></a></span><span>
 </span><span id="line-212"></span><span>
 </span><span id="line-213"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Accounts.html#AddressAssociated"><span class="hs-identifier hs-type">AddressAssociated</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-214"></span><span>  </span><span id="local-6989586621681202088"><span class="annot"><span class="annottext">toSamples :: Proxy AddressAssociated -&gt; [(Text, AddressAssociated)]
-</span><a href="#local-6989586621681202088"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressAssociated)]
+</span><span id="line-214"></span><span>  </span><span id="local-6989586621681202095"><span class="annot"><span class="annottext">toSamples :: Proxy AddressAssociated -&gt; [(Text, AddressAssociated)]
+</span><a href="#local-6989586621681202095"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressAssociated)]
 -&gt; Proxy AddressAssociated -&gt; [(Text, AddressAssociated)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AddressAssociated)]

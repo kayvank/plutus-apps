@@ -155,13 +155,13 @@ forall a.
 </span><a href="Test.Cardano.Chain.Slotting.Gen.html#genWithEpochSlots"><span class="hs-identifier hs-var">genWithEpochSlots</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; EpochSlots -&gt; Gen Header
 </span><a href="Test.Cardano.Chain.Block.Gen.html#genHeader"><span class="hs-identifier hs-var">genHeader</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-108"></span><span>    </span><span class="annot"><span class="annottext">WithEpochSlots Header -&gt; PropertyT IO ()
-</span><a href="#local-6989586621679487822"><span class="hs-identifier hs-var">roundTripsHeaderCompat</span></a></span><span>
+</span><a href="#local-6989586621679488055"><span class="hs-identifier hs-var">roundTripsHeaderCompat</span></a></span><span>
 </span><span id="line-109"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-110"></span><span>    </span><span class="annot"><a href="#local-6989586621679487822"><span class="hs-identifier hs-type">roundTripsHeaderCompat</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Header</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.PropertyT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-111"></span><span>    </span><span id="local-6989586621679487822"><span class="annot"><span class="annottext">roundTripsHeaderCompat :: WithEpochSlots Header -&gt; PropertyT IO ()
-</span><a href="#local-6989586621679487822"><span class="hs-identifier hs-var hs-var">roundTripsHeaderCompat</span></a></span></span><span> </span><span id="local-6989586621679487821"><span class="annot"><span class="annottext">esh :: WithEpochSlots Header
-</span><a href="#local-6989586621679487821"><span class="hs-identifier hs-var">esh</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span id="local-6989586621679487820"><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487820"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="annot"><span class="annottext">Header
+</span><span id="line-110"></span><span>    </span><span class="annot"><a href="#local-6989586621679488055"><span class="hs-identifier hs-type">roundTripsHeaderCompat</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Header</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.PropertyT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-111"></span><span>    </span><span id="local-6989586621679488055"><span class="annot"><span class="annottext">roundTripsHeaderCompat :: WithEpochSlots Header -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679488055"><span class="hs-identifier hs-var hs-var">roundTripsHeaderCompat</span></a></span></span><span> </span><span id="local-6989586621679488054"><span class="annot"><span class="annottext">esh :: WithEpochSlots Header
+</span><a href="#local-6989586621679488054"><span class="hs-identifier hs-var">esh</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span id="local-6989586621679488053"><span class="annot"><span class="annottext">EpochSlots
+</span><a href="#local-6989586621679488053"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="annot"><span class="annottext">Header
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-112"></span><span>      </span><span class="annot"><span class="annottext">WithEpochSlots Header
 -&gt; (WithEpochSlots Header -&gt; ByteString)
@@ -173,7 +173,7 @@ forall (f :: * -&gt; *) a b (m :: * -&gt; *).
 a -&gt; (a -&gt; b) -&gt; (b -&gt; f a) -&gt; m ()
 </span><a href="../../../../cardano-prelude-test/html/src"><span class="hs-identifier hs-var">trippingBuildable</span></a></span><span>
 </span><span id="line-113"></span><span>        </span><span class="annot"><span class="annottext">WithEpochSlots Header
-</span><a href="#local-6989586621679487821"><span class="hs-identifier hs-var">esh</span></a></span><span>
+</span><a href="#local-6989586621679488054"><span class="hs-identifier hs-var">esh</span></a></span><span>
 </span><span id="line-114"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serializeEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Encoding -&gt; ByteString)
 -&gt; (WithEpochSlots Header -&gt; Encoding)
@@ -184,7 +184,7 @@ Category cat =&gt;
 cat b c -&gt; cat a b -&gt; cat a c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots -&gt; Header -&gt; Encoding
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">toCBORHeaderToHash</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487820"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Header -&gt; Encoding)
+</span><a href="#local-6989586621679488053"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Header -&gt; Encoding)
 -&gt; (WithEpochSlots Header -&gt; Header)
 -&gt; WithEpochSlots Header
 -&gt; Encoding
@@ -201,7 +201,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">EpochSlots -&gt; Header -&gt; WithEpochSlots Header
 forall a. EpochSlots -&gt; a -&gt; WithEpochSlots a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">WithEpochSlots</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487820"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Header -&gt; WithEpochSlots Header)
+</span><a href="#local-6989586621679488053"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Header -&gt; WithEpochSlots Header)
 -&gt; (Maybe Header -&gt; Header)
 -&gt; Maybe Header
 -&gt; WithEpochSlots Header
@@ -230,7 +230,7 @@ Text
 </span><span class="hs-string">&quot;Header&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">EpochSlots -&gt; Decoder s (Maybe Header)
 forall s. EpochSlots -&gt; Decoder s (Maybe Header)
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">fromCBORHeaderToHash</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487820"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488053"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-117"></span><span>        </span><span class="hs-special">)</span><span>
 </span><span id="line-118"></span><span>
 </span><span id="line-119"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
@@ -257,13 +257,13 @@ forall a. (ProtocolMagicId -&gt; Gen a) -&gt; Gen a
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">feedPM</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; Gen (WithEpochSlots Block)
 </span><a href="Test.Cardano.Chain.Block.Gen.html#genBlockWithEpochSlots"><span class="hs-identifier hs-var">genBlockWithEpochSlots</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-129"></span><span>    </span><span class="annot"><span class="annottext">WithEpochSlots Block -&gt; PropertyT IO ()
-</span><a href="#local-6989586621679487815"><span class="hs-identifier hs-var">roundTripsBlockCompat</span></a></span><span>
+</span><a href="#local-6989586621679488048"><span class="hs-identifier hs-var">roundTripsBlockCompat</span></a></span><span>
 </span><span id="line-130"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-131"></span><span>    </span><span class="annot"><a href="#local-6989586621679487815"><span class="hs-identifier hs-type">roundTripsBlockCompat</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.PropertyT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-132"></span><span>    </span><span id="local-6989586621679487815"><span class="annot"><span class="annottext">roundTripsBlockCompat :: WithEpochSlots Block -&gt; PropertyT IO ()
-</span><a href="#local-6989586621679487815"><span class="hs-identifier hs-var hs-var">roundTripsBlockCompat</span></a></span></span><span> </span><span id="local-6989586621679487814"><span class="annot"><span class="annottext">esb :: WithEpochSlots Block
-</span><a href="#local-6989586621679487814"><span class="hs-identifier hs-var">esb</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span id="local-6989586621679487813"><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487813"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="annot"><span class="annottext">Block
+</span><span id="line-131"></span><span>    </span><span class="annot"><a href="#local-6989586621679488048"><span class="hs-identifier hs-type">roundTripsBlockCompat</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.PropertyT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-132"></span><span>    </span><span id="local-6989586621679488048"><span class="annot"><span class="annottext">roundTripsBlockCompat :: WithEpochSlots Block -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679488048"><span class="hs-identifier hs-var hs-var">roundTripsBlockCompat</span></a></span></span><span> </span><span id="local-6989586621679488047"><span class="annot"><span class="annottext">esb :: WithEpochSlots Block
+</span><a href="#local-6989586621679488047"><span class="hs-identifier hs-var">esb</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">WithEpochSlots</span></a></span><span> </span><span id="local-6989586621679488046"><span class="annot"><span class="annottext">EpochSlots
+</span><a href="#local-6989586621679488046"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="annot"><span class="annottext">Block
 </span><span class="hs-identifier">_</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-133"></span><span>      </span><span class="annot"><span class="annottext">WithEpochSlots Block
 -&gt; (WithEpochSlots Block -&gt; ByteString)
@@ -275,7 +275,7 @@ forall (f :: * -&gt; *) a b (m :: * -&gt; *).
 a -&gt; (a -&gt; b) -&gt; (b -&gt; f a) -&gt; m ()
 </span><a href="../../../../cardano-prelude-test/html/src"><span class="hs-identifier hs-var">trippingBuildable</span></a></span><span>
 </span><span id="line-134"></span><span>        </span><span class="annot"><span class="annottext">WithEpochSlots Block
-</span><a href="#local-6989586621679487814"><span class="hs-identifier hs-var">esb</span></a></span><span>
+</span><a href="#local-6989586621679488047"><span class="hs-identifier hs-var">esb</span></a></span><span>
 </span><span id="line-135"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serializeEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Encoding -&gt; ByteString)
 -&gt; (WithEpochSlots Block -&gt; Encoding)
@@ -287,7 +287,7 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots -&gt; Block -&gt; Encoding
 forall a. EpochSlots -&gt; ABlock a -&gt; Encoding
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">toCBORABOBBlock</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487813"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; Encoding)
+</span><a href="#local-6989586621679488046"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; Encoding)
 -&gt; (WithEpochSlots Block -&gt; Block)
 -&gt; WithEpochSlots Block
 -&gt; Encoding
@@ -304,7 +304,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">EpochSlots -&gt; Block -&gt; WithEpochSlots Block
 forall a. EpochSlots -&gt; a -&gt; WithEpochSlots a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">WithEpochSlots</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487813"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; WithEpochSlots Block)
+</span><a href="#local-6989586621679488046"><span class="hs-identifier hs-var">es</span></a></span><span> </span><span class="annot"><span class="annottext">(Block -&gt; WithEpochSlots Block)
 -&gt; (Maybe Block -&gt; Block) -&gt; Maybe Block -&gt; WithEpochSlots Block
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
 Category cat =&gt;
@@ -331,7 +331,7 @@ Text
 </span><span class="hs-string">&quot;Block&quot;</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">EpochSlots -&gt; Decoder s (Maybe Block)
 forall s. EpochSlots -&gt; Decoder s (Maybe Block)
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">fromCBORABOBBlock</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679487813"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488046"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-138"></span><span>        </span><span class="hs-special">)</span><span>
 </span><span id="line-139"></span><span>
 </span><span id="line-140"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
@@ -409,16 +409,16 @@ TestLimit -&gt; Gen a -&gt; (a -&gt; PropertyT IO ()) -&gt; TSProperty
 -&gt; Gen (ProtocolMagicId, ABoundaryBlock ())
 forall a. (ProtocolMagicId -&gt; Gen a) -&gt; Gen a
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">feedPM</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; Gen (ProtocolMagicId, ABoundaryBlock ())
-</span><a href="#local-6989586621679487806"><span class="hs-identifier hs-var">genBVDWithPM</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488039"><span class="hs-identifier hs-var">genBVDWithPM</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-168"></span><span>    </span><span class="annot"><span class="annottext">(ProtocolMagicId, ABoundaryBlock ()) -&gt; PropertyT IO ()
-</span><a href="#local-6989586621679487805"><span class="hs-identifier hs-var">roundTripsBVD</span></a></span><span>
+</span><a href="#local-6989586621679488038"><span class="hs-identifier hs-var">roundTripsBVD</span></a></span><span>
 </span><span id="line-169"></span><span>  </span><span class="hs-keyword">where</span><span>
 </span><span id="line-170"></span><span>    </span><span class="hs-comment">-- We ignore the size of the BVD here, since calculating it is annoying.</span><span>
-</span><span id="line-171"></span><span>    </span><span class="annot"><a href="#local-6989586621679487805"><span class="hs-identifier hs-type">roundTripsBVD</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.PropertyT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-172"></span><span>    </span><span id="local-6989586621679487805"><span class="annot"><span class="annottext">roundTripsBVD :: (ProtocolMagicId, ABoundaryBlock ()) -&gt; PropertyT IO ()
-</span><a href="#local-6989586621679487805"><span class="hs-identifier hs-var hs-var">roundTripsBVD</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679487804"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487804"><span class="hs-identifier hs-var">pm</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679487803"><span class="annot"><span class="annottext">ABoundaryBlock ()
-</span><a href="#local-6989586621679487803"><span class="hs-identifier hs-var">bvd</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-171"></span><span>    </span><span class="annot"><a href="#local-6989586621679488038"><span class="hs-identifier hs-type">roundTripsBVD</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.PropertyT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-172"></span><span>    </span><span id="local-6989586621679488038"><span class="annot"><span class="annottext">roundTripsBVD :: (ProtocolMagicId, ABoundaryBlock ()) -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679488038"><span class="hs-identifier hs-var hs-var">roundTripsBVD</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679488037"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679488037"><span class="hs-identifier hs-var">pm</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679488036"><span class="annot"><span class="annottext">ABoundaryBlock ()
+</span><a href="#local-6989586621679488036"><span class="hs-identifier hs-var">bvd</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-173"></span><span>      </span><span class="annot"><span class="annottext">ABoundaryBlock ()
 -&gt; (ABoundaryBlock () -&gt; ByteString)
 -&gt; (ByteString -&gt; Either DecoderError (ABoundaryBlock ()))
@@ -429,7 +429,7 @@ forall (f :: * -&gt; *) a b (m :: * -&gt; *).
 a -&gt; (a -&gt; b) -&gt; (b -&gt; f a) -&gt; m ()
 </span><a href="../../../../cardano-prelude-test/html/src"><span class="hs-identifier hs-var">trippingBuildable</span></a></span><span>
 </span><span id="line-174"></span><span>        </span><span class="annot"><span class="annottext">ABoundaryBlock ()
-</span><a href="#local-6989586621679487803"><span class="hs-identifier hs-var">bvd</span></a></span><span>
+</span><a href="#local-6989586621679488036"><span class="hs-identifier hs-var">bvd</span></a></span><span>
 </span><span id="line-175"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serializeEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Encoding -&gt; ByteString)
 -&gt; (ABoundaryBlock () -&gt; Encoding)
@@ -441,14 +441,14 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; ABoundaryBlock () -&gt; Encoding
 forall a. ProtocolMagicId -&gt; ABoundaryBlock a -&gt; Encoding
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">toCBORABoundaryBlock</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487804"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488037"><span class="hs-identifier hs-var">pm</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-176"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(ABoundaryBlock ByteSpan -&gt; ABoundaryBlock ())
 -&gt; Either DecoderError (ABoundaryBlock ByteSpan)
 -&gt; Either DecoderError (ABoundaryBlock ())
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ABoundaryBlock () -&gt; ABoundaryBlock ()
 forall a. ABoundaryBlock a -&gt; ABoundaryBlock a
-</span><a href="#local-6989586621679487802"><span class="hs-identifier hs-var">dropSize</span></a></span><span> </span><span class="annot"><span class="annottext">(ABoundaryBlock () -&gt; ABoundaryBlock ())
+</span><a href="#local-6989586621679488035"><span class="hs-identifier hs-var">dropSize</span></a></span><span> </span><span class="annot"><span class="annottext">(ABoundaryBlock () -&gt; ABoundaryBlock ())
 -&gt; (ABoundaryBlock ByteSpan -&gt; ABoundaryBlock ())
 -&gt; ABoundaryBlock ByteSpan
 -&gt; ABoundaryBlock ()
@@ -476,10 +476,10 @@ Text
 </span><span class="hs-string">&quot;BoundaryBlock&quot;</span></span><span> </span><span class="annot"><span class="annottext">forall s. Decoder s (ABoundaryBlock ByteSpan)
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">fromCBORABoundaryBlock</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-177"></span><span>
-</span><span id="line-178"></span><span>    </span><span class="annot"><a href="#local-6989586621679487806"><span class="hs-identifier hs-type">genBVDWithPM</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-179"></span><span>    </span><span id="local-6989586621679487806"><span class="annot"><span class="annottext">genBVDWithPM :: ProtocolMagicId -&gt; Gen (ProtocolMagicId, ABoundaryBlock ())
-</span><a href="#local-6989586621679487806"><span class="hs-identifier hs-var hs-var">genBVDWithPM</span></a></span></span><span> </span><span id="local-6989586621679487799"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487799"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(ProtocolMagicId
+</span><span id="line-178"></span><span>    </span><span class="annot"><a href="#local-6989586621679488039"><span class="hs-identifier hs-type">genBVDWithPM</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">H.Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">ProtocolMagicId</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-179"></span><span>    </span><span id="local-6989586621679488039"><span class="annot"><span class="annottext">genBVDWithPM :: ProtocolMagicId -&gt; Gen (ProtocolMagicId, ABoundaryBlock ())
+</span><a href="#local-6989586621679488039"><span class="hs-identifier hs-var hs-var">genBVDWithPM</span></a></span></span><span> </span><span id="local-6989586621679488032"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679488032"><span class="hs-identifier hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(ProtocolMagicId
  -&gt; ABoundaryBlock () -&gt; (ProtocolMagicId, ABoundaryBlock ()))
 -&gt; GenT Identity ProtocolMagicId
 -&gt; GenT
@@ -489,7 +489,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId -&gt; GenT Identity ProtocolMagicId
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487799"><span class="hs-identifier hs-var">pm</span></a></span><span> </span><span class="annot"><span class="annottext">GenT
+</span><a href="#local-6989586621679488032"><span class="hs-identifier hs-var">pm</span></a></span><span> </span><span class="annot"><span class="annottext">GenT
   Identity
   (ABoundaryBlock () -&gt; (ProtocolMagicId, ABoundaryBlock ()))
 -&gt; GenT Identity (ABoundaryBlock ())
@@ -498,11 +498,11 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (ABoundaryBlock ())
 </span><a href="Test.Cardano.Chain.Block.Gen.html#genBoundaryBlock"><span class="hs-identifier hs-var">genBoundaryBlock</span></a></span><span>
 </span><span id="line-180"></span><span>
-</span><span id="line-181"></span><span>    </span><span id="local-6989586621679487933"><span class="annot"><a href="#local-6989586621679487802"><span class="hs-identifier hs-type">dropSize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679487933"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679487933"><span class="hs-identifier hs-type">a</span></a></span></span><span>
-</span><span id="line-182"></span><span>    </span><span id="local-6989586621679487802"><span class="annot"><span class="annottext">dropSize :: ABoundaryBlock a -&gt; ABoundaryBlock a
-</span><a href="#local-6989586621679487802"><span class="hs-identifier hs-var hs-var">dropSize</span></a></span></span><span> </span><span id="local-6989586621679487797"><span class="annot"><span class="annottext">ABoundaryBlock a
-</span><a href="#local-6989586621679487797"><span class="hs-identifier hs-var">bvd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ABoundaryBlock a
-</span><a href="#local-6989586621679487797"><span class="hs-identifier hs-var">bvd</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">boundaryBlockLength :: Int64
+</span><span id="line-181"></span><span>    </span><span id="local-6989586621679488166"><span class="annot"><a href="#local-6989586621679488035"><span class="hs-identifier hs-type">dropSize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679488166"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ABoundaryBlock</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679488166"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-182"></span><span>    </span><span id="local-6989586621679488035"><span class="annot"><span class="annottext">dropSize :: ABoundaryBlock a -&gt; ABoundaryBlock a
+</span><a href="#local-6989586621679488035"><span class="hs-identifier hs-var hs-var">dropSize</span></a></span></span><span> </span><span id="local-6989586621679488030"><span class="annot"><span class="annottext">ABoundaryBlock a
+</span><a href="#local-6989586621679488030"><span class="hs-identifier hs-var">bvd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ABoundaryBlock a
+</span><a href="#local-6989586621679488030"><span class="hs-identifier hs-var">bvd</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">boundaryBlockLength :: Int64
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">boundaryBlockLength</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int64
 </span><span class="hs-number">0</span></span><span class="hs-special">}</span><span>
 </span><span id="line-183"></span><span>
@@ -720,9 +720,9 @@ a -&gt; m ()
 </span><a href="Test.Cardano.Chain.Slotting.Example.html#exampleSlotNumber"><span class="hs-identifier hs-var">exampleSlotNumber</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
 </span><a href="Test.Cardano.Chain.Block.CBOR.html#exampleEs"><span class="hs-identifier hs-var">exampleEs</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-272"></span><span>    </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487779"><span class="hs-identifier hs-var">delegateSk</span></a></span><span>
+</span><a href="#local-6989586621679488012"><span class="hs-identifier hs-var">delegateSk</span></a></span><span>
 </span><span id="line-273"></span><span>    </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679487778"><span class="hs-identifier hs-var">certificate</span></a></span><span>
+</span><a href="#local-6989586621679488011"><span class="hs-identifier hs-var">certificate</span></a></span><span>
 </span><span id="line-274"></span><span>    </span><span class="annot"><span class="annottext">Body
 </span><a href="Test.Cardano.Chain.Block.CBOR.html#exampleBody"><span class="hs-identifier hs-var">exampleBody</span></a></span><span>
 </span><span id="line-275"></span><span>    </span><span class="annot"><span class="annottext">ProtocolVersion
@@ -730,80 +730,80 @@ a -&gt; m ()
 </span><span id="line-276"></span><span>    </span><span class="annot"><span class="annottext">SoftwareVersion
 </span><a href="Test.Cardano.Chain.Update.Example.html#exampleSoftwareVersion"><span class="hs-identifier hs-var">Update.exampleSoftwareVersion</span></a></span><span>
 </span><span id="line-277"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-278"></span><span>    </span><span id="local-6989586621679487775"><span class="annot"><span class="annottext">pm :: ProtocolMagicId
-</span><a href="#local-6989586621679487775"><span class="hs-identifier hs-var hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; ProtocolMagicId
+</span><span id="line-278"></span><span>    </span><span id="local-6989586621679488008"><span class="annot"><span class="annottext">pm :: ProtocolMagicId
+</span><a href="#local-6989586621679488008"><span class="hs-identifier hs-var hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; ProtocolMagicId
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">ProtocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">7</span></span><span>
-</span><span id="line-279"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621679487779"><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487779"><span class="hs-identifier hs-var">delegateSk</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679487774"><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487774"><span class="hs-identifier hs-var">issuerSk</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; [SigningKey]
+</span><span id="line-279"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621679488012"><span class="annot"><span class="annottext">SigningKey
+</span><a href="#local-6989586621679488012"><span class="hs-identifier hs-var">delegateSk</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679488007"><span class="annot"><span class="annottext">SigningKey
+</span><a href="#local-6989586621679488007"><span class="hs-identifier hs-var">issuerSk</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; [SigningKey]
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">exampleSigningKeys</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">5</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">2</span></span><span>
-</span><span id="line-280"></span><span>    </span><span id="local-6989586621679487778"><span class="annot"><span class="annottext">certificate :: Certificate
-</span><a href="#local-6989586621679487778"><span class="hs-identifier hs-var hs-var">certificate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-280"></span><span>    </span><span id="local-6989586621679488011"><span class="annot"><span class="annottext">certificate :: Certificate
+</span><a href="#local-6989586621679488011"><span class="hs-identifier hs-var hs-var">certificate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-281"></span><span>      </span><span class="annot"><span class="annottext">ProtocolMagicId
 -&gt; VerificationKey -&gt; EpochNumber -&gt; SafeSigner -&gt; Certificate
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Delegation.signCertificate</span></a></span><span>
 </span><span id="line-282"></span><span>        </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487775"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679488008"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-283"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SigningKey -&gt; VerificationKey
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">toVerification</span></a></span><span> </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487779"><span class="hs-identifier hs-var">delegateSk</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488012"><span class="hs-identifier hs-var">delegateSk</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-284"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; EpochNumber
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">EpochNumber</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">5</span></span><span class="hs-special">)</span><span>
 </span><span id="line-285"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SigningKey -&gt; SafeSigner
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">noPassSafeSigner</span></a></span><span> </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487774"><span class="hs-identifier hs-var">issuerSk</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488007"><span class="hs-identifier hs-var">issuerSk</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-286"></span><span>
 </span><span id="line-287"></span><span class="annot"><a href="Test.Cardano.Chain.Block.CBOR.html#exampleBlockSignature"><span class="hs-identifier hs-type">exampleBlockSignature</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">BlockSignature</span></a></span><span>
 </span><span id="line-288"></span><span id="exampleBlockSignature"><span class="annot"><span class="annottext">exampleBlockSignature :: BlockSignature
 </span><a href="Test.Cardano.Chain.Block.CBOR.html#exampleBlockSignature"><span class="hs-identifier hs-var hs-var">exampleBlockSignature</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; Signature ToSign -&gt; BlockSignature
 forall a. ACertificate a -&gt; Signature ToSign -&gt; ABlockSignature a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">ABlockSignature</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679487770"><span class="hs-identifier hs-var">cert</span></a></span><span> </span><span class="annot"><span class="annottext">Signature ToSign
-</span><a href="#local-6989586621679487769"><span class="hs-identifier hs-var">sig</span></a></span><span>
+</span><a href="#local-6989586621679488003"><span class="hs-identifier hs-var">cert</span></a></span><span> </span><span class="annot"><span class="annottext">Signature ToSign
+</span><a href="#local-6989586621679488002"><span class="hs-identifier hs-var">sig</span></a></span><span>
 </span><span id="line-289"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-290"></span><span>    </span><span id="local-6989586621679487770"><span class="annot"><span class="annottext">cert :: Certificate
-</span><a href="#local-6989586621679487770"><span class="hs-identifier hs-var hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-290"></span><span>    </span><span id="local-6989586621679488003"><span class="annot"><span class="annottext">cert :: Certificate
+</span><a href="#local-6989586621679488003"><span class="hs-identifier hs-var hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-291"></span><span>      </span><span class="annot"><span class="annottext">ProtocolMagicId
 -&gt; VerificationKey -&gt; EpochNumber -&gt; SafeSigner -&gt; Certificate
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Delegation.signCertificate</span></a></span><span>
 </span><span id="line-292"></span><span>        </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487768"><span class="hs-identifier hs-var">pm</span></a></span><span>
+</span><a href="#local-6989586621679488001"><span class="hs-identifier hs-var">pm</span></a></span><span>
 </span><span id="line-293"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SigningKey -&gt; VerificationKey
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">toVerification</span></a></span><span> </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487767"><span class="hs-identifier hs-var">delegateSK</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679488000"><span class="hs-identifier hs-var">delegateSK</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-294"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; EpochNumber
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">EpochNumber</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">5</span></span><span class="hs-special">)</span><span>
 </span><span id="line-295"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SigningKey -&gt; SafeSigner
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">noPassSafeSigner</span></a></span><span> </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487766"><span class="hs-identifier hs-var">issuerSK</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679487999"><span class="hs-identifier hs-var">issuerSK</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-296"></span><span>
-</span><span id="line-297"></span><span>    </span><span id="local-6989586621679487769"><span class="annot"><span class="annottext">sig :: Signature ToSign
-</span><a href="#local-6989586621679487769"><span class="hs-identifier hs-var hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
+</span><span id="line-297"></span><span>    </span><span id="local-6989586621679488002"><span class="annot"><span class="annottext">sig :: Signature ToSign
+</span><a href="#local-6989586621679488002"><span class="hs-identifier hs-var hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
 -&gt; SignTag -&gt; SigningKey -&gt; ToSign -&gt; Signature ToSign
 forall a.
 ToCBOR a =&gt;
 ProtocolMagicId -&gt; SignTag -&gt; SigningKey -&gt; a -&gt; Signature a
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">sign</span></a></span><span> </span><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679487768"><span class="hs-identifier hs-var">pm</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VerificationKey -&gt; SignTag
+</span><a href="#local-6989586621679488001"><span class="hs-identifier hs-var">pm</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VerificationKey -&gt; SignTag
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">SignBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SigningKey -&gt; VerificationKey
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">toVerification</span></a></span><span> </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487766"><span class="hs-identifier hs-var">issuerSK</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487767"><span class="hs-identifier hs-var">delegateSK</span></a></span><span> </span><span class="annot"><span class="annottext">ToSign
+</span><a href="#local-6989586621679487999"><span class="hs-identifier hs-var">issuerSK</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">SigningKey
+</span><a href="#local-6989586621679488000"><span class="hs-identifier hs-var">delegateSK</span></a></span><span> </span><span class="annot"><span class="annottext">ToSign
 </span><a href="Test.Cardano.Chain.Block.CBOR.html#exampleToSign"><span class="hs-identifier hs-var">exampleToSign</span></a></span><span>
 </span><span id="line-298"></span><span>
-</span><span id="line-299"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621679487767"><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487767"><span class="hs-identifier hs-var">delegateSK</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679487766"><span class="annot"><span class="annottext">SigningKey
-</span><a href="#local-6989586621679487766"><span class="hs-identifier hs-var">issuerSK</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; [SigningKey]
+</span><span id="line-299"></span><span>    </span><span class="hs-special">[</span><span id="local-6989586621679488000"><span class="annot"><span class="annottext">SigningKey
+</span><a href="#local-6989586621679488000"><span class="hs-identifier hs-var">delegateSK</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679487999"><span class="annot"><span class="annottext">SigningKey
+</span><a href="#local-6989586621679487999"><span class="hs-identifier hs-var">issuerSK</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; [SigningKey]
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">exampleSigningKeys</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">5</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">2</span></span><span>
-</span><span id="line-300"></span><span>    </span><span id="local-6989586621679487768"><span class="annot"><span class="annottext">pm :: ProtocolMagicId
-</span><a href="#local-6989586621679487768"><span class="hs-identifier hs-var hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; ProtocolMagicId
+</span><span id="line-300"></span><span>    </span><span id="local-6989586621679488001"><span class="annot"><span class="annottext">pm :: ProtocolMagicId
+</span><a href="#local-6989586621679488001"><span class="hs-identifier hs-var hs-var">pm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; ProtocolMagicId
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">ProtocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">7</span></span><span>
 </span><span id="line-301"></span><span>
@@ -821,12 +821,12 @@ forall algo a.
 (HashAlgorithm algo, ToCBOR a) =&gt;
 a -&gt; AbstractHash algo a
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">abstractHash</span></a></span><span> </span><span class="annot"><span class="annottext">Payload
-</span><a href="#local-6989586621679487762"><span class="hs-identifier hs-var">dp</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679487995"><span class="hs-identifier hs-var">dp</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-308"></span><span>    </span><span class="annot"><span class="annottext">Proof
 </span><a href="Test.Cardano.Chain.Update.Example.html#exampleProof"><span class="hs-identifier hs-var">Update.exampleProof</span></a></span><span>
 </span><span id="line-309"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-310"></span><span>    </span><span id="local-6989586621679487762"><span class="annot"><span class="annottext">dp :: Payload
-</span><a href="#local-6989586621679487762"><span class="hs-identifier hs-var hs-var">dp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Certificate] -&gt; Payload
+</span><span id="line-310"></span><span>    </span><span id="local-6989586621679487995"><span class="annot"><span class="annottext">dp :: Payload
+</span><a href="#local-6989586621679487995"><span class="hs-identifier hs-var hs-var">dp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Certificate] -&gt; Payload
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Delegation.unsafePayload</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; [Certificate] -&gt; [Certificate]
 forall a. Int -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">take</span></a></span><span> </span><span class="annot"><span class="annottext">Int
@@ -849,11 +849,11 @@ forall a. ToCBOR a =&gt; a -&gt; Hash a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Body</span></a></span><span> </span><span class="annot"><span class="annottext">TxPayload
 </span><a href="Test.Cardano.Chain.UTxO.Example.html#exampleTxPayload"><span class="hs-identifier hs-var">exampleTxPayload</span></a></span><span> </span><span class="annot"><span class="annottext">SscPayload
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">SscPayload</span></a></span><span> </span><span class="annot"><span class="annottext">Payload
-</span><a href="#local-6989586621679487757"><span class="hs-identifier hs-var">dp</span></a></span><span> </span><span class="annot"><span class="annottext">Payload
+</span><a href="#local-6989586621679487990"><span class="hs-identifier hs-var">dp</span></a></span><span> </span><span class="annot"><span class="annottext">Payload
 </span><a href="Test.Cardano.Chain.Update.Example.html#examplePayload"><span class="hs-identifier hs-var">Update.examplePayload</span></a></span><span>
 </span><span id="line-317"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-318"></span><span>    </span><span id="local-6989586621679487757"><span class="annot"><span class="annottext">dp :: Payload
-</span><a href="#local-6989586621679487757"><span class="hs-identifier hs-var hs-var">dp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Certificate] -&gt; Payload
+</span><span id="line-318"></span><span>    </span><span id="local-6989586621679487990"><span class="annot"><span class="annottext">dp :: Payload
+</span><a href="#local-6989586621679487990"><span class="hs-identifier hs-var hs-var">dp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Certificate] -&gt; Payload
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Delegation.unsafePayload</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; [Certificate] -&gt; [Certificate]
 forall a. Int -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">take</span></a></span><span> </span><span class="annot"><span class="annottext">Int

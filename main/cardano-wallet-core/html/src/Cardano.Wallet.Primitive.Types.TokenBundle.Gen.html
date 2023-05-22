@@ -59,9 +59,9 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-50"></span><span>
 </span><span id="line-51"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#shrinkTokenBundle"><span class="hs-identifier hs-type">shrinkTokenBundle</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-52"></span><span id="shrinkTokenBundle"><span class="annot"><span class="annottext">shrinkTokenBundle :: TokenBundle -&gt; [TokenBundle]
-</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#shrinkTokenBundle"><span class="hs-identifier hs-var hs-var">shrinkTokenBundle</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span id="local-6989586621682432634"><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432634"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432633"><span class="annot"><span class="annottext">TokenMap
-</span><a href="#local-6989586621682432633"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">)</span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#shrinkTokenBundle"><span class="hs-identifier hs-var hs-var">shrinkTokenBundle</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span id="local-6989586621682432918"><span class="annot"><span class="annottext">Coin
+</span><a href="#local-6989586621682432918"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432917"><span class="annot"><span class="annottext">TokenMap
+</span><a href="#local-6989586621682432917"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">)</span><span class="hs-glyph">=</span><span>
 </span><span id="line-53"></span><span>    </span><span class="annot"><span class="annottext">(Coin -&gt; TokenMap -&gt; TokenBundle)
 -&gt; (Coin, TokenMap) -&gt; TokenBundle
 forall a b c. (a -&gt; b -&gt; c) -&gt; (a, b) -&gt; c
@@ -74,10 +74,10 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a b. (a, a -&gt; [a]) -&gt; (b, b -&gt; [b]) -&gt; [(a, b)]
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">shrinkInterleaved</span></a></span><span>
 </span><span id="line-54"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432634"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Coin -&gt; [Coin]
+</span><a href="#local-6989586621682432918"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Coin -&gt; [Coin]
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoin"><span class="hs-identifier hs-var">shrinkCoin</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-55"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenMap
-</span><a href="#local-6989586621682432633"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TokenMap -&gt; [TokenMap]
+</span><a href="#local-6989586621682432917"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TokenMap -&gt; [TokenMap]
 </span><a href="Cardano.Wallet.Primitive.Types.TokenMap.Gen.html#shrinkTokenMap"><span class="hs-identifier hs-var">shrinkTokenMap</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-56"></span><span>
 </span><span id="line-57"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
@@ -119,9 +119,9 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-73"></span><span>
 </span><span id="line-74"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#shrinkTokenBundleSmallRangePositive"><span class="hs-identifier hs-type">shrinkTokenBundleSmallRangePositive</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-75"></span><span id="shrinkTokenBundleSmallRangePositive"><span class="annot"><span class="annottext">shrinkTokenBundleSmallRangePositive :: TokenBundle -&gt; [TokenBundle]
-</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#shrinkTokenBundleSmallRangePositive"><span class="hs-identifier hs-var hs-var">shrinkTokenBundleSmallRangePositive</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span id="local-6989586621682432631"><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432631"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432630"><span class="annot"><span class="annottext">TokenMap
-</span><a href="#local-6989586621682432630"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#shrinkTokenBundleSmallRangePositive"><span class="hs-identifier hs-var hs-var">shrinkTokenBundleSmallRangePositive</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span id="local-6989586621682432915"><span class="annot"><span class="annottext">Coin
+</span><a href="#local-6989586621682432915"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432914"><span class="annot"><span class="annottext">TokenMap
+</span><a href="#local-6989586621682432914"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-76"></span><span>    </span><span class="annot"><span class="annottext">(Coin -&gt; TokenMap -&gt; TokenBundle)
 -&gt; (Coin, TokenMap) -&gt; TokenBundle
 forall a b c. (a -&gt; b -&gt; c) -&gt; (a, b) -&gt; c
@@ -134,10 +134,10 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a b. (a, a -&gt; [a]) -&gt; (b, b -&gt; [b]) -&gt; [(a, b)]
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">shrinkInterleaved</span></a></span><span>
 </span><span id="line-77"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432631"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Coin -&gt; [Coin]
+</span><a href="#local-6989586621682432915"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Coin -&gt; [Coin]
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoinPositive"><span class="hs-identifier hs-var">shrinkCoinPositive</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-78"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenMap
-</span><a href="#local-6989586621682432630"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TokenMap -&gt; [TokenMap]
+</span><a href="#local-6989586621682432914"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TokenMap -&gt; [TokenMap]
 </span><a href="Cardano.Wallet.Primitive.Types.TokenMap.Gen.html#shrinkTokenMap"><span class="hs-identifier hs-var">shrinkTokenMap</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-79"></span><span>
 </span><span id="line-80"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
@@ -153,10 +153,10 @@ forall a b. (a, a -&gt; [a]) -&gt; (b, b -&gt; [b]) -&gt; [(a, b)]
 </span><span id="line-90"></span><span class="hs-comment">--</span><span>
 </span><span id="line-91"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartition"><span class="hs-identifier hs-type">genTokenBundlePartition</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-92"></span><span id="genTokenBundlePartition"><span class="annot"><span class="annottext">genTokenBundlePartition :: TokenBundle -&gt; Int -&gt; Gen (NonEmpty TokenBundle)
-</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartition"><span class="hs-identifier hs-var hs-var">genTokenBundlePartition</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span id="local-6989586621682432629"><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432629"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432628"><span class="annot"><span class="annottext">TokenMap
-</span><a href="#local-6989586621682432628"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682432627"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432627"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartition"><span class="hs-identifier hs-var hs-var">genTokenBundlePartition</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span id="local-6989586621682432913"><span class="annot"><span class="annottext">Coin
+</span><a href="#local-6989586621682432913"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432912"><span class="annot"><span class="annottext">TokenMap
+</span><a href="#local-6989586621682432912"><span class="hs-identifier hs-var">m</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682432911"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432911"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-93"></span><span>    </span><span class="annot"><span class="annottext">(Coin -&gt; TokenMap -&gt; TokenBundle)
 -&gt; NonEmpty Coin -&gt; NonEmpty TokenMap -&gt; NonEmpty TokenBundle
 forall a b c.
@@ -169,24 +169,24 @@ forall a b c.
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Coin -&gt; Int -&gt; Gen (NonEmpty Coin)
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#genCoinPartition"><span class="hs-identifier hs-var">genCoinPartition</span></a></span><span>     </span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432629"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432627"><span class="hs-identifier hs-var">i</span></a></span><span>
+</span><a href="#local-6989586621682432913"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432911"><span class="hs-identifier hs-var">i</span></a></span><span>
 </span><span id="line-95"></span><span>        </span><span class="annot"><span class="annottext">Gen (NonEmpty TokenMap -&gt; NonEmpty TokenBundle)
 -&gt; Gen (NonEmpty TokenMap) -&gt; Gen (NonEmpty TokenBundle)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">TokenMap -&gt; Int -&gt; Gen (NonEmpty TokenMap)
 </span><a href="Cardano.Wallet.Primitive.Types.TokenMap.Gen.html#genTokenMapPartition"><span class="hs-identifier hs-var">genTokenMapPartition</span></a></span><span> </span><span class="annot"><span class="annottext">TokenMap
-</span><a href="#local-6989586621682432628"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432627"><span class="hs-identifier hs-var">i</span></a></span><span>
+</span><a href="#local-6989586621682432912"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432911"><span class="hs-identifier hs-var">i</span></a></span><span>
 </span><span id="line-96"></span><span>
 </span><span id="line-97"></span><span class="hs-comment">-- | Like 'genTokenBundlePartition', but with empty values removed from the</span><span>
 </span><span id="line-98"></span><span class="hs-comment">--   result.</span><span>
 </span><span id="line-99"></span><span class="hs-comment">--</span><span>
 </span><span id="line-100"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartitionNonNull"><span class="hs-identifier hs-type">genTokenBundlePartitionNonNull</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenBundle.html#TokenBundle"><span class="hs-identifier hs-type">TokenBundle</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-101"></span><span id="genTokenBundlePartitionNonNull"><span class="annot"><span class="annottext">genTokenBundlePartitionNonNull :: TokenBundle -&gt; Int -&gt; Gen [TokenBundle]
-</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartitionNonNull"><span class="hs-identifier hs-var hs-var">genTokenBundlePartitionNonNull</span></a></span></span><span> </span><span id="local-6989586621682432625"><span class="annot"><span class="annottext">TokenBundle
-</span><a href="#local-6989586621682432625"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621682432624"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432624"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartitionNonNull"><span class="hs-identifier hs-var hs-var">genTokenBundlePartitionNonNull</span></a></span></span><span> </span><span id="local-6989586621682432909"><span class="annot"><span class="annottext">TokenBundle
+</span><a href="#local-6989586621682432909"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621682432908"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432908"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-102"></span><span>    </span><span class="annot"><span class="annottext">(TokenBundle -&gt; Bool) -&gt; [TokenBundle] -&gt; [TokenBundle]
 forall a. (a -&gt; Bool) -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">filter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenBundle -&gt; TokenBundle -&gt; Bool
@@ -205,6 +205,6 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; [a]
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">TokenBundle -&gt; Int -&gt; Gen (NonEmpty TokenBundle)
 </span><a href="Cardano.Wallet.Primitive.Types.TokenBundle.Gen.html#genTokenBundlePartition"><span class="hs-identifier hs-var">genTokenBundlePartition</span></a></span><span> </span><span class="annot"><span class="annottext">TokenBundle
-</span><a href="#local-6989586621682432625"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432624"><span class="hs-identifier hs-var">i</span></a></span><span>
+</span><a href="#local-6989586621682432909"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432908"><span class="hs-identifier hs-var">i</span></a></span><span>
 </span><span id="line-103"></span></pre></body></html>

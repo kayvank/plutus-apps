@@ -18,35 +18,35 @@
 </span><span id="line-18"></span><span class="hs-comment">-- | More useful for a response. A Wai Request already has a requestBodyLength</span><span>
 </span><span id="line-19"></span><span class="annot"><a href="Network.Wai.Header.html#contentLength"><span class="hs-identifier hs-type">contentLength</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><a href="../../../../http-types/html/src"><span class="hs-identifier hs-type">HeaderName</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S8.ByteString</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
 </span><span id="line-20"></span><span id="contentLength"><span class="annot"><span class="annottext">contentLength :: [(HeaderName, ByteString)] -&gt; Maybe Integer
-</span><a href="Network.Wai.Header.html#contentLength"><span class="hs-identifier hs-var hs-var">contentLength</span></a></span></span><span> </span><span id="local-6989586621679121456"><span class="annot"><span class="annottext">[(HeaderName, ByteString)]
-</span><a href="#local-6989586621679121456"><span class="hs-identifier hs-var">hdrs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">HeaderName -&gt; [(HeaderName, ByteString)] -&gt; Maybe ByteString
+</span><a href="Network.Wai.Header.html#contentLength"><span class="hs-identifier hs-var hs-var">contentLength</span></a></span></span><span> </span><span id="local-6989586621679121482"><span class="annot"><span class="annottext">[(HeaderName, ByteString)]
+</span><a href="#local-6989586621679121482"><span class="hs-identifier hs-var">hdrs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">HeaderName -&gt; [(HeaderName, ByteString)] -&gt; Maybe ByteString
 forall a b. Eq a =&gt; a -&gt; [(a, b)] -&gt; Maybe b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">lookup</span></a></span><span> </span><span class="annot"><span class="annottext">HeaderName
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var">H.hContentLength</span></a></span><span> </span><span class="annot"><span class="annottext">[(HeaderName, ByteString)]
-</span><a href="#local-6989586621679121456"><span class="hs-identifier hs-var">hdrs</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; (ByteString -&gt; Maybe Integer) -&gt; Maybe Integer
+</span><a href="#local-6989586621679121482"><span class="hs-identifier hs-var">hdrs</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; (ByteString -&gt; Maybe Integer) -&gt; Maybe Integer
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe Integer
 </span><a href="Network.Wai.Header.html#readInt"><span class="hs-identifier hs-var">readInt</span></a></span><span>
 </span><span id="line-21"></span><span>
 </span><span id="line-22"></span><span class="annot"><a href="Network.Wai.Header.html#readInt"><span class="hs-identifier hs-type">readInt</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S8.ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
 </span><span id="line-23"></span><span id="readInt"><span class="annot"><span class="annottext">readInt :: ByteString -&gt; Maybe Integer
-</span><a href="Network.Wai.Header.html#readInt"><span class="hs-identifier hs-var hs-var">readInt</span></a></span></span><span> </span><span id="local-6989586621679121452"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121452"><span class="hs-identifier hs-var">bs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.Wai.Header.html#readInt"><span class="hs-identifier hs-var hs-var">readInt</span></a></span></span><span> </span><span id="local-6989586621679121478"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121478"><span class="hs-identifier hs-var">bs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-24"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (Integer, ByteString)
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S8.readInteger</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121452"><span class="hs-identifier hs-var">bs</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679121478"><span class="hs-identifier hs-var">bs</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-25"></span><span>        </span><span class="hs-comment">-- 'S8.all' is also 'True' for an empty string</span><span>
-</span><span id="line-26"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121450"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679121450"><span class="hs-identifier hs-var">i</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121449"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121449"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">(Char -&gt; Bool) -&gt; ByteString -&gt; Bool
+</span><span id="line-26"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121476"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679121476"><span class="hs-identifier hs-var">i</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121475"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121475"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">(Char -&gt; Bool) -&gt; ByteString -&gt; Bool
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S8.all</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">' '</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121449"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer
+</span><a href="#local-6989586621679121475"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Maybe Integer
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679121450"><span class="hs-identifier hs-var">i</span></a></span><span>
+</span><a href="#local-6989586621679121476"><span class="hs-identifier hs-var">i</span></a></span><span>
 </span><span id="line-27"></span><span>        </span><span class="annot"><span class="annottext">Maybe (Integer, ByteString)
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe Integer
 forall a. Maybe a
@@ -57,13 +57,13 @@ forall a. Maybe a
 -&gt; ByteString
 -&gt; [(HeaderName, ByteString)]
 -&gt; [(HeaderName, ByteString)]
-</span><a href="Network.Wai.Header.html#replaceHeader"><span class="hs-identifier hs-var hs-var">replaceHeader</span></a></span></span><span> </span><span id="local-6989586621679121446"><span class="annot"><span class="annottext">HeaderName
-</span><a href="#local-6989586621679121446"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span id="local-6989586621679121445"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121445"><span class="hs-identifier hs-var">val</span></a></span></span><span> </span><span id="local-6989586621679121444"><span class="annot"><span class="annottext">[(HeaderName, ByteString)]
-</span><a href="#local-6989586621679121444"><span class="hs-identifier hs-var">old</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.Wai.Header.html#replaceHeader"><span class="hs-identifier hs-var hs-var">replaceHeader</span></a></span></span><span> </span><span id="local-6989586621679121472"><span class="annot"><span class="annottext">HeaderName
+</span><a href="#local-6989586621679121472"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span id="local-6989586621679121471"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121471"><span class="hs-identifier hs-var">val</span></a></span></span><span> </span><span id="local-6989586621679121470"><span class="annot"><span class="annottext">[(HeaderName, ByteString)]
+</span><a href="#local-6989586621679121470"><span class="hs-identifier hs-var">old</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-31"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">HeaderName
-</span><a href="#local-6989586621679121446"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121445"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(HeaderName, ByteString)
+</span><a href="#local-6989586621679121472"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121471"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(HeaderName, ByteString)
 -&gt; [(HeaderName, ByteString)] -&gt; [(HeaderName, ByteString)]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span> </span><span class="annot"><span class="annottext">((HeaderName, ByteString) -&gt; Bool)
@@ -72,7 +72,7 @@ forall a. (a -&gt; Bool) -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">filter</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="annot"><span class="annottext">HeaderName -&gt; HeaderName -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">/=</span></a></span><span> </span><span class="annot"><span class="annottext">HeaderName
-</span><a href="#local-6989586621679121446"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(HeaderName -&gt; Bool)
+</span><a href="#local-6989586621679121472"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(HeaderName -&gt; Bool)
 -&gt; ((HeaderName, ByteString) -&gt; HeaderName)
 -&gt; (HeaderName, ByteString)
 -&gt; Bool
@@ -80,7 +80,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(HeaderName, ByteString) -&gt; HeaderName
 forall a b. (a, b) -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fst</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[(HeaderName, ByteString)]
-</span><a href="#local-6989586621679121444"><span class="hs-identifier hs-var">old</span></a></span><span>
+</span><a href="#local-6989586621679121470"><span class="hs-identifier hs-var">old</span></a></span><span>
 </span><span id="line-32"></span><span>
 </span><span id="line-33"></span><span class="hs-comment">-- | Only to be used on header's values which support quality value syntax</span><span>
 </span><span id="line-34"></span><span class="hs-comment">--</span><span>
@@ -98,7 +98,7 @@ forall a b. (a, b) -&gt; a
 -&gt; [ByteString] -&gt; [(ByteString, Maybe Int)]
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; (ByteString, Maybe Int)
-</span><a href="#local-6989586621679121441"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">([ByteString] -&gt; [(ByteString, Maybe Int)])
+</span><a href="#local-6989586621679121467"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">([ByteString] -&gt; [(ByteString, Maybe Int)])
 -&gt; (ByteString -&gt; [ByteString])
 -&gt; ByteString
 -&gt; [(ByteString, Maybe Int)]
@@ -106,9 +106,9 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [ByteString]
 </span><a href="Network.Wai.Util.html#splitCommas"><span class="hs-identifier hs-var">splitCommas</span></a></span><span>
 </span><span id="line-45"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-46"></span><span>    </span><span id="local-6989586621679121441"><span class="annot"><span class="annottext">go :: ByteString -&gt; (ByteString, Maybe Int)
-</span><a href="#local-6989586621679121441"><span class="hs-identifier hs-var hs-var">go</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ByteString, ByteString) -&gt; (ByteString, Maybe Int)
-</span><a href="#local-6989586621679121440"><span class="hs-identifier hs-var">checkQ</span></a></span><span> </span><span class="annot"><span class="annottext">((ByteString, ByteString) -&gt; (ByteString, Maybe Int))
+</span><span id="line-46"></span><span>    </span><span id="local-6989586621679121467"><span class="annot"><span class="annottext">go :: ByteString -&gt; (ByteString, Maybe Int)
+</span><a href="#local-6989586621679121467"><span class="hs-identifier hs-var hs-var">go</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ByteString, ByteString) -&gt; (ByteString, Maybe Int)
+</span><a href="#local-6989586621679121466"><span class="hs-identifier hs-var">checkQ</span></a></span><span> </span><span class="annot"><span class="annottext">((ByteString, ByteString) -&gt; (ByteString, Maybe Int))
 -&gt; (ByteString -&gt; (ByteString, ByteString))
 -&gt; ByteString
 -&gt; (ByteString, Maybe Int)
@@ -118,18 +118,18 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_semicolon</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-47"></span><span>    </span><span class="annot"><a href="#local-6989586621679121440"><span class="hs-identifier hs-type">checkQ</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S.ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S.ByteString</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S.ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-48"></span><span>    </span><span id="local-6989586621679121440"><span class="annot"><span class="annottext">checkQ :: (ByteString, ByteString) -&gt; (ByteString, Maybe Int)
-</span><a href="#local-6989586621679121440"><span class="hs-identifier hs-var hs-var">checkQ</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121438"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121438"><span class="hs-identifier hs-var">val</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><span id="line-47"></span><span>    </span><span class="annot"><a href="#local-6989586621679121466"><span class="hs-identifier hs-type">checkQ</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S.ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S.ByteString</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">S.ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-48"></span><span>    </span><span id="local-6989586621679121466"><span class="annot"><span class="annottext">checkQ :: (ByteString, ByteString) -&gt; (ByteString, Maybe Int)
+</span><a href="#local-6989586621679121466"><span class="hs-identifier hs-var hs-var">checkQ</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121464"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121464"><span class="hs-identifier hs-var">val</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;&quot;</span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121438"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Maybe Int
+</span><a href="#local-6989586621679121464"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Maybe Int
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1000</span></span><span class="hs-special">)</span><span>
-</span><span id="line-49"></span><span>    </span><span class="annot"><a href="#local-6989586621679121440"><span class="hs-identifier hs-var">checkQ</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121437"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121437"><span class="hs-identifier hs-var">val</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121436"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121436"><span class="hs-identifier hs-var">bs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-49"></span><span>    </span><span class="annot"><a href="#local-6989586621679121466"><span class="hs-identifier hs-var">checkQ</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121463"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121463"><span class="hs-identifier hs-var">val</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121462"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121462"><span class="hs-identifier hs-var">bs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-50"></span><span>        </span><span class="hs-comment">-- RFC 7231 says optional whitespace can be around the semicolon.</span><span>
 </span><span id="line-51"></span><span>        </span><span class="hs-comment">-- So drop any before it       ,           . and any behind it       $ and drop the semicolon</span><span>
 </span><span id="line-52"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(Word8 -&gt; Bool) -&gt; ByteString -&gt; ByteString
@@ -137,9 +137,9 @@ forall a. a -&gt; Maybe a
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_space</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121437"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe Int
+</span><a href="#local-6989586621679121463"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe Int
 forall b. (Num b, Read b) =&gt; ByteString -&gt; Maybe b
-</span><a href="#local-6989586621679121435"><span class="hs-identifier hs-var">parseQval</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; Maybe Int)
+</span><a href="#local-6989586621679121461"><span class="hs-identifier hs-var">parseQval</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; Maybe Int)
 -&gt; (ByteString -&gt; ByteString) -&gt; ByteString -&gt; Maybe Int
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(Word8 -&gt; Bool) -&gt; ByteString -&gt; ByteString
@@ -151,28 +151,28 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.drop</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121436"><span class="hs-identifier hs-var">bs</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679121462"><span class="hs-identifier hs-var">bs</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-53"></span><span>      </span><span class="hs-keyword">where</span><span>
-</span><span id="line-54"></span><span>        </span><span id="local-6989586621679121435"><span class="annot"><span class="annottext">parseQval :: ByteString -&gt; Maybe b
-</span><a href="#local-6989586621679121435"><span class="hs-identifier hs-var hs-var">parseQval</span></a></span></span><span> </span><span id="local-6989586621679121432"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121432"><span class="hs-identifier hs-var">qVal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-55"></span><span>            </span><span id="local-6989586621679121431"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121431"><span class="hs-identifier hs-var">q</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Maybe ByteString
+</span><span id="line-54"></span><span>        </span><span id="local-6989586621679121461"><span class="annot"><span class="annottext">parseQval :: ByteString -&gt; Maybe b
+</span><a href="#local-6989586621679121461"><span class="hs-identifier hs-var hs-var">parseQval</span></a></span></span><span> </span><span id="local-6989586621679121458"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121458"><span class="hs-identifier hs-var">qVal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-55"></span><span>            </span><span id="local-6989586621679121457"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121457"><span class="hs-identifier hs-var">q</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Maybe ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.stripPrefix</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;q=&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121432"><span class="hs-identifier hs-var">qVal</span></a></span><span>
-</span><span id="line-56"></span><span>            </span><span class="hs-special">(</span><span id="local-6989586621679121429"><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121429"><span class="hs-identifier hs-var">i</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121428"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121428"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (Word8, ByteString)
+</span><a href="#local-6989586621679121458"><span class="hs-identifier hs-var">qVal</span></a></span><span>
+</span><span id="line-56"></span><span>            </span><span class="hs-special">(</span><span id="local-6989586621679121455"><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679121455"><span class="hs-identifier hs-var">i</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121454"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121454"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (Word8, ByteString)
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.uncons</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121431"><span class="hs-identifier hs-var">q</span></a></span><span>
+</span><a href="#local-6989586621679121457"><span class="hs-identifier hs-var">q</span></a></span><span>
 </span><span id="line-57"></span><span>            </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
 forall (f :: * -&gt; *). Alternative f =&gt; Bool -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">guard</span></a></span><span> </span><span class="annot"><span class="annottext">(Bool -&gt; Maybe ()) -&gt; Bool -&gt; Maybe ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-58"></span><span>                </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121429"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; [Word8] -&gt; Bool
+</span><a href="#local-6989586621679121455"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; [Word8] -&gt; Bool
 forall (t :: * -&gt; *) a. (Foldable t, Eq a) =&gt; a -&gt; t a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`elem`</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_0</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word8
@@ -180,18 +180,18 @@ forall (t :: * -&gt; *) a. (Foldable t, Eq a) =&gt; a -&gt; t a -&gt; Bool
 </span><span id="line-59"></span><span>                    </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121428"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679121454"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">4</span></span><span>
 </span><span id="line-60"></span><span>            </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (Word8, ByteString)
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.uncons</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121428"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679121454"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-61"></span><span>                </span><span class="annot"><span class="annottext">Maybe (Word8, ByteString)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-62"></span><span>                    </span><span class="hs-comment">-- q = &quot;0&quot; or &quot;1&quot;</span><span>
 </span><span id="line-63"></span><span>                    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121429"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
+</span><a href="#local-6989586621679121455"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_0</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">b -&gt; Maybe b
@@ -199,7 +199,7 @@ forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">b
 </span><span class="hs-number">0</span></span><span>
 </span><span id="line-64"></span><span>                    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121429"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
+</span><a href="#local-6989586621679121455"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_1</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">b -&gt; Maybe b
@@ -210,17 +210,17 @@ forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe b
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
-</span><span id="line-66"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121422"><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121422"><span class="hs-identifier hs-var">dot</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121421"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121421"><span class="hs-identifier hs-var">trail</span></a></span></span><span class="hs-special">)</span><span>
+</span><span id="line-66"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121448"><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679121448"><span class="hs-identifier hs-var">dot</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121447"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121447"><span class="hs-identifier hs-var">trail</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-67"></span><span>                    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121422"><span class="hs-identifier hs-var">dot</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
+</span><a href="#local-6989586621679121448"><span class="hs-identifier hs-var">dot</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_period</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">not</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121429"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
+</span><a href="#local-6989586621679121455"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Word8 -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_1</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
@@ -229,26 +229,26 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">/=</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><a href="../../../../word8/html/src"><span class="hs-identifier hs-var">_0</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121421"><span class="hs-identifier hs-var">trail</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-68"></span><span>                        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121418"><span class="annot"><span class="annottext">len :: Int
-</span><a href="#local-6989586621679121418"><span class="hs-identifier hs-var hs-var">len</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Int
+</span><a href="#local-6989586621679121447"><span class="hs-identifier hs-var">trail</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-68"></span><span>                        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121444"><span class="annot"><span class="annottext">len :: Int
+</span><a href="#local-6989586621679121444"><span class="hs-identifier hs-var hs-var">len</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121421"><span class="hs-identifier hs-var">trail</span></a></span><span>
-</span><span id="line-69"></span><span>                            </span><span id="local-6989586621679121417"><span class="annot"><span class="annottext">extraZeroes :: [Char]
-</span><a href="#local-6989586621679121417"><span class="hs-identifier hs-var hs-var">extraZeroes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; [Char]
+</span><a href="#local-6989586621679121447"><span class="hs-identifier hs-var">trail</span></a></span><span>
+</span><span id="line-69"></span><span>                            </span><span id="local-6989586621679121443"><span class="annot"><span class="annottext">extraZeroes :: [Char]
+</span><a href="#local-6989586621679121443"><span class="hs-identifier hs-var hs-var">extraZeroes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; [Char]
 forall a. Int -&gt; a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">3</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679121418"><span class="hs-identifier hs-var">len</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679121444"><span class="hs-identifier hs-var">len</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span>
 </span><span id="line-70"></span><span>                        </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
 forall (f :: * -&gt; *). Alternative f =&gt; Bool -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">guard</span></a></span><span> </span><span class="annot"><span class="annottext">(Bool -&gt; Maybe ()) -&gt; Bool -&gt; Maybe ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679121418"><span class="hs-identifier hs-var">len</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679121444"><span class="hs-identifier hs-var">len</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span>
@@ -258,14 +258,14 @@ forall a. Read a =&gt; [Char] -&gt; Maybe a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Char
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">w2c</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
-</span><a href="#local-6989586621679121429"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; [Char] -&gt; [Char]
+</span><a href="#local-6989586621679121455"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; [Char] -&gt; [Char]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [Char]
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S8.unpack</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121421"><span class="hs-identifier hs-var">trail</span></a></span><span> </span><span class="annot"><span class="annottext">[Char] -&gt; [Char] -&gt; [Char]
+</span><a href="#local-6989586621679121447"><span class="hs-identifier hs-var">trail</span></a></span><span> </span><span class="annot"><span class="annottext">[Char] -&gt; [Char] -&gt; [Char]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">[Char]
-</span><a href="#local-6989586621679121417"><span class="hs-identifier hs-var">extraZeroes</span></a></span><span>
+</span><a href="#local-6989586621679121443"><span class="hs-identifier hs-var">extraZeroes</span></a></span><span>
 </span><span id="line-72"></span><span>                    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe b
 forall a. Maybe a

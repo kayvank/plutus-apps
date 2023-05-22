@@ -43,7 +43,7 @@
 </span><span id="line-43"></span><span class="hs-keyword">newtype</span><span> </span><span id="Cmd"><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-var">Cmd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Cmd"><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-var">Cmd</span></a></span></span><span>
 </span><span id="line-44"></span><span>    </span><span class="hs-special">{</span><span>  </span><span id="networkTag"><span class="annot"><span class="annottext">Cmd -&gt; NetworkTag
 </span><a href="Command.Address.Payment.html#networkTag"><span class="hs-identifier hs-var hs-var">networkTag</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-type">NetworkTag</span></a></span><span>
-</span><span id="line-45"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121366"><span id="local-6989586621679121368"><span id="local-6989586621679121370"><span class="annot"><span class="annottext">Int -&gt; Cmd -&gt; ShowS
+</span><span id="line-45"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679121389"><span id="local-6989586621679121391"><span id="local-6989586621679121393"><span class="annot"><span class="annottext">Int -&gt; Cmd -&gt; ShowS
 [Cmd] -&gt; ShowS
 Cmd -&gt; String
 (Int -&gt; Cmd -&gt; ShowS)
@@ -58,10 +58,10 @@ showsPrec :: Int -&gt; Cmd -&gt; ShowS
 $cshowsPrec :: Int -&gt; Cmd -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-46"></span><span>
-</span><span id="line-47"></span><span id="local-6989586621679121364"><span class="annot"><a href="Command.Address.Payment.html#mod"><span class="hs-identifier hs-type">mod</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-type">Cmd</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679121364"><span class="hs-identifier hs-type">parent</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../optparse-applicative/html/src"><span class="hs-identifier hs-type">Mod</span></a></span><span> </span><span class="annot"><a href="../../../../optparse-applicative/html/src"><span class="hs-identifier hs-type">CommandFields</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679121364"><span class="hs-identifier hs-type">parent</span></a></span></span><span>
+</span><span id="line-47"></span><span id="local-6989586621679121387"><span class="annot"><a href="Command.Address.Payment.html#mod"><span class="hs-identifier hs-type">mod</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-type">Cmd</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679121387"><span class="hs-identifier hs-type">parent</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../optparse-applicative/html/src"><span class="hs-identifier hs-type">Mod</span></a></span><span> </span><span class="annot"><a href="../../../../optparse-applicative/html/src"><span class="hs-identifier hs-type">CommandFields</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679121387"><span class="hs-identifier hs-type">parent</span></a></span></span><span>
 </span><span id="line-48"></span><span id="mod"><span class="annot"><span class="annottext">mod :: (Cmd -&gt; parent) -&gt; Mod CommandFields parent
-</span><a href="Command.Address.Payment.html#mod"><span class="hs-identifier hs-var hs-var">mod</span></a></span></span><span> </span><span id="local-6989586621679121363"><span class="annot"><span class="annottext">Cmd -&gt; parent
-</span><a href="#local-6989586621679121363"><span class="hs-identifier hs-var">liftCmd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; ParserInfo parent -&gt; Mod CommandFields parent
+</span><a href="Command.Address.Payment.html#mod"><span class="hs-identifier hs-var hs-var">mod</span></a></span></span><span> </span><span id="local-6989586621679121386"><span class="annot"><span class="annottext">Cmd -&gt; parent
+</span><a href="#local-6989586621679121386"><span class="hs-identifier hs-var">liftCmd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; ParserInfo parent -&gt; Mod CommandFields parent
 forall a. String -&gt; ParserInfo a -&gt; Mod CommandFields a
 </span><a href="../../../../optparse-applicative/html/src"><span class="hs-identifier hs-var">command</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;payment&quot;</span></span><span> </span><span class="annot"><span class="annottext">(ParserInfo parent -&gt; Mod CommandFields parent)
@@ -77,8 +77,8 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">(Cmd -&gt; parent) -&gt; Parser Cmd -&gt; Parser parent
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="annot"><span class="annottext">Cmd -&gt; parent
-</span><a href="#local-6989586621679121363"><span class="hs-identifier hs-var">liftCmd</span></a></span><span> </span><span class="annot"><span class="annottext">Parser Cmd
-</span><a href="#local-6989586621679121362"><span class="hs-identifier hs-var">parser</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(InfoMod parent -&gt; ParserInfo parent)
+</span><a href="#local-6989586621679121386"><span class="hs-identifier hs-var">liftCmd</span></a></span><span> </span><span class="annot"><span class="annottext">Parser Cmd
+</span><a href="#local-6989586621679121385"><span class="hs-identifier hs-var">parser</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(InfoMod parent -&gt; ParserInfo parent)
 -&gt; InfoMod parent -&gt; ParserInfo parent
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">InfoMod parent
@@ -242,8 +242,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-string">&quot;addr_test1vqrlltfahghjxl5sy5h5mvfrrlt6me5fqphhwjqvj5jd88cccqcek&quot;</span></span><span>
 </span><span id="line-64"></span><span>            </span><span class="hs-special">]</span><span class="hs-special">)</span><span>
 </span><span id="line-65"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-66"></span><span>    </span><span id="local-6989586621679121362"><span class="annot"><span class="annottext">parser :: Parser Cmd
-</span><a href="#local-6989586621679121362"><span class="hs-identifier hs-var hs-var">parser</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; Cmd
+</span><span id="line-66"></span><span>    </span><span id="local-6989586621679121385"><span class="annot"><span class="annottext">parser :: Parser Cmd
+</span><a href="#local-6989586621679121385"><span class="hs-identifier hs-var hs-var">parser</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; Cmd
 </span><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-var">Cmd</span></a></span><span>
 </span><span id="line-67"></span><span>        </span><span class="annot"><span class="annottext">(NetworkTag -&gt; Cmd) -&gt; Parser NetworkTag -&gt; Parser Cmd
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -253,45 +253,45 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><span id="line-68"></span><span>
 </span><span id="line-69"></span><span class="annot"><a href="Command.Address.Payment.html#run"><span class="hs-identifier hs-type">run</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-type">Cmd</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-70"></span><span id="run"><span class="annot"><span class="annottext">run :: Cmd -&gt; IO ()
-</span><a href="Command.Address.Payment.html#run"><span class="hs-identifier hs-var hs-var">run</span></a></span></span><span> </span><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-type">Cmd</span></a></span><span class="hs-special">{</span><span id="local-6989586621679121359"><span class="annot"><span class="annottext">NetworkTag
+</span><a href="Command.Address.Payment.html#run"><span class="hs-identifier hs-var hs-var">run</span></a></span></span><span> </span><span class="annot"><a href="Command.Address.Payment.html#Cmd"><span class="hs-identifier hs-type">Cmd</span></a></span><span class="hs-special">{</span><span id="local-6989586621679121382"><span class="annot"><span class="annottext">NetworkTag
 networkTag :: NetworkTag
 networkTag :: Cmd -&gt; NetworkTag
-</span><a href="#local-6989586621679121359"><span class="hs-identifier hs-var hs-var">networkTag</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-71"></span><span>    </span><span id="local-6989586621679121358"><span class="annot"><span class="annottext">NetworkTag
-</span><a href="#local-6989586621679121358"><span class="hs-identifier hs-var">discriminant</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; IO (NetworkDiscriminant Shelley)
+</span><a href="#local-6989586621679121382"><span class="hs-identifier hs-var hs-var">networkTag</span></a></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-71"></span><span>    </span><span id="local-6989586621679121381"><span class="annot"><span class="annottext">NetworkTag
+</span><a href="#local-6989586621679121381"><span class="hs-identifier hs-var">discriminant</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; IO (NetworkDiscriminant Shelley)
 forall (m :: * -&gt; *).
 MonadFail m =&gt;
 NetworkTag -&gt; m (NetworkDiscriminant Shelley)
 </span><a href="Options.Applicative.Discrimination.html#fromNetworkTag"><span class="hs-identifier hs-var">fromNetworkTag</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkTag
-</span><a href="#local-6989586621679121359"><span class="hs-identifier hs-var">networkTag</span></a></span><span>
-</span><span id="line-72"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679121357"><span class="annot"><span class="annottext">HumanReadablePart
-</span><a href="#local-6989586621679121357"><span class="hs-identifier hs-var">hrp</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121356"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121356"><span class="hs-identifier hs-var">bytes</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; [HumanReadablePart] -&gt; IO (HumanReadablePart, ByteString)
+</span><a href="#local-6989586621679121382"><span class="hs-identifier hs-var">networkTag</span></a></span><span>
+</span><span id="line-72"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679121380"><span class="annot"><span class="annottext">HumanReadablePart
+</span><a href="#local-6989586621679121380"><span class="hs-identifier hs-var">hrp</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679121379"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121379"><span class="hs-identifier hs-var">bytes</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; [HumanReadablePart] -&gt; IO (HumanReadablePart, ByteString)
 </span><a href="System.IO.Extra.html#hGetBech32"><span class="hs-identifier hs-var">hGetBech32</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">stdin</span></a></span><span> </span><span class="annot"><span class="annottext">[HumanReadablePart]
-</span><a href="#local-6989586621679121355"><span class="hs-identifier hs-var">allowedPrefixes</span></a></span><span>
-</span><span id="line-73"></span><span>    </span><span id="local-6989586621679121354"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679121354"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; ByteString -&gt; HumanReadablePart -&gt; IO Address
+</span><a href="#local-6989586621679121378"><span class="hs-identifier hs-var">allowedPrefixes</span></a></span><span>
+</span><span id="line-73"></span><span>    </span><span id="local-6989586621679121377"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679121377"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; ByteString -&gt; HumanReadablePart -&gt; IO Address
 forall (m :: * -&gt; *).
 MonadFail m =&gt;
 NetworkTag -&gt; ByteString -&gt; HumanReadablePart -&gt; m Address
-</span><a href="#local-6989586621679121353"><span class="hs-identifier hs-var">addressFromBytes</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkTag
-</span><a href="#local-6989586621679121358"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121356"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
-</span><a href="#local-6989586621679121357"><span class="hs-identifier hs-var">hrp</span></a></span><span>
+</span><a href="#local-6989586621679121376"><span class="hs-identifier hs-var">addressFromBytes</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkTag
+</span><a href="#local-6989586621679121381"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121379"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
+</span><a href="#local-6989586621679121380"><span class="hs-identifier hs-var">hrp</span></a></span><span>
 </span><span id="line-74"></span><span>    </span><span class="annot"><span class="annottext">Handle -&gt; ByteString -&gt; Encoding -&gt; IO ()
 </span><a href="System.IO.Extra.html#hPutBytes"><span class="hs-identifier hs-var">hPutBytes</span></a></span><span> </span><span class="annot"><span class="annottext">Handle
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">stdout</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Address -&gt; ByteString
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var hs-var">unAddress</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679121354"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">HumanReadablePart -&gt; Encoding
+</span><a href="#local-6989586621679121377"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">HumanReadablePart -&gt; Encoding
 forall a. a -&gt; AbstractEncoding a
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">EBech32</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
-</span><a href="#local-6989586621679121351"><span class="hs-identifier hs-var">addrHrp</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679121374"><span class="hs-identifier hs-var">addrHrp</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-75"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-76"></span><span>    </span><span id="local-6989586621679121351"><span class="annot"><span class="annottext">addrHrp :: HumanReadablePart
-</span><a href="#local-6989586621679121351"><span class="hs-identifier hs-var hs-var">addrHrp</span></a></span></span><span>
+</span><span id="line-76"></span><span>    </span><span id="local-6989586621679121374"><span class="annot"><span class="annottext">addrHrp :: HumanReadablePart
+</span><a href="#local-6989586621679121374"><span class="hs-identifier hs-var hs-var">addrHrp</span></a></span></span><span>
 </span><span id="line-77"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">NetworkTag
-</span><a href="#local-6989586621679121359"><span class="hs-identifier hs-var">networkTag</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; NetworkTag -&gt; Bool
+</span><a href="#local-6989586621679121382"><span class="hs-identifier hs-var">networkTag</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkTag -&gt; NetworkTag -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley
 NetworkTag
@@ -305,8 +305,8 @@ NetworkTag
 </span><span id="line-81"></span><span>    </span><span class="hs-comment">-- construct a payment credential. This will however need some additional</span><span>
 </span><span id="line-82"></span><span>    </span><span class="hs-comment">-- abstraction over `xpubFromBytes` but I've done enough yake-shaving at</span><span>
 </span><span id="line-83"></span><span>    </span><span class="hs-comment">-- this stage, so leaving this as an item for later.</span><span>
-</span><span id="line-84"></span><span>    </span><span id="local-6989586621679121355"><span class="annot"><span class="annottext">allowedPrefixes :: [HumanReadablePart]
-</span><a href="#local-6989586621679121355"><span class="hs-identifier hs-var hs-var">allowedPrefixes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-84"></span><span>    </span><span id="local-6989586621679121378"><span class="annot"><span class="annottext">allowedPrefixes :: [HumanReadablePart]
+</span><a href="#local-6989586621679121378"><span class="hs-identifier hs-var hs-var">allowedPrefixes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-85"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">CIP5.addr_xvk</span></a></span><span>
 </span><span id="line-86"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
@@ -315,31 +315,31 @@ NetworkTag
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">CIP5.script</span></a></span><span>
 </span><span id="line-88"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-89"></span><span>
-</span><span id="line-90"></span><span>    </span><span id="local-6989586621679121353"><span class="annot"><span class="annottext">addressFromBytes :: NetworkTag -&gt; ByteString -&gt; HumanReadablePart -&gt; m Address
-</span><a href="#local-6989586621679121353"><span class="hs-identifier hs-var hs-var">addressFromBytes</span></a></span></span><span> </span><span id="local-6989586621679121345"><span class="annot"><span class="annottext">NetworkTag
-</span><a href="#local-6989586621679121345"><span class="hs-identifier hs-var">discriminant</span></a></span></span><span> </span><span id="local-6989586621679121344"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121344"><span class="hs-identifier hs-var">bytes</span></a></span></span><span> </span><span id="local-6989586621679121343"><span class="annot"><span class="annottext">HumanReadablePart
-</span><a href="#local-6989586621679121343"><span class="hs-identifier hs-var">hrp</span></a></span></span><span>
+</span><span id="line-90"></span><span>    </span><span id="local-6989586621679121376"><span class="annot"><span class="annottext">addressFromBytes :: NetworkTag -&gt; ByteString -&gt; HumanReadablePart -&gt; m Address
+</span><a href="#local-6989586621679121376"><span class="hs-identifier hs-var hs-var">addressFromBytes</span></a></span></span><span> </span><span id="local-6989586621679121368"><span class="annot"><span class="annottext">NetworkTag
+</span><a href="#local-6989586621679121368"><span class="hs-identifier hs-var">discriminant</span></a></span></span><span> </span><span id="local-6989586621679121367"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679121367"><span class="hs-identifier hs-var">bytes</span></a></span></span><span> </span><span id="local-6989586621679121366"><span class="annot"><span class="annottext">HumanReadablePart
+</span><a href="#local-6989586621679121366"><span class="hs-identifier hs-var">hrp</span></a></span></span><span>
 </span><span id="line-91"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
-</span><a href="#local-6989586621679121343"><span class="hs-identifier hs-var">hrp</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart -&gt; HumanReadablePart -&gt; Bool
+</span><a href="#local-6989586621679121366"><span class="hs-identifier hs-var">hrp</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart -&gt; HumanReadablePart -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">CIP5.script</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-92"></span><span>            </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe ScriptHash
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">scriptHashFromBytes</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121344"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679121367"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-93"></span><span>                </span><span class="annot"><span class="annottext">Maybe ScriptHash
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-94"></span><span>                    </span><span class="annot"><span class="annottext">String -&gt; m Address
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fail</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Couldn't convert bytes into script hash.&quot;</span></span><span>
-</span><span id="line-95"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679121342"><span class="annot"><span class="annottext">ScriptHash
-</span><a href="#local-6989586621679121342"><span class="hs-identifier hs-var">h</span></a></span></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-96"></span><span>                    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121341"><span class="annot"><span class="annottext">credential :: Credential 'PaymentK
-</span><a href="#local-6989586621679121341"><span class="hs-identifier hs-var hs-var">credential</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ScriptHash -&gt; Credential 'PaymentK
+</span><span id="line-95"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679121365"><span class="annot"><span class="annottext">ScriptHash
+</span><a href="#local-6989586621679121365"><span class="hs-identifier hs-var">h</span></a></span></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-96"></span><span>                    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121364"><span class="annot"><span class="annottext">credential :: Credential 'PaymentK
+</span><a href="#local-6989586621679121364"><span class="hs-identifier hs-var hs-var">credential</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ScriptHash -&gt; Credential 'PaymentK
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">PaymentFromScript</span></a></span><span> </span><span class="annot"><span class="annottext">ScriptHash
-</span><a href="#local-6989586621679121342"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621679121365"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-97"></span><span>                    </span><span class="annot"><span class="annottext">Address -&gt; m Address
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(Address -&gt; m Address) -&gt; Address -&gt; m Address
@@ -347,30 +347,30 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley -&gt; Credential 'PaymentK -&gt; Address
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">Shelley.paymentAddress</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley
 NetworkTag
-</span><a href="#local-6989586621679121345"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">Credential 'PaymentK
-</span><a href="#local-6989586621679121341"><span class="hs-identifier hs-var">credential</span></a></span><span>
+</span><a href="#local-6989586621679121368"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">Credential 'PaymentK
+</span><a href="#local-6989586621679121364"><span class="hs-identifier hs-var">credential</span></a></span><span>
 </span><span id="line-98"></span><span>
 </span><span id="line-99"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
-</span><a href="#local-6989586621679121343"><span class="hs-identifier hs-var">hrp</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart -&gt; HumanReadablePart -&gt; Bool
+</span><a href="#local-6989586621679121366"><span class="hs-identifier hs-var">hrp</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart -&gt; HumanReadablePart -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">HumanReadablePart
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">CIP5.addr_vkh</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-100"></span><span>            </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">(KeyRole, ByteString) -&gt; Maybe KeyHash
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">keyHashFromBytes</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">KeyRole
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">Payment</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121344"><span class="hs-identifier hs-var">bytes</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679121367"><span class="hs-identifier hs-var">bytes</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-101"></span><span>                </span><span class="annot"><span class="annottext">Maybe KeyHash
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>  </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-102"></span><span>                    </span><span class="annot"><span class="annottext">String -&gt; m Address
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fail</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Couldn't convert bytes into payment key hash.&quot;</span></span><span>
-</span><span id="line-103"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679121337"><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679121337"><span class="hs-identifier hs-var">keyhash</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-104"></span><span>                    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121336"><span class="annot"><span class="annottext">credential :: Credential 'PaymentK
-</span><a href="#local-6989586621679121336"><span class="hs-identifier hs-var hs-var">credential</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Credential 'PaymentK
+</span><span id="line-103"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679121360"><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679121360"><span class="hs-identifier hs-var">keyhash</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-104"></span><span>                    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121359"><span class="annot"><span class="annottext">credential :: Credential 'PaymentK
+</span><a href="#local-6989586621679121359"><span class="hs-identifier hs-var hs-var">credential</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Credential 'PaymentK
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">PaymentFromKeyHash</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679121337"><span class="hs-identifier hs-var">keyhash</span></a></span><span>
+</span><a href="#local-6989586621679121360"><span class="hs-identifier hs-var">keyhash</span></a></span><span>
 </span><span id="line-105"></span><span>                    </span><span class="annot"><span class="annottext">Address -&gt; m Address
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(Address -&gt; m Address) -&gt; Address -&gt; m Address
@@ -378,31 +378,31 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley -&gt; Credential 'PaymentK -&gt; Address
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">Shelley.paymentAddress</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley
 NetworkTag
-</span><a href="#local-6989586621679121345"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">Credential 'PaymentK
-</span><a href="#local-6989586621679121336"><span class="hs-identifier hs-var">credential</span></a></span><span>
+</span><a href="#local-6989586621679121368"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">Credential 'PaymentK
+</span><a href="#local-6989586621679121359"><span class="hs-identifier hs-var">credential</span></a></span><span>
 </span><span id="line-106"></span><span>
 </span><span id="line-107"></span><span>        </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-108"></span><span>            </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe XPub
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">xpubFromBytes</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679121344"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679121367"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-109"></span><span>                </span><span class="annot"><span class="annottext">Maybe XPub
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>  </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-110"></span><span>                    </span><span class="annot"><span class="annottext">String -&gt; m Address
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fail</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Couldn't convert bytes into extended public key.&quot;</span></span><span>
-</span><span id="line-111"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679121334"><span class="annot"><span class="annottext">XPub
-</span><a href="#local-6989586621679121334"><span class="hs-identifier hs-var">key</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-112"></span><span>                    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121333"><span class="annot"><span class="annottext">credential :: Credential 'PaymentK
-</span><a href="#local-6989586621679121333"><span class="hs-identifier hs-var hs-var">credential</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Shelley 'PaymentK XPub -&gt; Credential 'PaymentK
+</span><span id="line-111"></span><span>                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679121357"><span class="annot"><span class="annottext">XPub
+</span><a href="#local-6989586621679121357"><span class="hs-identifier hs-var">key</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-112"></span><span>                    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679121356"><span class="annot"><span class="annottext">credential :: Credential 'PaymentK
+</span><a href="#local-6989586621679121356"><span class="hs-identifier hs-var hs-var">credential</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Shelley 'PaymentK XPub -&gt; Credential 'PaymentK
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">PaymentFromKey</span></a></span><span> </span><span class="annot"><span class="annottext">(Shelley 'PaymentK XPub -&gt; Credential 'PaymentK)
 -&gt; Shelley 'PaymentK XPub -&gt; Credential 'PaymentK
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">XPub -&gt; Shelley 'PaymentK XPub
 forall (depth :: Depth). XPub -&gt; Shelley depth XPub
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">Shelley.liftXPub</span></a></span><span> </span><span class="annot"><span class="annottext">XPub
-</span><a href="#local-6989586621679121334"><span class="hs-identifier hs-var">key</span></a></span><span>
+</span><a href="#local-6989586621679121357"><span class="hs-identifier hs-var">key</span></a></span><span>
 </span><span id="line-113"></span><span>                    </span><span class="annot"><span class="annottext">Address -&gt; m Address
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(Address -&gt; m Address) -&gt; Address -&gt; m Address
@@ -410,6 +410,6 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley -&gt; Credential 'PaymentK -&gt; Address
 </span><a href="../../../../cardano-addresses/html/src"><span class="hs-identifier hs-var">Shelley.paymentAddress</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkDiscriminant Shelley
 NetworkTag
-</span><a href="#local-6989586621679121345"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">Credential 'PaymentK
-</span><a href="#local-6989586621679121333"><span class="hs-identifier hs-var">credential</span></a></span><span>
+</span><a href="#local-6989586621679121368"><span class="hs-identifier hs-var">discriminant</span></a></span><span> </span><span class="annot"><span class="annottext">Credential 'PaymentK
+</span><a href="#local-6989586621679121356"><span class="hs-identifier hs-var">credential</span></a></span><span>
 </span><span id="line-114"></span></pre></body></html>

@@ -49,8 +49,8 @@ Arg :: PathSegment -> ftype -> Arg ftype
 
 -- | Foreign type the associated value will have
 [_argType] :: Arg ftype -> ftype
-argType :: forall ftype_afkT ftype_agZQ. Lens (Arg ftype_afkT) (Arg ftype_agZQ) ftype_afkT ftype_agZQ
-argName :: forall ftype_afkT. Lens' (Arg ftype_afkT) PathSegment
+argType :: forall ftype_afl3 ftype_ah00. Lens (Arg ftype_afl3) (Arg ftype_ah00) ftype_afl3 ftype_ah00
+argName :: forall ftype_afl3. Lens' (Arg ftype_afl3) PathSegment
 argPath :: Getter (Arg ftype) Text
 data SegmentType ftype
 
@@ -72,14 +72,14 @@ Static :: PathSegment -> SegmentType ftype
 --   
 --   would capture the arg <tt>userid</tt> with type <tt>ftype</tt>.
 Cap :: Arg ftype -> SegmentType ftype
-_Cap :: forall ftype_ahaJ ftype_ah05. Prism (SegmentType ftype_ahaJ) (SegmentType ftype_ah05) (Arg ftype_ahaJ) (Arg ftype_ah05)
-_Static :: forall ftype_ah05. Prism' (SegmentType ftype_ah05) PathSegment
+_Cap :: forall ftype_ahaT ftype_ah0f. Prism (SegmentType ftype_ahaT) (SegmentType ftype_ah0f) (Arg ftype_ahaT) (Arg ftype_ah0f)
+_Static :: forall ftype_ah0f. Prism' (SegmentType ftype_ah0f) PathSegment
 
 -- | A part of the Url’s path.
 newtype Segment ftype
 Segment :: SegmentType ftype -> Segment ftype
 [unSegment] :: Segment ftype -> SegmentType ftype
-_Segment :: forall ftype_ahmQ ftype_ahaT. Iso (Segment ftype_ahmQ) (Segment ftype_ahaT) (SegmentType ftype_ahmQ) (SegmentType ftype_ahaT)
+_Segment :: forall ftype_ahn0 ftype_ahb3. Iso (Segment ftype_ahn0) (Segment ftype_ahb3) (SegmentType ftype_ahn0) (SegmentType ftype_ahb3)
 
 -- | Whether a segment is a <a>Cap</a>.
 isCapture :: Segment ftype -> Bool
@@ -131,8 +131,8 @@ QueryArg :: Arg ftype -> ArgType -> QueryArg ftype
 
 -- | one of normal/plain, list or flag
 [_queryArgType] :: QueryArg ftype -> ArgType
-queryArgType :: forall ftype_ahtJ. Lens' (QueryArg ftype_ahtJ) ArgType
-queryArgName :: forall ftype_ahtJ ftype_ahI0. Lens (QueryArg ftype_ahtJ) (QueryArg ftype_ahI0) (Arg ftype_ahtJ) (Arg ftype_ahI0)
+queryArgType :: forall ftype_ahtT. Lens' (QueryArg ftype_ahtT) ArgType
+queryArgName :: forall ftype_ahtT ftype_ahIa. Lens (QueryArg ftype_ahtT) (QueryArg ftype_ahIa) (Arg ftype_ahtT) (Arg ftype_ahIa)
 data HeaderArg ftype
 
 -- | The name of the header and the foreign type of its value.
@@ -145,10 +145,10 @@ HeaderArg :: Arg ftype -> HeaderArg ftype
 ReplaceHeaderArg :: Arg ftype -> Text -> HeaderArg ftype
 [_headerArg] :: HeaderArg ftype -> Arg ftype
 [_headerPattern] :: HeaderArg ftype -> Text
-headerPattern :: forall ftype_ahIg. Traversal' (HeaderArg ftype_ahIg) Text
-headerArg :: forall ftype_ahIg ftype_ahQO. Lens (HeaderArg ftype_ahIg) (HeaderArg ftype_ahQO) (Arg ftype_ahIg) (Arg ftype_ahQO)
-_ReplaceHeaderArg :: forall ftype_ahIg. Prism' (HeaderArg ftype_ahIg) (Arg ftype_ahIg, Text)
-_HeaderArg :: forall ftype_ahIg. Prism' (HeaderArg ftype_ahIg) (Arg ftype_ahIg)
+headerPattern :: forall ftype_ahIq. Traversal' (HeaderArg ftype_ahIq) Text
+headerArg :: forall ftype_ahIq ftype_ahQY. Lens (HeaderArg ftype_ahIq) (HeaderArg ftype_ahQY) (Arg ftype_ahIq) (Arg ftype_ahQY)
+_ReplaceHeaderArg :: forall ftype_ahIq. Prism' (HeaderArg ftype_ahIq) (Arg ftype_ahIq, Text)
+_HeaderArg :: forall ftype_ahIq. Prism' (HeaderArg ftype_ahIq) (Arg ftype_ahIq)
 
 -- | Full endpoint url, with all captures and parameters
 data Url ftype
@@ -178,9 +178,9 @@ Url :: Path ftype -> [QueryArg ftype] -> Maybe ftype -> Url ftype
 --   </pre>
 [_frag] :: Url ftype -> Maybe ftype
 defUrl :: Url ftype
-queryStr :: forall ftype_ahSE. Lens' (Url ftype_ahSE) [QueryArg ftype_ahSE]
-path :: forall ftype_ahSE. Lens' (Url ftype_ahSE) (Path ftype_ahSE)
-frag :: forall ftype_ahSE. Lens' (Url ftype_ahSE) (Maybe ftype_ahSE)
+queryStr :: forall ftype_ahSO. Lens' (Url ftype_ahSO) [QueryArg ftype_ahSO]
+path :: forall ftype_ahSO. Lens' (Url ftype_ahSO) (Path ftype_ahSO)
+frag :: forall ftype_ahSO. Lens' (Url ftype_ahSO) (Maybe ftype_ahSO)
 
 -- | See documentation of <a>_reqBodyContentType</a>
 data ReqBodyContentType
@@ -243,13 +243,13 @@ Req :: Url ftype -> Method -> [HeaderArg ftype] -> Maybe ftype -> Maybe ftype ->
 --   • JSON expected in list '[MyFancyContentType]
 --   </pre>
 [_reqBodyContentType] :: Req ftype -> ReqBodyContentType
-reqUrl :: forall ftype_ai2g. Lens' (Req ftype_ai2g) (Url ftype_ai2g)
-reqReturnType :: forall ftype_ai2g. Lens' (Req ftype_ai2g) (Maybe ftype_ai2g)
-reqMethod :: forall ftype_ai2g. Lens' (Req ftype_ai2g) Method
-reqHeaders :: forall ftype_ai2g. Lens' (Req ftype_ai2g) [HeaderArg ftype_ai2g]
-reqFuncName :: forall ftype_ai2g. Lens' (Req ftype_ai2g) FunctionName
-reqBodyContentType :: forall ftype_ai2g. Lens' (Req ftype_ai2g) ReqBodyContentType
-reqBody :: forall ftype_ai2g. Lens' (Req ftype_ai2g) (Maybe ftype_ai2g)
+reqUrl :: forall ftype_ai2q. Lens' (Req ftype_ai2q) (Url ftype_ai2q)
+reqReturnType :: forall ftype_ai2q. Lens' (Req ftype_ai2q) (Maybe ftype_ai2q)
+reqMethod :: forall ftype_ai2q. Lens' (Req ftype_ai2q) Method
+reqHeaders :: forall ftype_ai2q. Lens' (Req ftype_ai2q) [HeaderArg ftype_ai2q]
+reqFuncName :: forall ftype_ai2q. Lens' (Req ftype_ai2q) FunctionName
+reqBodyContentType :: forall ftype_ai2q. Lens' (Req ftype_ai2q) ReqBodyContentType
+reqBody :: forall ftype_ai2q. Lens' (Req ftype_ai2q) (Maybe ftype_ai2q)
 defReq :: Req ftype
 
 -- | <a>HasForeignType</a> maps Haskell types with types in the target
@@ -687,26 +687,26 @@ ReqBodyMultipart :: ReqBodyContentType
 newtype PathSegment
 PathSegment :: Text -> PathSegment
 [unPathSegment] :: PathSegment -> Text
-argName :: forall ftype_afkT. Lens' (Arg ftype_afkT) PathSegment
-argType :: forall ftype_afkT ftype_agZQ. Lens (Arg ftype_afkT) (Arg ftype_agZQ) ftype_afkT ftype_agZQ
+argName :: forall ftype_afl3. Lens' (Arg ftype_afl3) PathSegment
+argType :: forall ftype_afl3 ftype_ah00. Lens (Arg ftype_afl3) (Arg ftype_ah00) ftype_afl3 ftype_ah00
 argPath :: Getter (Arg ftype) Text
-reqUrl :: forall ftype_ai2g. Lens' (Req ftype_ai2g) (Url ftype_ai2g)
-reqMethod :: forall ftype_ai2g. Lens' (Req ftype_ai2g) Method
-reqHeaders :: forall ftype_ai2g. Lens' (Req ftype_ai2g) [HeaderArg ftype_ai2g]
-reqBody :: forall ftype_ai2g. Lens' (Req ftype_ai2g) (Maybe ftype_ai2g)
-reqBodyContentType :: forall ftype_ai2g. Lens' (Req ftype_ai2g) ReqBodyContentType
-reqReturnType :: forall ftype_ai2g. Lens' (Req ftype_ai2g) (Maybe ftype_ai2g)
-reqFuncName :: forall ftype_ai2g. Lens' (Req ftype_ai2g) FunctionName
-path :: forall ftype_ahSE. Lens' (Url ftype_ahSE) (Path ftype_ahSE)
-queryStr :: forall ftype_ahSE. Lens' (Url ftype_ahSE) [QueryArg ftype_ahSE]
-queryArgName :: forall ftype_ahtJ ftype_ahI0. Lens (QueryArg ftype_ahtJ) (QueryArg ftype_ahI0) (Arg ftype_ahtJ) (Arg ftype_ahI0)
-queryArgType :: forall ftype_ahtJ. Lens' (QueryArg ftype_ahtJ) ArgType
-headerArg :: forall ftype_ahIg ftype_ahQO. Lens (HeaderArg ftype_ahIg) (HeaderArg ftype_ahQO) (Arg ftype_ahIg) (Arg ftype_ahQO)
+reqUrl :: forall ftype_ai2q. Lens' (Req ftype_ai2q) (Url ftype_ai2q)
+reqMethod :: forall ftype_ai2q. Lens' (Req ftype_ai2q) Method
+reqHeaders :: forall ftype_ai2q. Lens' (Req ftype_ai2q) [HeaderArg ftype_ai2q]
+reqBody :: forall ftype_ai2q. Lens' (Req ftype_ai2q) (Maybe ftype_ai2q)
+reqBodyContentType :: forall ftype_ai2q. Lens' (Req ftype_ai2q) ReqBodyContentType
+reqReturnType :: forall ftype_ai2q. Lens' (Req ftype_ai2q) (Maybe ftype_ai2q)
+reqFuncName :: forall ftype_ai2q. Lens' (Req ftype_ai2q) FunctionName
+path :: forall ftype_ahSO. Lens' (Url ftype_ahSO) (Path ftype_ahSO)
+queryStr :: forall ftype_ahSO. Lens' (Url ftype_ahSO) [QueryArg ftype_ahSO]
+queryArgName :: forall ftype_ahtT ftype_ahIa. Lens (QueryArg ftype_ahtT) (QueryArg ftype_ahIa) (Arg ftype_ahtT) (Arg ftype_ahIa)
+queryArgType :: forall ftype_ahtT. Lens' (QueryArg ftype_ahtT) ArgType
+headerArg :: forall ftype_ahIq ftype_ahQY. Lens (HeaderArg ftype_ahIq) (HeaderArg ftype_ahQY) (Arg ftype_ahIq) (Arg ftype_ahQY)
 _PathSegment :: Iso' PathSegment Text
-_HeaderArg :: forall ftype_ahIg. Prism' (HeaderArg ftype_ahIg) (Arg ftype_ahIg)
-_ReplaceHeaderArg :: forall ftype_ahIg. Prism' (HeaderArg ftype_ahIg) (Arg ftype_ahIg, Text)
-_Static :: forall ftype_ah05. Prism' (SegmentType ftype_ah05) PathSegment
-_Cap :: forall ftype_ahaJ ftype_ah05. Prism (SegmentType ftype_ahaJ) (SegmentType ftype_ah05) (Arg ftype_ahaJ) (Arg ftype_ah05)
+_HeaderArg :: forall ftype_ahIq. Prism' (HeaderArg ftype_ahIq) (Arg ftype_ahIq)
+_ReplaceHeaderArg :: forall ftype_ahIq. Prism' (HeaderArg ftype_ahIq) (Arg ftype_ahIq, Text)
+_Static :: forall ftype_ah0f. Prism' (SegmentType ftype_ah0f) PathSegment
+_Cap :: forall ftype_ahaT ftype_ah0f. Prism (SegmentType ftype_ahaT) (SegmentType ftype_ah0f) (Arg ftype_ahaT) (Arg ftype_ah0f)
 _Normal :: Prism' ArgType ()
 _Flag :: Prism' ArgType ()
 _List :: Prism' ArgType ()

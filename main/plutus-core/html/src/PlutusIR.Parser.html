@@ -559,11 +559,11 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
 </span><a href="PlutusIR.Parser.html#varTerm"><span class="hs-identifier hs-var hs-var">varTerm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-57"></span><span>    </span><span id="local-6989586621680969625"><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621680969625"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ParsecT ParseError Text (StateT ParserState Quote) Name
+</span><span id="line-57"></span><span>    </span><span id="local-6989586621680969792"><span class="annot"><span class="annottext">Name
+</span><a href="#local-6989586621680969792"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ParsecT ParseError Text (StateT ParserState Quote) Name
 </span><a href="PlutusCore.Parser.ParserCommon.html#name"><span class="hs-identifier hs-var">name</span></a></span><span>
-</span><span id="line-58"></span><span>    </span><span id="local-6989586621680969624"><span class="annot"><span class="annottext">SourcePos
-</span><a href="#local-6989586621680969624"><span class="hs-identifier hs-var">ann</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser SourcePos
+</span><span id="line-58"></span><span>    </span><span id="local-6989586621680969791"><span class="annot"><span class="annottext">SourcePos
+</span><a href="#local-6989586621680969791"><span class="hs-identifier hs-var">ann</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser SourcePos
 forall s e (m :: * -&gt; *).
 (TraversableStream s, MonadParsec e s m) =&gt;
 m SourcePos
@@ -593,8 +593,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall tyname name (uni :: * -&gt; *) fun a.
 a -&gt; name -&gt; Term tyname name uni fun a
 </span><a href="PlutusIR.Core.Type.html#Var"><span class="hs-identifier hs-var">PIR.Var</span></a></span><span> </span><span class="annot"><span class="annottext">SourcePos
-</span><a href="#local-6989586621680969624"><span class="hs-identifier hs-var">ann</span></a></span><span> </span><span class="annot"><span class="annottext">Name
-</span><a href="#local-6989586621680969625"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><a href="#local-6989586621680969791"><span class="hs-identifier hs-var">ann</span></a></span><span> </span><span class="annot"><span class="annottext">Name
+</span><a href="#local-6989586621680969792"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-60"></span><span>
 </span><span id="line-61"></span><span class="hs-comment">-- A small type wrapper for parsers that are parametric in the type of term they parse</span><span>
 </span><span id="line-62"></span><span class="hs-keyword">type</span><span> </span><span id="Parametric"><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-var">Parametric</span></a></span></span><span>
@@ -602,12 +602,12 @@ a -&gt; name -&gt; Term tyname name uni fun a
 </span><span id="line-64"></span><span>
 </span><span id="line-65"></span><span class="annot"><a href="PlutusIR.Parser.html#absTerm"><span class="hs-identifier hs-type">absTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-66"></span><span id="absTerm"><span class="annot"><span class="annottext">absTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#absTerm"><span class="hs-identifier hs-var hs-var">absTerm</span></a></span></span><span> </span><span id="local-6989586621680969621"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#absTerm"><span class="hs-identifier hs-var hs-var">absTerm</span></a></span></span><span> </span><span id="local-6989586621680969788"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969621"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969788"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -684,16 +684,16 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969621"><span class="hs-identifier hs-var">tm</span></a></span><span>
+</span><a href="#local-6989586621680969788"><span class="hs-identifier hs-var">tm</span></a></span><span>
 </span><span id="line-67"></span><span>
 </span><span id="line-68"></span><span class="annot"><a href="PlutusIR.Parser.html#lamTerm"><span class="hs-identifier hs-type">lamTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-69"></span><span id="lamTerm"><span class="annot"><span class="annottext">lamTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#lamTerm"><span class="hs-identifier hs-var hs-var">lamTerm</span></a></span></span><span> </span><span id="local-6989586621680969618"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#lamTerm"><span class="hs-identifier hs-var hs-var">lamTerm</span></a></span></span><span> </span><span id="local-6989586621680969785"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969618"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969785"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -777,16 +777,16 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969618"><span class="hs-identifier hs-var">tm</span></a></span><span>
+</span><a href="#local-6989586621680969785"><span class="hs-identifier hs-var">tm</span></a></span><span>
 </span><span id="line-70"></span><span>
 </span><span id="line-71"></span><span class="annot"><a href="PlutusIR.Parser.html#conTerm"><span class="hs-identifier hs-type">conTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-72"></span><span id="conTerm"><span class="annot"><span class="annottext">conTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#conTerm"><span class="hs-identifier hs-var hs-var">conTerm</span></a></span></span><span> </span><span id="local-6989586621680969615"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#conTerm"><span class="hs-identifier hs-var hs-var">conTerm</span></a></span></span><span> </span><span id="local-6989586621680969782"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969615"><span class="hs-identifier hs-var">_tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969782"><span class="hs-identifier hs-var">_tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -835,12 +835,12 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-73"></span><span>
 </span><span id="line-74"></span><span class="annot"><a href="PlutusIR.Parser.html#iwrapTerm"><span class="hs-identifier hs-type">iwrapTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-75"></span><span id="iwrapTerm"><span class="annot"><span class="annottext">iwrapTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#iwrapTerm"><span class="hs-identifier hs-var hs-var">iwrapTerm</span></a></span></span><span> </span><span id="local-6989586621680969611"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#iwrapTerm"><span class="hs-identifier hs-var hs-var">iwrapTerm</span></a></span></span><span> </span><span id="local-6989586621680969778"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969611"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969778"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -936,16 +936,16 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969611"><span class="hs-identifier hs-var">tm</span></a></span><span>
+</span><a href="#local-6989586621680969778"><span class="hs-identifier hs-var">tm</span></a></span><span>
 </span><span id="line-76"></span><span>
 </span><span id="line-77"></span><span class="annot"><a href="PlutusIR.Parser.html#builtinTerm"><span class="hs-identifier hs-type">builtinTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-78"></span><span id="builtinTerm"><span class="annot"><span class="annottext">builtinTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#builtinTerm"><span class="hs-identifier hs-var hs-var">builtinTerm</span></a></span></span><span> </span><span id="local-6989586621680969608"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#builtinTerm"><span class="hs-identifier hs-var hs-var">builtinTerm</span></a></span></span><span> </span><span id="local-6989586621680969775"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969608"><span class="hs-identifier hs-var">_tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969775"><span class="hs-identifier hs-var">_tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -982,12 +982,12 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-79"></span><span>
 </span><span id="line-80"></span><span class="annot"><a href="PlutusIR.Parser.html#unwrapTerm"><span class="hs-identifier hs-type">unwrapTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-81"></span><span id="unwrapTerm"><span class="annot"><span class="annottext">unwrapTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#unwrapTerm"><span class="hs-identifier hs-var hs-var">unwrapTerm</span></a></span></span><span> </span><span id="local-6989586621680969604"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#unwrapTerm"><span class="hs-identifier hs-var hs-var">unwrapTerm</span></a></span></span><span> </span><span id="local-6989586621680969771"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969604"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969771"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -1023,16 +1023,16 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969604"><span class="hs-identifier hs-var">tm</span></a></span><span>
+</span><a href="#local-6989586621680969771"><span class="hs-identifier hs-var">tm</span></a></span><span>
 </span><span id="line-82"></span><span>
 </span><span id="line-83"></span><span class="annot"><a href="PlutusIR.Parser.html#errorTerm"><span class="hs-identifier hs-type">errorTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-84"></span><span id="errorTerm"><span class="annot"><span class="annottext">errorTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#errorTerm"><span class="hs-identifier hs-var hs-var">errorTerm</span></a></span></span><span> </span><span id="local-6989586621680969601"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#errorTerm"><span class="hs-identifier hs-var hs-var">errorTerm</span></a></span></span><span> </span><span id="local-6989586621680969768"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969601"><span class="hs-identifier hs-var">_tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969768"><span class="hs-identifier hs-var">_tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -1179,12 +1179,12 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-89"></span><span>
 </span><span id="line-90"></span><span class="annot"><a href="PlutusIR.Parser.html#appTerm"><span class="hs-identifier hs-type">appTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-91"></span><span id="appTerm"><span class="annot"><span class="annottext">appTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#appTerm"><span class="hs-identifier hs-var hs-var">appTerm</span></a></span></span><span> </span><span id="local-6989586621680969595"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#appTerm"><span class="hs-identifier hs-var hs-var">appTerm</span></a></span></span><span> </span><span id="local-6989586621680969762"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969595"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969762"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inBrackets"><span class="hs-identifier hs-var">inBrackets</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -1236,7 +1236,7 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969595"><span class="hs-identifier hs-var">tm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
+</span><a href="#local-6989586621680969762"><span class="hs-identifier hs-var">tm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
@@ -1269,16 +1269,16 @@ forall (f :: * -&gt; *) a. Alternative f =&gt; f a -&gt; f [a]
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969595"><span class="hs-identifier hs-var">tm</span></a></span><span>
+</span><a href="#local-6989586621680969762"><span class="hs-identifier hs-var">tm</span></a></span><span>
 </span><span id="line-92"></span><span>
 </span><span id="line-93"></span><span class="annot"><a href="PlutusIR.Parser.html#tyInstTerm"><span class="hs-identifier hs-type">tyInstTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-94"></span><span id="tyInstTerm"><span class="annot"><span class="annottext">tyInstTerm :: Parametric
-</span><a href="PlutusIR.Parser.html#tyInstTerm"><span class="hs-identifier hs-var hs-var">tyInstTerm</span></a></span></span><span> </span><span id="local-6989586621680969590"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#tyInstTerm"><span class="hs-identifier hs-var hs-var">tyInstTerm</span></a></span></span><span> </span><span id="local-6989586621680969757"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969590"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969757"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inBraces"><span class="hs-identifier hs-var">inBraces</span></a></span><span> </span><span class="annot"><span class="annottext">Parametric -&gt; Parametric
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -1330,7 +1330,7 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969590"><span class="hs-identifier hs-var">tm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
+</span><a href="#local-6989586621680969757"><span class="hs-identifier hs-var">tm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
@@ -1367,12 +1367,12 @@ forall (f :: * -&gt; *) a. Alternative f =&gt; f a -&gt; f [a]
 </span><span id="line-95"></span><span>
 </span><span id="line-96"></span><span class="annot"><a href="PlutusIR.Parser.html#term%27"><span class="hs-identifier hs-type">term'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#Parametric"><span class="hs-identifier hs-type">Parametric</span></a></span><span>
 </span><span id="line-97"></span><span id="term%27"><span class="annot"><span class="annottext">term' :: Parametric
-</span><a href="PlutusIR.Parser.html#term%27"><span class="hs-identifier hs-var hs-var">term'</span></a></span></span><span> </span><span id="local-6989586621680969586"><span class="annot"><span class="annottext">ParsecT
+</span><a href="PlutusIR.Parser.html#term%27"><span class="hs-identifier hs-var hs-var">term'</span></a></span></span><span> </span><span id="local-6989586621680969753"><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969586"><span class="hs-identifier hs-var">other</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[ParsecT
+</span><a href="#local-6989586621680969753"><span class="hs-identifier hs-var">other</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[ParsecT
    ParseError
    Text
    (StateT ParserState Quote)
@@ -1433,49 +1433,49 @@ forall e s (m :: * -&gt; *) a. MonadParsec e s m =&gt; m a -&gt; m a
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-100"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#lamTerm"><span class="hs-identifier hs-var">lamTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-101"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#conTerm"><span class="hs-identifier hs-var">conTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-102"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#iwrapTerm"><span class="hs-identifier hs-var">iwrapTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-103"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#builtinTerm"><span class="hs-identifier hs-var">builtinTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-104"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#unwrapTerm"><span class="hs-identifier hs-var">unwrapTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-105"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#errorTerm"><span class="hs-identifier hs-var">errorTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-106"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
@@ -1483,34 +1483,34 @@ forall a. Parser a -&gt; Parser a
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969586"><span class="hs-identifier hs-var">other</span></a></span><span>
+</span><a href="#local-6989586621680969753"><span class="hs-identifier hs-var">other</span></a></span><span>
 </span><span id="line-107"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#tyInstTerm"><span class="hs-identifier hs-var">tyInstTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-108"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#appTerm"><span class="hs-identifier hs-var">appTerm</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var">self</span></a></span><span>
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var">self</span></a></span><span>
 </span><span id="line-109"></span><span>    </span><span class="hs-special">]</span><span>
-</span><span id="line-110"></span><span>    </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621680969585"><span class="annot"><span class="annottext">self :: ParsecT
+</span><span id="line-110"></span><span>    </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621680969752"><span class="annot"><span class="annottext">self :: ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969585"><span class="hs-identifier hs-var hs-var">self</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
+</span><a href="#local-6989586621680969752"><span class="hs-identifier hs-var hs-var">self</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Parametric
 </span><a href="PlutusIR.Parser.html#term%27"><span class="hs-identifier hs-var">term'</span></a></span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
   (Term TyName Name DefaultUni DefaultFun SourcePos)
-</span><a href="#local-6989586621680969586"><span class="hs-identifier hs-var">other</span></a></span><span>
+</span><a href="#local-6989586621680969753"><span class="hs-identifier hs-var">other</span></a></span><span>
 </span><span id="line-111"></span><span>
 </span><span id="line-112"></span><span class="annot"><a href="PlutusIR.Parser.html#pTerm"><span class="hs-identifier hs-type">pTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusCore.Parser.ParserCommon.html#Parser"><span class="hs-identifier hs-type">Parser</span></a></span><span> </span><span class="annot"><a href="PlutusIR.Parser.html#PTerm"><span class="hs-identifier hs-type">PTerm</span></a></span><span>
 </span><span id="line-113"></span><span id="pTerm"><span class="annot"><span class="annottext">pTerm :: ParsecT
@@ -1536,8 +1536,8 @@ forall a. Parser a -&gt; Parser a
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; m b -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-119"></span><span>    </span><span id="local-6989586621680969583"><span class="annot"><span class="annottext">Program TyName Name DefaultUni DefaultFun SourcePos
-</span><a href="#local-6989586621680969583"><span class="hs-identifier hs-var">prog</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
+</span><span id="line-119"></span><span>    </span><span id="local-6989586621680969750"><span class="annot"><span class="annottext">Program TyName Name DefaultUni DefaultFun SourcePos
+</span><a href="#local-6989586621680969750"><span class="hs-identifier hs-var">prog</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">(Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
@@ -1546,8 +1546,8 @@ forall a. Parser a -&gt; Parser a
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-120"></span><span>        </span><span id="local-6989586621680969582"><span class="annot"><span class="annottext">SourcePos
-</span><a href="#local-6989586621680969582"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Parser SourcePos
+</span><span id="line-120"></span><span>        </span><span id="local-6989586621680969749"><span class="annot"><span class="annottext">SourcePos
+</span><a href="#local-6989586621680969749"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Parser SourcePos
 </span><a href="PlutusCore.Parser.ParserCommon.html#wordPos"><span class="hs-identifier hs-var">wordPos</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;program&quot;</span></span><span>
 </span><span id="line-121"></span><span>        </span><span class="annot"><span class="annottext">() -&gt; Parser () -&gt; Parser ()
@@ -1568,7 +1568,7 @@ forall tyname name (uni :: * -&gt; *) fun ann.
 ann
 -&gt; Term tyname name uni fun ann -&gt; Program tyname name uni fun ann
 </span><a href="PlutusIR.Core.Type.html#Program"><span class="hs-identifier hs-var">Program</span></a></span><span> </span><span class="annot"><span class="annottext">SourcePos
-</span><a href="#local-6989586621680969582"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">(Term TyName Name DefaultUni DefaultFun SourcePos
+</span><a href="#local-6989586621680969749"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">(Term TyName Name DefaultUni DefaultFun SourcePos
  -&gt; Program TyName Name DefaultUni DefaultFun SourcePos)
 -&gt; ParsecT
      ParseError
@@ -1593,5 +1593,5 @@ forall e s (m :: * -&gt; *). MonadParsec e s m =&gt; m (Token s)
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">Program TyName Name DefaultUni DefaultFun SourcePos
-</span><a href="#local-6989586621680969583"><span class="hs-identifier hs-var">prog</span></a></span><span>
+</span><a href="#local-6989586621680969750"><span class="hs-identifier hs-var">prog</span></a></span><span>
 </span><span id="line-125"></span></pre></body></html>

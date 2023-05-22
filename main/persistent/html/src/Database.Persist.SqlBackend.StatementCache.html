@@ -53,8 +53,8 @@
 </span><span id="line-49"></span><span class="hs-comment">-- @since 2.13.3</span><span>
 </span><span id="line-50"></span><span class="annot"><a href="Database.Persist.SqlBackend.StatementCache.html#mkSimpleStatementCache"><span class="hs-identifier hs-type">mkSimpleStatementCache</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">IORef</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.Statement.html#Statement"><span class="hs-identifier hs-type">Statement</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.StatementCache.html#MkStatementCache"><span class="hs-identifier hs-type">MkStatementCache</span></a></span><span>
 </span><span id="line-51"></span><span id="mkSimpleStatementCache"><span class="annot"><span class="annottext">mkSimpleStatementCache :: IORef (Map Text Statement) -&gt; MkStatementCache
-</span><a href="Database.Persist.SqlBackend.StatementCache.html#mkSimpleStatementCache"><span class="hs-identifier hs-var hs-var">mkSimpleStatementCache</span></a></span></span><span> </span><span id="local-6989586621679923157"><span class="annot"><span class="annottext">IORef (Map Text Statement)
-</span><a href="#local-6989586621679923157"><span class="hs-identifier hs-var">stmtMap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Database.Persist.SqlBackend.StatementCache.html#mkSimpleStatementCache"><span class="hs-identifier hs-var hs-var">mkSimpleStatementCache</span></a></span></span><span> </span><span id="local-6989586621679923326"><span class="annot"><span class="annottext">IORef (Map Text Statement)
+</span><a href="#local-6989586621679923326"><span class="hs-identifier hs-var">stmtMap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-52"></span><span>    </span><span class="annot"><span class="annottext">MkStatementCache :: (StatementCacheKey -&gt; IO (Maybe Statement))
 -&gt; (StatementCacheKey -&gt; Statement -&gt; IO ())
 -&gt; IO ()
@@ -62,52 +62,52 @@
 -&gt; MkStatementCache
 </span><a href="Database.Persist.SqlBackend.StatementCache.html#MkStatementCache"><span class="hs-identifier hs-type">MkStatementCache</span></a></span><span>
 </span><span id="line-53"></span><span>        </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">statementCacheLookup :: StatementCacheKey -&gt; IO (Maybe Statement)
-</span><a href="Database.Persist.SqlBackend.StatementCache.html#statementCacheLookup"><span class="hs-identifier hs-var">statementCacheLookup</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679923156"><span class="annot"><span class="annottext">StatementCacheKey
-</span><a href="#local-6989586621679923156"><span class="hs-identifier hs-var">sql</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Map Text Statement -&gt; Maybe Statement
+</span><a href="Database.Persist.SqlBackend.StatementCache.html#statementCacheLookup"><span class="hs-identifier hs-var">statementCacheLookup</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679923325"><span class="annot"><span class="annottext">StatementCacheKey
+</span><a href="#local-6989586621679923325"><span class="hs-identifier hs-var">sql</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Map Text Statement -&gt; Maybe Statement
 forall k a. Ord k =&gt; k -&gt; Map k a -&gt; Maybe a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.lookup</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">StatementCacheKey -&gt; Text
 </span><a href="Database.Persist.SqlBackend.Internal.StatementCache.html#cacheKey"><span class="hs-identifier hs-var hs-var">cacheKey</span></a></span><span> </span><span class="annot"><span class="annottext">StatementCacheKey
-</span><a href="#local-6989586621679923156"><span class="hs-identifier hs-var">sql</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Map Text Statement -&gt; Maybe Statement)
+</span><a href="#local-6989586621679923325"><span class="hs-identifier hs-var">sql</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Map Text Statement -&gt; Maybe Statement)
 -&gt; IO (Map Text Statement) -&gt; IO (Maybe Statement)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement) -&gt; IO (Map Text Statement)
 forall a. IORef a -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readIORef</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
-</span><a href="#local-6989586621679923157"><span class="hs-identifier hs-var">stmtMap</span></a></span><span>
+</span><a href="#local-6989586621679923326"><span class="hs-identifier hs-var">stmtMap</span></a></span><span>
 </span><span id="line-54"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">statementCacheInsert :: StatementCacheKey -&gt; Statement -&gt; IO ()
-</span><a href="Database.Persist.SqlBackend.StatementCache.html#statementCacheInsert"><span class="hs-identifier hs-var">statementCacheInsert</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679923151"><span class="annot"><span class="annottext">StatementCacheKey
-</span><a href="#local-6989586621679923151"><span class="hs-identifier hs-var">sql</span></a></span></span><span> </span><span id="local-6989586621679923150"><span class="annot"><span class="annottext">Statement
-</span><a href="#local-6989586621679923150"><span class="hs-identifier hs-var">stmt</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="Database.Persist.SqlBackend.StatementCache.html#statementCacheInsert"><span class="hs-identifier hs-var">statementCacheInsert</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679923320"><span class="annot"><span class="annottext">StatementCacheKey
+</span><a href="#local-6989586621679923320"><span class="hs-identifier hs-var">sql</span></a></span></span><span> </span><span id="local-6989586621679923319"><span class="annot"><span class="annottext">Statement
+</span><a href="#local-6989586621679923319"><span class="hs-identifier hs-var">stmt</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-55"></span><span>            </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
 -&gt; (Map Text Statement -&gt; Map Text Statement) -&gt; IO ()
 forall a. IORef a -&gt; (a -&gt; a) -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">modifyIORef'</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
-</span><a href="#local-6989586621679923157"><span class="hs-identifier hs-var">stmtMap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text -&gt; Statement -&gt; Map Text Statement -&gt; Map Text Statement
+</span><a href="#local-6989586621679923326"><span class="hs-identifier hs-var">stmtMap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text -&gt; Statement -&gt; Map Text Statement -&gt; Map Text Statement
 forall k a. Ord k =&gt; k -&gt; a -&gt; Map k a -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.insert</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">StatementCacheKey -&gt; Text
 </span><a href="Database.Persist.SqlBackend.Internal.StatementCache.html#cacheKey"><span class="hs-identifier hs-var hs-var">cacheKey</span></a></span><span> </span><span class="annot"><span class="annottext">StatementCacheKey
-</span><a href="#local-6989586621679923151"><span class="hs-identifier hs-var">sql</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Statement
-</span><a href="#local-6989586621679923150"><span class="hs-identifier hs-var">stmt</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679923320"><span class="hs-identifier hs-var">sql</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Statement
+</span><a href="#local-6989586621679923319"><span class="hs-identifier hs-var">stmt</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-56"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">statementCacheClear :: IO ()
 </span><a href="Database.Persist.SqlBackend.StatementCache.html#statementCacheClear"><span class="hs-identifier hs-var">statementCacheClear</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-57"></span><span>            </span><span id="local-6989586621679923147"><span class="annot"><span class="annottext">Map Text Statement
-</span><a href="#local-6989586621679923147"><span class="hs-identifier hs-var">oldStatements</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
+</span><span id="line-57"></span><span>            </span><span id="local-6989586621679923316"><span class="annot"><span class="annottext">Map Text Statement
+</span><a href="#local-6989586621679923316"><span class="hs-identifier hs-var">oldStatements</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
 -&gt; (Map Text Statement -&gt; (Map Text Statement, Map Text Statement))
 -&gt; IO (Map Text Statement)
 forall a b. IORef a -&gt; (a -&gt; (a, b)) -&gt; IO b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">atomicModifyIORef'</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
-</span><a href="#local-6989586621679923157"><span class="hs-identifier hs-var">stmtMap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679923145"><span class="annot"><span class="annottext">Map Text Statement
-</span><a href="#local-6989586621679923145"><span class="hs-identifier hs-var">oldStatements</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Map Text Statement
+</span><a href="#local-6989586621679923326"><span class="hs-identifier hs-var">stmtMap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679923314"><span class="annot"><span class="annottext">Map Text Statement
+</span><a href="#local-6989586621679923314"><span class="hs-identifier hs-var">oldStatements</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Map Text Statement
 forall k a. Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.empty</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Map Text Statement
-</span><a href="#local-6989586621679923145"><span class="hs-identifier hs-var">oldStatements</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679923314"><span class="hs-identifier hs-var">oldStatements</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-58"></span><span>            </span><span class="annot"><span class="annottext">(Statement -&gt; IO ()) -&gt; Map Text Statement -&gt; IO ()
 forall (t :: * -&gt; *) (f :: * -&gt; *) a b.
 (Foldable t, Applicative f) =&gt;
 (a -&gt; f b) -&gt; t a -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">traverse_</span></a></span><span> </span><span class="annot"><span class="annottext">Statement -&gt; IO ()
 </span><a href="Database.Persist.SqlBackend.Internal.Statement.html#stmtFinalize"><span class="hs-identifier hs-var hs-var">stmtFinalize</span></a></span><span> </span><span class="annot"><span class="annottext">Map Text Statement
-</span><a href="#local-6989586621679923147"><span class="hs-identifier hs-var">oldStatements</span></a></span><span>
+</span><a href="#local-6989586621679923316"><span class="hs-identifier hs-var">oldStatements</span></a></span><span>
 </span><span id="line-59"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">statementCacheSize :: IO Int
 </span><a href="Database.Persist.SqlBackend.StatementCache.html#statementCacheSize"><span class="hs-identifier hs-var">statementCacheSize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map Text Statement -&gt; Int
 forall k a. Map k a -&gt; Int
@@ -116,7 +116,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement) -&gt; IO (Map Text Statement)
 forall a. IORef a -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readIORef</span></a></span><span> </span><span class="annot"><span class="annottext">IORef (Map Text Statement)
-</span><a href="#local-6989586621679923157"><span class="hs-identifier hs-var">stmtMap</span></a></span><span>
+</span><a href="#local-6989586621679923326"><span class="hs-identifier hs-var">stmtMap</span></a></span><span>
 </span><span id="line-60"></span><span>        </span><span class="hs-special">}</span><span>
 </span><span id="line-61"></span><span>
 </span><span id="line-62"></span><span class="hs-comment">-- | Create a statement cache.</span><span>
@@ -124,7 +124,7 @@ forall a. IORef a -&gt; IO a
 </span><span id="line-64"></span><span class="hs-comment">-- @since 2.13.0</span><span>
 </span><span id="line-65"></span><span class="annot"><a href="Database.Persist.SqlBackend.StatementCache.html#mkStatementCache"><span class="hs-identifier hs-type">mkStatementCache</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.StatementCache.html#MkStatementCache"><span class="hs-identifier hs-type">MkStatementCache</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.Internal.StatementCache.html#StatementCache"><span class="hs-identifier hs-type">StatementCache</span></a></span><span>
 </span><span id="line-66"></span><span id="mkStatementCache"><span class="annot"><span class="annottext">mkStatementCache :: MkStatementCache -&gt; StatementCache
-</span><a href="Database.Persist.SqlBackend.StatementCache.html#mkStatementCache"><span class="hs-identifier hs-var hs-var">mkStatementCache</span></a></span></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.StatementCache.html#MkStatementCache"><span class="hs-identifier hs-type">MkStatementCache</span></a></span><span class="hs-special">{</span><span id="local-6989586621679923137"><span id="local-6989586621679923138"><span id="local-6989586621679923139"><span id="local-6989586621679923140"><span class="annot"><span class="annottext">IO Int
+</span><a href="Database.Persist.SqlBackend.StatementCache.html#mkStatementCache"><span class="hs-identifier hs-var hs-var">mkStatementCache</span></a></span></span><span> </span><span class="annot"><a href="Database.Persist.SqlBackend.StatementCache.html#MkStatementCache"><span class="hs-identifier hs-type">MkStatementCache</span></a></span><span class="hs-special">{</span><span id="local-6989586621679923306"><span id="local-6989586621679923307"><span id="local-6989586621679923308"><span id="local-6989586621679923309"><span class="annot"><span class="annottext">IO Int
 IO ()
 StatementCacheKey -&gt; IO (Maybe Statement)
 StatementCacheKey -&gt; Statement -&gt; IO ()
@@ -136,7 +136,7 @@ statementCacheSize :: MkStatementCache -&gt; IO Int
 statementCacheClear :: MkStatementCache -&gt; IO ()
 statementCacheInsert :: MkStatementCache -&gt; StatementCacheKey -&gt; Statement -&gt; IO ()
 statementCacheLookup :: MkStatementCache -&gt; StatementCacheKey -&gt; IO (Maybe Statement)
-</span><a href="#local-6989586621679923137"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StatementCache :: (StatementCacheKey -&gt; IO (Maybe Statement))
+</span><a href="#local-6989586621679923306"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StatementCache :: (StatementCacheKey -&gt; IO (Maybe Statement))
 -&gt; (StatementCacheKey -&gt; Statement -&gt; IO ())
 -&gt; IO ()
 -&gt; IO Int

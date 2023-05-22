@@ -33,22 +33,22 @@
 </span><span id="line-33"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Gen.html#genUserPassphrase"><span class="hs-identifier hs-type">genUserPassphrase</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#Passphrase"><span class="hs-identifier hs-type">Passphrase</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;user&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-34"></span><span id="genUserPassphrase"><span class="annot"><span class="annottext">genUserPassphrase :: Gen (Passphrase &quot;user&quot;)
 </span><a href="Cardano.Wallet.Primitive.Passphrase.Gen.html#genUserPassphrase"><span class="hs-identifier hs-var hs-var">genUserPassphrase</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-35"></span><span>    </span><span id="local-6989586621682427103"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682427103"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; Gen Int
+</span><span id="line-35"></span><span>    </span><span id="local-6989586621682427387"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682427387"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; Gen Int
 forall a. Random a =&gt; (a, a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">choose</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Proxy &quot;user&quot; -&gt; Int
 forall (purpose :: Symbol).
 PassphraseMinLength purpose =&gt;
 Proxy purpose -&gt; Int
 </span><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#passphraseMinLength"><span class="hs-identifier hs-var">passphraseMinLength</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
-</span><a href="#local-6989586621682427101"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot; -&gt; Int
+</span><a href="#local-6989586621682427385"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot; -&gt; Int
 forall (purpose :: Symbol).
 PassphraseMaxLength purpose =&gt;
 Proxy purpose -&gt; Int
 </span><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#passphraseMaxLength"><span class="hs-identifier hs-var">passphraseMaxLength</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
-</span><a href="#local-6989586621682427101"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-36"></span><span>    </span><span id="local-6989586621682427099"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621682427099"><span class="hs-identifier hs-var">bytes</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; ByteString
+</span><a href="#local-6989586621682427385"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-36"></span><span>    </span><span id="local-6989586621682427383"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621682427383"><span class="hs-identifier hs-var">bytes</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Text -&gt; ByteString
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.encodeUtf8</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; ByteString) -&gt; (String -&gt; Text) -&gt; String -&gt; ByteString
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
@@ -57,7 +57,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Gen Char -&gt; Gen String
 forall (m :: * -&gt; *) a. Applicative m =&gt; Int -&gt; m a -&gt; m [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicateM</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682427103"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Char
+</span><a href="#local-6989586621682427387"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Char
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">arbitraryPrintableChar</span></a></span><span>
 </span><span id="line-37"></span><span>    </span><span class="annot"><span class="annottext">Passphrase &quot;user&quot; -&gt; Gen (Passphrase &quot;user&quot;)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -74,27 +74,27 @@ forall bin bout.
 (ByteArrayAccess bin, ByteArray bout) =&gt;
 bin -&gt; bout
 </span><a href="../../../../memory/html/src"><span class="hs-identifier hs-var">BA.convert</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621682427099"><span class="hs-identifier hs-var">bytes</span></a></span><span>
-</span><span id="line-38"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621682427101"><span class="annot"><span class="annottext">p :: Proxy &quot;user&quot;
-</span><a href="#local-6989586621682427101"><span class="hs-identifier hs-var hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
+</span><a href="#local-6989586621682427383"><span class="hs-identifier hs-var">bytes</span></a></span><span>
+</span><span id="line-38"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621682427385"><span class="annot"><span class="annottext">p :: Proxy &quot;user&quot;
+</span><a href="#local-6989586621682427385"><span class="hs-identifier hs-var hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
 forall k (t :: k). Proxy t
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Proxy</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;user&quot;</span></span><span>
 </span><span id="line-39"></span><span>
 </span><span id="line-40"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Gen.html#shrinkUserPassphrase"><span class="hs-identifier hs-type">shrinkUserPassphrase</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#Passphrase"><span class="hs-identifier hs-type">Passphrase</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;user&quot;</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#Passphrase"><span class="hs-identifier hs-type">Passphrase</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;user&quot;</span></span><span class="hs-special">]</span><span>
 </span><span id="line-41"></span><span id="shrinkUserPassphrase"><span class="annot"><span class="annottext">shrinkUserPassphrase :: Passphrase &quot;user&quot; -&gt; [Passphrase &quot;user&quot;]
-</span><a href="Cardano.Wallet.Primitive.Passphrase.Gen.html#shrinkUserPassphrase"><span class="hs-identifier hs-var hs-var">shrinkUserPassphrase</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#Passphrase"><span class="hs-identifier hs-type">Passphrase</span></a></span><span> </span><span id="local-6989586621682427091"><span class="annot"><span class="annottext">ScrubbedBytes
-</span><a href="#local-6989586621682427091"><span class="hs-identifier hs-var">bytes</span></a></span></span><span class="hs-special">)</span><span>
+</span><a href="Cardano.Wallet.Primitive.Passphrase.Gen.html#shrinkUserPassphrase"><span class="hs-identifier hs-var hs-var">shrinkUserPassphrase</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#Passphrase"><span class="hs-identifier hs-type">Passphrase</span></a></span><span> </span><span id="local-6989586621682427375"><span class="annot"><span class="annottext">ScrubbedBytes
+</span><a href="#local-6989586621682427375"><span class="hs-identifier hs-var">bytes</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-42"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">ScrubbedBytes -&gt; Int
 forall ba. ByteArrayAccess ba =&gt; ba -&gt; Int
 </span><a href="../../../../memory/html/src"><span class="hs-identifier hs-var">BA.length</span></a></span><span> </span><span class="annot"><span class="annottext">ScrubbedBytes
-</span><a href="#local-6989586621682427091"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621682427375"><span class="hs-identifier hs-var">bytes</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot; -&gt; Int
 forall (purpose :: Symbol).
 PassphraseMinLength purpose =&gt;
 Proxy purpose -&gt; Int
 </span><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#passphraseMinLength"><span class="hs-identifier hs-var">passphraseMinLength</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
-</span><a href="#local-6989586621682427088"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682427372"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
 </span><span id="line-43"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-44"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">ScrubbedBytes -&gt; Passphrase &quot;user&quot;
@@ -116,7 +116,7 @@ forall (purpose :: Symbol).
 PassphraseMinLength purpose =&gt;
 Proxy purpose -&gt; Int
 </span><a href="Cardano.Wallet.Primitive.Passphrase.Types.html#passphraseMinLength"><span class="hs-identifier hs-var">passphraseMinLength</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
-</span><a href="#local-6989586621682427088"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682427372"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-47"></span><span>        </span><span class="annot"><span class="annottext">(ByteString -&gt; ByteString) -&gt; ByteString -&gt; ByteString
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ScrubbedBytes -&gt; ByteString
@@ -124,10 +124,10 @@ forall bin bout.
 (ByteArrayAccess bin, ByteArray bout) =&gt;
 bin -&gt; bout
 </span><a href="../../../../memory/html/src"><span class="hs-identifier hs-var">BA.convert</span></a></span><span> </span><span class="annot"><span class="annottext">ScrubbedBytes
-</span><a href="#local-6989586621682427091"><span class="hs-identifier hs-var">bytes</span></a></span><span>
+</span><a href="#local-6989586621682427375"><span class="hs-identifier hs-var">bytes</span></a></span><span>
 </span><span id="line-48"></span><span>        </span><span class="hs-special">]</span><span>
-</span><span id="line-49"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621682427088"><span class="annot"><span class="annottext">p :: Proxy &quot;user&quot;
-</span><a href="#local-6989586621682427088"><span class="hs-identifier hs-var hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
+</span><span id="line-49"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621682427372"><span class="annot"><span class="annottext">p :: Proxy &quot;user&quot;
+</span><a href="#local-6989586621682427372"><span class="hs-identifier hs-var hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Proxy &quot;user&quot;
 forall k (t :: k). Proxy t
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Proxy</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;user&quot;</span></span><span>
 </span><span id="line-50"></span><span>

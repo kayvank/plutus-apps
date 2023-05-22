@@ -37,8 +37,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">H.property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-24"></span><span>    </span><span id="local-6989586621679483066"><span class="annot"><span class="annottext">Maybe [Char]
-</span><a href="#local-6989586621679483066"><span class="hs-identifier hs-var">menv</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (Maybe [Char]) -&gt; PropertyT IO (Maybe [Char])
+</span><span id="line-24"></span><span>    </span><span id="local-6989586621679483299"><span class="annot"><span class="annottext">Maybe [Char]
+</span><a href="#local-6989586621679483299"><span class="hs-identifier hs-var">menv</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO (Maybe [Char]) -&gt; PropertyT IO (Maybe [Char])
 forall (m :: * -&gt; *) a. MonadIO m =&gt; IO a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">liftIO</span></a></span><span> </span><span class="annot"><span class="annottext">(IO (Maybe [Char]) -&gt; PropertyT IO (Maybe [Char]))
 -&gt; IO (Maybe [Char]) -&gt; PropertyT IO (Maybe [Char])
@@ -53,10 +53,10 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe [Char] -&gt; Bool
 forall a. Maybe a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">isJust</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe [Char]
-</span><a href="#local-6989586621679483066"><span class="hs-identifier hs-var">menv</span></a></span><span>
+</span><a href="#local-6989586621679483299"><span class="hs-identifier hs-var">menv</span></a></span><span>
 </span><span id="line-26"></span><span>
-</span><span id="line-27"></span><span>    </span><span id="local-6989586621679483062"><span class="annot"><span class="annottext">[[Char]]
-</span><a href="#local-6989586621679483062"><span class="hs-identifier hs-var">files</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [[Char]] -&gt; [[Char]]
+</span><span id="line-27"></span><span>    </span><span id="local-6989586621679483295"><span class="annot"><span class="annottext">[[Char]]
+</span><a href="#local-6989586621679483295"><span class="hs-identifier hs-var">files</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [[Char]] -&gt; [[Char]]
 forall a. Int -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">take</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">10</span></span><span> </span><span class="annot"><span class="annottext">([[Char]] -&gt; [[Char]])
@@ -74,22 +74,22 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">not</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[[Char]] -&gt; Bool
 forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">null</span></a></span><span> </span><span class="annot"><span class="annottext">[[Char]]
-</span><a href="#local-6989586621679483062"><span class="hs-identifier hs-var">files</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483295"><span class="hs-identifier hs-var">files</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-29"></span><span>    </span><span class="hs-comment">-- TODO: the property cannot take any parameters (if we want discoverPrefix</span><span>
 </span><span id="line-30"></span><span>    </span><span class="hs-comment">-- to work). Now the question is whether it is OK to use an hardcoded value</span><span>
 </span><span id="line-31"></span><span>    </span><span class="hs-comment">-- for the number of slots per epoch, and if so in which module should we</span><span>
 </span><span id="line-32"></span><span>    </span><span class="hs-comment">-- store this constant?</span><span>
-</span><span id="line-33"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483057"><span class="annot"><span class="annottext">stream :: Stream
+</span><span id="line-33"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679483290"><span class="annot"><span class="annottext">stream :: Stream
   (Of (ABlockOrBoundary ByteString)) (ExceptT ParseError ResIO) ()
-</span><a href="#local-6989586621679483057"><span class="hs-identifier hs-var hs-var">stream</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochSlots
+</span><a href="#local-6989586621679483290"><span class="hs-identifier hs-var hs-var">stream</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochSlots
 -&gt; [[Char]]
 -&gt; Stream
      (Of (ABlockOrBoundary ByteString)) (ExceptT ParseError ResIO) ()
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">parseEpochFilesWithBoundary</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mainnetEpochSlots</span></a></span><span> </span><span class="annot"><span class="annottext">[[Char]]
-</span><a href="#local-6989586621679483062"><span class="hs-identifier hs-var">files</span></a></span><span>
-</span><span id="line-34"></span><span>    </span><span id="local-6989586621679483056"><span class="annot"><span class="annottext">Either ParseError ()
-</span><a href="#local-6989586621679483056"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">IO (Either ParseError ()) -&gt; PropertyT IO (Either ParseError ())
+</span><a href="#local-6989586621679483295"><span class="hs-identifier hs-var">files</span></a></span><span>
+</span><span id="line-34"></span><span>    </span><span id="local-6989586621679483289"><span class="annot"><span class="annottext">Either ParseError ()
+</span><a href="#local-6989586621679483289"><span class="hs-identifier hs-var">result</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">IO (Either ParseError ()) -&gt; PropertyT IO (Either ParseError ())
 forall (m :: * -&gt; *) a. MonadIO m =&gt; IO a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">liftIO</span></a></span><span> </span><span class="annot"><span class="annottext">(IO (Either ParseError ()) -&gt; PropertyT IO (Either ParseError ()))
 -&gt; (Stream (ExceptT ParseError ResIO) (ExceptT ParseError ResIO) ()
@@ -134,11 +134,11 @@ forall (m :: * -&gt; *) (f :: * -&gt; *) (g :: * -&gt; *) r.
 </span><a href="../../../../streaming/html/src"><span class="hs-identifier hs-var">S.maps</span></a></span><span> </span><span class="annot"><span class="annottext">forall x.
 Of (ABlockOrBoundary ByteString) x -&gt; ExceptT ParseError ResIO x
 forall a m. Of a m -&gt; ExceptT ParseError ResIO m
-</span><a href="#local-6989586621679483051"><span class="hs-identifier hs-var">discard</span></a></span><span> </span><span class="annot"><span class="annottext">Stream
+</span><a href="#local-6989586621679483284"><span class="hs-identifier hs-var">discard</span></a></span><span> </span><span class="annot"><span class="annottext">Stream
   (Of (ABlockOrBoundary ByteString)) (ExceptT ParseError ResIO) ()
-</span><a href="#local-6989586621679483057"><span class="hs-identifier hs-var">stream</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679483290"><span class="hs-identifier hs-var">stream</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-35"></span><span>    </span><span class="annot"><span class="annottext">Either ParseError ()
-</span><a href="#local-6989586621679483056"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">Either ParseError () -&gt; Either ParseError () -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679483289"><span class="hs-identifier hs-var">result</span></a></span><span> </span><span class="annot"><span class="annottext">Either ParseError () -&gt; Either ParseError () -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; a -&gt; m ()
@@ -146,12 +146,12 @@ a -&gt; a -&gt; m ()
 forall a b. b -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Right</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-36"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-37"></span><span>    </span><span id="local-6989586621679483090"><span id="local-6989586621679483091"><span class="annot"><a href="#local-6989586621679483051"><span class="hs-identifier hs-type">discard</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../streaming/html/src"><span class="hs-identifier hs-type">Of</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679483091"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679483090"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ParseError</span></a></span><span> </span><span class="annot"><a href="../../../../resourcet/html/src"><span class="hs-identifier hs-type">ResIO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679483090"><span class="hs-identifier hs-type">m</span></a></span></span></span><span>
-</span><span id="line-38"></span><span>    </span><span id="local-6989586621679483051"><span class="annot"><span class="annottext">discard :: Of a m -&gt; ExceptT ParseError ResIO m
-</span><a href="#local-6989586621679483051"><span class="hs-identifier hs-var hs-var">discard</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><span class="hs-identifier">_</span></span><span> </span><span class="annot"><a href="../../../../streaming/html/src"><span class="hs-operator hs-type">:&gt;</span></a></span><span> </span><span id="local-6989586621679483050"><span class="annot"><span class="annottext">m
-</span><a href="#local-6989586621679483050"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">m -&gt; ExceptT ParseError ResIO m
+</span><span id="line-37"></span><span>    </span><span id="local-6989586621679483323"><span id="local-6989586621679483324"><span class="annot"><a href="#local-6989586621679483284"><span class="hs-identifier hs-type">discard</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../streaming/html/src"><span class="hs-identifier hs-type">Of</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679483324"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679483323"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">ExceptT</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ParseError</span></a></span><span> </span><span class="annot"><a href="../../../../resourcet/html/src"><span class="hs-identifier hs-type">ResIO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679483323"><span class="hs-identifier hs-type">m</span></a></span></span></span><span>
+</span><span id="line-38"></span><span>    </span><span id="local-6989586621679483284"><span class="annot"><span class="annottext">discard :: Of a m -&gt; ExceptT ParseError ResIO m
+</span><a href="#local-6989586621679483284"><span class="hs-identifier hs-var hs-var">discard</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
+</span><span class="hs-identifier">_</span></span><span> </span><span class="annot"><a href="../../../../streaming/html/src"><span class="hs-operator hs-type">:&gt;</span></a></span><span> </span><span id="local-6989586621679483283"><span class="annot"><span class="annottext">m
+</span><a href="#local-6989586621679483283"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">m -&gt; ExceptT ParseError ResIO m
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">m
-</span><a href="#local-6989586621679483050"><span class="hs-identifier hs-var">rest</span></a></span><span>
+</span><a href="#local-6989586621679483283"><span class="hs-identifier hs-var">rest</span></a></span><span>
 </span><span id="line-39"></span></pre></body></html>

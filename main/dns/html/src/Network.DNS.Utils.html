@@ -138,27 +138,27 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><span id="line-130"></span><span class="hs-comment">--</span><span>
 </span><span id="line-131"></span><span class="annot"><a href="Network.DNS.Utils.html#normalizeRoot"><span class="hs-identifier hs-type">normalizeRoot</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.DNS.Types.html#Domain"><span class="hs-identifier hs-type">Domain</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Network.DNS.Types.html#Domain"><span class="hs-identifier hs-type">Domain</span></a></span><span>
 </span><span id="line-132"></span><span id="normalizeRoot"><span class="annot"><span class="annottext">normalizeRoot :: Domain -&gt; Domain
-</span><a href="Network.DNS.Utils.html#normalizeRoot"><span class="hs-identifier hs-var hs-var">normalizeRoot</span></a></span></span><span> </span><span id="local-6989586621679082898"><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">d</span></a></span></span><span>
+</span><a href="Network.DNS.Utils.html#normalizeRoot"><span class="hs-identifier hs-var hs-var">normalizeRoot</span></a></span></span><span> </span><span id="local-6989586621679082899"><span class="annot"><span class="annottext">Domain
+</span><a href="#local-6989586621679082899"><span class="hs-identifier hs-var">d</span></a></span></span><span>
 </span><span id="line-133"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Domain -&gt; Bool
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.null</span></a></span><span> </span><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082897"><span class="hs-identifier hs-var">trailing_dot</span></a></span><span>
+</span><a href="#local-6989586621679082899"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Domain
+</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">trailing_dot</span></a></span><span>
 </span><span id="line-134"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Domain -&gt; Char
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.last</span></a></span><span> </span><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679082899"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'.'</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">d</span></a></span><span>
+</span><a href="#local-6989586621679082899"><span class="hs-identifier hs-var">d</span></a></span><span>
 </span><span id="line-135"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="annot"><span class="annottext">Domain -&gt; Domain -&gt; Domain
+</span><a href="#local-6989586621679082899"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="annot"><span class="annottext">Domain -&gt; Domain -&gt; Domain
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">`BS.append`</span></a></span><span> </span><span class="annot"><span class="annottext">Domain
-</span><a href="#local-6989586621679082897"><span class="hs-identifier hs-var">trailing_dot</span></a></span><span>
+</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var">trailing_dot</span></a></span><span>
 </span><span id="line-136"></span><span>    </span><span class="hs-keyword">where</span><span>
-</span><span id="line-137"></span><span>      </span><span id="local-6989586621679082897"><span class="annot"><span class="annottext">trailing_dot :: Domain
-</span><a href="#local-6989586621679082897"><span class="hs-identifier hs-var hs-var">trailing_dot</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Domain
+</span><span id="line-137"></span><span>      </span><span id="local-6989586621679082898"><span class="annot"><span class="annottext">trailing_dot :: Domain
+</span><a href="#local-6989586621679082898"><span class="hs-identifier hs-var hs-var">trailing_dot</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Domain
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.pack</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;.&quot;</span></span><span>
 </span><span id="line-138"></span></pre></body></html>

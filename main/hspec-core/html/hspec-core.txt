@@ -7,7 +7,7 @@
 --   This package exposes internal types and functions that can be used to
 --   extend Hspec's functionality.
 @package hspec-core
-@version 2.10.9
+@version 2.10.10
 
 
 module Test.Hspec.Core.Util
@@ -851,6 +851,7 @@ Config :: Bool -> Bool -> Bool -> Bool -> Bool -> Bool -> Maybe Int -> Bool -> B
 [configPrettyPrint] :: Config -> Bool
 [configPrettyPrintFunction] :: Config -> Bool -> String -> String -> (String, String)
 [configTimes] :: Config -> Bool
+
 [configAvailableFormatters] :: Config -> [(String, FormatConfig -> IO Format)]
 [configFormat] :: Config -> Maybe (FormatConfig -> IO Format)
 
@@ -973,7 +974,7 @@ isSuccess :: Summary -> Bool
 evaluateSummary :: Summary -> IO ()
 type Spec = SpecWith ()
 type SpecWith a = SpecM a ()
-instance GHC.Show.Show Test.Hspec.Core.Runner.Summary
-instance GHC.Classes.Eq Test.Hspec.Core.Runner.Summary
-instance GHC.Base.Monoid Test.Hspec.Core.Runner.Summary
-instance GHC.Base.Semigroup Test.Hspec.Core.Runner.Summary
+instance GHC.Show.Show Test.Hspec.Core.Runner.ProgressReporting
+instance GHC.Classes.Eq Test.Hspec.Core.Runner.ProgressReporting
+instance GHC.Show.Show Test.Hspec.Core.Runner.UseColor
+instance GHC.Classes.Eq Test.Hspec.Core.Runner.UseColor

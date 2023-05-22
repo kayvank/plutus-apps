@@ -15,7 +15,7 @@
 </span><span id="line-15"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">Servant.Docs</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToSample</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">samples</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">singleSample</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-16"></span><span>
 </span><span id="line-17"></span><span class="hs-comment">-- | Information about Cardano address</span><span>
-</span><span id="line-18"></span><span id="local-6989586621681202035"><span id="local-6989586621681202036"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressInfo"><span class="hs-identifier hs-var">AddressInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressInfo"><span class="hs-identifier hs-var">AddressInfo</span></a></span></span><span>
+</span><span id="line-18"></span><span id="local-6989586621681202042"><span id="local-6989586621681202043"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressInfo"><span class="hs-identifier hs-var">AddressInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressInfo"><span class="hs-identifier hs-var">AddressInfo</span></a></span></span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_addressInfoAddress"><span class="annot"><span class="annottext">AddressInfo -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressInfoAddress"><span class="hs-identifier hs-var hs-var">_addressInfoAddress</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 encoded addresses</span><span>
 </span><span id="line-20"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressInfoAmount"><span class="annot"><span class="annottext">AddressInfo -&gt; [Amount]
@@ -26,7 +26,7 @@
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressInfoType"><span class="hs-identifier hs-var hs-var">_addressInfoType</span></a></span></span><span>         </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressType"><span class="hs-identifier hs-type">AddressType</span></a></span><span> </span><span class="hs-comment">-- ^ Address era</span><span>
 </span><span id="line-23"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressInfoScript"><span class="annot"><span class="annottext">AddressInfo -&gt; Bool
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressInfoScript"><span class="hs-identifier hs-var hs-var">_addressInfoScript</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span> </span><span class="hs-comment">-- ^ True if this is a script address</span><span>
-</span><span id="line-24"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202023"><span id="local-6989586621681202025"><span id="local-6989586621681202027"><span class="annot"><span class="annottext">Int -&gt; AddressInfo -&gt; ShowS
+</span><span id="line-24"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202030"><span id="local-6989586621681202032"><span id="local-6989586621681202034"><span class="annot"><span class="annottext">Int -&gt; AddressInfo -&gt; ShowS
 [AddressInfo] -&gt; ShowS
 AddressInfo -&gt; String
 (Int -&gt; AddressInfo -&gt; ShowS)
@@ -41,7 +41,7 @@ show :: AddressInfo -&gt; String
 $cshow :: AddressInfo -&gt; String
 showsPrec :: Int -&gt; AddressInfo -&gt; ShowS
 $cshowsPrec :: Int -&gt; AddressInfo -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202018"><span id="local-6989586621681202020"><span class="annot"><span class="annottext">AddressInfo -&gt; AddressInfo -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202025"><span id="local-6989586621681202027"><span class="annot"><span class="annottext">AddressInfo -&gt; AddressInfo -&gt; Bool
 (AddressInfo -&gt; AddressInfo -&gt; Bool)
 -&gt; (AddressInfo -&gt; AddressInfo -&gt; Bool) -&gt; Eq AddressInfo
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -59,7 +59,7 @@ forall a.
 $cto :: forall x. Rep AddressInfo x -&gt; AddressInfo
 $cfrom :: forall x. AddressInfo -&gt; Rep AddressInfo x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-25"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202010"><span id="local-6989586621681202012"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressInfo]
+</span><span id="line-25"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681202017"><span id="local-6989586621681202019"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressInfo]
 Value -&gt; Parser AddressInfo
 (Value -&gt; Parser AddressInfo)
 -&gt; (Value -&gt; Parser [AddressInfo]) -&gt; FromJSON AddressInfo
@@ -69,7 +69,7 @@ parseJSONList :: Value -&gt; Parser [AddressInfo]
 $cparseJSONList :: Value -&gt; Parser [AddressInfo]
 parseJSON :: Value -&gt; Parser AddressInfo
 $cparseJSON :: Value -&gt; Parser AddressInfo
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202001"><span id="local-6989586621681202003"><span id="local-6989586621681202005"><span id="local-6989586621681202007"><span class="annot"><span class="annottext">[AddressInfo] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681202008"><span id="local-6989586621681202010"><span id="local-6989586621681202012"><span id="local-6989586621681202014"><span class="annot"><span class="annottext">[AddressInfo] -&gt; Encoding
 [AddressInfo] -&gt; Value
 AddressInfo -&gt; Encoding
 AddressInfo -&gt; Value
@@ -96,7 +96,7 @@ $ctoJSON :: AddressInfo -&gt; Value
 </span><span id="line-26"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_addressInfo&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressInfo"><span class="hs-identifier hs-type">AddressInfo</span></a></span><span>
 </span><span id="line-27"></span><span>
 </span><span id="line-28"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressInfo"><span class="hs-identifier hs-type">AddressInfo</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-29"></span><span>  </span><span id="local-6989586621681201993"><span class="annot"><span class="annottext">toSamples :: Proxy AddressInfo -&gt; [(Text, AddressInfo)]
+</span><span id="line-29"></span><span>  </span><span id="local-6989586621681202000"><span class="annot"><span class="annottext">toSamples :: Proxy AddressInfo -&gt; [(Text, AddressInfo)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressInfo)] -&gt; Proxy AddressInfo -&gt; [(Text, AddressInfo)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AddressInfo)]
@@ -146,8 +146,8 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-43"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-44"></span><span>
 </span><span id="line-45"></span><span class="hs-comment">-- | Type (era) of an address</span><span>
-</span><span id="line-46"></span><span id="local-6989586621681201985"><span id="local-6989586621681201986"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressType"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressType"><span class="hs-identifier hs-var">AddressType</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Byron"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#Byron"><span class="hs-identifier hs-var">Byron</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Shelley"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#Shelley"><span class="hs-identifier hs-var">Shelley</span></a></span></span><span>
-</span><span id="line-47"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201978"><span id="local-6989586621681201980"><span id="local-6989586621681201982"><span class="annot"><span class="annottext">Int -&gt; AddressType -&gt; ShowS
+</span><span id="line-46"></span><span id="local-6989586621681201992"><span id="local-6989586621681201993"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressType"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressType"><span class="hs-identifier hs-var">AddressType</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Byron"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#Byron"><span class="hs-identifier hs-var">Byron</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Shelley"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#Shelley"><span class="hs-identifier hs-var">Shelley</span></a></span></span><span>
+</span><span id="line-47"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201985"><span id="local-6989586621681201987"><span id="local-6989586621681201989"><span class="annot"><span class="annottext">Int -&gt; AddressType -&gt; ShowS
 [AddressType] -&gt; ShowS
 AddressType -&gt; String
 (Int -&gt; AddressType -&gt; ShowS)
@@ -162,7 +162,7 @@ show :: AddressType -&gt; String
 $cshow :: AddressType -&gt; String
 showsPrec :: Int -&gt; AddressType -&gt; ShowS
 $cshowsPrec :: Int -&gt; AddressType -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201974"><span id="local-6989586621681201976"><span class="annot"><span class="annottext">AddressType -&gt; AddressType -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201981"><span id="local-6989586621681201983"><span class="annot"><span class="annottext">AddressType -&gt; AddressType -&gt; Bool
 (AddressType -&gt; AddressType -&gt; Bool)
 -&gt; (AddressType -&gt; AddressType -&gt; Bool) -&gt; Eq AddressType
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -180,7 +180,7 @@ forall a.
 $cto :: forall x. Rep AddressType x -&gt; AddressType
 $cfrom :: forall x. AddressType -&gt; Rep AddressType x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-48"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201968"><span id="local-6989586621681201970"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressType]
+</span><span id="line-48"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201975"><span id="local-6989586621681201977"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressType]
 Value -&gt; Parser AddressType
 (Value -&gt; Parser AddressType)
 -&gt; (Value -&gt; Parser [AddressType]) -&gt; FromJSON AddressType
@@ -190,7 +190,7 @@ parseJSONList :: Value -&gt; Parser [AddressType]
 $cparseJSONList :: Value -&gt; Parser [AddressType]
 parseJSON :: Value -&gt; Parser AddressType
 $cparseJSON :: Value -&gt; Parser AddressType
-</span><a href="#local-6989586621681201968"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201960"><span id="local-6989586621681201962"><span id="local-6989586621681201964"><span id="local-6989586621681201966"><span class="annot"><span class="annottext">[AddressType] -&gt; Encoding
+</span><a href="#local-6989586621681201975"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201967"><span id="local-6989586621681201969"><span id="local-6989586621681201971"><span id="local-6989586621681201973"><span class="annot"><span class="annottext">[AddressType] -&gt; Encoding
 [AddressType] -&gt; Value
 AddressType -&gt; Encoding
 AddressType -&gt; Value
@@ -213,12 +213,12 @@ toEncoding :: AddressType -&gt; Encoding
 $ctoEncoding :: AddressType -&gt; Encoding
 toJSON :: AddressType -&gt; Value
 $ctoJSON :: AddressType -&gt; Value
-</span><a href="#local-6989586621681201960"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201967"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-49"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">ConstructorTagModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.Opts.html#ToLower"><span class="hs-identifier hs-type">ToLower</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressType"><span class="hs-identifier hs-type">AddressType</span></a></span><span>
 </span><span id="line-50"></span><span>
 </span><span id="line-51"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressType"><span class="hs-identifier hs-type">AddressType</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-52"></span><span>  </span><span id="local-6989586621681201956"><span class="annot"><span class="annottext">toSamples :: Proxy AddressType -&gt; [(Text, AddressType)]
-</span><a href="#local-6989586621681201956"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressType)] -&gt; Proxy AddressType -&gt; [(Text, AddressType)]
+</span><span id="line-52"></span><span>  </span><span id="local-6989586621681201963"><span class="annot"><span class="annottext">toSamples :: Proxy AddressType -&gt; [(Text, AddressType)]
+</span><a href="#local-6989586621681201963"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressType)] -&gt; Proxy AddressType -&gt; [(Text, AddressType)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AddressType)]
  -&gt; Proxy AddressType -&gt; [(Text, AddressType)])
@@ -233,7 +233,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#Shelley"><span class="hs-identifier hs-var">Shelley</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-53"></span><span>
 </span><span id="line-54"></span><span class="hs-comment">-- | Details about Cardano address</span><span>
-</span><span id="line-55"></span><span id="local-6989586621681201954"><span id="local-6989586621681201955"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressDetails"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressDetails"><span class="hs-identifier hs-var">AddressDetails</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressDetails"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressDetails"><span class="hs-identifier hs-var">AddressDetails</span></a></span></span><span>
+</span><span id="line-55"></span><span id="local-6989586621681201961"><span id="local-6989586621681201962"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressDetails"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressDetails"><span class="hs-identifier hs-var">AddressDetails</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressDetails"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressDetails"><span class="hs-identifier hs-var">AddressDetails</span></a></span></span><span>
 </span><span id="line-56"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_addressDetailsAddress"><span class="annot"><span class="annottext">AddressDetails -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressDetailsAddress"><span class="hs-identifier hs-var hs-var">_addressDetailsAddress</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 encoded address</span><span>
 </span><span id="line-57"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressDetailsReceivedSum"><span class="annot"><span class="annottext">AddressDetails -&gt; [Amount]
@@ -242,7 +242,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressDetailsSentSum"><span class="hs-identifier hs-var hs-var">_addressDetailsSentSum</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.Amount.html#Amount"><span class="hs-identifier hs-type">Amount</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-comment">-- ^ Total Lovelaces or tokens sent by this address</span><span>
 </span><span id="line-59"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressDetailsTxCount"><span class="annot"><span class="annottext">AddressDetails -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressDetailsTxCount"><span class="hs-identifier hs-var hs-var">_addressDetailsTxCount</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Count of all transactions on the address</span><span>
-</span><span id="line-60"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201943"><span id="local-6989586621681201945"><span id="local-6989586621681201947"><span class="annot"><span class="annottext">Int -&gt; AddressDetails -&gt; ShowS
+</span><span id="line-60"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201950"><span id="local-6989586621681201952"><span id="local-6989586621681201954"><span class="annot"><span class="annottext">Int -&gt; AddressDetails -&gt; ShowS
 [AddressDetails] -&gt; ShowS
 AddressDetails -&gt; String
 (Int -&gt; AddressDetails -&gt; ShowS)
@@ -257,7 +257,7 @@ show :: AddressDetails -&gt; String
 $cshow :: AddressDetails -&gt; String
 showsPrec :: Int -&gt; AddressDetails -&gt; ShowS
 $cshowsPrec :: Int -&gt; AddressDetails -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201939"><span id="local-6989586621681201941"><span class="annot"><span class="annottext">AddressDetails -&gt; AddressDetails -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201946"><span id="local-6989586621681201948"><span class="annot"><span class="annottext">AddressDetails -&gt; AddressDetails -&gt; Bool
 (AddressDetails -&gt; AddressDetails -&gt; Bool)
 -&gt; (AddressDetails -&gt; AddressDetails -&gt; Bool) -&gt; Eq AddressDetails
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -275,7 +275,7 @@ forall a.
 $cto :: forall x. Rep AddressDetails x -&gt; AddressDetails
 $cfrom :: forall x. AddressDetails -&gt; Rep AddressDetails x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-61"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201933"><span id="local-6989586621681201935"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressDetails]
+</span><span id="line-61"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201940"><span id="local-6989586621681201942"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressDetails]
 Value -&gt; Parser AddressDetails
 (Value -&gt; Parser AddressDetails)
 -&gt; (Value -&gt; Parser [AddressDetails]) -&gt; FromJSON AddressDetails
@@ -285,7 +285,7 @@ parseJSONList :: Value -&gt; Parser [AddressDetails]
 $cparseJSONList :: Value -&gt; Parser [AddressDetails]
 parseJSON :: Value -&gt; Parser AddressDetails
 $cparseJSON :: Value -&gt; Parser AddressDetails
-</span><a href="#local-6989586621681201933"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201925"><span id="local-6989586621681201927"><span id="local-6989586621681201929"><span id="local-6989586621681201931"><span class="annot"><span class="annottext">[AddressDetails] -&gt; Encoding
+</span><a href="#local-6989586621681201940"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201932"><span id="local-6989586621681201934"><span id="local-6989586621681201936"><span id="local-6989586621681201938"><span class="annot"><span class="annottext">[AddressDetails] -&gt; Encoding
 [AddressDetails] -&gt; Value
 AddressDetails -&gt; Encoding
 AddressDetails -&gt; Value
@@ -308,12 +308,12 @@ toEncoding :: AddressDetails -&gt; Encoding
 $ctoEncoding :: AddressDetails -&gt; Encoding
 toJSON :: AddressDetails -&gt; Value
 $ctoJSON :: AddressDetails -&gt; Value
-</span><a href="#local-6989586621681201925"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201932"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-62"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_addressDetails&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressDetails"><span class="hs-identifier hs-type">AddressDetails</span></a></span><span>
 </span><span id="line-63"></span><span>
 </span><span id="line-64"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressDetails"><span class="hs-identifier hs-type">AddressDetails</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-65"></span><span>  </span><span id="local-6989586621681201923"><span class="annot"><span class="annottext">toSamples :: Proxy AddressDetails -&gt; [(Text, AddressDetails)]
-</span><a href="#local-6989586621681201923"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressDetails)]
+</span><span id="line-65"></span><span>  </span><span id="local-6989586621681201930"><span class="annot"><span class="annottext">toSamples :: Proxy AddressDetails -&gt; [(Text, AddressDetails)]
+</span><a href="#local-6989586621681201930"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressDetails)]
 -&gt; Proxy AddressDetails -&gt; [(Text, AddressDetails)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AddressDetails)]
@@ -332,16 +332,16 @@ forall a. a -&gt; [(Text, a)]
 </span><span class="hs-string">&quot;addr1qxqs59lphg8g6qndelq8xwqn60ag3aeyfcp33c2kdp46a09re5df3pzwwmyq946axfcejy5n4x0y99wqpgtp2gd0k09qsgy6pz&quot;</span></span><span>
 </span><span id="line-68"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">_addressDetailsReceivedSum :: [Amount]
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressDetailsReceivedSum"><span class="hs-identifier hs-var">_addressDetailsReceivedSum</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Amount]
-</span><a href="#local-6989586621681201922"><span class="hs-identifier hs-var">amounts</span></a></span><span>
+</span><a href="#local-6989586621681201929"><span class="hs-identifier hs-var">amounts</span></a></span><span>
 </span><span id="line-69"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">_addressDetailsSentSum :: [Amount]
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressDetailsSentSum"><span class="hs-identifier hs-var">_addressDetailsSentSum</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Amount]
-</span><a href="#local-6989586621681201922"><span class="hs-identifier hs-var">amounts</span></a></span><span>
+</span><a href="#local-6989586621681201929"><span class="hs-identifier hs-var">amounts</span></a></span><span>
 </span><span id="line-70"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">_addressDetailsTxCount :: Integer
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressDetailsTxCount"><span class="hs-identifier hs-var">_addressDetailsTxCount</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">12</span></span><span>
 </span><span id="line-71"></span><span>      </span><span class="hs-special">}</span><span>
-</span><span id="line-72"></span><span>    </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621681201922"><span class="annot"><span class="annottext">amounts :: [Amount]
-</span><a href="#local-6989586621681201922"><span class="hs-identifier hs-var hs-var">amounts</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-72"></span><span>    </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621681201929"><span class="annot"><span class="annottext">amounts :: [Amount]
+</span><a href="#local-6989586621681201929"><span class="hs-identifier hs-var hs-var">amounts</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-73"></span><span>            </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Lovelaces -&gt; Amount
 </span><a href="Blockfrost.Types.Shared.Amount.html#AdaAmount"><span class="hs-identifier hs-var">AdaAmount</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelaces
 </span><span class="hs-number">42000000</span></span><span>
@@ -360,7 +360,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-79"></span><span>            </span><span class="hs-special">]</span><span>
 </span><span id="line-80"></span><span>
 </span><span id="line-81"></span><span class="hs-comment">-- | UTxOs of the address</span><span>
-</span><span id="line-82"></span><span id="local-6989586621681201920"><span id="local-6989586621681201921"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressUtxo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressUtxo"><span class="hs-identifier hs-var">AddressUtxo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressUtxo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressUtxo"><span class="hs-identifier hs-var">AddressUtxo</span></a></span></span><span>
+</span><span id="line-82"></span><span id="local-6989586621681201927"><span id="local-6989586621681201928"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressUtxo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressUtxo"><span class="hs-identifier hs-var">AddressUtxo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressUtxo"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressUtxo"><span class="hs-identifier hs-var">AddressUtxo</span></a></span></span><span>
 </span><span id="line-83"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_addressUtxoTxHash"><span class="annot"><span class="annottext">AddressUtxo -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressUtxoTxHash"><span class="hs-identifier hs-var hs-var">_addressUtxoTxHash</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Transaction hash of the UTXO</span><span>
 </span><span id="line-84"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressUtxoOutputIndex"><span class="annot"><span class="annottext">AddressUtxo -&gt; Integer
@@ -371,7 +371,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressUtxoBlock"><span class="hs-identifier hs-var hs-var">_addressUtxoBlock</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.BlockHash.html#BlockHash"><span class="hs-identifier hs-type">BlockHash</span></a></span><span> </span><span class="hs-comment">-- ^ Block hash of the UTXO</span><span>
 </span><span id="line-87"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressUtxoDataHash"><span class="annot"><span class="annottext">AddressUtxo -&gt; Maybe Text
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressUtxoDataHash"><span class="hs-identifier hs-var hs-var">_addressUtxoDataHash</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Block hash of the UTXO</span><span>
-</span><span id="line-88"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201908"><span id="local-6989586621681201910"><span id="local-6989586621681201912"><span class="annot"><span class="annottext">Int -&gt; AddressUtxo -&gt; ShowS
+</span><span id="line-88"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201915"><span id="local-6989586621681201917"><span id="local-6989586621681201919"><span class="annot"><span class="annottext">Int -&gt; AddressUtxo -&gt; ShowS
 [AddressUtxo] -&gt; ShowS
 AddressUtxo -&gt; String
 (Int -&gt; AddressUtxo -&gt; ShowS)
@@ -386,7 +386,7 @@ show :: AddressUtxo -&gt; String
 $cshow :: AddressUtxo -&gt; String
 showsPrec :: Int -&gt; AddressUtxo -&gt; ShowS
 $cshowsPrec :: Int -&gt; AddressUtxo -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201904"><span id="local-6989586621681201906"><span class="annot"><span class="annottext">AddressUtxo -&gt; AddressUtxo -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201911"><span id="local-6989586621681201913"><span class="annot"><span class="annottext">AddressUtxo -&gt; AddressUtxo -&gt; Bool
 (AddressUtxo -&gt; AddressUtxo -&gt; Bool)
 -&gt; (AddressUtxo -&gt; AddressUtxo -&gt; Bool) -&gt; Eq AddressUtxo
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -404,7 +404,7 @@ forall a.
 $cto :: forall x. Rep AddressUtxo x -&gt; AddressUtxo
 $cfrom :: forall x. AddressUtxo -&gt; Rep AddressUtxo x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-89"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201898"><span id="local-6989586621681201900"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressUtxo]
+</span><span id="line-89"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201905"><span id="local-6989586621681201907"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressUtxo]
 Value -&gt; Parser AddressUtxo
 (Value -&gt; Parser AddressUtxo)
 -&gt; (Value -&gt; Parser [AddressUtxo]) -&gt; FromJSON AddressUtxo
@@ -414,7 +414,7 @@ parseJSONList :: Value -&gt; Parser [AddressUtxo]
 $cparseJSONList :: Value -&gt; Parser [AddressUtxo]
 parseJSON :: Value -&gt; Parser AddressUtxo
 $cparseJSON :: Value -&gt; Parser AddressUtxo
-</span><a href="#local-6989586621681201898"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201890"><span id="local-6989586621681201892"><span id="local-6989586621681201894"><span id="local-6989586621681201896"><span class="annot"><span class="annottext">[AddressUtxo] -&gt; Encoding
+</span><a href="#local-6989586621681201905"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201897"><span id="local-6989586621681201899"><span id="local-6989586621681201901"><span id="local-6989586621681201903"><span class="annot"><span class="annottext">[AddressUtxo] -&gt; Encoding
 [AddressUtxo] -&gt; Value
 AddressUtxo -&gt; Encoding
 AddressUtxo -&gt; Value
@@ -437,12 +437,12 @@ toEncoding :: AddressUtxo -&gt; Encoding
 $ctoEncoding :: AddressUtxo -&gt; Encoding
 toJSON :: AddressUtxo -&gt; Value
 $ctoJSON :: AddressUtxo -&gt; Value
-</span><a href="#local-6989586621681201890"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201897"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-90"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_addressUtxo&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressUtxo"><span class="hs-identifier hs-type">AddressUtxo</span></a></span><span>
 </span><span id="line-91"></span><span>
 </span><span id="line-92"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressUtxo"><span class="hs-identifier hs-type">AddressUtxo</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-93"></span><span>  </span><span id="local-6989586621681201888"><span class="annot"><span class="annottext">toSamples :: Proxy AddressUtxo -&gt; [(Text, AddressUtxo)]
-</span><a href="#local-6989586621681201888"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressUtxo)] -&gt; Proxy AddressUtxo -&gt; [(Text, AddressUtxo)]
+</span><span id="line-93"></span><span>  </span><span id="local-6989586621681201895"><span class="annot"><span class="annottext">toSamples :: Proxy AddressUtxo -&gt; [(Text, AddressUtxo)]
+</span><a href="#local-6989586621681201895"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressUtxo)] -&gt; Proxy AddressUtxo -&gt; [(Text, AddressUtxo)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AddressUtxo)]
  -&gt; Proxy AddressUtxo -&gt; [(Text, AddressUtxo)])
@@ -534,7 +534,7 @@ forall a. Maybe a
 </span><span id="line-122"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-123"></span><span>
 </span><span id="line-124"></span><span class="hs-comment">-- | Transactions on the address</span><span>
-</span><span id="line-125"></span><span id="local-6989586621681201886"><span id="local-6989586621681201887"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressTransaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressTransaction"><span class="hs-identifier hs-var">AddressTransaction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressTransaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressTransaction"><span class="hs-identifier hs-var">AddressTransaction</span></a></span></span><span> </span><span class="hs-special">{</span><span>
+</span><span id="line-125"></span><span id="local-6989586621681201893"><span id="local-6989586621681201894"></span></span><span class="hs-keyword">data</span><span> </span><span id="AddressTransaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressTransaction"><span class="hs-identifier hs-var">AddressTransaction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="AddressTransaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressTransaction"><span class="hs-identifier hs-var">AddressTransaction</span></a></span></span><span> </span><span class="hs-special">{</span><span>
 </span><span id="line-126"></span><span>    </span><span id="_addressTransactionTxHash"><span class="annot"><span class="annottext">AddressTransaction -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressTransactionTxHash"><span class="hs-identifier hs-var hs-var">_addressTransactionTxHash</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Hash of the transaction</span><span>
 </span><span id="line-127"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressTransactionTxIndex"><span class="annot"><span class="annottext">AddressTransaction -&gt; Integer
@@ -543,7 +543,7 @@ forall a. Maybe a
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressTransactionBlockHeight"><span class="hs-identifier hs-var hs-var">_addressTransactionBlockHeight</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Block height</span><span>
 </span><span id="line-129"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_addressTransactionBlockTime"><span class="annot"><span class="annottext">AddressTransaction -&gt; POSIXTime
 </span><a href="Blockfrost.Types.Cardano.Addresses.html#_addressTransactionBlockTime"><span class="hs-identifier hs-var hs-var">_addressTransactionBlockTime</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">POSIXTime</span></a></span><span> </span><span class="hs-comment">-- ^ Block creation time in UNIX time</span><span>
-</span><span id="line-130"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201875"><span id="local-6989586621681201877"><span id="local-6989586621681201879"><span class="annot"><span class="annottext">Int -&gt; AddressTransaction -&gt; ShowS
+</span><span id="line-130"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201882"><span id="local-6989586621681201884"><span id="local-6989586621681201886"><span class="annot"><span class="annottext">Int -&gt; AddressTransaction -&gt; ShowS
 [AddressTransaction] -&gt; ShowS
 AddressTransaction -&gt; String
 (Int -&gt; AddressTransaction -&gt; ShowS)
@@ -558,7 +558,7 @@ show :: AddressTransaction -&gt; String
 $cshow :: AddressTransaction -&gt; String
 showsPrec :: Int -&gt; AddressTransaction -&gt; ShowS
 $cshowsPrec :: Int -&gt; AddressTransaction -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201871"><span id="local-6989586621681201873"><span class="annot"><span class="annottext">AddressTransaction -&gt; AddressTransaction -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201878"><span id="local-6989586621681201880"><span class="annot"><span class="annottext">AddressTransaction -&gt; AddressTransaction -&gt; Bool
 (AddressTransaction -&gt; AddressTransaction -&gt; Bool)
 -&gt; (AddressTransaction -&gt; AddressTransaction -&gt; Bool)
 -&gt; Eq AddressTransaction
@@ -577,7 +577,7 @@ forall a.
 $cto :: forall x. Rep AddressTransaction x -&gt; AddressTransaction
 $cfrom :: forall x. AddressTransaction -&gt; Rep AddressTransaction x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-131"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201865"><span id="local-6989586621681201867"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressTransaction]
+</span><span id="line-131"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201872"><span id="local-6989586621681201874"><span class="annot"><span class="annottext">Value -&gt; Parser [AddressTransaction]
 Value -&gt; Parser AddressTransaction
 (Value -&gt; Parser AddressTransaction)
 -&gt; (Value -&gt; Parser [AddressTransaction])
@@ -588,7 +588,7 @@ parseJSONList :: Value -&gt; Parser [AddressTransaction]
 $cparseJSONList :: Value -&gt; Parser [AddressTransaction]
 parseJSON :: Value -&gt; Parser AddressTransaction
 $cparseJSON :: Value -&gt; Parser AddressTransaction
-</span><a href="#local-6989586621681201865"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201857"><span id="local-6989586621681201859"><span id="local-6989586621681201861"><span id="local-6989586621681201863"><span class="annot"><span class="annottext">[AddressTransaction] -&gt; Encoding
+</span><a href="#local-6989586621681201872"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201864"><span id="local-6989586621681201866"><span id="local-6989586621681201868"><span id="local-6989586621681201870"><span class="annot"><span class="annottext">[AddressTransaction] -&gt; Encoding
 [AddressTransaction] -&gt; Value
 AddressTransaction -&gt; Encoding
 AddressTransaction -&gt; Value
@@ -611,12 +611,12 @@ toEncoding :: AddressTransaction -&gt; Encoding
 $ctoEncoding :: AddressTransaction -&gt; Encoding
 toJSON :: AddressTransaction -&gt; Value
 $ctoJSON :: AddressTransaction -&gt; Value
-</span><a href="#local-6989586621681201857"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201864"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-132"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_addressTransaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressTransaction"><span class="hs-identifier hs-type">AddressTransaction</span></a></span><span>
 </span><span id="line-133"></span><span>
 </span><span id="line-134"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Addresses.html#AddressTransaction"><span class="hs-identifier hs-type">AddressTransaction</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-135"></span><span>  </span><span id="local-6989586621681201855"><span class="annot"><span class="annottext">toSamples :: Proxy AddressTransaction -&gt; [(Text, AddressTransaction)]
-</span><a href="#local-6989586621681201855"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressTransaction)]
+</span><span id="line-135"></span><span>  </span><span id="local-6989586621681201862"><span class="annot"><span class="annottext">toSamples :: Proxy AddressTransaction -&gt; [(Text, AddressTransaction)]
+</span><a href="#local-6989586621681201862"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, AddressTransaction)]
 -&gt; Proxy AddressTransaction -&gt; [(Text, AddressTransaction)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, AddressTransaction)]

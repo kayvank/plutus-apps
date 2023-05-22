@@ -13,9 +13,9 @@
 </span><span id="line-13"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">Servant.Docs</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">DocCapture</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToCapture</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToSample</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">samples</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-14"></span><span>
 </span><span id="line-15"></span><span class="hs-comment">-- | Hash of the datum</span><span>
-</span><span id="line-16"></span><span id="local-6989586621681197572"><span id="local-6989586621681197573"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="DatumHash"><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-var">DatumHash</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="DatumHash"><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-var">DatumHash</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unDatumHash"><span class="annot"><span class="annottext">DatumHash -&gt; Text
+</span><span id="line-16"></span><span id="local-6989586621681197579"><span id="local-6989586621681197580"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="DatumHash"><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-var">DatumHash</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="DatumHash"><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-var">DatumHash</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="unDatumHash"><span class="annot"><span class="annottext">DatumHash -&gt; Text
 </span><a href="Blockfrost.Types.Shared.DatumHash.html#unDatumHash"><span class="hs-identifier hs-var hs-var">unDatumHash</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-17"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681197564"><span id="local-6989586621681197566"><span id="local-6989586621681197568"><span class="annot"><span class="annottext">Int -&gt; DatumHash -&gt; ShowS
+</span><span id="line-17"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681197571"><span id="local-6989586621681197573"><span id="local-6989586621681197575"><span class="annot"><span class="annottext">Int -&gt; DatumHash -&gt; ShowS
 [DatumHash] -&gt; ShowS
 DatumHash -&gt; String
 (Int -&gt; DatumHash -&gt; ShowS)
@@ -30,7 +30,7 @@ show :: DatumHash -&gt; String
 $cshow :: DatumHash -&gt; String
 showsPrec :: Int -&gt; DatumHash -&gt; ShowS
 $cshowsPrec :: Int -&gt; DatumHash -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197559"><span id="local-6989586621681197561"><span class="annot"><span class="annottext">DatumHash -&gt; DatumHash -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197566"><span id="local-6989586621681197568"><span class="annot"><span class="annottext">DatumHash -&gt; DatumHash -&gt; Bool
 (DatumHash -&gt; DatumHash -&gt; Bool)
 -&gt; (DatumHash -&gt; DatumHash -&gt; Bool) -&gt; Eq DatumHash
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -47,7 +47,7 @@ forall a.
 $cto :: forall x. Rep DatumHash x -&gt; DatumHash
 $cfrom :: forall x. DatumHash -&gt; Rep DatumHash x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-18"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681197549"><span id="local-6989586621681197551"><span id="local-6989586621681197553"><span class="annot"><span class="annottext">ByteString -&gt; Either Text DatumHash
+</span><span id="line-18"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681197556"><span id="local-6989586621681197558"><span id="local-6989586621681197560"><span class="annot"><span class="annottext">ByteString -&gt; Either Text DatumHash
 Text -&gt; Either Text DatumHash
 (Text -&gt; Either Text DatumHash)
 -&gt; (ByteString -&gt; Either Text DatumHash)
@@ -64,7 +64,7 @@ parseHeader :: ByteString -&gt; Either Text DatumHash
 $cparseHeader :: ByteString -&gt; Either Text DatumHash
 parseUrlPiece :: Text -&gt; Either Text DatumHash
 $cparseUrlPiece :: Text -&gt; Either Text DatumHash
-</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromHttpApiData</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197540"><span id="local-6989586621681197542"><span id="local-6989586621681197544"><span id="local-6989586621681197546"><span class="annot"><span class="annottext">DatumHash -&gt; ByteString
+</span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromHttpApiData</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681197547"><span id="local-6989586621681197549"><span id="local-6989586621681197551"><span id="local-6989586621681197553"><span class="annot"><span class="annottext">DatumHash -&gt; ByteString
 DatumHash -&gt; Builder
 DatumHash -&gt; Text
 (DatumHash -&gt; Text)
@@ -89,30 +89,30 @@ $ctoUrlPiece :: DatumHash -&gt; Text
 </span><a href="../../../../http-api-data/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToHttpApiData</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-19"></span><span>
 </span><span id="line-20"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">IsString</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-21"></span><span>  </span><span id="local-6989586621681197536"><span class="annot"><span class="annottext">fromString :: String -&gt; DatumHash
+</span><span id="line-21"></span><span>  </span><span id="local-6989586621681197543"><span class="annot"><span class="annottext">fromString :: String -&gt; DatumHash
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromString</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; DatumHash
 </span><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-var">DatumHash</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; DatumHash) -&gt; (String -&gt; Text) -&gt; String -&gt; DatumHash
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">Data.Text.pack</span></a></span><span>
 </span><span id="line-22"></span><span>
-</span><span id="line-23"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197528"><span id="local-6989586621681197530"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-24"></span><span>  </span><span id="local-6989586621681197526"><span class="annot"><span class="annottext">toJSON :: DatumHash -&gt; Value
+</span><span id="line-23"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197535"><span id="local-6989586621681197537"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-24"></span><span>  </span><span id="local-6989586621681197533"><span class="annot"><span class="annottext">toJSON :: DatumHash -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; Value) -&gt; (DatumHash -&gt; Text) -&gt; DatumHash -&gt; Value
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">DatumHash -&gt; Text
 </span><a href="Blockfrost.Types.Shared.DatumHash.html#unDatumHash"><span class="hs-identifier hs-var hs-var">unDatumHash</span></a></span><span>
-</span><span id="line-25"></span><span>  </span><span id="local-6989586621681197524"><span class="annot"><span class="annottext">toEncoding :: DatumHash -&gt; Encoding
+</span><span id="line-25"></span><span>  </span><span id="local-6989586621681197531"><span class="annot"><span class="annottext">toEncoding :: DatumHash -&gt; Encoding
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toEncoding</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Encoding
 forall a. ToJSON a =&gt; a -&gt; Encoding
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; Encoding) -&gt; (DatumHash -&gt; Text) -&gt; DatumHash -&gt; Encoding
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">DatumHash -&gt; Text
 </span><a href="Blockfrost.Types.Shared.DatumHash.html#unDatumHash"><span class="hs-identifier hs-var hs-var">unDatumHash</span></a></span><span>
-</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197520"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-27"></span><span>  </span><span id="local-6989586621681197518"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser DatumHash
+</span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681197527"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621681197525"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser DatumHash
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Text -&gt; DatumHash) -&gt; Parser Text -&gt; Parser DatumHash
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; DatumHash
@@ -124,7 +124,7 @@ forall a. FromJSON a =&gt; Value -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">parseJSON</span></a></span><span>
 </span><span id="line-28"></span><span>
 </span><span id="line-29"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-30"></span><span>    </span><span id="local-6989586621681197513"><span class="annot"><span class="annottext">toSamples :: Proxy DatumHash -&gt; [(Text, DatumHash)]
+</span><span id="line-30"></span><span>    </span><span id="local-6989586621681197520"><span class="annot"><span class="annottext">toSamples :: Proxy DatumHash -&gt; [(Text, DatumHash)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy DatumHash
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[DatumHash] -&gt; [(Text, DatumHash)]
 forall a. [a] -&gt; [(Text, a)]
@@ -142,7 +142,7 @@ forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
 </span><span id="line-33"></span><span>      </span><span class="hs-special">]</span><span>
 </span><span id="line-34"></span><span>
 </span><span id="line-35"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToCapture</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant/html/src"><span class="hs-identifier hs-type">Capture</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;datum_hash&quot;</span></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-36"></span><span>  </span><span id="local-6989586621681197509"><span class="annot"><span class="annottext">toCapture :: Proxy (Capture &quot;datum_hash&quot; DatumHash) -&gt; DocCapture
+</span><span id="line-36"></span><span>  </span><span id="local-6989586621681197516"><span class="annot"><span class="annottext">toCapture :: Proxy (Capture &quot;datum_hash&quot; DatumHash) -&gt; DocCapture
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCapture</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy (Capture &quot;datum_hash&quot; DatumHash)
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; DocCapture
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var">DocCapture</span></a></span><span> </span><span class="annot"><span class="annottext">String

@@ -43,7 +43,7 @@
 </span><span id="line-43"></span><span class="hs-comment">-- This is not itself a PRNG, but can be used to seed a PRNG.</span><span>
 </span><span id="line-44"></span><span class="hs-comment">--</span><span>
 </span><span id="line-45"></span><span class="hs-keyword">newtype</span><span> </span><span id="Seed"><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Seed"><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span>
-</span><span id="line-46"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679160906"><span id="local-6989586621679160908"><span id="local-6989586621679160910"><span class="annot"><span class="annottext">Int -&gt; Seed -&gt; ShowS
+</span><span id="line-46"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679160915"><span id="local-6989586621679160917"><span id="local-6989586621679160919"><span class="annot"><span class="annottext">Int -&gt; Seed -&gt; ShowS
 [Seed] -&gt; ShowS
 Seed -&gt; String
 (Int -&gt; Seed -&gt; ShowS)
@@ -56,14 +56,14 @@ show :: Seed -&gt; String
 $cshow :: Seed -&gt; String
 showsPrec :: Int -&gt; Seed -&gt; ShowS
 $cshowsPrec :: Int -&gt; Seed -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160901"><span id="local-6989586621679160903"><span class="annot"><span class="annottext">Seed -&gt; Seed -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160910"><span id="local-6989586621679160912"><span class="annot"><span class="annottext">Seed -&gt; Seed -&gt; Bool
 (Seed -&gt; Seed -&gt; Bool) -&gt; (Seed -&gt; Seed -&gt; Bool) -&gt; Eq Seed
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: Seed -&gt; Seed -&gt; Bool
 $c/= :: Seed -&gt; Seed -&gt; Bool
 == :: Seed -&gt; Seed -&gt; Bool
 $c== :: Seed -&gt; Seed -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160894"><span id="local-6989586621679160896"><span id="local-6989586621679160898"><span class="annot"><span class="annottext">b -&gt; Seed -&gt; Seed
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160903"><span id="local-6989586621679160905"><span id="local-6989586621679160907"><span class="annot"><span class="annottext">b -&gt; Seed -&gt; Seed
 NonEmpty Seed -&gt; Seed
 Seed -&gt; Seed -&gt; Seed
 (Seed -&gt; Seed -&gt; Seed)
@@ -82,7 +82,7 @@ sconcat :: NonEmpty Seed -&gt; Seed
 $csconcat :: NonEmpty Seed -&gt; Seed
 &lt;&gt; :: Seed -&gt; Seed -&gt; Seed
 $c&lt;&gt; :: Seed -&gt; Seed -&gt; Seed
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Semigroup</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160886"><span id="local-6989586621679160888"><span id="local-6989586621679160890"><span class="annot"><span class="annottext">Semigroup Seed
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Semigroup</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160895"><span id="local-6989586621679160897"><span id="local-6989586621679160899"><span class="annot"><span class="annottext">Semigroup Seed
 Seed
 Semigroup Seed
 -&gt; Seed
@@ -100,7 +100,7 @@ $cmappend :: Seed -&gt; Seed -&gt; Seed
 mempty :: Seed
 $cmempty :: Seed
 $cp1Monoid :: Semigroup Seed
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monoid</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160879"><span id="local-6989586621679160881"><span id="local-6989586621679160883"><span class="annot"><span class="annottext">Context -&gt; Seed -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monoid</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160888"><span id="local-6989586621679160890"><span id="local-6989586621679160892"><span class="annot"><span class="annottext">Context -&gt; Seed -&gt; IO (Maybe ThunkInfo)
 Proxy Seed -&gt; String
 (Context -&gt; Seed -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; Seed -&gt; IO (Maybe ThunkInfo))
@@ -117,7 +117,7 @@ wNoThunks :: Context -&gt; Seed -&gt; IO (Maybe ThunkInfo)
 $cwNoThunks :: Context -&gt; Seed -&gt; IO (Maybe ThunkInfo)
 noThunks :: Context -&gt; Seed -&gt; IO (Maybe ThunkInfo)
 $cnoThunks :: Context -&gt; Seed -&gt; IO (Maybe ThunkInfo)
-</span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160876"><span class="annot"><span class="annottext">Seed -&gt; ()
+</span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160885"><span class="annot"><span class="annottext">Seed -&gt; ()
 (Seed -&gt; ()) -&gt; NFData Seed
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: Seed -&gt; ()
@@ -137,9 +137,9 @@ $crnf :: Seed -&gt; ()
 </span><span id="line-56"></span><span class="hs-comment">-- guarantee that the result is sufficiently long for the desired seed size!</span><span>
 </span><span id="line-57"></span><span class="annot"><a href="Cardano.Crypto.Seed.html#getSeedBytes"><span class="hs-identifier hs-type">getSeedBytes</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span>
 </span><span id="line-58"></span><span id="getSeedBytes"><span class="annot"><span class="annottext">getSeedBytes :: Seed -&gt; ByteString
-</span><a href="Cardano.Crypto.Seed.html#getSeedBytes"><span class="hs-identifier hs-var hs-var">getSeedBytes</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160874"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160874"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160874"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="Cardano.Crypto.Seed.html#getSeedBytes"><span class="hs-identifier hs-var hs-var">getSeedBytes</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160883"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160883"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160883"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span class="hs-comment">-- | Get a number of bytes from the seed. This will fail if not enough bytes</span><span>
 </span><span id="line-61"></span><span class="hs-comment">-- are available. This can be chained multiple times provided the seed is big</span><span>
@@ -147,54 +147,54 @@ $crnf :: Seed -&gt; ()
 </span><span id="line-63"></span><span class="hs-comment">--</span><span>
 </span><span id="line-64"></span><span class="annot"><a href="Cardano.Crypto.Seed.html#getBytesFromSeed"><span class="hs-identifier hs-type">getBytesFromSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-65"></span><span id="getBytesFromSeed"><span class="annot"><span class="annottext">getBytesFromSeed :: Word -&gt; Seed -&gt; Maybe (ByteString, Seed)
-</span><a href="Cardano.Crypto.Seed.html#getBytesFromSeed"><span class="hs-identifier hs-var hs-var">getBytesFromSeed</span></a></span></span><span> </span><span id="local-6989586621679160873"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160873"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160872"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160872"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>
+</span><a href="Cardano.Crypto.Seed.html#getBytesFromSeed"><span class="hs-identifier hs-var hs-var">getBytesFromSeed</span></a></span></span><span> </span><span id="local-6989586621679160882"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679160882"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160881"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160881"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-66"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160870"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
+</span><a href="#local-6989586621679160879"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160873"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ByteString, Seed) -&gt; Maybe (ByteString, Seed)
+</span><a href="#local-6989586621679160882"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ByteString, Seed) -&gt; Maybe (ByteString, Seed)
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160870"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
+</span><a href="#local-6989586621679160879"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160869"><span class="hs-identifier hs-var">s'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160878"><span class="hs-identifier hs-var">s'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-67"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span>                       </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (ByteString, Seed)
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-68"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-69"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679160870"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160870"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160869"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160869"><span class="hs-identifier hs-var">s'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; (ByteString, ByteString)
+</span><span id="line-69"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679160879"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160879"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160878"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160878"><span class="hs-identifier hs-var">s'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; (ByteString, ByteString)
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.splitAt</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160873"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160872"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679160882"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160881"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-70"></span><span>
 </span><span id="line-71"></span><span class="hs-comment">-- | A flavor of 'getBytesFromSeed' that throws 'SeedBytesExhausted' instead of</span><span>
 </span><span id="line-72"></span><span class="hs-comment">-- returning 'Nothing'.</span><span>
 </span><span id="line-73"></span><span class="annot"><a href="Cardano.Crypto.Seed.html#getBytesFromSeedT"><span class="hs-identifier hs-type">getBytesFromSeedT</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-74"></span><span id="getBytesFromSeedT"><span class="annot"><span class="annottext">getBytesFromSeedT :: Word -&gt; Seed -&gt; (ByteString, Seed)
-</span><a href="Cardano.Crypto.Seed.html#getBytesFromSeedT"><span class="hs-identifier hs-var hs-var">getBytesFromSeedT</span></a></span></span><span> </span><span id="local-6989586621679160867"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160867"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160866"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160866"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>
+</span><a href="Cardano.Crypto.Seed.html#getBytesFromSeedT"><span class="hs-identifier hs-var hs-var">getBytesFromSeedT</span></a></span></span><span> </span><span id="local-6989586621679160876"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679160876"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160875"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160875"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-75"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
+</span><a href="#local-6989586621679160874"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160867"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
+</span><a href="#local-6989586621679160876"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160874"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160864"><span class="hs-identifier hs-var">s'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160873"><span class="hs-identifier hs-var">s'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-76"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span>                       </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SeedBytesExhausted -&gt; (ByteString, Seed)
 forall a e. Exception e =&gt; e -&gt; a
@@ -203,16 +203,16 @@ forall a e. Exception e =&gt; e -&gt; a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160874"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-77"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-78"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679160865"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160864"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160864"><span class="hs-identifier hs-var">s'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; (ByteString, ByteString)
+</span><span id="line-78"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679160874"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160874"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160873"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160873"><span class="hs-identifier hs-var">s'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; (ByteString, ByteString)
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.splitAt</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160867"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160866"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679160876"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160875"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-79"></span><span>
 </span><span id="line-80"></span><span class="hs-comment">-- | Split a seed into two smaller seeds, the first of which is the given</span><span>
 </span><span id="line-81"></span><span class="hs-comment">-- number of bytes large, and the second is the remaining. This will fail if</span><span>
@@ -221,66 +221,66 @@ forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><span id="line-84"></span><span class="hs-comment">--</span><span>
 </span><span id="line-85"></span><span class="annot"><a href="Cardano.Crypto.Seed.html#splitSeed"><span class="hs-identifier hs-type">splitSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-86"></span><span id="splitSeed"><span class="annot"><span class="annottext">splitSeed :: Word -&gt; Seed -&gt; Maybe (Seed, Seed)
-</span><a href="Cardano.Crypto.Seed.html#splitSeed"><span class="hs-identifier hs-var hs-var">splitSeed</span></a></span></span><span> </span><span id="local-6989586621679160862"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160862"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160861"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160861"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>
+</span><a href="Cardano.Crypto.Seed.html#splitSeed"><span class="hs-identifier hs-var hs-var">splitSeed</span></a></span></span><span> </span><span id="local-6989586621679160871"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679160871"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160870"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160870"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-87"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160860"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
+</span><a href="#local-6989586621679160869"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160862"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Seed, Seed) -&gt; Maybe (Seed, Seed)
+</span><a href="#local-6989586621679160871"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Seed, Seed) -&gt; Maybe (Seed, Seed)
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160860"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
+</span><a href="#local-6989586621679160869"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160859"><span class="hs-identifier hs-var">s'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160868"><span class="hs-identifier hs-var">s'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-88"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span>                       </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe (Seed, Seed)
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-89"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-90"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679160860"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160860"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160859"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160859"><span class="hs-identifier hs-var">s'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; (ByteString, ByteString)
+</span><span id="line-90"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679160869"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160869"><span class="hs-identifier hs-var">b</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160868"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160868"><span class="hs-identifier hs-var">s'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ByteString -&gt; (ByteString, ByteString)
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.splitAt</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160862"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160861"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679160871"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160870"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-91"></span><span>
 </span><span id="line-92"></span><span class="hs-comment">-- | Expand a seed into a pair of seeds using a cryptographic hash function (in</span><span>
 </span><span id="line-93"></span><span class="hs-comment">-- the role of a crypto PRNG). The whole input seed is consumed. The output</span><span>
 </span><span id="line-94"></span><span class="hs-comment">-- seeds are the size of the hash output.</span><span>
 </span><span id="line-95"></span><span class="hs-comment">--</span><span>
-</span><span id="line-96"></span><span id="local-6989586621679160857"><span id="local-6989586621679160858"><span class="annot"><a href="Cardano.Crypto.Seed.html#expandSeed"><span class="hs-identifier hs-type">expandSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Crypto.Hash.Class.html#HashAlgorithm"><span class="hs-identifier hs-type">HashAlgorithm</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160858"><span class="hs-identifier hs-type">h</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679160857"><span class="hs-identifier hs-type">proxy</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160858"><span class="hs-identifier hs-type">h</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span></span></span><span>
+</span><span id="line-96"></span><span id="local-6989586621679160866"><span id="local-6989586621679160867"><span class="annot"><a href="Cardano.Crypto.Seed.html#expandSeed"><span class="hs-identifier hs-type">expandSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Crypto.Hash.Class.html#HashAlgorithm"><span class="hs-identifier hs-type">HashAlgorithm</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160867"><span class="hs-identifier hs-type">h</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679160866"><span class="hs-identifier hs-type">proxy</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160867"><span class="hs-identifier hs-type">h</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span></span></span><span>
 </span><span id="line-97"></span><span id="expandSeed"><span class="annot"><span class="annottext">expandSeed :: proxy h -&gt; Seed -&gt; (Seed, Seed)
-</span><a href="Cardano.Crypto.Seed.html#expandSeed"><span class="hs-identifier hs-var hs-var">expandSeed</span></a></span></span><span> </span><span id="local-6989586621679160856"><span class="annot"><span class="annottext">proxy h
-</span><a href="#local-6989586621679160856"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160855"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160855"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Crypto.Seed.html#expandSeed"><span class="hs-identifier hs-var hs-var">expandSeed</span></a></span></span><span> </span><span id="local-6989586621679160865"><span class="annot"><span class="annottext">proxy h
+</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160864"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160864"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-98"></span><span>    </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">proxy h -&gt; ByteString -&gt; ByteString
 forall h (proxy :: * -&gt; *).
 HashAlgorithm h =&gt;
 proxy h -&gt; ByteString -&gt; ByteString
 </span><a href="Cardano.Crypto.Hash.Class.html#digest"><span class="hs-identifier hs-var">digest</span></a></span><span> </span><span class="annot"><span class="annottext">proxy h
-</span><a href="#local-6989586621679160856"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word8 -&gt; ByteString -&gt; ByteString
+</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word8 -&gt; ByteString -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.cons</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160855"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160864"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-99"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">proxy h -&gt; ByteString -&gt; ByteString
 forall h (proxy :: * -&gt; *).
 HashAlgorithm h =&gt;
 proxy h -&gt; ByteString -&gt; ByteString
 </span><a href="Cardano.Crypto.Hash.Class.html#digest"><span class="hs-identifier hs-var">digest</span></a></span><span> </span><span class="annot"><span class="annottext">proxy h
-</span><a href="#local-6989586621679160856"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word8 -&gt; ByteString -&gt; ByteString
+</span><a href="#local-6989586621679160865"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word8 -&gt; ByteString -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.cons</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><span class="hs-number">2</span></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160855"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160864"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-100"></span><span>    </span><span class="hs-special">)</span><span>
 </span><span id="line-101"></span><span>
 </span><span id="line-102"></span><span>
@@ -288,8 +288,8 @@ proxy h -&gt; ByteString -&gt; ByteString
 </span><span id="line-104"></span><span class="hs-comment">--</span><span>
 </span><span id="line-105"></span><span class="annot"><a href="Cardano.Crypto.Seed.html#readSeedFromSystemEntropy"><span class="hs-identifier hs-type">readSeedFromSystemEntropy</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span>
 </span><span id="line-106"></span><span id="readSeedFromSystemEntropy"><span class="annot"><span class="annottext">readSeedFromSystemEntropy :: Word -&gt; IO Seed
-</span><a href="Cardano.Crypto.Seed.html#readSeedFromSystemEntropy"><span class="hs-identifier hs-var hs-var">readSeedFromSystemEntropy</span></a></span></span><span> </span><span id="local-6989586621679160853"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160853"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
+</span><a href="Cardano.Crypto.Seed.html#readSeedFromSystemEntropy"><span class="hs-identifier hs-var hs-var">readSeedFromSystemEntropy</span></a></span></span><span> </span><span id="local-6989586621679160862"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679160862"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Seed
 </span><a href="Cardano.Crypto.Seed.html#mkSeedFromBytes"><span class="hs-identifier hs-var">mkSeedFromBytes</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; Seed) -&gt; IO ByteString -&gt; IO Seed
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; IO ByteString
@@ -297,7 +297,7 @@ forall byteArray. ByteArray byteArray =&gt; Int -&gt; IO byteArray
 </span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var">getEntropy</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word -&gt; Int
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679160853"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160862"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-107"></span><span>
 </span><span id="line-108"></span><span class="hs-comment">--</span><span>
 </span><span id="line-109"></span><span class="hs-comment">-- Support for MonadRandom</span><span>
@@ -311,12 +311,12 @@ forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><span id="line-117"></span><span class="hs-comment">-- So this is only really suitable for key generation where there is a known</span><span>
 </span><span id="line-118"></span><span class="hs-comment">-- upper bound on the amount of entropy that will be requested.</span><span>
 </span><span id="line-119"></span><span class="hs-comment">--</span><span>
-</span><span id="line-120"></span><span id="local-6989586621679160851"><span class="annot"><a href="Cardano.Crypto.Seed.html#runMonadRandomWithSeed"><span class="hs-identifier hs-type">runMonadRandomWithSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679160994"><span class="annot"><a href="#local-6989586621679160994"><span class="hs-identifier hs-type">m</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-type">MonadRandom</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160994"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679160994"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160851"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679160851"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-120"></span><span id="local-6989586621679160860"><span class="annot"><a href="Cardano.Crypto.Seed.html#runMonadRandomWithSeed"><span class="hs-identifier hs-type">runMonadRandomWithSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679161003"><span class="annot"><a href="#local-6989586621679161003"><span class="hs-identifier hs-type">m</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-type">MonadRandom</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679161003"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679161003"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679160860"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679160860"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-121"></span><span id="runMonadRandomWithSeed"><span class="annot"><span class="annottext">runMonadRandomWithSeed :: Seed -&gt; (forall (m :: * -&gt; *). MonadRandom m =&gt; m a) -&gt; a
-</span><a href="Cardano.Crypto.Seed.html#runMonadRandomWithSeed"><span class="hs-identifier hs-var hs-var">runMonadRandomWithSeed</span></a></span></span><span> </span><span id="local-6989586621679160850"><span class="annot"><span class="annottext">s :: Seed
-</span><a href="#local-6989586621679160850"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160849"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160849"><span class="hs-identifier hs-var">bs</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679160848"><span class="annot"><span class="annottext">forall (m :: * -&gt; *). MonadRandom m =&gt; m a
-</span><a href="#local-6989586621679160848"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Crypto.Seed.html#runMonadRandomWithSeed"><span class="hs-identifier hs-var hs-var">runMonadRandomWithSeed</span></a></span></span><span> </span><span id="local-6989586621679160859"><span class="annot"><span class="annottext">s :: Seed
+</span><a href="#local-6989586621679160859"><span class="hs-identifier hs-var">s</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679160858"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679160858"><span class="hs-identifier hs-var">bs</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679160857"><span class="annot"><span class="annottext">forall (m :: * -&gt; *). MonadRandom m =&gt; m a
+</span><a href="#local-6989586621679160857"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-122"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Identity (Maybe a) -&gt; Maybe a
 forall a. Identity a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var">runIdentity</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">MaybeT Identity a -&gt; Identity (Maybe a)
@@ -327,22 +327,22 @@ forall (m :: * -&gt; *) s a. Monad m =&gt; StateT s m a -&gt; s -&gt; m a
 forall a. MonadRandomFromSeed a -&gt; StateT Seed (MaybeT Identity) a
 </span><a href="Cardano.Crypto.Seed.html#unMonadRandomFromSeed"><span class="hs-identifier hs-var hs-var">unMonadRandomFromSeed</span></a></span><span> </span><span class="annot"><span class="annottext">MonadRandomFromSeed a
 forall (m :: * -&gt; *). MonadRandom m =&gt; m a
-</span><a href="#local-6989586621679160848"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679160850"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-123"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679160843"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679160843"><span class="hs-identifier hs-var">x</span></a></span></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679160843"><span class="hs-identifier hs-var">x</span></a></span><span>
+</span><a href="#local-6989586621679160857"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679160859"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-123"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679160852"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679160852"><span class="hs-identifier hs-var">x</span></a></span></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679160852"><span class="hs-identifier hs-var">x</span></a></span><span>
 </span><span id="line-124"></span><span>      </span><span class="annot"><span class="annottext">Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">SeedBytesExhausted -&gt; a
 forall a e. Exception e =&gt; e -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">throw</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; SeedBytesExhausted
 </span><a href="Cardano.Crypto.Seed.html#SeedBytesExhausted"><span class="hs-identifier hs-var">SeedBytesExhausted</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679160849"><span class="hs-identifier hs-var">bs</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679160858"><span class="hs-identifier hs-var">bs</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-125"></span><span>
 </span><span id="line-126"></span><span class="hs-keyword">newtype</span><span> </span><span id="SeedBytesExhausted"><span class="annot"><a href="Cardano.Crypto.Seed.html#SeedBytesExhausted"><span class="hs-identifier hs-var">SeedBytesExhausted</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SeedBytesExhausted"><span class="annot"><a href="Cardano.Crypto.Seed.html#SeedBytesExhausted"><span class="hs-identifier hs-var">SeedBytesExhausted</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="seedBytesSupplied"><span class="annot"><span class="annottext">SeedBytesExhausted -&gt; Int
 </span><a href="Cardano.Crypto.Seed.html#seedBytesSupplied"><span class="hs-identifier hs-var hs-var">seedBytesSupplied</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-127"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621679160836"><span id="local-6989586621679160838"><span id="local-6989586621679160840"><span class="annot"><span class="annottext">Int -&gt; SeedBytesExhausted -&gt; ShowS
+</span><span id="line-127"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621679160845"><span id="local-6989586621679160847"><span id="local-6989586621679160849"><span class="annot"><span class="annottext">Int -&gt; SeedBytesExhausted -&gt; ShowS
 [SeedBytesExhausted] -&gt; ShowS
 SeedBytesExhausted -&gt; String
 (Int -&gt; SeedBytesExhausted -&gt; ShowS)
@@ -359,14 +359,14 @@ showsPrec :: Int -&gt; SeedBytesExhausted -&gt; ShowS
 $cshowsPrec :: Int -&gt; SeedBytesExhausted -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span>
 </span><span id="line-128"></span><span>
-</span><span id="line-129"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679160828"><span id="local-6989586621679160830"><span id="local-6989586621679160832"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Exception</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#SeedBytesExhausted"><span class="hs-identifier hs-type">SeedBytesExhausted</span></a></span></span></span></span><span>
+</span><span id="line-129"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679160837"><span id="local-6989586621679160839"><span id="local-6989586621679160841"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Exception</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#SeedBytesExhausted"><span class="hs-identifier hs-type">SeedBytesExhausted</span></a></span></span></span></span><span>
 </span><span id="line-130"></span><span>
-</span><span id="line-131"></span><span class="hs-keyword">newtype</span><span> </span><span id="MonadRandomFromSeed"><span class="annot"><a href="Cardano.Crypto.Seed.html#MonadRandomFromSeed"><span class="hs-identifier hs-var">MonadRandomFromSeed</span></a></span></span><span> </span><span id="local-6989586621679160981"><span class="annot"><a href="#local-6989586621679160981"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-131"></span><span class="hs-keyword">newtype</span><span> </span><span id="MonadRandomFromSeed"><span class="annot"><a href="Cardano.Crypto.Seed.html#MonadRandomFromSeed"><span class="hs-identifier hs-var">MonadRandomFromSeed</span></a></span></span><span> </span><span id="local-6989586621679160990"><span class="annot"><a href="#local-6989586621679160990"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-132"></span><span>        </span><span id="MonadRandomFromSeed"><span class="annot"><a href="Cardano.Crypto.Seed.html#MonadRandomFromSeed"><span class="hs-identifier hs-var">MonadRandomFromSeed</span></a></span></span><span> </span><span class="hs-special">{</span><span>
 </span><span id="line-133"></span><span>          </span><span id="unMonadRandomFromSeed"><span class="annot"><span class="annottext">MonadRandomFromSeed a -&gt; StateT Seed (MaybeT Identity) a
-</span><a href="Cardano.Crypto.Seed.html#unMonadRandomFromSeed"><span class="hs-identifier hs-var hs-var">unMonadRandomFromSeed</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">StateT</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">MaybeT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Identity</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679160981"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><a href="Cardano.Crypto.Seed.html#unMonadRandomFromSeed"><span class="hs-identifier hs-var hs-var">unMonadRandomFromSeed</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">StateT</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../transformers/html/src"><span class="hs-identifier hs-type">MaybeT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Identity</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679160990"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-134"></span><span>        </span><span class="hs-special">}</span><span>
-</span><span id="line-135"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679160822"><span id="local-6989586621679160824"><span class="annot"><span class="annottext">a -&gt; MonadRandomFromSeed b -&gt; MonadRandomFromSeed a
+</span><span id="line-135"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679160831"><span id="local-6989586621679160833"><span class="annot"><span class="annottext">a -&gt; MonadRandomFromSeed b -&gt; MonadRandomFromSeed a
 (a -&gt; b) -&gt; MonadRandomFromSeed a -&gt; MonadRandomFromSeed b
 (forall a b.
  (a -&gt; b) -&gt; MonadRandomFromSeed a -&gt; MonadRandomFromSeed b)
@@ -384,7 +384,7 @@ $c&lt;$ :: forall a b. a -&gt; MonadRandomFromSeed b -&gt; MonadRandomFromSeed a
 fmap :: (a -&gt; b) -&gt; MonadRandomFromSeed a -&gt; MonadRandomFromSeed b
 $cfmap :: forall a b.
 (a -&gt; b) -&gt; MonadRandomFromSeed a -&gt; MonadRandomFromSeed b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160810"><span id="local-6989586621679160812"><span id="local-6989586621679160814"><span id="local-6989586621679160816"><span id="local-6989586621679160818"><span class="annot"><span class="annottext">Functor MonadRandomFromSeed
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Functor</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160819"><span id="local-6989586621679160821"><span id="local-6989586621679160823"><span id="local-6989586621679160825"><span id="local-6989586621679160827"><span class="annot"><span class="annottext">Functor MonadRandomFromSeed
 a -&gt; MonadRandomFromSeed a
 Functor MonadRandomFromSeed
 -&gt; (forall a. a -&gt; MonadRandomFromSeed a)
@@ -463,7 +463,7 @@ MonadRandomFromSeed (a -&gt; b)
 pure :: a -&gt; MonadRandomFromSeed a
 $cpure :: forall a. a -&gt; MonadRandomFromSeed a
 $cp1Applicative :: Functor MonadRandomFromSeed
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Applicative</span></a></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160802"><span id="local-6989586621679160804"><span id="local-6989586621679160806"><span class="annot"><span class="annottext">Applicative MonadRandomFromSeed
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Applicative</span></a></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679160811"><span id="local-6989586621679160813"><span id="local-6989586621679160815"><span class="annot"><span class="annottext">Applicative MonadRandomFromSeed
 a -&gt; MonadRandomFromSeed a
 Applicative MonadRandomFromSeed
 -&gt; (forall a b.
@@ -508,8 +508,8 @@ $cp1Monad :: Applicative MonadRandomFromSeed
 </span><span id="line-136"></span><span>
 </span><span id="line-137"></span><span class="annot"><a href="Cardano.Crypto.Seed.html#getRandomBytesFromSeed"><span class="hs-identifier hs-type">getRandomBytesFromSeed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#MonadRandomFromSeed"><span class="hs-identifier hs-type">MonadRandomFromSeed</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span>
 </span><span id="line-138"></span><span id="getRandomBytesFromSeed"><span class="annot"><span class="annottext">getRandomBytesFromSeed :: Int -&gt; MonadRandomFromSeed ByteString
-</span><a href="Cardano.Crypto.Seed.html#getRandomBytesFromSeed"><span class="hs-identifier hs-var hs-var">getRandomBytesFromSeed</span></a></span></span><span> </span><span id="local-6989586621679160799"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679160799"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Crypto.Seed.html#getRandomBytesFromSeed"><span class="hs-identifier hs-var hs-var">getRandomBytesFromSeed</span></a></span></span><span> </span><span id="local-6989586621679160808"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679160808"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-139"></span><span>    </span><span class="annot"><span class="annottext">StateT Seed (MaybeT Identity) ByteString
 -&gt; MonadRandomFromSeed ByteString
 forall a. StateT Seed (MaybeT Identity) a -&gt; MonadRandomFromSeed a
@@ -527,8 +527,8 @@ forall s (m :: * -&gt; *) a. (s -&gt; m (a, s)) -&gt; StateT s m a
 -&gt; (Seed -&gt; MaybeT Identity (ByteString, Seed))
 -&gt; StateT Seed (MaybeT Identity) ByteString
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679160797"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679160797"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679160806"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679160806"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-141"></span><span>        </span><span class="annot"><span class="annottext">Identity (Maybe (ByteString, Seed))
 -&gt; MaybeT Identity (ByteString, Seed)
 forall (m :: * -&gt; *) a. m (Maybe a) -&gt; MaybeT m a
@@ -548,13 +548,13 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="Cardano.Crypto.Seed.html#getBytesFromSeed"><span class="hs-identifier hs-var">getBytesFromSeed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679160799"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679160797"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679160808"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679160806"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-144"></span><span>
 </span><span id="line-145"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-type">MonadRandom</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Seed.html#MonadRandomFromSeed"><span class="hs-identifier hs-type">MonadRandomFromSeed</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-146"></span><span>  </span><span id="local-6989586621679160791"><span class="annot"><span class="annottext">getRandomBytes :: Int -&gt; MonadRandomFromSeed byteArray
-</span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">getRandomBytes</span></a></span></span><span> </span><span id="local-6989586621679160789"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679160789"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; byteArray
+</span><span id="line-146"></span><span>  </span><span id="local-6989586621679160800"><span class="annot"><span class="annottext">getRandomBytes :: Int -&gt; MonadRandomFromSeed byteArray
+</span><a href="../../../../cryptonite/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">getRandomBytes</span></a></span></span><span> </span><span id="local-6989586621679160798"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679160798"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; byteArray
 forall bin bout.
 (ByteArrayAccess bin, ByteArray bout) =&gt;
 bin -&gt; bout
@@ -563,5 +563,5 @@ bin -&gt; bout
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; MonadRandomFromSeed ByteString
 </span><a href="Cardano.Crypto.Seed.html#getRandomBytesFromSeed"><span class="hs-identifier hs-var">getRandomBytesFromSeed</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679160789"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><a href="#local-6989586621679160798"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-147"></span></pre></body></html>

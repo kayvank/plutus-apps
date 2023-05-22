@@ -19,7 +19,7 @@
 </span><span id="line-19"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span id="Development"><span class="annot"><a href="Test.TestScenario.html#Development"><span class="hs-identifier hs-var">Development</span></a></span></span><span>
 </span><span id="line-20"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span id="Nightly"><span class="annot"><a href="Test.TestScenario.html#Nightly"><span class="hs-identifier hs-var">Nightly</span></a></span></span><span>
 </span><span id="line-21"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span id="Fast"><span class="annot"><a href="Test.TestScenario.html#Fast"><span class="hs-identifier hs-var">Fast</span></a></span></span><span>
-</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679805008"><span id="local-6989586621679805010"><span id="local-6989586621679805012"><span id="local-6989586621679805014"><span class="annot"><span class="annottext">ReadPrec [TestScenario]
+</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679805237"><span id="local-6989586621679805239"><span id="local-6989586621679805241"><span id="local-6989586621679805243"><span class="annot"><span class="annottext">ReadPrec [TestScenario]
 ReadPrec TestScenario
 Int -&gt; ReadS TestScenario
 ReadS [TestScenario]
@@ -39,7 +39,7 @@ readList :: ReadS [TestScenario]
 $creadList :: ReadS [TestScenario]
 readsPrec :: Int -&gt; ReadS TestScenario
 $creadsPrec :: Int -&gt; ReadS TestScenario
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679805001"><span id="local-6989586621679805003"><span id="local-6989586621679805005"><span class="annot"><span class="annottext">Int -&gt; TestScenario -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679805230"><span id="local-6989586621679805232"><span id="local-6989586621679805234"><span class="annot"><span class="annottext">Int -&gt; TestScenario -&gt; ShowS
 [TestScenario] -&gt; ShowS
 TestScenario -&gt; String
 (Int -&gt; TestScenario -&gt; ShowS)
@@ -56,20 +56,20 @@ showsPrec :: Int -&gt; TestScenario -&gt; ShowS
 $cshowsPrec :: Int -&gt; TestScenario -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-23"></span><span>
-</span><span id="line-24"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679804991"><span id="local-6989586621679804993"><span class="annot"><a href="../../../../tasty/html/src"><span class="hs-identifier hs-type">IsOption</span></a></span><span> </span><span class="annot"><a href="Test.TestScenario.html#TestScenario"><span class="hs-identifier hs-type">TestScenario</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-25"></span><span>  </span><span id="local-6989586621679804989"><span class="annot"><span class="annottext">defaultValue :: TestScenario
+</span><span id="line-24"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679805220"><span id="local-6989586621679805222"><span class="annot"><a href="../../../../tasty/html/src"><span class="hs-identifier hs-type">IsOption</span></a></span><span> </span><span class="annot"><a href="Test.TestScenario.html#TestScenario"><span class="hs-identifier hs-type">TestScenario</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-25"></span><span>  </span><span id="local-6989586621679805218"><span class="annot"><span class="annottext">defaultValue :: TestScenario
 </span><a href="../../../../tasty/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">defaultValue</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TestScenario
 </span><a href="Test.TestScenario.html#Development"><span class="hs-identifier hs-var">Development</span></a></span><span>
-</span><span id="line-26"></span><span>  </span><span id="local-6989586621679804987"><span class="annot"><span class="annottext">parseValue :: String -&gt; Maybe TestScenario
+</span><span id="line-26"></span><span>  </span><span id="local-6989586621679805216"><span class="annot"><span class="annottext">parseValue :: String -&gt; Maybe TestScenario
 </span><a href="../../../../tasty/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseValue</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Maybe TestScenario
 forall a. Read a =&gt; String -&gt; Maybe a
 </span><a href="../../../../tasty/html/src"><span class="hs-identifier hs-var">safeRead</span></a></span><span>
-</span><span id="line-27"></span><span>  </span><span id="local-6989586621679804985"><span class="annot"><span class="annottext">optionName :: Tagged TestScenario String
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621679805214"><span class="annot"><span class="annottext">optionName :: Tagged TestScenario String
 </span><a href="../../../../tasty/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">optionName</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Tagged TestScenario String
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;scenario&quot;</span></span><span>
-</span><span id="line-28"></span><span>  </span><span id="local-6989586621679804983"><span class="annot"><span class="annottext">optionHelp :: Tagged TestScenario String
+</span><span id="line-28"></span><span>  </span><span id="local-6989586621679805212"><span class="annot"><span class="annottext">optionHelp :: Tagged TestScenario String
 </span><a href="../../../../tasty/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">optionHelp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Tagged TestScenario String
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">String
@@ -88,8 +88,8 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
     -&gt; TestTree -&gt; Maybe (StatusMap -&gt; IO (Time -&gt; IO Bool)))
 -&gt; Ingredient
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679804978"><span class="annot"><span class="annottext">OptionSet
-</span><a href="#local-6989586621679804978"><span class="hs-identifier hs-var">options</span></a></span></span><span> </span><span class="annot"><span class="annottext">TestTree
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679805207"><span class="annot"><span class="annottext">OptionSet
+</span><a href="#local-6989586621679805207"><span class="hs-identifier hs-var">options</span></a></span></span><span> </span><span class="annot"><span class="annottext">TestTree
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(StatusMap -&gt; IO (Time -&gt; IO Bool))
 -&gt; Maybe (StatusMap -&gt; IO (Time -&gt; IO Bool))
 forall a. a -&gt; Maybe a
@@ -100,11 +100,11 @@ forall a. a -&gt; Maybe a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span class="annot"><span class="annottext">StatusMap
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-32"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679804977"><span class="annot"><span class="annottext">scenario :: TestScenario
-</span><a href="#local-6989586621679804977"><span class="hs-identifier hs-var hs-var">scenario</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">OptionSet -&gt; TestScenario
+</span><span id="line-32"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679805206"><span class="annot"><span class="annottext">scenario :: TestScenario
+</span><a href="#local-6989586621679805206"><span class="hs-identifier hs-var hs-var">scenario</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">OptionSet -&gt; TestScenario
 forall v. IsOption v =&gt; OptionSet -&gt; v
 </span><a href="../../../../tasty/html/src"><span class="hs-identifier hs-var">lookupOption</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="Test.TestScenario.html#TestScenario"><span class="hs-identifier hs-type">TestScenario</span></a></span><span> </span><span class="annot"><span class="annottext">OptionSet
-</span><a href="#local-6989586621679804978"><span class="hs-identifier hs-var">options</span></a></span><span>
+</span><a href="#local-6989586621679805207"><span class="hs-identifier hs-var">options</span></a></span><span>
 </span><span id="line-33"></span><span>  </span><span class="annot"><span class="annottext">String -&gt; IO ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">putStrLn</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -114,7 +114,7 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">TestScenario -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">TestScenario
-</span><a href="#local-6989586621679804977"><span class="hs-identifier hs-var">scenario</span></a></span><span>
+</span><a href="#local-6989586621679805206"><span class="hs-identifier hs-var">scenario</span></a></span><span>
 </span><span id="line-34"></span><span>  </span><span class="annot"><span class="annottext">(Time -&gt; IO Bool) -&gt; IO (Time -&gt; IO Bool)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">IO Bool -&gt; Time -&gt; IO Bool

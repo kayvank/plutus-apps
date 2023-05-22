@@ -76,14 +76,14 @@
 </span><a href="Hedgehog.Internal.Seed.html#seedValue"><span class="hs-identifier hs-var hs-var">seedValue</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-76"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="seedGamma"><span class="annot"><span class="annottext">Seed -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#seedGamma"><span class="hs-identifier hs-var hs-var">seedGamma</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-comment">-- ^ must be an odd number</span><span>
-</span><span id="line-77"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679445444"><span id="local-6989586621679445446"><span class="annot"><span class="annottext">Seed -&gt; Seed -&gt; Bool
+</span><span id="line-77"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679445468"><span id="local-6989586621679445470"><span class="annot"><span class="annottext">Seed -&gt; Seed -&gt; Bool
 (Seed -&gt; Seed -&gt; Bool) -&gt; (Seed -&gt; Seed -&gt; Bool) -&gt; Eq Seed
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: Seed -&gt; Seed -&gt; Bool
 $c/= :: Seed -&gt; Seed -&gt; Bool
 == :: Seed -&gt; Seed -&gt; Bool
 $c== :: Seed -&gt; Seed -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445428"><span id="local-6989586621679445430"><span id="local-6989586621679445432"><span id="local-6989586621679445434"><span id="local-6989586621679445436"><span id="local-6989586621679445438"><span id="local-6989586621679445440"><span class="annot"><span class="annottext">Eq Seed
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445452"><span id="local-6989586621679445454"><span id="local-6989586621679445456"><span id="local-6989586621679445458"><span id="local-6989586621679445460"><span id="local-6989586621679445462"><span id="local-6989586621679445464"><span class="annot"><span class="annottext">Eq Seed
 Eq Seed
 -&gt; (Seed -&gt; Seed -&gt; Ordering)
 -&gt; (Seed -&gt; Seed -&gt; Bool)
@@ -121,7 +121,7 @@ $c&lt; :: Seed -&gt; Seed -&gt; Bool
 compare :: Seed -&gt; Seed -&gt; Ordering
 $ccompare :: Seed -&gt; Seed -&gt; Ordering
 $cp1Ord :: Eq Seed
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445423"><span id="local-6989586621679445425"><span class="annot"><span class="annottext">Seed -&gt; Q Exp
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445447"><span id="local-6989586621679445449"><span class="annot"><span class="annottext">Seed -&gt; Q Exp
 Seed -&gt; Q (TExp Seed)
 (Seed -&gt; Q Exp) -&gt; (Seed -&gt; Q (TExp Seed)) -&gt; Lift Seed
 forall t. (t -&gt; Q Exp) -&gt; (t -&gt; Q (TExp t)) -&gt; Lift t
@@ -131,15 +131,15 @@ lift :: Seed -&gt; Q Exp
 $clift :: Seed -&gt; Q Exp
 </span><a href="../../../../ghc/html/libraries/template-haskell-2.16.0.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Lift</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-78"></span><span>
-</span><span id="line-79"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679445417"><span id="local-6989586621679445419"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-80"></span><span>  </span><span id="local-6989586621679445415"><span class="annot"><span class="annottext">showsPrec :: Int -&gt; Seed -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">showsPrec</span></a></span></span><span> </span><span id="local-6989586621679445413"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679445413"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679445412"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445412"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span id="local-6989586621679445411"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445411"><span class="hs-identifier hs-var">g</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-79"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679445441"><span id="local-6989586621679445443"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-80"></span><span>  </span><span id="local-6989586621679445439"><span class="annot"><span class="annottext">showsPrec :: Int -&gt; Seed -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">showsPrec</span></a></span></span><span> </span><span id="local-6989586621679445437"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679445437"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679445436"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445436"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span id="local-6989586621679445435"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445435"><span class="hs-identifier hs-var">g</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-81"></span><span>    </span><span class="annot"><span class="annottext">Bool -&gt; ShowS -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">showParen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679445413"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679445437"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(ShowS -&gt; ShowS) -&gt; ShowS -&gt; ShowS
@@ -154,7 +154,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a. Show a =&gt; Int -&gt; a -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">showsPrec</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">11</span></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445412"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">ShowS -&gt; ShowS -&gt; ShowS
+</span><a href="#local-6989586621679445436"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">ShowS -&gt; ShowS -&gt; ShowS
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-84"></span><span>      </span><span class="annot"><span class="annottext">Char -&gt; ShowS
@@ -166,48 +166,48 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a. Show a =&gt; Int -&gt; a -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">showsPrec</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">11</span></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445411"><span class="hs-identifier hs-var">g</span></a></span><span>
+</span><a href="#local-6989586621679445435"><span class="hs-identifier hs-var">g</span></a></span><span>
 </span><span id="line-86"></span><span>
-</span><span id="line-87"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679445399"><span id="local-6989586621679445401"><span id="local-6989586621679445403"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Read</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-88"></span><span>  </span><span id="local-6989586621679445397"><span class="annot"><span class="annottext">readsPrec :: Int -&gt; ReadS Seed
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">readsPrec</span></a></span></span><span> </span><span id="local-6989586621679445395"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679445395"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-87"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679445423"><span id="local-6989586621679445425"><span id="local-6989586621679445427"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Read</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-88"></span><span>  </span><span id="local-6989586621679445421"><span class="annot"><span class="annottext">readsPrec :: Int -&gt; ReadS Seed
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">readsPrec</span></a></span></span><span> </span><span id="local-6989586621679445419"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679445419"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-89"></span><span>    </span><span class="annot"><span class="annottext">Bool -&gt; ReadS Seed -&gt; ReadS Seed
 forall a. Bool -&gt; ReadS a -&gt; ReadS a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readParen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679445395"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679445419"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(ReadS Seed -&gt; ReadS Seed) -&gt; ReadS Seed -&gt; ReadS Seed
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679445393"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445393"><span class="hs-identifier hs-var">r0</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679445417"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679445417"><span class="hs-identifier hs-var">r0</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-90"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String
-</span><span class="hs-string">&quot;Seed&quot;</span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445392"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445392"><span class="hs-identifier hs-var">r1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ReadS String
+</span><span class="hs-string">&quot;Seed&quot;</span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445416"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679445416"><span class="hs-identifier hs-var">r1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ReadS String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">lex</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445393"><span class="hs-identifier hs-var">r0</span></a></span><span>
-</span><span id="line-91"></span><span>      </span><span class="hs-special">(</span><span id="local-6989586621679445390"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445390"><span class="hs-identifier hs-var">v</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445389"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445389"><span class="hs-identifier hs-var">r2</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ReadS Word64
+</span><a href="#local-6989586621679445417"><span class="hs-identifier hs-var">r0</span></a></span><span>
+</span><span id="line-91"></span><span>      </span><span class="hs-special">(</span><span id="local-6989586621679445414"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445414"><span class="hs-identifier hs-var">v</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445413"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679445413"><span class="hs-identifier hs-var">r2</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ReadS Word64
 forall a. Read a =&gt; Int -&gt; ReadS a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readsPrec</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">11</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445392"><span class="hs-identifier hs-var">r1</span></a></span><span>
-</span><span id="line-92"></span><span>      </span><span class="hs-special">(</span><span id="local-6989586621679445388"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445388"><span class="hs-identifier hs-var">g</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445387"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445387"><span class="hs-identifier hs-var">r3</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ReadS Word64
+</span><a href="#local-6989586621679445416"><span class="hs-identifier hs-var">r1</span></a></span><span>
+</span><span id="line-92"></span><span>      </span><span class="hs-special">(</span><span id="local-6989586621679445412"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445412"><span class="hs-identifier hs-var">g</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445411"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679445411"><span class="hs-identifier hs-var">r3</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; ReadS Word64
 forall a. Read a =&gt; Int -&gt; ReadS a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readsPrec</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">11</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445389"><span class="hs-identifier hs-var">r2</span></a></span><span>
+</span><a href="#local-6989586621679445413"><span class="hs-identifier hs-var">r2</span></a></span><span>
 </span><span id="line-93"></span><span>      </span><span class="annot"><span class="annottext">(Seed, String) -&gt; [(Seed, String)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Seed
 </span><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445390"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445388"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679445387"><span class="hs-identifier hs-var">r3</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445414"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445412"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679445411"><span class="hs-identifier hs-var">r3</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-94"></span><span>
 </span><span id="line-95"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#global"><span class="hs-identifier hs-type">global</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">IORef</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span>
 </span><span id="line-96"></span><span id="global"><span class="annot"><span class="annottext">global :: IORef Seed
@@ -218,8 +218,8 @@ forall a. IO a -&gt; a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-98"></span><span>    </span><span class="hs-comment">-- FIXME use /dev/urandom on posix</span><span>
-</span><span id="line-99"></span><span>    </span><span id="local-6989586621679445385"><span class="annot"><span class="annottext">POSIXTime
-</span><a href="#local-6989586621679445385"><span class="hs-identifier hs-var">seconds</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO POSIXTime
+</span><span id="line-99"></span><span>    </span><span id="local-6989586621679445409"><span class="annot"><span class="annottext">POSIXTime
+</span><a href="#local-6989586621679445409"><span class="hs-identifier hs-var">seconds</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO POSIXTime
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">getPOSIXTime</span></a></span><span>
 </span><span id="line-100"></span><span>    </span><span class="annot"><span class="annottext">Seed -&gt; IO (IORef Seed)
 forall a. a -&gt; IO (IORef a)
@@ -229,7 +229,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="Hedgehog.Internal.Seed.html#from"><span class="hs-identifier hs-var">from</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">POSIXTime -&gt; Word64
 forall a b. (RealFrac a, Integral b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">round</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">POSIXTime
-</span><a href="#local-6989586621679445385"><span class="hs-identifier hs-var">seconds</span></a></span><span> </span><span class="annot"><span class="annottext">POSIXTime -&gt; POSIXTime -&gt; POSIXTime
+</span><a href="#local-6989586621679445409"><span class="hs-identifier hs-var">seconds</span></a></span><span> </span><span class="annot"><span class="annottext">POSIXTime -&gt; POSIXTime -&gt; POSIXTime
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">POSIXTime
 </span><span class="hs-number">1000</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
@@ -237,7 +237,7 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span id="line-102"></span><span>
 </span><span id="line-103"></span><span class="hs-comment">-- | Create a random 'Seed' using an effectful source of randomness.</span><span>
 </span><span id="line-104"></span><span class="hs-comment">--</span><span>
-</span><span id="line-105"></span><span id="local-6989586621679445381"><span class="annot"><a href="Hedgehog.Internal.Seed.html#random"><span class="hs-identifier hs-type">random</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">MonadIO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679445381"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679445381"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span><span>
+</span><span id="line-105"></span><span id="local-6989586621679445405"><span class="annot"><a href="Hedgehog.Internal.Seed.html#random"><span class="hs-identifier hs-type">random</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">MonadIO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679445405"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679445405"><span class="hs-identifier hs-type">m</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span><span>
 </span><span id="line-106"></span><span id="random"><span class="annot"><span class="annottext">random :: m Seed
 </span><a href="Hedgehog.Internal.Seed.html#random"><span class="hs-identifier hs-var hs-var">random</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-107"></span><span>  </span><span class="annot"><span class="annottext">IO Seed -&gt; m Seed
@@ -254,14 +254,14 @@ forall a b. IORef a -&gt; (a -&gt; (a, b)) -&gt; IO b
 </span><span id="line-110"></span><span class="hs-comment">--</span><span>
 </span><span id="line-111"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#from"><span class="hs-identifier hs-type">from</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span>
 </span><span id="line-112"></span><span id="from"><span class="annot"><span class="annottext">from :: Word64 -&gt; Seed
-</span><a href="Hedgehog.Internal.Seed.html#from"><span class="hs-identifier hs-var hs-var">from</span></a></span></span><span> </span><span id="local-6989586621679445378"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445378"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#from"><span class="hs-identifier hs-var hs-var">from</span></a></span></span><span> </span><span id="local-6989586621679445402"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445402"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-113"></span><span>  </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Seed
 </span><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#mix64"><span class="hs-identifier hs-var">mix64</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445378"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
+</span><a href="#local-6989586621679445402"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#mixGamma"><span class="hs-identifier hs-var">mixGamma</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445378"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><a href="#local-6989586621679445402"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><a href="Hedgehog.Internal.Seed.html#goldenGamma"><span class="hs-identifier hs-var">goldenGamma</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
@@ -283,134 +283,134 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span id="line-127"></span><span class="hs-comment">--</span><span>
 </span><span id="line-128"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-type">next</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-129"></span><span id="next"><span class="annot"><span class="annottext">next :: Seed -&gt; (Word64, Seed)
-</span><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-var hs-var">next</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679445375"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445375"><span class="hs-identifier hs-var">v0</span></a></span></span><span> </span><span id="local-6989586621679445374"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445374"><span class="hs-identifier hs-var">g</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-var hs-var">next</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span id="local-6989586621679445399"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445399"><span class="hs-identifier hs-var">v0</span></a></span></span><span> </span><span id="local-6989586621679445398"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445398"><span class="hs-identifier hs-var">g</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-130"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-131"></span><span>    </span><span id="local-6989586621679445373"><span class="annot"><span class="annottext">v :: Word64
-</span><a href="#local-6989586621679445373"><span class="hs-identifier hs-var hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445375"><span class="hs-identifier hs-var">v0</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-131"></span><span>    </span><span id="local-6989586621679445397"><span class="annot"><span class="annottext">v :: Word64
+</span><a href="#local-6989586621679445397"><span class="hs-identifier hs-var hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445399"><span class="hs-identifier hs-var">v0</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445374"><span class="hs-identifier hs-var">g</span></a></span><span>
+</span><a href="#local-6989586621679445398"><span class="hs-identifier hs-var">g</span></a></span><span>
 </span><span id="line-132"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-133"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445373"><span class="hs-identifier hs-var">v</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Seed
+</span><a href="#local-6989586621679445397"><span class="hs-identifier hs-var">v</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Seed
 </span><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445373"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445374"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445397"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445398"><span class="hs-identifier hs-var">g</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-134"></span><span>
 </span><span id="line-135"></span><span class="hs-comment">-- | Splits a random number generator in to two.</span><span>
 </span><span id="line-136"></span><span class="hs-comment">--</span><span>
 </span><span id="line-137"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#split"><span class="hs-identifier hs-type">split</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-138"></span><span id="split"><span class="annot"><span class="annottext">split :: Seed -&gt; (Seed, Seed)
-</span><a href="Hedgehog.Internal.Seed.html#split"><span class="hs-identifier hs-var hs-var">split</span></a></span></span><span> </span><span id="local-6989586621679445372"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445372"><span class="hs-identifier hs-var">s0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#split"><span class="hs-identifier hs-var hs-var">split</span></a></span></span><span> </span><span id="local-6989586621679445396"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445396"><span class="hs-identifier hs-var">s0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-139"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-140"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445371"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445371"><span class="hs-identifier hs-var">v0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445370"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
+</span><span id="line-140"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445395"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445395"><span class="hs-identifier hs-var">v0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445394"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445394"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
 </span><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-var">next</span></a></span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445372"><span class="hs-identifier hs-var">s0</span></a></span><span>
-</span><span id="line-141"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445369"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445369"><span class="hs-identifier hs-var">g0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445368"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445368"><span class="hs-identifier hs-var">s2</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
+</span><a href="#local-6989586621679445396"><span class="hs-identifier hs-var">s0</span></a></span><span>
+</span><span id="line-141"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445393"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445393"><span class="hs-identifier hs-var">g0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445392"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445392"><span class="hs-identifier hs-var">s2</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
 </span><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-var">next</span></a></span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var">s1</span></a></span><span>
+</span><a href="#local-6989586621679445394"><span class="hs-identifier hs-var">s1</span></a></span><span>
 </span><span id="line-142"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-143"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445368"><span class="hs-identifier hs-var">s2</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Seed
+</span><a href="#local-6989586621679445392"><span class="hs-identifier hs-var">s2</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Seed
 </span><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-var">Seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#mix64"><span class="hs-identifier hs-var">mix64</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445371"><span class="hs-identifier hs-var">v0</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
+</span><a href="#local-6989586621679445395"><span class="hs-identifier hs-var">v0</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#mixGamma"><span class="hs-identifier hs-var">mixGamma</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445369"><span class="hs-identifier hs-var">g0</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445393"><span class="hs-identifier hs-var">g0</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-144"></span><span>
 </span><span id="line-145"></span><span class="hs-comment">-- | Generate a random 'Word64'.</span><span>
 </span><span id="line-146"></span><span class="hs-comment">--</span><span>
 </span><span id="line-147"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#nextWord64"><span class="hs-identifier hs-type">nextWord64</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-148"></span><span id="nextWord64"><span class="annot"><span class="annottext">nextWord64 :: Seed -&gt; (Word64, Seed)
-</span><a href="Hedgehog.Internal.Seed.html#nextWord64"><span class="hs-identifier hs-var hs-var">nextWord64</span></a></span></span><span> </span><span id="local-6989586621679445367"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445367"><span class="hs-identifier hs-var">s0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#nextWord64"><span class="hs-identifier hs-var hs-var">nextWord64</span></a></span></span><span> </span><span id="local-6989586621679445391"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445391"><span class="hs-identifier hs-var">s0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-149"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-150"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445366"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445366"><span class="hs-identifier hs-var">v0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445365"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445365"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
+</span><span id="line-150"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445390"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445390"><span class="hs-identifier hs-var">v0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445389"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445389"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
 </span><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-var">next</span></a></span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445367"><span class="hs-identifier hs-var">s0</span></a></span><span>
+</span><a href="#local-6989586621679445391"><span class="hs-identifier hs-var">s0</span></a></span><span>
 </span><span id="line-151"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-152"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#mix64"><span class="hs-identifier hs-var">mix64</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445366"><span class="hs-identifier hs-var">v0</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445365"><span class="hs-identifier hs-var">s1</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445390"><span class="hs-identifier hs-var">v0</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445389"><span class="hs-identifier hs-var">s1</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-153"></span><span>
 </span><span id="line-154"></span><span class="hs-comment">-- | Generate a random 'Word32'.</span><span>
 </span><span id="line-155"></span><span class="hs-comment">--</span><span>
 </span><span id="line-156"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#nextWord32"><span class="hs-identifier hs-type">nextWord32</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word32</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-157"></span><span id="nextWord32"><span class="annot"><span class="annottext">nextWord32 :: Seed -&gt; (Word32, Seed)
-</span><a href="Hedgehog.Internal.Seed.html#nextWord32"><span class="hs-identifier hs-var hs-var">nextWord32</span></a></span></span><span> </span><span id="local-6989586621679445364"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445364"><span class="hs-identifier hs-var">s0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#nextWord32"><span class="hs-identifier hs-var hs-var">nextWord32</span></a></span></span><span> </span><span id="local-6989586621679445388"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445388"><span class="hs-identifier hs-var">s0</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-158"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-159"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445363"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445363"><span class="hs-identifier hs-var">v0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445362"><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445362"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
+</span><span id="line-159"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679445387"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445387"><span class="hs-identifier hs-var">v0</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679445386"><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445386"><span class="hs-identifier hs-var">s1</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
 </span><a href="Hedgehog.Internal.Seed.html#next"><span class="hs-identifier hs-var">next</span></a></span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445364"><span class="hs-identifier hs-var">s0</span></a></span><span>
+</span><a href="#local-6989586621679445388"><span class="hs-identifier hs-var">s0</span></a></span><span>
 </span><span id="line-160"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-161"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word32
 </span><a href="Hedgehog.Internal.Seed.html#mix32"><span class="hs-identifier hs-var">mix32</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445363"><span class="hs-identifier hs-var">v0</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Seed
-</span><a href="#local-6989586621679445362"><span class="hs-identifier hs-var">s1</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445387"><span class="hs-identifier hs-var">v0</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Seed
+</span><a href="#local-6989586621679445386"><span class="hs-identifier hs-var">s1</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-162"></span><span>
 </span><span id="line-163"></span><span class="hs-comment">-- | Generate a random 'Integer' in the [inclusive,inclusive] range.</span><span>
 </span><span id="line-164"></span><span class="hs-comment">--</span><span>
 </span><span id="line-165"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#nextInteger"><span class="hs-identifier hs-type">nextInteger</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-166"></span><span id="nextInteger"><span class="annot"><span class="annottext">nextInteger :: Integer -&gt; Integer -&gt; Seed -&gt; (Integer, Seed)
-</span><a href="Hedgehog.Internal.Seed.html#nextInteger"><span class="hs-identifier hs-var hs-var">nextInteger</span></a></span></span><span> </span><span id="local-6989586621679445361"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679445361"><span class="hs-identifier hs-var">lo</span></a></span></span><span> </span><span id="local-6989586621679445360"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679445360"><span class="hs-identifier hs-var">hi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#nextInteger"><span class="hs-identifier hs-var hs-var">nextInteger</span></a></span></span><span> </span><span id="local-6989586621679445385"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679445385"><span class="hs-identifier hs-var">lo</span></a></span></span><span> </span><span id="local-6989586621679445384"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679445384"><span class="hs-identifier hs-var">hi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-167"></span><span>  </span><span class="annot"><span class="annottext">(Integer, Integer) -&gt; Seed -&gt; (Integer, Seed)
 forall a g. (Random a, RandomGen g) =&gt; (a, a) -&gt; g -&gt; (a, g)
 </span><a href="../../../../random/html/src"><span class="hs-identifier hs-var">Random.randomR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679445361"><span class="hs-identifier hs-var">lo</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679445360"><span class="hs-identifier hs-var">hi</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445385"><span class="hs-identifier hs-var">lo</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679445384"><span class="hs-identifier hs-var">hi</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-168"></span><span>
 </span><span id="line-169"></span><span class="hs-comment">-- | Generate a random 'Double' in the [inclusive,exclusive) range.</span><span>
 </span><span id="line-170"></span><span class="hs-comment">--</span><span>
 </span><span id="line-171"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#nextDouble"><span class="hs-identifier hs-type">nextDouble</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-172"></span><span id="nextDouble"><span class="annot"><span class="annottext">nextDouble :: Double -&gt; Double -&gt; Seed -&gt; (Double, Seed)
-</span><a href="Hedgehog.Internal.Seed.html#nextDouble"><span class="hs-identifier hs-var hs-var">nextDouble</span></a></span></span><span> </span><span id="local-6989586621679445358"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679445358"><span class="hs-identifier hs-var">lo</span></a></span></span><span> </span><span id="local-6989586621679445357"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679445357"><span class="hs-identifier hs-var">hi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#nextDouble"><span class="hs-identifier hs-var hs-var">nextDouble</span></a></span></span><span> </span><span id="local-6989586621679445382"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621679445382"><span class="hs-identifier hs-var">lo</span></a></span></span><span> </span><span id="local-6989586621679445381"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621679445381"><span class="hs-identifier hs-var">hi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-173"></span><span>  </span><span class="annot"><span class="annottext">(Double, Double) -&gt; Seed -&gt; (Double, Seed)
 forall a g. (Random a, RandomGen g) =&gt; (a, a) -&gt; g -&gt; (a, g)
 </span><a href="../../../../random/html/src"><span class="hs-identifier hs-var">Random.randomR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679445358"><span class="hs-identifier hs-var">lo</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679445357"><span class="hs-identifier hs-var">hi</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679445382"><span class="hs-identifier hs-var">lo</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621679445381"><span class="hs-identifier hs-var">hi</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-174"></span><span>
 </span><span id="line-175"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#mix64"><span class="hs-identifier hs-type">mix64</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-176"></span><span id="mix64"><span class="annot"><span class="annottext">mix64 :: Word64 -&gt; Word64
-</span><a href="Hedgehog.Internal.Seed.html#mix64"><span class="hs-identifier hs-var hs-var">mix64</span></a></span></span><span> </span><span id="local-6989586621679445356"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445356"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#mix64"><span class="hs-identifier hs-var hs-var">mix64</span></a></span></span><span> </span><span id="local-6989586621679445380"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445380"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-177"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-178"></span><span>    </span><span id="local-6989586621679445355"><span class="annot"><span class="annottext">y :: Word64
-</span><a href="#local-6989586621679445355"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445356"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-178"></span><span>    </span><span id="local-6989586621679445379"><span class="annot"><span class="annottext">y :: Word64
+</span><a href="#local-6989586621679445379"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445380"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445356"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445380"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">33</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">0xff51afd7ed558ccd</span></span><span>
-</span><span id="line-179"></span><span>    </span><span id="local-6989586621679445354"><span class="annot"><span class="annottext">z :: Word64
-</span><a href="#local-6989586621679445354"><span class="hs-identifier hs-var hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445355"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-179"></span><span>    </span><span id="local-6989586621679445378"><span class="annot"><span class="annottext">z :: Word64
+</span><a href="#local-6989586621679445378"><span class="hs-identifier hs-var hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445379"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445355"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445379"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">33</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
@@ -419,37 +419,37 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span class="hs-number">0xc4ceb9fe1a85ec53</span></span><span>
 </span><span id="line-180"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-181"></span><span>    </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445354"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><a href="#local-6989586621679445378"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445354"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445378"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">33</span></span><span class="hs-special">)</span><span>
 </span><span id="line-182"></span><span>
 </span><span id="line-183"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#mix32"><span class="hs-identifier hs-type">mix32</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word32</span></a></span><span>
 </span><span id="line-184"></span><span id="mix32"><span class="annot"><span class="annottext">mix32 :: Word64 -&gt; Word32
-</span><a href="Hedgehog.Internal.Seed.html#mix32"><span class="hs-identifier hs-var hs-var">mix32</span></a></span></span><span> </span><span id="local-6989586621679445353"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445353"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#mix32"><span class="hs-identifier hs-var hs-var">mix32</span></a></span></span><span> </span><span id="local-6989586621679445377"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445377"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-185"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-186"></span><span>    </span><span id="local-6989586621679445352"><span class="annot"><span class="annottext">y :: Word64
-</span><a href="#local-6989586621679445352"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445353"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-186"></span><span>    </span><span id="local-6989586621679445376"><span class="annot"><span class="annottext">y :: Word64
+</span><a href="#local-6989586621679445376"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445377"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445353"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445377"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">33</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">0xff51afd7ed558ccd</span></span><span>
-</span><span id="line-187"></span><span>    </span><span id="local-6989586621679445351"><span class="annot"><span class="annottext">z :: Word64
-</span><a href="#local-6989586621679445351"><span class="hs-identifier hs-var hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445352"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-187"></span><span>    </span><span id="local-6989586621679445375"><span class="annot"><span class="annottext">z :: Word64
+</span><a href="#local-6989586621679445375"><span class="hs-identifier hs-var hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445376"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445352"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445376"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">33</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
@@ -460,34 +460,34 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span id="line-189"></span><span>    </span><span class="annot"><span class="annottext">Word64 -&gt; Word32
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445351"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445375"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">32</span></span><span class="hs-special">)</span><span>
 </span><span id="line-190"></span><span>
 </span><span id="line-191"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#mix64variant13"><span class="hs-identifier hs-type">mix64variant13</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-192"></span><span id="mix64variant13"><span class="annot"><span class="annottext">mix64variant13 :: Word64 -&gt; Word64
-</span><a href="Hedgehog.Internal.Seed.html#mix64variant13"><span class="hs-identifier hs-var hs-var">mix64variant13</span></a></span></span><span> </span><span id="local-6989586621679445350"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445350"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#mix64variant13"><span class="hs-identifier hs-var hs-var">mix64variant13</span></a></span></span><span> </span><span id="local-6989586621679445374"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445374"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-193"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-194"></span><span>    </span><span id="local-6989586621679445349"><span class="annot"><span class="annottext">y :: Word64
-</span><a href="#local-6989586621679445349"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445350"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-194"></span><span>    </span><span id="local-6989586621679445373"><span class="annot"><span class="annottext">y :: Word64
+</span><a href="#local-6989586621679445373"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445374"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445350"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445374"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">30</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">0xbf58476d1ce4e5b9</span></span><span>
-</span><span id="line-195"></span><span>    </span><span id="local-6989586621679445348"><span class="annot"><span class="annottext">z :: Word64
-</span><a href="#local-6989586621679445348"><span class="hs-identifier hs-var hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445349"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><span id="line-195"></span><span>    </span><span id="local-6989586621679445372"><span class="annot"><span class="annottext">z :: Word64
+</span><a href="#local-6989586621679445372"><span class="hs-identifier hs-var hs-var">z</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445373"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445349"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445373"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">27</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
@@ -496,60 +496,60 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span class="hs-number">0x94d049bb133111eb</span></span><span>
 </span><span id="line-196"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-197"></span><span>    </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445348"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><a href="#local-6989586621679445372"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445348"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445372"><span class="hs-identifier hs-var">z</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">31</span></span><span class="hs-special">)</span><span>
 </span><span id="line-198"></span><span>
 </span><span id="line-199"></span><span class="annot"><a href="Hedgehog.Internal.Seed.html#mixGamma"><span class="hs-identifier hs-type">mixGamma</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-200"></span><span id="mixGamma"><span class="annot"><span class="annottext">mixGamma :: Word64 -&gt; Word64
-</span><a href="Hedgehog.Internal.Seed.html#mixGamma"><span class="hs-identifier hs-var hs-var">mixGamma</span></a></span></span><span> </span><span id="local-6989586621679445347"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445347"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Hedgehog.Internal.Seed.html#mixGamma"><span class="hs-identifier hs-var hs-var">mixGamma</span></a></span></span><span> </span><span id="local-6989586621679445371"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679445371"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-201"></span><span>  </span><span class="hs-keyword">let</span><span>
-</span><span id="line-202"></span><span>    </span><span id="local-6989586621679445346"><span class="annot"><span class="annottext">y :: Word64
-</span><a href="#local-6989586621679445346"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64
+</span><span id="line-202"></span><span>    </span><span id="local-6989586621679445370"><span class="annot"><span class="annottext">y :: Word64
+</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64
 </span><a href="Hedgehog.Internal.Seed.html#mix64variant13"><span class="hs-identifier hs-var">mix64variant13</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445347"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><a href="#local-6989586621679445371"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.|.</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">1</span></span><span>
-</span><span id="line-203"></span><span>    </span><span id="local-6989586621679445345"><span class="annot"><span class="annottext">n :: Int
-</span><a href="#local-6989586621679445345"><span class="hs-identifier hs-var hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int
+</span><span id="line-203"></span><span>    </span><span id="local-6989586621679445369"><span class="annot"><span class="annottext">n :: Int
+</span><a href="#local-6989586621679445369"><span class="hs-identifier hs-var hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int
 forall a. Bits a =&gt; a -&gt; Int
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">popCount</span></a></span><span> </span><span class="annot"><span class="annottext">(Word64 -&gt; Int) -&gt; Word64 -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445346"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445346"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
+</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Int -&gt; Word64
 forall a. Bits a =&gt; a -&gt; Int -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`shiftR`</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-204"></span><span>  </span><span class="hs-keyword">in</span><span>
 </span><span id="line-205"></span><span>    </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679445345"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679445369"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">24</span></span><span> </span><span class="hs-keyword">then</span><span>
 </span><span id="line-206"></span><span>      </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445346"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
+</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var">y</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`xor`</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">0xaaaaaaaaaaaaaaaa</span></span><span>
 </span><span id="line-207"></span><span>    </span><span class="hs-keyword">else</span><span>
 </span><span id="line-208"></span><span>      </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679445346"><span class="hs-identifier hs-var">y</span></a></span><span>
+</span><a href="#local-6989586621679445370"><span class="hs-identifier hs-var">y</span></a></span><span>
 </span><span id="line-209"></span><span>
 </span><span id="line-210"></span><span class="hs-comment">------------------------------------------------------------------------</span><span>
 </span><span id="line-211"></span><span class="hs-comment">-- RandomGen instances</span><span class="hs-cpp">
 
 #if (SIZEOF_HSINT == 8)
-</span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679445329"><span id="local-6989586621679445331"><span id="local-6989586621679445333"><span id="local-6989586621679445335"><span id="local-6989586621679445337"><span id="local-6989586621679445339"><span id="local-6989586621679445341"><span class="annot"><a href="../../../../random/html/src"><span class="hs-identifier hs-type">RandomGen</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span></span></span></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-215"></span><span>  </span><span id="local-6989586621679445325"><span class="annot"><span class="annottext">next :: Seed -&gt; (Int, Seed)
+</span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679445353"><span id="local-6989586621679445355"><span id="local-6989586621679445357"><span id="local-6989586621679445359"><span id="local-6989586621679445361"><span id="local-6989586621679445363"><span id="local-6989586621679445365"><span class="annot"><a href="../../../../random/html/src"><span class="hs-identifier hs-type">RandomGen</span></a></span><span> </span><span class="annot"><a href="Hedgehog.Internal.Seed.html#Seed"><span class="hs-identifier hs-type">Seed</span></a></span></span></span></span></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-215"></span><span>  </span><span id="local-6989586621679445349"><span class="annot"><span class="annottext">next :: Seed -&gt; (Int, Seed)
 </span><a href="../../../../random/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">next</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-216"></span><span>    </span><span class="annot"><span class="annottext">(Word64 -&gt; Int) -&gt; (Word64, Seed) -&gt; (Int, Seed)
 forall (p :: * -&gt; * -&gt; *) a b c.
@@ -562,7 +562,7 @@ forall a b. (Integral a, Num b) =&gt; a -&gt; b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Seed -&gt; (Word64, Seed)
 </span><a href="Hedgehog.Internal.Seed.html#nextWord64"><span class="hs-identifier hs-var">nextWord64</span></a></span><span>
-</span><span id="line-217"></span><span>  </span><span id="local-6989586621679445323"><span class="annot"><span class="annottext">genRange :: Seed -&gt; (Int, Int)
+</span><span id="line-217"></span><span>  </span><span id="local-6989586621679445347"><span class="annot"><span class="annottext">genRange :: Seed -&gt; (Int, Int)
 </span><a href="../../../../random/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">genRange</span></a></span></span><span> </span><span class="annot"><span class="annottext">Seed
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-218"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64 -&gt; Int
@@ -574,7 +574,7 @@ forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int64
 forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maxBound</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Int64</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-219"></span><span>  </span><span id="local-6989586621679445319"><span class="annot"><span class="annottext">split :: Seed -&gt; (Seed, Seed)
+</span><span id="line-219"></span><span>  </span><span id="local-6989586621679445343"><span class="annot"><span class="annottext">split :: Seed -&gt; (Seed, Seed)
 </span><a href="../../../../random/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">split</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-220"></span><span>    </span><span class="annot"><span class="annottext">Seed -&gt; (Seed, Seed)
 </span><a href="Hedgehog.Internal.Seed.html#split"><span class="hs-identifier hs-var">split</span></a></span><span class="hs-cpp">

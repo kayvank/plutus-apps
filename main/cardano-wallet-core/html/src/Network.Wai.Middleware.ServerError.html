@@ -51,15 +51,15 @@
 </span><span id="line-51"></span><span>    </span><span class="hs-comment">-- error</span><span>
 </span><span id="line-52"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Middleware</span></a></span><span>
 </span><span id="line-53"></span><span id="handleRawError"><span class="annot"><span class="annottext">handleRawError :: (Request -&gt; ServerError -&gt; ServerError) -&gt; Middleware
-</span><a href="Network.Wai.Middleware.ServerError.html#handleRawError"><span class="hs-identifier hs-var hs-var">handleRawError</span></a></span></span><span> </span><span id="local-6989586621682479570"><span class="annot"><span class="annottext">Request -&gt; ServerError -&gt; ServerError
-</span><a href="#local-6989586621682479570"><span class="hs-identifier hs-var">adjust</span></a></span></span><span> </span><span id="local-6989586621682479569"><span class="annot"><span class="annottext">Application
-</span><a href="#local-6989586621682479569"><span class="hs-identifier hs-var">app</span></a></span></span><span> </span><span id="local-6989586621682479568"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621682479568"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span id="local-6989586621682479567"><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621682479567"><span class="hs-identifier hs-var">send</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.Wai.Middleware.ServerError.html#handleRawError"><span class="hs-identifier hs-var hs-var">handleRawError</span></a></span></span><span> </span><span id="local-6989586621682479854"><span class="annot"><span class="annottext">Request -&gt; ServerError -&gt; ServerError
+</span><a href="#local-6989586621682479854"><span class="hs-identifier hs-var">adjust</span></a></span></span><span> </span><span id="local-6989586621682479853"><span class="annot"><span class="annottext">Application
+</span><a href="#local-6989586621682479853"><span class="hs-identifier hs-var">app</span></a></span></span><span> </span><span id="local-6989586621682479852"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621682479852"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span id="local-6989586621682479851"><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621682479851"><span class="hs-identifier hs-var">send</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-54"></span><span>    </span><span class="annot"><span class="annottext">Application
-</span><a href="#local-6989586621682479569"><span class="hs-identifier hs-var">app</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621682479568"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
-</span><a href="#local-6989586621682479567"><span class="hs-identifier hs-var">send</span></a></span><span> </span><span class="annot"><span class="annottext">(Response -&gt; IO ResponseReceived)
+</span><a href="#local-6989586621682479853"><span class="hs-identifier hs-var">app</span></a></span><span> </span><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621682479852"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Response -&gt; IO ResponseReceived
+</span><a href="#local-6989586621682479851"><span class="hs-identifier hs-var">send</span></a></span><span> </span><span class="annot"><span class="annottext">(Response -&gt; IO ResponseReceived)
 -&gt; (Response -&gt; Response) -&gt; Response -&gt; IO ResponseReceived
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(ServerError -&gt; Response)
@@ -72,8 +72,8 @@ forall a c b. (a -&gt; c) -&gt; (b -&gt; c) -&gt; Either a b -&gt; c
 -&gt; (ServerError -&gt; ServerError) -&gt; ServerError -&gt; Response
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; ServerError -&gt; ServerError
-</span><a href="#local-6989586621682479570"><span class="hs-identifier hs-var">adjust</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621682479568"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Response -&gt; Response
+</span><a href="#local-6989586621682479854"><span class="hs-identifier hs-var">adjust</span></a></span><span> </span><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621682479852"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Response -&gt; Response
 forall a. a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">id</span></a></span><span> </span><span class="annot"><span class="annottext">(Either ServerError Response -&gt; Response)
 -&gt; (Response -&gt; Either ServerError Response)
@@ -89,32 +89,32 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><span id="line-59"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Response</span></a></span><span>
 </span><span id="line-60"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="../../../../servant-server/html/src"><span class="hs-identifier hs-type">ServerError</span></a></span><span> </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">Response</span></a></span><span>
 </span><span id="line-61"></span><span id="eitherRawError"><span class="annot"><span class="annottext">eitherRawError :: Response -&gt; Either ServerError Response
-</span><a href="Network.Wai.Middleware.ServerError.html#eitherRawError"><span class="hs-identifier hs-var hs-var">eitherRawError</span></a></span></span><span> </span><span id="local-6989586621682479562"><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479562"><span class="hs-identifier hs-var">res</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Network.Wai.Middleware.ServerError.html#eitherRawError"><span class="hs-identifier hs-var hs-var">eitherRawError</span></a></span></span><span> </span><span id="local-6989586621682479846"><span class="annot"><span class="annottext">Response
+</span><a href="#local-6989586621682479846"><span class="hs-identifier hs-var">res</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-62"></span><span>    </span><span class="hs-keyword">let</span><span>
-</span><span id="line-63"></span><span>        </span><span id="local-6989586621682479561"><span class="annot"><span class="annottext">status :: Status
-</span><a href="#local-6989586621682479561"><span class="hs-identifier hs-var hs-var">status</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response -&gt; Status
+</span><span id="line-63"></span><span>        </span><span id="local-6989586621682479845"><span class="annot"><span class="annottext">status :: Status
+</span><a href="#local-6989586621682479845"><span class="hs-identifier hs-var hs-var">status</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response -&gt; Status
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var">responseStatus</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479562"><span class="hs-identifier hs-var">res</span></a></span><span>
-</span><span id="line-64"></span><span>        </span><span id="local-6989586621682479560"><span class="annot"><span class="annottext">code :: Int
-</span><a href="#local-6989586621682479560"><span class="hs-identifier hs-var hs-var">code</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Status -&gt; Int
+</span><a href="#local-6989586621682479846"><span class="hs-identifier hs-var">res</span></a></span><span>
+</span><span id="line-64"></span><span>        </span><span id="local-6989586621682479844"><span class="annot"><span class="annottext">code :: Int
+</span><a href="#local-6989586621682479844"><span class="hs-identifier hs-var hs-var">code</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Status -&gt; Int
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var hs-var">statusCode</span></a></span><span> </span><span class="annot"><span class="annottext">Status
-</span><a href="#local-6989586621682479561"><span class="hs-identifier hs-var">status</span></a></span><span>
-</span><span id="line-65"></span><span>        </span><span id="local-6989586621682479559"><span class="annot"><span class="annottext">reason :: [Char]
-</span><a href="#local-6989586621682479559"><span class="hs-identifier hs-var hs-var">reason</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [Char]
+</span><a href="#local-6989586621682479845"><span class="hs-identifier hs-var">status</span></a></span><span>
+</span><span id="line-65"></span><span>        </span><span id="local-6989586621682479843"><span class="annot"><span class="annottext">reason :: [Char]
+</span><a href="#local-6989586621682479843"><span class="hs-identifier hs-var hs-var">reason</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [Char]
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">B8.unpack</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Status -&gt; ByteString
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var hs-var">statusMessage</span></a></span><span> </span><span class="annot"><span class="annottext">Status
-</span><a href="#local-6989586621682479561"><span class="hs-identifier hs-var">status</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-66"></span><span>        </span><span id="local-6989586621682479557"><span class="annot"><span class="annottext">headers :: ResponseHeaders
-</span><a href="#local-6989586621682479557"><span class="hs-identifier hs-var hs-var">headers</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response -&gt; ResponseHeaders
+</span><a href="#local-6989586621682479845"><span class="hs-identifier hs-var">status</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-66"></span><span>        </span><span id="local-6989586621682479841"><span class="annot"><span class="annottext">headers :: ResponseHeaders
+</span><a href="#local-6989586621682479841"><span class="hs-identifier hs-var hs-var">headers</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response -&gt; ResponseHeaders
 </span><a href="../../../../wai/html/src"><span class="hs-identifier hs-var">responseHeaders</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479562"><span class="hs-identifier hs-var">res</span></a></span><span>
-</span><span id="line-67"></span><span>        </span><span id="local-6989586621682479556"><span class="annot"><span class="annottext">body :: Maybe ByteString
-</span><a href="#local-6989586621682479556"><span class="hs-identifier hs-var hs-var">body</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response -&gt; Maybe ByteString
+</span><a href="#local-6989586621682479846"><span class="hs-identifier hs-var">res</span></a></span><span>
+</span><span id="line-67"></span><span>        </span><span id="local-6989586621682479840"><span class="annot"><span class="annottext">body :: Maybe ByteString
+</span><a href="#local-6989586621682479840"><span class="hs-identifier hs-var hs-var">body</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response -&gt; Maybe ByteString
 </span><a href="Network.Wai.Middleware.ServerError.html#responseBody"><span class="hs-identifier hs-var">responseBody</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479562"><span class="hs-identifier hs-var">res</span></a></span><span>
-</span><span id="line-68"></span><span>        </span><span id="local-6989586621682479554"><span class="annot"><span class="annottext">maybeToEither :: Maybe ByteString -&gt; Either ServerError Response
-</span><a href="#local-6989586621682479554"><span class="hs-identifier hs-var hs-var">maybeToEither</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Either ServerError Response
+</span><a href="#local-6989586621682479846"><span class="hs-identifier hs-var">res</span></a></span><span>
+</span><span id="line-68"></span><span>        </span><span id="local-6989586621682479838"><span class="annot"><span class="annottext">maybeToEither :: Maybe ByteString -&gt; Either ServerError Response
+</span><a href="#local-6989586621682479838"><span class="hs-identifier hs-var hs-var">maybeToEither</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Either ServerError Response
 -&gt; (ByteString -&gt; Either ServerError Response)
 -&gt; Maybe ByteString
 -&gt; Either ServerError Response
@@ -123,7 +123,7 @@ forall b a. b -&gt; (a -&gt; b) -&gt; Maybe a -&gt; b
 </span><span id="line-69"></span><span>            </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Response -&gt; Either ServerError Response
 forall a b. b -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Right</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479562"><span class="hs-identifier hs-var">res</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682479846"><span class="hs-identifier hs-var">res</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-70"></span><span>            </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ServerError -&gt; Either ServerError Response
 forall a b. a -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Left</span></a></span><span> </span><span class="annot"><span class="annottext">(ServerError -&gt; Either ServerError Response)
@@ -136,24 +136,24 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a b c. (a -&gt; b -&gt; c) -&gt; b -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">flip</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; [Char] -&gt; ByteString -&gt; ResponseHeaders -&gt; ServerError
 </span><a href="../../../../servant-server/html/src"><span class="hs-identifier hs-var">ServerError</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682479560"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">[Char]
-</span><a href="#local-6989586621682479559"><span class="hs-identifier hs-var">reason</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621682479557"><span class="hs-identifier hs-var">headers</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682479844"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">[Char]
+</span><a href="#local-6989586621682479843"><span class="hs-identifier hs-var">reason</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
+</span><a href="#local-6989586621682479841"><span class="hs-identifier hs-var">headers</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-71"></span><span>    </span><span class="hs-keyword">in</span><span>
 </span><span id="line-72"></span><span>        </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; Either ServerError Response
-</span><a href="#local-6989586621682479554"><span class="hs-identifier hs-var">maybeToEither</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe ByteString -&gt; Either ServerError Response)
+</span><a href="#local-6989586621682479838"><span class="hs-identifier hs-var">maybeToEither</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe ByteString -&gt; Either ServerError Response)
 -&gt; Maybe ByteString -&gt; Either ServerError Response
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
 forall (f :: * -&gt; *). Alternative f =&gt; Bool -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">guard</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682479560"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621682479844"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">400</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe () -&gt; Maybe ByteString -&gt; Maybe ByteString
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f a -&gt; f b -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
-</span><a href="#local-6989586621682479556"><span class="hs-identifier hs-var">body</span></a></span><span>
+</span><a href="#local-6989586621682479840"><span class="hs-identifier hs-var">body</span></a></span><span>
 </span><span id="line-73"></span><span>
 </span><span id="line-74"></span><span class="hs-comment">-- | Extract raw body of a response, only if it suitables for transformation.</span><span>
 </span><span id="line-75"></span><span class="hs-comment">-- Servant doesn't return files or streams by default, so if one of the two is</span><span>
@@ -165,19 +165,19 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f a -&gt; f b -&gt; f b
 </span><a href="Network.Wai.Middleware.ServerError.html#responseBody"><span class="hs-identifier hs-var hs-var">responseBody</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
 </span><span id="line-81"></span><span>    </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">ResponseBuilder</span></a></span><span> </span><span class="annot"><span class="annottext">Status
 </span><span class="hs-identifier">_</span></span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621682479549"><span class="annot"><span class="annottext">Builder
-</span><a href="#local-6989586621682479549"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621682479833"><span class="annot"><span class="annottext">Builder
+</span><a href="#local-6989586621682479833"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-82"></span><span>        </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe ByteString
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Builder -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">Binary.toLazyByteString</span></a></span><span> </span><span class="annot"><span class="annottext">Builder
-</span><a href="#local-6989586621682479549"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682479833"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-83"></span><span>    </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">ResponseRaw</span></a></span><span> </span><span class="annot"><span class="annottext">IO ByteString -&gt; (ByteString -&gt; IO ()) -&gt; IO ()
-</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621682479546"><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479546"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621682479830"><span class="annot"><span class="annottext">Response
+</span><a href="#local-6989586621682479830"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-84"></span><span>        </span><span class="annot"><span class="annottext">Response -&gt; Maybe ByteString
 </span><a href="Network.Wai.Middleware.ServerError.html#responseBody"><span class="hs-identifier hs-var">responseBody</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621682479546"><span class="hs-identifier hs-var">r</span></a></span><span>
+</span><a href="#local-6989586621682479830"><span class="hs-identifier hs-var">r</span></a></span><span>
 </span><span id="line-85"></span><span>    </span><span class="annot"><a href="../../../../wai/html/src"><span class="hs-identifier hs-type">ResponseFile</span></a></span><span class="hs-special">{</span><span class="hs-special">}</span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-86"></span><span>        </span><span class="annot"><span class="annottext">Maybe ByteString
 forall a. Maybe a

@@ -7,7 +7,7 @@
 --   Please see the README on GitHub at
 --   <a>https://github.com/input-output-hk/quickcheck-dynamic#readme</a>
 @package quickcheck-dynamic
-@version 3.0.2
+@version 3.1.0
 
 module Test.QuickCheck.DynamicLogic.CanGenerate
 
@@ -58,6 +58,8 @@ instance GHC.Classes.Ord (Test.QuickCheck.StateModel.Variables.Var a)
 instance GHC.Classes.Eq (Test.QuickCheck.StateModel.Variables.Var a)
 instance GHC.Base.Monoid Test.QuickCheck.StateModel.Variables.VarContext
 instance GHC.Base.Semigroup Test.QuickCheck.StateModel.Variables.VarContext
+instance GHC.Show.Show a => GHC.Show.Show (Test.QuickCheck.StateModel.Variables.HasNoVariables a)
+instance GHC.Classes.Eq a => GHC.Classes.Eq (Test.QuickCheck.StateModel.Variables.HasNoVariables a)
 instance Test.QuickCheck.StateModel.Variables.HasVariables GHC.Integer.Type.Integer
 instance Test.QuickCheck.StateModel.Variables.HasVariables GHC.Types.Int
 instance Test.QuickCheck.StateModel.Variables.HasVariables GHC.Types.Char
@@ -193,14 +195,18 @@ perform :: forall a. (RunModel state m, Typeable a) => state -> Action state a -
 --   result is <a>assert</a>ed and will make the property fail should it be
 --   <a>False</a>. This is useful to check the implementation produces
 --   expected values.
-postcondition :: forall a. RunModel state m => (state, state) -> Action state a -> LookUp m -> Realized m a -> m Bool
+postcondition :: forall a. RunModel state m => (state, state) -> Action state a -> LookUp m -> Realized m a -> PostconditionM m Bool
 
--- | Allows the user to attach information to the <a>Property</a> at each
---   step of the process. This function is given the full transition that's
---   been executed, including the start and ending <a>state</a>, the
---   <a>Action</a>, the current environment to <tt>Lookup</tt> and the
---   value produced by <a>perform</a> while executing this step.
+-- | Allows the user to attach additional information to the
+--   <a>Property</a> at each step of the process. This function is given
+--   the full transition that's been executed, including the start and
+--   ending <a>state</a>, the <a>Action</a>, the current environment to
+--   <tt>Lookup</tt> and the value produced by <a>perform</a> while
+--   executing this step.
 monitoring :: forall a. RunModel state m => (state, state) -> Action state a -> LookUp m -> Realized m a -> Property -> Property
+newtype PostconditionM m a
+PostconditionM :: WriterT (Endo Property, Endo Property) m a -> PostconditionM m a
+[runPost] :: PostconditionM m a -> WriterT (Endo Property, Endo Property) m a
 data WithUsedVars a
 WithUsedVars :: VarContext -> a -> WithUsedVars a
 data Annotated state
@@ -231,6 +237,14 @@ type family Realized (m :: Type -> Type) a :: Type
 --   <a>to</a> . <a>from</a> ≡ <a>id</a>
 --   </pre>
 class Generic a
+
+-- | Apply the property transformation to the property after evaluating the
+--   postcondition. Useful for collecting statistics while avoiding
+--   duplication between <a>monitoring</a> and <a>postcondition</a>.
+monitorPost :: Monad m => (Property -> Property) -> PostconditionM m ()
+
+-- | Acts as <a>counterexample</a> if the postcondition fails.
+counterexamplePost :: Monad m => String -> PostconditionM m ()
 stateAfter :: StateModel state => Actions state -> Annotated state
 runActions :: forall state m. (StateModel state, RunModel state m) => Actions state -> PropertyM m (Annotated state, Env m)
 lookUpVar :: Typeable a => Env m -> Var a -> Realized m a
@@ -240,6 +254,10 @@ computeNextState :: (StateModel state, Typeable a) => Annotated state -> Action 
 computePrecondition :: StateModel state => Annotated state -> Action state a -> Bool
 computeArbitraryAction :: StateModel state => Annotated state -> Gen (Any (Action state))
 computeShrinkAction :: (Typeable a, StateModel state) => Annotated state -> Action state a -> [Any (Action state)]
+instance Control.Monad.Trans.Class.MonadTrans Test.QuickCheck.StateModel.PostconditionM
+instance GHC.Base.Monad m => GHC.Base.Monad (Test.QuickCheck.StateModel.PostconditionM m)
+instance GHC.Base.Applicative m => GHC.Base.Applicative (Test.QuickCheck.StateModel.PostconditionM m)
+instance GHC.Base.Functor m => GHC.Base.Functor (Test.QuickCheck.StateModel.PostconditionM m)
 instance GHC.Generics.Generic (Test.QuickCheck.StateModel.Actions state)
 instance (forall a. GHC.Show.Show (Test.QuickCheck.StateModel.Action state a)) => GHC.Show.Show (Test.QuickCheck.StateModel.Variables.Any (Test.QuickCheck.StateModel.Action state))
 instance Test.QuickCheck.StateModel.StateModel state => Test.QuickCheck.Arbitrary.Arbitrary (Test.QuickCheck.StateModel.Actions state)
@@ -309,6 +327,13 @@ chooseQ :: (Arbitrary a, Random a, Ord a) => (a, a) -> Quantification a
 
 -- | Wrap a `Gen a` generator in a `Quantification a`. Uses given shrinker.
 withGenQ :: Gen a -> (a -> [a]) -> Quantification a
+
+-- | Wrap a Quantification in <a>HasNoVariables</a> to indicate that you
+--   know what you're doing and there are no symbolic variables in the
+--   thing you are quantifying over. WARNING: use this function carefully
+--   as there is no guarantee that you won't get bitten by very strange
+--   failures if you were in fact not honest about the lack of variables.
+hasNoVariablesQ :: Quantification a -> Quantification (HasNoVariables a)
 validQuantification :: Show a => Quantification a -> Property
 
 -- | Generalization of <a>Quantification</a>s, which lets you treat lists
@@ -602,6 +627,11 @@ monitorDL :: (Property -> Property) -> DL s ()
 --   list/tuple of quantifications). Generated values will only shrink to
 --   smaller values that could also have been generated.
 forAllQ :: Quantifiable q => q -> DL s (Quantifies q)
+
+-- | Generate a random value using the given <a>Quantification</a> (or
+--   list/tuple of quantifications). Generated values will only shrink to
+--   smaller values that could also have been generated.
+forAllNonVariableQ :: QuantifyConstraints (HasNoVariables a) => Quantification a -> DL s a
 forAllDL :: (DynLogicModel s, Testable a) => DL s () -> (Actions s -> a) -> Property
 forAllMappedDL :: (DynLogicModel s, Testable a) => (rep -> DynLogicTest s) -> (DynLogicTest s -> rep) -> (Actions s -> srep) -> DL s () -> (srep -> a) -> Property
 forAllUniqueDL :: (DynLogicModel s, Testable a) => Annotated s -> DL s () -> (Actions s -> a) -> Property

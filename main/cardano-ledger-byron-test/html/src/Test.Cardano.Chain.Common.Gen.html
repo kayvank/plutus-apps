@@ -78,23 +78,23 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m b
 </span><span id="line-72"></span><span>
 </span><span id="line-73"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genAddrAttributesWithNM"><span class="hs-identifier hs-type">genAddrAttributesWithNM</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">NetworkMagic</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">AddrAttributes</span></a></span><span>
 </span><span id="line-74"></span><span id="genAddrAttributesWithNM"><span class="annot"><span class="annottext">genAddrAttributesWithNM :: NetworkMagic -&gt; Gen AddrAttributes
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genAddrAttributesWithNM"><span class="hs-identifier hs-var hs-var">genAddrAttributesWithNM</span></a></span></span><span> </span><span id="local-6989586621679480675"><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679480675"><span class="hs-identifier hs-var">nm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe HDAddressPayload -&gt; NetworkMagic -&gt; AddrAttributes
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genAddrAttributesWithNM"><span class="hs-identifier hs-var hs-var">genAddrAttributesWithNM</span></a></span></span><span> </span><span id="local-6989586621679480908"><span class="annot"><span class="annottext">NetworkMagic
+</span><a href="#local-6989586621679480908"><span class="hs-identifier hs-var">nm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe HDAddressPayload -&gt; NetworkMagic -&gt; AddrAttributes
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">AddrAttributes</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe HDAddressPayload -&gt; NetworkMagic -&gt; AddrAttributes)
 -&gt; GenT Identity (Maybe HDAddressPayload)
 -&gt; GenT Identity (NetworkMagic -&gt; AddrAttributes)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Maybe HDAddressPayload)
-</span><a href="#local-6989586621679480672"><span class="hs-identifier hs-var">hap</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (NetworkMagic -&gt; AddrAttributes)
+</span><a href="#local-6989586621679480905"><span class="hs-identifier hs-var">hap</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (NetworkMagic -&gt; AddrAttributes)
 -&gt; GenT Identity NetworkMagic -&gt; Gen AddrAttributes
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic -&gt; GenT Identity NetworkMagic
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679480675"><span class="hs-identifier hs-var">nm</span></a></span><span>
+</span><a href="#local-6989586621679480908"><span class="hs-identifier hs-var">nm</span></a></span><span>
 </span><span id="line-75"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-76"></span><span>    </span><span id="local-6989586621679480672"><span class="annot"><span class="annottext">hap :: GenT Identity (Maybe HDAddressPayload)
-</span><a href="#local-6989586621679480672"><span class="hs-identifier hs-var hs-var">hap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">GenT Identity HDAddressPayload
+</span><span id="line-76"></span><span>    </span><span id="local-6989586621679480905"><span class="annot"><span class="annottext">hap :: GenT Identity (Maybe HDAddressPayload)
+</span><a href="#local-6989586621679480905"><span class="hs-identifier hs-var hs-var">hap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">GenT Identity HDAddressPayload
 -&gt; GenT Identity (Maybe HDAddressPayload)
 forall (m :: * -&gt; *) a. MonadGen m =&gt; m a -&gt; m (Maybe a)
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.maybe</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity HDAddressPayload
@@ -125,8 +125,8 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-83"></span><span>
 </span><span id="line-84"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genAddressWithNM"><span class="hs-identifier hs-type">genAddressWithNM</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">NetworkMagic</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Address</span></a></span><span>
 </span><span id="line-85"></span><span id="genAddressWithNM"><span class="annot"><span class="annottext">genAddressWithNM :: NetworkMagic -&gt; Gen Address
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genAddressWithNM"><span class="hs-identifier hs-var hs-var">genAddressWithNM</span></a></span></span><span> </span><span id="local-6989586621679480668"><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679480668"><span class="hs-identifier hs-var">nm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genAddressWithNM"><span class="hs-identifier hs-var hs-var">genAddressWithNM</span></a></span></span><span> </span><span id="local-6989586621679480901"><span class="annot"><span class="annottext">NetworkMagic
+</span><a href="#local-6989586621679480901"><span class="hs-identifier hs-var">nm</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-86"></span><span>  </span><span class="annot"><span class="annottext">AddrSpendingData -&gt; AddrAttributes -&gt; Address
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">makeAddress</span></a></span><span> </span><span class="annot"><span class="annottext">(AddrSpendingData -&gt; AddrAttributes -&gt; Address)
 -&gt; GenT Identity AddrSpendingData
@@ -139,7 +139,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic -&gt; Gen AddrAttributes
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genAddrAttributesWithNM"><span class="hs-identifier hs-var">genAddrAttributesWithNM</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679480668"><span class="hs-identifier hs-var">nm</span></a></span><span>
+</span><a href="#local-6989586621679480901"><span class="hs-identifier hs-var">nm</span></a></span><span>
 </span><span id="line-88"></span><span>
 </span><span id="line-89"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genAddrType"><span class="hs-identifier hs-type">genAddrType</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">AddrType</span></a></span><span>
 </span><span id="line-90"></span><span id="genAddrType"><span class="annot"><span class="annottext">genAddrType :: Gen AddrType
@@ -171,15 +171,15 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity RedeemVerificationKey
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">genRedeemVerificationKey</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-95"></span><span>
-</span><span id="line-96"></span><span id="local-6989586621679480662"><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genAttributes"><span class="hs-identifier hs-type">genAttributes</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480662"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Attributes</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480662"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-96"></span><span id="local-6989586621679480895"><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genAttributes"><span class="hs-identifier hs-type">genAttributes</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480895"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Attributes</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480895"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-97"></span><span id="genAttributes"><span class="annot"><span class="annottext">genAttributes :: Gen a -&gt; Gen (Attributes a)
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genAttributes"><span class="hs-identifier hs-var hs-var">genAttributes</span></a></span></span><span> </span><span id="local-6989586621679480661"><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679480661"><span class="hs-identifier hs-var">genA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Attributes a
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genAttributes"><span class="hs-identifier hs-var hs-var">genAttributes</span></a></span></span><span> </span><span id="local-6989586621679480894"><span class="annot"><span class="annottext">Gen a
+</span><a href="#local-6989586621679480894"><span class="hs-identifier hs-var">genA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; Attributes a
 forall h. h -&gt; Attributes h
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkAttributes</span></a></span><span> </span><span class="annot"><span class="annottext">(a -&gt; Attributes a) -&gt; Gen a -&gt; Gen (Attributes a)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679480661"><span class="hs-identifier hs-var">genA</span></a></span><span>
+</span><a href="#local-6989586621679480894"><span class="hs-identifier hs-var">genA</span></a></span><span>
 </span><span id="line-98"></span><span>
 </span><span id="line-99"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genBlockCount"><span class="hs-identifier hs-type">genBlockCount</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">BlockCount</span></a></span><span>
 </span><span id="line-100"></span><span id="genBlockCount"><span class="annot"><span class="annottext">genBlockCount :: Gen BlockCount
@@ -209,15 +209,15 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 -&gt; GenT Identity (Rational -&gt; TxSizeLinear)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity Lovelace
-</span><a href="#local-6989586621679480654"><span class="hs-identifier hs-var">genLovelace'</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Rational -&gt; TxSizeLinear)
+</span><a href="#local-6989586621679480887"><span class="hs-identifier hs-var">genLovelace'</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Rational -&gt; TxSizeLinear)
 -&gt; GenT Identity Rational -&gt; GenT Identity TxSizeLinear
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity Rational
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genMultiplier"><span class="hs-identifier hs-var">genMultiplier</span></a></span><span>
 </span><span id="line-107"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-108"></span><span>    </span><span class="annot"><a href="#local-6989586621679480654"><span class="hs-identifier hs-type">genLovelace'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
-</span><span id="line-109"></span><span>    </span><span id="local-6989586621679480654"><span class="annot"><span class="annottext">genLovelace' :: GenT Identity Lovelace
-</span><a href="#local-6989586621679480654"><span class="hs-identifier hs-var hs-var">genLovelace'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-108"></span><span>    </span><span class="annot"><a href="#local-6989586621679480887"><span class="hs-identifier hs-type">genLovelace'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
+</span><span id="line-109"></span><span>    </span><span id="local-6989586621679480887"><span class="annot"><span class="annottext">genLovelace' :: GenT Identity Lovelace
+</span><a href="#local-6989586621679480887"><span class="hs-identifier hs-var hs-var">genLovelace'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-110"></span><span>      </span><span class="annot"><span class="annottext">Word64 -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkLovelace</span></a></span><span>
 </span><span id="line-111"></span><span>        </span><span class="annot"><span class="annottext">(Word64 -&gt; Either LovelaceError Lovelace)
@@ -230,19 +230,19 @@ forall (m :: * -&gt; *). MonadGen m =&gt; Range Word64 -&gt; m Word64
 forall a. a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.constant</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480651"><span class="hs-identifier hs-var">maxCanonicalLovelaceVal</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679480884"><span class="hs-identifier hs-var">maxCanonicalLovelaceVal</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-112"></span><span>        </span><span class="annot"><span class="annottext">GenT Identity (Either LovelaceError Lovelace)
 -&gt; (Either LovelaceError Lovelace -&gt; GenT Identity Lovelace)
 -&gt; GenT Identity Lovelace
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
-</span><span id="line-113"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679480650"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679480650"><span class="hs-identifier hs-var">lovelace</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; GenT Identity Lovelace
+</span><span id="line-113"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679480883"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679480883"><span class="hs-identifier hs-var">lovelace</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; GenT Identity Lovelace
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679480650"><span class="hs-identifier hs-var">lovelace</span></a></span><span>
-</span><span id="line-114"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679480649"><span class="annot"><span class="annottext">LovelaceError
-</span><a href="#local-6989586621679480649"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="#local-6989586621679480883"><span class="hs-identifier hs-var">lovelace</span></a></span><span>
+</span><span id="line-114"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679480882"><span class="annot"><span class="annottext">LovelaceError
+</span><a href="#local-6989586621679480882"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-115"></span><span>            </span><span class="annot"><span class="annottext">Text -&gt; GenT Identity Lovelace
 forall a. HasCallStack =&gt; Text -&gt; a
 </span><a href="../../../../protolude/html/src"><span class="hs-identifier hs-var">panic</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; GenT Identity Lovelace) -&gt; Text -&gt; GenT Identity Lovelace
@@ -262,11 +262,11 @@ cat b c -&gt; cat a b -&gt; cat a c
 forall a r. Buildable a =&gt; Format r (a -&gt; r)
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-118"></span><span>                </span><span class="annot"><span class="annottext">LovelaceError
-</span><a href="#local-6989586621679480649"><span class="hs-identifier hs-var">err</span></a></span><span>
+</span><a href="#local-6989586621679480882"><span class="hs-identifier hs-var">err</span></a></span><span>
 </span><span id="line-119"></span><span>
-</span><span id="line-120"></span><span>    </span><span class="annot"><a href="#local-6989586621679480651"><span class="hs-identifier hs-type">maxCanonicalLovelaceVal</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
-</span><span id="line-121"></span><span>    </span><span id="local-6989586621679480651"><span class="annot"><span class="annottext">maxCanonicalLovelaceVal :: Word64
-</span><a href="#local-6989586621679480651"><span class="hs-identifier hs-var hs-var">maxCanonicalLovelaceVal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><span id="line-120"></span><span>    </span><span class="annot"><a href="#local-6989586621679480884"><span class="hs-identifier hs-type">maxCanonicalLovelaceVal</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
+</span><span id="line-121"></span><span>    </span><span id="local-6989586621679480884"><span class="annot"><span class="annottext">maxCanonicalLovelaceVal :: Word64
+</span><a href="#local-6989586621679480884"><span class="hs-identifier hs-var hs-var">maxCanonicalLovelaceVal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">9e6</span></span><span>
 </span><span id="line-122"></span><span>
 </span><span id="line-123"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genChainDifficulty"><span class="hs-identifier hs-type">genChainDifficulty</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ChainDifficulty</span></a></span><span>
@@ -291,13 +291,13 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><span id="line-128"></span><span>
 </span><span id="line-129"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genCustomLovelace"><span class="hs-identifier hs-type">genCustomLovelace</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
 </span><span id="line-130"></span><span id="genCustomLovelace"><span class="annot"><span class="annottext">genCustomLovelace :: Word64 -&gt; GenT Identity Lovelace
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genCustomLovelace"><span class="hs-identifier hs-var hs-var">genCustomLovelace</span></a></span></span><span> </span><span id="local-6989586621679480645"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480645"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Lovelace
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genCustomLovelace"><span class="hs-identifier hs-var hs-var">genCustomLovelace</span></a></span></span><span> </span><span id="local-6989586621679480878"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679480878"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Lovelace
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genLovelaceWithRange"><span class="hs-identifier hs-var">genLovelaceWithRange</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Range Word64
 forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.linear</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480645"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679480878"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-131"></span><span>
 </span><span id="line-132"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genLovelace"><span class="hs-identifier hs-type">genLovelace</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
 </span><span id="line-133"></span><span id="genLovelace"><span class="annot"><span class="annottext">genLovelace :: GenT Identity Lovelace
@@ -321,7 +321,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Word64
 forall (m :: * -&gt; *). MonadGen m =&gt; Range Word64 -&gt; m Word64
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.word64</span></a></span><span> </span><span class="annot"><span class="annottext">Range Word64
-</span><a href="#local-6989586621679480642"><span class="hs-identifier hs-var">overflowRange</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679480875"><span class="hs-identifier hs-var">overflowRange</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-139"></span><span>      </span><span class="annot"><span class="annottext">Integer -&gt; LovelaceError
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">LovelaceTooLarge</span></a></span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; LovelaceError)
 -&gt; GenT Identity Integer -&gt; Gen LovelaceError
@@ -329,7 +329,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Range Integer -&gt; GenT Identity Integer
 forall (m :: * -&gt; *) a. (MonadGen m, Integral a) =&gt; Range a -&gt; m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.integral</span></a></span><span> </span><span class="annot"><span class="annottext">Range Integer
-</span><a href="#local-6989586621679480639"><span class="hs-identifier hs-var">tooLargeRange</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679480872"><span class="hs-identifier hs-var">tooLargeRange</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-140"></span><span>      </span><span class="annot"><span class="annottext">Integer -&gt; LovelaceError
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">LovelaceTooSmall</span></a></span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; LovelaceError)
 -&gt; GenT Identity Integer -&gt; Gen LovelaceError
@@ -337,7 +337,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Range Integer -&gt; GenT Identity Integer
 forall (m :: * -&gt; *) a. (MonadGen m, Integral a) =&gt; Range a -&gt; m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.integral</span></a></span><span> </span><span class="annot"><span class="annottext">Range Integer
-</span><a href="#local-6989586621679480637"><span class="hs-identifier hs-var">tooSmallRange</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679480870"><span class="hs-identifier hs-var">tooSmallRange</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-141"></span><span>      </span><span class="annot"><span class="annottext">(Word64 -&gt; Word64 -&gt; LovelaceError)
 -&gt; (Word64, Word64) -&gt; LovelaceError
 forall a b c. (a -&gt; b -&gt; c) -&gt; (a, b) -&gt; c
@@ -346,12 +346,12 @@ forall a b c. (a -&gt; b -&gt; c) -&gt; (a, b) -&gt; c
 -&gt; GenT Identity (Word64, Word64) -&gt; Gen LovelaceError
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Word64, Word64)
-</span><a href="#local-6989586621679480634"><span class="hs-identifier hs-var">genUnderflowErrorValues</span></a></span><span>
+</span><a href="#local-6989586621679480867"><span class="hs-identifier hs-var">genUnderflowErrorValues</span></a></span><span>
 </span><span id="line-142"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-143"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-144"></span><span>    </span><span class="annot"><a href="#local-6989586621679480642"><span class="hs-identifier hs-type">overflowRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
-</span><span id="line-145"></span><span>    </span><span id="local-6989586621679480642"><span class="annot"><span class="annottext">overflowRange :: Range Word64
-</span><a href="#local-6989586621679480642"><span class="hs-identifier hs-var hs-var">overflowRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Range Word64
+</span><span id="line-144"></span><span>    </span><span class="annot"><a href="#local-6989586621679480875"><span class="hs-identifier hs-type">overflowRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
+</span><span id="line-145"></span><span>    </span><span id="local-6989586621679480875"><span class="annot"><span class="annottext">overflowRange :: Range Word64
+</span><a href="#local-6989586621679480875"><span class="hs-identifier hs-var hs-var">overflowRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Range Word64
 forall a. a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.constant</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">maxLovelaceVal</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
@@ -361,9 +361,9 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maxBound</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-146"></span><span>
-</span><span id="line-147"></span><span>    </span><span class="annot"><a href="#local-6989586621679480639"><span class="hs-identifier hs-type">tooLargeRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
-</span><span id="line-148"></span><span>    </span><span id="local-6989586621679480639"><span class="annot"><span class="annottext">tooLargeRange :: Range Integer
-</span><a href="#local-6989586621679480639"><span class="hs-identifier hs-var hs-var">tooLargeRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-147"></span><span>    </span><span class="annot"><a href="#local-6989586621679480872"><span class="hs-identifier hs-type">tooLargeRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
+</span><span id="line-148"></span><span>    </span><span id="local-6989586621679480872"><span class="annot"><span class="annottext">tooLargeRange :: Range Integer
+</span><a href="#local-6989586621679480872"><span class="hs-identifier hs-var hs-var">tooLargeRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-149"></span><span>      </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; Range Integer
 forall a. a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.constant</span></a></span><span>
@@ -380,9 +380,9 @@ forall a b. (Integral a, Num b) =&gt; a -&gt; b
 forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maxBound</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-152"></span><span>
-</span><span id="line-153"></span><span>    </span><span class="annot"><a href="#local-6989586621679480637"><span class="hs-identifier hs-type">tooSmallRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
-</span><span id="line-154"></span><span>    </span><span id="local-6989586621679480637"><span class="annot"><span class="annottext">tooSmallRange :: Range Integer
-</span><a href="#local-6989586621679480637"><span class="hs-identifier hs-var hs-var">tooSmallRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; Range Integer
+</span><span id="line-153"></span><span>    </span><span class="annot"><a href="#local-6989586621679480870"><span class="hs-identifier hs-type">tooSmallRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span>
+</span><span id="line-154"></span><span>    </span><span id="local-6989586621679480870"><span class="annot"><span class="annottext">tooSmallRange :: Range Integer
+</span><a href="#local-6989586621679480870"><span class="hs-identifier hs-var hs-var">tooSmallRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; Range Integer
 forall a. a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.constant</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Integer
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
@@ -391,11 +391,11 @@ forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">minBound</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">-</span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-155"></span><span>
-</span><span id="line-156"></span><span>    </span><span class="annot"><a href="#local-6989586621679480634"><span class="hs-identifier hs-type">genUnderflowErrorValues</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-157"></span><span>    </span><span id="local-6989586621679480634"><span class="annot"><span class="annottext">genUnderflowErrorValues :: GenT Identity (Word64, Word64)
-</span><a href="#local-6989586621679480634"><span class="hs-identifier hs-var hs-var">genUnderflowErrorValues</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-158"></span><span>      </span><span id="local-6989586621679480630"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480630"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Word64
+</span><span id="line-156"></span><span>    </span><span class="annot"><a href="#local-6989586621679480867"><span class="hs-identifier hs-type">genUnderflowErrorValues</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-157"></span><span>    </span><span id="local-6989586621679480867"><span class="annot"><span class="annottext">genUnderflowErrorValues :: GenT Identity (Word64, Word64)
+</span><a href="#local-6989586621679480867"><span class="hs-identifier hs-var hs-var">genUnderflowErrorValues</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-158"></span><span>      </span><span id="local-6989586621679480863"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679480863"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Word64
 forall (m :: * -&gt; *). MonadGen m =&gt; Range Word64 -&gt; m Word64
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.word64</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Range Word64
 forall a. a -&gt; a -&gt; Range a
@@ -406,25 +406,25 @@ forall a. Bounded a =&gt; a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-159"></span><span>      </span><span id="local-6989586621679480629"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480629"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Word64
+</span><span id="line-159"></span><span>      </span><span id="local-6989586621679480862"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679480862"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Word64
 forall (m :: * -&gt; *). MonadGen m =&gt; Range Word64 -&gt; m Word64
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.word64</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Range Word64
 forall a. a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.constant</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480630"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679480863"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 forall a. Bounded a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maxBound</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-160"></span><span>      </span><span class="annot"><span class="annottext">(Word64, Word64) -&gt; GenT Identity (Word64, Word64)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480630"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679480629"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679480863"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679480862"><span class="hs-identifier hs-var">b</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-161"></span><span>
 </span><span id="line-162"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genLovelaceWithRange"><span class="hs-identifier hs-type">genLovelaceWithRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Range</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Lovelace</span></a></span><span>
 </span><span id="line-163"></span><span id="genLovelaceWithRange"><span class="annot"><span class="annottext">genLovelaceWithRange :: Range Word64 -&gt; GenT Identity Lovelace
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genLovelaceWithRange"><span class="hs-identifier hs-var hs-var">genLovelaceWithRange</span></a></span></span><span> </span><span id="local-6989586621679480628"><span class="annot"><span class="annottext">Range Word64
-</span><a href="#local-6989586621679480628"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genLovelaceWithRange"><span class="hs-identifier hs-var hs-var">genLovelaceWithRange</span></a></span></span><span> </span><span id="local-6989586621679480861"><span class="annot"><span class="annottext">Range Word64
+</span><a href="#local-6989586621679480861"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-164"></span><span>  </span><span class="annot"><span class="annottext">Word64 -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">(Word64 -&gt; Either LovelaceError Lovelace)
 -&gt; GenT Identity Word64
@@ -433,18 +433,18 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Range Word64 -&gt; GenT Identity Word64
 forall (m :: * -&gt; *). MonadGen m =&gt; Range Word64 -&gt; m Word64
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Gen.word64</span></a></span><span> </span><span class="annot"><span class="annottext">Range Word64
-</span><a href="#local-6989586621679480628"><span class="hs-identifier hs-var">r</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Either LovelaceError Lovelace)
+</span><a href="#local-6989586621679480861"><span class="hs-identifier hs-var">r</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity (Either LovelaceError Lovelace)
 -&gt; (Either LovelaceError Lovelace -&gt; GenT Identity Lovelace)
 -&gt; GenT Identity Lovelace
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
-</span><span id="line-165"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679480627"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679480627"><span class="hs-identifier hs-var">lovelace</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; GenT Identity Lovelace
+</span><span id="line-165"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679480860"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679480860"><span class="hs-identifier hs-var">lovelace</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; GenT Identity Lovelace
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679480627"><span class="hs-identifier hs-var">lovelace</span></a></span><span>
-</span><span id="line-166"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679480626"><span class="annot"><span class="annottext">LovelaceError
-</span><a href="#local-6989586621679480626"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="#local-6989586621679480860"><span class="hs-identifier hs-var">lovelace</span></a></span><span>
+</span><span id="line-166"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679480859"><span class="annot"><span class="annottext">LovelaceError
+</span><a href="#local-6989586621679480859"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-167"></span><span>      </span><span class="annot"><span class="annottext">Text -&gt; GenT Identity Lovelace
 forall a. HasCallStack =&gt; Text -&gt; a
 </span><a href="../../../../protolude/html/src"><span class="hs-identifier hs-var">panic</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; GenT Identity Lovelace) -&gt; Text -&gt; GenT Identity Lovelace
@@ -461,7 +461,7 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Format Text (LovelaceError -&gt; Text)
 forall a r. Buildable a =&gt; Format r (a -&gt; r)
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">LovelaceError
-</span><a href="#local-6989586621679480626"><span class="hs-identifier hs-var">err</span></a></span><span>
+</span><a href="#local-6989586621679480859"><span class="hs-identifier hs-var">err</span></a></span><span>
 </span><span id="line-168"></span><span>
 </span><span id="line-169"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genLovelacePortion"><span class="hs-identifier hs-type">genLovelacePortion</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">LovelacePortion</span></a></span><span>
 </span><span id="line-170"></span><span id="genLovelacePortion"><span class="annot"><span class="annottext">genLovelacePortion :: Gen LovelacePortion
@@ -486,10 +486,10 @@ forall a. a -&gt; a -&gt; Range a
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-172"></span><span>
 </span><span id="line-173"></span><span class="hs-comment">-- slow</span><span>
-</span><span id="line-174"></span><span id="local-6989586621679480717"><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleTree"><span class="hs-identifier hs-type">genMerkleTree</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480717"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480717"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">MerkleTree</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480717"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-174"></span><span id="local-6989586621679480950"><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleTree"><span class="hs-identifier hs-type">genMerkleTree</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480950"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480950"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">MerkleTree</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480950"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-175"></span><span id="genMerkleTree"><span class="annot"><span class="annottext">genMerkleTree :: Gen a -&gt; Gen (MerkleTree a)
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleTree"><span class="hs-identifier hs-var hs-var">genMerkleTree</span></a></span></span><span> </span><span id="local-6989586621679480624"><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679480624"><span class="hs-identifier hs-var">genA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[a] -&gt; MerkleTree a
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleTree"><span class="hs-identifier hs-var hs-var">genMerkleTree</span></a></span></span><span> </span><span id="local-6989586621679480857"><span class="annot"><span class="annottext">Gen a
+</span><a href="#local-6989586621679480857"><span class="hs-identifier hs-var">genA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[a] -&gt; MerkleTree a
 forall a. ToCBOR a =&gt; [a] -&gt; MerkleTree a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkMerkleTree</span></a></span><span> </span><span class="annot"><span class="annottext">([a] -&gt; MerkleTree a) -&gt; GenT Identity [a] -&gt; Gen (MerkleTree a)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -500,13 +500,13 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Range a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">Range.linear</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">10</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679480624"><span class="hs-identifier hs-var">genA</span></a></span><span>
+</span><a href="#local-6989586621679480857"><span class="hs-identifier hs-var">genA</span></a></span><span>
 </span><span id="line-176"></span><span>
 </span><span id="line-177"></span><span class="hs-comment">-- slow</span><span>
-</span><span id="line-178"></span><span id="local-6989586621679480622"><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleRoot"><span class="hs-identifier hs-type">genMerkleRoot</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480622"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480622"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">MerkleRoot</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480622"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-178"></span><span id="local-6989586621679480855"><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleRoot"><span class="hs-identifier hs-type">genMerkleRoot</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480855"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480855"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">MerkleRoot</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679480855"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-179"></span><span id="genMerkleRoot"><span class="annot"><span class="annottext">genMerkleRoot :: Gen a -&gt; Gen (MerkleRoot a)
-</span><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleRoot"><span class="hs-identifier hs-var hs-var">genMerkleRoot</span></a></span></span><span> </span><span id="local-6989586621679480621"><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679480621"><span class="hs-identifier hs-var">genA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">MerkleTree a -&gt; MerkleRoot a
+</span><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleRoot"><span class="hs-identifier hs-var hs-var">genMerkleRoot</span></a></span></span><span> </span><span id="local-6989586621679480854"><span class="annot"><span class="annottext">Gen a
+</span><a href="#local-6989586621679480854"><span class="hs-identifier hs-var">genA</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">MerkleTree a -&gt; MerkleRoot a
 forall a. MerkleTree a -&gt; MerkleRoot a
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mtRoot</span></a></span><span> </span><span class="annot"><span class="annottext">(MerkleTree a -&gt; MerkleRoot a)
 -&gt; GenT Identity (MerkleTree a) -&gt; Gen (MerkleRoot a)
@@ -514,7 +514,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen a -&gt; GenT Identity (MerkleTree a)
 forall a. ToCBOR a =&gt; Gen a -&gt; Gen (MerkleTree a)
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genMerkleTree"><span class="hs-identifier hs-var">genMerkleTree</span></a></span><span> </span><span class="annot"><span class="annottext">Gen a
-</span><a href="#local-6989586621679480621"><span class="hs-identifier hs-var">genA</span></a></span><span>
+</span><a href="#local-6989586621679480854"><span class="hs-identifier hs-var">genA</span></a></span><span>
 </span><span id="line-180"></span><span>
 </span><span id="line-181"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Gen.html#genNetworkMagic"><span class="hs-identifier hs-type">genNetworkMagic</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">NetworkMagic</span></a></span><span>
 </span><span id="line-182"></span><span id="genNetworkMagic"><span class="annot"><span class="annottext">genNetworkMagic :: GenT Identity NetworkMagic

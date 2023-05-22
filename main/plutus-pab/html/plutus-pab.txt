@@ -90,6 +90,9 @@ balanceTx :: forall (effs :: [Type -> Type]). Member WalletEffect effs => Unbala
 --   chain in the context of a wallet.
 handleTx :: (Member WalletEffect effs, Member (Error WalletAPIError) effs) => UnbalancedTx -> Eff effs CardanoTx
 yieldUnbalancedTx :: forall (effs :: [Type -> Type]). Member WalletEffect effs => UnbalancedTx -> Eff effs ()
+
+-- | Add the wallet's signature to the transaction and submit it. Returns
+--   the transaction with the wallet's signature.
 signTxAndSubmit :: forall (effs :: [Type -> Type]). Member WalletEffect effs => CardanoTx -> Eff effs CardanoTx
 
 -- | Partial transaction that can be balanced by the wallet backend.
@@ -223,7 +226,7 @@ module Control.Concurrent.STM.Extras
 module Control.Monad.Freer.Delay
 data DelayEffect r
 [DelayThread] :: TimeUnit a => a -> DelayEffect ()
-delayThread :: forall a_X1BRC. TimeUnit a_X1BRC => forall effs_a1BSy. Member DelayEffect effs_a1BSy => a_X1BRC -> Eff effs_a1BSy ()
+delayThread :: forall a_X1Cr6. TimeUnit a_X1Cr6 => forall effs_a1Cs2. Member DelayEffect effs_a1Cs2 => a_X1Cr6 -> Eff effs_a1Cs2 ()
 handleDelayEffect :: forall effs m. (LastMember m effs, MonadIO m) => Eff (DelayEffect : effs) ~> Eff effs
 
 
@@ -248,20 +251,14 @@ instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Scripts.MintingPol
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Scripts.MintingPolicyHash
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Scripts.Script
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Scripts.ScriptHash
-instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Index.Internal.ValidationError
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Scripts.ScriptError
 instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Constraints.OffChain.MkTxError
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.Script.Utils.V1.Typed.Scripts.Validators.ConnectionError
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.Script.Utils.V1.Typed.Scripts.Validators.WrongOutTypeError
-instance Test.QuickCheck.Arbitrary.Arbitrary Wallet.Emulator.Error.WalletAPIError
 instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.CardanoAPI.Internal.ToCardanoError
-instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.TxIn
-instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.TxInputType
-instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.TxInput
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V2.Ledger.Tx.OutputDatum
 instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.TxOut
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Tx.TxOutRef
-instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.TxInType
 instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.Withdrawal
 instance Test.QuickCheck.Arbitrary.Arbitrary Ledger.Tx.Internal.Certificate
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Credential.Credential
@@ -302,6 +299,7 @@ instance Test.QuickCheck.Arbitrary.Arbitrary Cardano.Api.Value.AssetId
 instance Test.QuickCheck.Arbitrary.Arbitrary Cardano.Api.Value.AssetName
 instance Test.QuickCheck.Arbitrary.Arbitrary Cardano.Api.Value.Quantity
 instance Test.QuickCheck.Arbitrary.Arbitrary Cardano.Api.Value.PolicyId
+instance Test.QuickCheck.Arbitrary.Arbitrary Cardano.Api.TxIn.TxIx
 instance (Test.QuickCheck.Arbitrary.Arbitrary k, Test.QuickCheck.Arbitrary.Arbitrary v) => Test.QuickCheck.Arbitrary.Arbitrary (PlutusTx.AssocMap.Map k v)
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.Contract.Effects.PABReq
 instance Test.QuickCheck.Arbitrary.Arbitrary Plutus.V1.Ledger.Address.Address
@@ -576,18 +574,22 @@ instance Database.Beam.Schema.Tables.Table Plutus.PAB.Db.Schema.ContractInstance
 module Plutus.PAB.Effects.TimeEffect
 data TimeEffect r
 [SystemTime] :: TimeEffect Slot
-systemTime :: forall effs_a2htr. Member TimeEffect effs_a2htr => Eff effs_a2htr Slot
+systemTime :: forall effs_a2eQy. Member TimeEffect effs_a2eQy => Eff effs_a2eQy Slot
 
 module Plutus.PAB.Effects.UUID
 data UUIDEffect r
 [UuidNextRandom] :: UUIDEffect UUID
-uuidNextRandom :: forall effs_a2hwn. Member UUIDEffect effs_a2hwn => Eff effs_a2hwn UUID
+uuidNextRandom :: forall effs_a2eTu. Member UUIDEffect effs_a2eTu => Eff effs_a2eTu UUID
 handleUUIDEffect :: (LastMember m effs, MonadIO m) => Eff (UUIDEffect : effs) ~> Eff effs
 
 module Plutus.PAB.Events.Contract
+
+-- | Unique ID for contract instance
 newtype ContractInstanceId
 ContractInstanceId :: UUID -> ContractInstanceId
 [unContractInstanceId] :: ContractInstanceId -> UUID
+
+-- | A value that uniquely identifies groups of requests.
 data IterationID
 
 module Plutus.PAB.Events.ContractInstanceState
@@ -653,7 +655,7 @@ instance Cardano.BM.Data.Tracer.Extras.StructuredLog Wallet.Types.ContractInstan
 instance Cardano.BM.Data.Tracer.Extras.StructuredLog Plutus.Contract.Resumable.IterationID
 instance Cardano.BM.Data.Tracer.Extras.StructuredLog Plutus.Contract.Checkpoint.CheckpointLogMsg
 instance Cardano.BM.Data.Tracer.Extras.StructuredLog Wallet.Emulator.LogMessages.RequestHandlerLogMsg
-instance Cardano.BM.Data.Tracer.Extras.StructuredLog Wallet.Emulator.LogMessages.TxBalanceMsg
+instance Cardano.BM.Data.Tracer.Extras.StructuredLog Cardano.Node.Emulator.MTL.LogMessages.TxBalanceMsg
 instance Cardano.BM.Data.Tracer.Extras.StructuredLog Ledger.Tx.CardanoAPI.Internal.CardanoTx
 instance Cardano.BM.Data.Tracer.Extras.StructuredLog Data.UUID.Types.Internal.UUID
 instance (Data.Aeson.Types.ToJSON.ToJSON w, Data.Aeson.Types.ToJSON.ToJSON v) => Cardano.BM.Data.Tracer.Extras.StructuredLog (Plutus.Contract.State.ContractRequest w v)
@@ -1169,9 +1171,9 @@ data MultiWalletEffect r
 [CreateWallet] :: Maybe Ada -> MultiWalletEffect WalletInfo
 [MultiWallet] :: Wallet -> Eff '[WalletEffect] a -> MultiWalletEffect a
 [GetWalletInfo] :: WalletId -> MultiWalletEffect (Maybe WalletInfo)
-createWallet :: forall effs_a3fV2. Member MultiWalletEffect effs_a3fV2 => Maybe Ada -> Eff effs_a3fV2 WalletInfo
-multiWallet :: forall a_a3fMz. forall effs_a3fV3. Member MultiWalletEffect effs_a3fV3 => Wallet -> Eff ('(:) WalletEffect ('[] :: [Type -> Type])) a_a3fMz -> Eff effs_a3fV3 a_a3fMz
-getWalletInfo :: forall effs_a3fV4. Member MultiWalletEffect effs_a3fV4 => WalletId -> Eff effs_a3fV4 (Maybe WalletInfo)
+createWallet :: forall effs_a3dcW. Member MultiWalletEffect effs_a3dcW => Maybe Ada -> Eff effs_a3dcW WalletInfo
+multiWallet :: forall a_a3d4v. forall effs_a3dcX. Member MultiWalletEffect effs_a3dcX => Wallet -> Eff ('(:) WalletEffect ('[] :: [Type -> Type])) a_a3d4v -> Eff effs_a3dcX a_a3d4v
+getWalletInfo :: forall effs_a3dcY. Member MultiWalletEffect effs_a3dcY => WalletId -> Eff effs_a3dcY (Maybe WalletInfo)
 data WalletMsg
 StartingWallet :: Port -> WalletMsg
 ChainClientMsg :: Text -> WalletMsg
@@ -1381,14 +1383,11 @@ instance Data.OpenApi.Internal.Schema.ToSchema Wallet.Types.ContractInstanceId
 instance Data.OpenApi.Internal.Schema.ToSchema Plutus.V1.Ledger.Bytes.LedgerBytes
 instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Crypto.Signature
 instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Crypto.PubKey
-instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Tx.Internal.TxInputType
-instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Tx.Internal.TxInput
 instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Tx.Internal.Withdrawal
 instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Tx.Internal.Certificate
-instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Index.Internal.UtxoIndex
 instance Data.OpenApi.Internal.Schema.ToSchema Wallet.Rollup.Types.DereferencedInput
 instance Data.OpenApi.Internal.Schema.ToSchema Wallet.Rollup.Types.BeneficialOwner
-instance Data.OpenApi.Internal.Schema.ToSchema Wallet.Rollup.Types.TxKey
+instance Data.OpenApi.Internal.Schema.ToSchema Cardano.Api.TxIn.TxIn
 instance Data.OpenApi.Internal.Schema.ToSchema Wallet.Rollup.Types.AnnotatedTx
 instance Data.OpenApi.Internal.Schema.ToSchema t => Data.OpenApi.Internal.Schema.ToSchema (Plutus.PAB.Webserver.Types.ContractSignatureResponse t)
 instance Data.OpenApi.Internal.Schema.ToSchema t => Data.OpenApi.Internal.Schema.ToSchema (Plutus.PAB.Webserver.Types.ContractActivationArgs t)
@@ -1401,6 +1400,7 @@ instance Data.OpenApi.Internal.Schema.ToSchema Cardano.Api.Script.ScriptHash
 instance Data.OpenApi.Internal.Schema.ToSchema (Crypto.Hash.Types.Digest Crypto.Hash.Blake2b.Blake2b_160)
 instance Data.OpenApi.Internal.Schema.ToSchema (Cardano.Crypto.Hash.Class.Hash Cardano.Crypto.Hash.Blake2b.Blake2b_256 Cardano.Ledger.Hashes.EraIndependentTxBody)
 instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Tx.CardanoAPI.Internal.CardanoBuildTx
+instance Data.OpenApi.Internal.Schema.ToSchema Ledger.Index.Internal.UtxoIndex
 
 module Plutus.PAB.Webserver.API
 
@@ -1475,10 +1475,10 @@ UpdateContractInstanceState :: !ContractActivationArgs t -> !ContractInstanceId 
 SubmitTx :: !CardanoTx -> PABEvent t
 ActivateContract :: !ContractActivationArgs t -> !ContractInstanceId -> PABEvent t
 StopContract :: !ContractInstanceId -> PABEvent t
-_UpdateContractInstanceState :: forall t_a3NIg. Prism' (PABEvent t_a3NIg) (ContractActivationArgs t_a3NIg, ContractInstanceId, ContractResponse Value Value PABResp PABReq)
-_SubmitTx :: forall t_a3NIg. Prism' (PABEvent t_a3NIg) CardanoTx
-_ActivateContract :: forall t_a3NIg. Prism' (PABEvent t_a3NIg) (ContractActivationArgs t_a3NIg, ContractInstanceId)
-_StopContract :: forall t_a3NIg. Prism' (PABEvent t_a3NIg) ContractInstanceId
+_UpdateContractInstanceState :: forall t_a3Koo. Prism' (PABEvent t_a3Koo) (ContractActivationArgs t_a3Koo, ContractInstanceId, ContractResponse Value Value PABResp PABReq)
+_SubmitTx :: forall t_a3Koo. Prism' (PABEvent t_a3Koo) CardanoTx
+_ActivateContract :: forall t_a3Koo. Prism' (PABEvent t_a3Koo) (ContractActivationArgs t_a3Koo, ContractInstanceId)
+_StopContract :: forall t_a3Koo. Prism' (PABEvent t_a3Koo) ContractInstanceId
 instance Prettyprinter.Internal.Pretty t => Prettyprinter.Internal.Pretty (Plutus.PAB.Events.PABEvent t)
 instance Data.Aeson.Types.FromJSON.FromJSON t => Data.Aeson.Types.FromJSON.FromJSON (Plutus.PAB.Events.PABEvent t)
 instance Data.Aeson.Types.ToJSON.ToJSON t => Data.Aeson.Types.ToJSON.ToJSON (Plutus.PAB.Events.PABEvent t)

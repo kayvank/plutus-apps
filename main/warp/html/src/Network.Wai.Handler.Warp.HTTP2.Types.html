@@ -18,22 +18,22 @@
 </span><a href="Network.Wai.Handler.Warp.HTTP2.Types.html#isHTTP2"><span class="hs-identifier hs-var hs-var">isHTTP2</span></a></span></span><span> </span><span class="annot"><span class="annottext">Transport
 </span><a href="Network.Wai.Handler.Warp.Types.html#TCP"><span class="hs-identifier hs-var">TCP</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
-</span><span id="line-18"></span><span class="annot"><a href="Network.Wai.Handler.Warp.HTTP2.Types.html#isHTTP2"><span class="hs-identifier hs-var">isHTTP2</span></a></span><span> </span><span id="local-6989586621679101668"><span class="annot"><span class="annottext">Transport
-</span><a href="#local-6989586621679101668"><span class="hs-identifier hs-var">tls</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679101667"><span class="hs-identifier hs-var">useHTTP2</span></a></span><span>
+</span><span id="line-18"></span><span class="annot"><a href="Network.Wai.Handler.Warp.HTTP2.Types.html#isHTTP2"><span class="hs-identifier hs-var">isHTTP2</span></a></span><span> </span><span id="local-6989586621679101672"><span class="annot"><span class="annottext">Transport
+</span><a href="#local-6989586621679101672"><span class="hs-identifier hs-var">tls</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679101671"><span class="hs-identifier hs-var">useHTTP2</span></a></span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-20"></span><span>    </span><span id="local-6989586621679101667"><span class="annot"><span class="annottext">useHTTP2 :: Bool
-</span><a href="#local-6989586621679101667"><span class="hs-identifier hs-var hs-var">useHTTP2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Transport -&gt; Maybe ByteString
+</span><span id="line-20"></span><span>    </span><span id="local-6989586621679101671"><span class="annot"><span class="annottext">useHTTP2 :: Bool
+</span><a href="#local-6989586621679101671"><span class="hs-identifier hs-var hs-var">useHTTP2</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Transport -&gt; Maybe ByteString
 </span><a href="Network.Wai.Handler.Warp.Types.html#tlsNegotiatedProtocol"><span class="hs-identifier hs-var hs-var">tlsNegotiatedProtocol</span></a></span><span> </span><span class="annot"><span class="annottext">Transport
-</span><a href="#local-6989586621679101668"><span class="hs-identifier hs-var">tls</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679101672"><span class="hs-identifier hs-var">tls</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-21"></span><span>        </span><span class="annot"><span class="annottext">Maybe ByteString
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
-</span><span id="line-22"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679101665"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679101665"><span class="hs-identifier hs-var">proto</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><span id="line-22"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679101669"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679101669"><span class="hs-identifier hs-var">proto</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;h2&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
 </span><a href="../../../../bytestring/html/src"><span class="hs-operator hs-var">`BS.isPrefixOf`</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679101665"><span class="hs-identifier hs-var">proto</span></a></span><span>
+</span><a href="#local-6989586621679101669"><span class="hs-identifier hs-var">proto</span></a></span><span>
 </span><span id="line-23"></span><span>
 </span><span id="line-24"></span><span class="hs-comment">----------------------------------------------------------------</span><span>
 </span><span id="line-25"></span><span>
@@ -94,7 +94,7 @@
 </span><span id="line-72"></span><span>    </span><span class="hs-comment">--   Since: 3.2.7</span><span>
 </span><span id="line-73"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="promisedWeight"><span class="annot"><span class="annottext">PushPromise -&gt; Weight
 </span><a href="Network.Wai.Handler.Warp.HTTP2.Types.html#promisedWeight"><span class="hs-identifier hs-var hs-var">promisedWeight</span></a></span></span><span>          </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../http2/html/src"><span class="hs-identifier hs-type">Weight</span></a></span><span>
-</span><span id="line-74"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679101650"><span id="local-6989586621679101652"><span class="annot"><span class="annottext">PushPromise -&gt; PushPromise -&gt; Bool
+</span><span id="line-74"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679101654"><span id="local-6989586621679101656"><span class="annot"><span class="annottext">PushPromise -&gt; PushPromise -&gt; Bool
 (PushPromise -&gt; PushPromise -&gt; Bool)
 -&gt; (PushPromise -&gt; PushPromise -&gt; Bool) -&gt; Eq PushPromise
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -102,7 +102,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: PushPromise -&gt; PushPromise -&gt; Bool
 == :: PushPromise -&gt; PushPromise -&gt; Bool
 $c== :: PushPromise -&gt; PushPromise -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span id="local-6989586621679101634"><span id="local-6989586621679101636"><span id="local-6989586621679101638"><span id="local-6989586621679101640"><span id="local-6989586621679101642"><span id="local-6989586621679101644"><span id="local-6989586621679101646"><span class="annot"><span class="annottext">Eq PushPromise
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span id="local-6989586621679101638"><span id="local-6989586621679101640"><span id="local-6989586621679101642"><span id="local-6989586621679101644"><span id="local-6989586621679101646"><span id="local-6989586621679101648"><span id="local-6989586621679101650"><span class="annot"><span class="annottext">Eq PushPromise
 Eq PushPromise
 -&gt; (PushPromise -&gt; PushPromise -&gt; Ordering)
 -&gt; (PushPromise -&gt; PushPromise -&gt; Bool)
@@ -140,7 +140,7 @@ $c&lt; :: PushPromise -&gt; PushPromise -&gt; Bool
 compare :: PushPromise -&gt; PushPromise -&gt; Ordering
 $ccompare :: PushPromise -&gt; PushPromise -&gt; Ordering
 $cp1Ord :: Eq PushPromise
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span id="local-6989586621679101627"><span id="local-6989586621679101629"><span id="local-6989586621679101631"><span class="annot"><span class="annottext">Weight -&gt; PushPromise -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span id="local-6989586621679101631"><span id="local-6989586621679101633"><span id="local-6989586621679101635"><span class="annot"><span class="annottext">Weight -&gt; PushPromise -&gt; ShowS
 [PushPromise] -&gt; ShowS
 PushPromise -&gt; FilePath
 (Weight -&gt; PushPromise -&gt; ShowS)

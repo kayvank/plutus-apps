@@ -102,7 +102,7 @@ prop_roundTripSerialize' :: Property
 </span><span id="line-63"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="tsUTCTime"><span class="annot"><span class="annottext">TestStruct -&gt; UTCTime
 </span><a href="Test.Cardano.Binary.Serialization.html#tsUTCTime"><span class="hs-identifier hs-var hs-var">tsUTCTime</span></a></span></span><span>               </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">Time.UTCTime</span></a></span><span>
 </span><span id="line-64"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-65"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679155161"><span id="local-6989586621679155163"><span id="local-6989586621679155165"><span class="annot"><span class="annottext">Int -&gt; TestStruct -&gt; ShowS
+</span><span id="line-65"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679155170"><span id="local-6989586621679155172"><span id="local-6989586621679155174"><span class="annot"><span class="annottext">Int -&gt; TestStruct -&gt; ShowS
 [TestStruct] -&gt; ShowS
 TestStruct -&gt; String
 (Int -&gt; TestStruct -&gt; ShowS)
@@ -117,7 +117,7 @@ show :: TestStruct -&gt; String
 $cshow :: TestStruct -&gt; String
 showsPrec :: Int -&gt; TestStruct -&gt; ShowS
 $cshowsPrec :: Int -&gt; TestStruct -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679155156"><span id="local-6989586621679155158"><span class="annot"><span class="annottext">TestStruct -&gt; TestStruct -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679155165"><span id="local-6989586621679155167"><span class="annot"><span class="annottext">TestStruct -&gt; TestStruct -&gt; Bool
 (TestStruct -&gt; TestStruct -&gt; Bool)
 -&gt; (TestStruct -&gt; TestStruct -&gt; Bool) -&gt; Eq TestStruct
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -1387,10 +1387,10 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity UTCTime
 </span><a href="Test.Cardano.Binary.Serialization.html#genUTCTime"><span class="hs-identifier hs-var">genUTCTime</span></a></span><span>
 </span><span id="line-97"></span><span>
-</span><span id="line-98"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679155118"><span id="local-6989586621679155120"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Binary.Serialization.html#TestStruct"><span class="hs-identifier hs-type">TestStruct</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-99"></span><span>  </span><span id="local-6989586621679155116"><span class="annot"><span class="annottext">toCBOR :: TestStruct -&gt; Encoding
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679155114"><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Encoding
+</span><span id="line-98"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679155127"><span id="local-6989586621679155129"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Binary.Serialization.html#TestStruct"><span class="hs-identifier hs-type">TestStruct</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-99"></span><span>  </span><span id="local-6989586621679155125"><span class="annot"><span class="annottext">toCBOR :: TestStruct -&gt; Encoding
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span id="local-6989586621679155123"><span class="annot"><span class="annottext">TestStruct
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Encoding
 </span><a href="../../../../cborg/html/src"><span class="hs-identifier hs-var">E.encodeListLen</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">1</span></span><span>
 </span><span id="line-100"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
@@ -1399,199 +1399,199 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; ()
 </span><a href="Test.Cardano.Binary.Serialization.html#tsUnit"><span class="hs-identifier hs-var hs-var">tsUnit</span></a></span><span>                  </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-101"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsBool"><span class="hs-identifier hs-var hs-var">tsBool</span></a></span><span>                  </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-102"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Integer
 </span><a href="Test.Cardano.Binary.Serialization.html#tsInteger"><span class="hs-identifier hs-var hs-var">tsInteger</span></a></span><span>               </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-103"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Word
 </span><a href="Test.Cardano.Binary.Serialization.html#tsWord"><span class="hs-identifier hs-var hs-var">tsWord</span></a></span><span>                  </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-104"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word8 -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Word8
 </span><a href="Test.Cardano.Binary.Serialization.html#tsWord8"><span class="hs-identifier hs-var hs-var">tsWord8</span></a></span><span>                 </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-105"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word16 -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Word16
 </span><a href="Test.Cardano.Binary.Serialization.html#tsWord16"><span class="hs-identifier hs-var hs-var">tsWord16</span></a></span><span>                </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-106"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word32 -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Word32
 </span><a href="Test.Cardano.Binary.Serialization.html#tsWord32"><span class="hs-identifier hs-var hs-var">tsWord32</span></a></span><span>                </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-107"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Word64
 </span><a href="Test.Cardano.Binary.Serialization.html#tsWord64"><span class="hs-identifier hs-var hs-var">tsWord64</span></a></span><span>                </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-108"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Int
 </span><a href="Test.Cardano.Binary.Serialization.html#tsInt"><span class="hs-identifier hs-var hs-var">tsInt</span></a></span><span>                   </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-109"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Float -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Float
 </span><a href="Test.Cardano.Binary.Serialization.html#tsFloat"><span class="hs-identifier hs-var hs-var">tsFloat</span></a></span><span>                 </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-110"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int32 -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Int32
 </span><a href="Test.Cardano.Binary.Serialization.html#tsInt32"><span class="hs-identifier hs-var hs-var">tsInt32</span></a></span><span>                 </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-111"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int64 -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Int64
 </span><a href="Test.Cardano.Binary.Serialization.html#tsInt64"><span class="hs-identifier hs-var hs-var">tsInt64</span></a></span><span>                 </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-112"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">(Bool, Bool) -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; (Bool, Bool)
 </span><a href="Test.Cardano.Binary.Serialization.html#tsTupleBoolBool"><span class="hs-identifier hs-var hs-var">tsTupleBoolBool</span></a></span><span>         </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-113"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">(Bool, Bool, Bool) -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; (Bool, Bool, Bool)
 </span><a href="Test.Cardano.Binary.Serialization.html#tsTupleBoolBoolBool"><span class="hs-identifier hs-var hs-var">tsTupleBoolBoolBool</span></a></span><span>     </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-114"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">(Bool, Bool, Bool, Bool) -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; (Bool, Bool, Bool, Bool)
 </span><a href="Test.Cardano.Binary.Serialization.html#tsTupleBoolBoolBoolBool"><span class="hs-identifier hs-var hs-var">tsTupleBoolBoolBoolBool</span></a></span><span> </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-115"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; ByteString
 </span><a href="Test.Cardano.Binary.Serialization.html#tsByteString"><span class="hs-identifier hs-var hs-var">tsByteString</span></a></span><span>            </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-116"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Text
 </span><a href="Test.Cardano.Binary.Serialization.html#tsText"><span class="hs-identifier hs-var hs-var">tsText</span></a></span><span>                  </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-117"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[Bool] -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; [Bool]
 </span><a href="Test.Cardano.Binary.Serialization.html#tsListBool"><span class="hs-identifier hs-var hs-var">tsListBool</span></a></span><span>              </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-118"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Either Bool Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Either Bool Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsEitherBoolBool"><span class="hs-identifier hs-var hs-var">tsEitherBoolBool</span></a></span><span>        </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-119"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; NonEmpty Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsNonEmptyBool"><span class="hs-identifier hs-var hs-var">tsNonEmptyBool</span></a></span><span>          </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-120"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Maybe Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsMaybeBool"><span class="hs-identifier hs-var hs-var">tsMaybeBool</span></a></span><span>             </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-121"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Map Bool Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Map Bool Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsMapBoolBool"><span class="hs-identifier hs-var hs-var">tsMapBoolBool</span></a></span><span>           </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-122"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Set Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Set Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsSetBool"><span class="hs-identifier hs-var hs-var">tsSetBool</span></a></span><span>               </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-123"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Raw -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Raw
 </span><a href="Test.Cardano.Binary.Serialization.html#tsRaw"><span class="hs-identifier hs-var hs-var">tsRaw</span></a></span><span>                   </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-124"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Vector Bool -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; Vector Bool
 </span><a href="Test.Cardano.Binary.Serialization.html#tsVectorBool"><span class="hs-identifier hs-var hs-var">tsVectorBool</span></a></span><span>            </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-125"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; ByteString
 </span><a href="Test.Cardano.Binary.Serialization.html#tsLByteString"><span class="hs-identifier hs-var hs-var">tsLByteString</span></a></span><span>           </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-126"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ShortByteString -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; ShortByteString
 </span><a href="Test.Cardano.Binary.Serialization.html#tsSByteString"><span class="hs-identifier hs-var hs-var">tsSByteString</span></a></span><span>           </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-127"></span><span>    </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TestStruct -&gt; UTCTime
 </span><a href="Test.Cardano.Binary.Serialization.html#tsUTCTime"><span class="hs-identifier hs-var hs-var">tsUTCTime</span></a></span><span>               </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155114"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155123"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-128"></span><span>
-</span><span id="line-129"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679155109"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Binary.Serialization.html#TestStruct"><span class="hs-identifier hs-type">TestStruct</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-130"></span><span>  </span><span id="local-6989586621679155107"><span class="annot"><span class="annottext">fromCBOR :: Decoder s TestStruct
+</span><span id="line-129"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679155118"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Binary.Serialization.html#TestStruct"><span class="hs-identifier hs-type">TestStruct</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-130"></span><span>  </span><span id="local-6989586621679155116"><span class="annot"><span class="annottext">fromCBOR :: Decoder s TestStruct
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-131"></span><span>    </span><span class="annot"><span class="annottext">Int -&gt; Decoder s ()
 forall s. Int -&gt; Decoder s ()
@@ -2698,12 +2698,12 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 -&gt; GenT Identity DiffTime -&gt; GenT Identity UTCTime
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity DiffTime
-</span><a href="#local-6989586621679155102"><span class="hs-identifier hs-var">genDiffTimeOfDay</span></a></span><span>
+</span><a href="#local-6989586621679155111"><span class="hs-identifier hs-var">genDiffTimeOfDay</span></a></span><span>
 </span><span id="line-166"></span><span>  </span><span class="hs-keyword">where</span><span>
 </span><span id="line-167"></span><span>  </span><span class="hs-comment">-- UTC time takes a DiffTime s.t. 0 &lt;= t &lt; 86401s</span><span>
-</span><span id="line-168"></span><span>  </span><span class="annot"><a href="#local-6989586621679155102"><span class="hs-identifier hs-type">genDiffTimeOfDay</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">Time.DiffTime</span></a></span><span>
-</span><span id="line-169"></span><span>  </span><span id="local-6989586621679155102"><span class="annot"><span class="annottext">genDiffTimeOfDay :: GenT Identity DiffTime
-</span><a href="#local-6989586621679155102"><span class="hs-identifier hs-var hs-var">genDiffTimeOfDay</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; DiffTime
+</span><span id="line-168"></span><span>  </span><span class="annot"><a href="#local-6989586621679155111"><span class="hs-identifier hs-type">genDiffTimeOfDay</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">Time.DiffTime</span></a></span><span>
+</span><span id="line-169"></span><span>  </span><span id="local-6989586621679155111"><span class="annot"><span class="annottext">genDiffTimeOfDay :: GenT Identity DiffTime
+</span><a href="#local-6989586621679155111"><span class="hs-identifier hs-var hs-var">genDiffTimeOfDay</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; DiffTime
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">Time.picosecondsToDiffTime</span></a></span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; DiffTime)
 -&gt; GenT Identity Integer -&gt; GenT Identity DiffTime
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -2761,8 +2761,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-183"></span><span>  </span><span id="local-6989586621679155095"><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155095"><span class="hs-identifier hs-var">ts</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen TestStruct -&gt; PropertyT IO TestStruct
+</span><span id="line-183"></span><span>  </span><span id="local-6989586621679155104"><span class="annot"><span class="annottext">TestStruct
+</span><a href="#local-6989586621679155104"><span class="hs-identifier hs-var">ts</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen TestStruct -&gt; PropertyT IO TestStruct
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -2778,12 +2778,12 @@ forall a. ToCBOR a =&gt; a -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serialize'</span></a></span><span> </span><span class="annot"><span class="annottext">(TestStruct -&gt; TestStruct) -&gt; TestStruct -&gt; TestStruct
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155095"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TestStruct -&gt; TestStruct -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679155104"><span class="hs-identifier hs-var">ts</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TestStruct -&gt; TestStruct -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; a -&gt; m ()
 </span><a href="../../../../hedgehog/html/src"><span class="hs-operator hs-var">===</span></a></span><span> </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155095"><span class="hs-identifier hs-var">ts</span></a></span><span>
+</span><a href="#local-6989586621679155104"><span class="hs-identifier hs-var">ts</span></a></span><span>
 </span><span id="line-185"></span><span>
 </span><span id="line-186"></span><span class="annot"><a href="Test.Cardano.Binary.Serialization.html#prop_roundTripEncodeNestedCbor"><span class="hs-identifier hs-type">prop_roundTripEncodeNestedCbor</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
 </span><span id="line-187"></span><span id="prop_roundTripEncodeNestedCbor"><span class="annot"><span class="annottext">prop_roundTripEncodeNestedCbor :: Property
@@ -2792,15 +2792,15 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-188"></span><span>  </span><span id="local-6989586621679155089"><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155089"><span class="hs-identifier hs-var">ts</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen TestStruct -&gt; PropertyT IO TestStruct
+</span><span id="line-188"></span><span>  </span><span id="local-6989586621679155098"><span class="annot"><span class="annottext">TestStruct
+</span><a href="#local-6989586621679155098"><span class="hs-identifier hs-var">ts</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen TestStruct -&gt; PropertyT IO TestStruct
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen TestStruct
 </span><a href="Test.Cardano.Binary.Serialization.html#genTestStruct"><span class="hs-identifier hs-var">genTestStruct</span></a></span><span>
-</span><span id="line-189"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679155088"><span class="annot"><span class="annottext">encoded :: ByteString
-</span><a href="#local-6989586621679155088"><span class="hs-identifier hs-var hs-var">encoded</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
+</span><span id="line-189"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679155097"><span class="annot"><span class="annottext">encoded :: ByteString
+</span><a href="#local-6989586621679155097"><span class="hs-identifier hs-var hs-var">encoded</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serializeEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">(Encoding -&gt; ByteString)
 -&gt; (TestStruct -&gt; Encoding) -&gt; TestStruct -&gt; ByteString
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
@@ -2809,7 +2809,7 @@ forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">encodeNestedCbor</span></a></span><span> </span><span class="annot"><span class="annottext">(TestStruct -&gt; ByteString) -&gt; TestStruct -&gt; ByteString
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155089"><span class="hs-identifier hs-var">ts</span></a></span><span>
+</span><a href="#local-6989586621679155098"><span class="hs-identifier hs-var">ts</span></a></span><span>
 </span><span id="line-190"></span><span>  </span><span class="annot"><span class="annottext">Text
 -&gt; (forall s. Decoder s TestStruct)
 -&gt; ByteString
@@ -2821,7 +2821,7 @@ Text
 </span><span class="hs-string">&quot;&quot;</span></span><span> </span><span class="annot"><span class="annottext">forall s. Decoder s TestStruct
 forall a s. FromCBOR a =&gt; Decoder s a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">decodeNestedCbor</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679155088"><span class="hs-identifier hs-var">encoded</span></a></span><span> </span><span class="annot"><span class="annottext">Either DecoderError TestStruct
+</span><a href="#local-6989586621679155097"><span class="hs-identifier hs-var">encoded</span></a></span><span> </span><span class="annot"><span class="annottext">Either DecoderError TestStruct
 -&gt; Either DecoderError TestStruct -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
@@ -2829,7 +2829,7 @@ a -&gt; a -&gt; m ()
 </span><a href="../../../../hedgehog/html/src"><span class="hs-operator hs-var">===</span></a></span><span> </span><span class="annot"><span class="annottext">TestStruct -&gt; Either DecoderError TestStruct
 forall a b. b -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Right</span></a></span><span> </span><span class="annot"><span class="annottext">TestStruct
-</span><a href="#local-6989586621679155089"><span class="hs-identifier hs-var">ts</span></a></span><span>
+</span><a href="#local-6989586621679155098"><span class="hs-identifier hs-var">ts</span></a></span><span>
 </span><span id="line-191"></span><span>
 </span><span id="line-192"></span><span class="annot"><a href="Test.Cardano.Binary.Serialization.html#prop_decodeContainerSkelWithReplicate"><span class="hs-identifier hs-type">prop_decodeContainerSkelWithReplicate</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
 </span><span id="line-193"></span><span id="prop_decodeContainerSkelWithReplicate"><span class="annot"><span class="annottext">prop_decodeContainerSkelWithReplicate :: Property
@@ -2843,8 +2843,8 @@ forall (m :: * -&gt; *). (MonadTest m, HasCallStack) =&gt; Bool -&gt; m ()
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">assert</span></a></span><span> </span><span class="annot"><span class="annottext">(Bool -&gt; PropertyT IO ()) -&gt; Bool -&gt; PropertyT IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; Either DecoderError (Vector ())
-</span><a href="#local-6989586621679155082"><span class="hs-identifier hs-var">decode</span></a></span><span> </span><span class="annot"><span class="annottext">Encoding
-</span><a href="#local-6989586621679155081"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679155091"><span class="hs-identifier hs-var">decode</span></a></span><span> </span><span class="annot"><span class="annottext">Encoding
+</span><a href="#local-6989586621679155090"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-195"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span class="annot"><span class="annottext">Vector ()
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>
@@ -2852,17 +2852,17 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-identifier">_</span></span><span>       </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
 </span><span id="line-197"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-198"></span><span>    </span><span class="annot"><a href="#local-6989586621679155082"><span class="hs-identifier hs-type">decode</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cborg/html/src"><span class="hs-identifier hs-type">Encoding</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">DecoderError</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">V.Vector</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-199"></span><span>    </span><span id="local-6989586621679155082"><span class="annot"><span class="annottext">decode :: Encoding -&gt; Either DecoderError (Vector ())
-</span><a href="#local-6989586621679155082"><span class="hs-identifier hs-var hs-var">decode</span></a></span></span><span> </span><span id="local-6989586621679155080"><span class="annot"><span class="annottext">Encoding
-</span><a href="#local-6989586621679155080"><span class="hs-identifier hs-var">enc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Either DecoderError (Vector ())
+</span><span id="line-198"></span><span>    </span><span class="annot"><a href="#local-6989586621679155091"><span class="hs-identifier hs-type">decode</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cborg/html/src"><span class="hs-identifier hs-type">Encoding</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">DecoderError</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">V.Vector</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><span id="line-199"></span><span>    </span><span id="local-6989586621679155091"><span class="annot"><span class="annottext">decode :: Encoding -&gt; Either DecoderError (Vector ())
+</span><a href="#local-6989586621679155091"><span class="hs-identifier hs-var hs-var">decode</span></a></span></span><span> </span><span id="local-6989586621679155089"><span class="annot"><span class="annottext">Encoding
+</span><a href="#local-6989586621679155089"><span class="hs-identifier hs-var">enc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Either DecoderError (Vector ())
 forall a. FromCBOR a =&gt; ByteString -&gt; Either DecoderError a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">decodeFull</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Encoding -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serializeEncoding</span></a></span><span> </span><span class="annot"><span class="annottext">Encoding
-</span><a href="#local-6989586621679155080"><span class="hs-identifier hs-var">enc</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679155089"><span class="hs-identifier hs-var">enc</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-200"></span><span>
-</span><span id="line-201"></span><span>    </span><span id="local-6989586621679155081"><span class="annot"><span class="annottext">vec :: Encoding
-</span><a href="#local-6989586621679155081"><span class="hs-identifier hs-var hs-var">vec</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Encoding
+</span><span id="line-201"></span><span>    </span><span id="local-6989586621679155090"><span class="annot"><span class="annottext">vec :: Encoding
+</span><a href="#local-6989586621679155090"><span class="hs-identifier hs-var hs-var">vec</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word -&gt; Encoding
 </span><a href="../../../../cborg/html/src"><span class="hs-identifier hs-var">encodeListLen</span></a></span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">4097</span></span><span> </span><span class="annot"><span class="annottext">Encoding -&gt; Encoding -&gt; Encoding
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a

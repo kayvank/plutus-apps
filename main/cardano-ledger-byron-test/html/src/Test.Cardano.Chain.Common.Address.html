@@ -31,29 +31,29 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-22"></span><span>    </span><span id="local-6989586621679486082"><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679486082"><span class="hs-identifier hs-var">nm</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen NetworkMagic -&gt; PropertyT IO NetworkMagic
+</span><span id="line-22"></span><span>    </span><span id="local-6989586621679486315"><span class="annot"><span class="annottext">NetworkMagic
+</span><a href="#local-6989586621679486315"><span class="hs-identifier hs-var">nm</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen NetworkMagic -&gt; PropertyT IO NetworkMagic
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen NetworkMagic
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genNetworkMagic"><span class="hs-identifier hs-var">genNetworkMagic</span></a></span><span>
-</span><span id="line-23"></span><span>    </span><span id="local-6989586621679486081"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679486081"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Address -&gt; PropertyT IO Address
+</span><span id="line-23"></span><span>    </span><span id="local-6989586621679486314"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679486314"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Address -&gt; PropertyT IO Address
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">NetworkMagic -&gt; Gen Address
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genAddressWithNM"><span class="hs-identifier hs-var">genAddressWithNM</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679486082"><span class="hs-identifier hs-var">nm</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679486315"><span class="hs-identifier hs-var">nm</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-24"></span><span>    </span><span class="annot"><span class="annottext">NetworkMagic
-</span><a href="#local-6989586621679486082"><span class="hs-identifier hs-var">nm</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic -&gt; NetworkMagic -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679486315"><span class="hs-identifier hs-var">nm</span></a></span><span> </span><span class="annot"><span class="annottext">NetworkMagic -&gt; NetworkMagic -&gt; PropertyT IO ()
 forall (m :: * -&gt; *) a.
 (MonadTest m, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; a -&gt; m ()
 </span><a href="../../../../hedgehog/html/src"><span class="hs-operator hs-var">===</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; NetworkMagic
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">addrNetworkMagic</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679486081"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621679486314"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-25"></span><span>
 </span><span id="line-26"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Address.html#ts_prop_isRedeemAddress"><span class="hs-identifier hs-type">ts_prop_isRedeemAddress</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
 </span><span id="line-27"></span><span id="ts_prop_isRedeemAddress"><span class="annot"><span class="annottext">ts_prop_isRedeemAddress :: TSProperty
@@ -70,8 +70,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-29"></span><span>    </span><span id="local-6989586621679486079"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679486079"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Address -&gt; PropertyT IO Address
+</span><span id="line-29"></span><span>    </span><span id="local-6989586621679486312"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679486312"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Address -&gt; PropertyT IO Address
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -87,7 +87,7 @@ CoverPercentage -&gt; LabelName -&gt; Bool -&gt; m ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; Bool
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">isRedeemAddress</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679486079"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621679486312"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-31"></span><span>    </span><span class="annot"><span class="annottext">CoverPercentage -&gt; LabelName -&gt; Bool -&gt; PropertyT IO ()
 forall (m :: * -&gt; *).
 (MonadTest m, HasCallStack) =&gt;
@@ -99,7 +99,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">not</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Address -&gt; Bool
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">isRedeemAddress</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679486079"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679486312"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-32"></span><span>
 </span><span id="line-33"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Address.html#tests"><span class="hs-identifier hs-type">tests</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSGroup"><span class="hs-identifier hs-type">TSGroup</span></a></span><span>
 </span><span id="line-34"></span><span id="tests"><span class="annot"><span class="annottext">tests :: TSGroup

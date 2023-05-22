@@ -29,7 +29,7 @@
 </span><span id="line-29"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.html"><span class="hs-identifier">Blockfrost.Types.Shared</span></a></span><span>
 </span><span id="line-30"></span><span>
 </span><span id="line-31"></span><span class="hs-comment">-- | Information about a transaction</span><span>
-</span><span id="line-32"></span><span id="local-6989586621681200391"><span id="local-6989586621681200392"></span></span><span class="hs-keyword">data</span><span> </span><span id="Transaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Transaction"><span class="hs-identifier hs-var">Transaction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Transaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Transaction"><span class="hs-identifier hs-var">Transaction</span></a></span></span><span>
+</span><span id="line-32"></span><span id="local-6989586621681200398"><span id="local-6989586621681200399"></span></span><span class="hs-keyword">data</span><span> </span><span id="Transaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Transaction"><span class="hs-identifier hs-var">Transaction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Transaction"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Transaction"><span class="hs-identifier hs-var">Transaction</span></a></span></span><span>
 </span><span id="line-33"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionHash"><span class="annot"><span class="annottext">Transaction -&gt; Text
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionHash"><span class="hs-identifier hs-var hs-var">_transactionHash</span></a></span></span><span>                 </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Transaction hash</span><span>
 </span><span id="line-34"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionBlock"><span class="annot"><span class="annottext">Transaction -&gt; BlockHash
@@ -73,7 +73,7 @@
 </span><span id="line-53"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionValidContract"><span class="annot"><span class="annottext">Transaction -&gt; Bool
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionValidContract"><span class="hs-identifier hs-var hs-var">_transactionValidContract</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>    </span><span class="hs-comment">-- ^ True if this is a valid transaction, False in case of contract validation failure</span><span>
 </span><span id="line-54"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-55"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200363"><span id="local-6989586621681200365"><span id="local-6989586621681200367"><span class="annot"><span class="annottext">Int -&gt; Transaction -&gt; ShowS
+</span><span id="line-55"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200370"><span id="local-6989586621681200372"><span id="local-6989586621681200374"><span class="annot"><span class="annottext">Int -&gt; Transaction -&gt; ShowS
 [Transaction] -&gt; ShowS
 Transaction -&gt; String
 (Int -&gt; Transaction -&gt; ShowS)
@@ -88,7 +88,7 @@ show :: Transaction -&gt; String
 $cshow :: Transaction -&gt; String
 showsPrec :: Int -&gt; Transaction -&gt; ShowS
 $cshowsPrec :: Int -&gt; Transaction -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200358"><span id="local-6989586621681200360"><span class="annot"><span class="annottext">Transaction -&gt; Transaction -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200365"><span id="local-6989586621681200367"><span class="annot"><span class="annottext">Transaction -&gt; Transaction -&gt; Bool
 (Transaction -&gt; Transaction -&gt; Bool)
 -&gt; (Transaction -&gt; Transaction -&gt; Bool) -&gt; Eq Transaction
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -106,7 +106,7 @@ forall a.
 $cto :: forall x. Rep Transaction x -&gt; Transaction
 $cfrom :: forall x. Transaction -&gt; Rep Transaction x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-56"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200350"><span id="local-6989586621681200352"><span class="annot"><span class="annottext">Value -&gt; Parser [Transaction]
+</span><span id="line-56"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200357"><span id="local-6989586621681200359"><span class="annot"><span class="annottext">Value -&gt; Parser [Transaction]
 Value -&gt; Parser Transaction
 (Value -&gt; Parser Transaction)
 -&gt; (Value -&gt; Parser [Transaction]) -&gt; FromJSON Transaction
@@ -116,7 +116,7 @@ parseJSONList :: Value -&gt; Parser [Transaction]
 $cparseJSONList :: Value -&gt; Parser [Transaction]
 parseJSON :: Value -&gt; Parser Transaction
 $cparseJSON :: Value -&gt; Parser Transaction
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200341"><span id="local-6989586621681200343"><span id="local-6989586621681200345"><span id="local-6989586621681200347"><span class="annot"><span class="annottext">[Transaction] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200348"><span id="local-6989586621681200350"><span id="local-6989586621681200352"><span id="local-6989586621681200354"><span class="annot"><span class="annottext">[Transaction] -&gt; Encoding
 [Transaction] -&gt; Value
 Transaction -&gt; Encoding
 Transaction -&gt; Value
@@ -143,7 +143,7 @@ $ctoJSON :: Transaction -&gt; Value
 </span><span id="line-57"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transaction&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Transaction"><span class="hs-identifier hs-type">Transaction</span></a></span><span>
 </span><span id="line-58"></span><span>
 </span><span id="line-59"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Transaction"><span class="hs-identifier hs-type">Transaction</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-60"></span><span>  </span><span id="local-6989586621681200333"><span class="annot"><span class="annottext">toSamples :: Proxy Transaction -&gt; [(Text, Transaction)]
+</span><span id="line-60"></span><span>  </span><span id="local-6989586621681200340"><span class="annot"><span class="annottext">toSamples :: Proxy Transaction -&gt; [(Text, Transaction)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, Transaction)] -&gt; Proxy Transaction -&gt; [(Text, Transaction)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, Transaction)]
@@ -247,7 +247,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-83"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-84"></span><span>
 </span><span id="line-85"></span><span class="hs-comment">-- | Transaction input UTxO</span><span>
-</span><span id="line-86"></span><span id="local-6989586621681200329"><span id="local-6989586621681200330"></span></span><span class="hs-keyword">data</span><span> </span><span id="UtxoInput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoInput"><span class="hs-identifier hs-var">UtxoInput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="UtxoInput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoInput"><span class="hs-identifier hs-var">UtxoInput</span></a></span></span><span>
+</span><span id="line-86"></span><span id="local-6989586621681200336"><span id="local-6989586621681200337"></span></span><span class="hs-keyword">data</span><span> </span><span id="UtxoInput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoInput"><span class="hs-identifier hs-var">UtxoInput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="UtxoInput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoInput"><span class="hs-identifier hs-var">UtxoInput</span></a></span></span><span>
 </span><span id="line-87"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_utxoInputAddress"><span class="annot"><span class="annottext">UtxoInput -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_utxoInputAddress"><span class="hs-identifier hs-var hs-var">_utxoInputAddress</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Input address</span><span>
 </span><span id="line-88"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_utxoInputAmount"><span class="annot"><span class="annottext">UtxoInput -&gt; [Amount]
@@ -261,7 +261,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-92"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_utxoInputDataHash"><span class="annot"><span class="annottext">UtxoInput -&gt; Maybe DatumHash
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_utxoInputDataHash"><span class="hs-identifier hs-var hs-var">_utxoInputDataHash</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span><span> </span><span class="hs-comment">-- ^ The hash of the transaction output datum</span><span>
 </span><span id="line-93"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-94"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200316"><span id="local-6989586621681200318"><span id="local-6989586621681200320"><span class="annot"><span class="annottext">Int -&gt; UtxoInput -&gt; ShowS
+</span><span id="line-94"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200323"><span id="local-6989586621681200325"><span id="local-6989586621681200327"><span class="annot"><span class="annottext">Int -&gt; UtxoInput -&gt; ShowS
 [UtxoInput] -&gt; ShowS
 UtxoInput -&gt; String
 (Int -&gt; UtxoInput -&gt; ShowS)
@@ -276,7 +276,7 @@ show :: UtxoInput -&gt; String
 $cshow :: UtxoInput -&gt; String
 showsPrec :: Int -&gt; UtxoInput -&gt; ShowS
 $cshowsPrec :: Int -&gt; UtxoInput -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200312"><span id="local-6989586621681200314"><span class="annot"><span class="annottext">UtxoInput -&gt; UtxoInput -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200319"><span id="local-6989586621681200321"><span class="annot"><span class="annottext">UtxoInput -&gt; UtxoInput -&gt; Bool
 (UtxoInput -&gt; UtxoInput -&gt; Bool)
 -&gt; (UtxoInput -&gt; UtxoInput -&gt; Bool) -&gt; Eq UtxoInput
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -293,7 +293,7 @@ forall a.
 $cto :: forall x. Rep UtxoInput x -&gt; UtxoInput
 $cfrom :: forall x. UtxoInput -&gt; Rep UtxoInput x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-95"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200306"><span id="local-6989586621681200308"><span class="annot"><span class="annottext">Value -&gt; Parser [UtxoInput]
+</span><span id="line-95"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200313"><span id="local-6989586621681200315"><span class="annot"><span class="annottext">Value -&gt; Parser [UtxoInput]
 Value -&gt; Parser UtxoInput
 (Value -&gt; Parser UtxoInput)
 -&gt; (Value -&gt; Parser [UtxoInput]) -&gt; FromJSON UtxoInput
@@ -303,7 +303,7 @@ parseJSONList :: Value -&gt; Parser [UtxoInput]
 $cparseJSONList :: Value -&gt; Parser [UtxoInput]
 parseJSON :: Value -&gt; Parser UtxoInput
 $cparseJSON :: Value -&gt; Parser UtxoInput
-</span><a href="#local-6989586621681200306"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200298"><span id="local-6989586621681200300"><span id="local-6989586621681200302"><span id="local-6989586621681200304"><span class="annot"><span class="annottext">[UtxoInput] -&gt; Encoding
+</span><a href="#local-6989586621681200313"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200305"><span id="local-6989586621681200307"><span id="local-6989586621681200309"><span id="local-6989586621681200311"><span class="annot"><span class="annottext">[UtxoInput] -&gt; Encoding
 [UtxoInput] -&gt; Value
 UtxoInput -&gt; Encoding
 UtxoInput -&gt; Value
@@ -326,12 +326,12 @@ toEncoding :: UtxoInput -&gt; Encoding
 $ctoEncoding :: UtxoInput -&gt; Encoding
 toJSON :: UtxoInput -&gt; Value
 $ctoJSON :: UtxoInput -&gt; Value
-</span><a href="#local-6989586621681200298"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200305"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-96"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_utxoInput&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoInput"><span class="hs-identifier hs-type">UtxoInput</span></a></span><span>
 </span><span id="line-97"></span><span>
 </span><span id="line-98"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoInput"><span class="hs-identifier hs-type">UtxoInput</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-99"></span><span>  </span><span id="local-6989586621681200296"><span class="annot"><span class="annottext">toSamples :: Proxy UtxoInput -&gt; [(Text, UtxoInput)]
-</span><a href="#local-6989586621681200296"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, UtxoInput)] -&gt; Proxy UtxoInput -&gt; [(Text, UtxoInput)]
+</span><span id="line-99"></span><span>  </span><span id="local-6989586621681200303"><span class="annot"><span class="annottext">toSamples :: Proxy UtxoInput -&gt; [(Text, UtxoInput)]
+</span><a href="#local-6989586621681200303"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, UtxoInput)] -&gt; Proxy UtxoInput -&gt; [(Text, UtxoInput)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, UtxoInput)] -&gt; Proxy UtxoInput -&gt; [(Text, UtxoInput)])
 -&gt; [(Text, UtxoInput)] -&gt; Proxy UtxoInput -&gt; [(Text, UtxoInput)]
@@ -375,7 +375,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-110"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-111"></span><span>
 </span><span id="line-112"></span><span class="hs-comment">-- | Transaction output UTxO</span><span>
-</span><span id="line-113"></span><span id="local-6989586621681200293"><span id="local-6989586621681200294"></span></span><span class="hs-keyword">data</span><span> </span><span id="UtxoOutput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-var">UtxoOutput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="UtxoOutput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-var">UtxoOutput</span></a></span></span><span>
+</span><span id="line-113"></span><span id="local-6989586621681200300"><span id="local-6989586621681200301"></span></span><span class="hs-keyword">data</span><span> </span><span id="UtxoOutput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-var">UtxoOutput</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="UtxoOutput"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-var">UtxoOutput</span></a></span></span><span>
 </span><span id="line-114"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_utxoOutputAddress"><span class="annot"><span class="annottext">UtxoOutput -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_utxoOutputAddress"><span class="hs-identifier hs-var hs-var">_utxoOutputAddress</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Output address</span><span>
 </span><span id="line-115"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_utxoOutputAmount"><span class="annot"><span class="annottext">UtxoOutput -&gt; [Amount]
@@ -384,7 +384,7 @@ forall a. a -&gt; Maybe a
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_utxoOutputDataHash"><span class="hs-identifier hs-var hs-var">_utxoOutputDataHash</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.DatumHash.html#DatumHash"><span class="hs-identifier hs-type">DatumHash</span></a></span><span> </span><span class="hs-comment">-- ^ The hash of the transaction output datum</span><span>
 </span><span id="line-117"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_utxoOutputOutputIndex"><span class="annot"><span class="annottext">UtxoOutput -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_utxoOutputOutputIndex"><span class="hs-identifier hs-var hs-var">_utxoOutputOutputIndex</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ UTXO index in the transaction</span><span>
-</span><span id="line-118"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200282"><span id="local-6989586621681200284"><span id="local-6989586621681200286"><span class="annot"><span class="annottext">Int -&gt; UtxoOutput -&gt; ShowS
+</span><span id="line-118"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200289"><span id="local-6989586621681200291"><span id="local-6989586621681200293"><span class="annot"><span class="annottext">Int -&gt; UtxoOutput -&gt; ShowS
 [UtxoOutput] -&gt; ShowS
 UtxoOutput -&gt; String
 (Int -&gt; UtxoOutput -&gt; ShowS)
@@ -399,7 +399,7 @@ show :: UtxoOutput -&gt; String
 $cshow :: UtxoOutput -&gt; String
 showsPrec :: Int -&gt; UtxoOutput -&gt; ShowS
 $cshowsPrec :: Int -&gt; UtxoOutput -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200278"><span id="local-6989586621681200280"><span class="annot"><span class="annottext">UtxoOutput -&gt; UtxoOutput -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200285"><span id="local-6989586621681200287"><span class="annot"><span class="annottext">UtxoOutput -&gt; UtxoOutput -&gt; Bool
 (UtxoOutput -&gt; UtxoOutput -&gt; Bool)
 -&gt; (UtxoOutput -&gt; UtxoOutput -&gt; Bool) -&gt; Eq UtxoOutput
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -416,7 +416,7 @@ forall a.
 $cto :: forall x. Rep UtxoOutput x -&gt; UtxoOutput
 $cfrom :: forall x. UtxoOutput -&gt; Rep UtxoOutput x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-119"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200272"><span id="local-6989586621681200274"><span class="annot"><span class="annottext">Value -&gt; Parser [UtxoOutput]
+</span><span id="line-119"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200279"><span id="local-6989586621681200281"><span class="annot"><span class="annottext">Value -&gt; Parser [UtxoOutput]
 Value -&gt; Parser UtxoOutput
 (Value -&gt; Parser UtxoOutput)
 -&gt; (Value -&gt; Parser [UtxoOutput]) -&gt; FromJSON UtxoOutput
@@ -426,7 +426,7 @@ parseJSONList :: Value -&gt; Parser [UtxoOutput]
 $cparseJSONList :: Value -&gt; Parser [UtxoOutput]
 parseJSON :: Value -&gt; Parser UtxoOutput
 $cparseJSON :: Value -&gt; Parser UtxoOutput
-</span><a href="#local-6989586621681200272"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200264"><span id="local-6989586621681200266"><span id="local-6989586621681200268"><span id="local-6989586621681200270"><span class="annot"><span class="annottext">[UtxoOutput] -&gt; Encoding
+</span><a href="#local-6989586621681200279"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200271"><span id="local-6989586621681200273"><span id="local-6989586621681200275"><span id="local-6989586621681200277"><span class="annot"><span class="annottext">[UtxoOutput] -&gt; Encoding
 [UtxoOutput] -&gt; Value
 UtxoOutput -&gt; Encoding
 UtxoOutput -&gt; Value
@@ -449,12 +449,12 @@ toEncoding :: UtxoOutput -&gt; Encoding
 $ctoEncoding :: UtxoOutput -&gt; Encoding
 toJSON :: UtxoOutput -&gt; Value
 $ctoJSON :: UtxoOutput -&gt; Value
-</span><a href="#local-6989586621681200264"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200271"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-120"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_utxoOutput&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-type">UtxoOutput</span></a></span><span>
 </span><span id="line-121"></span><span>
 </span><span id="line-122"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-type">UtxoOutput</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-123"></span><span>  </span><span id="local-6989586621681200262"><span class="annot"><span class="annottext">toSamples :: Proxy UtxoOutput -&gt; [(Text, UtxoOutput)]
-</span><a href="#local-6989586621681200262"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, UtxoOutput)] -&gt; Proxy UtxoOutput -&gt; [(Text, UtxoOutput)]
+</span><span id="line-123"></span><span>  </span><span id="local-6989586621681200269"><span class="annot"><span class="annottext">toSamples :: Proxy UtxoOutput -&gt; [(Text, UtxoOutput)]
+</span><a href="#local-6989586621681200269"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, UtxoOutput)] -&gt; Proxy UtxoOutput -&gt; [(Text, UtxoOutput)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, UtxoOutput)] -&gt; Proxy UtxoOutput -&gt; [(Text, UtxoOutput)])
 -&gt; [(Text, UtxoOutput)] -&gt; Proxy UtxoOutput -&gt; [(Text, UtxoOutput)]
@@ -486,7 +486,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-132"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-133"></span><span>
 </span><span id="line-134"></span><span class="hs-comment">-- | Transaction UTxOs</span><span>
-</span><span id="line-135"></span><span id="local-6989586621681200259"><span id="local-6989586621681200260"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionUtxos"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionUtxos"><span class="hs-identifier hs-var">TransactionUtxos</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionUtxos"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionUtxos"><span class="hs-identifier hs-var">TransactionUtxos</span></a></span></span><span>
+</span><span id="line-135"></span><span id="local-6989586621681200266"><span id="local-6989586621681200267"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionUtxos"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionUtxos"><span class="hs-identifier hs-var">TransactionUtxos</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionUtxos"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionUtxos"><span class="hs-identifier hs-var">TransactionUtxos</span></a></span></span><span>
 </span><span id="line-136"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionUtxosHash"><span class="annot"><span class="annottext">TransactionUtxos -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionUtxosHash"><span class="hs-identifier hs-var hs-var">_transactionUtxosHash</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Transaction hash</span><span>
 </span><span id="line-137"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionUtxosInputs"><span class="annot"><span class="annottext">TransactionUtxos -&gt; [UtxoInput]
@@ -494,7 +494,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-138"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionUtxosOutputs"><span class="annot"><span class="annottext">TransactionUtxos -&gt; [UtxoOutput]
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionUtxosOutputs"><span class="hs-identifier hs-var hs-var">_transactionUtxosOutputs</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#UtxoOutput"><span class="hs-identifier hs-type">UtxoOutput</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-comment">-- ^ Transaction outputs</span><span>
 </span><span id="line-139"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-140"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200249"><span id="local-6989586621681200251"><span id="local-6989586621681200253"><span class="annot"><span class="annottext">Int -&gt; TransactionUtxos -&gt; ShowS
+</span><span id="line-140"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200256"><span id="local-6989586621681200258"><span id="local-6989586621681200260"><span class="annot"><span class="annottext">Int -&gt; TransactionUtxos -&gt; ShowS
 [TransactionUtxos] -&gt; ShowS
 TransactionUtxos -&gt; String
 (Int -&gt; TransactionUtxos -&gt; ShowS)
@@ -509,7 +509,7 @@ show :: TransactionUtxos -&gt; String
 $cshow :: TransactionUtxos -&gt; String
 showsPrec :: Int -&gt; TransactionUtxos -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionUtxos -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200245"><span id="local-6989586621681200247"><span class="annot"><span class="annottext">TransactionUtxos -&gt; TransactionUtxos -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200252"><span id="local-6989586621681200254"><span class="annot"><span class="annottext">TransactionUtxos -&gt; TransactionUtxos -&gt; Bool
 (TransactionUtxos -&gt; TransactionUtxos -&gt; Bool)
 -&gt; (TransactionUtxos -&gt; TransactionUtxos -&gt; Bool)
 -&gt; Eq TransactionUtxos
@@ -528,7 +528,7 @@ forall a.
 $cto :: forall x. Rep TransactionUtxos x -&gt; TransactionUtxos
 $cfrom :: forall x. TransactionUtxos -&gt; Rep TransactionUtxos x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-141"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200239"><span id="local-6989586621681200241"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionUtxos]
+</span><span id="line-141"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200246"><span id="local-6989586621681200248"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionUtxos]
 Value -&gt; Parser TransactionUtxos
 (Value -&gt; Parser TransactionUtxos)
 -&gt; (Value -&gt; Parser [TransactionUtxos])
@@ -539,7 +539,7 @@ parseJSONList :: Value -&gt; Parser [TransactionUtxos]
 $cparseJSONList :: Value -&gt; Parser [TransactionUtxos]
 parseJSON :: Value -&gt; Parser TransactionUtxos
 $cparseJSON :: Value -&gt; Parser TransactionUtxos
-</span><a href="#local-6989586621681200239"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200231"><span id="local-6989586621681200233"><span id="local-6989586621681200235"><span id="local-6989586621681200237"><span class="annot"><span class="annottext">[TransactionUtxos] -&gt; Encoding
+</span><a href="#local-6989586621681200246"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200238"><span id="local-6989586621681200240"><span id="local-6989586621681200242"><span id="local-6989586621681200244"><span class="annot"><span class="annottext">[TransactionUtxos] -&gt; Encoding
 [TransactionUtxos] -&gt; Value
 TransactionUtxos -&gt; Encoding
 TransactionUtxos -&gt; Value
@@ -562,12 +562,12 @@ toEncoding :: TransactionUtxos -&gt; Encoding
 $ctoEncoding :: TransactionUtxos -&gt; Encoding
 toJSON :: TransactionUtxos -&gt; Value
 $ctoJSON :: TransactionUtxos -&gt; Value
-</span><a href="#local-6989586621681200231"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200238"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-142"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionUtxos&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionUtxos"><span class="hs-identifier hs-type">TransactionUtxos</span></a></span><span>
 </span><span id="line-143"></span><span>
 </span><span id="line-144"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionUtxos"><span class="hs-identifier hs-type">TransactionUtxos</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-145"></span><span>  </span><span id="local-6989586621681200229"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionUtxos -&gt; [(Text, TransactionUtxos)]
-</span><a href="#local-6989586621681200229"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionUtxos)]
+</span><span id="line-145"></span><span>  </span><span id="local-6989586621681200236"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionUtxos -&gt; [(Text, TransactionUtxos)]
+</span><a href="#local-6989586621681200236"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionUtxos)]
 -&gt; Proxy TransactionUtxos -&gt; [(Text, TransactionUtxos)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionUtxos)]
@@ -617,8 +617,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-160"></span><span>  </span><span class="hs-special">]</span><span>
 </span><span id="line-161"></span><span>
 </span><span id="line-162"></span><span class="hs-comment">-- | Validation purpose</span><span>
-</span><span id="line-163"></span><span id="local-6989586621681200223"><span id="local-6989586621681200224"></span></span><span class="hs-keyword">data</span><span> </span><span id="ValidationPurpose"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#ValidationPurpose"><span class="hs-identifier hs-var">ValidationPurpose</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Spend"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Spend"><span class="hs-identifier hs-var">Spend</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Mint"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Mint"><span class="hs-identifier hs-var">Mint</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Cert"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Cert"><span class="hs-identifier hs-var">Cert</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Reward"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Reward"><span class="hs-identifier hs-var">Reward</span></a></span></span><span>
-</span><span id="line-164"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200213"><span id="local-6989586621681200215"><span id="local-6989586621681200217"><span class="annot"><span class="annottext">Int -&gt; ValidationPurpose -&gt; ShowS
+</span><span id="line-163"></span><span id="local-6989586621681200230"><span id="local-6989586621681200231"></span></span><span class="hs-keyword">data</span><span> </span><span id="ValidationPurpose"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#ValidationPurpose"><span class="hs-identifier hs-var">ValidationPurpose</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Spend"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Spend"><span class="hs-identifier hs-var">Spend</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Mint"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Mint"><span class="hs-identifier hs-var">Mint</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Cert"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Cert"><span class="hs-identifier hs-var">Cert</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Reward"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Reward"><span class="hs-identifier hs-var">Reward</span></a></span></span><span>
+</span><span id="line-164"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200220"><span id="local-6989586621681200222"><span id="local-6989586621681200224"><span class="annot"><span class="annottext">Int -&gt; ValidationPurpose -&gt; ShowS
 [ValidationPurpose] -&gt; ShowS
 ValidationPurpose -&gt; String
 (Int -&gt; ValidationPurpose -&gt; ShowS)
@@ -633,7 +633,7 @@ show :: ValidationPurpose -&gt; String
 $cshow :: ValidationPurpose -&gt; String
 showsPrec :: Int -&gt; ValidationPurpose -&gt; ShowS
 $cshowsPrec :: Int -&gt; ValidationPurpose -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200209"><span id="local-6989586621681200211"><span class="annot"><span class="annottext">ValidationPurpose -&gt; ValidationPurpose -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200216"><span id="local-6989586621681200218"><span class="annot"><span class="annottext">ValidationPurpose -&gt; ValidationPurpose -&gt; Bool
 (ValidationPurpose -&gt; ValidationPurpose -&gt; Bool)
 -&gt; (ValidationPurpose -&gt; ValidationPurpose -&gt; Bool)
 -&gt; Eq ValidationPurpose
@@ -652,7 +652,7 @@ forall a.
 $cto :: forall x. Rep ValidationPurpose x -&gt; ValidationPurpose
 $cfrom :: forall x. ValidationPurpose -&gt; Rep ValidationPurpose x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-165"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200203"><span id="local-6989586621681200205"><span class="annot"><span class="annottext">Value -&gt; Parser [ValidationPurpose]
+</span><span id="line-165"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200210"><span id="local-6989586621681200212"><span class="annot"><span class="annottext">Value -&gt; Parser [ValidationPurpose]
 Value -&gt; Parser ValidationPurpose
 (Value -&gt; Parser ValidationPurpose)
 -&gt; (Value -&gt; Parser [ValidationPurpose])
@@ -663,7 +663,7 @@ parseJSONList :: Value -&gt; Parser [ValidationPurpose]
 $cparseJSONList :: Value -&gt; Parser [ValidationPurpose]
 parseJSON :: Value -&gt; Parser ValidationPurpose
 $cparseJSON :: Value -&gt; Parser ValidationPurpose
-</span><a href="#local-6989586621681200203"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200195"><span id="local-6989586621681200197"><span id="local-6989586621681200199"><span id="local-6989586621681200201"><span class="annot"><span class="annottext">[ValidationPurpose] -&gt; Encoding
+</span><a href="#local-6989586621681200210"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200202"><span id="local-6989586621681200204"><span id="local-6989586621681200206"><span id="local-6989586621681200208"><span class="annot"><span class="annottext">[ValidationPurpose] -&gt; Encoding
 [ValidationPurpose] -&gt; Value
 ValidationPurpose -&gt; Encoding
 ValidationPurpose -&gt; Value
@@ -686,12 +686,12 @@ toEncoding :: ValidationPurpose -&gt; Encoding
 $ctoEncoding :: ValidationPurpose -&gt; Encoding
 toJSON :: ValidationPurpose -&gt; Value
 $ctoJSON :: ValidationPurpose -&gt; Value
-</span><a href="#local-6989586621681200195"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200202"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-166"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">ConstructorTagModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.Opts.html#ToLower"><span class="hs-identifier hs-type">ToLower</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#ValidationPurpose"><span class="hs-identifier hs-type">ValidationPurpose</span></a></span><span>
 </span><span id="line-167"></span><span>
 </span><span id="line-168"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#ValidationPurpose"><span class="hs-identifier hs-type">ValidationPurpose</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-169"></span><span>  </span><span id="local-6989586621681200191"><span class="annot"><span class="annottext">toSamples :: Proxy ValidationPurpose -&gt; [(Text, ValidationPurpose)]
-</span><a href="#local-6989586621681200191"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, ValidationPurpose)]
+</span><span id="line-169"></span><span>  </span><span id="local-6989586621681200198"><span class="annot"><span class="annottext">toSamples :: Proxy ValidationPurpose -&gt; [(Text, ValidationPurpose)]
+</span><a href="#local-6989586621681200198"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, ValidationPurpose)]
 -&gt; Proxy ValidationPurpose -&gt; [(Text, ValidationPurpose)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, ValidationPurpose)]
@@ -709,7 +709,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#Reward"><span class="hs-identifier hs-var">Reward</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-170"></span><span>
 </span><span id="line-171"></span><span class="hs-comment">-- | Transaction redeemer</span><span>
-</span><span id="line-172"></span><span id="local-6989586621681200189"><span id="local-6989586621681200190"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionRedeemer"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionRedeemer"><span class="hs-identifier hs-var">TransactionRedeemer</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionRedeemer"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionRedeemer"><span class="hs-identifier hs-var">TransactionRedeemer</span></a></span></span><span>
+</span><span id="line-172"></span><span id="local-6989586621681200196"><span id="local-6989586621681200197"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionRedeemer"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionRedeemer"><span class="hs-identifier hs-var">TransactionRedeemer</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionRedeemer"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionRedeemer"><span class="hs-identifier hs-var">TransactionRedeemer</span></a></span></span><span>
 </span><span id="line-173"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionRedeemerTxIndex"><span class="annot"><span class="annottext">TransactionRedeemer -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionRedeemerTxIndex"><span class="hs-identifier hs-var hs-var">_transactionRedeemerTxIndex</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Index of the redeemer within a transaction</span><span>
 </span><span id="line-174"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionRedeemerPurpose"><span class="annot"><span class="annottext">TransactionRedeemer -&gt; ValidationPurpose
@@ -725,7 +725,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-179"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionRedeemerFee"><span class="annot"><span class="annottext">TransactionRedeemer -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionRedeemerFee"><span class="hs-identifier hs-var hs-var">_transactionRedeemerFee</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ The fee consumed to run the script</span><span>
 </span><span id="line-180"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-181"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200175"><span id="local-6989586621681200177"><span id="local-6989586621681200179"><span class="annot"><span class="annottext">Int -&gt; TransactionRedeemer -&gt; ShowS
+</span><span id="line-181"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200182"><span id="local-6989586621681200184"><span id="local-6989586621681200186"><span class="annot"><span class="annottext">Int -&gt; TransactionRedeemer -&gt; ShowS
 [TransactionRedeemer] -&gt; ShowS
 TransactionRedeemer -&gt; String
 (Int -&gt; TransactionRedeemer -&gt; ShowS)
@@ -740,7 +740,7 @@ show :: TransactionRedeemer -&gt; String
 $cshow :: TransactionRedeemer -&gt; String
 showsPrec :: Int -&gt; TransactionRedeemer -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionRedeemer -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200171"><span id="local-6989586621681200173"><span class="annot"><span class="annottext">TransactionRedeemer -&gt; TransactionRedeemer -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200178"><span id="local-6989586621681200180"><span class="annot"><span class="annottext">TransactionRedeemer -&gt; TransactionRedeemer -&gt; Bool
 (TransactionRedeemer -&gt; TransactionRedeemer -&gt; Bool)
 -&gt; (TransactionRedeemer -&gt; TransactionRedeemer -&gt; Bool)
 -&gt; Eq TransactionRedeemer
@@ -759,7 +759,7 @@ forall a.
 $cto :: forall x. Rep TransactionRedeemer x -&gt; TransactionRedeemer
 $cfrom :: forall x. TransactionRedeemer -&gt; Rep TransactionRedeemer x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-182"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200165"><span id="local-6989586621681200167"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionRedeemer]
+</span><span id="line-182"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200172"><span id="local-6989586621681200174"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionRedeemer]
 Value -&gt; Parser TransactionRedeemer
 (Value -&gt; Parser TransactionRedeemer)
 -&gt; (Value -&gt; Parser [TransactionRedeemer])
@@ -770,7 +770,7 @@ parseJSONList :: Value -&gt; Parser [TransactionRedeemer]
 $cparseJSONList :: Value -&gt; Parser [TransactionRedeemer]
 parseJSON :: Value -&gt; Parser TransactionRedeemer
 $cparseJSON :: Value -&gt; Parser TransactionRedeemer
-</span><a href="#local-6989586621681200165"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200157"><span id="local-6989586621681200159"><span id="local-6989586621681200161"><span id="local-6989586621681200163"><span class="annot"><span class="annottext">[TransactionRedeemer] -&gt; Encoding
+</span><a href="#local-6989586621681200172"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200164"><span id="local-6989586621681200166"><span id="local-6989586621681200168"><span id="local-6989586621681200170"><span class="annot"><span class="annottext">[TransactionRedeemer] -&gt; Encoding
 [TransactionRedeemer] -&gt; Value
 TransactionRedeemer -&gt; Encoding
 TransactionRedeemer -&gt; Value
@@ -793,12 +793,12 @@ toEncoding :: TransactionRedeemer -&gt; Encoding
 $ctoEncoding :: TransactionRedeemer -&gt; Encoding
 toJSON :: TransactionRedeemer -&gt; Value
 $ctoJSON :: TransactionRedeemer -&gt; Value
-</span><a href="#local-6989586621681200157"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200164"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-183"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionRedeemer&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionRedeemer"><span class="hs-identifier hs-type">TransactionRedeemer</span></a></span><span>
 </span><span id="line-184"></span><span>
 </span><span id="line-185"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionRedeemer"><span class="hs-identifier hs-type">TransactionRedeemer</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-186"></span><span>  </span><span id="local-6989586621681200155"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionRedeemer -&gt; [(Text, TransactionRedeemer)]
-</span><a href="#local-6989586621681200155"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionRedeemer)]
+</span><span id="line-186"></span><span>  </span><span id="local-6989586621681200162"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionRedeemer -&gt; [(Text, TransactionRedeemer)]
+</span><a href="#local-6989586621681200162"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionRedeemer)]
 -&gt; Proxy TransactionRedeemer -&gt; [(Text, TransactionRedeemer)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionRedeemer)]
@@ -844,7 +844,7 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-196"></span><span>
 </span><span id="line-197"></span><span class="hs-comment">-- | Information about (de-)registration of a stake address</span><span>
 </span><span id="line-198"></span><span class="hs-comment">-- within a transaction</span><span>
-</span><span id="line-199"></span><span id="local-6989586621681200153"><span id="local-6989586621681200154"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionStake"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionStake"><span class="hs-identifier hs-var">TransactionStake</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionStake"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionStake"><span class="hs-identifier hs-var">TransactionStake</span></a></span></span><span>
+</span><span id="line-199"></span><span id="local-6989586621681200160"><span id="local-6989586621681200161"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionStake"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionStake"><span class="hs-identifier hs-var">TransactionStake</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionStake"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionStake"><span class="hs-identifier hs-var">TransactionStake</span></a></span></span><span>
 </span><span id="line-200"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionStakeCertIndex"><span class="annot"><span class="annottext">TransactionStake -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionStakeCertIndex"><span class="hs-identifier hs-var hs-var">_transactionStakeCertIndex</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Index of the certificate within the transaction</span><span>
 </span><span id="line-201"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionStakeAddress"><span class="annot"><span class="annottext">TransactionStake -&gt; Address
@@ -852,7 +852,7 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-202"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionStakeRegistration"><span class="annot"><span class="annottext">TransactionStake -&gt; Bool
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionStakeRegistration"><span class="hs-identifier hs-var hs-var">_transactionStakeRegistration</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span> </span><span class="hs-comment">-- ^ Registration boolean, false if deregistration</span><span>
 </span><span id="line-203"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-204"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200143"><span id="local-6989586621681200145"><span id="local-6989586621681200147"><span class="annot"><span class="annottext">Int -&gt; TransactionStake -&gt; ShowS
+</span><span id="line-204"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200150"><span id="local-6989586621681200152"><span id="local-6989586621681200154"><span class="annot"><span class="annottext">Int -&gt; TransactionStake -&gt; ShowS
 [TransactionStake] -&gt; ShowS
 TransactionStake -&gt; String
 (Int -&gt; TransactionStake -&gt; ShowS)
@@ -867,7 +867,7 @@ show :: TransactionStake -&gt; String
 $cshow :: TransactionStake -&gt; String
 showsPrec :: Int -&gt; TransactionStake -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionStake -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200139"><span id="local-6989586621681200141"><span class="annot"><span class="annottext">TransactionStake -&gt; TransactionStake -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200146"><span id="local-6989586621681200148"><span class="annot"><span class="annottext">TransactionStake -&gt; TransactionStake -&gt; Bool
 (TransactionStake -&gt; TransactionStake -&gt; Bool)
 -&gt; (TransactionStake -&gt; TransactionStake -&gt; Bool)
 -&gt; Eq TransactionStake
@@ -886,7 +886,7 @@ forall a.
 $cto :: forall x. Rep TransactionStake x -&gt; TransactionStake
 $cfrom :: forall x. TransactionStake -&gt; Rep TransactionStake x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-205"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200133"><span id="local-6989586621681200135"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionStake]
+</span><span id="line-205"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200140"><span id="local-6989586621681200142"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionStake]
 Value -&gt; Parser TransactionStake
 (Value -&gt; Parser TransactionStake)
 -&gt; (Value -&gt; Parser [TransactionStake])
@@ -897,7 +897,7 @@ parseJSONList :: Value -&gt; Parser [TransactionStake]
 $cparseJSONList :: Value -&gt; Parser [TransactionStake]
 parseJSON :: Value -&gt; Parser TransactionStake
 $cparseJSON :: Value -&gt; Parser TransactionStake
-</span><a href="#local-6989586621681200133"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200125"><span id="local-6989586621681200127"><span id="local-6989586621681200129"><span id="local-6989586621681200131"><span class="annot"><span class="annottext">[TransactionStake] -&gt; Encoding
+</span><a href="#local-6989586621681200140"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200132"><span id="local-6989586621681200134"><span id="local-6989586621681200136"><span id="local-6989586621681200138"><span class="annot"><span class="annottext">[TransactionStake] -&gt; Encoding
 [TransactionStake] -&gt; Value
 TransactionStake -&gt; Encoding
 TransactionStake -&gt; Value
@@ -920,12 +920,12 @@ toEncoding :: TransactionStake -&gt; Encoding
 $ctoEncoding :: TransactionStake -&gt; Encoding
 toJSON :: TransactionStake -&gt; Value
 $ctoJSON :: TransactionStake -&gt; Value
-</span><a href="#local-6989586621681200125"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200132"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-206"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionStake&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionStake"><span class="hs-identifier hs-type">TransactionStake</span></a></span><span>
 </span><span id="line-207"></span><span>
 </span><span id="line-208"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionStake"><span class="hs-identifier hs-type">TransactionStake</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-209"></span><span>  </span><span id="local-6989586621681200123"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionStake -&gt; [(Text, TransactionStake)]
-</span><a href="#local-6989586621681200123"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionStake)]
+</span><span id="line-209"></span><span>  </span><span id="local-6989586621681200130"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionStake -&gt; [(Text, TransactionStake)]
+</span><a href="#local-6989586621681200130"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionStake)]
 -&gt; Proxy TransactionStake -&gt; [(Text, TransactionStake)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionStake)]
@@ -951,7 +951,7 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-214"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-215"></span><span>
 </span><span id="line-216"></span><span class="hs-comment">-- | Information about delegation certificates of a specific transaction</span><span>
-</span><span id="line-217"></span><span id="local-6989586621681200121"><span id="local-6989586621681200122"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionDelegation"><span class="hs-identifier hs-var">TransactionDelegation</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionDelegation"><span class="hs-identifier hs-var">TransactionDelegation</span></a></span></span><span>
+</span><span id="line-217"></span><span id="local-6989586621681200128"><span id="local-6989586621681200129"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionDelegation"><span class="hs-identifier hs-var">TransactionDelegation</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionDelegation"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionDelegation"><span class="hs-identifier hs-var">TransactionDelegation</span></a></span></span><span>
 </span><span id="line-218"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionDelegationCertIndex"><span class="annot"><span class="annottext">TransactionDelegation -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionDelegationCertIndex"><span class="hs-identifier hs-var hs-var">_transactionDelegationCertIndex</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Index of the certificate within the transaction</span><span>
 </span><span id="line-219"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionDelegationAddress"><span class="annot"><span class="annottext">TransactionDelegation -&gt; Address
@@ -961,7 +961,7 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-221"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionDelegationActiveEpoch"><span class="annot"><span class="annottext">TransactionDelegation -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionDelegationActiveEpoch"><span class="hs-identifier hs-var hs-var">_transactionDelegationActiveEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch in which the delegation becomes active</span><span>
 </span><span id="line-222"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-223"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200110"><span id="local-6989586621681200112"><span id="local-6989586621681200114"><span class="annot"><span class="annottext">Int -&gt; TransactionDelegation -&gt; ShowS
+</span><span id="line-223"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200117"><span id="local-6989586621681200119"><span id="local-6989586621681200121"><span class="annot"><span class="annottext">Int -&gt; TransactionDelegation -&gt; ShowS
 [TransactionDelegation] -&gt; ShowS
 TransactionDelegation -&gt; String
 (Int -&gt; TransactionDelegation -&gt; ShowS)
@@ -976,7 +976,7 @@ show :: TransactionDelegation -&gt; String
 $cshow :: TransactionDelegation -&gt; String
 showsPrec :: Int -&gt; TransactionDelegation -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionDelegation -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200106"><span id="local-6989586621681200108"><span class="annot"><span class="annottext">TransactionDelegation -&gt; TransactionDelegation -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200113"><span id="local-6989586621681200115"><span class="annot"><span class="annottext">TransactionDelegation -&gt; TransactionDelegation -&gt; Bool
 (TransactionDelegation -&gt; TransactionDelegation -&gt; Bool)
 -&gt; (TransactionDelegation -&gt; TransactionDelegation -&gt; Bool)
 -&gt; Eq TransactionDelegation
@@ -995,7 +995,7 @@ forall a.
 $cto :: forall x. Rep TransactionDelegation x -&gt; TransactionDelegation
 $cfrom :: forall x. TransactionDelegation -&gt; Rep TransactionDelegation x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-224"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200100"><span id="local-6989586621681200102"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionDelegation]
+</span><span id="line-224"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200107"><span id="local-6989586621681200109"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionDelegation]
 Value -&gt; Parser TransactionDelegation
 (Value -&gt; Parser TransactionDelegation)
 -&gt; (Value -&gt; Parser [TransactionDelegation])
@@ -1006,7 +1006,7 @@ parseJSONList :: Value -&gt; Parser [TransactionDelegation]
 $cparseJSONList :: Value -&gt; Parser [TransactionDelegation]
 parseJSON :: Value -&gt; Parser TransactionDelegation
 $cparseJSON :: Value -&gt; Parser TransactionDelegation
-</span><a href="#local-6989586621681200100"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200092"><span id="local-6989586621681200094"><span id="local-6989586621681200096"><span id="local-6989586621681200098"><span class="annot"><span class="annottext">[TransactionDelegation] -&gt; Encoding
+</span><a href="#local-6989586621681200107"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200099"><span id="local-6989586621681200101"><span id="local-6989586621681200103"><span id="local-6989586621681200105"><span class="annot"><span class="annottext">[TransactionDelegation] -&gt; Encoding
 [TransactionDelegation] -&gt; Value
 TransactionDelegation -&gt; Encoding
 TransactionDelegation -&gt; Value
@@ -1029,12 +1029,12 @@ toEncoding :: TransactionDelegation -&gt; Encoding
 $ctoEncoding :: TransactionDelegation -&gt; Encoding
 toJSON :: TransactionDelegation -&gt; Value
 $ctoJSON :: TransactionDelegation -&gt; Value
-</span><a href="#local-6989586621681200092"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200099"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-225"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionDelegation&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionDelegation"><span class="hs-identifier hs-type">TransactionDelegation</span></a></span><span>
 </span><span id="line-226"></span><span>
 </span><span id="line-227"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionDelegation"><span class="hs-identifier hs-type">TransactionDelegation</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-228"></span><span>  </span><span id="local-6989586621681200090"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionDelegation -&gt; [(Text, TransactionDelegation)]
-</span><a href="#local-6989586621681200090"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionDelegation)]
+</span><span id="line-228"></span><span>  </span><span id="local-6989586621681200097"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionDelegation -&gt; [(Text, TransactionDelegation)]
+</span><a href="#local-6989586621681200097"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionDelegation)]
 -&gt; Proxy TransactionDelegation -&gt; [(Text, TransactionDelegation)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionDelegation)]
@@ -1063,13 +1063,13 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-234"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-235"></span><span>
 </span><span id="line-236"></span><span class="hs-comment">-- | Information about withdrawals of a specific transaction</span><span>
-</span><span id="line-237"></span><span id="local-6989586621681200088"><span id="local-6989586621681200089"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionWithdrawal"><span class="hs-identifier hs-var">TransactionWithdrawal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionWithdrawal"><span class="hs-identifier hs-var">TransactionWithdrawal</span></a></span></span><span>
+</span><span id="line-237"></span><span id="local-6989586621681200095"><span id="local-6989586621681200096"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionWithdrawal"><span class="hs-identifier hs-var">TransactionWithdrawal</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionWithdrawal"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionWithdrawal"><span class="hs-identifier hs-var">TransactionWithdrawal</span></a></span></span><span>
 </span><span id="line-238"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionWithdrawalAddress"><span class="annot"><span class="annottext">TransactionWithdrawal -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionWithdrawalAddress"><span class="hs-identifier hs-var hs-var">_transactionWithdrawalAddress</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Bech32 withdrawal address</span><span>
 </span><span id="line-239"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionWithdrawalAmount"><span class="annot"><span class="annottext">TransactionWithdrawal -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionWithdrawalAmount"><span class="hs-identifier hs-var hs-var">_transactionWithdrawalAmount</span></a></span></span><span>  </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ Withdrawal amount in Lovelaces</span><span>
 </span><span id="line-240"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-241"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200079"><span id="local-6989586621681200081"><span id="local-6989586621681200083"><span class="annot"><span class="annottext">Int -&gt; TransactionWithdrawal -&gt; ShowS
+</span><span id="line-241"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200086"><span id="local-6989586621681200088"><span id="local-6989586621681200090"><span class="annot"><span class="annottext">Int -&gt; TransactionWithdrawal -&gt; ShowS
 [TransactionWithdrawal] -&gt; ShowS
 TransactionWithdrawal -&gt; String
 (Int -&gt; TransactionWithdrawal -&gt; ShowS)
@@ -1084,7 +1084,7 @@ show :: TransactionWithdrawal -&gt; String
 $cshow :: TransactionWithdrawal -&gt; String
 showsPrec :: Int -&gt; TransactionWithdrawal -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionWithdrawal -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200075"><span id="local-6989586621681200077"><span class="annot"><span class="annottext">TransactionWithdrawal -&gt; TransactionWithdrawal -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200082"><span id="local-6989586621681200084"><span class="annot"><span class="annottext">TransactionWithdrawal -&gt; TransactionWithdrawal -&gt; Bool
 (TransactionWithdrawal -&gt; TransactionWithdrawal -&gt; Bool)
 -&gt; (TransactionWithdrawal -&gt; TransactionWithdrawal -&gt; Bool)
 -&gt; Eq TransactionWithdrawal
@@ -1103,7 +1103,7 @@ forall a.
 $cto :: forall x. Rep TransactionWithdrawal x -&gt; TransactionWithdrawal
 $cfrom :: forall x. TransactionWithdrawal -&gt; Rep TransactionWithdrawal x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-242"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200069"><span id="local-6989586621681200071"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionWithdrawal]
+</span><span id="line-242"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200076"><span id="local-6989586621681200078"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionWithdrawal]
 Value -&gt; Parser TransactionWithdrawal
 (Value -&gt; Parser TransactionWithdrawal)
 -&gt; (Value -&gt; Parser [TransactionWithdrawal])
@@ -1114,7 +1114,7 @@ parseJSONList :: Value -&gt; Parser [TransactionWithdrawal]
 $cparseJSONList :: Value -&gt; Parser [TransactionWithdrawal]
 parseJSON :: Value -&gt; Parser TransactionWithdrawal
 $cparseJSON :: Value -&gt; Parser TransactionWithdrawal
-</span><a href="#local-6989586621681200069"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200061"><span id="local-6989586621681200063"><span id="local-6989586621681200065"><span id="local-6989586621681200067"><span class="annot"><span class="annottext">[TransactionWithdrawal] -&gt; Encoding
+</span><a href="#local-6989586621681200076"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200068"><span id="local-6989586621681200070"><span id="local-6989586621681200072"><span id="local-6989586621681200074"><span class="annot"><span class="annottext">[TransactionWithdrawal] -&gt; Encoding
 [TransactionWithdrawal] -&gt; Value
 TransactionWithdrawal -&gt; Encoding
 TransactionWithdrawal -&gt; Value
@@ -1137,12 +1137,12 @@ toEncoding :: TransactionWithdrawal -&gt; Encoding
 $ctoEncoding :: TransactionWithdrawal -&gt; Encoding
 toJSON :: TransactionWithdrawal -&gt; Value
 $ctoJSON :: TransactionWithdrawal -&gt; Value
-</span><a href="#local-6989586621681200061"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200068"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-243"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionWithdrawal&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionWithdrawal"><span class="hs-identifier hs-type">TransactionWithdrawal</span></a></span><span>
 </span><span id="line-244"></span><span>
 </span><span id="line-245"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionWithdrawal"><span class="hs-identifier hs-type">TransactionWithdrawal</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-246"></span><span>  </span><span id="local-6989586621681200059"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionWithdrawal -&gt; [(Text, TransactionWithdrawal)]
-</span><a href="#local-6989586621681200059"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionWithdrawal)]
+</span><span id="line-246"></span><span>  </span><span id="local-6989586621681200066"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionWithdrawal -&gt; [(Text, TransactionWithdrawal)]
+</span><a href="#local-6989586621681200066"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionWithdrawal)]
 -&gt; Proxy TransactionWithdrawal -&gt; [(Text, TransactionWithdrawal)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionWithdrawal)]
@@ -1165,8 +1165,8 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-250"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-251"></span><span>
 </span><span id="line-252"></span><span class="hs-comment">-- | Pot from which MIRs are transferred</span><span>
-</span><span id="line-253"></span><span id="local-6989586621681200057"><span id="local-6989586621681200058"></span></span><span class="hs-keyword">data</span><span> </span><span id="Pot"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Pot"><span class="hs-identifier hs-var">Pot</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Reserve"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Reserve"><span class="hs-identifier hs-var">Reserve</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Treasury"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Treasury"><span class="hs-identifier hs-var">Treasury</span></a></span></span><span>
-</span><span id="line-254"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200049"><span id="local-6989586621681200051"><span id="local-6989586621681200053"><span class="annot"><span class="annottext">Int -&gt; Pot -&gt; ShowS
+</span><span id="line-253"></span><span id="local-6989586621681200064"><span id="local-6989586621681200065"></span></span><span class="hs-keyword">data</span><span> </span><span id="Pot"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Pot"><span class="hs-identifier hs-var">Pot</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Reserve"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Reserve"><span class="hs-identifier hs-var">Reserve</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="Treasury"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Treasury"><span class="hs-identifier hs-var">Treasury</span></a></span></span><span>
+</span><span id="line-254"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200056"><span id="local-6989586621681200058"><span id="local-6989586621681200060"><span class="annot"><span class="annottext">Int -&gt; Pot -&gt; ShowS
 [Pot] -&gt; ShowS
 Pot -&gt; String
 (Int -&gt; Pot -&gt; ShowS)
@@ -1179,7 +1179,7 @@ show :: Pot -&gt; String
 $cshow :: Pot -&gt; String
 showsPrec :: Int -&gt; Pot -&gt; ShowS
 $cshowsPrec :: Int -&gt; Pot -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200045"><span id="local-6989586621681200047"><span class="annot"><span class="annottext">Pot -&gt; Pot -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200052"><span id="local-6989586621681200054"><span class="annot"><span class="annottext">Pot -&gt; Pot -&gt; Bool
 (Pot -&gt; Pot -&gt; Bool) -&gt; (Pot -&gt; Pot -&gt; Bool) -&gt; Eq Pot
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: Pot -&gt; Pot -&gt; Bool
@@ -1195,7 +1195,7 @@ forall a.
 $cto :: forall x. Rep Pot x -&gt; Pot
 $cfrom :: forall x. Pot -&gt; Rep Pot x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-255"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200039"><span id="local-6989586621681200041"><span class="annot"><span class="annottext">Value -&gt; Parser [Pot]
+</span><span id="line-255"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200046"><span id="local-6989586621681200048"><span class="annot"><span class="annottext">Value -&gt; Parser [Pot]
 Value -&gt; Parser Pot
 (Value -&gt; Parser Pot) -&gt; (Value -&gt; Parser [Pot]) -&gt; FromJSON Pot
 forall a.
@@ -1204,7 +1204,7 @@ parseJSONList :: Value -&gt; Parser [Pot]
 $cparseJSONList :: Value -&gt; Parser [Pot]
 parseJSON :: Value -&gt; Parser Pot
 $cparseJSON :: Value -&gt; Parser Pot
-</span><a href="#local-6989586621681200039"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200031"><span id="local-6989586621681200033"><span id="local-6989586621681200035"><span id="local-6989586621681200037"><span class="annot"><span class="annottext">[Pot] -&gt; Encoding
+</span><a href="#local-6989586621681200046"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200038"><span id="local-6989586621681200040"><span id="local-6989586621681200042"><span id="local-6989586621681200044"><span class="annot"><span class="annottext">[Pot] -&gt; Encoding
 [Pot] -&gt; Value
 Pot -&gt; Encoding
 Pot -&gt; Value
@@ -1227,12 +1227,12 @@ toEncoding :: Pot -&gt; Encoding
 $ctoEncoding :: Pot -&gt; Encoding
 toJSON :: Pot -&gt; Value
 $ctoJSON :: Pot -&gt; Value
-</span><a href="#local-6989586621681200031"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200038"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-256"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">ConstructorTagModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.Opts.html#ToLower"><span class="hs-identifier hs-type">ToLower</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Pot"><span class="hs-identifier hs-type">Pot</span></a></span><span>
 </span><span id="line-257"></span><span>
 </span><span id="line-258"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Pot"><span class="hs-identifier hs-type">Pot</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-259"></span><span>  </span><span id="local-6989586621681200029"><span class="annot"><span class="annottext">toSamples :: Proxy Pot -&gt; [(Text, Pot)]
-</span><a href="#local-6989586621681200029"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, Pot)] -&gt; Proxy Pot -&gt; [(Text, Pot)]
+</span><span id="line-259"></span><span>  </span><span id="local-6989586621681200036"><span class="annot"><span class="annottext">toSamples :: Proxy Pot -&gt; [(Text, Pot)]
+</span><a href="#local-6989586621681200036"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, Pot)] -&gt; Proxy Pot -&gt; [(Text, Pot)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, Pot)] -&gt; Proxy Pot -&gt; [(Text, Pot)])
 -&gt; [(Text, Pot)] -&gt; Proxy Pot -&gt; [(Text, Pot)]
@@ -1244,7 +1244,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#Treasury"><span class="hs-identifier hs-var">Treasury</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-260"></span><span>
 </span><span id="line-261"></span><span class="hs-comment">-- | Information about Move Instantaneous Rewards (MIRs) of a specific transaction</span><span>
-</span><span id="line-262"></span><span id="local-6989586621681200027"><span id="local-6989586621681200028"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMir"><span class="hs-identifier hs-var">TransactionMir</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMir"><span class="hs-identifier hs-var">TransactionMir</span></a></span></span><span>
+</span><span id="line-262"></span><span id="local-6989586621681200034"><span id="local-6989586621681200035"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMir"><span class="hs-identifier hs-var">TransactionMir</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionMir"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMir"><span class="hs-identifier hs-var">TransactionMir</span></a></span></span><span>
 </span><span id="line-263"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionMirPot"><span class="annot"><span class="annottext">TransactionMir -&gt; Pot
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionMirPot"><span class="hs-identifier hs-var hs-var">_transactionMirPot</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#Pot"><span class="hs-identifier hs-type">Pot</span></a></span><span> </span><span class="hs-comment">-- ^ Source of MIR funds</span><span>
 </span><span id="line-264"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionMirCertIndex"><span class="annot"><span class="annottext">TransactionMir -&gt; Integer
@@ -1254,7 +1254,7 @@ forall a. [a] -&gt; [(Text, a)]
 </span><span id="line-266"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionMirAmount"><span class="annot"><span class="annottext">TransactionMir -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionMirAmount"><span class="hs-identifier hs-var hs-var">_transactionMirAmount</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ MIR amount in Lovelaces</span><span>
 </span><span id="line-267"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-268"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200016"><span id="local-6989586621681200018"><span id="local-6989586621681200020"><span class="annot"><span class="annottext">Int -&gt; TransactionMir -&gt; ShowS
+</span><span id="line-268"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200023"><span id="local-6989586621681200025"><span id="local-6989586621681200027"><span class="annot"><span class="annottext">Int -&gt; TransactionMir -&gt; ShowS
 [TransactionMir] -&gt; ShowS
 TransactionMir -&gt; String
 (Int -&gt; TransactionMir -&gt; ShowS)
@@ -1269,7 +1269,7 @@ show :: TransactionMir -&gt; String
 $cshow :: TransactionMir -&gt; String
 showsPrec :: Int -&gt; TransactionMir -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionMir -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200012"><span id="local-6989586621681200014"><span class="annot"><span class="annottext">TransactionMir -&gt; TransactionMir -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200019"><span id="local-6989586621681200021"><span class="annot"><span class="annottext">TransactionMir -&gt; TransactionMir -&gt; Bool
 (TransactionMir -&gt; TransactionMir -&gt; Bool)
 -&gt; (TransactionMir -&gt; TransactionMir -&gt; Bool) -&gt; Eq TransactionMir
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -1287,7 +1287,7 @@ forall a.
 $cto :: forall x. Rep TransactionMir x -&gt; TransactionMir
 $cfrom :: forall x. TransactionMir -&gt; Rep TransactionMir x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-269"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200006"><span id="local-6989586621681200008"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionMir]
+</span><span id="line-269"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200013"><span id="local-6989586621681200015"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionMir]
 Value -&gt; Parser TransactionMir
 (Value -&gt; Parser TransactionMir)
 -&gt; (Value -&gt; Parser [TransactionMir]) -&gt; FromJSON TransactionMir
@@ -1297,7 +1297,7 @@ parseJSONList :: Value -&gt; Parser [TransactionMir]
 $cparseJSONList :: Value -&gt; Parser [TransactionMir]
 parseJSON :: Value -&gt; Parser TransactionMir
 $cparseJSON :: Value -&gt; Parser TransactionMir
-</span><a href="#local-6989586621681200006"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199998"><span id="local-6989586621681200000"><span id="local-6989586621681200002"><span id="local-6989586621681200004"><span class="annot"><span class="annottext">[TransactionMir] -&gt; Encoding
+</span><a href="#local-6989586621681200013"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200005"><span id="local-6989586621681200007"><span id="local-6989586621681200009"><span id="local-6989586621681200011"><span class="annot"><span class="annottext">[TransactionMir] -&gt; Encoding
 [TransactionMir] -&gt; Value
 TransactionMir -&gt; Encoding
 TransactionMir -&gt; Value
@@ -1320,12 +1320,12 @@ toEncoding :: TransactionMir -&gt; Encoding
 $ctoEncoding :: TransactionMir -&gt; Encoding
 toJSON :: TransactionMir -&gt; Value
 $ctoJSON :: TransactionMir -&gt; Value
-</span><a href="#local-6989586621681199998"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200005"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-270"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionMir&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMir"><span class="hs-identifier hs-type">TransactionMir</span></a></span><span>
 </span><span id="line-271"></span><span>
 </span><span id="line-272"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMir"><span class="hs-identifier hs-type">TransactionMir</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-273"></span><span>  </span><span id="local-6989586621681199996"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionMir -&gt; [(Text, TransactionMir)]
-</span><a href="#local-6989586621681199996"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionMir)]
+</span><span id="line-273"></span><span>  </span><span id="local-6989586621681200003"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionMir -&gt; [(Text, TransactionMir)]
+</span><a href="#local-6989586621681200003"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionMir)]
 -&gt; Proxy TransactionMir -&gt; [(Text, TransactionMir)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionMir)]
@@ -1355,7 +1355,7 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-280"></span><span>
 </span><span id="line-281"></span><span class="hs-comment">-- | Information about stake pool registration and update certificates</span><span>
 </span><span id="line-282"></span><span class="hs-comment">-- of a specific transaction</span><span>
-</span><span id="line-283"></span><span id="local-6989586621681199994"><span id="local-6989586621681199995"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionPoolUpdate"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolUpdate"><span class="hs-identifier hs-var">TransactionPoolUpdate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionPoolUpdate"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolUpdate"><span class="hs-identifier hs-var">TransactionPoolUpdate</span></a></span></span><span>
+</span><span id="line-283"></span><span id="local-6989586621681200001"><span id="local-6989586621681200002"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionPoolUpdate"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolUpdate"><span class="hs-identifier hs-var">TransactionPoolUpdate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionPoolUpdate"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolUpdate"><span class="hs-identifier hs-var">TransactionPoolUpdate</span></a></span></span><span>
 </span><span id="line-284"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionPoolUpdateCertIndex"><span class="annot"><span class="annottext">TransactionPoolUpdate -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionPoolUpdateCertIndex"><span class="hs-identifier hs-var hs-var">_transactionPoolUpdateCertIndex</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Index of the certificate within the transaction</span><span>
 </span><span id="line-285"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionPoolUpdatePoolId"><span class="annot"><span class="annottext">TransactionPoolUpdate -&gt; PoolId
@@ -1379,7 +1379,7 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-294"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionPoolUpdateActiveEpoch"><span class="annot"><span class="annottext">TransactionPoolUpdate -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionPoolUpdateActiveEpoch"><span class="hs-identifier hs-var hs-var">_transactionPoolUpdateActiveEpoch</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch that the delegation becomes active</span><span>
 </span><span id="line-295"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-296"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199976"><span id="local-6989586621681199978"><span id="local-6989586621681199980"><span class="annot"><span class="annottext">Int -&gt; TransactionPoolUpdate -&gt; ShowS
+</span><span id="line-296"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199983"><span id="local-6989586621681199985"><span id="local-6989586621681199987"><span class="annot"><span class="annottext">Int -&gt; TransactionPoolUpdate -&gt; ShowS
 [TransactionPoolUpdate] -&gt; ShowS
 TransactionPoolUpdate -&gt; String
 (Int -&gt; TransactionPoolUpdate -&gt; ShowS)
@@ -1394,7 +1394,7 @@ show :: TransactionPoolUpdate -&gt; String
 $cshow :: TransactionPoolUpdate -&gt; String
 showsPrec :: Int -&gt; TransactionPoolUpdate -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionPoolUpdate -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199972"><span id="local-6989586621681199974"><span class="annot"><span class="annottext">TransactionPoolUpdate -&gt; TransactionPoolUpdate -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199979"><span id="local-6989586621681199981"><span class="annot"><span class="annottext">TransactionPoolUpdate -&gt; TransactionPoolUpdate -&gt; Bool
 (TransactionPoolUpdate -&gt; TransactionPoolUpdate -&gt; Bool)
 -&gt; (TransactionPoolUpdate -&gt; TransactionPoolUpdate -&gt; Bool)
 -&gt; Eq TransactionPoolUpdate
@@ -1413,7 +1413,7 @@ forall a.
 $cto :: forall x. Rep TransactionPoolUpdate x -&gt; TransactionPoolUpdate
 $cfrom :: forall x. TransactionPoolUpdate -&gt; Rep TransactionPoolUpdate x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-297"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199966"><span id="local-6989586621681199968"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionPoolUpdate]
+</span><span id="line-297"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199973"><span id="local-6989586621681199975"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionPoolUpdate]
 Value -&gt; Parser TransactionPoolUpdate
 (Value -&gt; Parser TransactionPoolUpdate)
 -&gt; (Value -&gt; Parser [TransactionPoolUpdate])
@@ -1424,7 +1424,7 @@ parseJSONList :: Value -&gt; Parser [TransactionPoolUpdate]
 $cparseJSONList :: Value -&gt; Parser [TransactionPoolUpdate]
 parseJSON :: Value -&gt; Parser TransactionPoolUpdate
 $cparseJSON :: Value -&gt; Parser TransactionPoolUpdate
-</span><a href="#local-6989586621681199966"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199958"><span id="local-6989586621681199960"><span id="local-6989586621681199962"><span id="local-6989586621681199964"><span class="annot"><span class="annottext">[TransactionPoolUpdate] -&gt; Encoding
+</span><a href="#local-6989586621681199973"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199965"><span id="local-6989586621681199967"><span id="local-6989586621681199969"><span id="local-6989586621681199971"><span class="annot"><span class="annottext">[TransactionPoolUpdate] -&gt; Encoding
 [TransactionPoolUpdate] -&gt; Value
 TransactionPoolUpdate -&gt; Encoding
 TransactionPoolUpdate -&gt; Value
@@ -1447,12 +1447,12 @@ toEncoding :: TransactionPoolUpdate -&gt; Encoding
 $ctoEncoding :: TransactionPoolUpdate -&gt; Encoding
 toJSON :: TransactionPoolUpdate -&gt; Value
 $ctoJSON :: TransactionPoolUpdate -&gt; Value
-</span><a href="#local-6989586621681199958"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681199965"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-298"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionPoolUpdate&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolUpdate"><span class="hs-identifier hs-type">TransactionPoolUpdate</span></a></span><span>
 </span><span id="line-299"></span><span>
 </span><span id="line-300"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolUpdate"><span class="hs-identifier hs-type">TransactionPoolUpdate</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-301"></span><span>  </span><span id="local-6989586621681199956"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionPoolUpdate -&gt; [(Text, TransactionPoolUpdate)]
-</span><a href="#local-6989586621681199956"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionPoolUpdate)]
+</span><span id="line-301"></span><span>  </span><span id="local-6989586621681199963"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionPoolUpdate -&gt; [(Text, TransactionPoolUpdate)]
+</span><a href="#local-6989586621681199963"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionPoolUpdate)]
 -&gt; Proxy TransactionPoolUpdate -&gt; [(Text, TransactionPoolUpdate)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionPoolUpdate)]
@@ -1516,7 +1516,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-315"></span><span>
 </span><span id="line-316"></span><span class="hs-comment">-- | Information about stake pool retirements</span><span>
 </span><span id="line-317"></span><span class="hs-comment">-- within a specific transaction</span><span>
-</span><span id="line-318"></span><span id="local-6989586621681199952"><span id="local-6989586621681199953"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionPoolRetiring"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolRetiring"><span class="hs-identifier hs-var">TransactionPoolRetiring</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionPoolRetiring"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolRetiring"><span class="hs-identifier hs-var">TransactionPoolRetiring</span></a></span></span><span>
+</span><span id="line-318"></span><span id="local-6989586621681199959"><span id="local-6989586621681199960"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionPoolRetiring"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolRetiring"><span class="hs-identifier hs-var">TransactionPoolRetiring</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionPoolRetiring"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolRetiring"><span class="hs-identifier hs-var">TransactionPoolRetiring</span></a></span></span><span>
 </span><span id="line-319"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionPoolRetiringCertIndex"><span class="annot"><span class="annottext">TransactionPoolRetiring -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionPoolRetiringCertIndex"><span class="hs-identifier hs-var hs-var">_transactionPoolRetiringCertIndex</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Index of the certificate within the transaction</span><span>
 </span><span id="line-320"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionPoolRetiringPoolId"><span class="annot"><span class="annottext">TransactionPoolRetiring -&gt; PoolId
@@ -1524,7 +1524,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-321"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionPoolRetiringRetiringEpoch"><span class="annot"><span class="annottext">TransactionPoolRetiring -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionPoolRetiringRetiringEpoch"><span class="hs-identifier hs-var hs-var">_transactionPoolRetiringRetiringEpoch</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Retiring epoch</span><span>
 </span><span id="line-322"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-323"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199942"><span id="local-6989586621681199944"><span id="local-6989586621681199946"><span class="annot"><span class="annottext">Int -&gt; TransactionPoolRetiring -&gt; ShowS
+</span><span id="line-323"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199949"><span id="local-6989586621681199951"><span id="local-6989586621681199953"><span class="annot"><span class="annottext">Int -&gt; TransactionPoolRetiring -&gt; ShowS
 [TransactionPoolRetiring] -&gt; ShowS
 TransactionPoolRetiring -&gt; String
 (Int -&gt; TransactionPoolRetiring -&gt; ShowS)
@@ -1539,7 +1539,7 @@ show :: TransactionPoolRetiring -&gt; String
 $cshow :: TransactionPoolRetiring -&gt; String
 showsPrec :: Int -&gt; TransactionPoolRetiring -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionPoolRetiring -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199938"><span id="local-6989586621681199940"><span class="annot"><span class="annottext">TransactionPoolRetiring -&gt; TransactionPoolRetiring -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199945"><span id="local-6989586621681199947"><span class="annot"><span class="annottext">TransactionPoolRetiring -&gt; TransactionPoolRetiring -&gt; Bool
 (TransactionPoolRetiring -&gt; TransactionPoolRetiring -&gt; Bool)
 -&gt; (TransactionPoolRetiring -&gt; TransactionPoolRetiring -&gt; Bool)
 -&gt; Eq TransactionPoolRetiring
@@ -1560,7 +1560,7 @@ forall a.
 $cto :: forall x. Rep TransactionPoolRetiring x -&gt; TransactionPoolRetiring
 $cfrom :: forall x. TransactionPoolRetiring -&gt; Rep TransactionPoolRetiring x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-324"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199932"><span id="local-6989586621681199934"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionPoolRetiring]
+</span><span id="line-324"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199939"><span id="local-6989586621681199941"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionPoolRetiring]
 Value -&gt; Parser TransactionPoolRetiring
 (Value -&gt; Parser TransactionPoolRetiring)
 -&gt; (Value -&gt; Parser [TransactionPoolRetiring])
@@ -1571,7 +1571,7 @@ parseJSONList :: Value -&gt; Parser [TransactionPoolRetiring]
 $cparseJSONList :: Value -&gt; Parser [TransactionPoolRetiring]
 parseJSON :: Value -&gt; Parser TransactionPoolRetiring
 $cparseJSON :: Value -&gt; Parser TransactionPoolRetiring
-</span><a href="#local-6989586621681199932"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199924"><span id="local-6989586621681199926"><span id="local-6989586621681199928"><span id="local-6989586621681199930"><span class="annot"><span class="annottext">[TransactionPoolRetiring] -&gt; Encoding
+</span><a href="#local-6989586621681199939"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199931"><span id="local-6989586621681199933"><span id="local-6989586621681199935"><span id="local-6989586621681199937"><span class="annot"><span class="annottext">[TransactionPoolRetiring] -&gt; Encoding
 [TransactionPoolRetiring] -&gt; Value
 TransactionPoolRetiring -&gt; Encoding
 TransactionPoolRetiring -&gt; Value
@@ -1594,12 +1594,12 @@ toEncoding :: TransactionPoolRetiring -&gt; Encoding
 $ctoEncoding :: TransactionPoolRetiring -&gt; Encoding
 toJSON :: TransactionPoolRetiring -&gt; Value
 $ctoJSON :: TransactionPoolRetiring -&gt; Value
-</span><a href="#local-6989586621681199924"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681199931"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-325"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionPoolRetiring&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolRetiring"><span class="hs-identifier hs-type">TransactionPoolRetiring</span></a></span><span>
 </span><span id="line-326"></span><span>
 </span><span id="line-327"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionPoolRetiring"><span class="hs-identifier hs-type">TransactionPoolRetiring</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-328"></span><span>  </span><span id="local-6989586621681199922"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionPoolRetiring -&gt; [(Text, TransactionPoolRetiring)]
-</span><a href="#local-6989586621681199922"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionPoolRetiring)]
+</span><span id="line-328"></span><span>  </span><span id="local-6989586621681199929"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionPoolRetiring -&gt; [(Text, TransactionPoolRetiring)]
+</span><a href="#local-6989586621681199929"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionPoolRetiring)]
 -&gt; Proxy TransactionPoolRetiring
 -&gt; [(Text, TransactionPoolRetiring)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
@@ -1627,13 +1627,13 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-333"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-334"></span><span>
 </span><span id="line-335"></span><span class="hs-comment">-- | Transaction metadata in JSON</span><span>
-</span><span id="line-336"></span><span id="local-6989586621681199920"><span id="local-6989586621681199921"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaJSON"><span class="hs-identifier hs-var">TransactionMetaJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaJSON"><span class="hs-identifier hs-var">TransactionMetaJSON</span></a></span></span><span>
+</span><span id="line-336"></span><span id="local-6989586621681199927"><span id="local-6989586621681199928"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaJSON"><span class="hs-identifier hs-var">TransactionMetaJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaJSON"><span class="hs-identifier hs-var">TransactionMetaJSON</span></a></span></span><span>
 </span><span id="line-337"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionMetaJSONLabel"><span class="annot"><span class="annottext">TransactionMetaJSON -&gt; Text
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionMetaJSONLabel"><span class="hs-identifier hs-var hs-var">_transactionMetaJSONLabel</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Metadata label</span><span>
 </span><span id="line-338"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionMetaJSONJSONMetadata"><span class="annot"><span class="annottext">TransactionMetaJSON -&gt; Maybe Value
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionMetaJSONJSONMetadata"><span class="hs-identifier hs-var hs-var">_transactionMetaJSONJSONMetadata</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Value</span></a></span><span> </span><span class="hs-comment">-- ^ Content of the JSON metadata</span><span>
 </span><span id="line-339"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-340"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199911"><span id="local-6989586621681199913"><span id="local-6989586621681199915"><span class="annot"><span class="annottext">Int -&gt; TransactionMetaJSON -&gt; ShowS
+</span><span id="line-340"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199918"><span id="local-6989586621681199920"><span id="local-6989586621681199922"><span class="annot"><span class="annottext">Int -&gt; TransactionMetaJSON -&gt; ShowS
 [TransactionMetaJSON] -&gt; ShowS
 TransactionMetaJSON -&gt; String
 (Int -&gt; TransactionMetaJSON -&gt; ShowS)
@@ -1648,7 +1648,7 @@ show :: TransactionMetaJSON -&gt; String
 $cshow :: TransactionMetaJSON -&gt; String
 showsPrec :: Int -&gt; TransactionMetaJSON -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionMetaJSON -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199907"><span id="local-6989586621681199909"><span class="annot"><span class="annottext">TransactionMetaJSON -&gt; TransactionMetaJSON -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199914"><span id="local-6989586621681199916"><span class="annot"><span class="annottext">TransactionMetaJSON -&gt; TransactionMetaJSON -&gt; Bool
 (TransactionMetaJSON -&gt; TransactionMetaJSON -&gt; Bool)
 -&gt; (TransactionMetaJSON -&gt; TransactionMetaJSON -&gt; Bool)
 -&gt; Eq TransactionMetaJSON
@@ -1667,7 +1667,7 @@ forall a.
 $cto :: forall x. Rep TransactionMetaJSON x -&gt; TransactionMetaJSON
 $cfrom :: forall x. TransactionMetaJSON -&gt; Rep TransactionMetaJSON x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-341"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199901"><span id="local-6989586621681199903"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionMetaJSON]
+</span><span id="line-341"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199908"><span id="local-6989586621681199910"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionMetaJSON]
 Value -&gt; Parser TransactionMetaJSON
 (Value -&gt; Parser TransactionMetaJSON)
 -&gt; (Value -&gt; Parser [TransactionMetaJSON])
@@ -1678,7 +1678,7 @@ parseJSONList :: Value -&gt; Parser [TransactionMetaJSON]
 $cparseJSONList :: Value -&gt; Parser [TransactionMetaJSON]
 parseJSON :: Value -&gt; Parser TransactionMetaJSON
 $cparseJSON :: Value -&gt; Parser TransactionMetaJSON
-</span><a href="#local-6989586621681199901"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199893"><span id="local-6989586621681199895"><span id="local-6989586621681199897"><span id="local-6989586621681199899"><span class="annot"><span class="annottext">[TransactionMetaJSON] -&gt; Encoding
+</span><a href="#local-6989586621681199908"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199900"><span id="local-6989586621681199902"><span id="local-6989586621681199904"><span id="local-6989586621681199906"><span class="annot"><span class="annottext">[TransactionMetaJSON] -&gt; Encoding
 [TransactionMetaJSON] -&gt; Value
 TransactionMetaJSON -&gt; Encoding
 TransactionMetaJSON -&gt; Value
@@ -1701,15 +1701,15 @@ toEncoding :: TransactionMetaJSON -&gt; Encoding
 $ctoEncoding :: TransactionMetaJSON -&gt; Encoding
 toJSON :: TransactionMetaJSON -&gt; Value
 $ctoJSON :: TransactionMetaJSON -&gt; Value
-</span><a href="#local-6989586621681199893"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681199900"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-342"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionMetaJSON&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaJSON"><span class="hs-identifier hs-type">TransactionMetaJSON</span></a></span><span>
 </span><span id="line-343"></span><span>
 </span><span id="line-344"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaJSON"><span class="hs-identifier hs-type">TransactionMetaJSON</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-345"></span><span>  </span><span id="local-6989586621681199891"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionMetaJSON -&gt; [(Text, TransactionMetaJSON)]
-</span><a href="#local-6989586621681199891"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-346"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621681199890"><span class="annot"><span class="annottext">oracleMeta :: Text -&gt; Value
-</span><a href="#local-6989586621681199890"><span class="hs-identifier hs-var hs-var">oracleMeta</span></a></span></span><span> </span><span id="local-6989586621681199889"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681199889"><span class="hs-identifier hs-var">val</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-345"></span><span>  </span><span id="local-6989586621681199898"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionMetaJSON -&gt; [(Text, TransactionMetaJSON)]
+</span><a href="#local-6989586621681199898"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-346"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621681199897"><span class="annot"><span class="annottext">oracleMeta :: Text -&gt; Value
+</span><a href="#local-6989586621681199897"><span class="hs-identifier hs-var hs-var">oracleMeta</span></a></span></span><span> </span><span id="local-6989586621681199896"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681199896"><span class="hs-identifier hs-var">val</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-347"></span><span>          </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">object</span></a></span><span> </span><span class="hs-special">[</span><span>
 </span><span id="line-348"></span><span>            </span><span class="annot"><span class="annottext">Key
@@ -1721,7 +1721,7 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><span class="hs-string">&quot;value&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Text -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681199889"><span class="hs-identifier hs-var">val</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681199896"><span class="hs-identifier hs-var">val</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-350"></span><span>                       </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;source&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Text -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
@@ -1771,18 +1771,18 @@ forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Maybe Value) -&gt; Value -&gt; Maybe Value
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
-</span><a href="#local-6989586621681199890"><span class="hs-identifier hs-var">oracleMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681199897"><span class="hs-identifier hs-var">oracleMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;0.15409850555139935&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-363"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-364"></span><span>
 </span><span id="line-365"></span><span class="hs-comment">-- | Transaction metadata in CBOR</span><span>
-</span><span id="line-366"></span><span id="local-6989586621681199887"><span id="local-6989586621681199888"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaCBOR"><span class="hs-identifier hs-var">TransactionMetaCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaCBOR"><span class="hs-identifier hs-var">TransactionMetaCBOR</span></a></span></span><span>
+</span><span id="line-366"></span><span id="local-6989586621681199894"><span id="local-6989586621681199895"></span></span><span class="hs-keyword">data</span><span> </span><span id="TransactionMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaCBOR"><span class="hs-identifier hs-var">TransactionMetaCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TransactionMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaCBOR"><span class="hs-identifier hs-var">TransactionMetaCBOR</span></a></span></span><span>
 </span><span id="line-367"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_transactionMetaCBORLabel"><span class="annot"><span class="annottext">TransactionMetaCBOR -&gt; Text
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionMetaCBORLabel"><span class="hs-identifier hs-var hs-var">_transactionMetaCBORLabel</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Metadata label</span><span>
 </span><span id="line-368"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_transactionMetaCBORMetadata"><span class="annot"><span class="annottext">TransactionMetaCBOR -&gt; Maybe Text
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_transactionMetaCBORMetadata"><span class="hs-identifier hs-var hs-var">_transactionMetaCBORMetadata</span></a></span></span><span>     </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Content of the CBOR metadata</span><span>
 </span><span id="line-369"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-370"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199878"><span id="local-6989586621681199880"><span id="local-6989586621681199882"><span class="annot"><span class="annottext">Int -&gt; TransactionMetaCBOR -&gt; ShowS
+</span><span id="line-370"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199885"><span id="local-6989586621681199887"><span id="local-6989586621681199889"><span class="annot"><span class="annottext">Int -&gt; TransactionMetaCBOR -&gt; ShowS
 [TransactionMetaCBOR] -&gt; ShowS
 TransactionMetaCBOR -&gt; String
 (Int -&gt; TransactionMetaCBOR -&gt; ShowS)
@@ -1797,7 +1797,7 @@ show :: TransactionMetaCBOR -&gt; String
 $cshow :: TransactionMetaCBOR -&gt; String
 showsPrec :: Int -&gt; TransactionMetaCBOR -&gt; ShowS
 $cshowsPrec :: Int -&gt; TransactionMetaCBOR -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199874"><span id="local-6989586621681199876"><span class="annot"><span class="annottext">TransactionMetaCBOR -&gt; TransactionMetaCBOR -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199881"><span id="local-6989586621681199883"><span class="annot"><span class="annottext">TransactionMetaCBOR -&gt; TransactionMetaCBOR -&gt; Bool
 (TransactionMetaCBOR -&gt; TransactionMetaCBOR -&gt; Bool)
 -&gt; (TransactionMetaCBOR -&gt; TransactionMetaCBOR -&gt; Bool)
 -&gt; Eq TransactionMetaCBOR
@@ -1816,7 +1816,7 @@ forall a.
 $cto :: forall x. Rep TransactionMetaCBOR x -&gt; TransactionMetaCBOR
 $cfrom :: forall x. TransactionMetaCBOR -&gt; Rep TransactionMetaCBOR x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-371"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199868"><span id="local-6989586621681199870"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionMetaCBOR]
+</span><span id="line-371"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199875"><span id="local-6989586621681199877"><span class="annot"><span class="annottext">Value -&gt; Parser [TransactionMetaCBOR]
 Value -&gt; Parser TransactionMetaCBOR
 (Value -&gt; Parser TransactionMetaCBOR)
 -&gt; (Value -&gt; Parser [TransactionMetaCBOR])
@@ -1827,7 +1827,7 @@ parseJSONList :: Value -&gt; Parser [TransactionMetaCBOR]
 $cparseJSONList :: Value -&gt; Parser [TransactionMetaCBOR]
 parseJSON :: Value -&gt; Parser TransactionMetaCBOR
 $cparseJSON :: Value -&gt; Parser TransactionMetaCBOR
-</span><a href="#local-6989586621681199868"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199860"><span id="local-6989586621681199862"><span id="local-6989586621681199864"><span id="local-6989586621681199866"><span class="annot"><span class="annottext">[TransactionMetaCBOR] -&gt; Encoding
+</span><a href="#local-6989586621681199875"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199867"><span id="local-6989586621681199869"><span id="local-6989586621681199871"><span id="local-6989586621681199873"><span class="annot"><span class="annottext">[TransactionMetaCBOR] -&gt; Encoding
 [TransactionMetaCBOR] -&gt; Value
 TransactionMetaCBOR -&gt; Encoding
 TransactionMetaCBOR -&gt; Value
@@ -1850,12 +1850,12 @@ toEncoding :: TransactionMetaCBOR -&gt; Encoding
 $ctoEncoding :: TransactionMetaCBOR -&gt; Encoding
 toJSON :: TransactionMetaCBOR -&gt; Value
 $ctoJSON :: TransactionMetaCBOR -&gt; Value
-</span><a href="#local-6989586621681199860"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681199867"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-372"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_transactionMetaCBOR&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaCBOR"><span class="hs-identifier hs-type">TransactionMetaCBOR</span></a></span><span>
 </span><span id="line-373"></span><span>
 </span><span id="line-374"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#TransactionMetaCBOR"><span class="hs-identifier hs-type">TransactionMetaCBOR</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-375"></span><span>  </span><span id="local-6989586621681199858"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionMetaCBOR -&gt; [(Text, TransactionMetaCBOR)]
-</span><a href="#local-6989586621681199858"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionMetaCBOR)]
+</span><span id="line-375"></span><span>  </span><span id="local-6989586621681199865"><span class="annot"><span class="annottext">toSamples :: Proxy TransactionMetaCBOR -&gt; [(Text, TransactionMetaCBOR)]
+</span><a href="#local-6989586621681199865"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TransactionMetaCBOR)]
 -&gt; Proxy TransactionMetaCBOR -&gt; [(Text, TransactionMetaCBOR)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TransactionMetaCBOR)]
@@ -1880,7 +1880,7 @@ forall a. a -&gt; Maybe a
 </span><span class="hs-string">&quot;a100a16b436f6d62696e6174696f6e8601010101010c&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-379"></span><span>
 </span><span id="line-380"></span><span class="hs-comment">-- | Update of a pool metadata</span><span>
-</span><span id="line-381"></span><span id="local-6989586621681199856"><span id="local-6989586621681199857"></span></span><span class="hs-keyword">data</span><span> </span><span id="PoolUpdateMetadata"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#PoolUpdateMetadata"><span class="hs-identifier hs-var">PoolUpdateMetadata</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PoolUpdateMetadata"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#PoolUpdateMetadata"><span class="hs-identifier hs-var">PoolUpdateMetadata</span></a></span></span><span>
+</span><span id="line-381"></span><span id="local-6989586621681199863"><span id="local-6989586621681199864"></span></span><span class="hs-keyword">data</span><span> </span><span id="PoolUpdateMetadata"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#PoolUpdateMetadata"><span class="hs-identifier hs-var">PoolUpdateMetadata</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PoolUpdateMetadata"><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#PoolUpdateMetadata"><span class="hs-identifier hs-var">PoolUpdateMetadata</span></a></span></span><span>
 </span><span id="line-382"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_poolUpdateMetadataUrl"><span class="annot"><span class="annottext">PoolUpdateMetadata -&gt; Maybe Text
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_poolUpdateMetadataUrl"><span class="hs-identifier hs-var hs-var">_poolUpdateMetadataUrl</span></a></span></span><span>         </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ URL to the stake pool metadata</span><span>
 </span><span id="line-383"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_poolUpdateMetadataHash"><span class="annot"><span class="annottext">PoolUpdateMetadata -&gt; Maybe Text
@@ -1894,7 +1894,7 @@ forall a. a -&gt; Maybe a
 </span><span id="line-387"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_poolUpdateMetadataHomepage"><span class="annot"><span class="annottext">PoolUpdateMetadata -&gt; Maybe Text
 </span><a href="Blockfrost.Types.Cardano.Transactions.html#_poolUpdateMetadataHomepage"><span class="hs-identifier hs-var hs-var">_poolUpdateMetadataHomepage</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Home page of the stake pool</span><span>
 </span><span id="line-388"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-389"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199843"><span id="local-6989586621681199845"><span id="local-6989586621681199847"><span class="annot"><span class="annottext">Int -&gt; PoolUpdateMetadata -&gt; ShowS
+</span><span id="line-389"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199850"><span id="local-6989586621681199852"><span id="local-6989586621681199854"><span class="annot"><span class="annottext">Int -&gt; PoolUpdateMetadata -&gt; ShowS
 [PoolUpdateMetadata] -&gt; ShowS
 PoolUpdateMetadata -&gt; String
 (Int -&gt; PoolUpdateMetadata -&gt; ShowS)
@@ -1909,7 +1909,7 @@ show :: PoolUpdateMetadata -&gt; String
 $cshow :: PoolUpdateMetadata -&gt; String
 showsPrec :: Int -&gt; PoolUpdateMetadata -&gt; ShowS
 $cshowsPrec :: Int -&gt; PoolUpdateMetadata -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199839"><span id="local-6989586621681199841"><span class="annot"><span class="annottext">PoolUpdateMetadata -&gt; PoolUpdateMetadata -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199846"><span id="local-6989586621681199848"><span class="annot"><span class="annottext">PoolUpdateMetadata -&gt; PoolUpdateMetadata -&gt; Bool
 (PoolUpdateMetadata -&gt; PoolUpdateMetadata -&gt; Bool)
 -&gt; (PoolUpdateMetadata -&gt; PoolUpdateMetadata -&gt; Bool)
 -&gt; Eq PoolUpdateMetadata
@@ -1928,7 +1928,7 @@ forall a.
 $cto :: forall x. Rep PoolUpdateMetadata x -&gt; PoolUpdateMetadata
 $cfrom :: forall x. PoolUpdateMetadata -&gt; Rep PoolUpdateMetadata x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-390"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199833"><span id="local-6989586621681199835"><span class="annot"><span class="annottext">Value -&gt; Parser [PoolUpdateMetadata]
+</span><span id="line-390"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681199840"><span id="local-6989586621681199842"><span class="annot"><span class="annottext">Value -&gt; Parser [PoolUpdateMetadata]
 Value -&gt; Parser PoolUpdateMetadata
 (Value -&gt; Parser PoolUpdateMetadata)
 -&gt; (Value -&gt; Parser [PoolUpdateMetadata])
@@ -1939,7 +1939,7 @@ parseJSONList :: Value -&gt; Parser [PoolUpdateMetadata]
 $cparseJSONList :: Value -&gt; Parser [PoolUpdateMetadata]
 parseJSON :: Value -&gt; Parser PoolUpdateMetadata
 $cparseJSON :: Value -&gt; Parser PoolUpdateMetadata
-</span><a href="#local-6989586621681199833"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199825"><span id="local-6989586621681199827"><span id="local-6989586621681199829"><span id="local-6989586621681199831"><span class="annot"><span class="annottext">[PoolUpdateMetadata] -&gt; Encoding
+</span><a href="#local-6989586621681199840"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681199832"><span id="local-6989586621681199834"><span id="local-6989586621681199836"><span id="local-6989586621681199838"><span class="annot"><span class="annottext">[PoolUpdateMetadata] -&gt; Encoding
 [PoolUpdateMetadata] -&gt; Value
 PoolUpdateMetadata -&gt; Encoding
 PoolUpdateMetadata -&gt; Value
@@ -1962,14 +1962,14 @@ toEncoding :: PoolUpdateMetadata -&gt; Encoding
 $ctoEncoding :: PoolUpdateMetadata -&gt; Encoding
 toJSON :: PoolUpdateMetadata -&gt; Value
 $ctoJSON :: PoolUpdateMetadata -&gt; Value
-</span><a href="#local-6989586621681199825"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681199832"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-391"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_poolUpdateMetadata&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#PoolUpdateMetadata"><span class="hs-identifier hs-type">PoolUpdateMetadata</span></a></span><span>
 </span><span id="line-392"></span><span>
 </span><span id="line-393"></span><span class="hs-comment">-- Note: Similar to PoolMetadata but w/o PoolId and Hex fields</span><span>
 </span><span id="line-394"></span><span>
 </span><span id="line-395"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Transactions.html#PoolUpdateMetadata"><span class="hs-identifier hs-type">PoolUpdateMetadata</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-396"></span><span>  </span><span id="local-6989586621681199823"><span class="annot"><span class="annottext">toSamples :: Proxy PoolUpdateMetadata -&gt; [(Text, PoolUpdateMetadata)]
-</span><a href="#local-6989586621681199823"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, PoolUpdateMetadata)]
+</span><span id="line-396"></span><span>  </span><span id="local-6989586621681199830"><span class="annot"><span class="annottext">toSamples :: Proxy PoolUpdateMetadata -&gt; [(Text, PoolUpdateMetadata)]
+</span><a href="#local-6989586621681199830"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, PoolUpdateMetadata)]
 -&gt; Proxy PoolUpdateMetadata -&gt; [(Text, PoolUpdateMetadata)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, PoolUpdateMetadata)]

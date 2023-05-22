@@ -98,10 +98,10 @@
 -&gt; DecentralizationLevel
 -&gt; Seq BlockProduction
 -&gt; PerformanceEstimate
-</span><a href="Cardano.Pool.Rank.Likelihood.html#estimatePoolPerformance"><span class="hs-identifier hs-var hs-var">estimatePoolPerformance</span></a></span></span><span> </span><span id="local-6989586621682465975"><span class="annot"><span class="annottext">SlottingParameters
-</span><a href="#local-6989586621682465975"><span class="hs-identifier hs-var">sp</span></a></span></span><span> </span><span id="local-6989586621682465974"><span class="annot"><span class="annottext">DecentralizationLevel
-</span><a href="#local-6989586621682465974"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span id="local-6989586621682465973"><span class="annot"><span class="annottext">Seq BlockProduction
-</span><a href="#local-6989586621682465973"><span class="hs-identifier hs-var">history</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Pool.Rank.Likelihood.html#estimatePoolPerformance"><span class="hs-identifier hs-var hs-var">estimatePoolPerformance</span></a></span></span><span> </span><span id="local-6989586621682466259"><span class="annot"><span class="annottext">SlottingParameters
+</span><a href="#local-6989586621682466259"><span class="hs-identifier hs-var">sp</span></a></span></span><span> </span><span id="local-6989586621682466258"><span class="annot"><span class="annottext">DecentralizationLevel
+</span><a href="#local-6989586621682466258"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span id="local-6989586621682466257"><span class="annot"><span class="annottext">Seq BlockProduction
+</span><a href="#local-6989586621682466257"><span class="hs-identifier hs-var">history</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-96"></span><span>    </span><span class="annot"><span class="annottext">Likelihood -&gt; PerformanceEstimate
 </span><a href="Cardano.Pool.Rank.Likelihood.html#percentile%27"><span class="hs-identifier hs-var">percentile'</span></a></span><span> </span><span class="annot"><span class="annottext">(Likelihood -&gt; PerformanceEstimate)
 -&gt; Likelihood -&gt; PerformanceEstimate
@@ -112,28 +112,28 @@ forall (t :: * -&gt; *) b a.
 Foldable t =&gt;
 (b -&gt; a -&gt; b) -&gt; b -&gt; t a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">foldl'</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood -&gt; BlockProduction -&gt; Likelihood
-</span><a href="#local-6989586621682465972"><span class="hs-identifier hs-var">considerEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood
+</span><a href="#local-6989586621682466256"><span class="hs-identifier hs-var">considerEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood
 forall a. Monoid a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Seq BlockProduction -&gt; Seq BlockProduction
 forall a. Seq a -&gt; Seq a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Seq.reverse</span></a></span><span> </span><span class="annot"><span class="annottext">Seq BlockProduction
-</span><a href="#local-6989586621682465973"><span class="hs-identifier hs-var">history</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466257"><span class="hs-identifier hs-var">history</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-97"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-98"></span><span>    </span><span id="local-6989586621682465972"><span class="annot"><span class="annottext">considerEpoch :: Likelihood -&gt; BlockProduction -&gt; Likelihood
-</span><a href="#local-6989586621682465972"><span class="hs-identifier hs-var hs-var">considerEpoch</span></a></span></span><span> </span><span id="local-6989586621682465970"><span class="annot"><span class="annottext">Likelihood
-</span><a href="#local-6989586621682465970"><span class="hs-identifier hs-var">li</span></a></span></span><span> </span><span id="local-6989586621682465969"><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465969"><span class="hs-identifier hs-var">perf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; Likelihood -&gt; Likelihood
+</span><span id="line-98"></span><span>    </span><span id="local-6989586621682466256"><span class="annot"><span class="annottext">considerEpoch :: Likelihood -&gt; BlockProduction -&gt; Likelihood
+</span><a href="#local-6989586621682466256"><span class="hs-identifier hs-var hs-var">considerEpoch</span></a></span></span><span> </span><span id="local-6989586621682466254"><span class="annot"><span class="annottext">Likelihood
+</span><a href="#local-6989586621682466254"><span class="hs-identifier hs-var">li</span></a></span></span><span> </span><span id="local-6989586621682466253"><span class="annot"><span class="annottext">BlockProduction
+</span><a href="#local-6989586621682466253"><span class="hs-identifier hs-var">perf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; Likelihood -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#applyDecay"><span class="hs-identifier hs-var">applyDecay</span></a></span><span> </span><span class="annot"><span class="annottext">Float
 </span><a href="Cardano.Pool.Rank.Likelihood.html#decayFactor"><span class="hs-identifier hs-var">decayFactor</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood
-</span><a href="#local-6989586621682465970"><span class="hs-identifier hs-var">li</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood -&gt; Likelihood -&gt; Likelihood
+</span><a href="#local-6989586621682466254"><span class="hs-identifier hs-var">li</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood -&gt; Likelihood -&gt; Likelihood
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction -&gt; Likelihood
-</span><a href="#local-6989586621682465967"><span class="hs-identifier hs-var">likelihood'</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465969"><span class="hs-identifier hs-var">perf</span></a></span><span>
+</span><a href="#local-6989586621682466251"><span class="hs-identifier hs-var">likelihood'</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction
+</span><a href="#local-6989586621682466253"><span class="hs-identifier hs-var">perf</span></a></span><span>
 </span><span id="line-99"></span><span>
-</span><span id="line-100"></span><span>    </span><span id="local-6989586621682465966"><span class="annot"><span class="annottext">prob :: BlockProduction -&gt; Double
-</span><a href="#local-6989586621682465966"><span class="hs-identifier hs-var hs-var">prob</span></a></span></span><span> </span><span id="local-6989586621682465965"><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465965"><span class="hs-identifier hs-var">perf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ActiveSlotCoeff -&gt; Rational -&gt; Rational -&gt; Double
+</span><span id="line-100"></span><span>    </span><span id="local-6989586621682466250"><span class="annot"><span class="annottext">prob :: BlockProduction -&gt; Double
+</span><a href="#local-6989586621682466250"><span class="hs-identifier hs-var hs-var">prob</span></a></span></span><span> </span><span id="local-6989586621682466249"><span class="annot"><span class="annottext">BlockProduction
+</span><a href="#local-6989586621682466249"><span class="hs-identifier hs-var">perf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ActiveSlotCoeff -&gt; Rational -&gt; Rational -&gt; Double
 </span><a href="Cardano.Pool.Rank.Likelihood.html#leaderProbability"><span class="hs-identifier hs-var">leaderProbability</span></a></span><span>
 </span><span id="line-101"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ActiveSlotCoefficient -&gt; ActiveSlotCoeff
 </span><a href="Cardano.Pool.Rank.Likelihood.html#toActiveSlotCoeff"><span class="hs-identifier hs-var">toActiveSlotCoeff</span></a></span><span> </span><span class="annot"><span class="annottext">(ActiveSlotCoefficient -&gt; ActiveSlotCoeff)
@@ -141,26 +141,26 @@ forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SlottingParameters -&gt; ActiveSlotCoefficient
 </span><a href="Cardano.Wallet.Primitive.Types.html#%24sel%3AgetActiveSlotCoefficient%3ASlottingParameters"><span class="hs-identifier hs-var hs-var">getActiveSlotCoefficient</span></a></span><span> </span><span class="annot"><span class="annottext">SlottingParameters
-</span><a href="#local-6989586621682465975"><span class="hs-identifier hs-var">sp</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466259"><span class="hs-identifier hs-var">sp</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-102"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockProduction -&gt; Rational
 </span><a href="Cardano.Pool.Rank.Likelihood.html#stakeRelative"><span class="hs-identifier hs-var hs-var">stakeRelative</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465965"><span class="hs-identifier hs-var">perf</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466249"><span class="hs-identifier hs-var">perf</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-103"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Percentage -&gt; Rational
 </span><a href="Data.Quantity.html#getPercentage"><span class="hs-identifier hs-var hs-var">getPercentage</span></a></span><span> </span><span class="annot"><span class="annottext">(Percentage -&gt; Rational) -&gt; Percentage -&gt; Rational
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">DecentralizationLevel -&gt; Percentage
 </span><a href="Cardano.Wallet.Primitive.Types.html#getFederationPercentage"><span class="hs-identifier hs-var">getFederationPercentage</span></a></span><span> </span><span class="annot"><span class="annottext">DecentralizationLevel
-</span><a href="#local-6989586621682465974"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-104"></span><span>    </span><span id="local-6989586621682465967"><span class="annot"><span class="annottext">likelihood' :: BlockProduction -&gt; Likelihood
-</span><a href="#local-6989586621682465967"><span class="hs-identifier hs-var hs-var">likelihood'</span></a></span></span><span> </span><span id="local-6989586621682465960"><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465960"><span class="hs-identifier hs-var">perf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Double -&gt; EpochSize -&gt; Likelihood
+</span><a href="#local-6989586621682466258"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-104"></span><span>    </span><span id="local-6989586621682466251"><span class="annot"><span class="annottext">likelihood' :: BlockProduction -&gt; Likelihood
+</span><a href="#local-6989586621682466251"><span class="hs-identifier hs-var hs-var">likelihood'</span></a></span></span><span> </span><span id="local-6989586621682466244"><span class="annot"><span class="annottext">BlockProduction
+</span><a href="#local-6989586621682466244"><span class="hs-identifier hs-var">perf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Double -&gt; EpochSize -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#likelihood"><span class="hs-identifier hs-var">likelihood</span></a></span><span>
 </span><span id="line-105"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockProduction -&gt; Natural
 </span><a href="Cardano.Pool.Rank.Likelihood.html#blocksProduced"><span class="hs-identifier hs-var hs-var">blocksProduced</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465960"><span class="hs-identifier hs-var">perf</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466244"><span class="hs-identifier hs-var">perf</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-106"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BlockProduction -&gt; Double
-</span><a href="#local-6989586621682465966"><span class="hs-identifier hs-var">prob</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction
-</span><a href="#local-6989586621682465960"><span class="hs-identifier hs-var">perf</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466250"><span class="hs-identifier hs-var">prob</span></a></span><span> </span><span class="annot"><span class="annottext">BlockProduction
+</span><a href="#local-6989586621682466244"><span class="hs-identifier hs-var">perf</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-107"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word32 -&gt; EpochSize
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">(Word32 -&gt; EpochSize) -&gt; Word32 -&gt; EpochSize
@@ -170,7 +170,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SlottingParameters -&gt; EpochLength
 </span><a href="Cardano.Wallet.Primitive.Types.html#%24sel%3AgetEpochLength%3ASlottingParameters"><span class="hs-identifier hs-var hs-var">getEpochLength</span></a></span><span> </span><span class="annot"><span class="annottext">SlottingParameters
-</span><a href="#local-6989586621682465975"><span class="hs-identifier hs-var">sp</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466259"><span class="hs-identifier hs-var">sp</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-108"></span><span>
 </span><span id="line-109"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#decayFactor"><span class="hs-identifier hs-type">decayFactor</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Float</span></a></span><span>
 </span><span id="line-110"></span><span id="decayFactor"><span class="annot"><span class="annottext">decayFactor :: Float
@@ -193,12 +193,12 @@ forall a. a -&gt; a
 </span><span id="line-122"></span><span>
 </span><span id="line-123"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#toActiveSlotCoeff"><span class="hs-identifier hs-type">toActiveSlotCoeff</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#ActiveSlotCoefficient"><span class="hs-identifier hs-type">ActiveSlotCoefficient</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#ActiveSlotCoeff"><span class="hs-identifier hs-type">ActiveSlotCoeff</span></a></span><span>
 </span><span id="line-124"></span><span id="toActiveSlotCoeff"><span class="annot"><span class="annottext">toActiveSlotCoeff :: ActiveSlotCoefficient -&gt; ActiveSlotCoeff
-</span><a href="Cardano.Pool.Rank.Likelihood.html#toActiveSlotCoeff"><span class="hs-identifier hs-var hs-var">toActiveSlotCoeff</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#ActiveSlotCoefficient"><span class="hs-identifier hs-type">ActiveSlotCoefficient</span></a></span><span> </span><span id="local-6989586621682465952"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465952"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; ActiveSlotCoeff
+</span><a href="Cardano.Pool.Rank.Likelihood.html#toActiveSlotCoeff"><span class="hs-identifier hs-var hs-var">toActiveSlotCoeff</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#ActiveSlotCoefficient"><span class="hs-identifier hs-type">ActiveSlotCoefficient</span></a></span><span> </span><span id="local-6989586621682466236"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466236"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; ActiveSlotCoeff
 </span><a href="Cardano.Pool.Rank.Likelihood.html#ActiveSlotCoeff"><span class="hs-identifier hs-var">ActiveSlotCoeff</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double -&gt; Rational
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465952"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466236"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-125"></span><span>
 </span><span id="line-126"></span><span class="hs-keyword">newtype</span><span> </span><span id="ActiveSlotCoeff"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#ActiveSlotCoeff"><span class="hs-identifier hs-var">ActiveSlotCoeff</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ActiveSlotCoeff"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#ActiveSlotCoeff"><span class="hs-identifier hs-var">ActiveSlotCoeff</span></a></span></span><span>
 </span><span id="line-127"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="activeSlotVal"><span class="annot"><span class="annottext">ActiveSlotCoeff -&gt; Rational
@@ -211,9 +211,9 @@ forall a b. (Real a, Fractional b) =&gt; a -&gt; b
     * reimannSum -&gt; riemannSum &#129299;
 -------------------------------------------------------------------------------}</span><span>
 </span><span id="line-135"></span><span class="hs-comment">-- ---- begin copy ----</span><span>
-</span><span id="line-136"></span><span id="local-6989586621682465948"><span id="local-6989586621682465949"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="LogWeight"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="LogWeight"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unLogWeight"><span class="annot"><span class="annottext">LogWeight -&gt; Float
+</span><span id="line-136"></span><span id="local-6989586621682466232"><span id="local-6989586621682466233"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="LogWeight"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="LogWeight"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unLogWeight"><span class="annot"><span class="annottext">LogWeight -&gt; Float
 </span><a href="Cardano.Pool.Rank.Likelihood.html#unLogWeight"><span class="hs-identifier hs-var hs-var">unLogWeight</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Float</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-137"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682465942"><span id="local-6989586621682465944"><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; Bool
+</span><span id="line-137"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682466226"><span id="local-6989586621682466228"><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; Bool
 (LogWeight -&gt; LogWeight -&gt; Bool)
 -&gt; (LogWeight -&gt; LogWeight -&gt; Bool) -&gt; Eq LogWeight
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -229,7 +229,7 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep LogWeight x -&gt; LogWeight
 $cfrom :: forall x. LogWeight -&gt; Rep LogWeight x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465923"><span id="local-6989586621682465925"><span id="local-6989586621682465927"><span id="local-6989586621682465929"><span id="local-6989586621682465931"><span id="local-6989586621682465933"><span id="local-6989586621682465935"><span class="annot"><span class="annottext">Eq LogWeight
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466207"><span id="local-6989586621682466209"><span id="local-6989586621682466211"><span id="local-6989586621682466213"><span id="local-6989586621682466215"><span id="local-6989586621682466217"><span id="local-6989586621682466219"><span class="annot"><span class="annottext">Eq LogWeight
 Eq LogWeight
 -&gt; (LogWeight -&gt; LogWeight -&gt; Ordering)
 -&gt; (LogWeight -&gt; LogWeight -&gt; Bool)
@@ -267,7 +267,7 @@ $c&lt; :: LogWeight -&gt; LogWeight -&gt; Bool
 compare :: LogWeight -&gt; LogWeight -&gt; Ordering
 $ccompare :: LogWeight -&gt; LogWeight -&gt; Ordering
 $cp1Ord :: Eq LogWeight
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465908"><span id="local-6989586621682465910"><span id="local-6989586621682465912"><span id="local-6989586621682465914"><span id="local-6989586621682465916"><span id="local-6989586621682465918"><span id="local-6989586621682465920"><span class="annot"><span class="annottext">EpochSize -&gt; LogWeight
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466192"><span id="local-6989586621682466194"><span id="local-6989586621682466196"><span id="local-6989586621682466198"><span id="local-6989586621682466200"><span id="local-6989586621682466202"><span id="local-6989586621682466204"><span class="annot"><span class="annottext">EpochSize -&gt; LogWeight
 LogWeight -&gt; LogWeight
 LogWeight -&gt; LogWeight -&gt; LogWeight
 (LogWeight -&gt; LogWeight -&gt; LogWeight)
@@ -301,12 +301,12 @@ $c* :: LogWeight -&gt; LogWeight -&gt; LogWeight
 $c- :: LogWeight -&gt; LogWeight -&gt; LogWeight
 + :: LogWeight -&gt; LogWeight -&gt; LogWeight
 $c+ :: LogWeight -&gt; LogWeight -&gt; LogWeight
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465905"><span class="annot"><span class="annottext">LogWeight -&gt; ()
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Num</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466189"><span class="annot"><span class="annottext">LogWeight -&gt; ()
 (LogWeight -&gt; ()) -&gt; NFData LogWeight
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: LogWeight -&gt; ()
 $crnf :: LogWeight -&gt; ()
-</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465898"><span id="local-6989586621682465900"><span id="local-6989586621682465902"><span class="annot"><span class="annottext">Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466182"><span id="local-6989586621682466184"><span id="local-6989586621682466186"><span class="annot"><span class="annottext">Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo)
 Proxy LogWeight -&gt; String
 (Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo))
@@ -324,7 +324,7 @@ $cwNoThunks :: Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo)
 noThunks :: Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo)
 $cnoThunks :: Context -&gt; LogWeight -&gt; IO (Maybe ThunkInfo)
 </span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-138"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682465891"><span id="local-6989586621682465893"><span id="local-6989586621682465895"><span class="annot"><span class="annottext">Int -&gt; LogWeight -&gt; ShowS
+</span><span id="line-138"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682466175"><span id="local-6989586621682466177"><span id="local-6989586621682466179"><span class="annot"><span class="annottext">Int -&gt; LogWeight -&gt; ShowS
 [LogWeight] -&gt; ShowS
 LogWeight -&gt; String
 (Int -&gt; LogWeight -&gt; ShowS)
@@ -343,8 +343,8 @@ $cshowsPrec :: Int -&gt; LogWeight -&gt; ShowS
 </span><span id="line-139"></span><span>
 </span><span id="line-140"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#toLogWeight"><span class="hs-identifier hs-type">toLogWeight</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span>
 </span><span id="line-141"></span><span id="toLogWeight"><span class="annot"><span class="annottext">toLogWeight :: Double -&gt; LogWeight
-</span><a href="Cardano.Pool.Rank.Likelihood.html#toLogWeight"><span class="hs-identifier hs-var hs-var">toLogWeight</span></a></span></span><span> </span><span id="local-6989586621682465887"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465887"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
+</span><a href="Cardano.Pool.Rank.Likelihood.html#toLogWeight"><span class="hs-identifier hs-var hs-var">toLogWeight</span></a></span></span><span> </span><span id="local-6989586621682466171"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466171"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double -&gt; Float
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Float) -&gt; Double -&gt; Float
@@ -352,21 +352,21 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
 forall a. Floating a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">log</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465887"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466171"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-142"></span><span>
 </span><span id="line-143"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#fromLogWeight"><span class="hs-identifier hs-type">fromLogWeight</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span>
 </span><span id="line-144"></span><span id="fromLogWeight"><span class="annot"><span class="annottext">fromLogWeight :: LogWeight -&gt; Double
-</span><a href="Cardano.Pool.Rank.Likelihood.html#fromLogWeight"><span class="hs-identifier hs-var hs-var">fromLogWeight</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span> </span><span id="local-6989586621682465884"><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465884"><span class="hs-identifier hs-var">l</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
+</span><a href="Cardano.Pool.Rank.Likelihood.html#fromLogWeight"><span class="hs-identifier hs-var hs-var">fromLogWeight</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span> </span><span id="local-6989586621682466168"><span class="annot"><span class="annottext">Float
+</span><a href="#local-6989586621682466168"><span class="hs-identifier hs-var">l</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
 forall a. Floating a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">exp</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Float -&gt; Double
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465884"><span class="hs-identifier hs-var">l</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466168"><span class="hs-identifier hs-var">l</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-145"></span><span>
-</span><span id="line-146"></span><span id="local-6989586621682465881"><span id="local-6989586621682465882"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Histogram"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-var">Histogram</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Histogram"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-var">Histogram</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unHistogram"><span class="annot"><span class="annottext">Histogram -&gt; StrictSeq LogWeight
+</span><span id="line-146"></span><span id="local-6989586621682466165"><span id="local-6989586621682466166"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Histogram"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-var">Histogram</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Histogram"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-var">Histogram</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unHistogram"><span class="annot"><span class="annottext">Histogram -&gt; StrictSeq LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#unHistogram"><span class="hs-identifier hs-var hs-var">unHistogram</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../strict-containers/html/src"><span class="hs-identifier hs-type">StrictSeq</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-147"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682465875"><span id="local-6989586621682465877"><span class="annot"><span class="annottext">Histogram -&gt; Histogram -&gt; Bool
+</span><span id="line-147"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682466159"><span id="local-6989586621682466161"><span class="annot"><span class="annottext">Histogram -&gt; Histogram -&gt; Bool
 (Histogram -&gt; Histogram -&gt; Bool)
 -&gt; (Histogram -&gt; Histogram -&gt; Bool) -&gt; Eq Histogram
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -374,7 +374,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: Histogram -&gt; Histogram -&gt; Bool
 == :: Histogram -&gt; Histogram -&gt; Bool
 $c== :: Histogram -&gt; Histogram -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465869"><span id="local-6989586621682465871"><span id="local-6989586621682465873"><span class="annot"><span class="annottext">Int -&gt; Histogram -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466153"><span id="local-6989586621682466155"><span id="local-6989586621682466157"><span class="annot"><span class="annottext">Int -&gt; Histogram -&gt; ShowS
 [Histogram] -&gt; ShowS
 Histogram -&gt; String
 (Int -&gt; Histogram -&gt; ShowS)
@@ -399,10 +399,10 @@ $cto :: forall x. Rep Histogram x -&gt; Histogram
 $cfrom :: forall x. Histogram -&gt; Rep Histogram x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-148"></span><span>
-</span><span id="line-149"></span><span id="local-6989586621682465865"><span id="local-6989586621682465866"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Likelihood"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Likelihood"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unLikelihood"><span class="annot"><span class="annottext">Likelihood -&gt; StrictSeq LogWeight
+</span><span id="line-149"></span><span id="local-6989586621682466149"><span id="local-6989586621682466150"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Likelihood"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Likelihood"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unLikelihood"><span class="annot"><span class="annottext">Likelihood -&gt; StrictSeq LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#unLikelihood"><span class="hs-identifier hs-var hs-var">unLikelihood</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../strict-containers/html/src"><span class="hs-identifier hs-type">StrictSeq</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-150"></span><span>  </span><span class="hs-comment">-- TODO: replace with small data structure</span><span>
-</span><span id="line-151"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682465857"><span id="local-6989586621682465859"><span id="local-6989586621682465861"><span class="annot"><span class="annottext">Int -&gt; Likelihood -&gt; ShowS
+</span><span id="line-151"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682466141"><span id="local-6989586621682466143"><span id="local-6989586621682466145"><span class="annot"><span class="annottext">Int -&gt; Likelihood -&gt; ShowS
 [Likelihood] -&gt; ShowS
 Likelihood -&gt; String
 (Int -&gt; Likelihood -&gt; ShowS)
@@ -417,7 +417,7 @@ show :: Likelihood -&gt; String
 $cshow :: Likelihood -&gt; String
 showsPrec :: Int -&gt; Likelihood -&gt; ShowS
 $cshowsPrec :: Int -&gt; Likelihood -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465842"><span id="local-6989586621682465844"><span id="local-6989586621682465846"><span id="local-6989586621682465848"><span id="local-6989586621682465850"><span id="local-6989586621682465852"><span id="local-6989586621682465854"><span class="annot"><span class="annottext">Eq Likelihood
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466126"><span id="local-6989586621682466128"><span id="local-6989586621682466130"><span id="local-6989586621682466132"><span id="local-6989586621682466134"><span id="local-6989586621682466136"><span id="local-6989586621682466138"><span class="annot"><span class="annottext">Eq Likelihood
 Eq Likelihood
 -&gt; (Likelihood -&gt; Likelihood -&gt; Ordering)
 -&gt; (Likelihood -&gt; Likelihood -&gt; Bool)
@@ -463,17 +463,17 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep Likelihood x -&gt; Likelihood
 $cfrom :: forall x. Likelihood -&gt; Rep Likelihood x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465838"><span class="annot"><span class="annottext">Likelihood -&gt; ()
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466122"><span class="annot"><span class="annottext">Likelihood -&gt; ()
 (Likelihood -&gt; ()) -&gt; NFData Likelihood
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: Likelihood -&gt; ()
 $crnf :: Likelihood -&gt; ()
-</span><a href="#local-6989586621682465838"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466122"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-152"></span><span>
-</span><span id="line-153"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682465832"><span id="local-6989586621682465834"><span id="local-6989586621682465836"><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-type">NoThunks</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span></span></span><span>
+</span><span id="line-153"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682466116"><span id="local-6989586621682466118"><span id="local-6989586621682466120"><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-type">NoThunks</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span></span></span><span>
 </span><span id="line-154"></span><span>
-</span><span id="line-155"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682465829"><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Eq</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-156"></span><span>  </span><span id="local-6989586621682465828"><span class="annot"><span class="annottext">== :: Likelihood -&gt; Likelihood -&gt; Bool
+</span><span id="line-155"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682466113"><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Eq</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-156"></span><span>  </span><span id="local-6989586621682466112"><span class="annot"><span class="annottext">== :: Likelihood -&gt; Likelihood -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var hs-var hs-var hs-var">(==)</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; StrictSeq LogWeight -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">(==)</span></a></span><span> </span><span class="annot"><span class="annottext">(StrictSeq LogWeight -&gt; StrictSeq LogWeight -&gt; Bool)
@@ -489,11 +489,11 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#normalizeLikelihood"><span class="hs-identifier hs-var">normalizeLikelihood</span></a></span><span>
 </span><span id="line-157"></span><span>
-</span><span id="line-158"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682465821"><span id="local-6989586621682465823"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Semigroup</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-159"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682465819"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465819"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682465818"><span class="annot"><span class="annottext">&lt;&gt; :: Likelihood -&gt; Likelihood -&gt; Likelihood
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var hs-var hs-var hs-var">&lt;&gt;</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682465817"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465817"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-158"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682466105"><span id="local-6989586621682466107"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Semigroup</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-159"></span><span>  </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682466103"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466103"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682466102"><span class="annot"><span class="annottext">&lt;&gt; :: Likelihood -&gt; Likelihood -&gt; Likelihood
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var hs-var hs-var hs-var">&lt;&gt;</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682466101"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466101"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-160"></span><span>    </span><span class="annot"><span class="annottext">Likelihood -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#normalizeLikelihood"><span class="hs-identifier hs-var">normalizeLikelihood</span></a></span><span> </span><span class="annot"><span class="annottext">(Likelihood -&gt; Likelihood) -&gt; Likelihood -&gt; Likelihood
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -507,11 +507,11 @@ forall a b c.
 </span><a href="../../../../strict-containers/html/src"><span class="hs-identifier hs-var">StrictSeq.zipWith</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">(+)</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465819"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465817"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466103"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466101"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-161"></span><span>
-</span><span id="line-162"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682465809"><span id="local-6989586621682465811"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monoid</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-163"></span><span>  </span><span id="local-6989586621682465807"><span class="annot"><span class="annottext">mempty :: Likelihood
+</span><span id="line-162"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682466093"><span id="local-6989586621682466095"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monoid</span></a></span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-163"></span><span>  </span><span id="local-6989586621682466091"><span class="annot"><span class="annottext">mempty :: Likelihood
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">mempty</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span><span> </span><span class="annot"><span class="annottext">(StrictSeq LogWeight -&gt; Likelihood)
 -&gt; StrictSeq LogWeight -&gt; Likelihood
@@ -532,34 +532,34 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 </span><span id="line-164"></span><span>
 </span><span id="line-165"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#normalizeLikelihood"><span class="hs-identifier hs-type">normalizeLikelihood</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span>
 </span><span id="line-166"></span><span id="normalizeLikelihood"><span class="annot"><span class="annottext">normalizeLikelihood :: Likelihood -&gt; Likelihood
-</span><a href="Cardano.Pool.Rank.Likelihood.html#normalizeLikelihood"><span class="hs-identifier hs-var hs-var">normalizeLikelihood</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682465802"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465802"><span class="hs-identifier hs-var">xs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Likelihood
+</span><a href="Cardano.Pool.Rank.Likelihood.html#normalizeLikelihood"><span class="hs-identifier hs-var hs-var">normalizeLikelihood</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682466086"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466086"><span class="hs-identifier hs-var">xs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span><span> </span><span class="annot"><span class="annottext">(StrictSeq LogWeight -&gt; Likelihood)
 -&gt; StrictSeq LogWeight -&gt; Likelihood
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682465801"><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465801"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465801"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682466085"><span class="annot"><span class="annottext">LogWeight
+</span><a href="#local-6989586621682466085"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">LogWeight
+</span><a href="#local-6989586621682466085"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465800"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
+</span><a href="#local-6989586621682466084"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
 -&gt; StrictSeq LogWeight -&gt; StrictSeq LogWeight
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465802"><span class="hs-identifier hs-var">xs</span></a></span><span>
+</span><a href="#local-6989586621682466086"><span class="hs-identifier hs-var">xs</span></a></span><span>
 </span><span id="line-167"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-168"></span><span>    </span><span id="local-6989586621682465800"><span class="annot"><span class="annottext">m :: LogWeight
-</span><a href="#local-6989586621682465800"><span class="hs-identifier hs-var hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; LogWeight
+</span><span id="line-168"></span><span>    </span><span id="local-6989586621682466084"><span class="annot"><span class="annottext">m :: LogWeight
+</span><a href="#local-6989586621682466084"><span class="hs-identifier hs-var hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; LogWeight
 forall (t :: * -&gt; *) a. (Foldable t, Ord a) =&gt; t a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">minimum</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465802"><span class="hs-identifier hs-var">xs</span></a></span><span>
+</span><a href="#local-6989586621682466086"><span class="hs-identifier hs-var">xs</span></a></span><span>
 </span><span id="line-169"></span><span>
 </span><span id="line-170"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#leaderProbability"><span class="hs-identifier hs-type">leaderProbability</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#ActiveSlotCoeff"><span class="hs-identifier hs-type">ActiveSlotCoeff</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Rational</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#UnitInterval"><span class="hs-identifier hs-type">UnitInterval</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span>
 </span><span id="line-171"></span><span id="leaderProbability"><span class="annot"><span class="annottext">leaderProbability :: ActiveSlotCoeff -&gt; Rational -&gt; Rational -&gt; Double
-</span><a href="Cardano.Pool.Rank.Likelihood.html#leaderProbability"><span class="hs-identifier hs-var hs-var">leaderProbability</span></a></span></span><span> </span><span id="local-6989586621682465797"><span class="annot"><span class="annottext">ActiveSlotCoeff
-</span><a href="#local-6989586621682465797"><span class="hs-identifier hs-var">activeSlotCoeff</span></a></span></span><span> </span><span id="local-6989586621682465796"><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621682465796"><span class="hs-identifier hs-var">relativeStake</span></a></span></span><span> </span><span id="local-6989586621682465795"><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621682465795"><span class="hs-identifier hs-var">decentralizationParameter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Pool.Rank.Likelihood.html#leaderProbability"><span class="hs-identifier hs-var hs-var">leaderProbability</span></a></span></span><span> </span><span id="local-6989586621682466081"><span class="annot"><span class="annottext">ActiveSlotCoeff
+</span><a href="#local-6989586621682466081"><span class="hs-identifier hs-var">activeSlotCoeff</span></a></span></span><span> </span><span id="local-6989586621682466080"><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621682466080"><span class="hs-identifier hs-var">relativeStake</span></a></span></span><span> </span><span id="local-6989586621682466079"><span class="annot"><span class="annottext">Rational
+</span><a href="#local-6989586621682466079"><span class="hs-identifier hs-var">decentralizationParameter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-172"></span><span>  </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
@@ -567,19 +567,19 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465794"><span class="hs-identifier hs-var">asc</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466078"><span class="hs-identifier hs-var">asc</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Floating a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">**</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465792"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466076"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465790"><span class="hs-identifier hs-var">d'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466074"><span class="hs-identifier hs-var">d'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-173"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-174"></span><span>    </span><span id="local-6989586621682465790"><span class="annot"><span class="annottext">d' :: Double
-</span><a href="#local-6989586621682465790"><span class="hs-identifier hs-var hs-var">d'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Double
+</span><span id="line-174"></span><span>    </span><span id="local-6989586621682466074"><span class="annot"><span class="annottext">d' :: Double
+</span><a href="#local-6989586621682466074"><span class="hs-identifier hs-var hs-var">d'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Double
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">(Rational -&gt; Double)
 -&gt; (Rational -&gt; Rational) -&gt; Rational -&gt; Double
@@ -588,9 +588,9 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Cardano.Pool.Rank.Likelihood.html#unboundRational"><span class="hs-identifier hs-var">unboundRational</span></a></span><span> </span><span class="annot"><span class="annottext">(Rational -&gt; Double) -&gt; Rational -&gt; Double
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621682465795"><span class="hs-identifier hs-var">decentralizationParameter</span></a></span><span>
-</span><span id="line-175"></span><span>    </span><span id="local-6989586621682465794"><span class="annot"><span class="annottext">asc :: Double
-</span><a href="#local-6989586621682465794"><span class="hs-identifier hs-var hs-var">asc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Double
+</span><a href="#local-6989586621682466079"><span class="hs-identifier hs-var">decentralizationParameter</span></a></span><span>
+</span><span id="line-175"></span><span>    </span><span id="local-6989586621682466078"><span class="annot"><span class="annottext">asc :: Double
+</span><a href="#local-6989586621682466078"><span class="hs-identifier hs-var hs-var">asc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Double
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">(Rational -&gt; Double)
 -&gt; (ActiveSlotCoeff -&gt; Rational) -&gt; ActiveSlotCoeff -&gt; Double
@@ -603,18 +603,18 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Cardano.Pool.Rank.Likelihood.html#activeSlotVal"><span class="hs-identifier hs-var hs-var">activeSlotVal</span></a></span><span> </span><span class="annot"><span class="annottext">(ActiveSlotCoeff -&gt; Double) -&gt; ActiveSlotCoeff -&gt; Double
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ActiveSlotCoeff
-</span><a href="#local-6989586621682465797"><span class="hs-identifier hs-var">activeSlotCoeff</span></a></span><span>
-</span><span id="line-176"></span><span>    </span><span id="local-6989586621682465792"><span class="annot"><span class="annottext">s :: Double
-</span><a href="#local-6989586621682465792"><span class="hs-identifier hs-var hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Double
+</span><a href="#local-6989586621682466081"><span class="hs-identifier hs-var">activeSlotCoeff</span></a></span><span>
+</span><span id="line-176"></span><span>    </span><span id="local-6989586621682466076"><span class="annot"><span class="annottext">s :: Double
+</span><a href="#local-6989586621682466076"><span class="hs-identifier hs-var hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Double
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621682465796"><span class="hs-identifier hs-var">relativeStake</span></a></span><span>
+</span><a href="#local-6989586621682466080"><span class="hs-identifier hs-var">relativeStake</span></a></span><span>
 </span><span id="line-177"></span><span>
 </span><span id="line-178"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#samplePositions"><span class="hs-identifier hs-type">samplePositions</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../strict-containers/html/src"><span class="hs-identifier hs-type">StrictSeq</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span>
 </span><span id="line-179"></span><span id="samplePositions"><span class="annot"><span class="annottext">samplePositions :: StrictSeq Double
-</span><a href="Cardano.Pool.Rank.Likelihood.html#samplePositions"><span class="hs-identifier hs-var hs-var">samplePositions</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682465789"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465789"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465789"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="Cardano.Pool.Rank.Likelihood.html#samplePositions"><span class="hs-identifier hs-var hs-var">samplePositions</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682466073"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466073"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466073"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">0.5</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
@@ -634,17 +634,17 @@ forall a. [a] -&gt; StrictSeq a
 </span><span id="line-184"></span><span>  </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#EpochSize"><span class="hs-identifier hs-type">EpochSize</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-185"></span><span>  </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span>
 </span><span id="line-186"></span><span id="likelihood"><span class="annot"><span class="annottext">likelihood :: Natural -&gt; Double -&gt; EpochSize -&gt; Likelihood
-</span><a href="Cardano.Pool.Rank.Likelihood.html#likelihood"><span class="hs-identifier hs-var hs-var">likelihood</span></a></span></span><span> </span><span id="local-6989586621682465786"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682465786"><span class="hs-identifier hs-var">blocks</span></a></span></span><span> </span><span id="local-6989586621682465785"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465785"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span id="local-6989586621682465784"><span class="annot"><span class="annottext">EpochSize
-</span><a href="#local-6989586621682465784"><span class="hs-identifier hs-var">slotsPerEpoch</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Pool.Rank.Likelihood.html#likelihood"><span class="hs-identifier hs-var hs-var">likelihood</span></a></span></span><span> </span><span id="local-6989586621682466070"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682466070"><span class="hs-identifier hs-var">blocks</span></a></span></span><span> </span><span id="local-6989586621682466069"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466069"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span id="local-6989586621682466068"><span class="annot"><span class="annottext">EpochSize
+</span><a href="#local-6989586621682466068"><span class="hs-identifier hs-var">slotsPerEpoch</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-187"></span><span>  </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span><span> </span><span class="annot"><span class="annottext">(StrictSeq LogWeight -&gt; Likelihood)
 -&gt; StrictSeq LogWeight -&gt; Likelihood
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-188"></span><span>    </span><span class="annot"><span class="annottext">Double -&gt; LogWeight
-</span><a href="#local-6989586621682465783"><span class="hs-identifier hs-var">sample</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; LogWeight) -&gt; StrictSeq Double -&gt; StrictSeq LogWeight
+</span><a href="#local-6989586621682466067"><span class="hs-identifier hs-var">sample</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; LogWeight) -&gt; StrictSeq Double -&gt; StrictSeq LogWeight
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq Double
 </span><a href="Cardano.Pool.Rank.Likelihood.html#samplePositions"><span class="hs-identifier hs-var">samplePositions</span></a></span><span>
@@ -671,36 +671,36 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><span id="line-209"></span><span>    </span><span class="hs-comment">-- a pool has relative stake of 1 / 1,000,000 (~ 30k ada of 35b ada)</span><span>
 </span><span id="line-210"></span><span>    </span><span class="hs-comment">-- f = active slot coefficient = 1/20</span><span>
 </span><span id="line-211"></span><span>    </span><span class="hs-comment">-- t = 1 - (1-f)^(1/1,000,000)</span><span>
-</span><span id="line-212"></span><span>    </span><span id="local-6989586621682465782"><span class="annot"><span class="annottext">n :: Double
-</span><a href="#local-6989586621682465782"><span class="hs-identifier hs-var hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Double
+</span><span id="line-212"></span><span>    </span><span id="local-6989586621682466066"><span class="annot"><span class="annottext">n :: Double
+</span><a href="#local-6989586621682466066"><span class="hs-identifier hs-var hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Double
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682465786"><span class="hs-identifier hs-var">blocks</span></a></span><span>
-</span><span id="line-213"></span><span>    </span><span id="local-6989586621682465781"><span class="annot"><span class="annottext">m :: Double
-</span><a href="#local-6989586621682465781"><span class="hs-identifier hs-var hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochSize -&gt; Double
+</span><a href="#local-6989586621682466070"><span class="hs-identifier hs-var">blocks</span></a></span><span>
+</span><span id="line-213"></span><span>    </span><span id="local-6989586621682466065"><span class="annot"><span class="annottext">m :: Double
+</span><a href="#local-6989586621682466065"><span class="hs-identifier hs-var hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochSize -&gt; Double
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">(EpochSize -&gt; Double) -&gt; EpochSize -&gt; Double
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSize
-</span><a href="#local-6989586621682465784"><span class="hs-identifier hs-var">slotsPerEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSize -&gt; EpochSize -&gt; EpochSize
+</span><a href="#local-6989586621682466068"><span class="hs-identifier hs-var">slotsPerEpoch</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSize -&gt; EpochSize -&gt; EpochSize
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; EpochSize
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682465786"><span class="hs-identifier hs-var">blocks</span></a></span><span>
-</span><span id="line-214"></span><span>    </span><span class="annot"><a href="#local-6989586621682465780"><span class="hs-identifier hs-type">l</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span>
-</span><span id="line-215"></span><span>    </span><span id="local-6989586621682465780"><span class="annot"><span class="annottext">l :: Double -&gt; Double
-</span><a href="#local-6989586621682465780"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span> </span><span id="local-6989586621682465779"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465779"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465782"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466070"><span class="hs-identifier hs-var">blocks</span></a></span><span>
+</span><span id="line-214"></span><span>    </span><span class="annot"><a href="#local-6989586621682466064"><span class="hs-identifier hs-type">l</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span>
+</span><span id="line-215"></span><span>    </span><span id="local-6989586621682466064"><span class="annot"><span class="annottext">l :: Double -&gt; Double
+</span><a href="#local-6989586621682466064"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span> </span><span id="local-6989586621682466063"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466063"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466066"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
 forall a. Floating a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">log</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465779"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466063"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465781"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466065"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
 forall a. Floating a =&gt; a -&gt; a
@@ -708,53 +708,53 @@ forall a. Floating a =&gt; a -&gt; a
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465785"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466069"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465779"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-216"></span><span>    </span><span id="local-6989586621682465783"><span class="annot"><span class="annottext">sample :: Double -&gt; LogWeight
-</span><a href="#local-6989586621682465783"><span class="hs-identifier hs-var hs-var">sample</span></a></span></span><span> </span><span id="local-6989586621682465778"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465778"><span class="hs-identifier hs-var">position</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
+</span><a href="#local-6989586621682466063"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-216"></span><span>    </span><span id="local-6989586621682466067"><span class="annot"><span class="annottext">sample :: Double -&gt; LogWeight
+</span><a href="#local-6989586621682466067"><span class="hs-identifier hs-var hs-var">sample</span></a></span></span><span> </span><span id="local-6989586621682466062"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466062"><span class="hs-identifier hs-var">position</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double -&gt; Float
 forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Float) -&gt; Double -&gt; Float
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
-</span><a href="#local-6989586621682465780"><span class="hs-identifier hs-var">l</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465778"><span class="hs-identifier hs-var">position</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466064"><span class="hs-identifier hs-var">l</span></a></span><span> </span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466062"><span class="hs-identifier hs-var">position</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-217"></span><span>
 </span><span id="line-218"></span><span class="hs-comment">-- | Decay previous likelihood</span><span>
 </span><span id="line-219"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#applyDecay"><span class="hs-identifier hs-type">applyDecay</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Float</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span>
 </span><span id="line-220"></span><span id="applyDecay"><span class="annot"><span class="annottext">applyDecay :: Float -&gt; Likelihood -&gt; Likelihood
-</span><a href="Cardano.Pool.Rank.Likelihood.html#applyDecay"><span class="hs-identifier hs-var hs-var">applyDecay</span></a></span></span><span> </span><span id="local-6989586621682465777"><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465777"><span class="hs-identifier hs-var">decay</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682465776"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465776"><span class="hs-identifier hs-var">logWeights</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Likelihood
+</span><a href="Cardano.Pool.Rank.Likelihood.html#applyDecay"><span class="hs-identifier hs-var hs-var">applyDecay</span></a></span></span><span> </span><span id="local-6989586621682466061"><span class="annot"><span class="annottext">Float
+</span><a href="#local-6989586621682466061"><span class="hs-identifier hs-var">decay</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682466060"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466060"><span class="hs-identifier hs-var">logWeights</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Likelihood
 </span><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-var">Likelihood</span></a></span><span> </span><span class="annot"><span class="annottext">(StrictSeq LogWeight -&gt; Likelihood)
 -&gt; StrictSeq LogWeight -&gt; Likelihood
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight -&gt; LogWeight
-</span><a href="#local-6989586621682465775"><span class="hs-identifier hs-var">mul</span></a></span><span> </span><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465777"><span class="hs-identifier hs-var">decay</span></a></span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
+</span><a href="#local-6989586621682466059"><span class="hs-identifier hs-var">mul</span></a></span><span> </span><span class="annot"><span class="annottext">Float
+</span><a href="#local-6989586621682466061"><span class="hs-identifier hs-var">decay</span></a></span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
 -&gt; StrictSeq LogWeight -&gt; StrictSeq LogWeight
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465776"><span class="hs-identifier hs-var">logWeights</span></a></span><span>
+</span><a href="#local-6989586621682466060"><span class="hs-identifier hs-var">logWeights</span></a></span><span>
 </span><span id="line-221"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-222"></span><span>    </span><span id="local-6989586621682465775"><span class="annot"><span class="annottext">mul :: Float -&gt; LogWeight -&gt; LogWeight
-</span><a href="#local-6989586621682465775"><span class="hs-identifier hs-var hs-var">mul</span></a></span></span><span> </span><span id="local-6989586621682465774"><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465774"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span> </span><span id="local-6989586621682465773"><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465773"><span class="hs-identifier hs-var">f</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
+</span><span id="line-222"></span><span>    </span><span id="local-6989586621682466059"><span class="annot"><span class="annottext">mul :: Float -&gt; LogWeight -&gt; LogWeight
+</span><a href="#local-6989586621682466059"><span class="hs-identifier hs-var hs-var">mul</span></a></span></span><span> </span><span id="local-6989586621682466058"><span class="annot"><span class="annottext">Float
+</span><a href="#local-6989586621682466058"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-type">LogWeight</span></a></span><span> </span><span id="local-6989586621682466057"><span class="annot"><span class="annottext">Float
+</span><a href="#local-6989586621682466057"><span class="hs-identifier hs-var">f</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465774"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Float -&gt; Float -&gt; Float
+</span><a href="#local-6989586621682466058"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Float -&gt; Float -&gt; Float
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Float
-</span><a href="#local-6989586621682465773"><span class="hs-identifier hs-var">f</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466057"><span class="hs-identifier hs-var">f</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-223"></span><span>
 </span><span id="line-224"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#posteriorDistribution"><span class="hs-identifier hs-type">posteriorDistribution</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span>
 </span><span id="line-225"></span><span id="posteriorDistribution"><span class="annot"><span class="annottext">posteriorDistribution :: Histogram -&gt; Likelihood -&gt; Histogram
-</span><a href="Cardano.Pool.Rank.Likelihood.html#posteriorDistribution"><span class="hs-identifier hs-var hs-var">posteriorDistribution</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span id="local-6989586621682465771"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465771"><span class="hs-identifier hs-var">points</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682465770"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465770"><span class="hs-identifier hs-var">likelihoods</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Pool.Rank.Likelihood.html#posteriorDistribution"><span class="hs-identifier hs-var hs-var">posteriorDistribution</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span id="local-6989586621682466055"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466055"><span class="hs-identifier hs-var">points</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span id="local-6989586621682466054"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466054"><span class="hs-identifier hs-var">likelihoods</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-226"></span><span>  </span><span class="annot"><span class="annottext">Histogram -&gt; Histogram
 </span><a href="Cardano.Pool.Rank.Likelihood.html#normalize"><span class="hs-identifier hs-var">normalize</span></a></span><span> </span><span class="annot"><span class="annottext">(Histogram -&gt; Histogram) -&gt; Histogram -&gt; Histogram
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -772,50 +772,50 @@ forall a b c.
 </span><a href="../../../../strict-containers/html/src"><span class="hs-identifier hs-var">StrictSeq.zipWith</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">(+)</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465771"><span class="hs-identifier hs-var">points</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465770"><span class="hs-identifier hs-var">likelihoods</span></a></span><span>
+</span><a href="#local-6989586621682466055"><span class="hs-identifier hs-var">points</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466054"><span class="hs-identifier hs-var">likelihoods</span></a></span><span>
 </span><span id="line-228"></span><span>
 </span><span id="line-229"></span><span class="hs-comment">-- | Normalize the histogram so that the total area is 1</span><span>
 </span><span id="line-230"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#normalize"><span class="hs-identifier hs-type">normalize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span>
 </span><span id="line-231"></span><span id="normalize"><span class="annot"><span class="annottext">normalize :: Histogram -&gt; Histogram
-</span><a href="Cardano.Pool.Rank.Likelihood.html#normalize"><span class="hs-identifier hs-var hs-var">normalize</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span id="local-6989586621682465768"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465768"><span class="hs-identifier hs-var">values</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Histogram
+</span><a href="Cardano.Pool.Rank.Likelihood.html#normalize"><span class="hs-identifier hs-var hs-var">normalize</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span id="local-6989586621682466052"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466052"><span class="hs-identifier hs-var">values</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; Histogram
 </span><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-var">Histogram</span></a></span><span> </span><span class="annot"><span class="annottext">(StrictSeq LogWeight -&gt; Histogram)
 -&gt; StrictSeq LogWeight -&gt; Histogram
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682465767"><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465767"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465767"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682466051"><span class="annot"><span class="annottext">LogWeight
+</span><a href="#local-6989586621682466051"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">LogWeight
+</span><a href="#local-6989586621682466051"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465766"><span class="hs-identifier hs-var">logArea</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
+</span><a href="#local-6989586621682466050"><span class="hs-identifier hs-var">logArea</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
 -&gt; StrictSeq LogWeight -&gt; StrictSeq LogWeight
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465765"><span class="hs-identifier hs-var">values'</span></a></span><span>
+</span><a href="#local-6989586621682466049"><span class="hs-identifier hs-var">values'</span></a></span><span>
 </span><span id="line-232"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-233"></span><span>    </span><span id="local-6989586621682465764"><span class="annot"><span class="annottext">m :: LogWeight
-</span><a href="#local-6989586621682465764"><span class="hs-identifier hs-var hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; LogWeight
+</span><span id="line-233"></span><span>    </span><span id="local-6989586621682466048"><span class="annot"><span class="annottext">m :: LogWeight
+</span><a href="#local-6989586621682466048"><span class="hs-identifier hs-var hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight -&gt; LogWeight
 forall (t :: * -&gt; *) a. (Foldable t, Ord a) =&gt; t a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maximum</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465768"><span class="hs-identifier hs-var">values</span></a></span><span>
-</span><span id="line-234"></span><span>    </span><span id="local-6989586621682465765"><span class="annot"><span class="annottext">values' :: StrictSeq LogWeight
-</span><a href="#local-6989586621682465765"><span class="hs-identifier hs-var hs-var">values'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682465762"><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465762"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465762"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
+</span><a href="#local-6989586621682466052"><span class="hs-identifier hs-var">values</span></a></span><span>
+</span><span id="line-234"></span><span>    </span><span id="local-6989586621682466049"><span class="annot"><span class="annottext">values' :: StrictSeq LogWeight
+</span><a href="#local-6989586621682466049"><span class="hs-identifier hs-var hs-var">values'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621682466046"><span class="annot"><span class="annottext">LogWeight
+</span><a href="#local-6989586621682466046"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">LogWeight
+</span><a href="#local-6989586621682466046"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight -&gt; LogWeight -&gt; LogWeight
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">LogWeight
-</span><a href="#local-6989586621682465764"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
+</span><a href="#local-6989586621682466048"><span class="hs-identifier hs-var">m</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; LogWeight)
 -&gt; StrictSeq LogWeight -&gt; StrictSeq LogWeight
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465768"><span class="hs-identifier hs-var">values</span></a></span><span>
-</span><span id="line-235"></span><span>    </span><span id="local-6989586621682465766"><span class="annot"><span class="annottext">logArea :: LogWeight
-</span><a href="#local-6989586621682465766"><span class="hs-identifier hs-var hs-var">logArea</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; LogWeight
+</span><a href="#local-6989586621682466052"><span class="hs-identifier hs-var">values</span></a></span><span>
+</span><span id="line-235"></span><span>    </span><span id="local-6989586621682466050"><span class="annot"><span class="annottext">logArea :: LogWeight
+</span><a href="#local-6989586621682466050"><span class="hs-identifier hs-var hs-var">logArea</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#toLogWeight"><span class="hs-identifier hs-var">toLogWeight</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465761"><span class="hs-identifier hs-var">area</span></a></span><span>
-</span><span id="line-236"></span><span>    </span><span id="local-6989586621682465761"><span class="annot"><span class="annottext">area :: Double
-</span><a href="#local-6989586621682465761"><span class="hs-identifier hs-var hs-var">area</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; StrictSeq Double -&gt; Double
+</span><a href="#local-6989586621682466045"><span class="hs-identifier hs-var">area</span></a></span><span>
+</span><span id="line-236"></span><span>    </span><span id="local-6989586621682466045"><span class="annot"><span class="annottext">area :: Double
+</span><a href="#local-6989586621682466045"><span class="hs-identifier hs-var hs-var">area</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; StrictSeq Double -&gt; Double
 forall (f :: * -&gt; *).
 (Functor f, Foldable f) =&gt;
 Double -&gt; f Double -&gt; Double
@@ -824,16 +824,16 @@ Double -&gt; f Double -&gt; Double
 </span><a href="Cardano.Pool.Rank.Likelihood.html#fromLogWeight"><span class="hs-identifier hs-var">fromLogWeight</span></a></span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; Double) -&gt; StrictSeq LogWeight -&gt; StrictSeq Double
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465765"><span class="hs-identifier hs-var">values'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466049"><span class="hs-identifier hs-var">values'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-237"></span><span>
 </span><span id="line-238"></span><span class="hs-comment">-- | Calculate the k percentile for this distribution.</span><span>
 </span><span id="line-239"></span><span class="hs-comment">-- k is a value between 0 and 1. The 0 percentile is 0 and the 1 percentile is 1</span><span>
 </span><span id="line-240"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#percentile"><span class="hs-identifier hs-type">percentile</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-type">PerformanceEstimate</span></a></span><span>
 </span><span id="line-241"></span><span id="percentile"><span class="annot"><span class="annottext">percentile :: Double -&gt; Histogram -&gt; Likelihood -&gt; PerformanceEstimate
-</span><a href="Cardano.Pool.Rank.Likelihood.html#percentile"><span class="hs-identifier hs-var hs-var">percentile</span></a></span></span><span> </span><span id="local-6989586621682465758"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465758"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span id="local-6989586621682465757"><span class="annot"><span class="annottext">Histogram
-</span><a href="#local-6989586621682465757"><span class="hs-identifier hs-var">prior</span></a></span></span><span> </span><span id="local-6989586621682465756"><span class="annot"><span class="annottext">Likelihood
-</span><a href="#local-6989586621682465756"><span class="hs-identifier hs-var">likelihoods</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Pool.Rank.Likelihood.html#percentile"><span class="hs-identifier hs-var hs-var">percentile</span></a></span></span><span> </span><span id="local-6989586621682466042"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466042"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span id="local-6989586621682466041"><span class="annot"><span class="annottext">Histogram
+</span><a href="#local-6989586621682466041"><span class="hs-identifier hs-var">prior</span></a></span></span><span> </span><span id="local-6989586621682466040"><span class="annot"><span class="annottext">Likelihood
+</span><a href="#local-6989586621682466040"><span class="hs-identifier hs-var">likelihoods</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-242"></span><span>  </span><span class="annot"><span class="annottext">Double -&gt; PerformanceEstimate
 </span><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-var">PerformanceEstimate</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; PerformanceEstimate)
 -&gt; ((Double, Double) -&gt; Double)
@@ -857,22 +857,22 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-244"></span><span>      </span><span class="annot"><span class="annottext">((Double, Double) -&gt; Bool)
 -&gt; Seq (Double, Double) -&gt; Maybe (Double, Double)
 forall (t :: * -&gt; *) a. Foldable t =&gt; (a -&gt; Bool) -&gt; t a -&gt; Maybe a
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">find</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682465754"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465754"><span class="hs-identifier hs-var">_x</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465753"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465753"><span class="hs-identifier hs-var">fx</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465753"><span class="hs-identifier hs-var">fx</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">find</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span class="hs-special">(</span><span id="local-6989586621682466038"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466038"><span class="hs-identifier hs-var">_x</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466037"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466037"><span class="hs-identifier hs-var">fx</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466037"><span class="hs-identifier hs-var">fx</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465758"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Seq (Double, Double)
-</span><a href="#local-6989586621682465751"><span class="hs-identifier hs-var">cdf</span></a></span><span>
+</span><a href="#local-6989586621682466042"><span class="hs-identifier hs-var">p</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Seq (Double, Double)
+</span><a href="#local-6989586621682466035"><span class="hs-identifier hs-var">cdf</span></a></span><span>
 </span><span id="line-245"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-246"></span><span>    </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span id="local-6989586621682465750"><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465750"><span class="hs-identifier hs-var">values</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Histogram -&gt; Likelihood -&gt; Histogram
+</span><span id="line-246"></span><span>    </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Histogram"><span class="hs-identifier hs-type">Histogram</span></a></span><span> </span><span id="local-6989586621682466034"><span class="annot"><span class="annottext">StrictSeq LogWeight
+</span><a href="#local-6989586621682466034"><span class="hs-identifier hs-var">values</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Histogram -&gt; Likelihood -&gt; Histogram
 </span><a href="Cardano.Pool.Rank.Likelihood.html#posteriorDistribution"><span class="hs-identifier hs-var">posteriorDistribution</span></a></span><span> </span><span class="annot"><span class="annottext">Histogram
-</span><a href="#local-6989586621682465757"><span class="hs-identifier hs-var">prior</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood
-</span><a href="#local-6989586621682465756"><span class="hs-identifier hs-var">likelihoods</span></a></span><span>
-</span><span id="line-247"></span><span>    </span><span id="local-6989586621682465751"><span class="annot"><span class="annottext">cdf :: Seq (Double, Double)
-</span><a href="#local-6989586621682465751"><span class="hs-identifier hs-var hs-var">cdf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682466041"><span class="hs-identifier hs-var">prior</span></a></span><span> </span><span class="annot"><span class="annottext">Likelihood
+</span><a href="#local-6989586621682466040"><span class="hs-identifier hs-var">likelihoods</span></a></span><span>
+</span><span id="line-247"></span><span>    </span><span id="local-6989586621682466035"><span class="annot"><span class="annottext">cdf :: Seq (Double, Double)
+</span><a href="#local-6989586621682466035"><span class="hs-identifier hs-var hs-var">cdf</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-248"></span><span>      </span><span class="annot"><span class="annottext">Seq Double -&gt; Seq Double -&gt; Seq (Double, Double)
 forall a b. Seq a -&gt; Seq b -&gt; Seq (a, b)
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Seq.zip</span></a></span><span>
@@ -892,17 +892,17 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="Cardano.Pool.Rank.Likelihood.html#fromLogWeight"><span class="hs-identifier hs-var">fromLogWeight</span></a></span><span> </span><span class="annot"><span class="annottext">(LogWeight -&gt; Double) -&gt; StrictSeq LogWeight -&gt; StrictSeq Double
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">StrictSeq LogWeight
-</span><a href="#local-6989586621682465750"><span class="hs-identifier hs-var">values</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466034"><span class="hs-identifier hs-var">values</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-251"></span><span>
 </span><span id="line-252"></span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#percentile%27"><span class="hs-identifier hs-type">percentile'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#Likelihood"><span class="hs-identifier hs-type">Likelihood</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-type">PerformanceEstimate</span></a></span><span>
 </span><span id="line-253"></span><span id="percentile%27"><span class="annot"><span class="annottext">percentile' :: Likelihood -&gt; PerformanceEstimate
 </span><a href="Cardano.Pool.Rank.Likelihood.html#percentile%27"><span class="hs-identifier hs-var hs-var">percentile'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Histogram -&gt; Likelihood -&gt; PerformanceEstimate
 </span><a href="Cardano.Pool.Rank.Likelihood.html#percentile"><span class="hs-identifier hs-var">percentile</span></a></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">0.5</span></span><span> </span><span class="annot"><span class="annottext">Histogram
-</span><a href="#local-6989586621682465746"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621682466030"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-254"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-255"></span><span>    </span><span id="local-6989586621682465746"><span class="annot"><span class="annottext">h :: Histogram
-</span><a href="#local-6989586621682465746"><span class="hs-identifier hs-var hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Histogram -&gt; Histogram
+</span><span id="line-255"></span><span>    </span><span id="local-6989586621682466030"><span class="annot"><span class="annottext">h :: Histogram
+</span><a href="#local-6989586621682466030"><span class="hs-identifier hs-var hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Histogram -&gt; Histogram
 </span><a href="Cardano.Pool.Rank.Likelihood.html#normalize"><span class="hs-identifier hs-var">normalize</span></a></span><span> </span><span class="annot"><span class="annottext">(Histogram -&gt; Histogram)
 -&gt; (StrictSeq LogWeight -&gt; Histogram)
 -&gt; StrictSeq LogWeight
@@ -914,7 +914,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double -&gt; LogWeight
 forall a. (Real a, Floating a) =&gt; a -&gt; a -&gt; a -&gt; LogWeight
-</span><a href="#local-6989586621682465745"><span class="hs-identifier hs-var">logBeta</span></a></span><span> </span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466029"><span class="hs-identifier hs-var">logBeta</span></a></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">40</span></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; LogWeight) -&gt; StrictSeq Double -&gt; StrictSeq LogWeight
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -922,11 +922,11 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="Cardano.Pool.Rank.Likelihood.html#samplePositions"><span class="hs-identifier hs-var">samplePositions</span></a></span><span>
 </span><span id="line-256"></span><span>    </span><span class="hs-comment">-- Beta(n,m)(x) = C * x^(n-1)*(1-x)^(m-1)</span><span>
 </span><span id="line-257"></span><span>    </span><span class="hs-comment">-- log( Beta(n,m)(x) ) = (n-1) * log x + (m-1) * log (1-x)</span><span>
-</span><span id="line-258"></span><span>    </span><span id="local-6989586621682465745"><span class="annot"><span class="annottext">logBeta :: a -&gt; a -&gt; a -&gt; LogWeight
-</span><a href="#local-6989586621682465745"><span class="hs-identifier hs-var hs-var">logBeta</span></a></span></span><span> </span><span id="local-6989586621682465744"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465744"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621682465743"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465743"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621682465742"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465742"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
+</span><span id="line-258"></span><span>    </span><span id="local-6989586621682466029"><span class="annot"><span class="annottext">logBeta :: a -&gt; a -&gt; a -&gt; LogWeight
+</span><a href="#local-6989586621682466029"><span class="hs-identifier hs-var hs-var">logBeta</span></a></span></span><span> </span><span id="local-6989586621682466028"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621682466028"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621682466027"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621682466027"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span id="local-6989586621682466026"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621682466026"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Float -&gt; LogWeight
 </span><a href="Cardano.Pool.Rank.Likelihood.html#LogWeight"><span class="hs-identifier hs-var">LogWeight</span></a></span><span> </span><span class="annot"><span class="annottext">(Float -&gt; LogWeight) -&gt; (a -&gt; Float) -&gt; a -&gt; LogWeight
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; Float
@@ -934,7 +934,7 @@ forall a b. (Real a, Fractional b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">realToFrac</span></a></span><span> </span><span class="annot"><span class="annottext">(a -&gt; LogWeight) -&gt; a -&gt; LogWeight
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465744"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
+</span><a href="#local-6989586621682466028"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
@@ -942,10 +942,10 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a
 forall a. Floating a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">log</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465742"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
+</span><a href="#local-6989586621682466026"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465743"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
+</span><a href="#local-6989586621682466027"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
@@ -956,29 +956,29 @@ forall a. Floating a =&gt; a -&gt; a
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621682465742"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466026"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-259"></span><span>
-</span><span id="line-260"></span><span id="local-6989586621682466006"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#riemannSum"><span class="hs-identifier hs-type">riemannSum</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Functor</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682466006"><span class="hs-identifier hs-type">f</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Foldable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682466006"><span class="hs-identifier hs-type">f</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621682466006"><span class="hs-identifier hs-type">f</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span></span><span>
+</span><span id="line-260"></span><span id="local-6989586621682466290"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#riemannSum"><span class="hs-identifier hs-type">riemannSum</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Functor</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682466290"><span class="hs-identifier hs-type">f</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Foldable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682466290"><span class="hs-identifier hs-type">f</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621682466290"><span class="hs-identifier hs-type">f</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span></span><span>
 </span><span id="line-261"></span><span id="riemannSum"><span class="annot"><span class="annottext">riemannSum :: Double -&gt; f Double -&gt; Double
-</span><a href="Cardano.Pool.Rank.Likelihood.html#riemannSum"><span class="hs-identifier hs-var hs-var">riemannSum</span></a></span></span><span> </span><span id="local-6989586621682465741"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465741"><span class="hs-identifier hs-var">width</span></a></span></span><span> </span><span id="local-6989586621682465740"><span class="annot"><span class="annottext">f Double
-</span><a href="#local-6989586621682465740"><span class="hs-identifier hs-var">heights</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">f Double -&gt; Double
+</span><a href="Cardano.Pool.Rank.Likelihood.html#riemannSum"><span class="hs-identifier hs-var hs-var">riemannSum</span></a></span></span><span> </span><span id="local-6989586621682466025"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621682466025"><span class="hs-identifier hs-var">width</span></a></span></span><span> </span><span id="local-6989586621682466024"><span class="annot"><span class="annottext">f Double
+</span><a href="#local-6989586621682466024"><span class="hs-identifier hs-var">heights</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">f Double -&gt; Double
 forall (t :: * -&gt; *) a. (Foldable t, Num a) =&gt; t a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">sum</span></a></span><span> </span><span class="annot"><span class="annottext">(f Double -&gt; Double) -&gt; f Double -&gt; Double
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; f Double -&gt; f Double
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621682465741"><span class="hs-identifier hs-var">width</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621682466025"><span class="hs-identifier hs-var">width</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">f Double
-</span><a href="#local-6989586621682465740"><span class="hs-identifier hs-var">heights</span></a></span><span>
+</span><a href="#local-6989586621682466024"><span class="hs-identifier hs-var">heights</span></a></span><span>
 </span><span id="line-262"></span><span>
 </span><span id="line-263"></span><span class="hs-comment">-- | This is a estimate of the proportion of allowed blocks a pool will</span><span>
 </span><span id="line-264"></span><span class="hs-comment">-- make in the future. It is used for ranking pools in delegation.</span><span>
-</span><span id="line-265"></span><span id="local-6989586621682465737"><span id="local-6989586621682465738"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="PerformanceEstimate"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-var">PerformanceEstimate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PerformanceEstimate"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-var">PerformanceEstimate</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unPerformanceEstimate"><span class="annot"><span class="annottext">PerformanceEstimate -&gt; Double
+</span><span id="line-265"></span><span id="local-6989586621682466021"><span id="local-6989586621682466022"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="PerformanceEstimate"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-var">PerformanceEstimate</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PerformanceEstimate"><span class="annot"><a href="Cardano.Pool.Rank.Likelihood.html#PerformanceEstimate"><span class="hs-identifier hs-var">PerformanceEstimate</span></a></span></span><span> </span><span class="hs-special">{</span><span id="unPerformanceEstimate"><span class="annot"><span class="annottext">PerformanceEstimate -&gt; Double
 </span><a href="Cardano.Pool.Rank.Likelihood.html#unPerformanceEstimate"><span class="hs-identifier hs-var hs-var">unPerformanceEstimate</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-266"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682465730"><span id="local-6989586621682465732"><span id="local-6989586621682465734"><span class="annot"><span class="annottext">Int -&gt; PerformanceEstimate -&gt; ShowS
+</span><span id="line-266"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682466014"><span id="local-6989586621682466016"><span id="local-6989586621682466018"><span class="annot"><span class="annottext">Int -&gt; PerformanceEstimate -&gt; ShowS
 [PerformanceEstimate] -&gt; ShowS
 PerformanceEstimate -&gt; String
 (Int -&gt; PerformanceEstimate -&gt; ShowS)
@@ -993,7 +993,7 @@ show :: PerformanceEstimate -&gt; String
 $cshow :: PerformanceEstimate -&gt; String
 showsPrec :: Int -&gt; PerformanceEstimate -&gt; ShowS
 $cshowsPrec :: Int -&gt; PerformanceEstimate -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465726"><span id="local-6989586621682465728"><span class="annot"><span class="annottext">PerformanceEstimate -&gt; PerformanceEstimate -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466010"><span id="local-6989586621682466012"><span class="annot"><span class="annottext">PerformanceEstimate -&gt; PerformanceEstimate -&gt; Bool
 (PerformanceEstimate -&gt; PerformanceEstimate -&gt; Bool)
 -&gt; (PerformanceEstimate -&gt; PerformanceEstimate -&gt; Bool)
 -&gt; Eq PerformanceEstimate
@@ -1011,7 +1011,7 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep PerformanceEstimate x -&gt; PerformanceEstimate
 $cfrom :: forall x. PerformanceEstimate -&gt; Rep PerformanceEstimate x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682465718"><span id="local-6989586621682465720"><span id="local-6989586621682465722"><span class="annot"><span class="annottext">Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682466002"><span id="local-6989586621682466004"><span id="local-6989586621682466006"><span class="annot"><span class="annottext">Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo)
 Proxy PerformanceEstimate -&gt; String
 (Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo))
@@ -1028,6 +1028,6 @@ wNoThunks :: Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo)
 $cwNoThunks :: Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo)
 noThunks :: Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo)
 $cnoThunks :: Context -&gt; PerformanceEstimate -&gt; IO (Maybe ThunkInfo)
-</span><a href="#local-6989586621682465718"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682466002"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-267"></span><span class="hs-comment">-- ---- end copy ----</span><span>
 </span><span id="line-268"></span></pre></body></html>

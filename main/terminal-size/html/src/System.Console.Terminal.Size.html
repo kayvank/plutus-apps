@@ -8,20 +8,20 @@ Based on answer by Andreas Hammar at &lt;http://stackoverflow.com/a/12807521/972
 </span><span id="line-8"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="annot"><a href="System.Console.Terminal.Common.html#Window"><span class="hs-identifier">Window</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span>
 </span><span id="line-9"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="System.Console.Terminal.Size.html#size"><span class="hs-identifier">size</span></a></span><span class="hs-cpp">
 #if !defined(mingw32_HOST_OS)
-</span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="System.Console.Terminal.Size.html#fdSize"><span class="hs-identifier">fdSize</span></a></span><span>
-</span><span id="line-12"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="System.Console.Terminal.Size.html#hSize"><span class="hs-identifier">hSize</span></a></span><span class="hs-cpp">
+</span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="System.Console.Terminal.Size.html#fdSize"><span class="hs-identifier">fdSize</span></a></span><span class="hs-cpp">
 #endif
-</span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="System.Console.Terminal.Size.html#hSize"><span class="hs-identifier">hSize</span></a></span><span>
+</span><span id="line-14"></span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-15"></span><span>
 </span><span id="line-16"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="System.Console.Terminal.Common.html"><span class="hs-identifier">System.Console.Terminal.Common</span></a></span><span class="hs-cpp">
 #if defined(mingw32_HOST_OS)
 </span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="hs-identifier">System.Console.Terminal.Windows</span><span> </span><span class="hs-keyword">as</span><span> </span><span class="hs-identifier">Host</span><span class="hs-cpp">
 #else
 </span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="System.Console.Terminal.Posix.html"><span class="hs-identifier">System.Console.Terminal.Posix</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Host</span></span><span>
-</span><span id="line-21"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">System.Posix.Types</span></a></span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Fd</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-22"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">System.IO</span></a></span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Handle</span></a></span><span class="hs-special">)</span><span class="hs-cpp">
+</span><span id="line-21"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">System.Posix.Types</span></a></span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Fd</span></a></span><span class="hs-special">)</span><span class="hs-cpp">
 #endif
-</span><span>
+</span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">System.IO</span></a></span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Handle</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-24"></span><span>
 </span><span id="line-25"></span><span>
 </span><span id="line-26"></span><span class="hs-comment">-- | Get terminal window width and height for @stdout@.</span><span>
 </span><span id="line-27"></span><span class="hs-comment">--</span><span>
@@ -50,19 +50,22 @@ forall n. Integral n =&gt; IO (Maybe (Window n))
 </span><span id="line-47"></span><span id="fdSize"><span class="annot"><span class="annottext">fdSize :: Fd -&gt; IO (Maybe (Window n))
 </span><a href="System.Console.Terminal.Size.html#fdSize"><span class="hs-identifier hs-var hs-var">fdSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Fd -&gt; IO (Maybe (Window n))
 forall n. Integral n =&gt; Fd -&gt; IO (Maybe (Window n))
-</span><a href="System.Console.Terminal.Posix.html#fdSize"><span class="hs-identifier hs-var">Host.fdSize</span></a></span><span>
-</span><span id="line-48"></span><span>
-</span><span id="line-49"></span><span class="hs-comment">-- | /Not available on Windows:/</span><span>
-</span><span id="line-50"></span><span class="hs-comment">--   Same as 'fdSize', but takes 'Handle' instead of 'Fd' (file descriptor).</span><span>
+</span><a href="System.Console.Terminal.Posix.html#fdSize"><span class="hs-identifier hs-var">Host.fdSize</span></a></span><span class="hs-cpp">
+#endif
+</span><span>
+</span><span id="line-50"></span><span class="hs-comment">-- | Same as 'fdSize', but takes 'Handle' instead of 'Fd' (file descriptor).</span><span>
 </span><span id="line-51"></span><span class="hs-comment">--</span><span>
-</span><span id="line-52"></span><span class="hs-comment">-- &gt;&gt;&gt; import System.Console.Terminal.Size</span><span>
-</span><span id="line-53"></span><span class="hs-comment">-- &gt;&gt;&gt; import System.IO</span><span>
-</span><span id="line-54"></span><span class="hs-comment">-- &gt;&gt;&gt; hSize stdout</span><span>
-</span><span id="line-55"></span><span class="hs-comment">-- Just (Window {height = 56, width = 85})</span><span>
-</span><span id="line-56"></span><span id="local-6989586621679035792"><span class="annot"><a href="System.Console.Terminal.Size.html#hSize"><span class="hs-identifier hs-type">hSize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Integral</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679035792"><span class="hs-identifier hs-type">n</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="System.Console.Terminal.Common.html#Window"><span class="hs-identifier hs-type">Window</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679035792"><span class="hs-identifier hs-type">n</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span></span><span>
-</span><span id="line-57"></span><span id="hSize"><span class="annot"><span class="annottext">hSize :: Handle -&gt; IO (Maybe (Window n))
+</span><span id="line-52"></span><span class="hs-comment">-- Note that on Windows with shells that use the native console API (cmd.exe,</span><span>
+</span><span id="line-53"></span><span class="hs-comment">-- PowerShell) this works only for output handles like 'stdout' and 'stderr';</span><span>
+</span><span id="line-54"></span><span class="hs-comment">-- for input handles like 'stdin' it always returns 'Nothing'.</span><span>
+</span><span id="line-55"></span><span class="hs-comment">--</span><span>
+</span><span id="line-56"></span><span class="hs-comment">-- &gt;&gt;&gt; import System.Console.Terminal.Size</span><span>
+</span><span id="line-57"></span><span class="hs-comment">-- &gt;&gt;&gt; import System.IO</span><span>
+</span><span id="line-58"></span><span class="hs-comment">-- &gt;&gt;&gt; hSize stdout</span><span>
+</span><span id="line-59"></span><span class="hs-comment">-- Just (Window {height = 56, width = 85})</span><span>
+</span><span id="line-60"></span><span id="local-6989586621679035792"><span class="annot"><a href="System.Console.Terminal.Size.html#hSize"><span class="hs-identifier hs-type">hSize</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Integral</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679035792"><span class="hs-identifier hs-type">n</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Handle</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="System.Console.Terminal.Common.html#Window"><span class="hs-identifier hs-type">Window</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679035792"><span class="hs-identifier hs-type">n</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span></span><span>
+</span><span id="line-61"></span><span id="hSize"><span class="annot"><span class="annottext">hSize :: Handle -&gt; IO (Maybe (Window n))
 </span><a href="System.Console.Terminal.Size.html#hSize"><span class="hs-identifier hs-var hs-var">hSize</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Handle -&gt; IO (Maybe (Window n))
 forall n. Integral n =&gt; Handle -&gt; IO (Maybe (Window n))
-</span><a href="System.Console.Terminal.Posix.html#hSize"><span class="hs-identifier hs-var">Host.hSize</span></a></span><span class="hs-cpp">
-#endif
-</span></pre></body></html>
+</span><a href="System.Console.Terminal.Posix.html#hSize"><span class="hs-identifier hs-var">Host.hSize</span></a></span><span>
+</span><span id="line-62"></span></pre></body></html>

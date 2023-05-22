@@ -7,7 +7,7 @@
 --   Katip is a structured logging framework. See README.md for more
 --   details.
 @package katip
-@version 0.8.7.2
+@version 0.8.7.4
 
 
 -- | This module is not meant to be imported directly and may contain
@@ -107,17 +107,17 @@ Item :: Namespace -> Environment -> Severity -> ThreadIdText -> HostName -> Proc
 [_itemTime] :: Item a -> UTCTime
 [_itemNamespace] :: Item a -> Namespace
 [_itemLoc] :: Item a -> Maybe Loc
-itemTime :: forall a_acJm. Lens' (Item a_acJm) UTCTime
-itemThread :: forall a_acJm. Lens' (Item a_acJm) ThreadIdText
-itemSeverity :: forall a_acJm. Lens' (Item a_acJm) Severity
-itemProcess :: forall a_acJm. Lens' (Item a_acJm) ProcessID
-itemPayload :: forall a_acJm a_agwe. Lens (Item a_acJm) (Item a_agwe) a_acJm a_agwe
-itemNamespace :: forall a_acJm. Lens' (Item a_acJm) Namespace
-itemMessage :: forall a_acJm. Lens' (Item a_acJm) LogStr
-itemLoc :: forall a_acJm. Lens' (Item a_acJm) (Maybe Loc)
-itemHost :: forall a_acJm. Lens' (Item a_acJm) HostName
-itemEnv :: forall a_acJm. Lens' (Item a_acJm) Environment
-itemApp :: forall a_acJm. Lens' (Item a_acJm) Namespace
+itemTime :: forall a_acJv. Lens' (Item a_acJv) UTCTime
+itemThread :: forall a_acJv. Lens' (Item a_acJv) ThreadIdText
+itemSeverity :: forall a_acJv. Lens' (Item a_acJv) Severity
+itemProcess :: forall a_acJv. Lens' (Item a_acJv) ProcessID
+itemPayload :: forall a_acJv a_agwC. Lens (Item a_acJv) (Item a_agwC) a_acJv a_agwC
+itemNamespace :: forall a_acJv. Lens' (Item a_acJv) Namespace
+itemMessage :: forall a_acJv. Lens' (Item a_acJv) LogStr
+itemLoc :: forall a_acJv. Lens' (Item a_acJv) (Maybe Loc)
+itemHost :: forall a_acJv. Lens' (Item a_acJv) HostName
+itemEnv :: forall a_acJv. Lens' (Item a_acJv) Environment
+itemApp :: forall a_acJv. Lens' (Item a_acJv) Namespace
 newtype LocShow
 LocShow :: Loc -> LocShow
 newtype LocJs
@@ -1109,17 +1109,17 @@ defaultScribeSettings :: ScribeSettings
 data ScribeSettings
 scribeBufferSize :: Lens' ScribeSettings Int
 _scribeBufferSize :: ScribeSettings -> Int
-itemApp :: forall a_acJm. Lens' (Item a_acJm) Namespace
-itemEnv :: forall a_acJm. Lens' (Item a_acJm) Environment
-itemSeverity :: forall a_acJm. Lens' (Item a_acJm) Severity
-itemThread :: forall a_acJm. Lens' (Item a_acJm) ThreadIdText
-itemHost :: forall a_acJm. Lens' (Item a_acJm) HostName
-itemProcess :: forall a_acJm. Lens' (Item a_acJm) ProcessID
-itemPayload :: forall a_acJm a_agwe. Lens (Item a_acJm) (Item a_agwe) a_acJm a_agwe
-itemMessage :: forall a_acJm. Lens' (Item a_acJm) LogStr
-itemTime :: forall a_acJm. Lens' (Item a_acJm) UTCTime
-itemNamespace :: forall a_acJm. Lens' (Item a_acJm) Namespace
-itemLoc :: forall a_acJm. Lens' (Item a_acJm) (Maybe Loc)
+itemApp :: forall a_acJv. Lens' (Item a_acJv) Namespace
+itemEnv :: forall a_acJv. Lens' (Item a_acJv) Environment
+itemSeverity :: forall a_acJv. Lens' (Item a_acJv) Severity
+itemThread :: forall a_acJv. Lens' (Item a_acJv) ThreadIdText
+itemHost :: forall a_acJv. Lens' (Item a_acJv) HostName
+itemProcess :: forall a_acJv. Lens' (Item a_acJv) ProcessID
+itemPayload :: forall a_acJv a_agwC. Lens (Item a_acJv) (Item a_agwC) a_acJv a_agwC
+itemMessage :: forall a_acJv. Lens' (Item a_acJv) LogStr
+itemTime :: forall a_acJv. Lens' (Item a_acJv) UTCTime
+itemNamespace :: forall a_acJv. Lens' (Item a_acJv) Namespace
+itemLoc :: forall a_acJv. Lens' (Item a_acJv) (Maybe Loc)
 logEnvHost :: Lens' LogEnv HostName
 logEnvPid :: Lens' LogEnv ProcessID
 logEnvApp :: Lens' LogEnv Namespace

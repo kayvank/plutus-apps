@@ -14,11 +14,11 @@
 </span><span id="line-14"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier">Data.Aeson</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier">ToJSON</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-15"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">NoThunks.Class</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">NoThunks</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-16"></span><span>
-</span><span id="line-17"></span><span id="local-6989586621679528743"><span id="local-6989586621679528744"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="GenesisHash"><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-var">GenesisHash</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="GenesisHash"><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-var">GenesisHash</span></a></span></span><span>
+</span><span id="line-17"></span><span id="local-6989586621679528767"><span id="local-6989586621679528768"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="GenesisHash"><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-var">GenesisHash</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="GenesisHash"><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-var">GenesisHash</span></a></span></span><span>
 </span><span id="line-18"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="unGenesisHash"><span class="annot"><span class="annottext">GenesisHash -&gt; Hash Raw
 </span><a href="Cardano.Chain.Genesis.Hash.html#unGenesisHash"><span class="hs-identifier hs-var hs-var">unGenesisHash</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">Hash</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">Raw</span></a></span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-20"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528737"><span id="local-6989586621679528739"><span class="annot"><span class="annottext">GenesisHash -&gt; GenesisHash -&gt; Bool
+</span><span id="line-20"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528761"><span id="local-6989586621679528763"><span class="annot"><span class="annottext">GenesisHash -&gt; GenesisHash -&gt; Bool
 (GenesisHash -&gt; GenesisHash -&gt; Bool)
 -&gt; (GenesisHash -&gt; GenesisHash -&gt; Bool) -&gt; Eq GenesisHash
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -35,12 +35,12 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep GenesisHash x -&gt; GenesisHash
 $cfrom :: forall x. GenesisHash -&gt; Rep GenesisHash x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528731"><span class="annot"><span class="annottext">GenesisHash -&gt; ()
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528755"><span class="annot"><span class="annottext">GenesisHash -&gt; ()
 (GenesisHash -&gt; ()) -&gt; NFData GenesisHash
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: GenesisHash -&gt; ()
 $crnf :: GenesisHash -&gt; ()
-</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528725"><span id="local-6989586621679528727"><span class="annot"><span class="annottext">Typeable GenesisHash
+</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528749"><span id="local-6989586621679528751"><span class="annot"><span class="annottext">Typeable GenesisHash
 Decoder s GenesisHash
 Typeable GenesisHash
 -&gt; (forall s. Decoder s GenesisHash)
@@ -56,7 +56,7 @@ $clabel :: Proxy GenesisHash -&gt; Text
 fromCBOR :: Decoder s GenesisHash
 $cfromCBOR :: forall s. Decoder s GenesisHash
 $cp1FromCBOR :: Typeable GenesisHash
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromCBOR</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528717"><span id="local-6989586621679528719"><span id="local-6989586621679528721"><span class="annot"><span class="annottext">Typeable GenesisHash
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromCBOR</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528741"><span id="local-6989586621679528743"><span id="local-6989586621679528745"><span class="annot"><span class="annottext">Typeable GenesisHash
 Typeable GenesisHash
 -&gt; (GenesisHash -&gt; Encoding)
 -&gt; ((forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
@@ -86,7 +86,7 @@ $cencodedSizeExpr :: (forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
 toCBOR :: GenesisHash -&gt; Encoding
 $ctoCBOR :: GenesisHash -&gt; Encoding
 $cp1ToCBOR :: Typeable GenesisHash
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToCBOR</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528710"><span id="local-6989586621679528712"><span id="local-6989586621679528714"><span class="annot"><span class="annottext">Context -&gt; GenesisHash -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToCBOR</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528734"><span id="local-6989586621679528736"><span id="local-6989586621679528738"><span class="annot"><span class="annottext">Context -&gt; GenesisHash -&gt; IO (Maybe ThunkInfo)
 Proxy GenesisHash -&gt; String
 (Context -&gt; GenesisHash -&gt; IO (Maybe ThunkInfo))
 -&gt; (Context -&gt; GenesisHash -&gt; IO (Maybe ThunkInfo))
@@ -105,8 +105,8 @@ noThunks :: Context -&gt; GenesisHash -&gt; IO (Maybe ThunkInfo)
 $cnoThunks :: Context -&gt; GenesisHash -&gt; IO (Maybe ThunkInfo)
 </span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">NoThunks</span></a></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-21"></span><span>
-</span><span id="line-22"></span><span id="local-6989586621679528703"><span id="local-6989586621679528705"><span id="local-6989586621679528707"><span class="hs-keyword">deriving</span><span> </span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-type">GenesisHash</span></a></span></span></span></span><span>
+</span><span id="line-22"></span><span id="local-6989586621679528727"><span id="local-6989586621679528729"><span id="local-6989586621679528731"><span class="hs-keyword">deriving</span><span> </span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Show</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-type">GenesisHash</span></a></span></span></span></span><span>
 </span><span id="line-23"></span><span>
 </span><span id="line-24"></span><span class="hs-comment">-- Used for debugging purposes only</span><span>
-</span><span id="line-25"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528694"><span id="local-6989586621679528696"><span id="local-6989586621679528698"><span id="local-6989586621679528700"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-type">GenesisHash</span></a></span></span></span></span></span><span>
+</span><span id="line-25"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528718"><span id="local-6989586621679528720"><span id="local-6989586621679528722"><span id="local-6989586621679528724"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Genesis.Hash.html#GenesisHash"><span class="hs-identifier hs-type">GenesisHash</span></a></span></span></span></span></span><span>
 </span><span id="line-26"></span></pre></body></html>

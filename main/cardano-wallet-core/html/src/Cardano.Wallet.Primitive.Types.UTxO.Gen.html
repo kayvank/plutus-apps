@@ -33,14 +33,14 @@
 forall a. (Int -&gt; Gen a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">sized</span></a></span><span> </span><span class="annot"><span class="annottext">((Int -&gt; Gen UTxO) -&gt; Gen UTxO) -&gt; (Int -&gt; Gen UTxO) -&gt; Gen UTxO
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682477060"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477060"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-32"></span><span>    </span><span id="local-6989586621682477059"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477059"><span class="hs-identifier hs-var">entryCount</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; Gen Int
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682477344"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682477344"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-32"></span><span>    </span><span id="local-6989586621682477343"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682477343"><span class="hs-identifier hs-var">entryCount</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; Gen Int
 forall a. Random a =&gt; (a, a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">choose</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477060"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682477344"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-33"></span><span>    </span><span class="annot"><span class="annottext">Map TxIn TxOut -&gt; UTxO
 </span><a href="Cardano.Wallet.Primitive.Types.UTxO.html#UTxO"><span class="hs-identifier hs-var">UTxO</span></a></span><span> </span><span class="annot"><span class="annottext">(Map TxIn TxOut -&gt; UTxO)
 -&gt; ([(TxIn, TxOut)] -&gt; Map TxIn TxOut) -&gt; [(TxIn, TxOut)] -&gt; UTxO
@@ -52,7 +52,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Gen (TxIn, TxOut) -&gt; Gen [(TxIn, TxOut)]
 forall (m :: * -&gt; *) a. Applicative m =&gt; Int -&gt; m a -&gt; m [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicateM</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477059"><span class="hs-identifier hs-var">entryCount</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (TxIn, TxOut)
+</span><a href="#local-6989586621682477343"><span class="hs-identifier hs-var">entryCount</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (TxIn, TxOut)
 </span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genEntry"><span class="hs-identifier hs-var">genEntry</span></a></span><span>
 </span><span id="line-34"></span><span>
 </span><span id="line-35"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#shrinkUTxO"><span class="hs-identifier hs-type">shrinkUTxO</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.html#UTxO"><span class="hs-identifier hs-type">UTxO</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.html#UTxO"><span class="hs-identifier hs-type">UTxO</span></a></span><span class="hs-special">]</span><span>
@@ -106,9 +106,9 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><span id="line-45"></span><span>
 </span><span id="line-46"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#shrinkEntry"><span class="hs-identifier hs-type">shrinkEntry</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxIn"><span class="hs-identifier hs-type">TxIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxOut"><span class="hs-identifier hs-type">TxOut</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxIn"><span class="hs-identifier hs-type">TxIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxOut"><span class="hs-identifier hs-type">TxOut</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span>
 </span><span id="line-47"></span><span id="shrinkEntry"><span class="annot"><span class="annottext">shrinkEntry :: (TxIn, TxOut) -&gt; [(TxIn, TxOut)]
-</span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#shrinkEntry"><span class="hs-identifier hs-var hs-var">shrinkEntry</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621682477049"><span class="annot"><span class="annottext">TxIn
-</span><a href="#local-6989586621682477049"><span class="hs-identifier hs-var">i</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682477048"><span class="annot"><span class="annottext">TxOut
-</span><a href="#local-6989586621682477048"><span class="hs-identifier hs-var">o</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(TxIn -&gt; TxOut -&gt; (TxIn, TxOut)) -&gt; (TxIn, TxOut) -&gt; (TxIn, TxOut)
+</span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#shrinkEntry"><span class="hs-identifier hs-var hs-var">shrinkEntry</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621682477333"><span class="annot"><span class="annottext">TxIn
+</span><a href="#local-6989586621682477333"><span class="hs-identifier hs-var">i</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682477332"><span class="annot"><span class="annottext">TxOut
+</span><a href="#local-6989586621682477332"><span class="hs-identifier hs-var">o</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(TxIn -&gt; TxOut -&gt; (TxIn, TxOut)) -&gt; (TxIn, TxOut) -&gt; (TxIn, TxOut)
 forall a b c. (a -&gt; b -&gt; c) -&gt; (a, b) -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">uncurry</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">((TxIn, TxOut) -&gt; (TxIn, TxOut))
 -&gt; [(TxIn, TxOut)] -&gt; [(TxIn, TxOut)]
@@ -118,10 +118,10 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a b. (a, a -&gt; [a]) -&gt; (b, b -&gt; [b]) -&gt; [(a, b)]
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">shrinkInterleaved</span></a></span><span>
 </span><span id="line-48"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxIn
-</span><a href="#local-6989586621682477049"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxIn -&gt; [TxIn]
+</span><a href="#local-6989586621682477333"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxIn -&gt; [TxIn]
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.Gen.html#shrinkTxIn"><span class="hs-identifier hs-var">shrinkTxIn</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-49"></span><span>    </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxOut
-</span><a href="#local-6989586621682477048"><span class="hs-identifier hs-var">o</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxOut -&gt; [TxOut]
+</span><a href="#local-6989586621682477332"><span class="hs-identifier hs-var">o</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxOut -&gt; [TxOut]
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.Gen.html#shrinkTxOut"><span class="hs-identifier hs-var">shrinkTxOut</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-50"></span><span>
 </span><span id="line-51"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
@@ -131,20 +131,20 @@ forall a b. (a, a -&gt; [a]) -&gt; (b, b -&gt; [b]) -&gt; [(a, b)]
 </span><span id="line-55"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genUTxOLarge"><span class="hs-identifier hs-type">genUTxOLarge</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.html#UTxO"><span class="hs-identifier hs-type">UTxO</span></a></span><span>
 </span><span id="line-56"></span><span id="genUTxOLarge"><span class="annot"><span class="annottext">genUTxOLarge :: Gen UTxO
 </span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genUTxOLarge"><span class="hs-identifier hs-var hs-var">genUTxOLarge</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-57"></span><span>    </span><span id="local-6989586621682477046"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477046"><span class="hs-identifier hs-var">entryCount</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; Gen Int
+</span><span id="line-57"></span><span>    </span><span id="local-6989586621682477330"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682477330"><span class="hs-identifier hs-var">entryCount</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; Gen Int
 forall a. Random a =&gt; (a, a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">choose</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1024</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">4096</span></span><span class="hs-special">)</span><span>
 </span><span id="line-58"></span><span>    </span><span class="annot"><span class="annottext">Int -&gt; Gen UTxO
 </span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genUTxOLargeN"><span class="hs-identifier hs-var">genUTxOLargeN</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477046"><span class="hs-identifier hs-var">entryCount</span></a></span><span>
+</span><a href="#local-6989586621682477330"><span class="hs-identifier hs-var">entryCount</span></a></span><span>
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genUTxOLargeN"><span class="hs-identifier hs-type">genUTxOLargeN</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.html#UTxO"><span class="hs-identifier hs-type">UTxO</span></a></span><span>
 </span><span id="line-61"></span><span id="genUTxOLargeN"><span class="annot"><span class="annottext">genUTxOLargeN :: Int -&gt; Gen UTxO
-</span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genUTxOLargeN"><span class="hs-identifier hs-var hs-var">genUTxOLargeN</span></a></span></span><span> </span><span id="local-6989586621682477045"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477045"><span class="hs-identifier hs-var">entryCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genUTxOLargeN"><span class="hs-identifier hs-var hs-var">genUTxOLargeN</span></a></span></span><span> </span><span id="local-6989586621682477329"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682477329"><span class="hs-identifier hs-var">entryCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-62"></span><span>    </span><span class="annot"><span class="annottext">Map TxIn TxOut -&gt; UTxO
 </span><a href="Cardano.Wallet.Primitive.Types.UTxO.html#UTxO"><span class="hs-identifier hs-var">UTxO</span></a></span><span> </span><span class="annot"><span class="annottext">(Map TxIn TxOut -&gt; UTxO)
 -&gt; ([(TxIn, TxOut)] -&gt; Map TxIn TxOut) -&gt; [(TxIn, TxOut)] -&gt; UTxO
@@ -156,7 +156,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Gen (TxIn, TxOut) -&gt; Gen [(TxIn, TxOut)]
 forall (m :: * -&gt; *) a. Applicative m =&gt; Int -&gt; m a -&gt; m [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">replicateM</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682477045"><span class="hs-identifier hs-var">entryCount</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (TxIn, TxOut)
+</span><a href="#local-6989586621682477329"><span class="hs-identifier hs-var">entryCount</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (TxIn, TxOut)
 </span><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genEntryLargeRange"><span class="hs-identifier hs-var">genEntryLargeRange</span></a></span><span>
 </span><span id="line-63"></span><span>
 </span><span id="line-64"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.UTxO.Gen.html#genEntryLargeRange"><span class="hs-identifier hs-type">genEntryLargeRange</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxIn"><span class="hs-identifier hs-type">TxIn</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxOut"><span class="hs-identifier hs-type">TxOut</span></a></span><span class="hs-special">)</span><span>

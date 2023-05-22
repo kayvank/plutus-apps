@@ -35,12 +35,12 @@
 </span><span id="line-35"></span><span class="hs-comment">-- &gt;&gt;&gt; testLaws @(Map Int) functorLaws</span><span>
 </span><span id="line-36"></span><span class="hs-comment">--</span><span>
 </span><span id="line-37"></span><span class="annot"><a href="Test.Utils.Laws.html#testLaws"><span class="hs-identifier hs-type">testLaws</span></a></span><span>
-</span><span id="line-38"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679138552"><span class="annot"><a href="#local-6989586621679138552"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Typeable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138552"><span class="hs-identifier hs-type">a</span></a></span><span>
-</span><span id="line-39"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Proxy</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138552"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../quickcheck-classes-base/html/src"><span class="hs-identifier hs-type">Laws</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-38"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679138869"><span class="annot"><a href="#local-6989586621679138869"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Typeable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138869"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-39"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Proxy</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138869"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../quickcheck-classes-base/html/src"><span class="hs-identifier hs-type">Laws</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-40"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-type">Spec</span></a></span><span>
 </span><span id="line-41"></span><span id="testLaws"><span class="annot"><span class="annottext">testLaws :: (Proxy a -&gt; Laws) -&gt; Spec
-</span><a href="Test.Utils.Laws.html#testLaws"><span class="hs-identifier hs-var hs-var">testLaws</span></a></span></span><span> </span><span id="local-6989586621679138540"><span class="annot"><span class="annottext">Proxy a -&gt; Laws
-</span><a href="#local-6989586621679138540"><span class="hs-identifier hs-var">getLaws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Utils.Laws.html#testLaws"><span class="hs-identifier hs-var hs-var">testLaws</span></a></span></span><span> </span><span id="local-6989586621679138857"><span class="annot"><span class="annottext">Proxy a -&gt; Laws
+</span><a href="#local-6989586621679138857"><span class="hs-identifier hs-var">getLaws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-42"></span><span>    </span><span class="annot"><span class="annottext">Spec -&gt; Spec
 forall a. SpecWith a -&gt; SpecWith a
 </span><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-var">parallel</span></a></span><span> </span><span class="annot"><span class="annottext">(Spec -&gt; Spec) -&gt; Spec -&gt; Spec
@@ -48,7 +48,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Spec -&gt; Spec
 forall a. HasCallStack =&gt; String -&gt; SpecWith a -&gt; SpecWith a
 </span><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-var">describe</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679138539"><span class="hs-identifier hs-var">description</span></a></span><span> </span><span class="annot"><span class="annottext">(Spec -&gt; Spec) -&gt; Spec -&gt; Spec
+</span><a href="#local-6989586621679138856"><span class="hs-identifier hs-var">description</span></a></span><span> </span><span class="annot"><span class="annottext">(Spec -&gt; Spec) -&gt; Spec -&gt; Spec
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-43"></span><span>        </span><span class="annot"><span class="annottext">[(String, Property)] -&gt; ((String, Property) -&gt; Spec) -&gt; Spec
@@ -57,7 +57,7 @@ forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
 t a -&gt; (a -&gt; m b) -&gt; m ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">forM_</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Laws -&gt; [(String, Property)]
 </span><a href="../../../../quickcheck-classes-base/html/src"><span class="hs-identifier hs-var hs-var">lawsProperties</span></a></span><span> </span><span class="annot"><span class="annottext">Laws
-</span><a href="#local-6989586621679138537"><span class="hs-identifier hs-var">laws</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(((String, Property) -&gt; Spec) -&gt; Spec)
+</span><a href="#local-6989586621679138854"><span class="hs-identifier hs-var">laws</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(((String, Property) -&gt; Spec) -&gt; Spec)
 -&gt; ((String, Property) -&gt; Spec) -&gt; Spec
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Property -&gt; Spec) -&gt; (String, Property) -&gt; Spec
@@ -68,15 +68,15 @@ forall a.
 String -&gt; a -&gt; SpecWith (Arg a)
 </span><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-var">it</span></a></span><span>
 </span><span id="line-44"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-45"></span><span>    </span><span id="local-6989586621679138539"><span class="annot"><span class="annottext">description :: String
-</span><a href="#local-6989586621679138539"><span class="hs-identifier hs-var hs-var">description</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; String
+</span><span id="line-45"></span><span>    </span><span id="local-6989586621679138856"><span class="annot"><span class="annottext">description :: String
+</span><a href="#local-6989586621679138856"><span class="hs-identifier hs-var hs-var">description</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[String] -&gt; String
 forall a. Monoid a =&gt; [a] -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mconcat</span></a></span><span>
 </span><span id="line-46"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Testing &quot;</span></span><span>
 </span><span id="line-47"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Laws -&gt; String
 </span><a href="../../../../quickcheck-classes-base/html/src"><span class="hs-identifier hs-var hs-var">lawsTypeclass</span></a></span><span> </span><span class="annot"><span class="annottext">Laws
-</span><a href="#local-6989586621679138537"><span class="hs-identifier hs-var">laws</span></a></span><span>
+</span><a href="#local-6989586621679138854"><span class="hs-identifier hs-var">laws</span></a></span><span>
 </span><span id="line-48"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot; laws for type &quot;</span></span><span>
 </span><span id="line-49"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeRep -&gt; String
@@ -89,15 +89,15 @@ proxy a -&gt; TypeRep
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy a
 forall k (t :: k). Proxy t
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679138552"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679138869"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-50"></span><span>        </span><span class="hs-special">]</span><span>
-</span><span id="line-51"></span><span>    </span><span id="local-6989586621679138537"><span class="annot"><span class="annottext">laws :: Laws
-</span><a href="#local-6989586621679138537"><span class="hs-identifier hs-var hs-var">laws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Proxy a -&gt; Laws
-</span><a href="#local-6989586621679138540"><span class="hs-identifier hs-var">getLaws</span></a></span><span> </span><span class="annot"><span class="annottext">(Proxy a -&gt; Laws) -&gt; Proxy a -&gt; Laws
+</span><span id="line-51"></span><span>    </span><span id="local-6989586621679138854"><span class="annot"><span class="annottext">laws :: Laws
+</span><a href="#local-6989586621679138854"><span class="hs-identifier hs-var hs-var">laws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Proxy a -&gt; Laws
+</span><a href="#local-6989586621679138857"><span class="hs-identifier hs-var">getLaws</span></a></span><span> </span><span class="annot"><span class="annottext">(Proxy a -&gt; Laws) -&gt; Proxy a -&gt; Laws
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Proxy a
 forall k (t :: k). Proxy t
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679138552"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Proxy</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679138869"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="hs-comment">-- | Calls `testLaws` with multiple sets of laws.</span><span>
 </span><span id="line-54"></span><span class="hs-comment">--</span><span>
@@ -107,18 +107,18 @@ forall k (t :: k). Proxy t
 </span><span id="line-58"></span><span class="hs-comment">-- &gt;&gt;&gt; testLawsMany @(Map Int) [foldableLaws, functorLaws]</span><span>
 </span><span id="line-59"></span><span class="hs-comment">--</span><span>
 </span><span id="line-60"></span><span class="annot"><a href="Test.Utils.Laws.html#testLawsMany"><span class="hs-identifier hs-type">testLawsMany</span></a></span><span>
-</span><span id="line-61"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679138532"><span class="annot"><a href="#local-6989586621679138532"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Typeable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138532"><span class="hs-identifier hs-type">a</span></a></span><span>
-</span><span id="line-62"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Proxy</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138532"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../quickcheck-classes-base/html/src"><span class="hs-identifier hs-type">Laws</span></a></span><span class="hs-special">]</span><span>
+</span><span id="line-61"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679138849"><span class="annot"><a href="#local-6989586621679138849"><span class="hs-identifier hs-type">a</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Typeable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138849"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-62"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Proxy</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679138849"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../quickcheck-classes-base/html/src"><span class="hs-identifier hs-type">Laws</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-63"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../hspec-core/html/src"><span class="hs-identifier hs-type">Spec</span></a></span><span>
 </span><span id="line-64"></span><span id="testLawsMany"><span class="annot"><span class="annottext">testLawsMany :: [Proxy a -&gt; Laws] -&gt; Spec
-</span><a href="Test.Utils.Laws.html#testLawsMany"><span class="hs-identifier hs-var hs-var">testLawsMany</span></a></span></span><span> </span><span id="local-6989586621679138531"><span class="annot"><span class="annottext">[Proxy a -&gt; Laws]
-</span><a href="#local-6989586621679138531"><span class="hs-identifier hs-var">getLawsMany</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Utils.Laws.html#testLawsMany"><span class="hs-identifier hs-var hs-var">testLawsMany</span></a></span></span><span> </span><span id="local-6989586621679138848"><span class="annot"><span class="annottext">[Proxy a -&gt; Laws]
+</span><a href="#local-6989586621679138848"><span class="hs-identifier hs-var">getLawsMany</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-65"></span><span>    </span><span class="annot"><span class="annottext">Typeable a =&gt; (Proxy a -&gt; Laws) -&gt; Spec
 forall k (a :: k). Typeable a =&gt; (Proxy a -&gt; Laws) -&gt; Spec
-</span><a href="Test.Utils.Laws.html#testLaws"><span class="hs-identifier hs-var">testLaws</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679138532"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><span class="annottext">((Proxy a -&gt; Laws) -&gt; Spec) -&gt; [Proxy a -&gt; Laws] -&gt; Spec
+</span><a href="Test.Utils.Laws.html#testLaws"><span class="hs-identifier hs-var">testLaws</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679138849"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><span class="annottext">((Proxy a -&gt; Laws) -&gt; Spec) -&gt; [Proxy a -&gt; Laws] -&gt; Spec
 forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
 (Foldable t, Monad m) =&gt;
 (a -&gt; m b) -&gt; t a -&gt; m ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`mapM_`</span></a></span><span> </span><span class="annot"><span class="annottext">[Proxy a -&gt; Laws]
-</span><a href="#local-6989586621679138531"><span class="hs-identifier hs-var">getLawsMany</span></a></span><span>
+</span><a href="#local-6989586621679138848"><span class="hs-identifier hs-var">getLawsMany</span></a></span><span>
 </span><span id="line-66"></span></pre></body></html>

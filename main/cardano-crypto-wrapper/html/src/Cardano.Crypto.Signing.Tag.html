@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_9hib0zdqKnXKO9fjAsBC0o"></span><span class="hs-pragma">{-# LANGUAGE DeriveGeneric #-}</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_3FkJOlCCQZi0J7TOC6EDDt"></span><span class="hs-pragma">{-# LANGUAGE DeriveGeneric #-}</span><span>
 </span><span id="line-2"></span><span class="hs-pragma">{-# LANGUAGE LambdaCase #-}</span><span>
 </span><span id="line-3"></span><span class="hs-pragma">{-# LANGUAGE OverloadedStrings #-}</span><span>
 </span><span id="line-4"></span><span>
@@ -26,7 +26,7 @@
 </span><span id="line-26"></span><span class="hs-comment">--   We also automatically add the network tag ('protocolMagic') whenever it</span><span>
 </span><span id="line-27"></span><span class="hs-comment">--   makes sense, to ensure that things intended for testnet won't work for</span><span>
 </span><span id="line-28"></span><span class="hs-comment">--   mainnet.</span><span>
-</span><span id="line-29"></span><span id="local-6989586621679161722"><span id="local-6989586621679161723"></span></span><span class="hs-keyword">data</span><span> </span><span id="SignTag"><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignTag"><span class="hs-identifier hs-var">SignTag</span></a></span></span><span>
+</span><span id="line-29"></span><span id="local-6989586621679161731"><span id="local-6989586621679161732"></span></span><span class="hs-keyword">data</span><span> </span><span id="SignTag"><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignTag"><span class="hs-identifier hs-var">SignTag</span></a></span></span><span>
 </span><span id="line-30"></span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="hs-comment">-- | Anything (to be used for testing only)</span><span>
 </span><span id="line-31"></span><span>    </span><span id="SignForTestingOnly"><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignForTestingOnly"><span class="hs-identifier hs-var">SignForTestingOnly</span></a></span></span><span>
 </span><span id="line-32"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="hs-comment">-- | Tx:               @TxSigData@</span><span>
@@ -49,7 +49,7 @@
 </span><span id="line-49"></span><span>    </span><span id="SignBlock"><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignBlock"><span class="hs-identifier hs-var">SignBlock</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Crypto.Signing.VerificationKey.html#VerificationKey"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span>
 </span><span id="line-50"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span class="hs-comment">-- | Certificate:      @Certificate@</span><span>
 </span><span id="line-51"></span><span>    </span><span id="SignCertificate"><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignCertificate"><span class="hs-identifier hs-var">SignCertificate</span></a></span></span><span>
-</span><span id="line-52"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679161709"><span id="local-6989586621679161711"><span class="annot"><span class="annottext">SignTag -&gt; SignTag -&gt; Bool
+</span><span id="line-52"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679161718"><span id="local-6989586621679161720"><span class="annot"><span class="annottext">SignTag -&gt; SignTag -&gt; Bool
 (SignTag -&gt; SignTag -&gt; Bool)
 -&gt; (SignTag -&gt; SignTag -&gt; Bool) -&gt; Eq SignTag
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -57,7 +57,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: SignTag -&gt; SignTag -&gt; Bool
 == :: SignTag -&gt; SignTag -&gt; Bool
 $c== :: SignTag -&gt; SignTag -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679161693"><span id="local-6989586621679161695"><span id="local-6989586621679161697"><span id="local-6989586621679161699"><span id="local-6989586621679161701"><span id="local-6989586621679161703"><span id="local-6989586621679161705"><span class="annot"><span class="annottext">Eq SignTag
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679161702"><span id="local-6989586621679161704"><span id="local-6989586621679161706"><span id="local-6989586621679161708"><span id="local-6989586621679161710"><span id="local-6989586621679161712"><span id="local-6989586621679161714"><span class="annot"><span class="annottext">Eq SignTag
 Eq SignTag
 -&gt; (SignTag -&gt; SignTag -&gt; Ordering)
 -&gt; (SignTag -&gt; SignTag -&gt; Bool)
@@ -95,7 +95,7 @@ $c&lt; :: SignTag -&gt; SignTag -&gt; Bool
 compare :: SignTag -&gt; SignTag -&gt; Ordering
 $ccompare :: SignTag -&gt; SignTag -&gt; Ordering
 $cp1Ord :: Eq SignTag
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679161686"><span id="local-6989586621679161688"><span id="local-6989586621679161690"><span class="annot"><span class="annottext">Int -&gt; SignTag -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679161695"><span id="local-6989586621679161697"><span id="local-6989586621679161699"><span class="annot"><span class="annottext">Int -&gt; SignTag -&gt; ShowS
 [SignTag] -&gt; ShowS
 SignTag -&gt; String
 (Int -&gt; SignTag -&gt; ShowS)
@@ -122,7 +122,7 @@ $cfrom :: forall x. SignTag -&gt; Rep SignTag x
 </span><span id="line-55"></span><span class="hs-comment">-- types. Maybe something with GADTs and data families?</span><span>
 </span><span id="line-56"></span><span>
 </span><span id="line-57"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">Buildable</span></a></span><span> </span><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignTag"><span class="hs-identifier hs-type">SignTag</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-58"></span><span>  </span><span id="local-6989586621679161679"><span class="annot"><span class="annottext">build :: SignTag -&gt; Builder
+</span><span id="line-58"></span><span>  </span><span id="local-6989586621679161688"><span class="annot"><span class="annottext">build :: SignTag -&gt; Builder
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Format Builder (SignTag -&gt; Builder) -&gt; SignTag -&gt; Builder
 forall a. Format Builder a -&gt; a
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">bprint</span></a></span><span> </span><span class="annot"><span class="annottext">Format Builder (SignTag -&gt; Builder)
@@ -171,8 +171,8 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-69"></span><span>
 </span><span id="line-70"></span><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#signTagRaw"><span class="hs-identifier hs-type">signTagRaw</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignTag"><span class="hs-identifier hs-type">SignTag</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span>
 </span><span id="line-71"></span><span id="signTagRaw"><span class="annot"><span class="annottext">signTagRaw :: ByteString -&gt; SignTag -&gt; ByteString
-</span><a href="Cardano.Crypto.Signing.Tag.html#signTagRaw"><span class="hs-identifier hs-var hs-var">signTagRaw</span></a></span></span><span> </span><span id="local-6989586621679161673"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
+</span><a href="Cardano.Crypto.Signing.Tag.html#signTagRaw"><span class="hs-identifier hs-var hs-var">signTagRaw</span></a></span></span><span> </span><span id="local-6989586621679161682"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
 </span><span id="line-72"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignForTestingOnly"><span class="hs-identifier hs-var">SignForTestingOnly</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x00&quot;</span></span><span>
@@ -181,60 +181,60 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span class="hs-string">&quot;\x01&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-74"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignRedeemTx"><span class="hs-identifier hs-var">SignRedeemTx</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x02&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-75"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignVssCert"><span class="hs-identifier hs-var">SignVssCert</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x03&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-76"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignUSProposal"><span class="hs-identifier hs-var">SignUSProposal</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x04&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-77"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignCommitment"><span class="hs-identifier hs-var">SignCommitment</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x05&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-78"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignUSVote"><span class="hs-identifier hs-var">SignUSVote</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x06&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-79"></span><span>  </span><span class="hs-comment">-- &quot;\x07&quot; was used for SignMainBlock, but was never used in mainnet</span><span>
 </span><span id="line-80"></span><span>  </span><span class="hs-comment">-- &quot;\x08&quot; was used for SignMainBlockLight, but was never used in mainnet</span><span>
 </span><span id="line-81"></span><span>
 </span><span id="line-82"></span><span>  </span><span class="hs-comment">-- This tag includes the prefix that was previously added in @proxySign@,</span><span>
 </span><span id="line-83"></span><span>  </span><span class="hs-comment">-- allowing us to unify the two signing functions</span><span>
-</span><span id="line-84"></span><span>  </span><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignBlock"><span class="hs-identifier hs-type">SignBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Signing.VerificationKey.html#VerificationKey"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span> </span><span id="local-6989586621679161671"><span class="annot"><span class="annottext">XPub
-</span><a href="#local-6989586621679161671"><span class="hs-identifier hs-var">issuerVK</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-84"></span><span>  </span><span class="annot"><a href="Cardano.Crypto.Signing.Tag.html#SignBlock"><span class="hs-identifier hs-type">SignBlock</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Crypto.Signing.VerificationKey.html#VerificationKey"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span> </span><span id="local-6989586621679161680"><span class="annot"><span class="annottext">XPub
+</span><a href="#local-6989586621679161680"><span class="hs-identifier hs-var">issuerVK</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-85"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;01&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">XPub -&gt; ByteString
 </span><a href="../../../../cardano-crypto/html/src"><span class="hs-identifier hs-var">CC.unXPub</span></a></span><span> </span><span class="annot"><span class="annottext">XPub
-</span><a href="#local-6989586621679161671"><span class="hs-identifier hs-var">issuerVK</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
+</span><a href="#local-6989586621679161680"><span class="hs-identifier hs-var">issuerVK</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x09&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-86"></span><span>  </span><span class="annot"><span class="annottext">SignTag
 </span><a href="Cardano.Crypto.Signing.Tag.html#SignCertificate"><span class="hs-identifier hs-var">SignCertificate</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;\x0a&quot;</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679161673"><span class="hs-identifier hs-var">network</span></a></span><span>
+</span><a href="#local-6989586621679161682"><span class="hs-identifier hs-var">network</span></a></span><span>
 </span><span id="line-87"></span></pre></body></html>

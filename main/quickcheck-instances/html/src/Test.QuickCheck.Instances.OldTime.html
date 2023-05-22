@@ -16,33 +16,33 @@
 </span><span id="line-16"></span><span class="hs-comment">-- old-time</span><span>
 </span><span id="line-17"></span><span class="hs-comment">-------------------------------------------------------------------------------</span><span>
 </span><span id="line-18"></span><span>
-</span><span id="line-19"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679082299"><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.Month</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-20"></span><span>    </span><span id="local-6989586621679082297"><span class="annot"><span class="annottext">arbitrary :: Gen Month
+</span><span id="line-19"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679082309"><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.Month</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-20"></span><span>    </span><span id="local-6989586621679082307"><span class="annot"><span class="annottext">arbitrary :: Gen Month
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Gen Month
 forall a. (Bounded a, Enum a) =&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">arbitraryBoundedEnum</span></a></span><span>
 </span><span id="line-21"></span><span>
 </span><span id="line-22"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">CoArbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.Month</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-23"></span><span>    </span><span id="local-6989586621679082292"><span class="annot"><span class="annottext">coarbitrary :: Month -&gt; Gen b -&gt; Gen b
+</span><span id="line-23"></span><span>    </span><span id="local-6989586621679082302"><span class="annot"><span class="annottext">coarbitrary :: Month -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Month -&gt; Gen b -&gt; Gen b
 forall a b. Enum a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitraryEnum</span></a></span><span>
 </span><span id="line-24"></span><span>
-</span><span id="line-25"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679082287"><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.Day</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-26"></span><span>    </span><span id="local-6989586621679082286"><span class="annot"><span class="annottext">arbitrary :: Gen Day
-</span><a href="#local-6989586621679082286"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Gen Day
+</span><span id="line-25"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679082297"><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.Day</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-26"></span><span>    </span><span id="local-6989586621679082296"><span class="annot"><span class="annottext">arbitrary :: Gen Day
+</span><a href="#local-6989586621679082296"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Gen Day
 forall a. (Bounded a, Enum a) =&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">arbitraryBoundedEnum</span></a></span><span>
 </span><span id="line-27"></span><span>
 </span><span id="line-28"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">CoArbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.Day</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-29"></span><span>    </span><span id="local-6989586621679082284"><span class="annot"><span class="annottext">coarbitrary :: Day -&gt; Gen b -&gt; Gen b
-</span><a href="#local-6989586621679082284"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Day -&gt; Gen b -&gt; Gen b
+</span><span id="line-29"></span><span>    </span><span id="local-6989586621679082294"><span class="annot"><span class="annottext">coarbitrary :: Day -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082294"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Day -&gt; Gen b -&gt; Gen b
 forall a b. Enum a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitraryEnum</span></a></span><span>
 </span><span id="line-30"></span><span>
 </span><span id="line-31"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.ClockTime</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-32"></span><span>    </span><span id="local-6989586621679082281"><span class="annot"><span class="annottext">arbitrary :: Gen ClockTime
-</span><a href="#local-6989586621679082281"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-32"></span><span>    </span><span id="local-6989586621679082291"><span class="annot"><span class="annottext">arbitrary :: Gen ClockTime
+</span><a href="#local-6989586621679082291"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-33"></span><span>        </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; ClockTime
 </span><a href="../../../../old-time/html/src"><span class="hs-identifier hs-var">OldTime.TOD</span></a></span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; Integer -&gt; ClockTime)
 -&gt; Gen Integer -&gt; Gen (Integer -&gt; ClockTime)
@@ -65,48 +65,48 @@ forall a. Random a =&gt; (a, a) -&gt; Gen a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
-</span><span id="line-35"></span><span>    </span><span id="local-6989586621679082276"><span class="annot"><span class="annottext">shrink :: ClockTime -&gt; [ClockTime]
-</span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">shrink</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TOD</span></a></span><span> </span><span id="local-6989586621679082274"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082274"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span id="local-6989586621679082273"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082273"><span class="hs-identifier hs-var">p</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-35"></span><span>    </span><span id="local-6989586621679082286"><span class="annot"><span class="annottext">shrink :: ClockTime -&gt; [ClockTime]
+</span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">shrink</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TOD</span></a></span><span> </span><span id="local-6989586621679082284"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082284"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span id="local-6989586621679082283"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082283"><span class="hs-identifier hs-var">p</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-36"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; ClockTime
 </span><a href="../../../../old-time/html/src"><span class="hs-identifier hs-var">OldTime.TOD</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082272"><span class="hs-identifier hs-var">s'</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082273"><span class="hs-identifier hs-var">p</span></a></span><span>  </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082272"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082272"><span class="hs-identifier hs-var">s'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; [Integer]
+</span><a href="#local-6989586621679082282"><span class="hs-identifier hs-var">s'</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082283"><span class="hs-identifier hs-var">p</span></a></span><span>  </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082282"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082282"><span class="hs-identifier hs-var">s'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; [Integer]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082274"><span class="hs-identifier hs-var">s</span></a></span><span> </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[ClockTime] -&gt; [ClockTime] -&gt; [ClockTime]
+</span><a href="#local-6989586621679082284"><span class="hs-identifier hs-var">s</span></a></span><span> </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[ClockTime] -&gt; [ClockTime] -&gt; [ClockTime]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-37"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Integer -&gt; ClockTime
 </span><a href="../../../../old-time/html/src"><span class="hs-identifier hs-var">OldTime.TOD</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082274"><span class="hs-identifier hs-var">s</span></a></span><span>  </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082271"><span class="hs-identifier hs-var">p'</span></a></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082271"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082271"><span class="hs-identifier hs-var">p'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; [Integer]
+</span><a href="#local-6989586621679082284"><span class="hs-identifier hs-var">s</span></a></span><span>  </span><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082281"><span class="hs-identifier hs-var">p'</span></a></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082281"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082281"><span class="hs-identifier hs-var">p'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; [Integer]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082273"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679082283"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-38"></span><span>
 </span><span id="line-39"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">CoArbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.ClockTime</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-40"></span><span>    </span><span id="local-6989586621679082269"><span class="annot"><span class="annottext">coarbitrary :: ClockTime -&gt; Gen b -&gt; Gen b
-</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TOD</span></a></span><span> </span><span id="local-6989586621679082268"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082268"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span id="local-6989586621679082267"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082267"><span class="hs-identifier hs-var">p</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-40"></span><span>    </span><span id="local-6989586621679082279"><span class="annot"><span class="annottext">coarbitrary :: ClockTime -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082279"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TOD</span></a></span><span> </span><span id="local-6989586621679082278"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082278"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span id="local-6989586621679082277"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082277"><span class="hs-identifier hs-var">p</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-41"></span><span>        </span><span class="annot"><span class="annottext">Integer -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082268"><span class="hs-identifier hs-var">s</span></a></span><span> </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082278"><span class="hs-identifier hs-var">s</span></a></span><span> </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082267"><span class="hs-identifier hs-var">p</span></a></span><span>
+</span><a href="#local-6989586621679082277"><span class="hs-identifier hs-var">p</span></a></span><span>
 </span><span id="line-42"></span><span>
 </span><span id="line-43"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TimeDiff</span></a></span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-44"></span><span>    </span><span class="hs-comment">-- a bit of a cheat ...</span><span>
-</span><span id="line-45"></span><span>    </span><span id="local-6989586621679082263"><span class="annot"><span class="annottext">arbitrary :: Gen TimeDiff
-</span><a href="#local-6989586621679082263"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-45"></span><span>    </span><span id="local-6989586621679082273"><span class="annot"><span class="annottext">arbitrary :: Gen TimeDiff
+</span><a href="#local-6989586621679082273"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-46"></span><span>        </span><span class="annot"><span class="annottext">TimeDiff -&gt; TimeDiff
 </span><a href="../../../../old-time/html/src"><span class="hs-identifier hs-var">OldTime.normalizeTimeDiff</span></a></span><span> </span><span class="annot"><span class="annottext">(TimeDiff -&gt; TimeDiff) -&gt; Gen TimeDiff -&gt; Gen TimeDiff
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -122,140 +122,140 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen ClockTime
 forall a. Arbitrary a =&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">arbitrary</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-48"></span><span>    </span><span id="local-6989586621679082260"><span class="annot"><span class="annottext">shrink :: TimeDiff -&gt; [TimeDiff]
-</span><a href="#local-6989586621679082260"><span class="hs-identifier hs-var hs-var hs-var hs-var">shrink</span></a></span></span><span> </span><span id="local-6989586621679082259"><span class="annot"><span class="annottext">td :: TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TimeDiff</span></a></span><span> </span><span id="local-6989586621679082257"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082257"><span class="hs-identifier hs-var">year</span></a></span></span><span> </span><span id="local-6989586621679082256"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082256"><span class="hs-identifier hs-var">month</span></a></span></span><span> </span><span id="local-6989586621679082255"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082255"><span class="hs-identifier hs-var">day</span></a></span></span><span> </span><span id="local-6989586621679082254"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082254"><span class="hs-identifier hs-var">hour</span></a></span></span><span> </span><span id="local-6989586621679082253"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082253"><span class="hs-identifier hs-var">minute</span></a></span></span><span> </span><span id="local-6989586621679082252"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082252"><span class="hs-identifier hs-var">sec</span></a></span></span><span> </span><span id="local-6989586621679082251"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082251"><span class="hs-identifier hs-var">picosec</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-48"></span><span>    </span><span id="local-6989586621679082270"><span class="annot"><span class="annottext">shrink :: TimeDiff -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082270"><span class="hs-identifier hs-var hs-var hs-var hs-var">shrink</span></a></span></span><span> </span><span id="local-6989586621679082269"><span class="annot"><span class="annottext">td :: TimeDiff
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TimeDiff</span></a></span><span> </span><span id="local-6989586621679082267"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082267"><span class="hs-identifier hs-var">year</span></a></span></span><span> </span><span id="local-6989586621679082266"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082266"><span class="hs-identifier hs-var">month</span></a></span></span><span> </span><span id="local-6989586621679082265"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082265"><span class="hs-identifier hs-var">day</span></a></span></span><span> </span><span id="local-6989586621679082264"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082264"><span class="hs-identifier hs-var">hour</span></a></span></span><span> </span><span id="local-6989586621679082263"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082263"><span class="hs-identifier hs-var">minute</span></a></span></span><span> </span><span id="local-6989586621679082262"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082262"><span class="hs-identifier hs-var">sec</span></a></span></span><span> </span><span id="local-6989586621679082261"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082261"><span class="hs-identifier hs-var">picosec</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-49"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdYear :: Int
-</span><a href="#local-6989586621679082250"><span class="hs-identifier hs-var">OldTime.tdYear</span></a></span><span>    </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082249"><span class="hs-identifier hs-var">y'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082249"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082249"><span class="hs-identifier hs-var">y'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdYear :: Int
+</span><a href="#local-6989586621679082260"><span class="hs-identifier hs-var">OldTime.tdYear</span></a></span><span>    </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">y'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082259"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">y'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082257"><span class="hs-identifier hs-var">year</span></a></span><span>    </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082267"><span class="hs-identifier hs-var">year</span></a></span><span>    </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-50"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdMonth :: Int
-</span><a href="#local-6989586621679082248"><span class="hs-identifier hs-var">OldTime.tdMonth</span></a></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082247"><span class="hs-identifier hs-var">m'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082247"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082247"><span class="hs-identifier hs-var">m'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdMonth :: Int
+</span><a href="#local-6989586621679082258"><span class="hs-identifier hs-var">OldTime.tdMonth</span></a></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082257"><span class="hs-identifier hs-var">m'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082257"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082257"><span class="hs-identifier hs-var">m'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082256"><span class="hs-identifier hs-var">month</span></a></span><span>   </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082266"><span class="hs-identifier hs-var">month</span></a></span><span>   </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-51"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdDay :: Int
-</span><a href="#local-6989586621679082246"><span class="hs-identifier hs-var">OldTime.tdDay</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082245"><span class="hs-identifier hs-var">d'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082245"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082245"><span class="hs-identifier hs-var">d'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdDay :: Int
+</span><a href="#local-6989586621679082256"><span class="hs-identifier hs-var">OldTime.tdDay</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082255"><span class="hs-identifier hs-var">d'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082255"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082255"><span class="hs-identifier hs-var">d'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082255"><span class="hs-identifier hs-var">day</span></a></span><span>     </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082265"><span class="hs-identifier hs-var">day</span></a></span><span>     </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-52"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdHour :: Int
-</span><a href="#local-6989586621679082244"><span class="hs-identifier hs-var">OldTime.tdHour</span></a></span><span>    </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082243"><span class="hs-identifier hs-var">h'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082243"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082243"><span class="hs-identifier hs-var">h'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdHour :: Int
+</span><a href="#local-6989586621679082254"><span class="hs-identifier hs-var">OldTime.tdHour</span></a></span><span>    </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082253"><span class="hs-identifier hs-var">h'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082253"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082253"><span class="hs-identifier hs-var">h'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082254"><span class="hs-identifier hs-var">hour</span></a></span><span>    </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082264"><span class="hs-identifier hs-var">hour</span></a></span><span>    </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-53"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdMin :: Int
-</span><a href="#local-6989586621679082242"><span class="hs-identifier hs-var">OldTime.tdMin</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082241"><span class="hs-identifier hs-var">m'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082241"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082241"><span class="hs-identifier hs-var">m'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdMin :: Int
+</span><a href="#local-6989586621679082252"><span class="hs-identifier hs-var">OldTime.tdMin</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082251"><span class="hs-identifier hs-var">m'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082251"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082251"><span class="hs-identifier hs-var">m'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082253"><span class="hs-identifier hs-var">minute</span></a></span><span>  </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082263"><span class="hs-identifier hs-var">minute</span></a></span><span>  </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-54"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdSec :: Int
-</span><a href="#local-6989586621679082240"><span class="hs-identifier hs-var">OldTime.tdSec</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082239"><span class="hs-identifier hs-var">s'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082239"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082239"><span class="hs-identifier hs-var">s'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdSec :: Int
+</span><a href="#local-6989586621679082250"><span class="hs-identifier hs-var">OldTime.tdSec</span></a></span><span>     </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082249"><span class="hs-identifier hs-var">s'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082249"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082249"><span class="hs-identifier hs-var">s'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Int -&gt; [Int]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082252"><span class="hs-identifier hs-var">sec</span></a></span><span>     </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
+</span><a href="#local-6989586621679082262"><span class="hs-identifier hs-var">sec</span></a></span><span>     </span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">[TimeDiff] -&gt; [TimeDiff] -&gt; [TimeDiff]
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span>
 </span><span id="line-55"></span><span>        </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">TimeDiff
-</span><a href="#local-6989586621679082259"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdPicosec :: Integer
-</span><a href="#local-6989586621679082238"><span class="hs-identifier hs-var">OldTime.tdPicosec</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082237"><span class="hs-identifier hs-var">p'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082237"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082237"><span class="hs-identifier hs-var">p'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; [Integer]
+</span><a href="#local-6989586621679082269"><span class="hs-identifier hs-var">td</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">tdPicosec :: Integer
+</span><a href="#local-6989586621679082248"><span class="hs-identifier hs-var">OldTime.tdPicosec</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082247"><span class="hs-identifier hs-var">p'</span></a></span><span> </span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621679082247"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082247"><span class="hs-identifier hs-var">p'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; [Integer]
 forall a. Arbitrary a =&gt; a -&gt; [a]
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">shrink</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082251"><span class="hs-identifier hs-var">picosec</span></a></span><span> </span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621679082261"><span class="hs-identifier hs-var">picosec</span></a></span><span> </span><span class="hs-special">]</span><span>
 </span><span id="line-56"></span><span>
 </span><span id="line-57"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">CoArbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TimeDiff</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-58"></span><span>    </span><span id="local-6989586621679082235"><span class="annot"><span class="annottext">coarbitrary :: TimeDiff -&gt; Gen b -&gt; Gen b
-</span><a href="#local-6989586621679082235"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TimeDiff</span></a></span><span> </span><span id="local-6989586621679082234"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082234"><span class="hs-identifier hs-var">year</span></a></span></span><span> </span><span id="local-6989586621679082233"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082233"><span class="hs-identifier hs-var">month</span></a></span></span><span> </span><span id="local-6989586621679082232"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082232"><span class="hs-identifier hs-var">day</span></a></span></span><span> </span><span id="local-6989586621679082231"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082231"><span class="hs-identifier hs-var">hour</span></a></span></span><span> </span><span id="local-6989586621679082230"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082230"><span class="hs-identifier hs-var">minute</span></a></span></span><span> </span><span id="local-6989586621679082229"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082229"><span class="hs-identifier hs-var">sec</span></a></span></span><span> </span><span id="local-6989586621679082228"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082228"><span class="hs-identifier hs-var">picosec</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-58"></span><span>    </span><span id="local-6989586621679082245"><span class="annot"><span class="annottext">coarbitrary :: TimeDiff -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082245"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.TimeDiff</span></a></span><span> </span><span id="local-6989586621679082244"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082244"><span class="hs-identifier hs-var">year</span></a></span></span><span> </span><span id="local-6989586621679082243"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082243"><span class="hs-identifier hs-var">month</span></a></span></span><span> </span><span id="local-6989586621679082242"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082242"><span class="hs-identifier hs-var">day</span></a></span></span><span> </span><span id="local-6989586621679082241"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082241"><span class="hs-identifier hs-var">hour</span></a></span></span><span> </span><span id="local-6989586621679082240"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082240"><span class="hs-identifier hs-var">minute</span></a></span></span><span> </span><span id="local-6989586621679082239"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082239"><span class="hs-identifier hs-var">sec</span></a></span></span><span> </span><span id="local-6989586621679082238"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082238"><span class="hs-identifier hs-var">picosec</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-59"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082234"><span class="hs-identifier hs-var">year</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082244"><span class="hs-identifier hs-var">year</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-60"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082233"><span class="hs-identifier hs-var">month</span></a></span><span>   </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082243"><span class="hs-identifier hs-var">month</span></a></span><span>   </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-61"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082232"><span class="hs-identifier hs-var">day</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082242"><span class="hs-identifier hs-var">day</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-62"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082231"><span class="hs-identifier hs-var">hour</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082241"><span class="hs-identifier hs-var">hour</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-63"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082230"><span class="hs-identifier hs-var">minute</span></a></span><span>  </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082240"><span class="hs-identifier hs-var">minute</span></a></span><span>  </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-64"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082229"><span class="hs-identifier hs-var">sec</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082239"><span class="hs-identifier hs-var">sec</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-65"></span><span>        </span><span class="annot"><span class="annottext">Integer -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082228"><span class="hs-identifier hs-var">picosec</span></a></span><span>
+</span><a href="#local-6989586621679082238"><span class="hs-identifier hs-var">picosec</span></a></span><span>
 </span><span id="line-66"></span><span>
 </span><span id="line-67"></span><span class="hs-comment">-- UTC only</span><span>
-</span><span id="line-68"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679082225"><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.CalendarTime</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-69"></span><span>    </span><span id="local-6989586621679082224"><span class="annot"><span class="annottext">arbitrary :: Gen CalendarTime
-</span><a href="#local-6989586621679082224"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ClockTime -&gt; CalendarTime
+</span><span id="line-68"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679082235"><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Arbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.CalendarTime</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-69"></span><span>    </span><span id="local-6989586621679082234"><span class="annot"><span class="annottext">arbitrary :: Gen CalendarTime
+</span><a href="#local-6989586621679082234"><span class="hs-identifier hs-var hs-var hs-var hs-var">arbitrary</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ClockTime -&gt; CalendarTime
 </span><a href="../../../../old-time/html/src"><span class="hs-identifier hs-var">OldTime.toUTCTime</span></a></span><span> </span><span class="annot"><span class="annottext">(ClockTime -&gt; CalendarTime) -&gt; Gen ClockTime -&gt; Gen CalendarTime
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen ClockTime
@@ -263,90 +263,90 @@ forall a. Arbitrary a =&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">arbitrary</span></a></span><span>
 </span><span id="line-70"></span><span>
 </span><span id="line-71"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">CoArbitrary</span></a></span><span> </span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.CalendarTime</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-72"></span><span>    </span><span id="local-6989586621679082221"><span class="annot"><span class="annottext">coarbitrary :: CalendarTime -&gt; Gen b -&gt; Gen b
-</span><a href="#local-6989586621679082221"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.CalendarTime</span></a></span><span>
-</span><span id="line-73"></span><span>                        </span><span id="local-6989586621679082219"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082219"><span class="hs-identifier hs-var">year</span></a></span></span><span> </span><span id="local-6989586621679082218"><span class="annot"><span class="annottext">Month
-</span><a href="#local-6989586621679082218"><span class="hs-identifier hs-var">month</span></a></span></span><span> </span><span id="local-6989586621679082217"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082217"><span class="hs-identifier hs-var">day</span></a></span></span><span> </span><span id="local-6989586621679082216"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082216"><span class="hs-identifier hs-var">hour</span></a></span></span><span> </span><span id="local-6989586621679082215"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082215"><span class="hs-identifier hs-var">minute</span></a></span></span><span> </span><span id="local-6989586621679082214"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082214"><span class="hs-identifier hs-var">sec</span></a></span></span><span> </span><span id="local-6989586621679082213"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082213"><span class="hs-identifier hs-var">picosec</span></a></span></span><span>
-</span><span id="line-74"></span><span>                        </span><span id="local-6989586621679082212"><span class="annot"><span class="annottext">Day
-</span><a href="#local-6989586621679082212"><span class="hs-identifier hs-var">wDay</span></a></span></span><span> </span><span id="local-6989586621679082211"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082211"><span class="hs-identifier hs-var">yDay</span></a></span></span><span> </span><span id="local-6989586621679082210"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679082210"><span class="hs-identifier hs-var">tzName</span></a></span></span><span> </span><span id="local-6989586621679082209"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082209"><span class="hs-identifier hs-var">tz</span></a></span></span><span> </span><span id="local-6989586621679082208"><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679082208"><span class="hs-identifier hs-var">isDST</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-72"></span><span>    </span><span id="local-6989586621679082231"><span class="annot"><span class="annottext">coarbitrary :: CalendarTime -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082231"><span class="hs-identifier hs-var hs-var hs-var hs-var">coarbitrary</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../old-time/html/src"><span class="hs-identifier hs-type">OldTime.CalendarTime</span></a></span><span>
+</span><span id="line-73"></span><span>                        </span><span id="local-6989586621679082229"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082229"><span class="hs-identifier hs-var">year</span></a></span></span><span> </span><span id="local-6989586621679082228"><span class="annot"><span class="annottext">Month
+</span><a href="#local-6989586621679082228"><span class="hs-identifier hs-var">month</span></a></span></span><span> </span><span id="local-6989586621679082227"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082227"><span class="hs-identifier hs-var">day</span></a></span></span><span> </span><span id="local-6989586621679082226"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082226"><span class="hs-identifier hs-var">hour</span></a></span></span><span> </span><span id="local-6989586621679082225"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082225"><span class="hs-identifier hs-var">minute</span></a></span></span><span> </span><span id="local-6989586621679082224"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082224"><span class="hs-identifier hs-var">sec</span></a></span></span><span> </span><span id="local-6989586621679082223"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679082223"><span class="hs-identifier hs-var">picosec</span></a></span></span><span>
+</span><span id="line-74"></span><span>                        </span><span id="local-6989586621679082222"><span class="annot"><span class="annottext">Day
+</span><a href="#local-6989586621679082222"><span class="hs-identifier hs-var">wDay</span></a></span></span><span> </span><span id="local-6989586621679082221"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082221"><span class="hs-identifier hs-var">yDay</span></a></span></span><span> </span><span id="local-6989586621679082220"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679082220"><span class="hs-identifier hs-var">tzName</span></a></span></span><span> </span><span id="local-6989586621679082219"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679082219"><span class="hs-identifier hs-var">tz</span></a></span></span><span> </span><span id="local-6989586621679082218"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679082218"><span class="hs-identifier hs-var">isDST</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-75"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082219"><span class="hs-identifier hs-var">year</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082229"><span class="hs-identifier hs-var">year</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-76"></span><span>        </span><span class="annot"><span class="annottext">Month -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Month
-</span><a href="#local-6989586621679082218"><span class="hs-identifier hs-var">month</span></a></span><span>   </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082228"><span class="hs-identifier hs-var">month</span></a></span><span>   </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-77"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082217"><span class="hs-identifier hs-var">day</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082227"><span class="hs-identifier hs-var">day</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-78"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082216"><span class="hs-identifier hs-var">hour</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082226"><span class="hs-identifier hs-var">hour</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-79"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082215"><span class="hs-identifier hs-var">minute</span></a></span><span>  </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082225"><span class="hs-identifier hs-var">minute</span></a></span><span>  </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-80"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082214"><span class="hs-identifier hs-var">sec</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082224"><span class="hs-identifier hs-var">sec</span></a></span><span>     </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-81"></span><span>        </span><span class="annot"><span class="annottext">Integer -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679082213"><span class="hs-identifier hs-var">picosec</span></a></span><span> </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082223"><span class="hs-identifier hs-var">picosec</span></a></span><span> </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-82"></span><span>        </span><span class="annot"><span class="annottext">Day -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Day
-</span><a href="#local-6989586621679082212"><span class="hs-identifier hs-var">wDay</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082222"><span class="hs-identifier hs-var">wDay</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-83"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082211"><span class="hs-identifier hs-var">yDay</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082221"><span class="hs-identifier hs-var">yDay</span></a></span><span>    </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-84"></span><span>        </span><span class="annot"><span class="annottext">String -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679082210"><span class="hs-identifier hs-var">tzName</span></a></span><span>  </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082220"><span class="hs-identifier hs-var">tzName</span></a></span><span>  </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-85"></span><span>        </span><span class="annot"><span class="annottext">Int -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679082209"><span class="hs-identifier hs-var">tz</span></a></span><span>      </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
+</span><a href="#local-6989586621679082219"><span class="hs-identifier hs-var">tz</span></a></span><span>      </span><span class="annot"><span class="annottext">(Gen b -&gt; Gen b) -&gt; (Gen b -&gt; Gen b) -&gt; Gen b -&gt; Gen b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span>
 </span><span id="line-86"></span><span>        </span><span class="annot"><span class="annottext">Bool -&gt; Gen b -&gt; Gen b
 forall a b. CoArbitrary a =&gt; a -&gt; Gen b -&gt; Gen b
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">coarbitrary</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679082208"><span class="hs-identifier hs-var">isDST</span></a></span><span>
+</span><a href="#local-6989586621679082218"><span class="hs-identifier hs-var">isDST</span></a></span><span>
 </span><span id="line-87"></span></pre></body></html>

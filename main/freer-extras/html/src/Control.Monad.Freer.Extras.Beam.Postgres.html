@@ -33,7 +33,7 @@
 </span><span id="line-33"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../postgresql-simple/html/src"><span class="hs-identifier">Database.PostgreSQL.Simple</span></a></span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Postgres</span></span><span>
 </span><span id="line-34"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">GHC.Generics</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-35"></span><span>
-</span><span id="line-36"></span><span id="local-6989586621679229896"><span id="local-6989586621679229897"></span></span><span class="hs-keyword">data</span><span> </span><span id="DbConfig"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#DbConfig"><span class="hs-identifier hs-var">DbConfig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-36"></span><span id="local-6989586621679230048"><span id="local-6989586621679230049"></span></span><span class="hs-keyword">data</span><span> </span><span id="DbConfig"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#DbConfig"><span class="hs-identifier hs-var">DbConfig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-37"></span><span>    </span><span id="DbConfig"><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#DbConfig"><span class="hs-identifier hs-var">DbConfig</span></a></span></span><span>
 </span><span id="line-38"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="dbConfigUser"><span class="annot"><span class="annottext">DbConfig -&gt; Text
 </span><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#dbConfigUser"><span class="hs-identifier hs-var hs-var">dbConfigUser</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text.Text</span></a></span><span>
@@ -50,7 +50,7 @@
 </span><span id="line-44"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="dbConfigMarconiFile"><span class="annot"><span class="annottext">DbConfig -&gt; Text
 </span><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#dbConfigMarconiFile"><span class="hs-identifier hs-var hs-var">dbConfigMarconiFile</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text.Text</span></a></span><span>
 </span><span id="line-45"></span><span>    </span><span class="hs-special">}</span><span>
-</span><span id="line-46"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229882"><span id="local-6989586621679229884"><span id="local-6989586621679229886"><span class="annot"><span class="annottext">Int -&gt; DbConfig -&gt; ShowS
+</span><span id="line-46"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679230034"><span id="local-6989586621679230036"><span id="local-6989586621679230038"><span class="annot"><span class="annottext">Int -&gt; DbConfig -&gt; ShowS
 [DbConfig] -&gt; ShowS
 DbConfig -&gt; String
 (Int -&gt; DbConfig -&gt; ShowS)
@@ -63,7 +63,7 @@ show :: DbConfig -&gt; String
 $cshow :: DbConfig -&gt; String
 showsPrec :: Int -&gt; DbConfig -&gt; ShowS
 $cshowsPrec :: Int -&gt; DbConfig -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229877"><span id="local-6989586621679229879"><span class="annot"><span class="annottext">DbConfig -&gt; DbConfig -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679230029"><span id="local-6989586621679230031"><span class="annot"><span class="annottext">DbConfig -&gt; DbConfig -&gt; Bool
 (DbConfig -&gt; DbConfig -&gt; Bool)
 -&gt; (DbConfig -&gt; DbConfig -&gt; Bool) -&gt; Eq DbConfig
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -80,7 +80,7 @@ forall a.
 $cto :: forall x. Rep DbConfig x -&gt; DbConfig
 $cfrom :: forall x. DbConfig -&gt; Rep DbConfig x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-47"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679229865"><span id="local-6989586621679229867"><span id="local-6989586621679229869"><span id="local-6989586621679229871"><span class="annot"><span class="annottext">[DbConfig] -&gt; Encoding
+</span><span id="line-47"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679230017"><span id="local-6989586621679230019"><span id="local-6989586621679230021"><span id="local-6989586621679230023"><span class="annot"><span class="annottext">[DbConfig] -&gt; Encoding
 [DbConfig] -&gt; Value
 DbConfig -&gt; Encoding
 DbConfig -&gt; Value
@@ -103,7 +103,7 @@ toEncoding :: DbConfig -&gt; Encoding
 $ctoEncoding :: DbConfig -&gt; Encoding
 toJSON :: DbConfig -&gt; Value
 $ctoJSON :: DbConfig -&gt; Value
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679229860"><span id="local-6989586621679229862"><span class="annot"><span class="annottext">Value -&gt; Parser [DbConfig]
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679230012"><span id="local-6989586621679230014"><span class="annot"><span class="annottext">Value -&gt; Parser [DbConfig]
 Value -&gt; Parser DbConfig
 (Value -&gt; Parser DbConfig)
 -&gt; (Value -&gt; Parser [DbConfig]) -&gt; FromJSON DbConfig
@@ -116,8 +116,8 @@ $cparseJSON :: Value -&gt; Parser DbConfig
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../data-default-class/html/src"><span class="hs-identifier hs-type">Default</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#DbConfig"><span class="hs-identifier hs-type">DbConfig</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-50"></span><span>  </span><span id="local-6989586621679229856"><span class="annot"><span class="annottext">def :: DbConfig
-</span><a href="#local-6989586621679229856"><span class="hs-identifier hs-var hs-var hs-var hs-var">def</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">DbConfig :: Text -&gt; Text -&gt; Text -&gt; Word16 -&gt; Text -&gt; Int -&gt; Text -&gt; DbConfig
+</span><span id="line-50"></span><span>  </span><span id="local-6989586621679230008"><span class="annot"><span class="annottext">def :: DbConfig
+</span><a href="#local-6989586621679230008"><span class="hs-identifier hs-var hs-var hs-var hs-var">def</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">DbConfig :: Text -&gt; Text -&gt; Text -&gt; Word16 -&gt; Text -&gt; Int -&gt; Text -&gt; DbConfig
 </span><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#DbConfig"><span class="hs-identifier hs-type">DbConfig</span></a></span><span>
 </span><span id="line-51"></span><span>        </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">dbConfigUser :: Text
 </span><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#dbConfigUser"><span class="hs-identifier hs-var">dbConfigUser</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text
@@ -143,19 +143,19 @@ $cparseJSON :: Value -&gt; Parser DbConfig
 </span><span id="line-58"></span><span>        </span><span class="hs-special">}</span><span>
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#runBeam"><span class="hs-identifier hs-type">runBeam</span></a></span><span> </span><span class="hs-glyph">::</span><span>
-</span><span id="line-61"></span><span>  </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679229854"><span class="annot"><a href="#local-6989586621679229854"><span class="hs-identifier hs-type">effs</span></a></span></span><span class="hs-operator">.</span><span>
-</span><span id="line-62"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">LastMember</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679229854"><span class="hs-identifier hs-type">effs</span></a></span><span>
-</span><span id="line-63"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">Member</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">Reader</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../resource-pool/html/src"><span class="hs-identifier hs-type">Pool</span></a></span><span> </span><span class="annot"><a href="../../../../postgresql-simple/html/src"><span class="hs-identifier hs-type">Connection</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679229854"><span class="hs-identifier hs-type">effs</span></a></span><span>
+</span><span id="line-61"></span><span>  </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679230006"><span class="annot"><a href="#local-6989586621679230006"><span class="hs-identifier hs-type">effs</span></a></span></span><span class="hs-operator">.</span><span>
+</span><span id="line-62"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">LastMember</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679230006"><span class="hs-identifier hs-type">effs</span></a></span><span>
+</span><span id="line-63"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">Member</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">Reader</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../resource-pool/html/src"><span class="hs-identifier hs-type">Pool</span></a></span><span> </span><span class="annot"><a href="../../../../postgresql-simple/html/src"><span class="hs-identifier hs-type">Connection</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><a href="#local-6989586621679230006"><span class="hs-identifier hs-type">effs</span></a></span><span>
 </span><span id="line-64"></span><span>  </span><span class="hs-special">)</span><span>
 </span><span id="line-65"></span><span>  </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Trace</span></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="Control.Monad.Freer.Extras.Beam.Common.html#BeamLog"><span class="hs-identifier hs-type">BeamLog</span></a></span><span>
 </span><span id="line-66"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../beam-postgres/html/src"><span class="hs-identifier hs-type">Pg</span></a></span><span>
-</span><span id="line-67"></span><span>  </span><span class="annot"><a href="../../../../natural-transformation/html/src"><span class="hs-operator hs-type">~&gt;</span></a></span><span> </span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">Eff</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679229854"><span class="hs-identifier hs-type">effs</span></a></span><span>
+</span><span id="line-67"></span><span>  </span><span class="annot"><a href="../../../../natural-transformation/html/src"><span class="hs-operator hs-type">~&gt;</span></a></span><span> </span><span class="annot"><a href="../../../../freer-simple/html/src"><span class="hs-identifier hs-type">Eff</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679230006"><span class="hs-identifier hs-type">effs</span></a></span><span>
 </span><span id="line-68"></span><span id="runBeam"><span class="annot"><span class="annottext">runBeam :: Trace IO BeamLog -&gt; Pg ~&gt; Eff effs
-</span><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#runBeam"><span class="hs-identifier hs-var hs-var">runBeam</span></a></span></span><span> </span><span id="local-6989586621679229853"><span class="annot"><span class="annottext">Trace IO BeamLog
-</span><a href="#local-6989586621679229853"><span class="hs-identifier hs-var">trace</span></a></span></span><span> </span><span id="local-6989586621679229852"><span class="annot"><span class="annottext">Pg x
-</span><a href="#local-6989586621679229852"><span class="hs-identifier hs-var">action</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-69"></span><span>  </span><span id="local-6989586621679229851"><span class="annot"><span class="annottext">Pool Connection
-</span><a href="#local-6989586621679229851"><span class="hs-identifier hs-var">pool</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">forall (effs :: [* -&gt; *]).
+</span><a href="Control.Monad.Freer.Extras.Beam.Postgres.html#runBeam"><span class="hs-identifier hs-var hs-var">runBeam</span></a></span></span><span> </span><span id="local-6989586621679230005"><span class="annot"><span class="annottext">Trace IO BeamLog
+</span><a href="#local-6989586621679230005"><span class="hs-identifier hs-var">trace</span></a></span></span><span> </span><span id="local-6989586621679230004"><span class="annot"><span class="annottext">Pg x
+</span><a href="#local-6989586621679230004"><span class="hs-identifier hs-var">action</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-69"></span><span>  </span><span id="local-6989586621679230003"><span class="annot"><span class="annottext">Pool Connection
+</span><a href="#local-6989586621679230003"><span class="hs-identifier hs-var">pool</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">forall (effs :: [* -&gt; *]).
 Member (Reader (Pool Connection)) effs =&gt;
 Eff effs (Pool Connection)
 forall r (effs :: [* -&gt; *]). Member (Reader r) effs =&gt; Eff effs r
@@ -167,49 +167,49 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Pool Connection -&gt; (Connection -&gt; IO x) -&gt; IO x
 forall a r. Pool a -&gt; (a -&gt; IO r) -&gt; IO r
 </span><a href="../../../../resource-pool/html/src"><span class="hs-identifier hs-var">Pool.withResource</span></a></span><span> </span><span class="annot"><span class="annottext">Pool Connection
-</span><a href="#local-6989586621679229851"><span class="hs-identifier hs-var">pool</span></a></span><span> </span><span class="annot"><span class="annottext">((Connection -&gt; IO x) -&gt; IO x) -&gt; (Connection -&gt; IO x) -&gt; IO x
+</span><a href="#local-6989586621679230003"><span class="hs-identifier hs-var">pool</span></a></span><span> </span><span class="annot"><span class="annottext">((Connection -&gt; IO x) -&gt; IO x) -&gt; (Connection -&gt; IO x) -&gt; IO x
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679229849"><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679229849"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Int -&gt; IO x
-</span><a href="#local-6989586621679229848"><span class="hs-identifier hs-var">loop</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679229849"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679230001"><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679230001"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Int -&gt; IO x
+</span><a href="#local-6989586621679230000"><span class="hs-identifier hs-var">loop</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679230001"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">5</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-special">)</span><span>
 </span><span id="line-71"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-72"></span><span>    </span><span id="local-6989586621679229848"><span class="annot"><span class="annottext">loop :: Connection -&gt; Int -&gt; IO x
-</span><a href="#local-6989586621679229848"><span class="hs-identifier hs-var hs-var">loop</span></a></span></span><span> </span><span id="local-6989586621679229847"><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679229847"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span id="local-6989586621679229846"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679229846"><span class="hs-identifier hs-var">retries</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-73"></span><span>      </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679229845"><span class="annot"><span class="annottext">traceSql :: String -&gt; IO ()
-</span><a href="#local-6989586621679229845"><span class="hs-identifier hs-var hs-var">traceSql</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Trace IO BeamLog -&gt; BeamLog -&gt; IO ()
+</span><span id="line-72"></span><span>    </span><span id="local-6989586621679230000"><span class="annot"><span class="annottext">loop :: Connection -&gt; Int -&gt; IO x
+</span><a href="#local-6989586621679230000"><span class="hs-identifier hs-var hs-var">loop</span></a></span></span><span> </span><span id="local-6989586621679229999"><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679229999"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span id="local-6989586621679229998"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679229998"><span class="hs-identifier hs-var">retries</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-73"></span><span>      </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679229997"><span class="annot"><span class="annottext">traceSql :: String -&gt; IO ()
+</span><a href="#local-6989586621679229997"><span class="hs-identifier hs-var hs-var">traceSql</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Trace IO BeamLog -&gt; BeamLog -&gt; IO ()
 forall (m :: * -&gt; *) a. MonadIO m =&gt; Trace m a -&gt; a -&gt; m ()
 </span><span class="hs-identifier hs-var">logDebug</span></span><span> </span><span class="annot"><span class="annottext">Trace IO BeamLog
-</span><a href="#local-6989586621679229853"><span class="hs-identifier hs-var">trace</span></a></span><span> </span><span class="annot"><span class="annottext">(BeamLog -&gt; IO ()) -&gt; (String -&gt; BeamLog) -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621679230005"><span class="hs-identifier hs-var">trace</span></a></span><span> </span><span class="annot"><span class="annottext">(BeamLog -&gt; IO ()) -&gt; (String -&gt; BeamLog) -&gt; String -&gt; IO ()
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; BeamLog
 </span><a href="Control.Monad.Freer.Extras.Beam.Common.html#SqlLog"><span class="hs-identifier hs-var">SqlLog</span></a></span><span>
-</span><span id="line-74"></span><span>      </span><span id="local-6989586621679229842"><span class="annot"><span class="annottext">Either SqlError x
-</span><a href="#local-6989586621679229842"><span class="hs-identifier hs-var">resultEither</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO x -&gt; IO (Either SqlError x)
+</span><span id="line-74"></span><span>      </span><span id="local-6989586621679229994"><span class="annot"><span class="annottext">Either SqlError x
+</span><a href="#local-6989586621679229994"><span class="hs-identifier hs-var">resultEither</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO x -&gt; IO (Either SqlError x)
 forall e a. Exception e =&gt; IO a -&gt; IO (Either e a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">try</span></a></span><span> </span><span class="annot"><span class="annottext">(IO x -&gt; IO (Either SqlError x)) -&gt; IO x -&gt; IO (Either SqlError x)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Connection -&gt; IO x -&gt; IO x
 forall a. Connection -&gt; IO a -&gt; IO a
 </span><a href="../../../../postgresql-simple/html/src"><span class="hs-identifier hs-var">Postgres.withTransaction</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679229847"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">(IO x -&gt; IO x) -&gt; IO x -&gt; IO x
+</span><a href="#local-6989586621679229999"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">(IO x -&gt; IO x) -&gt; IO x -&gt; IO x
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; Connection -&gt; Pg x -&gt; IO x
 forall a. (String -&gt; IO ()) -&gt; Connection -&gt; Pg a -&gt; IO a
 </span><a href="../../../../beam-postgres/html/src"><span class="hs-identifier hs-var">runBeamPostgresDebug</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; IO ()
-</span><a href="#local-6989586621679229845"><span class="hs-identifier hs-var">traceSql</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679229847"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Pg x
-</span><a href="#local-6989586621679229852"><span class="hs-identifier hs-var">action</span></a></span><span>
+</span><a href="#local-6989586621679229997"><span class="hs-identifier hs-var">traceSql</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679229999"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Pg x
+</span><a href="#local-6989586621679230004"><span class="hs-identifier hs-var">action</span></a></span><span>
 </span><span id="line-75"></span><span>      </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Either SqlError x
-</span><a href="#local-6989586621679229842"><span class="hs-identifier hs-var">resultEither</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679229994"><span class="hs-identifier hs-var">resultEither</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-76"></span><span>          </span><span class="hs-comment">-- 'Database.SQLite.Simple.ErrorError' corresponds to an SQL error or</span><span>
 </span><span id="line-77"></span><span>          </span><span class="hs-comment">-- missing database. When this exception is raised, we suppose it's</span><span>
 </span><span id="line-78"></span><span>          </span><span class="hs-comment">-- because the another transaction was already running.</span><span>
 </span><span id="line-79"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span class="annot"><a href="../../../../postgresql-simple/html/src"><span class="hs-identifier hs-type">Postgres.SqlError</span></a></span><span> </span><span class="hs-special">{</span><span class="hs-special">}</span><span> </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679229846"><span class="hs-identifier hs-var">retries</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679229998"><span class="hs-identifier hs-var">retries</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
@@ -217,16 +217,16 @@ forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">threadDelay</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">100_000</span></span><span>
 </span><span id="line-81"></span><span>              </span><span class="annot"><span class="annottext">Connection -&gt; Int -&gt; IO x
-</span><a href="#local-6989586621679229848"><span class="hs-identifier hs-var">loop</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679229847"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679229846"><span class="hs-identifier hs-var">retries</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679230000"><span class="hs-identifier hs-var">loop</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679229999"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679229998"><span class="hs-identifier hs-var">retries</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-82"></span><span>          </span><span class="hs-comment">-- We handle and rethrow errors other than</span><span>
 </span><span id="line-83"></span><span>          </span><span class="hs-comment">-- 'Database.SQLite.Simple.ErrorError'.</span><span>
-</span><span id="line-84"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679229838"><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679229838"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">BeamError -&gt; IO x
+</span><span id="line-84"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679229990"><span class="annot"><span class="annottext">SqlError
+</span><a href="#local-6989586621679229990"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">BeamError -&gt; IO x
 forall a e. Exception e =&gt; e -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">throw</span></a></span><span> </span><span class="annot"><span class="annottext">(BeamError -&gt; IO x) -&gt; BeamError -&gt; IO x
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -239,10 +239,10 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">show</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679229838"><span class="hs-identifier hs-var">e</span></a></span><span>
-</span><span id="line-85"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679229835"><span class="annot"><span class="annottext">x
-</span><a href="#local-6989586621679229835"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">x -&gt; IO x
+</span><a href="#local-6989586621679229990"><span class="hs-identifier hs-var">e</span></a></span><span>
+</span><span id="line-85"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679229987"><span class="annot"><span class="annottext">x
+</span><a href="#local-6989586621679229987"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">x -&gt; IO x
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">x
-</span><a href="#local-6989586621679229835"><span class="hs-identifier hs-var">v</span></a></span><span>
+</span><a href="#local-6989586621679229987"><span class="hs-identifier hs-var">v</span></a></span><span>
 </span><span id="line-86"></span></pre></body></html>

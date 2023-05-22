@@ -15,7 +15,7 @@
 --   <a>https://github.com/haskell-compat/base-orphans#readme</a>. See also
 --   the <a>what is not covered</a> section.
 @package base-orphans
-@version 0.8.7
+@version 0.9.0
 
 
 -- | Exports orphan instances that mimic instances available in later
@@ -102,3 +102,6 @@ instance (GHC.Read.Read a, GHC.Read.Read b, GHC.Read.Read c) => Data.Functor.Cla
 instance (GHC.Show.Show a, GHC.Show.Show b, GHC.Show.Show c) => Data.Functor.Classes.Show1 ((,,,) a b c)
 instance forall k (f :: k -> *) (a :: k) (g :: k -> *). (GHC.Base.Semigroup (f a), GHC.Base.Semigroup (g a)) => GHC.Base.Semigroup (Data.Functor.Product.Product f g a)
 instance forall k (f :: k -> *) (a :: k) (g :: k -> *). (GHC.Base.Monoid (f a), GHC.Base.Monoid (g a)) => GHC.Base.Monoid (Data.Functor.Product.Product f g a)
+instance GHC.Base.Functor ((,,,,) a b c d)
+instance GHC.Base.Functor ((,,,,,) a b c d e)
+instance GHC.Base.Functor ((,,,,,,) a b c d e f)

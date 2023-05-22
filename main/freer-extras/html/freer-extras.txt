@@ -122,8 +122,8 @@ data LogMessage a
 LogMessage :: LogLevel -> a -> LogMessage a
 [_logLevel] :: LogMessage a -> LogLevel
 [_logMessageContent] :: LogMessage a -> a
-logLevel :: forall a_awnS. Lens' (LogMessage a_awnS) LogLevel
-logMessageContent :: forall a_awnS a_ayBe. Lens (LogMessage a_awnS) (LogMessage a_ayBe) a_awnS a_ayBe
+logLevel :: forall a_awqm. Lens' (LogMessage a_awqm) LogLevel
+logMessageContent :: forall a_awqm a_ayDI. Lens (LogMessage a_awqm) (LogMessage a_ayDI) a_awqm a_ayDI
 logMessage :: LogLevel -> Prism' (LogMessage a) a
 logDebug :: forall a effs. Member (LogMsg a) effs => a -> Eff effs ()
 logInfo :: forall a effs. Member (LogMsg a) effs => a -> Eff effs ()
@@ -175,8 +175,8 @@ Observation :: v -> s -> Maybe v -> ExitMode -> Observation v s
 
 -- | <a>ExitMode</a> of the action.
 [obsExit] :: Observation v s -> ExitMode
-observeBefore :: forall a_awnV. forall effs_azdB. Member (LogObserve a_awnV) effs_azdB => a_awnV -> Eff effs_azdB ObservationHandle
-observeAfter :: forall a_awnW. forall effs_azdC. Member (LogObserve a_awnW) effs_azdC => Maybe a_awnW -> ObservationHandle -> Eff effs_azdC ()
+observeBefore :: forall a_awqp. forall effs_azg6. Member (LogObserve a_awqp) effs_azg6 => a_awqp -> Eff effs_azg6 ObservationHandle
+observeAfter :: forall a_awqq. forall effs_azg7. Member (LogObserve a_awqq) effs_azg7 => Maybe a_awqq -> ObservationHandle -> Eff effs_azg7 ()
 
 -- | Write a log message before and after an action. Consider using
 --   <a>observeBefore</a> and <a>observeAfter</a> directly if you need more

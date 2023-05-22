@@ -24,12 +24,12 @@
 </span><span id="line-24"></span><span class="hs-comment">-- containing that size and a finalizer.</span><span>
 </span><span id="line-25"></span><span class="annot"><a href="Network.Wai.Handler.Warp.Buffer.html#createWriteBuffer"><span class="hs-identifier hs-type">createWriteBuffer</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../recv/html/src"><span class="hs-identifier hs-type">BufSize</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="Network.Wai.Handler.Warp.Types.html#WriteBuffer"><span class="hs-identifier hs-type">WriteBuffer</span></a></span><span>
 </span><span id="line-26"></span><span id="createWriteBuffer"><span class="annot"><span class="annottext">createWriteBuffer :: BufSize -&gt; IO WriteBuffer
-</span><a href="Network.Wai.Handler.Warp.Buffer.html#createWriteBuffer"><span class="hs-identifier hs-var hs-var">createWriteBuffer</span></a></span></span><span> </span><span id="local-6989586621679101835"><span class="annot"><span class="annottext">BufSize
-</span><a href="#local-6989586621679101835"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-27"></span><span>  </span><span id="local-6989586621679101834"><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101834"><span class="hs-identifier hs-var">bytes</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BufSize -&gt; IO Buffer
+</span><a href="Network.Wai.Handler.Warp.Buffer.html#createWriteBuffer"><span class="hs-identifier hs-var hs-var">createWriteBuffer</span></a></span></span><span> </span><span id="local-6989586621679101839"><span class="annot"><span class="annottext">BufSize
+</span><a href="#local-6989586621679101839"><span class="hs-identifier hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621679101838"><span class="annot"><span class="annottext">Buffer
+</span><a href="#local-6989586621679101838"><span class="hs-identifier hs-var">bytes</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BufSize -&gt; IO Buffer
 </span><a href="Network.Wai.Handler.Warp.Buffer.html#allocateBuffer"><span class="hs-identifier hs-var">allocateBuffer</span></a></span><span> </span><span class="annot"><span class="annottext">BufSize
-</span><a href="#local-6989586621679101835"><span class="hs-identifier hs-var">size</span></a></span><span>
+</span><a href="#local-6989586621679101839"><span class="hs-identifier hs-var">size</span></a></span><span>
 </span><span id="line-28"></span><span>  </span><span class="annot"><span class="annottext">WriteBuffer -&gt; IO WriteBuffer
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span>
@@ -37,14 +37,14 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="Network.Wai.Handler.Warp.Types.html#WriteBuffer"><span class="hs-identifier hs-type">WriteBuffer</span></a></span><span>
 </span><span id="line-30"></span><span>      </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">bufBuffer :: Buffer
 </span><a href="Network.Wai.Handler.Warp.Types.html#bufBuffer"><span class="hs-identifier hs-var">bufBuffer</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101834"><span class="hs-identifier hs-var">bytes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679101838"><span class="hs-identifier hs-var">bytes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-31"></span><span>        </span><span class="annot"><span class="annottext">bufSize :: BufSize
 </span><a href="Network.Wai.Handler.Warp.Types.html#bufSize"><span class="hs-identifier hs-var">bufSize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BufSize
-</span><a href="#local-6989586621679101835"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679101839"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-32"></span><span>        </span><span class="annot"><span class="annottext">bufFree :: IO ()
 </span><a href="Network.Wai.Handler.Warp.Types.html#bufFree"><span class="hs-identifier hs-var">bufFree</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; IO ()
 </span><a href="Network.Wai.Handler.Warp.Buffer.html#freeBuffer"><span class="hs-identifier hs-var">freeBuffer</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101834"><span class="hs-identifier hs-var">bytes</span></a></span><span>
+</span><a href="#local-6989586621679101838"><span class="hs-identifier hs-var">bytes</span></a></span><span>
 </span><span id="line-33"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-34"></span><span>
 </span><span id="line-35"></span><span class="hs-comment">----------------------------------------------------------------</span><span>
@@ -70,57 +70,57 @@ forall a. Ptr a -&gt; IO ()
 </span><span id="line-49"></span><span>
 </span><span id="line-50"></span><span class="annot"><a href="Network.Wai.Handler.Warp.Buffer.html#toBuilderBuffer"><span class="hs-identifier hs-type">toBuilderBuffer</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">IORef</span></a></span><span> </span><span class="annot"><a href="Network.Wai.Handler.Warp.Types.html#WriteBuffer"><span class="hs-identifier hs-type">WriteBuffer</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="../../../../streaming-commons/html/src"><span class="hs-identifier hs-type">B.Buffer</span></a></span><span>
 </span><span id="line-51"></span><span id="toBuilderBuffer"><span class="annot"><span class="annottext">toBuilderBuffer :: IORef WriteBuffer -&gt; IO Buffer
-</span><a href="Network.Wai.Handler.Warp.Buffer.html#toBuilderBuffer"><span class="hs-identifier hs-var hs-var">toBuilderBuffer</span></a></span></span><span> </span><span id="local-6989586621679101829"><span class="annot"><span class="annottext">IORef WriteBuffer
-</span><a href="#local-6989586621679101829"><span class="hs-identifier hs-var">writeBufferRef</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-52"></span><span>    </span><span id="local-6989586621679101828"><span class="annot"><span class="annottext">WriteBuffer
-</span><a href="#local-6989586621679101828"><span class="hs-identifier hs-var">writeBuffer</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IORef WriteBuffer -&gt; IO WriteBuffer
+</span><a href="Network.Wai.Handler.Warp.Buffer.html#toBuilderBuffer"><span class="hs-identifier hs-var hs-var">toBuilderBuffer</span></a></span></span><span> </span><span id="local-6989586621679101833"><span class="annot"><span class="annottext">IORef WriteBuffer
+</span><a href="#local-6989586621679101833"><span class="hs-identifier hs-var">writeBufferRef</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-52"></span><span>    </span><span id="local-6989586621679101832"><span class="annot"><span class="annottext">WriteBuffer
+</span><a href="#local-6989586621679101832"><span class="hs-identifier hs-var">writeBuffer</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IORef WriteBuffer -&gt; IO WriteBuffer
 forall a. IORef a -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">readIORef</span></a></span><span> </span><span class="annot"><span class="annottext">IORef WriteBuffer
-</span><a href="#local-6989586621679101829"><span class="hs-identifier hs-var">writeBufferRef</span></a></span><span>
-</span><span id="line-53"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679101827"><span class="annot"><span class="annottext">ptr :: Buffer
-</span><a href="#local-6989586621679101827"><span class="hs-identifier hs-var hs-var">ptr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WriteBuffer -&gt; Buffer
+</span><a href="#local-6989586621679101833"><span class="hs-identifier hs-var">writeBufferRef</span></a></span><span>
+</span><span id="line-53"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679101831"><span class="annot"><span class="annottext">ptr :: Buffer
+</span><a href="#local-6989586621679101831"><span class="hs-identifier hs-var hs-var">ptr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WriteBuffer -&gt; Buffer
 </span><a href="Network.Wai.Handler.Warp.Types.html#bufBuffer"><span class="hs-identifier hs-var hs-var">bufBuffer</span></a></span><span> </span><span class="annot"><span class="annottext">WriteBuffer
-</span><a href="#local-6989586621679101828"><span class="hs-identifier hs-var">writeBuffer</span></a></span><span>
-</span><span id="line-54"></span><span>        </span><span id="local-6989586621679101826"><span class="annot"><span class="annottext">size :: BufSize
-</span><a href="#local-6989586621679101826"><span class="hs-identifier hs-var hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WriteBuffer -&gt; BufSize
+</span><a href="#local-6989586621679101832"><span class="hs-identifier hs-var">writeBuffer</span></a></span><span>
+</span><span id="line-54"></span><span>        </span><span id="local-6989586621679101830"><span class="annot"><span class="annottext">size :: BufSize
+</span><a href="#local-6989586621679101830"><span class="hs-identifier hs-var hs-var">size</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WriteBuffer -&gt; BufSize
 </span><a href="Network.Wai.Handler.Warp.Types.html#bufSize"><span class="hs-identifier hs-var hs-var">bufSize</span></a></span><span> </span><span class="annot"><span class="annottext">WriteBuffer
-</span><a href="#local-6989586621679101828"><span class="hs-identifier hs-var">writeBuffer</span></a></span><span>
-</span><span id="line-55"></span><span>    </span><span id="local-6989586621679101825"><span class="annot"><span class="annottext">ForeignPtr Word8
-</span><a href="#local-6989586621679101825"><span class="hs-identifier hs-var">fptr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; IO (ForeignPtr Word8)
+</span><a href="#local-6989586621679101832"><span class="hs-identifier hs-var">writeBuffer</span></a></span><span>
+</span><span id="line-55"></span><span>    </span><span id="local-6989586621679101829"><span class="annot"><span class="annottext">ForeignPtr Word8
+</span><a href="#local-6989586621679101829"><span class="hs-identifier hs-var">fptr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; IO (ForeignPtr Word8)
 forall a. Ptr a -&gt; IO (ForeignPtr a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">newForeignPtr_</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101827"><span class="hs-identifier hs-var">ptr</span></a></span><span>
+</span><a href="#local-6989586621679101831"><span class="hs-identifier hs-var">ptr</span></a></span><span>
 </span><span id="line-56"></span><span>    </span><span class="annot"><span class="annottext">Buffer -&gt; IO Buffer
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(Buffer -&gt; IO Buffer) -&gt; Buffer -&gt; IO Buffer
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ForeignPtr Word8 -&gt; Buffer -&gt; Buffer -&gt; Buffer -&gt; Buffer
 </span><a href="../../../../streaming-commons/html/src"><span class="hs-identifier hs-var">B.Buffer</span></a></span><span> </span><span class="annot"><span class="annottext">ForeignPtr Word8
-</span><a href="#local-6989586621679101825"><span class="hs-identifier hs-var">fptr</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101827"><span class="hs-identifier hs-var">ptr</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101827"><span class="hs-identifier hs-var">ptr</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101827"><span class="hs-identifier hs-var">ptr</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; BufSize -&gt; Buffer
+</span><a href="#local-6989586621679101829"><span class="hs-identifier hs-var">fptr</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
+</span><a href="#local-6989586621679101831"><span class="hs-identifier hs-var">ptr</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
+</span><a href="#local-6989586621679101831"><span class="hs-identifier hs-var">ptr</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Buffer
+</span><a href="#local-6989586621679101831"><span class="hs-identifier hs-var">ptr</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; BufSize -&gt; Buffer
 forall a b. Ptr a -&gt; BufSize -&gt; Ptr b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`plusPtr`</span></a></span><span> </span><span class="annot"><span class="annottext">BufSize
-</span><a href="#local-6989586621679101826"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679101830"><span class="hs-identifier hs-var">size</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-57"></span><span>
 </span><span id="line-58"></span><span class="annot"><a href="Network.Wai.Handler.Warp.Buffer.html#bufferIO"><span class="hs-identifier hs-type">bufferIO</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../recv/html/src"><span class="hs-identifier hs-type">Buffer</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-59"></span><span id="bufferIO"><span class="annot"><span class="annottext">bufferIO :: Buffer -&gt; BufSize -&gt; (ByteString -&gt; IO ()) -&gt; IO ()
-</span><a href="Network.Wai.Handler.Warp.Buffer.html#bufferIO"><span class="hs-identifier hs-var hs-var">bufferIO</span></a></span></span><span> </span><span id="local-6989586621679101822"><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101822"><span class="hs-identifier hs-var">ptr</span></a></span></span><span> </span><span id="local-6989586621679101821"><span class="annot"><span class="annottext">BufSize
-</span><a href="#local-6989586621679101821"><span class="hs-identifier hs-var">siz</span></a></span></span><span> </span><span id="local-6989586621679101820"><span class="annot"><span class="annottext">ByteString -&gt; IO ()
-</span><a href="#local-6989586621679101820"><span class="hs-identifier hs-var">io</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-60"></span><span>    </span><span id="local-6989586621679101819"><span class="annot"><span class="annottext">ForeignPtr Word8
-</span><a href="#local-6989586621679101819"><span class="hs-identifier hs-var">fptr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; IO (ForeignPtr Word8)
+</span><a href="Network.Wai.Handler.Warp.Buffer.html#bufferIO"><span class="hs-identifier hs-var hs-var">bufferIO</span></a></span></span><span> </span><span id="local-6989586621679101826"><span class="annot"><span class="annottext">Buffer
+</span><a href="#local-6989586621679101826"><span class="hs-identifier hs-var">ptr</span></a></span></span><span> </span><span id="local-6989586621679101825"><span class="annot"><span class="annottext">BufSize
+</span><a href="#local-6989586621679101825"><span class="hs-identifier hs-var">siz</span></a></span></span><span> </span><span id="local-6989586621679101824"><span class="annot"><span class="annottext">ByteString -&gt; IO ()
+</span><a href="#local-6989586621679101824"><span class="hs-identifier hs-var">io</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-60"></span><span>    </span><span id="local-6989586621679101823"><span class="annot"><span class="annottext">ForeignPtr Word8
+</span><a href="#local-6989586621679101823"><span class="hs-identifier hs-var">fptr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Buffer -&gt; IO (ForeignPtr Word8)
 forall a. Ptr a -&gt; IO (ForeignPtr a)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">newForeignPtr_</span></a></span><span> </span><span class="annot"><span class="annottext">Buffer
-</span><a href="#local-6989586621679101822"><span class="hs-identifier hs-var">ptr</span></a></span><span>
+</span><a href="#local-6989586621679101826"><span class="hs-identifier hs-var">ptr</span></a></span><span>
 </span><span id="line-61"></span><span>    </span><span class="annot"><span class="annottext">ByteString -&gt; IO ()
-</span><a href="#local-6989586621679101820"><span class="hs-identifier hs-var">io</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; IO ()) -&gt; ByteString -&gt; IO ()
+</span><a href="#local-6989586621679101824"><span class="hs-identifier hs-var">io</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; IO ()) -&gt; ByteString -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ForeignPtr Word8 -&gt; BufSize -&gt; BufSize -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">PS</span></a></span><span> </span><span class="annot"><span class="annottext">ForeignPtr Word8
-</span><a href="#local-6989586621679101819"><span class="hs-identifier hs-var">fptr</span></a></span><span> </span><span class="annot"><span class="annottext">BufSize
+</span><a href="#local-6989586621679101823"><span class="hs-identifier hs-var">fptr</span></a></span><span> </span><span class="annot"><span class="annottext">BufSize
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">BufSize
-</span><a href="#local-6989586621679101821"><span class="hs-identifier hs-var">siz</span></a></span><span>
+</span><a href="#local-6989586621679101825"><span class="hs-identifier hs-var">siz</span></a></span><span>
 </span><span id="line-62"></span></pre></body></html>

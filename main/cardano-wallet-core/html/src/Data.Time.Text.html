@@ -45,8 +45,8 @@
 </span><span id="line-45"></span><span class="hs-comment">--</span><span>
 </span><span id="line-46"></span><span class="annot"><a href="Data.Time.Text.html#utcTimeToText"><span class="hs-identifier hs-type">utcTimeToText</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Data.Time.Text.html#TimeFormat"><span class="hs-identifier hs-type">TimeFormat</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">UTCTime</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
 </span><span id="line-47"></span><span id="utcTimeToText"><span class="annot"><span class="annottext">utcTimeToText :: TimeFormat -&gt; UTCTime -&gt; Text
-</span><a href="Data.Time.Text.html#utcTimeToText"><span class="hs-identifier hs-var hs-var">utcTimeToText</span></a></span></span><span> </span><span id="local-6989586621682467286"><span class="annot"><span class="annottext">TimeFormat
-</span><a href="#local-6989586621682467286"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
+</span><a href="Data.Time.Text.html#utcTimeToText"><span class="hs-identifier hs-var hs-var">utcTimeToText</span></a></span></span><span> </span><span id="local-6989586621682467570"><span class="annot"><span class="annottext">TimeFormat
+</span><a href="#local-6989586621682467570"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Text
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.pack</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Text) -&gt; (UTCTime -&gt; String) -&gt; UTCTime -&gt; Text
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">TimeLocale -&gt; String -&gt; UTCTime -&gt; String
@@ -54,7 +54,7 @@ forall t. FormatTime t =&gt; TimeLocale -&gt; String -&gt; t -&gt; String
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">formatTime</span></a></span><span> </span><span class="annot"><span class="annottext">TimeLocale
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">defaultTimeLocale</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TimeFormat -&gt; String
 </span><a href="Data.Time.Text.html#timeFormatPattern"><span class="hs-identifier hs-var hs-var">timeFormatPattern</span></a></span><span> </span><span class="annot"><span class="annottext">TimeFormat
-</span><a href="#local-6989586621682467286"><span class="hs-identifier hs-var">f</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682467570"><span class="hs-identifier hs-var">f</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span class="hs-comment">-- | Attempt to use each of the specified time formats to parse the given text.</span><span>
 </span><span id="line-50"></span><span class="hs-comment">--   Returns a time value that corresponds to the first matching format, or</span><span>
@@ -62,9 +62,9 @@ forall t. FormatTime t =&gt; TimeLocale -&gt; String -&gt; t -&gt; String
 </span><span id="line-52"></span><span class="hs-comment">--</span><span>
 </span><span id="line-53"></span><span class="annot"><a href="Data.Time.Text.html#utcTimeFromText"><span class="hs-identifier hs-type">utcTimeFromText</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Data.Time.Text.html#TimeFormat"><span class="hs-identifier hs-type">TimeFormat</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">UTCTime</span></a></span><span>
 </span><span id="line-54"></span><span id="utcTimeFromText"><span class="annot"><span class="annottext">utcTimeFromText :: [TimeFormat] -&gt; Text -&gt; Maybe UTCTime
-</span><a href="Data.Time.Text.html#utcTimeFromText"><span class="hs-identifier hs-var hs-var">utcTimeFromText</span></a></span></span><span> </span><span id="local-6989586621682467282"><span class="annot"><span class="annottext">[TimeFormat]
-</span><a href="#local-6989586621682467282"><span class="hs-identifier hs-var">fs</span></a></span></span><span> </span><span id="local-6989586621682467281"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621682467281"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Maybe UTCTime -&gt; Maybe UTCTime -&gt; Maybe UTCTime)
+</span><a href="Data.Time.Text.html#utcTimeFromText"><span class="hs-identifier hs-var hs-var">utcTimeFromText</span></a></span></span><span> </span><span id="local-6989586621682467566"><span class="annot"><span class="annottext">[TimeFormat]
+</span><a href="#local-6989586621682467566"><span class="hs-identifier hs-var">fs</span></a></span></span><span> </span><span id="local-6989586621682467565"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621682467565"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Maybe UTCTime -&gt; Maybe UTCTime -&gt; Maybe UTCTime)
 -&gt; Maybe UTCTime -&gt; [Maybe UTCTime] -&gt; Maybe UTCTime
 forall (t :: * -&gt; *) a b.
 Foldable t =&gt;
@@ -88,7 +88,7 @@ Bool -&gt; TimeLocale -&gt; String -&gt; String -&gt; m t
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span> </span><span class="annot"><span class="annottext">TimeLocale
 </span><a href="../../../../time/html/src"><span class="hs-identifier hs-var">defaultTimeLocale</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text -&gt; String
 </span><a href="../../../../text/html/src"><span class="hs-identifier hs-var">T.unpack</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621682467281"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(String -&gt; Maybe UTCTime)
+</span><a href="#local-6989586621682467565"><span class="hs-identifier hs-var">t</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(String -&gt; Maybe UTCTime)
 -&gt; (TimeFormat -&gt; String) -&gt; TimeFormat -&gt; Maybe UTCTime
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">TimeFormat -&gt; String
@@ -96,7 +96,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><span id="line-56"></span><span>        </span><span class="annot"><span class="annottext">(TimeFormat -&gt; Maybe UTCTime) -&gt; [TimeFormat] -&gt; [Maybe UTCTime]
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">[TimeFormat]
-</span><a href="#local-6989586621682467282"><span class="hs-identifier hs-var">fs</span></a></span><span>
+</span><a href="#local-6989586621682467566"><span class="hs-identifier hs-var">fs</span></a></span><span>
 </span><span id="line-57"></span><span>
 </span><span id="line-58"></span><span class="hs-comment">-- | Represents a particular way of representing a moment in time in text.</span><span>
 </span><span id="line-59"></span><span class="hs-keyword">data</span><span> </span><span id="TimeFormat"><span class="annot"><a href="Data.Time.Text.html#TimeFormat"><span class="hs-identifier hs-var">TimeFormat</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TimeFormat"><span class="annot"><a href="Data.Time.Text.html#TimeFormat"><span class="hs-identifier hs-var">TimeFormat</span></a></span></span><span>
@@ -104,7 +104,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="Data.Time.Text.html#timeFormatName"><span class="hs-identifier hs-var hs-var">timeFormatName</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span>
 </span><span id="line-61"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="timeFormatPattern"><span class="annot"><span class="annottext">TimeFormat -&gt; String
 </span><a href="Data.Time.Text.html#timeFormatPattern"><span class="hs-identifier hs-var hs-var">timeFormatPattern</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-62"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621682467271"><span id="local-6989586621682467273"><span class="annot"><span class="annottext">TimeFormat -&gt; TimeFormat -&gt; Bool
+</span><span id="line-62"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621682467555"><span id="local-6989586621682467557"><span class="annot"><span class="annottext">TimeFormat -&gt; TimeFormat -&gt; Bool
 (TimeFormat -&gt; TimeFormat -&gt; Bool)
 -&gt; (TimeFormat -&gt; TimeFormat -&gt; Bool) -&gt; Eq TimeFormat
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a

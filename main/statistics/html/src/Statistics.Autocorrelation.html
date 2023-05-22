@@ -25,15 +25,15 @@
 </span><span id="line-25"></span><span>
 </span><span id="line-26"></span><span class="hs-comment">-- | Compute the autocovariance of a sample, i.e. the covariance of</span><span>
 </span><span id="line-27"></span><span class="hs-comment">-- the sample against a shifted version of itself.</span><span>
-</span><span id="line-28"></span><span id="local-6989586621679263205"><span class="annot"><a href="Statistics.Autocorrelation.html#autocovariance"><span class="hs-identifier hs-type">autocovariance</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679263205"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679263205"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679263205"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679263205"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span></span><span>
+</span><span id="line-28"></span><span id="local-6989586621679265436"><span class="annot"><a href="Statistics.Autocorrelation.html#autocovariance"><span class="hs-identifier hs-type">autocovariance</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679265436"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679265436"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679265436"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679265436"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span></span><span>
 </span><span id="line-29"></span><span id="autocovariance"><span class="annot"><span class="annottext">autocovariance :: v Double -&gt; v Double
-</span><a href="Statistics.Autocorrelation.html#autocovariance"><span class="hs-identifier hs-var hs-var">autocovariance</span></a></span></span><span> </span><span id="local-6989586621679263191"><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263191"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Double) -&gt; v Int -&gt; v Double
+</span><a href="Statistics.Autocorrelation.html#autocovariance"><span class="hs-identifier hs-var hs-var">autocovariance</span></a></span></span><span> </span><span id="local-6989586621679265422"><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265422"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int -&gt; Double) -&gt; v Int -&gt; v Double
 forall (v :: * -&gt; *) a b.
 (Vector v a, Vector v b) =&gt;
 (a -&gt; b) -&gt; v a -&gt; v b
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.map</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Double
-</span><a href="#local-6989586621679263189"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(v Int -&gt; v Double) -&gt; (Int -&gt; v Int) -&gt; Int -&gt; v Double
+</span><a href="#local-6989586621679265420"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(v Int -&gt; v Double) -&gt; (Int -&gt; v Int) -&gt; Int -&gt; v Double
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; v Int
 forall (v :: * -&gt; *) a. (Vector v a, Enum a) =&gt; a -&gt; a -&gt; v a
@@ -41,14 +41,14 @@ forall (v :: * -&gt; *) a. (Vector v a, Enum a) =&gt; a -&gt; a -&gt; v a
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">(Int -&gt; v Double) -&gt; Int -&gt; v Double
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263186"><span class="hs-identifier hs-var">l</span></a></span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679265417"><span class="hs-identifier hs-var">l</span></a></span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">2</span></span><span>
 </span><span id="line-30"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-31"></span><span>    </span><span id="local-6989586621679263189"><span class="annot"><span class="annottext">f :: Int -&gt; Double
-</span><a href="#local-6989586621679263189"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span id="local-6989586621679263185"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263185"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">v Double -&gt; Double
+</span><span id="line-31"></span><span>    </span><span id="local-6989586621679265420"><span class="annot"><span class="annottext">f :: Int -&gt; Double
+</span><a href="#local-6989586621679265420"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span id="local-6989586621679265416"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679265416"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">v Double -&gt; Double
 forall (v :: * -&gt; *). Vector v Double =&gt; v Double -&gt; Double
 </span><a href="Statistics.Sample.Internal.html#sum"><span class="hs-identifier hs-var">sum</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(Double -&gt; Double -&gt; Double) -&gt; v Double -&gt; v Double -&gt; v Double
 forall (v :: * -&gt; *) a b c.
@@ -59,27 +59,27 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">(*)</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; v Double -&gt; v Double
 forall (v :: * -&gt; *) a. Vector v a =&gt; Int -&gt; v a -&gt; v a
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.take</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263186"><span class="hs-identifier hs-var">l</span></a></span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679265417"><span class="hs-identifier hs-var">l</span></a></span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263185"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263181"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; v Double -&gt; v Double
+</span><a href="#local-6989586621679265416"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265412"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; v Double -&gt; v Double
 forall (v :: * -&gt; *) a. Vector v a =&gt; Int -&gt; Int -&gt; v a -&gt; v a
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.slice</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263185"><span class="hs-identifier hs-var">k</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263186"><span class="hs-identifier hs-var">l</span></a></span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679265416"><span class="hs-identifier hs-var">k</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679265417"><span class="hs-identifier hs-var">l</span></a></span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263185"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263181"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679265416"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265412"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-32"></span><span>          </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Fractional a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">/</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Double
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679263186"><span class="hs-identifier hs-var">l</span></a></span><span>
-</span><span id="line-33"></span><span>    </span><span id="local-6989586621679263181"><span class="annot"><span class="annottext">c :: v Double
-</span><a href="#local-6989586621679263181"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; v Double -&gt; v Double
+</span><a href="#local-6989586621679265417"><span class="hs-identifier hs-var">l</span></a></span><span>
+</span><span id="line-33"></span><span>    </span><span id="local-6989586621679265412"><span class="annot"><span class="annottext">c :: v Double
+</span><a href="#local-6989586621679265412"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; v Double -&gt; v Double
 forall (v :: * -&gt; *) a b.
 (Vector v a, Vector v b) =&gt;
 (a -&gt; b) -&gt; v a -&gt; v b
@@ -88,33 +88,33 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">subtract</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">v Double -&gt; Double
 forall (v :: * -&gt; *). Vector v Double =&gt; v Double -&gt; Double
 </span><a href="Statistics.Sample.html#mean"><span class="hs-identifier hs-var">mean</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263191"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263191"><span class="hs-identifier hs-var">a</span></a></span><span>
-</span><span id="line-34"></span><span>    </span><span id="local-6989586621679263186"><span class="annot"><span class="annottext">l :: Int
-</span><a href="#local-6989586621679263186"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">v Double -&gt; Int
+</span><a href="#local-6989586621679265422"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265422"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><span id="line-34"></span><span>    </span><span id="local-6989586621679265417"><span class="annot"><span class="annottext">l :: Int
+</span><a href="#local-6989586621679265417"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">v Double -&gt; Int
 forall (v :: * -&gt; *) a. Vector v a =&gt; v a -&gt; Int
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.length</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263191"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><a href="#local-6989586621679265422"><span class="hs-identifier hs-var">a</span></a></span><span>
 </span><span id="line-35"></span><span>
 </span><span id="line-36"></span><span class="hs-comment">-- | Compute the autocorrelation function of a sample, and the upper</span><span>
 </span><span id="line-37"></span><span class="hs-comment">-- and lower bounds of confidence intervals for each element.</span><span>
 </span><span id="line-38"></span><span class="hs-comment">--</span><span>
 </span><span id="line-39"></span><span class="hs-comment">-- /Note/: The calculation of the 95% confidence interval assumes a</span><span>
 </span><span id="line-40"></span><span class="hs-comment">-- stationary Gaussian process.</span><span>
-</span><span id="line-41"></span><span id="local-6989586621679263176"><span class="annot"><a href="Statistics.Autocorrelation.html#autocorrelation"><span class="hs-identifier hs-type">autocorrelation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679263176"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679263176"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679263176"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679263176"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621679263176"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621679263176"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-41"></span><span id="local-6989586621679265407"><span class="annot"><a href="Statistics.Autocorrelation.html#autocorrelation"><span class="hs-identifier hs-type">autocorrelation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679265407"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">G.Vector</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679265407"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="#local-6989586621679265407"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="#local-6989586621679265407"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621679265407"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="#local-6989586621679265407"><span class="hs-identifier hs-type">v</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-42"></span><span id="autocorrelation"><span class="annot"><span class="annottext">autocorrelation :: v Double -&gt; (v Double, v Double, v Double)
-</span><a href="Statistics.Autocorrelation.html#autocorrelation"><span class="hs-identifier hs-var hs-var">autocorrelation</span></a></span></span><span> </span><span id="local-6989586621679263175"><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263175"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263174"><span class="hs-identifier hs-var">r</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double -&gt; Double) -&gt; v Double
+</span><a href="Statistics.Autocorrelation.html#autocorrelation"><span class="hs-identifier hs-var hs-var">autocorrelation</span></a></span></span><span> </span><span id="local-6989586621679265406"><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265406"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265405"><span class="hs-identifier hs-var">r</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double -&gt; Double) -&gt; v Double
 forall a. (Vector v a, Num a) =&gt; (Double -&gt; Double -&gt; a) -&gt; v a
-</span><a href="#local-6989586621679263173"><span class="hs-identifier hs-var">ci</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">-</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double -&gt; Double) -&gt; v Double
+</span><a href="#local-6989586621679265404"><span class="hs-identifier hs-var">ci</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">-</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double -&gt; Double) -&gt; v Double
 forall a. (Vector v a, Num a) =&gt; (Double -&gt; Double -&gt; a) -&gt; v a
-</span><a href="#local-6989586621679263173"><span class="hs-identifier hs-var">ci</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621679265404"><span class="hs-identifier hs-var">ci</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">(+)</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-43"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-44"></span><span>    </span><span id="local-6989586621679263174"><span class="annot"><span class="annottext">r :: v Double
-</span><a href="#local-6989586621679263174"><span class="hs-identifier hs-var hs-var">r</span></a></span></span><span>           </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; v Double -&gt; v Double
+</span><span id="line-44"></span><span>    </span><span id="local-6989586621679265405"><span class="annot"><span class="annottext">r :: v Double
+</span><a href="#local-6989586621679265405"><span class="hs-identifier hs-var hs-var">r</span></a></span></span><span>           </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; v Double -&gt; v Double
 forall (v :: * -&gt; *) a b.
 (Vector v a, Vector v b) =&gt;
 (a -&gt; b) -&gt; v a -&gt; v b
@@ -123,22 +123,22 @@ forall a. Fractional a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">/</span></a></span><span> </span><span class="annot"><span class="annottext">v Double -&gt; Double
 forall (v :: * -&gt; *) a. Vector v a =&gt; v a -&gt; a
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.head</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263170"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263170"><span class="hs-identifier hs-var">c</span></a></span><span>
-</span><span id="line-45"></span><span>      </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679263170"><span class="annot"><span class="annottext">c :: v Double
-</span><a href="#local-6989586621679263170"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">v Double -&gt; v Double
+</span><a href="#local-6989586621679265401"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">v Double
+</span><a href="#local-6989586621679265401"><span class="hs-identifier hs-var">c</span></a></span><span>
+</span><span id="line-45"></span><span>      </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679265401"><span class="annot"><span class="annottext">c :: v Double
+</span><a href="#local-6989586621679265401"><span class="hs-identifier hs-var hs-var">c</span></a></span></span><span>   </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">v Double -&gt; v Double
 forall (v :: * -&gt; *).
 (Vector v Double, Vector v Int) =&gt;
 v Double -&gt; v Double
 </span><a href="Statistics.Autocorrelation.html#autocovariance"><span class="hs-identifier hs-var">autocovariance</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263175"><span class="hs-identifier hs-var">a</span></a></span><span>
-</span><span id="line-46"></span><span>    </span><span id="local-6989586621679263169"><span class="annot"><span class="annottext">dllse :: v Double
-</span><a href="#local-6989586621679263169"><span class="hs-identifier hs-var hs-var">dllse</span></a></span></span><span>       </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; v Double -&gt; v Double
+</span><a href="#local-6989586621679265406"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><span id="line-46"></span><span>    </span><span id="local-6989586621679265400"><span class="annot"><span class="annottext">dllse :: v Double
+</span><a href="#local-6989586621679265400"><span class="hs-identifier hs-var hs-var">dllse</span></a></span></span><span>       </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double) -&gt; v Double -&gt; v Double
 forall (v :: * -&gt; *) a b.
 (Vector v a, Vector v b) =&gt;
 (a -&gt; b) -&gt; v a -&gt; v b
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.map</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
-</span><a href="#local-6989586621679263168"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(v Double -&gt; v Double)
+</span><a href="#local-6989586621679265399"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">(v Double -&gt; v Double)
 -&gt; (v Double -&gt; v Double) -&gt; v Double -&gt; v Double
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">(Double -&gt; Double -&gt; Double) -&gt; v Double -&gt; v Double
@@ -156,16 +156,16 @@ forall (v :: * -&gt; *) a b.
 </span><a href="Statistics.Function.html#square"><span class="hs-identifier hs-var">square</span></a></span><span> </span><span class="annot"><span class="annottext">(v Double -&gt; v Double) -&gt; v Double -&gt; v Double
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263174"><span class="hs-identifier hs-var">r</span></a></span><span>
-</span><span id="line-47"></span><span>      </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679263168"><span class="annot"><span class="annottext">f :: Double -&gt; Double
-</span><a href="#local-6989586621679263168"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span id="local-6989586621679263166"><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679263166"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621679265405"><span class="hs-identifier hs-var">r</span></a></span><span>
+</span><span id="line-47"></span><span>      </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679265399"><span class="annot"><span class="annottext">f :: Double -&gt; Double
+</span><a href="#local-6989586621679265399"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span id="local-6989586621679265397"><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621679265397"><span class="hs-identifier hs-var">v</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1.96</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double
 forall a. Floating a =&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">sqrt</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679263166"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
+</span><a href="#local-6989586621679265397"><span class="hs-identifier hs-var">v</span></a></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">2</span></span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
@@ -174,17 +174,17 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Fractional a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">/</span></a></span><span> </span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679263164"><span class="hs-identifier hs-var">l</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-48"></span><span>    </span><span id="local-6989586621679263164"><span class="annot"><span class="annottext">l :: Double
-</span><a href="#local-6989586621679263164"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span>           </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Double
+</span><a href="#local-6989586621679265395"><span class="hs-identifier hs-var">l</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-48"></span><span>    </span><span id="local-6989586621679265395"><span class="annot"><span class="annottext">l :: Double
+</span><a href="#local-6989586621679265395"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span>           </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Double
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">v Double -&gt; Int
 forall (v :: * -&gt; *) a. Vector v a =&gt; v a -&gt; Int
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.length</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263175"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-49"></span><span>    </span><span id="local-6989586621679263173"><span class="annot"><span class="annottext">ci :: (Double -&gt; Double -&gt; a) -&gt; v a
-</span><a href="#local-6989586621679263173"><span class="hs-identifier hs-var hs-var">ci</span></a></span></span><span> </span><span id="local-6989586621679263163"><span class="annot"><span class="annottext">Double -&gt; Double -&gt; a
-</span><a href="#local-6989586621679263163"><span class="hs-identifier hs-var">f</span></a></span></span><span>        </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; v a -&gt; v a
+</span><a href="#local-6989586621679265406"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-49"></span><span>    </span><span id="local-6989586621679265404"><span class="annot"><span class="annottext">ci :: (Double -&gt; Double -&gt; a) -&gt; v a
+</span><a href="#local-6989586621679265404"><span class="hs-identifier hs-var hs-var">ci</span></a></span></span><span> </span><span id="local-6989586621679265394"><span class="annot"><span class="annottext">Double -&gt; Double -&gt; a
+</span><a href="#local-6989586621679265394"><span class="hs-identifier hs-var">f</span></a></span></span><span>        </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a -&gt; v a -&gt; v a
 forall (v :: * -&gt; *) a. Vector v a =&gt; a -&gt; v a -&gt; v a
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.cons</span></a></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">(v a -&gt; v a) -&gt; (v Double -&gt; v a) -&gt; v Double -&gt; v a
@@ -198,12 +198,12 @@ forall (v :: * -&gt; *) a b.
 (Vector v a, Vector v b) =&gt;
 (a -&gt; b) -&gt; v a -&gt; v b
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">G.map</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; a
-</span><a href="#local-6989586621679263163"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">-</span><span class="annot"><span class="annottext">Double
+</span><a href="#local-6989586621679265394"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">-</span><span class="annot"><span class="annottext">Double
 </span><span class="hs-number">1</span></span><span class="annot"><span class="annottext">Double -&gt; Double -&gt; Double
 forall a. Fractional a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">/</span></a></span><span class="annot"><span class="annottext">Double
-</span><a href="#local-6989586621679263164"><span class="hs-identifier hs-var">l</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(v Double -&gt; v a) -&gt; v Double -&gt; v a
+</span><a href="#local-6989586621679265395"><span class="hs-identifier hs-var">l</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(v Double -&gt; v a) -&gt; v Double -&gt; v a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">v Double
-</span><a href="#local-6989586621679263169"><span class="hs-identifier hs-var">dllse</span></a></span><span>
+</span><a href="#local-6989586621679265400"><span class="hs-identifier hs-var">dllse</span></a></span><span>
 </span><span id="line-50"></span></pre></body></html>

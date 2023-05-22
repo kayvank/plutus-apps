@@ -13,11 +13,11 @@
 </span><span id="line-13"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier">Formatting.Buildable</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier">Buildable</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-14"></span><span>
 </span><span id="line-15"></span><span class="hs-comment">-- | A number of slots</span><span>
-</span><span id="line-16"></span><span id="local-6989586621679529577"><span id="local-6989586621679529578"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="SlotCount"><span class="annot"><a href="Cardano.Chain.Slotting.SlotCount.html#SlotCount"><span class="hs-identifier hs-var">SlotCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SlotCount"><span class="annot"><a href="Cardano.Chain.Slotting.SlotCount.html#SlotCount"><span class="hs-identifier hs-var">SlotCount</span></a></span></span><span>
+</span><span id="line-16"></span><span id="local-6989586621679529601"><span id="local-6989586621679529602"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="SlotCount"><span class="annot"><a href="Cardano.Chain.Slotting.SlotCount.html#SlotCount"><span class="hs-identifier hs-var">SlotCount</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="SlotCount"><span class="annot"><a href="Cardano.Chain.Slotting.SlotCount.html#SlotCount"><span class="hs-identifier hs-var">SlotCount</span></a></span></span><span>
 </span><span id="line-17"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="unSlotCount"><span class="annot"><span class="annottext">SlotCount -&gt; Word64
 </span><a href="Cardano.Chain.Slotting.SlotCount.html#unSlotCount"><span class="hs-identifier hs-var hs-var">unSlotCount</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-18"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-19"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679529567"><span id="local-6989586621679529569"><span id="local-6989586621679529571"><span id="local-6989586621679529573"><span class="annot"><span class="annottext">ReadPrec [SlotCount]
+</span><span id="line-19"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679529591"><span id="local-6989586621679529593"><span id="local-6989586621679529595"><span id="local-6989586621679529597"><span class="annot"><span class="annottext">ReadPrec [SlotCount]
 ReadPrec SlotCount
 Int -&gt; ReadS SlotCount
 ReadS [SlotCount]
@@ -37,7 +37,7 @@ readList :: ReadS [SlotCount]
 $creadList :: ReadS [SlotCount]
 readsPrec :: Int -&gt; ReadS SlotCount
 $creadsPrec :: Int -&gt; ReadS SlotCount
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529560"><span id="local-6989586621679529562"><span id="local-6989586621679529564"><span class="annot"><span class="annottext">Int -&gt; SlotCount -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529584"><span id="local-6989586621679529586"><span id="local-6989586621679529588"><span class="annot"><span class="annottext">Int -&gt; SlotCount -&gt; ShowS
 [SlotCount] -&gt; ShowS
 SlotCount -&gt; String
 (Int -&gt; SlotCount -&gt; ShowS)
@@ -61,7 +61,7 @@ forall a.
 $cto :: forall x. Rep SlotCount x -&gt; SlotCount
 $cfrom :: forall x. SlotCount -&gt; Rep SlotCount x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-20"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679529552"><span id="local-6989586621679529554"><span class="annot"><span class="annottext">SlotCount -&gt; SlotCount -&gt; Bool
+</span><span id="line-20"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">newtype</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679529576"><span id="local-6989586621679529578"><span class="annot"><span class="annottext">SlotCount -&gt; SlotCount -&gt; Bool
 (SlotCount -&gt; SlotCount -&gt; Bool)
 -&gt; (SlotCount -&gt; SlotCount -&gt; Bool) -&gt; Eq SlotCount
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -69,7 +69,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: SlotCount -&gt; SlotCount -&gt; Bool
 == :: SlotCount -&gt; SlotCount -&gt; Bool
 $c== :: SlotCount -&gt; SlotCount -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529536"><span id="local-6989586621679529538"><span id="local-6989586621679529540"><span id="local-6989586621679529542"><span id="local-6989586621679529544"><span id="local-6989586621679529546"><span id="local-6989586621679529548"><span class="annot"><span class="annottext">Eq SlotCount
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529560"><span id="local-6989586621679529562"><span id="local-6989586621679529564"><span id="local-6989586621679529566"><span id="local-6989586621679529568"><span id="local-6989586621679529570"><span id="local-6989586621679529572"><span class="annot"><span class="annottext">Eq SlotCount
 Eq SlotCount
 -&gt; (SlotCount -&gt; SlotCount -&gt; Ordering)
 -&gt; (SlotCount -&gt; SlotCount -&gt; Bool)
@@ -107,12 +107,12 @@ $c&lt; :: SlotCount -&gt; SlotCount -&gt; Bool
 compare :: SlotCount -&gt; SlotCount -&gt; Ordering
 $ccompare :: SlotCount -&gt; SlotCount -&gt; Ordering
 $cp1Ord :: Eq SlotCount
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529533"><span class="annot"><span class="annottext">SlotCount -&gt; Builder
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529557"><span class="annot"><span class="annottext">SlotCount -&gt; Builder
 (SlotCount -&gt; Builder) -&gt; Buildable SlotCount
 forall p. (p -&gt; Builder) -&gt; Buildable p
 build :: SlotCount -&gt; Builder
 $cbuild :: SlotCount -&gt; Builder
-</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Buildable</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529525"><span id="local-6989586621679529527"><span id="local-6989586621679529529"><span class="annot"><span class="annottext">Typeable SlotCount
+</span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Buildable</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529549"><span id="local-6989586621679529551"><span id="local-6989586621679529553"><span class="annot"><span class="annottext">Typeable SlotCount
 Typeable SlotCount
 -&gt; (SlotCount -&gt; Encoding)
 -&gt; ((forall t. ToCBOR t =&gt; Proxy t -&gt; Size)
@@ -139,7 +139,7 @@ $cencodedSizeExpr :: (forall t. ToCBOR t =&gt; Proxy t -&gt; Size) -&gt; Proxy S
 toCBOR :: SlotCount -&gt; Encoding
 $ctoCBOR :: SlotCount -&gt; Encoding
 $cp1ToCBOR :: Typeable SlotCount
-</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToCBOR</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529519"><span id="local-6989586621679529521"><span class="annot"><span class="annottext">Typeable SlotCount
+</span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToCBOR</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679529543"><span id="local-6989586621679529545"><span class="annot"><span class="annottext">Typeable SlotCount
 Decoder s SlotCount
 Typeable SlotCount
 -&gt; (forall s. Decoder s SlotCount)
@@ -156,7 +156,7 @@ fromCBOR :: Decoder s SlotCount
 $cfromCBOR :: forall s. Decoder s SlotCount
 $cp1FromCBOR :: Typeable SlotCount
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var">FromCBOR</span></a></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-21"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679529516"><span class="annot"><span class="annottext">SlotCount -&gt; ()
+</span><span id="line-21"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679529540"><span class="annot"><span class="annottext">SlotCount -&gt; ()
 (SlotCount -&gt; ()) -&gt; NFData SlotCount
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: SlotCount -&gt; ()

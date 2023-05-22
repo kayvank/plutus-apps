@@ -47,10 +47,10 @@ String -&gt; a -&gt; SpecWith (Arg a)
 </span><span class="hs-string">&quot;NETWORK_PARAMS - Able to fetch network parameters&quot;</span></span><span> </span><span class="annot"><span class="annottext">((Context -&gt; IO ()) -&gt; SpecWith (Arg (Context -&gt; IO ())))
 -&gt; (Context -&gt; IO ()) -&gt; SpecWith (Arg (Context -&gt; IO ()))
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682941132"><span class="annot"><span class="annottext">Context
-</span><a href="#local-6989586621682941132"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-36"></span><span>        </span><span id="local-6989586621682941131"><span class="annot"><span class="annottext">(Status, Either RequestException ApiNetworkParameters)
-</span><a href="#local-6989586621682941131"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Context
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682941417"><span class="annot"><span class="annottext">Context
+</span><a href="#local-6989586621682941417"><span class="hs-identifier hs-var">ctx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-36"></span><span>        </span><span id="local-6989586621682941416"><span class="annot"><span class="annottext">(Status, Either RequestException ApiNetworkParameters)
+</span><a href="#local-6989586621682941416"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Context
 -&gt; (Method, Text)
 -&gt; Headers
 -&gt; Payload
@@ -64,7 +64,7 @@ s
 -&gt; Payload
 -&gt; m (Status, Either RequestException a)
 </span><a href="Test.Integration.Framework.Request.html#request"><span class="hs-identifier hs-var">request</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../cardano-wallet-core/html/src"><span class="hs-identifier hs-type">ApiNetworkParameters</span></a></span><span> </span><span class="annot"><span class="annottext">Context
-</span><a href="#local-6989586621682941132"><span class="hs-identifier hs-var">ctx</span></a></span><span> </span><span class="annot"><span class="annottext">(Method, Text)
+</span><a href="#local-6989586621682941417"><span class="hs-identifier hs-var">ctx</span></a></span><span> </span><span class="annot"><span class="annottext">(Method, Text)
 </span><a href="../../../../cardano-wallet-core/html/src"><span class="hs-identifier hs-var">Link.getNetworkParams</span></a></span><span> </span><span class="annot"><span class="annottext">Headers
 </span><a href="Test.Integration.Framework.Request.html#Default"><span class="hs-identifier hs-var">Default</span></a></span><span> </span><span class="annot"><span class="annottext">Payload
 </span><a href="Test.Integration.Framework.Request.html#Empty"><span class="hs-identifier hs-var">Empty</span></a></span><span>
@@ -75,9 +75,9 @@ forall (m :: * -&gt; *) a.
 Status -&gt; (Status, a) -&gt; m ()
 </span><a href="Test.Integration.Framework.DSL.html#expectResponseCode"><span class="hs-identifier hs-var">expectResponseCode</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><span class="annottext">Status
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var">HTTP.status200</span></a></span><span> </span><span class="annot"><span class="annottext">(Status, Either RequestException ApiNetworkParameters)
-</span><a href="#local-6989586621682941131"><span class="hs-identifier hs-var">r</span></a></span><span>
-</span><span id="line-38"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621682941126"><span class="annot"><span class="annottext">Quantity unit Percentage
-</span><a href="#local-6989586621682941126"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Percentage -&gt; Quantity unit Percentage
+</span><a href="#local-6989586621682941416"><span class="hs-identifier hs-var">r</span></a></span><span>
+</span><span id="line-38"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621682941411"><span class="annot"><span class="annottext">Quantity unit Percentage
+</span><a href="#local-6989586621682941411"><span class="hs-identifier hs-var">d</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Percentage -&gt; Quantity unit Percentage
 forall (unit :: Symbol) a. a -&gt; Quantity unit a
 </span><a href="../../../../cardano-wallet-core/html/src"><span class="hs-identifier hs-var">Quantity</span></a></span><span> </span><span class="annot"><span class="annottext">(Percentage -&gt; Quantity unit Percentage)
 -&gt; Either MkPercentageError Percentage
@@ -90,8 +90,8 @@ forall a. Integral a =&gt; a -&gt; a -&gt; Ratio a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">%</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-39"></span><span>        </span><span class="hs-comment">-- for Byron desiredPoolNumber is 0</span><span>
-</span><span id="line-40"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682941123"><span class="annot"><span class="annottext">nOpt :: Word16
-</span><a href="#local-6989586621682941123"><span class="hs-identifier hs-var hs-var">nOpt</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word16
+</span><span id="line-40"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682941408"><span class="annot"><span class="annottext">nOpt :: Word16
+</span><a href="#local-6989586621682941408"><span class="hs-identifier hs-var hs-var">nOpt</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word16
 </span><span class="hs-number">0</span></span><span>
 </span><span id="line-41"></span><span>        </span><span class="annot"><span class="annottext">(Status, Either RequestException ApiNetworkParameters)
 -&gt; [(Status, Either RequestException ApiNetworkParameters)
@@ -101,7 +101,7 @@ forall a (m :: * -&gt; *).
 (Show a, MonadUnliftIO m) =&gt;
 a -&gt; [a -&gt; m ()] -&gt; m ()
 </span><a href="Test.Integration.Framework.DSL.html#verify"><span class="hs-identifier hs-var">verify</span></a></span><span> </span><span class="annot"><span class="annottext">(Status, Either RequestException ApiNetworkParameters)
-</span><a href="#local-6989586621682941131"><span class="hs-identifier hs-var">r</span></a></span><span>
+</span><a href="#local-6989586621682941416"><span class="hs-identifier hs-var">r</span></a></span><span>
 </span><span id="line-42"></span><span>            </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Traversal' ApiNetworkParameters (Quantity &quot;percent&quot; Percentage)
 -&gt; (Quantity &quot;percent&quot; Percentage -&gt; IO ())
 -&gt; (Status, Either RequestException ApiNetworkParameters)
@@ -118,12 +118,12 @@ Traversal' s a
 (Quantity &quot;percent&quot; Percentage
  -&gt; f (Quantity &quot;percent&quot; Percentage))
 -&gt; ApiNetworkParameters -&gt; f ApiNetworkParameters
-</span><a href="#local-6989586621682941122"><span class="hs-var">#decentralizationLevel</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Quantity &quot;percent&quot; Percentage
+</span><a href="#local-6989586621682941407"><span class="hs-var">#decentralizationLevel</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Quantity &quot;percent&quot; Percentage
 -&gt; Quantity &quot;percent&quot; Percentage -&gt; IO ()
 forall a. (HasCallStack, Show a, Eq a) =&gt; a -&gt; a -&gt; IO ()
 </span><a href="../../../../hspec-expectations/html/src"><span class="hs-operator hs-var">`shouldBe`</span></a></span><span> </span><span class="annot"><span class="annottext">Quantity &quot;percent&quot; Percentage
 forall (unit :: Symbol). Quantity unit Percentage
-</span><a href="#local-6989586621682941126"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682941411"><span class="hs-identifier hs-var">d</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-43"></span><span>            </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Traversal' ApiNetworkParameters Word16
 -&gt; (Word16 -&gt; IO ())
 -&gt; (Status, Either RequestException ApiNetworkParameters)
@@ -138,8 +138,8 @@ Traversal' s a
    -&gt; ApiNetworkParameters -&gt; f ApiNetworkParameters)
 (Word16 -&gt; f Word16)
 -&gt; ApiNetworkParameters -&gt; f ApiNetworkParameters
-</span><a href="#local-6989586621682941121"><span class="hs-var">#desiredPoolNumber</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word16 -&gt; Word16 -&gt; IO ()
+</span><a href="#local-6989586621682941406"><span class="hs-var">#desiredPoolNumber</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word16 -&gt; Word16 -&gt; IO ()
 forall a. (HasCallStack, Show a, Eq a) =&gt; a -&gt; a -&gt; IO ()
 </span><a href="../../../../hspec-expectations/html/src"><span class="hs-operator hs-var">`shouldBe`</span></a></span><span> </span><span class="annot"><span class="annottext">Word16
-</span><a href="#local-6989586621682941123"><span class="hs-identifier hs-var">nOpt</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682941408"><span class="hs-identifier hs-var">nOpt</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span>
 </span><span id="line-44"></span></pre></body></html>

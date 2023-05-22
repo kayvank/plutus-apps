@@ -123,8 +123,8 @@ conjure :: Goblin g a => TinkerM g a
 
 -- | Tinker monad.
 type TinkerM g = State (GoblinData g)
-bagOfTricks :: forall g_afc9. Lens' (GoblinData g_afc9) (TypeRepMap [])
-genes :: forall g_afc9 g_afcJ. Lens (GoblinData g_afc9) (GoblinData g_afcJ) (Genome g_afc9) (Genome g_afcJ)
+bagOfTricks :: forall g_afck. Lens' (GoblinData g_afck) (TypeRepMap [])
+genes :: forall g_afck g_afcU. Lens (GoblinData g_afck) (GoblinData g_afcU) (Genome g_afck) (Genome g_afcU)
 
 -- | Helper function to save a value in the bagOfTricks, and return it.
 saveInBagOfTricks :: forall g a. Typeable a => a -> TinkerM g a

@@ -17,9 +17,9 @@
 </span><span id="line-17"></span><span>  </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">ActiveSlotCoeff</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-18"></span><span>  </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-19"></span><span id="computeStabilityWindow"><span class="annot"><span class="annottext">computeStabilityWindow :: Word64 -&gt; ActiveSlotCoeff -&gt; Word64
-</span><a href="Cardano.Ledger.Shelley.StabilityWindow.html#computeStabilityWindow"><span class="hs-identifier hs-var hs-var">computeStabilityWindow</span></a></span></span><span> </span><span id="local-6989586621679466508"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679466508"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span id="local-6989586621679466507"><span class="annot"><span class="annottext">ActiveSlotCoeff
-</span><a href="#local-6989586621679466507"><span class="hs-identifier hs-var">asc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Ledger.Shelley.StabilityWindow.html#computeStabilityWindow"><span class="hs-identifier hs-var hs-var">computeStabilityWindow</span></a></span></span><span> </span><span id="local-6989586621679466726"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679466726"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span id="local-6989586621679466725"><span class="annot"><span class="annottext">ActiveSlotCoeff
+</span><a href="#local-6989586621679466725"><span class="hs-identifier hs-var">asc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-20"></span><span>  </span><span class="annot"><span class="annottext">Rational -&gt; Word64
 forall a b. (RealFrac a, Integral b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">ceiling</span></a></span><span> </span><span class="annot"><span class="annottext">(Rational -&gt; Word64) -&gt; Rational -&gt; Word64
@@ -30,13 +30,13 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Rational
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679466508"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Rational -&gt; Rational
+</span><a href="#local-6989586621679466726"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Rational -&gt; Rational
 forall a. Fractional a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">/</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679466503"><span class="hs-identifier hs-var">f</span></a></span><span>
+</span><a href="#local-6989586621679466721"><span class="hs-identifier hs-var">f</span></a></span><span>
 </span><span id="line-21"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-22"></span><span>    </span><span id="local-6989586621679466503"><span class="annot"><span class="annottext">f :: Rational
-</span><a href="#local-6989586621679466503"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PositiveUnitInterval -&gt; Rational
+</span><span id="line-22"></span><span>    </span><span id="local-6989586621679466721"><span class="annot"><span class="annottext">f :: Rational
+</span><a href="#local-6989586621679466721"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PositiveUnitInterval -&gt; Rational
 forall r. BoundedRational r =&gt; r -&gt; Rational
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">unboundRational</span></a></span><span> </span><span class="annot"><span class="annottext">(PositiveUnitInterval -&gt; Rational)
 -&gt; (ActiveSlotCoeff -&gt; PositiveUnitInterval)
@@ -47,7 +47,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">activeSlotVal</span></a></span><span> </span><span class="annot"><span class="annottext">(ActiveSlotCoeff -&gt; Rational) -&gt; ActiveSlotCoeff -&gt; Rational
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ActiveSlotCoeff
-</span><a href="#local-6989586621679466507"><span class="hs-identifier hs-var">asc</span></a></span><span>
+</span><a href="#local-6989586621679466725"><span class="hs-identifier hs-var">asc</span></a></span><span>
 </span><span id="line-23"></span><span>
 </span><span id="line-24"></span><span class="hs-comment">-- | Calculate the randomness stabilisation window from the security param and</span><span>
 </span><span id="line-25"></span><span class="hs-comment">-- the active slot coefficient.</span><span>
@@ -59,9 +59,9 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-31"></span><span>  </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">ActiveSlotCoeff</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-32"></span><span>  </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-33"></span><span id="computeRandomnessStabilisationWindow"><span class="annot"><span class="annottext">computeRandomnessStabilisationWindow :: Word64 -&gt; ActiveSlotCoeff -&gt; Word64
-</span><a href="Cardano.Ledger.Shelley.StabilityWindow.html#computeRandomnessStabilisationWindow"><span class="hs-identifier hs-var hs-var">computeRandomnessStabilisationWindow</span></a></span></span><span> </span><span id="local-6989586621679466499"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679466499"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span id="local-6989586621679466498"><span class="annot"><span class="annottext">ActiveSlotCoeff
-</span><a href="#local-6989586621679466498"><span class="hs-identifier hs-var">asc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Ledger.Shelley.StabilityWindow.html#computeRandomnessStabilisationWindow"><span class="hs-identifier hs-var hs-var">computeRandomnessStabilisationWindow</span></a></span></span><span> </span><span id="local-6989586621679466717"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679466717"><span class="hs-identifier hs-var">k</span></a></span></span><span> </span><span id="local-6989586621679466716"><span class="annot"><span class="annottext">ActiveSlotCoeff
+</span><a href="#local-6989586621679466716"><span class="hs-identifier hs-var">asc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-34"></span><span>  </span><span class="annot"><span class="annottext">Rational -&gt; Word64
 forall a b. (RealFrac a, Integral b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">ceiling</span></a></span><span> </span><span class="annot"><span class="annottext">(Rational -&gt; Word64) -&gt; Rational -&gt; Word64
@@ -72,13 +72,13 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Rational
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679466499"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Rational -&gt; Rational
+</span><a href="#local-6989586621679466717"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Rational -&gt; Rational -&gt; Rational
 forall a. Fractional a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">/</span></a></span><span> </span><span class="annot"><span class="annottext">Rational
-</span><a href="#local-6989586621679466497"><span class="hs-identifier hs-var">f</span></a></span><span>
+</span><a href="#local-6989586621679466715"><span class="hs-identifier hs-var">f</span></a></span><span>
 </span><span id="line-35"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-36"></span><span>    </span><span id="local-6989586621679466497"><span class="annot"><span class="annottext">f :: Rational
-</span><a href="#local-6989586621679466497"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PositiveUnitInterval -&gt; Rational
+</span><span id="line-36"></span><span>    </span><span id="local-6989586621679466715"><span class="annot"><span class="annottext">f :: Rational
+</span><a href="#local-6989586621679466715"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PositiveUnitInterval -&gt; Rational
 forall r. BoundedRational r =&gt; r -&gt; Rational
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">unboundRational</span></a></span><span> </span><span class="annot"><span class="annottext">(PositiveUnitInterval -&gt; Rational)
 -&gt; (ActiveSlotCoeff -&gt; PositiveUnitInterval)
@@ -89,5 +89,5 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">activeSlotVal</span></a></span><span> </span><span class="annot"><span class="annottext">(ActiveSlotCoeff -&gt; Rational) -&gt; ActiveSlotCoeff -&gt; Rational
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ActiveSlotCoeff
-</span><a href="#local-6989586621679466498"><span class="hs-identifier hs-var">asc</span></a></span><span>
+</span><a href="#local-6989586621679466716"><span class="hs-identifier hs-var">asc</span></a></span><span>
 </span><span id="line-37"></span></pre></body></html>

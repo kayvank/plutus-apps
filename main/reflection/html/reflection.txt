@@ -14,11 +14,17 @@
 --   Chung-chieh Shan (<a>original paper</a>). However, the API has been
 --   streamlined to improve performance.
 --   
---   Austin Seipp's tutorial <a>Reflecting values to types and back</a>
+--   There are a handful of tutorials on how to use this library:
+--   
+--   <ul>
+--   <li>Austin Seipp's tutorial <a>Reflecting values to types and back</a>
 --   provides a summary of the approach taken by this library, along with
---   more motivating examples.
+--   more motivating examples.</li>
+--   <li>Arnaud Spiwack's tutorial <a>All about reflection</a> explains how
+--   to use this library.</li>
+--   </ul>
 @package reflection
-@version 2.1.6
+@version 2.1.7
 
 
 -- | Reifies arbitrary terms at the type level. Based on the Functional
@@ -64,6 +70,10 @@ reify :: forall a r. a -> (forall (s :: *). Reifies s a => Proxy s -> r) -> r
 --   <i>Available only on GHC 7.8+</i>
 --   
 --   <pre>
+--   &gt;&gt;&gt; import GHC.TypeLits
+--   </pre>
+--   
+--   <pre>
 --   &gt;&gt;&gt; reifyNat 4 natVal
 --   4
 --   </pre>
@@ -78,6 +88,10 @@ reifyNat :: forall r. Integer -> (forall (n :: Nat). KnownNat n => Proxy n -> r)
 --   <a>KnownSymbol</a> suitable for use with other APIs.
 --   
 --   <i>Available only on GHC 7.8+</i>
+--   
+--   <pre>
+--   &gt;&gt;&gt; import GHC.TypeLits
+--   </pre>
 --   
 --   <pre>
 --   &gt;&gt;&gt; reifySymbol "hello" symbolVal

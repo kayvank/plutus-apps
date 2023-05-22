@@ -49,29 +49,29 @@
 </span><span id="line-49"></span><span class="hs-comment">-- _back_ to the translation functions as the UTxO, allowing these addresses to</span><span>
 </span><span id="line-50"></span><span class="hs-comment">-- be removed. This is needed because we cannot do a full scan on the UTxO at</span><span>
 </span><span id="line-51"></span><span class="hs-comment">-- this point, since it has been persisted to disk.</span><span>
-</span><span id="line-52"></span><span id="local-6989586621679233060"><span class="annot"><a href="Cardano.Ledger.Allegra.Translation.html#shelleyToAllegraAVVMsToDelete"><span class="hs-identifier hs-type">shelleyToAllegraAVVMsToDelete</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">NewEpochState</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233060"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">UTxO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233060"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-52"></span><span id="local-6989586621679233278"><span class="annot"><a href="Cardano.Ledger.Allegra.Translation.html#shelleyToAllegraAVVMsToDelete"><span class="hs-identifier hs-type">shelleyToAllegraAVVMsToDelete</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">NewEpochState</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233278"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">UTxO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233278"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-53"></span><span id="shelleyToAllegraAVVMsToDelete"><span class="annot"><span class="annottext">shelleyToAllegraAVVMsToDelete :: NewEpochState (ShelleyEra c) -&gt; UTxO (ShelleyEra c)
 </span><a href="Cardano.Ledger.Allegra.Translation.html#shelleyToAllegraAVVMsToDelete"><span class="hs-identifier hs-var hs-var">shelleyToAllegraAVVMsToDelete</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NewEpochState (ShelleyEra c) -&gt; UTxO (ShelleyEra c)
 forall era. NewEpochState era -&gt; StashedAVVMAddresses era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">stashedAVVMAddresses</span></a></span><span>
 </span><span id="line-54"></span><span>
-</span><span id="line-55"></span><span class="hs-keyword">type</span><span> </span><span class="hs-keyword">instance</span><span> </span><span id="PreviousEra"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">PreviousEra</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span id="local-6989586621679233057"><span class="annot"><a href="#local-6989586621679233057"><span class="hs-identifier hs-type hs-type">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233057"><span class="hs-identifier hs-type">c</span></a></span><span>
+</span><span id="line-55"></span><span class="hs-keyword">type</span><span> </span><span class="hs-keyword">instance</span><span> </span><span id="PreviousEra"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">PreviousEra</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span id="local-6989586621679233275"><span class="annot"><a href="#local-6989586621679233275"><span class="hs-identifier hs-type hs-type">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233275"><span class="hs-identifier hs-type">c</span></a></span><span>
 </span><span id="line-56"></span><span>
 </span><span id="line-57"></span><span class="hs-comment">-- | Currently no context is needed to translate from Shelley to Allegra.</span><span>
 </span><span id="line-58"></span><span>
 </span><span id="line-59"></span><span class="hs-comment">-- Note: if context is needed, please coordinate with consensus, who will have</span><span>
 </span><span id="line-60"></span><span class="hs-comment">-- to provide the context in the right place.</span><span>
-</span><span id="line-61"></span><span class="hs-keyword">type</span><span> </span><span class="hs-keyword">instance</span><span> </span><span id="TranslationContext"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TranslationContext</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span id="local-6989586621679233056"><span class="annot"><a href="#local-6989586621679233056"><span class="hs-identifier hs-type hs-type">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-61"></span><span class="hs-keyword">type</span><span> </span><span class="hs-keyword">instance</span><span> </span><span id="TranslationContext"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TranslationContext</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span id="local-6989586621679233274"><span class="annot"><a href="#local-6989586621679233274"><span class="hs-identifier hs-type hs-type">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-62"></span><span>
-</span><span id="line-63"></span><span id="local-6989586621679233055"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233055"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233055"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">NewEpochState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-64"></span><span>  </span><span id="local-6989586621679233050"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-63"></span><span id="local-6989586621679233273"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233273"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233273"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">NewEpochState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-64"></span><span>  </span><span id="local-6989586621679233268"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; NewEpochState (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) NewEpochState)
      (NewEpochState (AllegraEra c))
-</span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233048"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679233048"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233047"><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233266"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233266"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233265"><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-65"></span><span>    </span><span class="annot"><span class="annottext">NewEpochState (AllegraEra c)
 -&gt; ExceptT Void Identity (NewEpochState (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -96,19 +96,19 @@ EpochNo
 forall era. NewEpochState era -&gt; EpochNo
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">nesEL</span></a></span><span> </span><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
 NewEpochState (ShelleyEra c)
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-68"></span><span>          </span><span class="annot"><span class="annottext">nesBprev :: BlocksMade (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">nesBprev</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NewEpochState (ShelleyEra c) -&gt; BlocksMade (Crypto (ShelleyEra c))
 forall era. NewEpochState era -&gt; BlocksMade (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">nesBprev</span></a></span><span> </span><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
 NewEpochState (ShelleyEra c)
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-69"></span><span>          </span><span class="annot"><span class="annottext">nesBcur :: BlocksMade (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">nesBcur</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NewEpochState (ShelleyEra c) -&gt; BlocksMade (Crypto (ShelleyEra c))
 forall era. NewEpochState era -&gt; BlocksMade (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">nesBcur</span></a></span><span> </span><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
 NewEpochState (ShelleyEra c)
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-70"></span><span>          </span><span class="annot"><span class="annottext">nesEs :: EpochState (AllegraEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">nesEs</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; EpochState (PreviousEra (AllegraEra c))
@@ -117,7 +117,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679233048"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(EpochState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233266"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(EpochState (PreviousEra (AllegraEra c))
  -&gt; EpochState (AllegraEra c))
 -&gt; EpochState (PreviousEra (AllegraEra c))
 -&gt; EpochState (AllegraEra c)
@@ -136,7 +136,7 @@ forall era. NewEpochState era -&gt; EpochState era
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
 NewEpochState (ShelleyEra c)
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-71"></span><span>          </span><span class="annot"><span class="annottext">nesRu :: StrictMaybe (PulsingRewUpdate (Crypto (AllegraEra c)))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">nesRu</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NewEpochState (ShelleyEra c)
 -&gt; StrictMaybe (PulsingRewUpdate (Crypto (ShelleyEra c)))
@@ -144,13 +144,13 @@ forall era.
 NewEpochState era -&gt; StrictMaybe (PulsingRewUpdate (Crypto era))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">nesRu</span></a></span><span> </span><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
 NewEpochState (ShelleyEra c)
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-72"></span><span>          </span><span class="annot"><span class="annottext">nesPd :: PoolDistr (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">nesPd</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NewEpochState (ShelleyEra c) -&gt; PoolDistr (Crypto (ShelleyEra c))
 forall era. NewEpochState era -&gt; PoolDistr (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">nesPd</span></a></span><span> </span><span class="annot"><span class="annottext">NewEpochState (PreviousEra (AllegraEra c))
 NewEpochState (ShelleyEra c)
-</span><a href="#local-6989586621679233047"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233265"><span class="hs-identifier hs-var">nes</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-73"></span><span>          </span><span class="hs-comment">-- At this point, the consensus layer has passed in our stashed AVVM</span><span>
 </span><span id="line-74"></span><span>          </span><span class="hs-comment">-- addresses as our UTxO, and we have deleted them above (with</span><span>
 </span><span id="line-75"></span><span>          </span><span class="hs-comment">-- 'returnRedeemAddrsToReserves'), so we may safely discard this map.</span><span>
@@ -158,14 +158,14 @@ NewEpochState (ShelleyEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">stashedAVVMAddresses</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-77"></span><span>        </span><span class="hs-special">}</span></span><span>
 </span><span id="line-78"></span><span>
-</span><span id="line-79"></span><span class="hs-keyword">instance</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679233034"><span class="annot"><a href="#local-6989586621679233034"><span class="hs-identifier hs-type hs-type">c</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233034"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233034"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Tx</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-80"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="TranslationError"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TranslationError</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233034"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Tx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">DecoderError</span></a></span><span>
-</span><span id="line-81"></span><span>  </span><span id="local-6989586621679233033"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-79"></span><span class="hs-keyword">instance</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679233252"><span class="annot"><a href="#local-6989586621679233252"><span class="hs-identifier hs-type hs-type">c</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233252"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233252"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Tx</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-80"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="TranslationError"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TranslationError</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233252"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Tx</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">DecoderError</span></a></span><span>
+</span><span id="line-81"></span><span>  </span><span id="local-6989586621679233251"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; Tx (PreviousEra (AllegraEra c))
 -&gt; Except (TranslationError (AllegraEra c) Tx) (Tx (AllegraEra c))
-</span><a href="#local-6989586621679233033"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233032"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679233032"><span class="hs-identifier hs-var">_ctx</span></a></span></span><span> </span><span id="local-6989586621679233031"><span class="annot"><span class="annottext">Tx (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679233031"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233251"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233250"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233250"><span class="hs-identifier hs-var">_ctx</span></a></span></span><span> </span><span id="local-6989586621679233249"><span class="annot"><span class="annottext">Tx (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233249"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-82"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Text
 -&gt; (forall s. Decoder s (Annotator (Tx (AllegraEra c))))
 -&gt; LByteString
@@ -182,28 +182,28 @@ forall a s. FromCBOR a =&gt; Decoder s a
 forall a. ToCBOR a =&gt; a -&gt; LByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serialize</span></a></span><span> </span><span class="annot"><span class="annottext">Tx (PreviousEra (AllegraEra c))
 Tx (ShelleyEra c)
-</span><a href="#local-6989586621679233031"><span class="hs-identifier hs-var">tx</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-83"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679233030"><span class="annot"><span class="annottext">Tx (AllegraEra c)
-</span><a href="#local-6989586621679233030"><span class="hs-identifier hs-var">newTx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Tx (AllegraEra c)
+</span><a href="#local-6989586621679233249"><span class="hs-identifier hs-var">tx</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-83"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679233248"><span class="annot"><span class="annottext">Tx (AllegraEra c)
+</span><a href="#local-6989586621679233248"><span class="hs-identifier hs-var">newTx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Tx (AllegraEra c)
 -&gt; ExceptT DecoderError Identity (Tx (AllegraEra c))
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">Tx (AllegraEra c)
-</span><a href="#local-6989586621679233030"><span class="hs-identifier hs-var">newTx</span></a></span><span>
-</span><span id="line-84"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679233029"><span class="annot"><span class="annottext">DecoderError
-</span><a href="#local-6989586621679233029"><span class="hs-identifier hs-var">decoderError</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">DecoderError -&gt; ExceptT DecoderError Identity (Tx (AllegraEra c))
+</span><a href="#local-6989586621679233248"><span class="hs-identifier hs-var">newTx</span></a></span><span>
+</span><span id="line-84"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679233247"><span class="annot"><span class="annottext">DecoderError
+</span><a href="#local-6989586621679233247"><span class="hs-identifier hs-var">decoderError</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">DecoderError -&gt; ExceptT DecoderError Identity (Tx (AllegraEra c))
 forall e (m :: * -&gt; *) a. MonadError e m =&gt; e -&gt; m a
 </span><a href="../../../../mtl/html/src"><span class="hs-identifier hs-var">throwError</span></a></span><span> </span><span class="annot"><span class="annottext">DecoderError
-</span><a href="#local-6989586621679233029"><span class="hs-identifier hs-var">decoderError</span></a></span><span>
+</span><a href="#local-6989586621679233247"><span class="hs-identifier hs-var">decoderError</span></a></span><span>
 </span><span id="line-85"></span><span>
-</span><span id="line-86"></span><span id="local-6989586621679233028"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233028"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233028"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyGenesis</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-87"></span><span>  </span><span id="local-6989586621679233024"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-86"></span><span id="local-6989586621679233246"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233246"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233246"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ShelleyGenesis</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-87"></span><span>  </span><span id="local-6989586621679233242"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; ShelleyGenesis (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) ShelleyGenesis)
      (ShelleyGenesis (AllegraEra c))
-</span><a href="#local-6989586621679233024"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233023"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679233023"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233022"><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233242"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233241"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233241"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233240"><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-88"></span><span>    </span><span class="annot"><span class="annottext">ShelleyGenesis (AllegraEra c)
 -&gt; ExceptT Void Identity (ShelleyGenesis (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -231,67 +231,67 @@ UTCTime
 forall era. ShelleyGenesis era -&gt; UTCTime
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgSystemStart</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-91"></span><span>          </span><span class="annot"><span class="annottext">sgNetworkMagic :: Word32
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgNetworkMagic</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Word32
 forall era. ShelleyGenesis era -&gt; Word32
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgNetworkMagic</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-92"></span><span>          </span><span class="annot"><span class="annottext">sgNetworkId :: Network
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgNetworkId</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Network
 forall era. ShelleyGenesis era -&gt; Network
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgNetworkId</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-93"></span><span>          </span><span class="annot"><span class="annottext">sgActiveSlotsCoeff :: PositiveUnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgActiveSlotsCoeff</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; PositiveUnitInterval
 forall era. ShelleyGenesis era -&gt; PositiveUnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgActiveSlotsCoeff</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-94"></span><span>          </span><span class="annot"><span class="annottext">sgSecurityParam :: Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgSecurityParam</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Word64
 forall era. ShelleyGenesis era -&gt; Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgSecurityParam</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-95"></span><span>          </span><span class="annot"><span class="annottext">sgEpochLength :: EpochSize
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgEpochLength</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; EpochSize
 forall era. ShelleyGenesis era -&gt; EpochSize
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgEpochLength</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-96"></span><span>          </span><span class="annot"><span class="annottext">sgSlotsPerKESPeriod :: Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgSlotsPerKESPeriod</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Word64
 forall era. ShelleyGenesis era -&gt; Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgSlotsPerKESPeriod</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-97"></span><span>          </span><span class="annot"><span class="annottext">sgMaxKESEvolutions :: Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgMaxKESEvolutions</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Word64
 forall era. ShelleyGenesis era -&gt; Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgMaxKESEvolutions</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-98"></span><span>          </span><span class="annot"><span class="annottext">sgSlotLength :: NominalDiffTime
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgSlotLength</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; NominalDiffTime
 forall era. ShelleyGenesis era -&gt; NominalDiffTime
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgSlotLength</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-99"></span><span>          </span><span class="annot"><span class="annottext">sgUpdateQuorum :: Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgUpdateQuorum</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Word64
 forall era. ShelleyGenesis era -&gt; Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgUpdateQuorum</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-100"></span><span>          </span><span class="annot"><span class="annottext">sgMaxLovelaceSupply :: Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgMaxLovelaceSupply</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; Word64
 forall era. ShelleyGenesis era -&gt; Word64
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgMaxLovelaceSupply</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-101"></span><span>          </span><span class="annot"><span class="annottext">sgProtocolParams :: PParams (AllegraEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgProtocolParams</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; PParams' Identity (PreviousEra (AllegraEra c))
@@ -300,11 +300,11 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679233023"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; PParams (ShelleyEra c)
+</span><a href="#local-6989586621679233241"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c) -&gt; PParams (ShelleyEra c)
 forall era. ShelleyGenesis era -&gt; PParams era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgProtocolParams</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
 </span><span id="line-102"></span><span>          </span><span class="annot"><span class="annottext">sgGenDelegs :: Map
   (KeyHash 'Genesis (Crypto (AllegraEra c)))
   (GenDelegPair (Crypto (AllegraEra c)))
@@ -317,14 +317,14 @@ ShelleyGenesis era
 -&gt; Map (KeyHash 'Genesis (Crypto era)) (GenDelegPair (Crypto era))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgGenDelegs</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-103"></span><span>          </span><span class="annot"><span class="annottext">sgInitialFunds :: Map (Addr (Crypto (AllegraEra c))) Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgInitialFunds</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c)
 -&gt; Map (Addr (Crypto (ShelleyEra c))) Coin
 forall era. ShelleyGenesis era -&gt; Map (Addr (Crypto era)) Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgInitialFunds</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-104"></span><span>          </span><span class="annot"><span class="annottext">sgStaking :: ShelleyGenesisStaking (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">sgStaking</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (ShelleyEra c)
 -&gt; ShelleyGenesisStaking (Crypto (ShelleyEra c))
@@ -332,22 +332,22 @@ forall era.
 ShelleyGenesis era -&gt; ShelleyGenesisStaking (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">sgStaking</span></a></span><span> </span><span class="annot"><span class="annottext">ShelleyGenesis (PreviousEra (AllegraEra c))
 ShelleyGenesis (ShelleyEra c)
-</span><a href="#local-6989586621679233022"><span class="hs-identifier hs-var">genesis</span></a></span><span>
+</span><a href="#local-6989586621679233240"><span class="hs-identifier hs-var">genesis</span></a></span><span>
 </span><span id="line-105"></span><span>        </span><span class="hs-special">}</span></span><span>
 </span><span id="line-106"></span><span>
 </span><span id="line-107"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-108"></span><span class="hs-comment">-- Auxiliary instances and functions</span><span>
 </span><span id="line-109"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-110"></span><span>
-</span><span id="line-111"></span><span id="local-6989586621679233004"><span id="local-6989586621679233005"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233005"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233005"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">PParams'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233004"><span class="hs-identifier hs-type">f</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-112"></span><span>  </span><span id="local-6989586621679233000"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-111"></span><span id="local-6989586621679233222"><span id="local-6989586621679233223"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233223"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233223"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">PParams'</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233222"><span class="hs-identifier hs-type">f</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-112"></span><span>  </span><span id="local-6989586621679233218"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; PParams' f (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) (PParams' f))
      (PParams' f (AllegraEra c))
-</span><a href="#local-6989586621679233000"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621679232999"><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233218"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621679233217"><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-113"></span><span>    </span><span class="annot"><span class="annottext">PParams' f (AllegraEra c)
 -&gt; ExceptT Void Identity (PParams' f (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -382,117 +382,117 @@ HKD f Natural
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_minfeeA</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-116"></span><span>          </span><span class="annot"><span class="annottext">_minfeeB :: HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_minfeeB</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Natural
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_minfeeB</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-117"></span><span>          </span><span class="annot"><span class="annottext">_maxBBSize :: HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_maxBBSize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Natural
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_maxBBSize</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-118"></span><span>          </span><span class="annot"><span class="annottext">_maxTxSize :: HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_maxTxSize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Natural
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_maxTxSize</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-119"></span><span>          </span><span class="annot"><span class="annottext">_maxBHSize :: HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_maxBHSize</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Natural
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_maxBHSize</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-120"></span><span>          </span><span class="annot"><span class="annottext">_keyDeposit :: HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_keyDeposit</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Coin
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_keyDeposit</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-121"></span><span>          </span><span class="annot"><span class="annottext">_poolDeposit :: HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_poolDeposit</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Coin
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_poolDeposit</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-122"></span><span>          </span><span class="annot"><span class="annottext">_eMax :: HKD f EpochNo
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_eMax</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f EpochNo
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f EpochNo
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_eMax</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-123"></span><span>          </span><span class="annot"><span class="annottext">_nOpt :: HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_nOpt</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Natural
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Natural
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_nOpt</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-124"></span><span>          </span><span class="annot"><span class="annottext">_a0 :: HKD f NonNegativeInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_a0</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f NonNegativeInterval
 forall (f :: * -&gt; *) era.
 PParams' f era -&gt; HKD f NonNegativeInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_a0</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-125"></span><span>          </span><span class="annot"><span class="annottext">_rho :: HKD f UnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_rho</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f UnitInterval
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f UnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_rho</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-126"></span><span>          </span><span class="annot"><span class="annottext">_tau :: HKD f UnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_tau</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f UnitInterval
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f UnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_tau</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-127"></span><span>          </span><span class="annot"><span class="annottext">_d :: HKD f UnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_d</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f UnitInterval
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f UnitInterval
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_d</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-128"></span><span>          </span><span class="annot"><span class="annottext">_extraEntropy :: HKD f Nonce
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_extraEntropy</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Nonce
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Nonce
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_extraEntropy</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-129"></span><span>          </span><span class="annot"><span class="annottext">_protocolVersion :: HKD f ProtVer
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_protocolVersion</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f ProtVer
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f ProtVer
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_protocolVersion</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-130"></span><span>          </span><span class="annot"><span class="annottext">_minUTxOValue :: HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_minUTxOValue</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Coin
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_minUTxOValue</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-131"></span><span>          </span><span class="annot"><span class="annottext">_minPoolCost :: HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_minPoolCost</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">PParams' f (ShelleyEra c) -&gt; HKD f Coin
 forall (f :: * -&gt; *) era. PParams' f era -&gt; HKD f Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_minPoolCost</span></a></span><span> </span><span class="annot"><span class="annottext">PParams' f (PreviousEra (AllegraEra c))
 PParams' f (ShelleyEra c)
-</span><a href="#local-6989586621679232999"><span class="hs-identifier hs-var">pp</span></a></span><span>
+</span><a href="#local-6989586621679233217"><span class="hs-identifier hs-var">pp</span></a></span><span>
 </span><span id="line-132"></span><span>        </span><span class="hs-special">}</span></span></span><span>
 </span><span id="line-133"></span><span>
-</span><span id="line-134"></span><span id="local-6989586621679232980"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232980"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232980"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ProposedPPUpdates</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-135"></span><span>  </span><span id="local-6989586621679232976"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-134"></span><span id="local-6989586621679233198"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233198"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233198"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ProposedPPUpdates</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-135"></span><span>  </span><span id="local-6989586621679233194"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; ProposedPPUpdates (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) ProposedPPUpdates)
      (ProposedPPUpdates (AllegraEra c))
-</span><a href="#local-6989586621679232976"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232975"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232975"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ProposedPPUpdates</span></a></span><span> </span><span id="local-6989586621679232973"><span class="annot"><span class="annottext">Map
+</span><a href="#local-6989586621679233194"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233193"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233193"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">ProposedPPUpdates</span></a></span><span> </span><span id="local-6989586621679233191"><span class="annot"><span class="annottext">Map
   (KeyHash 'Genesis (Crypto (PreviousEra (AllegraEra c))))
   (PParamsDelta (PreviousEra (AllegraEra c)))
-</span><a href="#local-6989586621679232973"><span class="hs-identifier hs-var">ppup</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233191"><span class="hs-identifier hs-var">ppup</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-136"></span><span>    </span><span class="annot"><span class="annottext">ProposedPPUpdates (AllegraEra c)
 -&gt; ExceptT Void Identity (ProposedPPUpdates (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -529,21 +529,21 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232975"><span class="hs-identifier hs-var">ctxt</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'Genesis c) (PParams' StrictMaybe (ShelleyEra c))
+</span><a href="#local-6989586621679233193"><span class="hs-identifier hs-var">ctxt</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'Genesis c) (PParams' StrictMaybe (ShelleyEra c))
 Map
   (KeyHash 'Genesis (Crypto (PreviousEra (AllegraEra c))))
   (PParamsDelta (PreviousEra (AllegraEra c)))
-</span><a href="#local-6989586621679232973"><span class="hs-identifier hs-var">ppup</span></a></span></span><span>
+</span><a href="#local-6989586621679233191"><span class="hs-identifier hs-var">ppup</span></a></span></span><span>
 </span><span id="line-137"></span><span>
-</span><span id="line-138"></span><span id="local-6989586621679232971"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232971"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232971"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">PPUPState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-139"></span><span>  </span><span id="local-6989586621679232967"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-138"></span><span id="local-6989586621679233189"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233189"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233189"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">PPUPState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-139"></span><span>  </span><span id="local-6989586621679233185"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; PPUPState (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) PPUPState)
      (PPUPState (AllegraEra c))
-</span><a href="#local-6989586621679232967"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232966"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232966"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679232965"><span class="annot"><span class="annottext">PPUPState (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232965"><span class="hs-identifier hs-var">ps</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233185"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233184"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233184"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233183"><span class="annot"><span class="annottext">PPUPState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233183"><span class="hs-identifier hs-var">ps</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-140"></span><span>    </span><span class="annot"><span class="annottext">PPUPState (AllegraEra c)
 -&gt; ExceptT Void Identity (PPUPState (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -559,7 +559,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232966"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(ProposedPPUpdates (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233184"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(ProposedPPUpdates (PreviousEra (AllegraEra c))
  -&gt; ProposedPPUpdates (AllegraEra c))
 -&gt; ProposedPPUpdates (PreviousEra (AllegraEra c))
 -&gt; ProposedPPUpdates (AllegraEra c)
@@ -568,7 +568,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. PPUPState era -&gt; ProposedPPUpdates era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">proposals</span></a></span><span> </span><span class="annot"><span class="annottext">PPUPState (PreviousEra (AllegraEra c))
 PPUPState (ShelleyEra c)
-</span><a href="#local-6989586621679232965"><span class="hs-identifier hs-var">ps</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233183"><span class="hs-identifier hs-var">ps</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-143"></span><span>          </span><span class="annot"><span class="annottext">futureProposals :: ProposedPPUpdates (AllegraEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">futureProposals</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; ProposedPPUpdates (PreviousEra (AllegraEra c))
@@ -577,7 +577,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232966"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(ProposedPPUpdates (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233184"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(ProposedPPUpdates (PreviousEra (AllegraEra c))
  -&gt; ProposedPPUpdates (AllegraEra c))
 -&gt; ProposedPPUpdates (PreviousEra (AllegraEra c))
 -&gt; ProposedPPUpdates (AllegraEra c)
@@ -586,17 +586,17 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. PPUPState era -&gt; ProposedPPUpdates era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">futureProposals</span></a></span><span> </span><span class="annot"><span class="annottext">PPUPState (PreviousEra (AllegraEra c))
 PPUPState (ShelleyEra c)
-</span><a href="#local-6989586621679232965"><span class="hs-identifier hs-var">ps</span></a></span><span>
+</span><a href="#local-6989586621679233183"><span class="hs-identifier hs-var">ps</span></a></span><span>
 </span><span id="line-144"></span><span>        </span><span class="hs-special">}</span></span><span>
 </span><span id="line-145"></span><span>
-</span><span id="line-146"></span><span id="local-6989586621679232961"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232961"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232961"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">TxOut</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-147"></span><span>  </span><span id="local-6989586621679232957"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-146"></span><span id="local-6989586621679233179"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233179"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233179"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">TxOut</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-147"></span><span>  </span><span id="local-6989586621679233175"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; TxOut (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) TxOut) (TxOut (AllegraEra c))
-</span><a href="#local-6989586621679232957"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">TxOutCompact</span></a></span><span> </span><span id="local-6989586621679232955"><span class="annot"><span class="annottext">CompactAddr (Crypto (PreviousEra (AllegraEra c)))
-</span><a href="#local-6989586621679232955"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span id="local-6989586621679232954"><span class="annot"><span class="annottext">CompactForm (Value (PreviousEra (AllegraEra c)))
-</span><a href="#local-6989586621679232954"><span class="hs-identifier hs-var">cfval</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233175"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">TxOutCompact</span></a></span><span> </span><span id="local-6989586621679233173"><span class="annot"><span class="annottext">CompactAddr (Crypto (PreviousEra (AllegraEra c)))
+</span><a href="#local-6989586621679233173"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span id="local-6989586621679233172"><span class="annot"><span class="annottext">CompactForm (Value (PreviousEra (AllegraEra c)))
+</span><a href="#local-6989586621679233172"><span class="hs-identifier hs-var">cfval</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-148"></span><span>    </span><span class="annot"><span class="annottext">TxOut (AllegraEra c)
 -&gt; ExceptT Void Identity (TxOut (AllegraEra c))
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
@@ -612,18 +612,18 @@ CompactAddr (Crypto era) -&gt; CompactForm (Value era) -&gt; TxOut era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">TxOutCompact</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">CompactAddr c -&gt; CompactAddr c
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">coerce</span></a></span><span> </span><span class="annot"><span class="annottext">CompactAddr c
 CompactAddr (Crypto (PreviousEra (AllegraEra c)))
-</span><a href="#local-6989586621679232955"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">CompactForm (Value (PreviousEra (AllegraEra c)))
+</span><a href="#local-6989586621679233173"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">CompactForm (Value (PreviousEra (AllegraEra c)))
 CompactForm (Value (AllegraEra c))
-</span><a href="#local-6989586621679232954"><span class="hs-identifier hs-var">cfval</span></a></span></span><span>
+</span><a href="#local-6989586621679233172"><span class="hs-identifier hs-var">cfval</span></a></span></span><span>
 </span><span id="line-149"></span><span>
-</span><span id="line-150"></span><span id="local-6989586621679232953"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232953"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232953"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">UTxO</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-151"></span><span>  </span><span id="local-6989586621679232949"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-150"></span><span id="local-6989586621679233171"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233171"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233171"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">UTxO</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-151"></span><span>  </span><span id="local-6989586621679233167"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; UTxO (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) UTxO) (UTxO (AllegraEra c))
-</span><a href="#local-6989586621679232949"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232948"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232948"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679232947"><span class="annot"><span class="annottext">UTxO (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232947"><span class="hs-identifier hs-var">utxo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233167"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233166"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233166"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233165"><span class="annot"><span class="annottext">UTxO (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233165"><span class="hs-identifier hs-var">utxo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-152"></span><span>    </span><span class="annot"><span class="annottext">UTxO (AllegraEra c) -&gt; ExceptT Void Identity (UTxO (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(UTxO (AllegraEra c)
@@ -640,7 +640,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232948"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(TxOut (ShelleyEra c) -&gt; TxOut (AllegraEra c))
+</span><a href="#local-6989586621679233166"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(TxOut (ShelleyEra c) -&gt; TxOut (AllegraEra c))
 -&gt; Map (TxIn c) (TxOut (ShelleyEra c))
 -&gt; Map (TxIn c) (TxOut (AllegraEra c))
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -649,17 +649,17 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall era. UTxO era -&gt; Map (TxIn (Crypto era)) (TxOut era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">unUTxO</span></a></span><span> </span><span class="annot"><span class="annottext">UTxO (PreviousEra (AllegraEra c))
 UTxO (ShelleyEra c)
-</span><a href="#local-6989586621679232947"><span class="hs-identifier hs-var">utxo</span></a></span><span class="hs-special">)</span></span><span>
+</span><a href="#local-6989586621679233165"><span class="hs-identifier hs-var">utxo</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-153"></span><span>
-</span><span id="line-154"></span><span id="local-6989586621679232943"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232943"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232943"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">UTxOState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-155"></span><span>  </span><span id="local-6989586621679232939"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-154"></span><span id="local-6989586621679233161"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233161"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233161"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">UTxOState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-155"></span><span>  </span><span id="local-6989586621679233157"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; UTxOState (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) UTxOState)
      (UTxOState (AllegraEra c))
-</span><a href="#local-6989586621679232939"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232938"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232938"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679232937"><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232937"><span class="hs-identifier hs-var">us</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233157"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233156"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233156"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233155"><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233155"><span class="hs-identifier hs-var">us</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-156"></span><span>    </span><span class="annot"><span class="annottext">UTxOState (AllegraEra c)
 -&gt; ExceptT Void Identity (UTxOState (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -679,26 +679,26 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232938"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(UTxO (PreviousEra (AllegraEra c)) -&gt; UTxO (AllegraEra c))
+</span><a href="#local-6989586621679233156"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(UTxO (PreviousEra (AllegraEra c)) -&gt; UTxO (AllegraEra c))
 -&gt; UTxO (PreviousEra (AllegraEra c)) -&gt; UTxO (AllegraEra c)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">UTxOState (ShelleyEra c) -&gt; UTxO (ShelleyEra c)
 forall era. UTxOState era -&gt; UTxO era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_utxo</span></a></span><span> </span><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
 UTxOState (ShelleyEra c)
-</span><a href="#local-6989586621679232937"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233155"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-159"></span><span>          </span><span class="annot"><span class="annottext">_deposited :: Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_deposited</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">UTxOState (ShelleyEra c) -&gt; Coin
 forall era. UTxOState era -&gt; Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_deposited</span></a></span><span> </span><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
 UTxOState (ShelleyEra c)
-</span><a href="#local-6989586621679232937"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233155"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-160"></span><span>          </span><span class="annot"><span class="annottext">_fees :: Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_fees</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">UTxOState (ShelleyEra c) -&gt; Coin
 forall era. UTxOState era -&gt; Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_fees</span></a></span><span> </span><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
 UTxOState (ShelleyEra c)
-</span><a href="#local-6989586621679232937"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233155"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-161"></span><span>          </span><span class="annot"><span class="annottext">_ppups :: State (EraRule &quot;PPUP&quot; (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_ppups</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; PPUPState (PreviousEra (AllegraEra c))
@@ -707,7 +707,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232938"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(PPUPState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233156"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(PPUPState (PreviousEra (AllegraEra c))
  -&gt; PPUPState (AllegraEra c))
 -&gt; PPUPState (PreviousEra (AllegraEra c))
 -&gt; PPUPState (AllegraEra c)
@@ -716,25 +716,25 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. UTxOState era -&gt; State (EraRule &quot;PPUP&quot; era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_ppups</span></a></span><span> </span><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
 UTxOState (ShelleyEra c)
-</span><a href="#local-6989586621679232937"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233155"><span class="hs-identifier hs-var">us</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-162"></span><span>          </span><span class="annot"><span class="annottext">_stakeDistro :: IncrementalStake (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_stakeDistro</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">UTxOState (ShelleyEra c)
 -&gt; IncrementalStake (Crypto (ShelleyEra c))
 forall era. UTxOState era -&gt; IncrementalStake (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">_stakeDistro</span></a></span><span> </span><span class="annot"><span class="annottext">UTxOState (PreviousEra (AllegraEra c))
 UTxOState (ShelleyEra c)
-</span><a href="#local-6989586621679232937"><span class="hs-identifier hs-var">us</span></a></span><span>
+</span><a href="#local-6989586621679233155"><span class="hs-identifier hs-var">us</span></a></span><span>
 </span><span id="line-163"></span><span>        </span><span class="hs-special">}</span></span><span>
 </span><span id="line-164"></span><span>
-</span><span id="line-165"></span><span id="local-6989586621679232930"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232930"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232930"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">LedgerState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-166"></span><span>  </span><span id="local-6989586621679232926"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-165"></span><span id="local-6989586621679233148"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233148"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233148"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">LedgerState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-166"></span><span>  </span><span id="local-6989586621679233144"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; LedgerState (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) LedgerState)
      (LedgerState (AllegraEra c))
-</span><a href="#local-6989586621679232926"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232925"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232925"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679232924"><span class="annot"><span class="annottext">LedgerState (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232924"><span class="hs-identifier hs-var">ls</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233144"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233143"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233143"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233142"><span class="annot"><span class="annottext">LedgerState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233142"><span class="hs-identifier hs-var">ls</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-167"></span><span>    </span><span class="annot"><span class="annottext">LedgerState (AllegraEra c)
 -&gt; ExceptT Void Identity (LedgerState (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -750,7 +750,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232925"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(UTxOState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233143"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(UTxOState (PreviousEra (AllegraEra c))
  -&gt; UTxOState (AllegraEra c))
 -&gt; UTxOState (PreviousEra (AllegraEra c))
 -&gt; UTxOState (AllegraEra c)
@@ -759,24 +759,24 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. LedgerState era -&gt; UTxOState era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">lsUTxOState</span></a></span><span> </span><span class="annot"><span class="annottext">LedgerState (PreviousEra (AllegraEra c))
 LedgerState (ShelleyEra c)
-</span><a href="#local-6989586621679232924"><span class="hs-identifier hs-var">ls</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233142"><span class="hs-identifier hs-var">ls</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-170"></span><span>          </span><span class="annot"><span class="annottext">lsDPState :: DPState (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">lsDPState</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">LedgerState (ShelleyEra c) -&gt; DPState (Crypto (ShelleyEra c))
 forall era. LedgerState era -&gt; DPState (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">lsDPState</span></a></span><span> </span><span class="annot"><span class="annottext">LedgerState (PreviousEra (AllegraEra c))
 LedgerState (ShelleyEra c)
-</span><a href="#local-6989586621679232924"><span class="hs-identifier hs-var">ls</span></a></span><span>
+</span><a href="#local-6989586621679233142"><span class="hs-identifier hs-var">ls</span></a></span><span>
 </span><span id="line-171"></span><span>        </span><span class="hs-special">}</span></span><span>
 </span><span id="line-172"></span><span>
-</span><span id="line-173"></span><span id="local-6989586621679232920"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232920"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232920"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">EpochState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-174"></span><span>  </span><span id="local-6989586621679232916"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-173"></span><span id="local-6989586621679233138"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233138"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233138"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">EpochState</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-174"></span><span>  </span><span id="local-6989586621679233134"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; EpochState (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) EpochState)
      (EpochState (AllegraEra c))
-</span><a href="#local-6989586621679232916"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232915"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232915"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679232914"><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233134"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233133"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233133"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span id="local-6989586621679233132"><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-175"></span><span>    </span><span class="annot"><span class="annottext">EpochState (AllegraEra c)
 -&gt; ExceptT Void Identity (EpochState (AllegraEra c))
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -795,13 +795,13 @@ AccountState
 forall era. EpochState era -&gt; AccountState
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">esAccountState</span></a></span><span> </span><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
 EpochState (ShelleyEra c)
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-178"></span><span>          </span><span class="annot"><span class="annottext">esSnapshots :: SnapShots (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">esSnapshots</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochState (ShelleyEra c) -&gt; SnapShots (Crypto (ShelleyEra c))
 forall era. EpochState era -&gt; SnapShots (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">esSnapshots</span></a></span><span> </span><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
 EpochState (ShelleyEra c)
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-179"></span><span>          </span><span class="annot"><span class="annottext">esLState :: LedgerState (AllegraEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">esLState</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; LedgerState (PreviousEra (AllegraEra c))
@@ -810,7 +810,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232915"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(LedgerState (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233133"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(LedgerState (PreviousEra (AllegraEra c))
  -&gt; LedgerState (AllegraEra c))
 -&gt; LedgerState (PreviousEra (AllegraEra c))
 -&gt; LedgerState (AllegraEra c)
@@ -819,7 +819,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. EpochState era -&gt; LedgerState era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">esLState</span></a></span><span> </span><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
 EpochState (ShelleyEra c)
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-180"></span><span>          </span><span class="annot"><span class="annottext">esPrevPp :: PParams (AllegraEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">esPrevPp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; PParams' Identity (PreviousEra (AllegraEra c))
@@ -828,7 +828,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232915"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(PParams' Identity (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233133"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(PParams' Identity (PreviousEra (AllegraEra c))
  -&gt; PParams' Identity (AllegraEra c))
 -&gt; PParams' Identity (PreviousEra (AllegraEra c))
 -&gt; PParams' Identity (AllegraEra c)
@@ -837,7 +837,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. EpochState era -&gt; PParams era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">esPrevPp</span></a></span><span> </span><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
 EpochState (ShelleyEra c)
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-181"></span><span>          </span><span class="annot"><span class="annottext">esPp :: PParams (AllegraEra c)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">esPp</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
 -&gt; PParams' Identity (PreviousEra (AllegraEra c))
@@ -846,7 +846,7 @@ forall era (f :: * -&gt; *).
 (TranslateEra era f, TranslationError era f ~ Void) =&gt;
 TranslationContext era -&gt; f (PreviousEra era) -&gt; f era
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">translateEra'</span></a></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232915"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(PParams' Identity (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233133"><span class="hs-identifier hs-var">ctxt</span></a></span><span> </span><span class="annot"><span class="annottext">(PParams' Identity (PreviousEra (AllegraEra c))
  -&gt; PParams' Identity (AllegraEra c))
 -&gt; PParams' Identity (PreviousEra (AllegraEra c))
 -&gt; PParams' Identity (AllegraEra c)
@@ -855,25 +855,25 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall era. EpochState era -&gt; PParams era
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">esPp</span></a></span><span> </span><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
 EpochState (ShelleyEra c)
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-182"></span><span>          </span><span class="annot"><span class="annottext">esNonMyopic :: NonMyopic (Crypto (AllegraEra c))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">esNonMyopic</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EpochState (ShelleyEra c) -&gt; NonMyopic (Crypto (ShelleyEra c))
 forall era. EpochState era -&gt; NonMyopic (Crypto era)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var hs-var">esNonMyopic</span></a></span><span> </span><span class="annot"><span class="annottext">EpochState (PreviousEra (AllegraEra c))
 EpochState (ShelleyEra c)
-</span><a href="#local-6989586621679232914"><span class="hs-identifier hs-var">es</span></a></span><span>
+</span><a href="#local-6989586621679233132"><span class="hs-identifier hs-var">es</span></a></span><span>
 </span><span id="line-183"></span><span>        </span><span class="hs-special">}</span></span><span>
 </span><span id="line-184"></span><span>
-</span><span id="line-185"></span><span id="local-6989586621679232906"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232906"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232906"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">WitnessSet</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-186"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="TranslationError"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TranslationError</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232906"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">WitnessSet</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">DecoderError</span></a></span><span>
-</span><span id="line-187"></span><span>  </span><span id="local-6989586621679232902"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-185"></span><span id="local-6989586621679233124"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233124"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233124"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">WitnessSet</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-186"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="TranslationError"><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TranslationError</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233124"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">WitnessSet</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">DecoderError</span></a></span><span>
+</span><span id="line-187"></span><span>  </span><span id="local-6989586621679233120"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; WitnessSet (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) WitnessSet)
      (WitnessSet (AllegraEra c))
-</span><a href="#local-6989586621679232902"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679232901"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><a href="#local-6989586621679232901"><span class="hs-identifier hs-var">_ctx</span></a></span></span><span> </span><span id="local-6989586621679232900"><span class="annot"><span class="annottext">WitnessSet (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232900"><span class="hs-identifier hs-var">ws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679233120"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span id="local-6989586621679233119"><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><a href="#local-6989586621679233119"><span class="hs-identifier hs-var">_ctx</span></a></span></span><span> </span><span id="local-6989586621679233118"><span class="annot"><span class="annottext">WitnessSet (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233118"><span class="hs-identifier hs-var">ws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-188"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Text
 -&gt; (forall s. Decoder s (Annotator (WitnessSet (AllegraEra c))))
 -&gt; LByteString
@@ -892,29 +892,29 @@ Decoder s (Annotator (WitnessSet era))
 forall a. ToCBOR a =&gt; a -&gt; LByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serialize</span></a></span><span> </span><span class="annot"><span class="annottext">WitnessSet (PreviousEra (AllegraEra c))
 WitnessSet (ShelleyEra c)
-</span><a href="#local-6989586621679232900"><span class="hs-identifier hs-var">ws</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-189"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679232899"><span class="annot"><span class="annottext">WitnessSet (AllegraEra c)
-</span><a href="#local-6989586621679232899"><span class="hs-identifier hs-var">new</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">WitnessSet (AllegraEra c)
+</span><a href="#local-6989586621679233118"><span class="hs-identifier hs-var">ws</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-189"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679233117"><span class="annot"><span class="annottext">WitnessSet (AllegraEra c)
+</span><a href="#local-6989586621679233117"><span class="hs-identifier hs-var">new</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">WitnessSet (AllegraEra c)
 -&gt; ExceptT DecoderError Identity (WitnessSet (AllegraEra c))
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">WitnessSet (AllegraEra c)
-</span><a href="#local-6989586621679232899"><span class="hs-identifier hs-var">new</span></a></span><span>
-</span><span id="line-190"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679232898"><span class="annot"><span class="annottext">DecoderError
-</span><a href="#local-6989586621679232898"><span class="hs-identifier hs-var">decoderError</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">DecoderError
+</span><a href="#local-6989586621679233117"><span class="hs-identifier hs-var">new</span></a></span><span>
+</span><span id="line-190"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679233116"><span class="annot"><span class="annottext">DecoderError
+</span><a href="#local-6989586621679233116"><span class="hs-identifier hs-var">decoderError</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">DecoderError
 -&gt; ExceptT DecoderError Identity (WitnessSet (AllegraEra c))
 forall e (m :: * -&gt; *) a. MonadError e m =&gt; e -&gt; m a
 </span><a href="../../../../mtl/html/src"><span class="hs-identifier hs-var">throwError</span></a></span><span> </span><span class="annot"><span class="annottext">DecoderError
-</span><a href="#local-6989586621679232898"><span class="hs-identifier hs-var">decoderError</span></a></span></span><span>
+</span><a href="#local-6989586621679233116"><span class="hs-identifier hs-var">decoderError</span></a></span></span><span>
 </span><span id="line-191"></span><span>
-</span><span id="line-192"></span><span id="local-6989586621679232897"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232897"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679232897"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Update</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-193"></span><span>  </span><span id="local-6989586621679232893"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
+</span><span id="line-192"></span><span id="local-6989586621679233115"><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233115"><span class="hs-identifier hs-type">c</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">TranslateEra</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Ledger.Allegra.html#AllegraEra"><span class="hs-identifier hs-type">AllegraEra</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679233115"><span class="hs-identifier hs-type">c</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Update</span></a></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-193"></span><span>  </span><span id="local-6989586621679233111"><span class="annot"><span class="annottext">translateEra :: TranslationContext (AllegraEra c)
 -&gt; Update (PreviousEra (AllegraEra c))
 -&gt; Except
      (TranslationError (AllegraEra c) Update) (Update (AllegraEra c))
-</span><a href="#local-6989586621679232893"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
-</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Update</span></a></span><span> </span><span id="local-6989586621679232891"><span class="annot"><span class="annottext">ProposedPPUpdates (PreviousEra (AllegraEra c))
-</span><a href="#local-6989586621679232891"><span class="hs-identifier hs-var">pp</span></a></span></span><span> </span><span id="local-6989586621679232890"><span class="annot"><span class="annottext">EpochNo
-</span><a href="#local-6989586621679232890"><span class="hs-identifier hs-var">en</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Update (AllegraEra c)
+</span><a href="#local-6989586621679233111"><span class="hs-identifier hs-var hs-var hs-var hs-var">translateEra</span></a></span></span><span> </span><span class="annot"><span class="annottext">TranslationContext (AllegraEra c)
+</span><span class="hs-identifier">_</span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">Update</span></a></span><span> </span><span id="local-6989586621679233109"><span class="annot"><span class="annottext">ProposedPPUpdates (PreviousEra (AllegraEra c))
+</span><a href="#local-6989586621679233109"><span class="hs-identifier hs-var">pp</span></a></span></span><span> </span><span id="local-6989586621679233108"><span class="annot"><span class="annottext">EpochNo
+</span><a href="#local-6989586621679233108"><span class="hs-identifier hs-var">en</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Update (AllegraEra c)
 -&gt; ExceptT Void Identity (Update (AllegraEra c))
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(Update (AllegraEra c)
@@ -929,6 +929,6 @@ forall era. ProposedPPUpdates era -&gt; EpochNo -&gt; Update era
 -&gt; ProposedPPUpdates (AllegraEra c)
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">coerce</span></a></span><span> </span><span class="annot"><span class="annottext">ProposedPPUpdates (PreviousEra (AllegraEra c))
 ProposedPPUpdates (ShelleyEra c)
-</span><a href="#local-6989586621679232891"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">EpochNo
-</span><a href="#local-6989586621679232890"><span class="hs-identifier hs-var">en</span></a></span></span><span>
+</span><a href="#local-6989586621679233109"><span class="hs-identifier hs-var">pp</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">EpochNo
+</span><a href="#local-6989586621679233108"><span class="hs-identifier hs-var">en</span></a></span></span><span>
 </span><span id="line-194"></span></pre></body></html>

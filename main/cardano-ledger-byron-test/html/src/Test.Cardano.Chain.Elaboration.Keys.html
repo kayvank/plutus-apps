@@ -29,28 +29,28 @@
 </span><span id="line-29"></span><span>
 </span><span id="line-30"></span><span class="annot"><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateKeyPair"><span class="hs-identifier hs-type">elaborateKeyPair</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">KeyPair</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">SigningKey</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-31"></span><span id="elaborateKeyPair"><span class="annot"><span class="annottext">elaborateKeyPair :: KeyPair -&gt; (VerificationKey, SigningKey)
-</span><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateKeyPair"><span class="hs-identifier hs-var hs-var">elaborateKeyPair</span></a></span></span><span> </span><span id="local-6989586621679480886"><span class="annot"><span class="annottext">KeyPair
-</span><a href="#local-6989586621679480886"><span class="hs-identifier hs-var">kp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; (VerificationKey, SigningKey)
+</span><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateKeyPair"><span class="hs-identifier hs-var hs-var">elaborateKeyPair</span></a></span></span><span> </span><span id="local-6989586621679481119"><span class="annot"><span class="annottext">KeyPair
+</span><a href="#local-6989586621679481119"><span class="hs-identifier hs-var">kp</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; (VerificationKey, SigningKey)
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">deterministicKeyGen</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; (VerificationKey, SigningKey))
 -&gt; ByteString -&gt; (VerificationKey, SigningKey)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString
-</span><a href="#local-6989586621679480885"><span class="hs-identifier hs-var">padSeed</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679480884"><span class="hs-identifier hs-var">seed</span></a></span><span>
+</span><a href="#local-6989586621679481118"><span class="hs-identifier hs-var">padSeed</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679481117"><span class="hs-identifier hs-var">seed</span></a></span><span>
 </span><span id="line-32"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-33"></span><span>    </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Owner</span></a></span><span> </span><span id="local-6989586621679480883"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621679480883"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SKey -&gt; Owner
+</span><span id="line-33"></span><span>    </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">Owner</span></a></span><span> </span><span id="local-6989586621679481116"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621679481116"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SKey -&gt; Owner
 forall a. HasOwner a =&gt; a -&gt; Owner
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">owner</span></a></span><span> </span><span class="annot"><span class="annottext">(SKey -&gt; Owner) -&gt; SKey -&gt; Owner
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">KeyPair -&gt; SKey
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var hs-var">sKey</span></a></span><span> </span><span class="annot"><span class="annottext">KeyPair
-</span><a href="#local-6989586621679480886"><span class="hs-identifier hs-var">kp</span></a></span><span>
-</span><span id="line-34"></span><span>    </span><span id="local-6989586621679480885"><span class="annot"><span class="annottext">padSeed :: ByteString -&gt; ByteString
-</span><a href="#local-6989586621679480885"><span class="hs-identifier hs-var hs-var">padSeed</span></a></span></span><span> </span><span id="local-6989586621679480882"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679480882"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-35"></span><span>      </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679480881"><span class="annot"><span class="annottext">padLength :: Int
-</span><a href="#local-6989586621679480881"><span class="hs-identifier hs-var hs-var">padLength</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679481119"><span class="hs-identifier hs-var">kp</span></a></span><span>
+</span><span id="line-34"></span><span>    </span><span id="local-6989586621679481118"><span class="annot"><span class="annottext">padSeed :: ByteString -&gt; ByteString
+</span><a href="#local-6989586621679481118"><span class="hs-identifier hs-var hs-var">padSeed</span></a></span></span><span> </span><span id="local-6989586621679481115"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679481115"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-35"></span><span>      </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679481114"><span class="annot"><span class="annottext">padLength :: Int
+</span><a href="#local-6989586621679481114"><span class="hs-identifier hs-var hs-var">padLength</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Ord a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">max</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
@@ -58,15 +58,15 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Int
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.length</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679480882"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">in</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word8 -&gt; ByteString
+</span><a href="#local-6989586621679481115"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">in</span><span> </span><span class="annot"><span class="annottext">Int -&gt; Word8 -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BS.replicate</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679480881"><span class="hs-identifier hs-var">padLength</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
+</span><a href="#local-6989586621679481114"><span class="hs-identifier hs-var">padLength</span></a></span><span> </span><span class="annot"><span class="annottext">Word8
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; ByteString
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679480882"><span class="hs-identifier hs-var">s</span></a></span><span>
-</span><span id="line-36"></span><span>    </span><span id="local-6989586621679480884"><span class="annot"><span class="annottext">seed :: ByteString
-</span><a href="#local-6989586621679480884"><span class="hs-identifier hs-var hs-var">seed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString
+</span><a href="#local-6989586621679481115"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><span id="line-36"></span><span>    </span><span id="local-6989586621679481117"><span class="annot"><span class="annottext">seed :: ByteString
+</span><a href="#local-6989586621679481117"><span class="hs-identifier hs-var hs-var">seed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">BSL.toStrict</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; ByteString)
 -&gt; (Integer -&gt; ByteString) -&gt; Integer -&gt; ByteString
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
@@ -84,14 +84,14 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Integer
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621679480883"><span class="hs-identifier hs-var">o</span></a></span><span>
+</span><a href="#local-6989586621679481116"><span class="hs-identifier hs-var">o</span></a></span><span>
 </span><span id="line-37"></span><span>
 </span><span id="line-38"></span><span class="annot"><a href="Test.Cardano.Chain.Elaboration.Keys.html#vKeyPair"><span class="hs-identifier hs-type">vKeyPair</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKey</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">KeyPair</span></a></span><span>
 </span><span id="line-39"></span><span id="vKeyPair"><span class="annot"><span class="annottext">vKeyPair :: VKey -&gt; KeyPair
-</span><a href="Test.Cardano.Chain.Elaboration.Keys.html#vKeyPair"><span class="hs-identifier hs-var hs-var">vKeyPair</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKey</span></a></span><span> </span><span id="local-6989586621679480875"><span class="annot"><span class="annottext">Owner
-</span><a href="#local-6989586621679480875"><span class="hs-identifier hs-var">o</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Owner -&gt; KeyPair
+</span><a href="Test.Cardano.Chain.Elaboration.Keys.html#vKeyPair"><span class="hs-identifier hs-var hs-var">vKeyPair</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKey</span></a></span><span> </span><span id="local-6989586621679481108"><span class="annot"><span class="annottext">Owner
+</span><a href="#local-6989586621679481108"><span class="hs-identifier hs-var">o</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Owner -&gt; KeyPair
 </span><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-var">keyPair</span></a></span><span> </span><span class="annot"><span class="annottext">Owner
-</span><a href="#local-6989586621679480875"><span class="hs-identifier hs-var">o</span></a></span><span>
+</span><a href="#local-6989586621679481108"><span class="hs-identifier hs-var">o</span></a></span><span>
 </span><span id="line-40"></span><span>
 </span><span id="line-41"></span><span class="annot"><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateVKey"><span class="hs-identifier hs-type">elaborateVKey</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKey</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span>
 </span><span id="line-42"></span><span id="elaborateVKey"><span class="annot"><span class="annottext">elaborateVKey :: VKey -&gt; VerificationKey
@@ -144,10 +144,10 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-49"></span><span>
 </span><span id="line-50"></span><span class="annot"><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateVKeyGenesis"><span class="hs-identifier hs-type">elaborateVKeyGenesis</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKeyGenesis</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">VerificationKey</span></a></span><span>
 </span><span id="line-51"></span><span id="elaborateVKeyGenesis"><span class="annot"><span class="annottext">elaborateVKeyGenesis :: VKeyGenesis -&gt; VerificationKey
-</span><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateVKeyGenesis"><span class="hs-identifier hs-var hs-var">elaborateVKeyGenesis</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKeyGenesis</span></a></span><span> </span><span id="local-6989586621679480874"><span class="annot"><span class="annottext">VKey
-</span><a href="#local-6989586621679480874"><span class="hs-identifier hs-var">vk</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VKey -&gt; VerificationKey
+</span><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateVKeyGenesis"><span class="hs-identifier hs-var hs-var">elaborateVKeyGenesis</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKeyGenesis</span></a></span><span> </span><span id="local-6989586621679481107"><span class="annot"><span class="annottext">VKey
+</span><a href="#local-6989586621679481107"><span class="hs-identifier hs-var">vk</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VKey -&gt; VerificationKey
 </span><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateVKey"><span class="hs-identifier hs-var">elaborateVKey</span></a></span><span> </span><span class="annot"><span class="annottext">VKey
-</span><a href="#local-6989586621679480874"><span class="hs-identifier hs-var">vk</span></a></span><span>
+</span><a href="#local-6989586621679481107"><span class="hs-identifier hs-var">vk</span></a></span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="annot"><a href="Test.Cardano.Chain.Elaboration.Keys.html#elaborateVKeyGenesisHash"><span class="hs-identifier hs-type">elaborateVKeyGenesisHash</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../byron-spec-ledger/html/src"><span class="hs-identifier hs-type">VKeyGenesis</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">KeyHash</span></a></span><span>
 </span><span id="line-54"></span><span id="elaborateVKeyGenesisHash"><span class="annot"><span class="annottext">elaborateVKeyGenesisHash :: VKeyGenesis -&gt; KeyHash

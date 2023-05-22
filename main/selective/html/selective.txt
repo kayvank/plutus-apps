@@ -11,7 +11,7 @@
 --   <i>selective functors</i> for short, an abstraction between
 --   applicative functors and monads, introduced in <a>this paper</a>.
 @package selective
-@version 0.5
+@version 0.6
 
 
 -- | This is a library for <i>selective applicative functors</i>, or just
@@ -160,11 +160,11 @@ branch :: Selective f => f (Either a b) -> f (a -> c) -> f (b -> c) -> f c
 --   less efficient.
 selectA :: Applicative f => f (Either a b) -> f (a -> b) -> f b
 
--- | If a functor is both <a>Applicative</a> and <a>Traversable</a>, we can
---   implement <a>select</a> in another interesting way: the effects
---   associated with the second argument can be skipped as long as the
---   first argument contains only <a>Right</a>s.
-selectT :: (Applicative f, Traversable f) => f (Either a b) -> f (a -> b) -> f b
+-- | For traversable functors, we can implement <a>select</a> in another
+--   interesting way: the effects associated with the second argument can
+--   be skipped as long as the first argument contains only <a>Right</a>
+--   values.
+selectT :: Traversable f => f (Either a b) -> f (a -> b) -> f b
 
 -- | Recover the application operator <a>&lt;*&gt;</a> from <a>select</a>.
 --   <i>Rigid</i> selective functors satisfy the law <a>&lt;*&gt;</a>
@@ -296,18 +296,26 @@ Success :: a -> Validation e a
 -- | Swap <tt>Left</tt> and <tt>Right</tt>.
 swapEither :: Either a b -> Either b a
 
--- | Composition of a functor <tt>f</tt> with the <a>Either</a> monad.
+-- | Composition of a selective functor <tt>f</tt> with the <a>Either</a>
+--   monad.
 newtype ComposeEither f e a
 ComposeEither :: f (Either e a) -> ComposeEither f e a
+
+-- | Composition of a selective functor <tt>f</tt> and an applicative
+--   traversable functor <tt>g</tt>.
+newtype ComposeTraversable f g a
+ComposeTraversable :: f (g a) -> ComposeTraversable f g a
 instance GHC.Base.Applicative f => GHC.Base.Applicative (Control.Selective.SelectA f)
 instance GHC.Base.Functor f => GHC.Base.Functor (Control.Selective.SelectA f)
 instance GHC.Base.Monad f => GHC.Base.Monad (Control.Selective.SelectM f)
 instance GHC.Base.Applicative f => GHC.Base.Applicative (Control.Selective.SelectM f)
 instance GHC.Base.Functor f => GHC.Base.Functor (Control.Selective.SelectM f)
+instance GHC.Base.Monoid m => GHC.Base.Applicative (Control.Selective.Over m)
 instance GHC.Show.Show m => GHC.Show.Show (Control.Selective.Over m a)
 instance GHC.Classes.Ord m => GHC.Classes.Ord (Control.Selective.Over m a)
 instance GHC.Base.Functor (Control.Selective.Over m)
 instance GHC.Classes.Eq m => GHC.Classes.Eq (Control.Selective.Over m a)
+instance GHC.Base.Monoid m => GHC.Base.Applicative (Control.Selective.Under m)
 instance Data.Traversable.Traversable (Control.Selective.Under m)
 instance Data.Foldable.Foldable (Control.Selective.Under m)
 instance GHC.Show.Show m => GHC.Show.Show (Control.Selective.Under m a)
@@ -318,14 +326,16 @@ instance (GHC.Show.Show e, GHC.Show.Show a) => GHC.Show.Show (Control.Selective.
 instance (GHC.Classes.Ord e, GHC.Classes.Ord a) => GHC.Classes.Ord (Control.Selective.Validation e a)
 instance GHC.Base.Functor (Control.Selective.Validation e)
 instance (GHC.Classes.Eq e, GHC.Classes.Eq a) => GHC.Classes.Eq (Control.Selective.Validation e a)
+instance (GHC.Base.Applicative f, GHC.Base.Applicative g) => GHC.Base.Applicative (Control.Selective.ComposeTraversable f g)
+instance (GHC.Base.Functor f, GHC.Base.Functor g) => GHC.Base.Functor (Control.Selective.ComposeTraversable f g)
+instance Control.Selective.Selective f => Control.Selective.Selective (Control.Selective.ComposeEither f e)
 instance GHC.Base.Functor f => GHC.Base.Functor (Control.Selective.ComposeEither f e)
-instance GHC.Base.Applicative f => GHC.Base.Applicative (Control.Selective.ComposeEither f e)
+instance Control.Selective.Selective f => GHC.Base.Applicative (Control.Selective.ComposeEither f e)
 instance (Control.Selective.Selective f, GHC.Base.Monoid e) => GHC.Base.Alternative (Control.Selective.ComposeEither f e)
+instance (Control.Selective.Selective f, GHC.Base.Applicative g, Data.Traversable.Traversable g) => Control.Selective.Selective (Control.Selective.ComposeTraversable f g)
 instance GHC.Base.Semigroup e => GHC.Base.Applicative (Control.Selective.Validation e)
 instance GHC.Base.Semigroup e => Control.Selective.Selective (Control.Selective.Validation e)
-instance GHC.Base.Monoid m => GHC.Base.Applicative (Control.Selective.Under m)
 instance GHC.Base.Monoid m => Control.Selective.Selective (Control.Selective.Under m)
-instance GHC.Base.Monoid m => GHC.Base.Applicative (Control.Selective.Over m)
 instance GHC.Base.Monoid m => Control.Selective.Selective (Control.Selective.Over m)
 instance GHC.Base.Monad f => Control.Selective.Selective (Control.Selective.SelectM f)
 instance GHC.Base.Applicative f => Control.Selective.Selective (Control.Selective.SelectA f)
@@ -349,7 +359,6 @@ instance Control.Selective.Selective Data.Proxy.Proxy
 instance Control.Selective.Selective (GHC.ST.ST s)
 instance Control.Selective.Selective GHC.Conc.Sync.STM
 instance Control.Selective.Selective (Control.Monad.Trans.Cont.ContT r m)
-instance GHC.Base.Monad m => Control.Selective.Selective (Control.Monad.Trans.Except.ExceptT e m)
 instance GHC.Base.Monad m => Control.Selective.Selective (Control.Monad.Trans.Maybe.MaybeT m)
 instance (GHC.Base.Monoid w, GHC.Base.Monad m) => Control.Selective.Selective (Control.Monad.Trans.RWS.Lazy.RWST r w s m)
 instance (GHC.Base.Monoid w, GHC.Base.Monad m) => Control.Selective.Selective (Control.Monad.Trans.RWS.Strict.RWST r w s m)
@@ -636,48 +645,62 @@ instance GHC.Enum.Enum a => Control.Selective.Multi.Enumerable (Control.Selectiv
 --   applicative functors and monads, introduced in this paper:
 --   <a>https://www.staff.ncl.ac.uk/andrey.mokhov/selective-functors.pdf</a>.
 --   
---   This module defines <i>free rigid selective functors</i>. Rigid
---   selective functors are those that satisfy the property <tt>&lt;*&gt; =
---   apS</tt>.
+--   This module defines a newtype around <a>ExceptT</a> from
+--   <tt>transformers</tt> with less restrictive <a>Applicative</a>,
+--   <a>Selective</a>, and <a>Alternative</a> implementations. It supplies
+--   an <tt>instance <a>Selective</a> f =&gt; <a>Selective</a>
+--   (<a>ExceptT</a> e f)</tt>, which makes <a>ExceptT</a> a bona-fide
+--   <a>Selective</a> transformer.
 --   
---   Intuitively, a selective functor <tt>f</tt> is "rigid" if any
---   expression <tt>f a</tt> is equivalent to a list of effects chained
---   with <tt>select</tt> operators (the normal form given by the free
---   construction). In contrast, "non-rigid" selective functors can have
---   non-linear, tree-like shapes, because <tt><a>*</a></tt> nodes can't be
---   straightened using the <tt>&lt;*&gt; = apS</tt> equation.
-module Control.Selective.Rigid.Free
+--   The API follows the API from the <tt>transformers</tt> package, so it
+--   can be used as a drop-in replacement. The documentation can be found
+--   in the <a><tt>transformers</tt></a> package.
+module Control.Selective.Trans.Except
 
--- | Free rigid selective functors.
-data Select f a
-[Pure] :: a -> Select f a
-[Select] :: Select f (Either a b) -> f (a -> b) -> Select f b
+-- | A newtype wrapper around <a>ExceptT</a> from <tt>transformers</tt>
+--   that provides less restrictive <a>Applicative</a>, <a>Selective</a>
+--   and <a>Alternative</a> instances.
+newtype ExceptT e f a
+ExceptT :: ExceptT e f a -> ExceptT e f a
+[unwrap] :: ExceptT e f a -> ExceptT e f a
 
--- | Lift a functor into a free selective computation.
-liftSelect :: Functor f => f a -> Select f a
-
--- | Extract the resulting value if there are no necessary effects.
-getPure :: Select f a -> Maybe a
-
--- | Collect all possible effects in the order they appear in a free
---   selective computation.
-getEffects :: Functor f => Select f a -> [f ()]
-
--- | Extract the necessary effect from a free selective computation. Note:
---   there can be at most one effect that is statically guaranteed to be
---   necessary.
-getNecessaryEffect :: Functor f => Select f a -> Maybe (f ())
-
--- | Given a natural transformation from <tt>f</tt> to <tt>g</tt>, this
---   gives a canonical natural transformation from <tt>Select f</tt> to
---   <tt>g</tt>.
-runSelect :: Selective g => (forall x. f x -> g x) -> Select f a -> g a
-
--- | Concatenate all effects of a free selective computation.
-foldSelect :: Monoid m => (forall x. f x -> m) -> Select f a -> m
-instance GHC.Base.Functor f => GHC.Base.Functor (Control.Selective.Rigid.Free.Select f)
-instance GHC.Base.Functor f => GHC.Base.Applicative (Control.Selective.Rigid.Free.Select f)
-instance GHC.Base.Functor f => Control.Selective.Selective (Control.Selective.Rigid.Free.Select f)
+-- | Inject an <a>ExceptT</a> value into the newtype wrapper.
+wrap :: ExceptT e m a -> ExceptT e m a
+type Except e = ExceptT e Identity
+except :: Monad m => Either e a -> ExceptT e m a
+runExcept :: Except e a -> Either e a
+mapExcept :: (Either e a -> Either e' b) -> Except e a -> Except e' b
+withExcept :: (e -> e') -> Except e a -> Except e' a
+runExceptT :: ExceptT e m a -> m (Either e a)
+mapExceptT :: (m (Either e a) -> n (Either e' b)) -> ExceptT e m a -> ExceptT e' n b
+withExceptT :: Functor m => (e -> e') -> ExceptT e m a -> ExceptT e' m a
+throwE :: Monad m => e -> ExceptT e m a
+catchE :: Monad m => ExceptT e m a -> (e -> ExceptT e' m a) -> ExceptT e' m a
+liftCallCC :: CallCC m (Either e a) (Either e b) -> CallCC (ExceptT e m) a b
+liftListen :: Monad m => Listen w m (Either e a) -> Listen w (ExceptT e m) a
+liftPass :: Monad m => Pass w m (Either e a) -> Pass w (ExceptT e m) a
+instance (Control.Selective.Selective f, GHC.Base.Monoid e) => GHC.Base.Alternative (Control.Selective.Trans.Except.ExceptT e f)
+instance Control.Selective.Selective f => Control.Selective.Selective (Control.Selective.Trans.Except.ExceptT e f)
+instance Control.Selective.Selective f => GHC.Base.Applicative (Control.Selective.Trans.Except.ExceptT e f)
+instance (GHC.Show.Show e, Data.Functor.Classes.Show1 f) => Data.Functor.Classes.Show1 (Control.Selective.Trans.Except.ExceptT e f)
+instance (GHC.Read.Read e, Data.Functor.Classes.Read1 f) => Data.Functor.Classes.Read1 (Control.Selective.Trans.Except.ExceptT e f)
+instance (GHC.Classes.Ord e, Data.Functor.Classes.Ord1 f) => Data.Functor.Classes.Ord1 (Control.Selective.Trans.Except.ExceptT e f)
+instance (GHC.Classes.Eq e, Data.Functor.Classes.Eq1 f) => Data.Functor.Classes.Eq1 (Control.Selective.Trans.Except.ExceptT e f)
+instance (Control.Selective.Selective f, GHC.Base.Monoid e, GHC.Base.Monad f) => GHC.Base.MonadPlus (Control.Selective.Trans.Except.ExceptT e f)
+instance (Control.Selective.Selective f, Control.Monad.IO.Class.MonadIO f) => Control.Monad.IO.Class.MonadIO (Control.Selective.Trans.Except.ExceptT e f)
+instance (Control.Selective.Selective f, Control.Monad.Zip.MonadZip f) => Control.Monad.Zip.MonadZip (Control.Selective.Trans.Except.ExceptT e f)
+instance (Control.Selective.Selective f, Control.Monad.Fail.MonadFail f) => Control.Monad.Fail.MonadFail (Control.Selective.Trans.Except.ExceptT e f)
+instance (Control.Selective.Selective f, Control.Monad.Fix.MonadFix f) => Control.Monad.Fix.MonadFix (Control.Selective.Trans.Except.ExceptT e f)
+instance Control.Monad.Trans.Class.MonadTrans (Control.Selective.Trans.Except.ExceptT e)
+instance (Data.Functor.Classes.Show1 f, GHC.Show.Show e, GHC.Show.Show a) => GHC.Show.Show (Control.Selective.Trans.Except.ExceptT e f a)
+instance (Data.Functor.Classes.Read1 f, GHC.Read.Read e, GHC.Read.Read a) => GHC.Read.Read (Control.Selective.Trans.Except.ExceptT e f a)
+instance (Data.Functor.Classes.Ord1 f, GHC.Classes.Ord e, GHC.Classes.Ord a) => GHC.Classes.Ord (Control.Selective.Trans.Except.ExceptT e f a)
+instance (Data.Functor.Classes.Eq1 f, GHC.Classes.Eq e, GHC.Classes.Eq a) => GHC.Classes.Eq (Control.Selective.Trans.Except.ExceptT e f a)
+instance Data.Functor.Contravariant.Contravariant f => Data.Functor.Contravariant.Contravariant (Control.Selective.Trans.Except.ExceptT e f)
+instance (Control.Selective.Selective f, GHC.Base.Monad f) => GHC.Base.Monad (Control.Selective.Trans.Except.ExceptT e f)
+instance Data.Traversable.Traversable f => Data.Traversable.Traversable (Control.Selective.Trans.Except.ExceptT e f)
+instance Data.Foldable.Foldable f => Data.Foldable.Foldable (Control.Selective.Trans.Except.ExceptT e f)
+instance GHC.Base.Functor f => GHC.Base.Functor (Control.Selective.Trans.Except.ExceptT e f)
 
 
 -- | This is a library for <i>selective applicative functors</i>, or just
@@ -722,3 +745,52 @@ foldSelect :: Monoid m => (forall x. f x -> m) -> Select f a -> m
 instance GHC.Base.Functor (Control.Selective.Rigid.Freer.Select f)
 instance GHC.Base.Applicative (Control.Selective.Rigid.Freer.Select f)
 instance Control.Selective.Selective (Control.Selective.Rigid.Freer.Select f)
+
+
+-- | This is a library for <i>selective applicative functors</i>, or just
+--   <i>selective functors</i> for short, an abstraction between
+--   applicative functors and monads, introduced in this paper:
+--   <a>https://www.staff.ncl.ac.uk/andrey.mokhov/selective-functors.pdf</a>.
+--   
+--   This module defines <i>free rigid selective functors</i>. Rigid
+--   selective functors are those that satisfy the property <tt>&lt;*&gt; =
+--   apS</tt>.
+--   
+--   Intuitively, a selective functor <tt>f</tt> is "rigid" if any
+--   expression <tt>f a</tt> is equivalent to a list of effects chained
+--   with <tt>select</tt> operators (the normal form given by the free
+--   construction). In contrast, "non-rigid" selective functors can have
+--   non-linear, tree-like shapes, because <tt><a>*</a></tt> nodes can't be
+--   straightened using the <tt>&lt;*&gt; = apS</tt> equation.
+module Control.Selective.Rigid.Free
+
+-- | Free rigid selective functors.
+data Select f a
+[Pure] :: a -> Select f a
+[Select] :: Select f (Either a b) -> f (a -> b) -> Select f b
+
+-- | Lift a functor into a free selective computation.
+liftSelect :: Functor f => f a -> Select f a
+
+-- | Extract the resulting value if there are no necessary effects.
+getPure :: Select f a -> Maybe a
+
+-- | Collect all possible effects in the order they appear in a free
+--   selective computation.
+getEffects :: Functor f => Select f a -> [f ()]
+
+-- | Extract the necessary effect from a free selective computation. Note:
+--   there can be at most one effect that is statically guaranteed to be
+--   necessary.
+getNecessaryEffect :: Functor f => Select f a -> Maybe (f ())
+
+-- | Given a natural transformation from <tt>f</tt> to <tt>g</tt>, this
+--   gives a canonical natural transformation from <tt>Select f</tt> to
+--   <tt>g</tt>.
+runSelect :: Selective g => (forall x. f x -> g x) -> Select f a -> g a
+
+-- | Concatenate all effects of a free selective computation.
+foldSelect :: Monoid m => (forall x. f x -> m) -> Select f a -> m
+instance GHC.Base.Functor f => GHC.Base.Functor (Control.Selective.Rigid.Free.Select f)
+instance GHC.Base.Functor f => GHC.Base.Applicative (Control.Selective.Rigid.Free.Select f)
+instance GHC.Base.Functor f => Control.Selective.Selective (Control.Selective.Rigid.Free.Select f)

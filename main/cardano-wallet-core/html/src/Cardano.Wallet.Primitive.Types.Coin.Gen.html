@@ -45,8 +45,8 @@
 forall a. (Int -&gt; Gen a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">sized</span></a></span><span> </span><span class="annot"><span class="annottext">((Int -&gt; Gen Coin) -&gt; Gen Coin) -&gt; (Int -&gt; Gen Coin) -&gt; Gen Coin
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682432584"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432584"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682432868"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432868"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Coin) -&gt; (Int -&gt; Natural) -&gt; Int -&gt; Coin
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Natural
@@ -57,17 +57,17 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. Random a =&gt; (a, a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">choose</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432584"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682432868"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-41"></span><span>
 </span><span id="line-42"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoin"><span class="hs-identifier hs-type">shrinkCoin</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-43"></span><span id="shrinkCoin"><span class="annot"><span class="annottext">shrinkCoin :: Coin -&gt; [Coin]
-</span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoin"><span class="hs-identifier hs-var hs-var">shrinkCoin</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span id="local-6989586621682432580"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682432580"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
+</span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoin"><span class="hs-identifier hs-var hs-var">shrinkCoin</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span id="local-6989586621682432864"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682432864"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Coin) -&gt; [Natural] -&gt; [Coin]
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; [Natural]
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">shrinkNatural</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682432580"><span class="hs-identifier hs-var">c</span></a></span><span>
+</span><a href="#local-6989586621682432864"><span class="hs-identifier hs-var">c</span></a></span><span>
 </span><span id="line-44"></span><span>
 </span><span id="line-45"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-46"></span><span class="hs-comment">-- Coins chosen according to the size parameter, but strictly positive.</span><span>
@@ -79,8 +79,8 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. (Int -&gt; Gen a) -&gt; Gen a
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-var">sized</span></a></span><span> </span><span class="annot"><span class="annottext">((Int -&gt; Gen Coin) -&gt; Gen Coin) -&gt; (Int -&gt; Gen Coin) -&gt; Gen Coin
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682432579"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432579"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682432863"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432863"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Coin) -&gt; (Int -&gt; Natural) -&gt; Int -&gt; Coin
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Natural
@@ -94,12 +94,12 @@ forall a. Random a =&gt; (a, a) -&gt; Gen a
 forall a. Ord a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">max</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432579"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682432863"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-51"></span><span>
 </span><span id="line-52"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoinPositive"><span class="hs-identifier hs-type">shrinkCoinPositive</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-53"></span><span id="shrinkCoinPositive"><span class="annot"><span class="annottext">shrinkCoinPositive :: Coin -&gt; [Coin]
-</span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoinPositive"><span class="hs-identifier hs-var hs-var">shrinkCoinPositive</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span id="local-6989586621682432577"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682432577"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
+</span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#shrinkCoinPositive"><span class="hs-identifier hs-var hs-var">shrinkCoinPositive</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span id="local-6989586621682432861"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682432861"><span class="hs-identifier hs-var">c</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Coin) -&gt; [Natural] -&gt; [Coin]
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Bool) -&gt; [Natural] -&gt; [Natural]
@@ -109,7 +109,7 @@ forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
 </span><span class="hs-number">0</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Natural -&gt; [Natural]
 </span><a href="../../../../cardano-wallet-test-utils/html/src"><span class="hs-identifier hs-var">shrinkNatural</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682432577"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682432861"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-54"></span><span>
 </span><span id="line-55"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-56"></span><span class="hs-comment">-- Partitioning coins</span><span>
@@ -124,20 +124,20 @@ forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><span id="line-65"></span><span class="hs-comment">--</span><span>
 </span><span id="line-66"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#genCoinPartition"><span class="hs-identifier hs-type">genCoinPartition</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-67"></span><span id="genCoinPartition"><span class="annot"><span class="annottext">genCoinPartition :: Coin -&gt; Int -&gt; Gen (NonEmpty Coin)
-</span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#genCoinPartition"><span class="hs-identifier hs-var hs-var">genCoinPartition</span></a></span></span><span> </span><span id="local-6989586621682432575"><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432575"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432574"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432574"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#genCoinPartition"><span class="hs-identifier hs-var hs-var">genCoinPartition</span></a></span></span><span> </span><span id="local-6989586621682432859"><span class="annot"><span class="annottext">Coin
+</span><a href="#local-6989586621682432859"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span id="local-6989586621682432858"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621682432858"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-68"></span><span>    </span><span class="annot"><span class="annottext">Coin -&gt; NonEmpty Coin -&gt; NonEmpty Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#partitionDefault"><span class="hs-identifier hs-var">Coin.partitionDefault</span></a></span><span> </span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432575"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">(NonEmpty Coin -&gt; NonEmpty Coin)
+</span><a href="#local-6989586621682432859"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">(NonEmpty Coin -&gt; NonEmpty Coin)
 -&gt; Gen (NonEmpty Coin) -&gt; Gen (NonEmpty Coin)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen (NonEmpty Coin)
-</span><a href="#local-6989586621682432572"><span class="hs-identifier hs-var">genWeights</span></a></span><span>
+</span><a href="#local-6989586621682432856"><span class="hs-identifier hs-var">genWeights</span></a></span><span>
 </span><span id="line-69"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-70"></span><span>    </span><span class="annot"><a href="#local-6989586621682432572"><span class="hs-identifier hs-type">genWeights</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-71"></span><span>    </span><span id="local-6989586621682432572"><span class="annot"><span class="annottext">genWeights :: Gen (NonEmpty Coin)
-</span><a href="#local-6989586621682432572"><span class="hs-identifier hs-var hs-var">genWeights</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Coin] -&gt; NonEmpty Coin
+</span><span id="line-70"></span><span>    </span><span class="annot"><a href="#local-6989586621682432856"><span class="hs-identifier hs-type">genWeights</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-type">Coin</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-71"></span><span>    </span><span id="local-6989586621682432856"><span class="annot"><span class="annottext">genWeights :: Gen (NonEmpty Coin)
+</span><a href="#local-6989586621682432856"><span class="hs-identifier hs-var hs-var">genWeights</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Coin] -&gt; NonEmpty Coin
 forall a. [a] -&gt; NonEmpty a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">NE.fromList</span></a></span><span> </span><span class="annot"><span class="annottext">([Coin] -&gt; NonEmpty Coin) -&gt; Gen [Coin] -&gt; Gen (NonEmpty Coin)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -147,7 +147,7 @@ forall (m :: * -&gt; *) a. Applicative m =&gt; Int -&gt; m a -&gt; m [a]
 forall a. Ord a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">max</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621682432574"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682432858"><span class="hs-identifier hs-var">i</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-72"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(Coin, Coin) -&gt; Gen Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.Gen.html#chooseCoin"><span class="hs-identifier hs-var">chooseCoin</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
@@ -156,5 +156,5 @@ forall a. Ord a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">max</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Natural -&gt; Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Coin.html#Coin"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621682432575"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682432859"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-73"></span></pre></body></html>

@@ -44,22 +44,22 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-35"></span><span>  </span><span id="local-6989586621679485683"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485683"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
+</span><span id="line-35"></span><span>  </span><span id="local-6989586621679485916"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485916"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Lovelace
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genLovelace"><span class="hs-identifier hs-var">genLovelace</span></a></span><span>
-</span><span id="line-36"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679485682"><span class="annot"><span class="annottext">newRange :: Word64
-</span><a href="#local-6989586621679485682"><span class="hs-identifier hs-var hs-var">newRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64
+</span><span id="line-36"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679485915"><span class="annot"><span class="annottext">newRange :: Word64
+</span><a href="#local-6989586621679485915"><span class="hs-identifier hs-var hs-var">newRange</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">maxLovelaceVal</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Word64
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Word64
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">unsafeGetLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485683"><span class="hs-identifier hs-var">a</span></a></span><span>
-</span><span id="line-37"></span><span>  </span><span id="local-6989586621679485681"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485681"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
+</span><a href="#local-6989586621679485916"><span class="hs-identifier hs-var">a</span></a></span><span>
+</span><span id="line-37"></span><span>  </span><span id="local-6989586621679485914"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485914"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -68,7 +68,7 @@ Gen a -&gt; PropertyT m a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Gen Lovelace
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genCustomLovelace"><span class="hs-identifier hs-var">genCustomLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679485682"><span class="hs-identifier hs-var">newRange</span></a></span><span>
+</span><a href="#local-6989586621679485915"><span class="hs-identifier hs-var">newRange</span></a></span><span>
 </span><span id="line-38"></span><span>  </span><span class="annot"><span class="annottext">Either LovelaceError Lovelace -&gt; PropertyT IO ()
 forall a (m :: * -&gt; *) b.
 (Buildable a, HasCallStack, MonadTest m) =&gt;
@@ -78,8 +78,8 @@ Either a b -&gt; m ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Lovelace -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">addLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485683"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485681"><span class="hs-identifier hs-var">b</span></a></span><span>
+</span><a href="#local-6989586621679485916"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485914"><span class="hs-identifier hs-var">b</span></a></span><span>
 </span><span id="line-39"></span><span>
 </span><span id="line-40"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Lovelace.html#prop_addLovelaceOverflow"><span class="hs-identifier hs-type">prop_addLovelaceOverflow</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
 </span><span id="line-41"></span><span id="prop_addLovelaceOverflow"><span class="annot"><span class="annottext">prop_addLovelaceOverflow :: Property
@@ -117,8 +117,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-49"></span><span>  </span><span id="local-6989586621679485674"><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679485674"><span class="hs-identifier hs-var">testInt</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-49"></span><span>  </span><span id="local-6989586621679485907"><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679485907"><span class="hs-identifier hs-var">testInt</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-50"></span><span>    </span><span class="annot"><span class="annottext">Gen Integer -&gt; PropertyT IO Integer
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -144,7 +144,7 @@ Either a b -&gt; m ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">integerToLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
-</span><a href="#local-6989586621679485674"><span class="hs-identifier hs-var">testInt</span></a></span><span>
+</span><a href="#local-6989586621679485907"><span class="hs-identifier hs-var">testInt</span></a></span><span>
 </span><span id="line-53"></span><span>
 </span><span id="line-54"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Lovelace.html#prop_integerToLovelaceTooLarge"><span class="hs-identifier hs-type">prop_integerToLovelaceTooLarge</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
 </span><span id="line-55"></span><span id="prop_integerToLovelaceTooLarge"><span class="annot"><span class="annottext">prop_integerToLovelaceTooLarge :: Property
@@ -220,8 +220,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-72"></span><span>  </span><span id="local-6989586621679485664"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679485664"><span class="hs-identifier hs-var">testWrd</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Word64 -&gt; PropertyT IO Word64
+</span><span id="line-72"></span><span>  </span><span id="local-6989586621679485897"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679485897"><span class="hs-identifier hs-var">testWrd</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Word64 -&gt; PropertyT IO Word64
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -243,7 +243,7 @@ Either a b -&gt; m ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679485664"><span class="hs-identifier hs-var">testWrd</span></a></span><span>
+</span><a href="#local-6989586621679485897"><span class="hs-identifier hs-var">testWrd</span></a></span><span>
 </span><span id="line-74"></span><span>
 </span><span id="line-75"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Lovelace.html#prop_mkLovelaceTooLarge"><span class="hs-identifier hs-type">prop_mkLovelaceTooLarge</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
 </span><span id="line-76"></span><span id="prop_mkLovelaceTooLarge"><span class="annot"><span class="annottext">prop_mkLovelaceTooLarge :: Property
@@ -303,15 +303,15 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; TSProperty) -&gt; PropertyT IO () -&gt; TSProperty
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-89"></span><span>  </span><span id="local-6989586621679485659"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485659"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
+</span><span id="line-89"></span><span>  </span><span id="local-6989586621679485892"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485892"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">forAll</span></a></span><span> </span><span class="annot"><span class="annottext">Gen Lovelace
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genLovelace"><span class="hs-identifier hs-var">genLovelace</span></a></span><span>
-</span><span id="line-90"></span><span>  </span><span id="local-6989586621679485658"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485658"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
+</span><span id="line-90"></span><span>  </span><span id="local-6989586621679485891"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485891"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -321,7 +321,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Gen Lovelace
 </span><a href="Test.Cardano.Chain.Common.Gen.html#genCustomLovelace"><span class="hs-identifier hs-var">genCustomLovelace</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Lovelace -&gt; Word64
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">unsafeGetLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485659"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679485892"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-91"></span><span>  </span><span class="annot"><span class="annottext">Either LovelaceError Lovelace -&gt; PropertyT IO ()
 forall a (m :: * -&gt; *) b.
 (Buildable a, HasCallStack, MonadTest m) =&gt;
@@ -331,8 +331,8 @@ Either a b -&gt; m ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Lovelace -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">subLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485659"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485658"><span class="hs-identifier hs-var">b</span></a></span><span>
+</span><a href="#local-6989586621679485892"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485891"><span class="hs-identifier hs-var">b</span></a></span><span>
 </span><span id="line-92"></span><span>
 </span><span id="line-93"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Lovelace.html#ts_prop_subLovelaceUnderflow"><span class="hs-identifier hs-type">ts_prop_subLovelaceUnderflow</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
 </span><span id="line-94"></span><span id="ts_prop_subLovelaceUnderflow"><span class="annot"><span class="annottext">ts_prop_subLovelaceUnderflow :: TSProperty
@@ -353,8 +353,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-98"></span><span>      </span><span class="hs-comment">-- (maxLovelaveVal - 1) to avoid an overflow error in `addLovelace`</span><span>
 </span><span id="line-99"></span><span>      </span><span class="hs-comment">-- in case expression</span><span>
-</span><span id="line-100"></span><span>      </span><span id="local-6989586621679485656"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485656"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
+</span><span id="line-100"></span><span>      </span><span id="local-6989586621679485889"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485889"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen Lovelace -&gt; PropertyT IO Lovelace
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -369,11 +369,11 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>
 </span><span id="line-101"></span><span>      </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Lovelace -&gt; Lovelace -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">addLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485656"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(KnownNat 1, 1 &lt;= 45000000000000000) =&gt; Lovelace
+</span><a href="#local-6989586621679485889"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">(KnownNat 1, 1 &lt;= 45000000000000000) =&gt; Lovelace
 forall (n :: Nat). (KnownNat n, n &lt;= 45000000000000000) =&gt; Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">mkKnownLovelace</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><span class="hs-number">1</span></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-102"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679485655"><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485655"><span class="hs-identifier hs-var">added</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><span id="line-102"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span id="local-6989586621679485888"><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485888"><span class="hs-identifier hs-var">added</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-103"></span><span>          </span><span class="annot"><span class="annottext">Constr -&gt; Either LovelaceError Lovelace -&gt; PropertyT IO ()
 forall b a (m :: * -&gt; *).
 (Buildable b, Data a, HasCallStack, MonadTest m) =&gt;
@@ -381,10 +381,10 @@ Constr -&gt; Either a b -&gt; m ()
 </span><a href="../../../../cardano-prelude-test/html/src"><span class="hs-identifier hs-var">assertIsLeftConstr</span></a></span><span> </span><span class="annot"><span class="annottext">Constr
 </span><a href="Test.Cardano.Chain.Common.Lovelace.html#dummyLovelaceUnderflow"><span class="hs-identifier hs-var">dummyLovelaceUnderflow</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Lovelace -&gt; Lovelace -&gt; Either LovelaceError Lovelace
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">subLovelace</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485656"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
-</span><a href="#local-6989586621679485655"><span class="hs-identifier hs-var">added</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-104"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679485653"><span class="annot"><span class="annottext">LovelaceError
-</span><a href="#local-6989586621679485653"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="#local-6989586621679485889"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">Lovelace
+</span><a href="#local-6989586621679485888"><span class="hs-identifier hs-var">added</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-104"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span id="local-6989586621679485886"><span class="annot"><span class="annottext">LovelaceError
+</span><a href="#local-6989586621679485886"><span class="hs-identifier hs-var">err</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-105"></span><span>          </span><span class="annot"><span class="annottext">Text -&gt; PropertyT IO ()
 forall a. HasCallStack =&gt; Text -&gt; a
 </span><a href="../../../../protolude/html/src"><span class="hs-identifier hs-var">panic</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; PropertyT IO ()) -&gt; Text -&gt; PropertyT IO ()
@@ -404,7 +404,7 @@ cat b c -&gt; cat a b -&gt; cat a c
 forall a r. Buildable a =&gt; Format r (a -&gt; r)
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-108"></span><span>              </span><span class="annot"><span class="annottext">LovelaceError
-</span><a href="#local-6989586621679485653"><span class="hs-identifier hs-var">err</span></a></span><span>
+</span><a href="#local-6989586621679485886"><span class="hs-identifier hs-var">err</span></a></span><span>
 </span><span id="line-109"></span><span>
 </span><span id="line-110"></span><span class="annot"><a href="Test.Cardano.Chain.Common.Lovelace.html#tests"><span class="hs-identifier hs-type">tests</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSGroup"><span class="hs-identifier hs-type">TSGroup</span></a></span><span>
 </span><span id="line-111"></span><span id="tests"><span class="annot"><span class="annottext">tests :: TSGroup

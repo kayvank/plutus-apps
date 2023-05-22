@@ -275,17 +275,17 @@ forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inBraces"><span class="hs-identifier hs-var">inBraces</span></a></span><span> </span><span class="annot"><span class="annottext">(Parser PTerm -&gt; Parser PTerm) -&gt; Parser PTerm -&gt; Parser PTerm
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-46"></span><span>    </span><span id="local-6989586621680961492"><span class="annot"><span class="annottext">SourcePos
-</span><a href="#local-6989586621680961492"><span class="hs-identifier hs-var">pos</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ParsecT ParseError Text (StateT ParserState Quote) SourcePos
+</span><span id="line-46"></span><span>    </span><span id="local-6989586621680961659"><span class="annot"><span class="annottext">SourcePos
+</span><a href="#local-6989586621680961659"><span class="hs-identifier hs-var">pos</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ParsecT ParseError Text (StateT ParserState Quote) SourcePos
 forall s e (m :: * -&gt; *).
 (TraversableStream s, MonadParsec e s m) =&gt;
 m SourcePos
 </span><a href="../../../../megaparsec/html/src"><span class="hs-identifier hs-var">getSourcePos</span></a></span><span>
-</span><span id="line-47"></span><span>    </span><span id="local-6989586621680961491"><span class="annot"><span class="annottext">PTerm
-</span><a href="#local-6989586621680961491"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser PTerm
+</span><span id="line-47"></span><span>    </span><span id="local-6989586621680961658"><span class="annot"><span class="annottext">PTerm
+</span><a href="#local-6989586621680961658"><span class="hs-identifier hs-var">tm</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser PTerm
 </span><a href="PlutusCore.Parser.html#term"><span class="hs-identifier hs-var">term</span></a></span><span>
-</span><span id="line-48"></span><span>    </span><span id="local-6989586621680961490"><span class="annot"><span class="annottext">[Type TyName DefaultUni SourcePos]
-</span><a href="#local-6989586621680961490"><span class="hs-identifier hs-var">tys</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ParsecT
+</span><span id="line-48"></span><span>    </span><span id="local-6989586621680961657"><span class="annot"><span class="annottext">[Type TyName DefaultUni SourcePos]
+</span><a href="#local-6989586621680961657"><span class="hs-identifier hs-var">tys</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ParsecT
   ParseError
   Text
   (StateT ParserState Quote)
@@ -311,9 +311,9 @@ forall (term :: * -&gt; *) tyname name (uni :: * -&gt; *) fun ann.
 TermLike term tyname name uni fun =&gt;
 ann -&gt; term ann -&gt; [Type tyname uni ann] -&gt; term ann
 </span><a href="PlutusCore.MkPlc.html#mkIterInst"><span class="hs-identifier hs-var">mkIterInst</span></a></span><span> </span><span class="annot"><span class="annottext">SourcePos
-</span><a href="#local-6989586621680961492"><span class="hs-identifier hs-var">pos</span></a></span><span> </span><span class="annot"><span class="annottext">PTerm
-</span><a href="#local-6989586621680961491"><span class="hs-identifier hs-var">tm</span></a></span><span> </span><span class="annot"><span class="annottext">[Type TyName DefaultUni SourcePos]
-</span><a href="#local-6989586621680961490"><span class="hs-identifier hs-var">tys</span></a></span><span>
+</span><a href="#local-6989586621680961659"><span class="hs-identifier hs-var">pos</span></a></span><span> </span><span class="annot"><span class="annottext">PTerm
+</span><a href="#local-6989586621680961658"><span class="hs-identifier hs-var">tm</span></a></span><span> </span><span class="annot"><span class="annottext">[Type TyName DefaultUni SourcePos]
+</span><a href="#local-6989586621680961657"><span class="hs-identifier hs-var">tys</span></a></span><span>
 </span><span id="line-50"></span><span>
 </span><span id="line-51"></span><span class="annot"><a href="PlutusCore.Parser.html#unwrapTerm"><span class="hs-identifier hs-type">unwrapTerm</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="PlutusCore.Parser.ParserCommon.html#Parser"><span class="hs-identifier hs-type">Parser</span></a></span><span> </span><span class="annot"><a href="PlutusCore.Parser.html#PTerm"><span class="hs-identifier hs-type">PTerm</span></a></span><span>
 </span><span id="line-52"></span><span id="unwrapTerm"><span class="annot"><span class="annottext">unwrapTerm :: Parser PTerm
@@ -521,8 +521,8 @@ Parser a
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; m b -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-85"></span><span>    </span><span id="local-6989586621680961480"><span class="annot"><span class="annottext">Program TyName Name DefaultUni DefaultFun SourcePos
-</span><a href="#local-6989586621680961480"><span class="hs-identifier hs-var">prog</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
+</span><span id="line-85"></span><span>    </span><span id="local-6989586621680961647"><span class="annot"><span class="annottext">Program TyName Name DefaultUni DefaultFun SourcePos
+</span><a href="#local-6989586621680961647"><span class="hs-identifier hs-var">prog</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall a. Parser a -&gt; Parser a
 </span><a href="PlutusCore.Parser.ParserCommon.html#inParens"><span class="hs-identifier hs-var">inParens</span></a></span><span> </span><span class="annot"><span class="annottext">(Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
@@ -590,7 +590,7 @@ forall e s (m :: * -&gt; *). MonadParsec e s m =&gt; m (Token s)
 -&gt; Parser (Program TyName Name DefaultUni DefaultFun SourcePos)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">Program TyName Name DefaultUni DefaultFun SourcePos
-</span><a href="#local-6989586621680961480"><span class="hs-identifier hs-var">prog</span></a></span><span>
+</span><a href="#local-6989586621680961647"><span class="hs-identifier hs-var">prog</span></a></span><span>
 </span><span id="line-88"></span><span>
 </span><span id="line-89"></span><span class="hs-comment">-- | Parse a PLC term. The resulting program will have fresh names. The underlying monad must be capable</span><span>
 </span><span id="line-90"></span><span class="hs-comment">-- of handling any parse errors.</span><span>

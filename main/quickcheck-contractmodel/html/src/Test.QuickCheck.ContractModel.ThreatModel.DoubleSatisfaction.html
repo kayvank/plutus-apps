@@ -31,50 +31,50 @@ forall lang. [SimpleScript lang] -&gt; SimpleScript lang
 </span><span id="line-28"></span><span id="doubleSatisfaction"><span class="annot"><span class="annottext">doubleSatisfaction :: ThreatModel ()
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.DoubleSatisfaction.html#doubleSatisfaction"><span class="hs-identifier hs-var hs-var">doubleSatisfaction</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-29"></span><span>
-</span><span id="line-30"></span><span>  </span><span id="local-6989586621679455095"><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455095"><span class="hs-identifier hs-var">signer</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Hash PaymentKey -&gt; AddressAny
+</span><span id="line-30"></span><span>  </span><span id="local-6989586621679484606"><span class="annot"><span class="annottext">AddressAny
+</span><a href="#local-6989586621679484606"><span class="hs-identifier hs-var">signer</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Hash PaymentKey -&gt; AddressAny
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.Cardano.Api.html#keyAddressAny"><span class="hs-identifier hs-var">keyAddressAny</span></a></span><span> </span><span class="annot"><span class="annottext">(Hash PaymentKey -&gt; AddressAny)
 -&gt; ThreatModel (Hash PaymentKey) -&gt; ThreatModel AddressAny
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ThreatModel (Hash PaymentKey)
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.html#anySigner"><span class="hs-identifier hs-var">anySigner</span></a></span><span>
 </span><span id="line-31"></span><span>
-</span><span id="line-32"></span><span>  </span><span id="local-6989586621679455091"><span class="annot"><span class="annottext">[Output]
-</span><a href="#local-6989586621679455091"><span class="hs-identifier hs-var">outputs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ThreatModel [Output]
+</span><span id="line-32"></span><span>  </span><span id="local-6989586621679484602"><span class="annot"><span class="annottext">[Output]
+</span><a href="#local-6989586621679484602"><span class="hs-identifier hs-var">outputs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">ThreatModel [Output]
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.html#getTxOutputs"><span class="hs-identifier hs-var">getTxOutputs</span></a></span><span>
-</span><span id="line-33"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679455089"><span class="annot"><span class="annottext">validTarget :: AddressAny -&gt; Bool
-</span><a href="#local-6989586621679455089"><span class="hs-identifier hs-var hs-var">validTarget</span></a></span></span><span> </span><span id="local-6989586621679455088"><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455088"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455095"><span class="hs-identifier hs-var">signer</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; AddressAny -&gt; Bool
+</span><span id="line-33"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679484600"><span class="annot"><span class="annottext">validTarget :: AddressAny -&gt; Bool
+</span><a href="#local-6989586621679484600"><span class="hs-identifier hs-var hs-var">validTarget</span></a></span></span><span> </span><span id="local-6989586621679484599"><span class="annot"><span class="annottext">AddressAny
+</span><a href="#local-6989586621679484599"><span class="hs-identifier hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">AddressAny
+</span><a href="#local-6989586621679484606"><span class="hs-identifier hs-var">signer</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; AddressAny -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">/=</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455088"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679484599"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; Bool
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.Cardano.Api.html#isKeyAddressAny"><span class="hs-identifier hs-var">isKeyAddressAny</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455088"><span class="hs-identifier hs-var">t</span></a></span><span>
-</span><span id="line-34"></span><span>  </span><span id="local-6989586621679455084"><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[Output] -&gt; ThreatModel Output
+</span><a href="#local-6989586621679484599"><span class="hs-identifier hs-var">t</span></a></span><span>
+</span><span id="line-34"></span><span>  </span><span id="local-6989586621679484595"><span class="annot"><span class="annottext">Output
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[Output] -&gt; ThreatModel Output
 forall a. Show a =&gt; [a] -&gt; ThreatModel a
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.html#pickAny"><span class="hs-identifier hs-var">pickAny</span></a></span><span> </span><span class="annot"><span class="annottext">([Output] -&gt; ThreatModel Output) -&gt; [Output] -&gt; ThreatModel Output
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">(Output -&gt; Bool) -&gt; [Output] -&gt; [Output]
 forall a. (a -&gt; Bool) -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">filter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">AddressAny -&gt; Bool
-</span><a href="#local-6989586621679455089"><span class="hs-identifier hs-var">validTarget</span></a></span><span> </span><span class="annot"><span class="annottext">(AddressAny -&gt; Bool) -&gt; (Output -&gt; AddressAny) -&gt; Output -&gt; Bool
+</span><a href="#local-6989586621679484600"><span class="hs-identifier hs-var">validTarget</span></a></span><span> </span><span class="annot"><span class="annottext">(AddressAny -&gt; Bool) -&gt; (Output -&gt; AddressAny) -&gt; Output -&gt; Bool
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Output -&gt; AddressAny
 forall t. IsInputOrOutput t =&gt; t -&gt; AddressAny
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addressOf"><span class="hs-identifier hs-var">addressOf</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[Output]
-</span><a href="#local-6989586621679455091"><span class="hs-identifier hs-var">outputs</span></a></span><span>
+</span><a href="#local-6989586621679484602"><span class="hs-identifier hs-var">outputs</span></a></span><span>
 </span><span id="line-35"></span><span>
-</span><span id="line-36"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679455080"><span class="annot"><span class="annottext">ada :: Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var hs-var">ada</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value
+</span><span id="line-36"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679484591"><span class="annot"><span class="annottext">ada :: Value
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var hs-var">ada</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.Cardano.Api.html#projectAda"><span class="hs-identifier hs-var">projectAda</span></a></span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Value) -&gt; Value -&gt; Value
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Output -&gt; Value
 forall t. IsInputOrOutput t =&gt; t -&gt; Value
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#valueOf"><span class="hs-identifier hs-var">valueOf</span></a></span><span> </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span>
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span>
 </span><span id="line-37"></span><span>
 </span><span id="line-38"></span><span>  </span><span class="annot"><span class="annottext">String -&gt; ThreatModel ()
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.html#counterexampleTM"><span class="hs-identifier hs-var">counterexampleTM</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; ThreatModel ()) -&gt; String -&gt; ThreatModel ()
@@ -92,7 +92,7 @@ forall a. Show a =&gt; a -&gt; String
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; Doc
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.Pretty.html#prettyAddress"><span class="hs-identifier hs-var">prettyAddress</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455095"><span class="hs-identifier hs-var">signer</span></a></span><span>
+</span><a href="#local-6989586621679484606"><span class="hs-identifier hs-var">signer</span></a></span><span>
 </span><span id="line-42"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;and contains an output to&quot;</span></span><span>
 </span><span id="line-43"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Doc -&gt; String
@@ -103,7 +103,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Output -&gt; AddressAny
 forall t. IsInputOrOutput t =&gt; t -&gt; AddressAny
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addressOf"><span class="hs-identifier hs-var">addressOf</span></a></span><span> </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">++</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;.&quot;</span></span><span>
@@ -134,20 +134,20 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Output -&gt; Value -&gt; TxModifier
 forall t. IsInputOrOutput t =&gt; t -&gt; Value -&gt; TxModifier
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#changeValueOf"><span class="hs-identifier hs-var">changeValueOf</span></a></span><span> </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Output -&gt; Value
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Output -&gt; Value
 forall t. IsInputOrOutput t =&gt; t -&gt; Value
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#valueOf"><span class="hs-identifier hs-var">valueOf</span></a></span><span> </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value -&gt; Value
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value -&gt; Value
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value
 </span><a href="../../../../cardano-api/html/src"><span class="hs-identifier hs-var">negateValue</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var">ada</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var">ada</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-53"></span><span>                                        </span><span class="annot"><span class="annottext">TxModifier -&gt; TxModifier -&gt; TxModifier
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; Value -&gt; Datum -&gt; TxModifier
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addOutput"><span class="hs-identifier hs-var">addOutput</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455095"><span class="hs-identifier hs-var">signer</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var">ada</span></a></span><span> </span><span class="annot"><span class="annottext">Datum
+</span><a href="#local-6989586621679484606"><span class="hs-identifier hs-var">signer</span></a></span><span> </span><span class="annot"><span class="annottext">Value
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var">ada</span></a></span><span> </span><span class="annot"><span class="annottext">Datum
 forall ctx era. TxOutDatum ctx era
 </span><a href="../../../../cardano-api/html/src"><span class="hs-identifier hs-var">TxOutDatumNone</span></a></span><span>
 </span><span id="line-54"></span><span>
@@ -163,8 +163,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-58"></span><span>              </span><span class="hs-special">]</span><span>
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span>  </span><span class="hs-comment">-- add safe script input with protected output, redirect original output to signer</span><span>
-</span><span id="line-61"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679455067"><span class="annot"><span class="annottext">uniqueDatum :: Datum
-</span><a href="#local-6989586621679455067"><span class="hs-identifier hs-var hs-var">uniqueDatum</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ScriptData -&gt; Datum
+</span><span id="line-61"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679484578"><span class="annot"><span class="annottext">uniqueDatum :: Datum
+</span><a href="#local-6989586621679484578"><span class="hs-identifier hs-var hs-var">uniqueDatum</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ScriptData -&gt; Datum
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.Cardano.Api.html#txOutDatum"><span class="hs-identifier hs-var">txOutDatum</span></a></span><span> </span><span class="annot"><span class="annottext">(ScriptData -&gt; Datum) -&gt; ScriptData -&gt; Datum
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">BuiltinByteString -&gt; ScriptData
@@ -172,11 +172,11 @@ forall a. ToData a =&gt; a -&gt; ScriptData
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.Cardano.Api.html#toScriptData"><span class="hs-identifier hs-var">toScriptData</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">BuiltinByteString
 </span><span class="hs-string">&quot;SuchSecure&quot;</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../plutus-tx/html/src"><span class="hs-identifier hs-type">BuiltinByteString</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-62"></span><span>
-</span><span id="line-63"></span><span>      </span><span id="local-6989586621679455064"><span class="annot"><span class="annottext">victimTarget :: AddressAny
-</span><a href="#local-6989586621679455064"><span class="hs-identifier hs-var hs-var">victimTarget</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Output -&gt; AddressAny
+</span><span id="line-63"></span><span>      </span><span id="local-6989586621679484575"><span class="annot"><span class="annottext">victimTarget :: AddressAny
+</span><a href="#local-6989586621679484575"><span class="hs-identifier hs-var hs-var">victimTarget</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Output -&gt; AddressAny
 forall t. IsInputOrOutput t =&gt; t -&gt; AddressAny
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addressOf"><span class="hs-identifier hs-var">addressOf</span></a></span><span> </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span>
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span>
 </span><span id="line-64"></span><span>
 </span><span id="line-65"></span><span>  </span><span class="annot"><span class="annottext">TxModifier -&gt; ThreatModel ()
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.html#shouldNotValidate"><span class="hs-identifier hs-var">shouldNotValidate</span></a></span><span> </span><span class="annot"><span class="annottext">(TxModifier -&gt; ThreatModel ()) -&gt; TxModifier -&gt; ThreatModel ()
@@ -184,33 +184,33 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SimpleScript SimpleScriptV2 -&gt; Value -&gt; TxModifier
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addSimpleScriptInput"><span class="hs-identifier hs-var">addSimpleScriptInput</span></a></span><span> </span><span class="annot"><span class="annottext">SimpleScript SimpleScriptV2
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.DoubleSatisfaction.html#safeScript"><span class="hs-identifier hs-var">safeScript</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var">ada</span></a></span><span>
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var">ada</span></a></span><span>
 </span><span id="line-66"></span><span>                   </span><span class="annot"><span class="annottext">TxModifier -&gt; TxModifier -&gt; TxModifier
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; Value -&gt; Datum -&gt; TxModifier
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addOutput"><span class="hs-identifier hs-var">addOutput</span></a></span><span>      </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455064"><span class="hs-identifier hs-var">victimTarget</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var">ada</span></a></span><span> </span><span class="annot"><span class="annottext">Datum
-</span><a href="#local-6989586621679455067"><span class="hs-identifier hs-var">uniqueDatum</span></a></span><span>
+</span><a href="#local-6989586621679484575"><span class="hs-identifier hs-var">victimTarget</span></a></span><span> </span><span class="annot"><span class="annottext">Value
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var">ada</span></a></span><span> </span><span class="annot"><span class="annottext">Datum
+</span><a href="#local-6989586621679484578"><span class="hs-identifier hs-var">uniqueDatum</span></a></span><span>
 </span><span id="line-67"></span><span>                   </span><span class="annot"><span class="annottext">TxModifier -&gt; TxModifier -&gt; TxModifier
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Output -&gt; Value -&gt; TxModifier
 forall t. IsInputOrOutput t =&gt; t -&gt; Value -&gt; TxModifier
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#changeValueOf"><span class="hs-identifier hs-var">changeValueOf</span></a></span><span>  </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Output -&gt; Value
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Output -&gt; Value
 forall t. IsInputOrOutput t =&gt; t -&gt; Value
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#valueOf"><span class="hs-identifier hs-var">valueOf</span></a></span><span> </span><span class="annot"><span class="annottext">Output
-</span><a href="#local-6989586621679455084"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value -&gt; Value
+</span><a href="#local-6989586621679484595"><span class="hs-identifier hs-var">output</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value -&gt; Value
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Value
 </span><a href="../../../../cardano-api/html/src"><span class="hs-identifier hs-var">negateValue</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var">ada</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var">ada</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-68"></span><span>                   </span><span class="annot"><span class="annottext">TxModifier -&gt; TxModifier -&gt; TxModifier
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">AddressAny -&gt; Value -&gt; Datum -&gt; TxModifier
 </span><a href="Test.QuickCheck.ContractModel.ThreatModel.TxModifier.html#addOutput"><span class="hs-identifier hs-var">addOutput</span></a></span><span>      </span><span class="annot"><span class="annottext">AddressAny
-</span><a href="#local-6989586621679455095"><span class="hs-identifier hs-var">signer</span></a></span><span> </span><span class="annot"><span class="annottext">Value
-</span><a href="#local-6989586621679455080"><span class="hs-identifier hs-var">ada</span></a></span><span> </span><span class="annot"><span class="annottext">Datum
+</span><a href="#local-6989586621679484606"><span class="hs-identifier hs-var">signer</span></a></span><span> </span><span class="annot"><span class="annottext">Value
+</span><a href="#local-6989586621679484591"><span class="hs-identifier hs-var">ada</span></a></span><span> </span><span class="annot"><span class="annottext">Datum
 forall ctx era. TxOutDatum ctx era
 </span><a href="../../../../cardano-api/html/src"><span class="hs-identifier hs-var">TxOutDatumNone</span></a></span><span>
 </span><span id="line-69"></span><span>

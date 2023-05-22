@@ -14,7 +14,7 @@
 </span><span id="line-14"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.html"><span class="hs-identifier">Blockfrost.Types.Shared</span></a></span><span>
 </span><span id="line-15"></span><span>
 </span><span id="line-16"></span><span class="hs-comment">-- | Transaction metadata label in use</span><span>
-</span><span id="line-17"></span><span id="local-6989586621681201023"><span id="local-6989586621681201024"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxMeta"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMeta"><span class="hs-identifier hs-var">TxMeta</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxMeta"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMeta"><span class="hs-identifier hs-var">TxMeta</span></a></span></span><span>
+</span><span id="line-17"></span><span id="local-6989586621681201030"><span id="local-6989586621681201031"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxMeta"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMeta"><span class="hs-identifier hs-var">TxMeta</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxMeta"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMeta"><span class="hs-identifier hs-var">TxMeta</span></a></span></span><span>
 </span><span id="line-18"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_txMetaLabel"><span class="annot"><span class="annottext">TxMeta -&gt; Text
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#_txMetaLabel"><span class="hs-identifier hs-var hs-var">_txMetaLabel</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Metadata label</span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_txMetaCip10"><span class="annot"><span class="annottext">TxMeta -&gt; Maybe Text
@@ -22,7 +22,7 @@
 </span><span id="line-20"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_txMetaCount"><span class="annot"><span class="annottext">TxMeta -&gt; Quantity
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#_txMetaCount"><span class="hs-identifier hs-var hs-var">_txMetaCount</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Quantity.html#Quantity"><span class="hs-identifier hs-type">Quantity</span></a></span><span> </span><span class="hs-comment">-- ^ The count of metadata entries with a specific label</span><span>
 </span><span id="line-21"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201013"><span id="local-6989586621681201015"><span id="local-6989586621681201017"><span class="annot"><span class="annottext">Int -&gt; TxMeta -&gt; ShowS
+</span><span id="line-22"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201020"><span id="local-6989586621681201022"><span id="local-6989586621681201024"><span class="annot"><span class="annottext">Int -&gt; TxMeta -&gt; ShowS
 [TxMeta] -&gt; ShowS
 TxMeta -&gt; String
 (Int -&gt; TxMeta -&gt; ShowS)
@@ -35,7 +35,7 @@ show :: TxMeta -&gt; String
 $cshow :: TxMeta -&gt; String
 showsPrec :: Int -&gt; TxMeta -&gt; ShowS
 $cshowsPrec :: Int -&gt; TxMeta -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201008"><span id="local-6989586621681201010"><span class="annot"><span class="annottext">TxMeta -&gt; TxMeta -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201015"><span id="local-6989586621681201017"><span class="annot"><span class="annottext">TxMeta -&gt; TxMeta -&gt; Bool
 (TxMeta -&gt; TxMeta -&gt; Bool)
 -&gt; (TxMeta -&gt; TxMeta -&gt; Bool) -&gt; Eq TxMeta
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -52,7 +52,7 @@ forall a.
 $cto :: forall x. Rep TxMeta x -&gt; TxMeta
 $cfrom :: forall x. TxMeta -&gt; Rep TxMeta x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-23"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201000"><span id="local-6989586621681201002"><span class="annot"><span class="annottext">Value -&gt; Parser [TxMeta]
+</span><span id="line-23"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201007"><span id="local-6989586621681201009"><span class="annot"><span class="annottext">Value -&gt; Parser [TxMeta]
 Value -&gt; Parser TxMeta
 (Value -&gt; Parser TxMeta)
 -&gt; (Value -&gt; Parser [TxMeta]) -&gt; FromJSON TxMeta
@@ -62,7 +62,7 @@ parseJSONList :: Value -&gt; Parser [TxMeta]
 $cparseJSONList :: Value -&gt; Parser [TxMeta]
 parseJSON :: Value -&gt; Parser TxMeta
 $cparseJSON :: Value -&gt; Parser TxMeta
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200991"><span id="local-6989586621681200993"><span id="local-6989586621681200995"><span id="local-6989586621681200997"><span class="annot"><span class="annottext">[TxMeta] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200998"><span id="local-6989586621681201000"><span id="local-6989586621681201002"><span id="local-6989586621681201004"><span class="annot"><span class="annottext">[TxMeta] -&gt; Encoding
 [TxMeta] -&gt; Value
 TxMeta -&gt; Encoding
 TxMeta -&gt; Value
@@ -89,7 +89,7 @@ $ctoJSON :: TxMeta -&gt; Value
 </span><span id="line-24"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_txMeta&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span>
 </span><span id="line-25"></span><span>
 </span><span id="line-26"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-27"></span><span>  </span><span id="local-6989586621681200983"><span class="annot"><span class="annottext">toSamples :: Proxy TxMeta -&gt; [(Text, TxMeta)]
+</span><span id="line-27"></span><span>  </span><span id="local-6989586621681200990"><span class="annot"><span class="annottext">toSamples :: Proxy TxMeta -&gt; [(Text, TxMeta)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TxMeta)] -&gt; Proxy TxMeta -&gt; [(Text, TxMeta)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TxMeta)] -&gt; Proxy TxMeta -&gt; [(Text, TxMeta)])
@@ -121,13 +121,13 @@ forall a. a -&gt; Maybe a
 </span><span id="line-31"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-32"></span><span>
 </span><span id="line-33"></span><span class="hs-comment">-- | Transaction metadata content in JSON</span><span>
-</span><span id="line-34"></span><span id="local-6989586621681200980"><span id="local-6989586621681200981"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-var">TxMetaJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-var">TxMetaJSON</span></a></span></span><span>
+</span><span id="line-34"></span><span id="local-6989586621681200987"><span id="local-6989586621681200988"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-var">TxMetaJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxMetaJSON"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-var">TxMetaJSON</span></a></span></span><span>
 </span><span id="line-35"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_txMetaJSONTxHash"><span class="annot"><span class="annottext">TxMetaJSON -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#_txMetaJSONTxHash"><span class="hs-identifier hs-var hs-var">_txMetaJSONTxHash</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Transaction hash that contains the specific metadata</span><span>
 </span><span id="line-36"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_txMetaJSONJSONMetadata"><span class="annot"><span class="annottext">TxMetaJSON -&gt; Maybe Value
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#_txMetaJSONJSONMetadata"><span class="hs-identifier hs-var hs-var">_txMetaJSONJSONMetadata</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">Value</span></a></span><span> </span><span class="hs-comment">-- ^ Content of the JSON metadata</span><span>
 </span><span id="line-37"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-38"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200971"><span id="local-6989586621681200973"><span id="local-6989586621681200975"><span class="annot"><span class="annottext">Int -&gt; TxMetaJSON -&gt; ShowS
+</span><span id="line-38"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200978"><span id="local-6989586621681200980"><span id="local-6989586621681200982"><span class="annot"><span class="annottext">Int -&gt; TxMetaJSON -&gt; ShowS
 [TxMetaJSON] -&gt; ShowS
 TxMetaJSON -&gt; String
 (Int -&gt; TxMetaJSON -&gt; ShowS)
@@ -142,7 +142,7 @@ show :: TxMetaJSON -&gt; String
 $cshow :: TxMetaJSON -&gt; String
 showsPrec :: Int -&gt; TxMetaJSON -&gt; ShowS
 $cshowsPrec :: Int -&gt; TxMetaJSON -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200967"><span id="local-6989586621681200969"><span class="annot"><span class="annottext">TxMetaJSON -&gt; TxMetaJSON -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200974"><span id="local-6989586621681200976"><span class="annot"><span class="annottext">TxMetaJSON -&gt; TxMetaJSON -&gt; Bool
 (TxMetaJSON -&gt; TxMetaJSON -&gt; Bool)
 -&gt; (TxMetaJSON -&gt; TxMetaJSON -&gt; Bool) -&gt; Eq TxMetaJSON
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -159,7 +159,7 @@ forall a.
 $cto :: forall x. Rep TxMetaJSON x -&gt; TxMetaJSON
 $cfrom :: forall x. TxMetaJSON -&gt; Rep TxMetaJSON x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-39"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200961"><span id="local-6989586621681200963"><span class="annot"><span class="annottext">Value -&gt; Parser [TxMetaJSON]
+</span><span id="line-39"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200968"><span id="local-6989586621681200970"><span class="annot"><span class="annottext">Value -&gt; Parser [TxMetaJSON]
 Value -&gt; Parser TxMetaJSON
 (Value -&gt; Parser TxMetaJSON)
 -&gt; (Value -&gt; Parser [TxMetaJSON]) -&gt; FromJSON TxMetaJSON
@@ -169,7 +169,7 @@ parseJSONList :: Value -&gt; Parser [TxMetaJSON]
 $cparseJSONList :: Value -&gt; Parser [TxMetaJSON]
 parseJSON :: Value -&gt; Parser TxMetaJSON
 $cparseJSON :: Value -&gt; Parser TxMetaJSON
-</span><a href="#local-6989586621681200961"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200953"><span id="local-6989586621681200955"><span id="local-6989586621681200957"><span id="local-6989586621681200959"><span class="annot"><span class="annottext">[TxMetaJSON] -&gt; Encoding
+</span><a href="#local-6989586621681200968"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200960"><span id="local-6989586621681200962"><span id="local-6989586621681200964"><span id="local-6989586621681200966"><span class="annot"><span class="annottext">[TxMetaJSON] -&gt; Encoding
 [TxMetaJSON] -&gt; Value
 TxMetaJSON -&gt; Encoding
 TxMetaJSON -&gt; Value
@@ -192,15 +192,15 @@ toEncoding :: TxMetaJSON -&gt; Encoding
 $ctoEncoding :: TxMetaJSON -&gt; Encoding
 toJSON :: TxMetaJSON -&gt; Value
 $ctoJSON :: TxMetaJSON -&gt; Value
-</span><a href="#local-6989586621681200953"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200960"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-40"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_txMetaJSON&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-type">TxMetaJSON</span></a></span><span>
 </span><span id="line-41"></span><span>
 </span><span id="line-42"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-type">TxMetaJSON</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-43"></span><span>  </span><span id="local-6989586621681200951"><span class="annot"><span class="annottext">toSamples :: Proxy TxMetaJSON -&gt; [(Text, TxMetaJSON)]
-</span><a href="#local-6989586621681200951"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-44"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621681200950"><span class="annot"><span class="annottext">oracleMeta :: Text -&gt; Value
-</span><a href="#local-6989586621681200950"><span class="hs-identifier hs-var hs-var">oracleMeta</span></a></span></span><span> </span><span id="local-6989586621681200949"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681200949"><span class="hs-identifier hs-var">val</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-43"></span><span>  </span><span id="local-6989586621681200958"><span class="annot"><span class="annottext">toSamples :: Proxy TxMetaJSON -&gt; [(Text, TxMetaJSON)]
+</span><a href="#local-6989586621681200958"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-44"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621681200957"><span class="annot"><span class="annottext">oracleMeta :: Text -&gt; Value
+</span><a href="#local-6989586621681200957"><span class="hs-identifier hs-var hs-var">oracleMeta</span></a></span></span><span> </span><span id="local-6989586621681200956"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681200956"><span class="hs-identifier hs-var">val</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-45"></span><span>          </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">object</span></a></span><span> </span><span class="hs-special">[</span><span>
 </span><span id="line-46"></span><span>            </span><span class="annot"><span class="annottext">Key
@@ -212,7 +212,7 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><span class="hs-string">&quot;value&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Text -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681200949"><span class="hs-identifier hs-var">val</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200956"><span class="hs-identifier hs-var">val</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>                       </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;source&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Text -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
@@ -237,7 +237,7 @@ forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Maybe Value) -&gt; Value -&gt; Maybe Value
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
-</span><a href="#local-6989586621681200950"><span class="hs-identifier hs-var">oracleMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681200957"><span class="hs-identifier hs-var">oracleMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;0.10409800535729975&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-55"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxHash -&gt; Maybe Value -&gt; TxMetaJSON
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-var">TxMetaJSON</span></a></span><span>
@@ -248,7 +248,7 @@ forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Maybe Value) -&gt; Value -&gt; Maybe Value
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
-</span><a href="#local-6989586621681200950"><span class="hs-identifier hs-var">oracleMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681200957"><span class="hs-identifier hs-var">oracleMeta</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;0.15409850555139935&quot;</span></span><span class="hs-special">)</span><span>
 </span><span id="line-58"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxHash -&gt; Maybe Value -&gt; TxMetaJSON
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaJSON"><span class="hs-identifier hs-var">TxMetaJSON</span></a></span><span>
@@ -260,13 +260,13 @@ forall a. Maybe a
 </span><span id="line-61"></span><span>    </span><span class="hs-special">]</span><span>
 </span><span id="line-62"></span><span>
 </span><span id="line-63"></span><span class="hs-comment">-- | Transaction metadata content in CBOR</span><span>
-</span><span id="line-64"></span><span id="local-6989586621681200947"><span id="local-6989586621681200948"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaCBOR"><span class="hs-identifier hs-var">TxMetaCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaCBOR"><span class="hs-identifier hs-var">TxMetaCBOR</span></a></span></span><span>
+</span><span id="line-64"></span><span id="local-6989586621681200954"><span id="local-6989586621681200955"></span></span><span class="hs-keyword">data</span><span> </span><span id="TxMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaCBOR"><span class="hs-identifier hs-var">TxMetaCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TxMetaCBOR"><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaCBOR"><span class="hs-identifier hs-var">TxMetaCBOR</span></a></span></span><span>
 </span><span id="line-65"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_txMetaCBORTxHash"><span class="annot"><span class="annottext">TxMetaCBOR -&gt; TxHash
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#_txMetaCBORTxHash"><span class="hs-identifier hs-var hs-var">_txMetaCBORTxHash</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span> </span><span class="hs-comment">-- ^ Transaction hash that contains the specific metadata</span><span>
 </span><span id="line-66"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_txMetaCBORMetadata"><span class="annot"><span class="annottext">TxMetaCBOR -&gt; Maybe Text
 </span><a href="Blockfrost.Types.Cardano.Metadata.html#_txMetaCBORMetadata"><span class="hs-identifier hs-var hs-var">_txMetaCBORMetadata</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-comment">-- ^ Content of the CBOR metadata</span><span>
 </span><span id="line-67"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-68"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200938"><span id="local-6989586621681200940"><span id="local-6989586621681200942"><span class="annot"><span class="annottext">Int -&gt; TxMetaCBOR -&gt; ShowS
+</span><span id="line-68"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200945"><span id="local-6989586621681200947"><span id="local-6989586621681200949"><span class="annot"><span class="annottext">Int -&gt; TxMetaCBOR -&gt; ShowS
 [TxMetaCBOR] -&gt; ShowS
 TxMetaCBOR -&gt; String
 (Int -&gt; TxMetaCBOR -&gt; ShowS)
@@ -281,7 +281,7 @@ show :: TxMetaCBOR -&gt; String
 $cshow :: TxMetaCBOR -&gt; String
 showsPrec :: Int -&gt; TxMetaCBOR -&gt; ShowS
 $cshowsPrec :: Int -&gt; TxMetaCBOR -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200934"><span id="local-6989586621681200936"><span class="annot"><span class="annottext">TxMetaCBOR -&gt; TxMetaCBOR -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200941"><span id="local-6989586621681200943"><span class="annot"><span class="annottext">TxMetaCBOR -&gt; TxMetaCBOR -&gt; Bool
 (TxMetaCBOR -&gt; TxMetaCBOR -&gt; Bool)
 -&gt; (TxMetaCBOR -&gt; TxMetaCBOR -&gt; Bool) -&gt; Eq TxMetaCBOR
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -298,7 +298,7 @@ forall a.
 $cto :: forall x. Rep TxMetaCBOR x -&gt; TxMetaCBOR
 $cfrom :: forall x. TxMetaCBOR -&gt; Rep TxMetaCBOR x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-69"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200928"><span id="local-6989586621681200930"><span class="annot"><span class="annottext">Value -&gt; Parser [TxMetaCBOR]
+</span><span id="line-69"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681200935"><span id="local-6989586621681200937"><span class="annot"><span class="annottext">Value -&gt; Parser [TxMetaCBOR]
 Value -&gt; Parser TxMetaCBOR
 (Value -&gt; Parser TxMetaCBOR)
 -&gt; (Value -&gt; Parser [TxMetaCBOR]) -&gt; FromJSON TxMetaCBOR
@@ -308,7 +308,7 @@ parseJSONList :: Value -&gt; Parser [TxMetaCBOR]
 $cparseJSONList :: Value -&gt; Parser [TxMetaCBOR]
 parseJSON :: Value -&gt; Parser TxMetaCBOR
 $cparseJSON :: Value -&gt; Parser TxMetaCBOR
-</span><a href="#local-6989586621681200928"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200920"><span id="local-6989586621681200922"><span id="local-6989586621681200924"><span id="local-6989586621681200926"><span class="annot"><span class="annottext">[TxMetaCBOR] -&gt; Encoding
+</span><a href="#local-6989586621681200935"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681200927"><span id="local-6989586621681200929"><span id="local-6989586621681200931"><span id="local-6989586621681200933"><span class="annot"><span class="annottext">[TxMetaCBOR] -&gt; Encoding
 [TxMetaCBOR] -&gt; Value
 TxMetaCBOR -&gt; Encoding
 TxMetaCBOR -&gt; Value
@@ -331,12 +331,12 @@ toEncoding :: TxMetaCBOR -&gt; Encoding
 $ctoEncoding :: TxMetaCBOR -&gt; Encoding
 toJSON :: TxMetaCBOR -&gt; Value
 $ctoJSON :: TxMetaCBOR -&gt; Value
-</span><a href="#local-6989586621681200920"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681200927"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-70"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_txMetaCBOR&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaCBOR"><span class="hs-identifier hs-type">TxMetaCBOR</span></a></span><span>
 </span><span id="line-71"></span><span>
 </span><span id="line-72"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Metadata.html#TxMetaCBOR"><span class="hs-identifier hs-type">TxMetaCBOR</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-73"></span><span>  </span><span id="local-6989586621681200918"><span class="annot"><span class="annottext">toSamples :: Proxy TxMetaCBOR -&gt; [(Text, TxMetaCBOR)]
-</span><a href="#local-6989586621681200918"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TxMetaCBOR)] -&gt; Proxy TxMetaCBOR -&gt; [(Text, TxMetaCBOR)]
+</span><span id="line-73"></span><span>  </span><span id="local-6989586621681200925"><span class="annot"><span class="annottext">toSamples :: Proxy TxMetaCBOR -&gt; [(Text, TxMetaCBOR)]
+</span><a href="#local-6989586621681200925"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, TxMetaCBOR)] -&gt; Proxy TxMetaCBOR -&gt; [(Text, TxMetaCBOR)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, TxMetaCBOR)] -&gt; Proxy TxMetaCBOR -&gt; [(Text, TxMetaCBOR)])
 -&gt; [(Text, TxMetaCBOR)] -&gt; Proxy TxMetaCBOR -&gt; [(Text, TxMetaCBOR)]

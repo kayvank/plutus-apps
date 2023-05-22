@@ -24,7 +24,7 @@
 </span><a href="Network.WebSockets.Extensions.Description.html#extName"><span class="hs-identifier hs-var hs-var">extName</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">B.ByteString</span></a></span><span>
 </span><span id="line-24"></span><span>    </span><span class="hs-special">,</span><span> </span><span id="extParams"><span class="annot"><span class="annottext">ExtensionDescription -&gt; [ExtensionParam]
 </span><a href="Network.WebSockets.Extensions.Description.html#extParams"><span class="hs-identifier hs-var hs-var">extParams</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-glyph">!</span><span class="hs-special">[</span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionParam"><span class="hs-identifier hs-type">ExtensionParam</span></a></span><span class="hs-special">]</span><span>
-</span><span id="line-25"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679071537"><span id="local-6989586621679071539"><span class="annot"><span class="annottext">ExtensionDescription -&gt; ExtensionDescription -&gt; Bool
+</span><span id="line-25"></span><span>    </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679071541"><span id="local-6989586621679071543"><span class="annot"><span class="annottext">ExtensionDescription -&gt; ExtensionDescription -&gt; Bool
 (ExtensionDescription -&gt; ExtensionDescription -&gt; Bool)
 -&gt; (ExtensionDescription -&gt; ExtensionDescription -&gt; Bool)
 -&gt; Eq ExtensionDescription
@@ -33,7 +33,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ExtensionDescription -&gt; ExtensionDescription -&gt; Bool
 == :: ExtensionDescription -&gt; ExtensionDescription -&gt; Bool
 $c== :: ExtensionDescription -&gt; ExtensionDescription -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679071530"><span id="local-6989586621679071532"><span id="local-6989586621679071534"><span class="annot"><span class="annottext">Int -&gt; ExtensionDescription -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679071534"><span id="local-6989586621679071536"><span id="local-6989586621679071538"><span class="annot"><span class="annottext">Int -&gt; ExtensionDescription -&gt; ShowS
 [ExtensionDescription] -&gt; ShowS
 ExtensionDescription -&gt; String
 (Int -&gt; ExtensionDescription -&gt; ShowS)
@@ -53,21 +53,21 @@ $cshowsPrec :: Int -&gt; ExtensionDescription -&gt; ShowS
 </span><span id="line-27"></span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#parseExtensionDescription"><span class="hs-identifier hs-type">parseExtensionDescription</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-type">A.Parser</span></a></span><span> </span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionDescription"><span class="hs-identifier hs-type">ExtensionDescription</span></a></span><span>
 </span><span id="line-28"></span><span id="parseExtensionDescription"><span class="annot"><span class="annottext">parseExtensionDescription :: Parser ExtensionDescription
 </span><a href="Network.WebSockets.Extensions.Description.html#parseExtensionDescription"><span class="hs-identifier hs-var hs-var">parseExtensionDescription</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-29"></span><span>    </span><span id="local-6989586621679071527"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679071527"><span class="hs-identifier hs-var">extName</span></a></span></span><span>   </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
-</span><a href="#local-6989586621679071526"><span class="hs-identifier hs-var">parseIdentifier</span></a></span><span>
-</span><span id="line-30"></span><span>    </span><span id="local-6989586621679071525"><span class="annot"><span class="annottext">[ExtensionParam]
-</span><a href="#local-6989586621679071525"><span class="hs-identifier hs-var">extParams</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser ByteString ExtensionParam
+</span><span id="line-29"></span><span>    </span><span id="local-6989586621679071531"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679071531"><span class="hs-identifier hs-var">extName</span></a></span></span><span>   </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
+</span><a href="#local-6989586621679071530"><span class="hs-identifier hs-var">parseIdentifier</span></a></span><span>
+</span><span id="line-30"></span><span>    </span><span id="local-6989586621679071529"><span class="annot"><span class="annottext">[ExtensionParam]
+</span><a href="#local-6989586621679071529"><span class="hs-identifier hs-var">extParams</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser ByteString ExtensionParam
 -&gt; Parser ByteString [ExtensionParam]
 forall (m :: * -&gt; *) a. MonadPlus m =&gt; m a -&gt; m [a]
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">A.many'</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char -&gt; Parser ByteString Word8
-</span><a href="#local-6989586621679071523"><span class="hs-identifier hs-var">token</span></a></span><span> </span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679071527"><span class="hs-identifier hs-var">token</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">';'</span></span><span> </span><span class="annot"><span class="annottext">Parser ByteString Word8
 -&gt; Parser ByteString ExtensionParam
 -&gt; Parser ByteString ExtensionParam
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f a -&gt; f b -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString ExtensionParam
-</span><a href="#local-6989586621679071522"><span class="hs-identifier hs-var">parseParam</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679071526"><span class="hs-identifier hs-var">parseParam</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-31"></span><span>    </span><span class="annot"><span class="annottext">ExtensionDescription -&gt; Parser ExtensionDescription
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">ExtensionDescription :: ByteString -&gt; [ExtensionParam] -&gt; ExtensionDescription
@@ -77,82 +77,82 @@ extParams :: [ExtensionParam]
 extName :: ByteString
 extParams :: [ExtensionParam]
 extName :: ByteString
-</span><a href="#local-6989586621679071525"><span class="hs-glyph hs-var hs-var hs-var hs-var">..</span></a></span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679071529"><span class="hs-glyph hs-var hs-var hs-var hs-var">..</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-32"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-33"></span><span>    </span><span id="local-6989586621679071526"><span class="annot"><span class="annottext">parseIdentifier :: Parser ByteString ByteString
-</span><a href="#local-6989586621679071526"><span class="hs-identifier hs-var hs-var">parseIdentifier</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Char -&gt; Bool) -&gt; Parser ByteString ByteString
+</span><span id="line-33"></span><span>    </span><span id="local-6989586621679071530"><span class="annot"><span class="annottext">parseIdentifier :: Parser ByteString ByteString
+</span><a href="#local-6989586621679071530"><span class="hs-identifier hs-var hs-var">parseIdentifier</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Char -&gt; Bool) -&gt; Parser ByteString ByteString
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">AC8.takeWhile</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Bool
-</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">isIdentifierChar</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
+</span><a href="#local-6989586621679071524"><span class="hs-identifier hs-var">isIdentifierChar</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
 -&gt; Parser ByteString () -&gt; Parser ByteString ByteString
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f a -&gt; f b -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString ()
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">AC8.skipSpace</span></a></span><span>
 </span><span id="line-34"></span><span>
-</span><span id="line-35"></span><span>    </span><span id="local-6989586621679071523"><span class="annot"><span class="annottext">token :: Char -&gt; Parser ByteString Word8
-</span><a href="#local-6989586621679071523"><span class="hs-identifier hs-var hs-var">token</span></a></span></span><span> </span><span id="local-6989586621679071518"><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071518"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Char -&gt; Parser ByteString Word8
+</span><span id="line-35"></span><span>    </span><span id="local-6989586621679071527"><span class="annot"><span class="annottext">token :: Char -&gt; Parser ByteString Word8
+</span><a href="#local-6989586621679071527"><span class="hs-identifier hs-var hs-var">token</span></a></span></span><span> </span><span id="local-6989586621679071522"><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679071522"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Char -&gt; Parser ByteString Word8
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">AC8.char8</span></a></span><span> </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071518"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString Word8
+</span><a href="#local-6989586621679071522"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString Word8
 -&gt; Parser ByteString () -&gt; Parser ByteString Word8
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f a -&gt; f b -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString ()
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">AC8.skipSpace</span></a></span><span>
 </span><span id="line-36"></span><span>
-</span><span id="line-37"></span><span>    </span><span id="local-6989586621679071520"><span class="annot"><span class="annottext">isIdentifierChar :: Char -&gt; Bool
-</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var hs-var">isIdentifierChar</span></a></span></span><span> </span><span id="local-6989586621679071516"><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-37"></span><span>    </span><span id="local-6989586621679071524"><span class="annot"><span class="annottext">isIdentifierChar :: Char -&gt; Bool
+</span><a href="#local-6989586621679071524"><span class="hs-identifier hs-var hs-var">isIdentifierChar</span></a></span></span><span> </span><span id="local-6989586621679071520"><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-38"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'a'</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'z'</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span>
 </span><span id="line-39"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'A'</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'Z'</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span>
 </span><span id="line-40"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'0'</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'9'</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span>
 </span><span id="line-41"></span><span>        </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'-'</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span> </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
+</span><a href="#local-6989586621679071520"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Char -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'_'</span></span><span>
 </span><span id="line-42"></span><span>
-</span><span id="line-43"></span><span>    </span><span class="annot"><a href="#local-6989586621679071522"><span class="hs-identifier hs-type">parseParam</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-type">A.Parser</span></a></span><span> </span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionParam"><span class="hs-identifier hs-type">ExtensionParam</span></a></span><span>
-</span><span id="line-44"></span><span>    </span><span id="local-6989586621679071522"><span class="annot"><span class="annottext">parseParam :: Parser ByteString ExtensionParam
-</span><a href="#local-6989586621679071522"><span class="hs-identifier hs-var hs-var">parseParam</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-45"></span><span>        </span><span id="local-6989586621679071512"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679071512"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
-</span><a href="#local-6989586621679071526"><span class="hs-identifier hs-var">parseIdentifier</span></a></span><span>
-</span><span id="line-46"></span><span>        </span><span id="local-6989586621679071511"><span class="annot"><span class="annottext">Maybe ByteString
-</span><a href="#local-6989586621679071511"><span class="hs-identifier hs-var">val</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
+</span><span id="line-43"></span><span>    </span><span class="annot"><a href="#local-6989586621679071526"><span class="hs-identifier hs-type">parseParam</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-type">A.Parser</span></a></span><span> </span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionParam"><span class="hs-identifier hs-type">ExtensionParam</span></a></span><span>
+</span><span id="line-44"></span><span>    </span><span id="local-6989586621679071526"><span class="annot"><span class="annottext">parseParam :: Parser ByteString ExtensionParam
+</span><a href="#local-6989586621679071526"><span class="hs-identifier hs-var hs-var">parseParam</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-45"></span><span>        </span><span id="local-6989586621679071516"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">name</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
+</span><a href="#local-6989586621679071530"><span class="hs-identifier hs-var">parseIdentifier</span></a></span><span>
+</span><span id="line-46"></span><span>        </span><span id="local-6989586621679071515"><span class="annot"><span class="annottext">Maybe ByteString
+</span><a href="#local-6989586621679071515"><span class="hs-identifier hs-var">val</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
 -&gt; Parser ByteString (Maybe ByteString)
 -&gt; Parser ByteString (Maybe ByteString)
 forall (f :: * -&gt; *) a. Alternative f =&gt; a -&gt; f a -&gt; f a
@@ -175,60 +175,60 @@ forall a. a -&gt; Maybe a
 -&gt; Parser ByteString (Maybe ByteString)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Parser ByteString Word8
-</span><a href="#local-6989586621679071523"><span class="hs-identifier hs-var">token</span></a></span><span> </span><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679071527"><span class="hs-identifier hs-var">token</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'='</span></span><span> </span><span class="annot"><span class="annottext">Parser ByteString Word8
 -&gt; Parser ByteString ByteString -&gt; Parser ByteString ByteString
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f a -&gt; f b -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString ByteString
-</span><a href="#local-6989586621679071526"><span class="hs-identifier hs-var">parseIdentifier</span></a></span><span>
+</span><a href="#local-6989586621679071530"><span class="hs-identifier hs-var">parseIdentifier</span></a></span><span>
 </span><span id="line-47"></span><span>        </span><span class="annot"><span class="annottext">ExtensionParam -&gt; Parser ByteString ExtensionParam
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679071512"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
-</span><a href="#local-6989586621679071511"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679071516"><span class="hs-identifier hs-var">name</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe ByteString
+</span><a href="#local-6989586621679071515"><span class="hs-identifier hs-var">val</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#encodeExtensionDescription"><span class="hs-identifier hs-type">encodeExtensionDescription</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionDescription"><span class="hs-identifier hs-type">ExtensionDescription</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">B.ByteString</span></a></span><span>
 </span><span id="line-50"></span><span id="encodeExtensionDescription"><span class="annot"><span class="annottext">encodeExtensionDescription :: ExtensionDescription -&gt; ByteString
-</span><a href="Network.WebSockets.Extensions.Description.html#encodeExtensionDescription"><span class="hs-identifier hs-var hs-var">encodeExtensionDescription</span></a></span></span><span> </span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionDescription"><span class="hs-identifier hs-type">ExtensionDescription</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679071507"><span id="local-6989586621679071508"><span class="annot"><span class="annottext">[ExtensionParam]
+</span><a href="Network.WebSockets.Extensions.Description.html#encodeExtensionDescription"><span class="hs-identifier hs-var hs-var">encodeExtensionDescription</span></a></span></span><span> </span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionDescription"><span class="hs-identifier hs-type">ExtensionDescription</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679071511"><span id="local-6989586621679071512"><span class="annot"><span class="annottext">[ExtensionParam]
 ByteString
 extParams :: [ExtensionParam]
 extName :: ByteString
 extParams :: ExtensionDescription -&gt; [ExtensionParam]
 extName :: ExtensionDescription -&gt; ByteString
-</span><a href="#local-6989586621679071507"><span class="hs-glyph hs-var hs-var hs-var hs-var">..</span></a></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679071511"><span class="hs-glyph hs-var hs-var hs-var hs-var">..</span></a></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-51"></span><span>    </span><span class="annot"><span class="annottext">[ByteString] -&gt; ByteString
 forall a. Monoid a =&gt; [a] -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mconcat</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679071508"><span class="hs-identifier hs-var">extName</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [ByteString] -&gt; [ByteString]
+</span><a href="#local-6989586621679071512"><span class="hs-identifier hs-var">extName</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; [ByteString] -&gt; [ByteString]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span> </span><span class="annot"><span class="annottext">(ExtensionParam -&gt; ByteString) -&gt; [ExtensionParam] -&gt; [ByteString]
 forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">map</span></a></span><span> </span><span class="annot"><span class="annottext">ExtensionParam -&gt; ByteString
 forall a. (Monoid a, IsString a) =&gt; (a, Maybe a) -&gt; a
-</span><a href="#local-6989586621679071506"><span class="hs-identifier hs-var">encodeParam</span></a></span><span> </span><span class="annot"><span class="annottext">[ExtensionParam]
-</span><a href="#local-6989586621679071507"><span class="hs-identifier hs-var">extParams</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679071510"><span class="hs-identifier hs-var">encodeParam</span></a></span><span> </span><span class="annot"><span class="annottext">[ExtensionParam]
+</span><a href="#local-6989586621679071511"><span class="hs-identifier hs-var">extParams</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-52"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-53"></span><span>    </span><span id="local-6989586621679071506"><span class="annot"><span class="annottext">encodeParam :: (a, Maybe a) -&gt; a
-</span><a href="#local-6989586621679071506"><span class="hs-identifier hs-var hs-var">encodeParam</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679071505"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679071505"><span class="hs-identifier hs-var">key</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe a
+</span><span id="line-53"></span><span>    </span><span id="local-6989586621679071510"><span class="annot"><span class="annottext">encodeParam :: (a, Maybe a) -&gt; a
+</span><a href="#local-6989586621679071510"><span class="hs-identifier hs-var hs-var">encodeParam</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679071509"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679071509"><span class="hs-identifier hs-var">key</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span class="hs-special">)</span><span>  </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-string">&quot;;&quot;</span></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Monoid a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`mappend`</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679071505"><span class="hs-identifier hs-var">key</span></a></span><span>
-</span><span id="line-54"></span><span>    </span><span class="annot"><a href="#local-6989586621679071506"><span class="hs-identifier hs-var">encodeParam</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679071504"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679071504"><span class="hs-identifier hs-var">key</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679071503"><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679071503"><span class="hs-identifier hs-var">val</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679071509"><span class="hs-identifier hs-var">key</span></a></span><span>
+</span><span id="line-54"></span><span>    </span><span class="annot"><a href="#local-6989586621679071510"><span class="hs-identifier hs-var">encodeParam</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679071508"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679071508"><span class="hs-identifier hs-var">key</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679071507"><span class="annot"><span class="annottext">a
+</span><a href="#local-6989586621679071507"><span class="hs-identifier hs-var">val</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-string">&quot;;&quot;</span></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Monoid a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`mappend`</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679071504"><span class="hs-identifier hs-var">key</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
+</span><a href="#local-6989586621679071508"><span class="hs-identifier hs-var">key</span></a></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Monoid a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`mappend`</span></a></span><span> </span><span class="annot"><span class="annottext">a
 </span><span class="hs-string">&quot;=&quot;</span></span><span> </span><span class="annot"><span class="annottext">a -&gt; a -&gt; a
 forall a. Monoid a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">`mappend`</span></a></span><span> </span><span class="annot"><span class="annottext">a
-</span><a href="#local-6989586621679071503"><span class="hs-identifier hs-var">val</span></a></span><span>
+</span><a href="#local-6989586621679071507"><span class="hs-identifier hs-var">val</span></a></span><span>
 </span><span id="line-55"></span><span>
 </span><span id="line-56"></span><span class="hs-keyword">type</span><span> </span><span id="ExtensionDescriptions"><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionDescriptions"><span class="hs-identifier hs-var">ExtensionDescriptions</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Network.WebSockets.Extensions.Description.html#ExtensionDescription"><span class="hs-identifier hs-type">ExtensionDescription</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-57"></span><span>

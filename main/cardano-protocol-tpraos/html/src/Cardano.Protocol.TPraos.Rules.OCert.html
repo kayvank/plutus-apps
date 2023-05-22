@@ -27,9 +27,9 @@
 </span><span id="line-27"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">GHC.Generics</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-28"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">NoThunks.Class</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">NoThunks</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-29"></span><span>
-</span><span id="line-30"></span><span class="hs-keyword">data</span><span> </span><span id="OCERT"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-var">OCERT</span></a></span></span><span> </span><span id="local-6989586621679266090"><span class="annot"><a href="#local-6989586621679266090"><span class="hs-identifier hs-type">crypto</span></a></span></span><span>
+</span><span id="line-30"></span><span class="hs-keyword">data</span><span> </span><span id="OCERT"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-var">OCERT</span></a></span></span><span> </span><span id="local-6989586621679266304"><span class="annot"><a href="#local-6989586621679266304"><span class="hs-identifier hs-type">crypto</span></a></span></span><span>
 </span><span id="line-31"></span><span>
-</span><span id="line-32"></span><span id="local-6989586621679266088"><span id="local-6989586621679266089"></span></span><span class="hs-keyword">data</span><span> </span><span id="OcertPredicateFailure"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OcertPredicateFailure"><span class="hs-identifier hs-var">OcertPredicateFailure</span></a></span></span><span> </span><span id="local-6989586621679266133"><span class="annot"><a href="#local-6989586621679266133"><span class="hs-identifier hs-type">crypto</span></a></span></span><span>
+</span><span id="line-32"></span><span id="local-6989586621679266302"><span id="local-6989586621679266303"></span></span><span class="hs-keyword">data</span><span> </span><span id="OcertPredicateFailure"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OcertPredicateFailure"><span class="hs-identifier hs-var">OcertPredicateFailure</span></a></span></span><span> </span><span id="local-6989586621679266347"><span class="annot"><a href="#local-6989586621679266347"><span class="hs-identifier hs-type">crypto</span></a></span></span><span>
 </span><span id="line-33"></span><span>  </span><span class="hs-glyph">=</span><span> </span><span id="KESBeforeStartOCERT"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#KESBeforeStartOCERT"><span class="hs-identifier hs-var">KESBeforeStartOCERT</span></a></span></span><span>
 </span><span id="line-34"></span><span>      </span><span class="hs-glyph">!</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#KESPeriod"><span class="hs-identifier hs-type">KESPeriod</span></a></span><span> </span><span class="hs-comment">-- OCert Start KES Period</span><span>
 </span><span id="line-35"></span><span>      </span><span class="hs-glyph">!</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#KESPeriod"><span class="hs-identifier hs-type">KESPeriod</span></a></span><span> </span><span class="hs-comment">-- Current KES Period</span><span>
@@ -49,8 +49,8 @@
 </span><span id="line-49"></span><span>      </span><span class="hs-glyph">!</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Word</span></a></span><span> </span><span class="hs-comment">-- expected KES evolutions</span><span>
 </span><span id="line-50"></span><span>      </span><span class="hs-glyph">!</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">String</span></a></span><span> </span><span class="hs-comment">-- error message given by Consensus Layer</span><span>
 </span><span id="line-51"></span><span>  </span><span class="hs-glyph">|</span><span> </span><span id="NoCounterForKeyHashOCERT"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#NoCounterForKeyHashOCERT"><span class="hs-identifier hs-var">NoCounterForKeyHashOCERT</span></a></span></span><span>
-</span><span id="line-52"></span><span>      </span><span class="hs-glyph">!</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-special">'</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">BlockIssuer</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266133"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-comment">-- stake pool key hash</span><span>
-</span><span id="line-53"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679266076"><span id="local-6989586621679266078"><span id="local-6989586621679266080"><span class="annot"><span class="annottext">Int -&gt; OcertPredicateFailure crypto -&gt; ShowS
+</span><span id="line-52"></span><span>      </span><span class="hs-glyph">!</span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-special">'</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">BlockIssuer</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266347"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-comment">-- stake pool key hash</span><span>
+</span><span id="line-53"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679266290"><span id="local-6989586621679266292"><span id="local-6989586621679266294"><span class="annot"><span class="annottext">Int -&gt; OcertPredicateFailure crypto -&gt; ShowS
 [OcertPredicateFailure crypto] -&gt; ShowS
 OcertPredicateFailure crypto -&gt; String
 (Int -&gt; OcertPredicateFailure crypto -&gt; ShowS)
@@ -68,7 +68,7 @@ show :: OcertPredicateFailure crypto -&gt; String
 $cshow :: forall crypto. OcertPredicateFailure crypto -&gt; String
 showsPrec :: Int -&gt; OcertPredicateFailure crypto -&gt; ShowS
 $cshowsPrec :: forall crypto. Int -&gt; OcertPredicateFailure crypto -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679266071"><span id="local-6989586621679266073"><span class="annot"><span class="annottext">OcertPredicateFailure crypto
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679266285"><span id="local-6989586621679266287"><span class="annot"><span class="annottext">OcertPredicateFailure crypto
 -&gt; OcertPredicateFailure crypto -&gt; Bool
 (OcertPredicateFailure crypto
  -&gt; OcertPredicateFailure crypto -&gt; Bool)
@@ -118,26 +118,26 @@ OcertPredicateFailure crypto
 -&gt; Rep (OcertPredicateFailure crypto) x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-54"></span><span>
-</span><span id="line-55"></span><span id="local-6989586621679266066"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679266060"><span id="local-6989586621679266062"><span id="local-6989586621679266064"><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-type">NoThunks</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OcertPredicateFailure"><span class="hs-identifier hs-type">OcertPredicateFailure</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266066"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span></span></span></span><span>
+</span><span id="line-55"></span><span id="local-6989586621679266280"><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679266274"><span id="local-6989586621679266276"><span id="local-6989586621679266278"><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-type">NoThunks</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OcertPredicateFailure"><span class="hs-identifier hs-type">OcertPredicateFailure</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266280"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span></span></span></span><span>
 </span><span id="line-56"></span><span>
-</span><span id="line-57"></span><span id="local-6989586621679266058"><span class="hs-keyword">instance</span><span>
-</span><span id="line-58"></span><span>  </span><span id="local-6989586621679266048"><span id="local-6989586621679266050"><span class="hs-special">(</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">,</span><span>
-</span><span id="line-59"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">DSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCertSignable"><span class="hs-identifier hs-type">OCertSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
-</span><span id="line-60"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KESignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHBody"><span class="hs-identifier hs-type">BHBody</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-57"></span><span id="local-6989586621679266272"><span class="hs-keyword">instance</span><span>
+</span><span id="line-58"></span><span>  </span><span id="local-6989586621679266262"><span id="local-6989586621679266264"><span class="hs-special">(</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">,</span><span>
+</span><span id="line-59"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">DSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCertSignable"><span class="hs-identifier hs-type">OCertSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><span id="line-60"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KESignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHBody"><span class="hs-identifier hs-type">BHBody</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-61"></span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span>
-</span><span id="line-62"></span><span>  </span><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-type">STS</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span></span><span>
+</span><span id="line-62"></span><span>  </span><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-type">STS</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span></span><span>
 </span><span id="line-63"></span><span>  </span><span class="hs-keyword">where</span><span>
 </span><span id="line-64"></span><span>  </span><span class="hs-keyword">type</span><span>
-</span><span id="line-65"></span><span>    </span><span id="State"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">State</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-66"></span><span>      </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-special">'</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">BlockIssuer</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
+</span><span id="line-65"></span><span>    </span><span id="State"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">State</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-66"></span><span>      </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-special">'</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">BlockIssuer</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Word64</span></a></span><span>
 </span><span id="line-67"></span><span>  </span><span class="hs-keyword">type</span><span>
-</span><span id="line-68"></span><span>    </span><span id="Signal"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">Signal</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
-</span><span id="line-69"></span><span>      </span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHeader"><span class="hs-identifier hs-type">BHeader</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span>
-</span><span id="line-70"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="Environment"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">Environment</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCertEnv"><span class="hs-identifier hs-type">OCertEnv</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span>
-</span><span id="line-71"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="BaseM"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">BaseM</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">ShelleyBase</span></a></span><span>
-</span><span id="line-72"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="PredicateFailure"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">PredicateFailure</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OcertPredicateFailure"><span class="hs-identifier hs-type">OcertPredicateFailure</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266058"><span class="hs-identifier hs-type">crypto</span></a></span><span>
+</span><span id="line-68"></span><span>    </span><span id="Signal"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">Signal</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-69"></span><span>      </span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHeader"><span class="hs-identifier hs-type">BHeader</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span>
+</span><span id="line-70"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="Environment"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">Environment</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCertEnv"><span class="hs-identifier hs-type">OCertEnv</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span>
+</span><span id="line-71"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="BaseM"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">BaseM</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">ShelleyBase</span></a></span><span>
+</span><span id="line-72"></span><span>  </span><span class="hs-keyword">type</span><span> </span><span id="PredicateFailure"><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var">PredicateFailure</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OcertPredicateFailure"><span class="hs-identifier hs-type">OcertPredicateFailure</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266272"><span class="hs-identifier hs-type">crypto</span></a></span><span>
 </span><span id="line-73"></span><span>
-</span><span id="line-74"></span><span>  </span><span id="local-6989586621679266045"><span class="annot"><span class="annottext">initialRules :: [InitialRule (OCERT crypto)]
+</span><span id="line-74"></span><span>  </span><span id="local-6989586621679266259"><span class="annot"><span class="annottext">initialRules :: [InitialRule (OCERT crypto)]
 </span><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">initialRules</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 -&gt; F (Clause (OCERT crypto) 'Initial)
      (Map (KeyHash 'BlockIssuer crypto) Word64)
@@ -145,7 +145,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 forall k a. Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.empty</span></a></span><span class="hs-special">]</span><span>
-</span><span id="line-75"></span><span>  </span><span id="local-6989586621679266042"><span class="annot"><span class="annottext">transitionRules :: [TransitionRule (OCERT crypto)]
+</span><span id="line-75"></span><span>  </span><span id="local-6989586621679266256"><span class="annot"><span class="annottext">transitionRules :: [TransitionRule (OCERT crypto)]
 </span><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">transitionRules</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">TransitionRule (OCERT crypto)
 forall crypto.
 (Crypto crypto, DSignable crypto (OCertSignable crypto),
@@ -153,12 +153,12 @@ forall crypto.
 TransitionRule (OCERT crypto)
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#ocertTransition"><span class="hs-identifier hs-var">ocertTransition</span></a></span><span class="hs-special">]</span></span><span>
 </span><span id="line-76"></span><span>
-</span><span id="line-77"></span><span id="local-6989586621679266174"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#ocertTransition"><span class="hs-identifier hs-type">ocertTransition</span></a></span><span> </span><span class="hs-glyph">::</span><span>
-</span><span id="line-78"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266174"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">,</span><span>
-</span><span id="line-79"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">DSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266174"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCertSignable"><span class="hs-identifier hs-type">OCertSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266174"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
-</span><span id="line-80"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KESignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266174"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHBody"><span class="hs-identifier hs-type">BHBody</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266174"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-77"></span><span id="local-6989586621679266388"><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#ocertTransition"><span class="hs-identifier hs-type">ocertTransition</span></a></span><span> </span><span class="hs-glyph">::</span><span>
+</span><span id="line-78"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Crypto</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266388"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">,</span><span>
+</span><span id="line-79"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">DSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266388"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCertSignable"><span class="hs-identifier hs-type">OCertSignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266388"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span class="hs-special">,</span><span>
+</span><span id="line-80"></span><span>    </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">KESignable</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266388"><span class="hs-identifier hs-type">crypto</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHBody"><span class="hs-identifier hs-type">BHBody</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266388"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-81"></span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=&gt;</span><span>
-</span><span id="line-82"></span><span>  </span><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-type">TransitionRule</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266174"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-82"></span><span>  </span><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-type">TransitionRule</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.Rules.OCert.html#OCERT"><span class="hs-identifier hs-type">OCERT</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679266388"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-83"></span><span id="ocertTransition"><span class="annot"><span class="annottext">ocertTransition :: TransitionRule (OCERT crypto)
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#ocertTransition"><span class="hs-identifier hs-var hs-var">ocertTransition</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-84"></span><span>  </span><span class="annot"><span class="annottext">F (Clause (OCERT crypto) 'Transition) (TRC (OCERT crypto))
@@ -171,38 +171,38 @@ Rule sts rtype (RuleContext rtype sts)
 -&gt; F (Clause (OCERT crypto) 'Transition)
      (Map (KeyHash 'BlockIssuer crypto) Word64)
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-type">TRC</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679266037"><span class="annot"><span class="annottext">Environment (OCERT crypto)
-</span><a href="#local-6989586621679266037"><span class="hs-identifier hs-var">env</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679266036"><span class="annot"><span class="annottext">State (OCERT crypto)
-</span><a href="#local-6989586621679266036"><span class="hs-identifier hs-var">cs</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHeader"><span class="hs-identifier hs-type">BHeader</span></a></span><span> </span><span id="local-6989586621679266034"><span class="annot"><a href="#local-6989586621679266034"><span class="hs-identifier hs-var">bhb</span></a></span></span><span> </span><span id="local-6989586621679266033"><span class="annot"><a href="#local-6989586621679266033"><span class="hs-identifier hs-var">sigma</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-85"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCert"><span class="hs-identifier hs-type">OCert</span></a></span><span> </span><span id="local-6989586621679266031"><span class="annot"><span class="annottext">VerKeyKES crypto
-</span><a href="#local-6989586621679266031"><span class="hs-identifier hs-var">vk_hot</span></a></span></span><span> </span><span id="local-6989586621679266030"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266030"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679266029"><span class="annot"><span class="annottext">c0 :: KESPeriod
-</span><a href="#local-6989586621679266029"><span class="hs-identifier hs-var">c0</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#KESPeriod"><span class="hs-identifier hs-type">KESPeriod</span></a></span><span> </span><span id="local-6989586621679266027"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266027"><span class="hs-identifier hs-var">c0_</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679266026"><span class="annot"><span class="annottext">SignedDSIGN crypto (OCertSignable crypto)
-</span><a href="#local-6989586621679266026"><span class="hs-identifier hs-var">tau</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; OCert crypto
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-special">(</span><span class="annot"><a href="../../../../small-steps/html/src"><span class="hs-identifier hs-type">TRC</span></a></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679266251"><span class="annot"><span class="annottext">Environment (OCERT crypto)
+</span><a href="#local-6989586621679266251"><span class="hs-identifier hs-var">env</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679266250"><span class="annot"><span class="annottext">State (OCERT crypto)
+</span><a href="#local-6989586621679266250"><span class="hs-identifier hs-var">cs</span></a></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.BHeader.html#BHeader"><span class="hs-identifier hs-type">BHeader</span></a></span><span> </span><span id="local-6989586621679266248"><span class="annot"><a href="#local-6989586621679266248"><span class="hs-identifier hs-var">bhb</span></a></span></span><span> </span><span id="local-6989586621679266247"><span class="annot"><a href="#local-6989586621679266247"><span class="hs-identifier hs-var">sigma</span></a></span></span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-85"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#OCert"><span class="hs-identifier hs-type">OCert</span></a></span><span> </span><span id="local-6989586621679266245"><span class="annot"><span class="annottext">VerKeyKES crypto
+</span><a href="#local-6989586621679266245"><span class="hs-identifier hs-var">vk_hot</span></a></span></span><span> </span><span id="local-6989586621679266244"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679266244"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span id="local-6989586621679266243"><span class="annot"><span class="annottext">c0 :: KESPeriod
+</span><a href="#local-6989586621679266243"><span class="hs-identifier hs-var">c0</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#KESPeriod"><span class="hs-identifier hs-type">KESPeriod</span></a></span><span> </span><span id="local-6989586621679266241"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266241"><span class="hs-identifier hs-var">c0_</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679266240"><span class="annot"><span class="annottext">SignedDSIGN crypto (OCertSignable crypto)
+</span><a href="#local-6989586621679266240"><span class="hs-identifier hs-var">tau</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; OCert crypto
 forall crypto. BHBody crypto -&gt; OCert crypto
 </span><a href="Cardano.Protocol.TPraos.BHeader.html#bheaderOCert"><span class="hs-identifier hs-var hs-var">bheaderOCert</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto
-</span><a href="#local-6989586621679266034"><span class="hs-identifier hs-var">bhb</span></a></span><span>
-</span><span id="line-86"></span><span>        </span><span id="local-6989586621679266024"><span class="annot"><span class="annottext">vkcold :: VKey 'BlockIssuer crypto
-</span><a href="#local-6989586621679266024"><span class="hs-identifier hs-var hs-var">vkcold</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; VKey 'BlockIssuer crypto
+</span><a href="#local-6989586621679266248"><span class="hs-identifier hs-var">bhb</span></a></span><span>
+</span><span id="line-86"></span><span>        </span><span id="local-6989586621679266238"><span class="annot"><span class="annottext">vkcold :: VKey 'BlockIssuer crypto
+</span><a href="#local-6989586621679266238"><span class="hs-identifier hs-var hs-var">vkcold</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; VKey 'BlockIssuer crypto
 forall crypto. BHBody crypto -&gt; VKey 'BlockIssuer crypto
 </span><a href="Cardano.Protocol.TPraos.BHeader.html#bheaderVk"><span class="hs-identifier hs-var hs-var">bheaderVk</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto
-</span><a href="#local-6989586621679266034"><span class="hs-identifier hs-var">bhb</span></a></span><span>
-</span><span id="line-87"></span><span>        </span><span id="local-6989586621679266022"><span class="annot"><span class="annottext">hk :: KeyHash 'BlockIssuer crypto
-</span><a href="#local-6989586621679266022"><span class="hs-identifier hs-var hs-var">hk</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VKey 'BlockIssuer crypto -&gt; KeyHash 'BlockIssuer crypto
+</span><a href="#local-6989586621679266248"><span class="hs-identifier hs-var">bhb</span></a></span><span>
+</span><span id="line-87"></span><span>        </span><span id="local-6989586621679266236"><span class="annot"><span class="annottext">hk :: KeyHash 'BlockIssuer crypto
+</span><a href="#local-6989586621679266236"><span class="hs-identifier hs-var hs-var">hk</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VKey 'BlockIssuer crypto -&gt; KeyHash 'BlockIssuer crypto
 forall crypto (kd :: KeyRole).
 Crypto crypto =&gt;
 VKey kd crypto -&gt; KeyHash kd crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">hashKey</span></a></span><span> </span><span class="annot"><span class="annottext">VKey 'BlockIssuer crypto
-</span><a href="#local-6989586621679266024"><span class="hs-identifier hs-var">vkcold</span></a></span><span>
-</span><span id="line-88"></span><span>        </span><span id="local-6989586621679266020"><span class="annot"><span class="annottext">s :: SlotNo
-</span><a href="#local-6989586621679266020"><span class="hs-identifier hs-var hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; SlotNo
+</span><a href="#local-6989586621679266238"><span class="hs-identifier hs-var">vkcold</span></a></span><span>
+</span><span id="line-88"></span><span>        </span><span id="local-6989586621679266234"><span class="annot"><span class="annottext">s :: SlotNo
+</span><a href="#local-6989586621679266234"><span class="hs-identifier hs-var hs-var">s</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; SlotNo
 forall crypto. BHBody crypto -&gt; SlotNo
 </span><a href="Cardano.Protocol.TPraos.BHeader.html#bheaderSlotNo"><span class="hs-identifier hs-var hs-var">bheaderSlotNo</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto
-</span><a href="#local-6989586621679266034"><span class="hs-identifier hs-var">bhb</span></a></span><span>
-</span><span id="line-89"></span><span>    </span><span id="local-6989586621679266018"><span class="annot"><span class="annottext">kp :: KESPeriod
-</span><a href="#local-6989586621679266018"><span class="hs-identifier hs-var">kp</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#KESPeriod"><span class="hs-identifier hs-type">KESPeriod</span></a></span><span> </span><span id="local-6989586621679266017"><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266017"><span class="hs-identifier hs-var">kp_</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BaseM (OCERT crypto) KESPeriod
+</span><a href="#local-6989586621679266248"><span class="hs-identifier hs-var">bhb</span></a></span><span>
+</span><span id="line-89"></span><span>    </span><span id="local-6989586621679266232"><span class="annot"><span class="annottext">kp :: KESPeriod
+</span><a href="#local-6989586621679266232"><span class="hs-identifier hs-var">kp</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Protocol.TPraos.OCert.html#KESPeriod"><span class="hs-identifier hs-type">KESPeriod</span></a></span><span> </span><span id="local-6989586621679266231"><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266231"><span class="hs-identifier hs-var">kp_</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BaseM (OCERT crypto) KESPeriod
 -&gt; Rule (OCERT crypto) 'Transition KESPeriod
 forall sts a (ctx :: RuleType).
 STS sts =&gt;
@@ -214,10 +214,10 @@ BaseM sts a -&gt; Rule sts ctx a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo -&gt; ShelleyBase KESPeriod
 </span><a href="Cardano.Protocol.TPraos.OCert.html#kesPeriod"><span class="hs-identifier hs-var">kesPeriod</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621679266020"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679266234"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-90"></span><span>
-</span><span id="line-91"></span><span>    </span><span id="local-6989586621679266014"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266014"><span class="hs-identifier hs-var">maxKESiterations</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BaseM (OCERT crypto) Word64
+</span><span id="line-91"></span><span>    </span><span id="local-6989586621679266228"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679266228"><span class="hs-identifier hs-var">maxKESiterations</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BaseM (OCERT crypto) Word64
 -&gt; Rule (OCERT crypto) 'Transition Word64
 forall sts a (ctx :: RuleType).
 STS sts =&gt;
@@ -233,10 +233,10 @@ forall (m :: * -&gt; *) r a. Monad m =&gt; (r -&gt; a) -&gt; ReaderT r m a
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var hs-var">maxKESEvo</span></a></span><span>
 </span><span id="line-92"></span><span>
 </span><span id="line-93"></span><span>    </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266029"><span class="hs-identifier hs-var">c0</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod -&gt; KESPeriod -&gt; Bool
+</span><a href="#local-6989586621679266243"><span class="hs-identifier hs-var">c0</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod -&gt; KESPeriod -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266018"><span class="hs-identifier hs-var">kp</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679266232"><span class="hs-identifier hs-var">kp</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 -&gt; PredicateFailure (OCERT crypto)
 -&gt; Rule (OCERT crypto) 'Transition ()
 forall sts (ctx :: RuleType).
@@ -245,18 +245,18 @@ Bool -&gt; PredicateFailure sts -&gt; Rule sts ctx ()
 forall crypto.
 KESPeriod -&gt; KESPeriod -&gt; OcertPredicateFailure crypto
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#KESBeforeStartOCERT"><span class="hs-identifier hs-var">KESBeforeStartOCERT</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266029"><span class="hs-identifier hs-var">c0</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266018"><span class="hs-identifier hs-var">kp</span></a></span><span>
+</span><a href="#local-6989586621679266243"><span class="hs-identifier hs-var">c0</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
+</span><a href="#local-6989586621679266232"><span class="hs-identifier hs-var">kp</span></a></span><span>
 </span><span id="line-94"></span><span>    </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266017"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
+</span><a href="#local-6989586621679266231"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266027"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679266241"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromIntegral</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266014"><span class="hs-identifier hs-var">maxKESiterations</span></a></span><span>
+</span><a href="#local-6989586621679266228"><span class="hs-identifier hs-var">maxKESiterations</span></a></span><span>
 </span><span id="line-95"></span><span>      </span><span class="annot"><span class="annottext">Bool
 -&gt; PredicateFailure (OCERT crypto)
 -&gt; Rule (OCERT crypto) 'Transition ()
@@ -266,20 +266,20 @@ Bool -&gt; PredicateFailure sts -&gt; Rule sts ctx ()
 forall crypto.
 KESPeriod -&gt; KESPeriod -&gt; Word64 -&gt; OcertPredicateFailure crypto
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#KESAfterEndOCERT"><span class="hs-identifier hs-var">KESAfterEndOCERT</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266018"><span class="hs-identifier hs-var">kp</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266029"><span class="hs-identifier hs-var">c0</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266014"><span class="hs-identifier hs-var">maxKESiterations</span></a></span><span>
+</span><a href="#local-6989586621679266232"><span class="hs-identifier hs-var">kp</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
+</span><a href="#local-6989586621679266243"><span class="hs-identifier hs-var">c0</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679266228"><span class="hs-identifier hs-var">maxKESiterations</span></a></span><span>
 </span><span id="line-96"></span><span>
-</span><span id="line-97"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679266008"><span class="annot"><span class="annottext">t :: Word
-</span><a href="#local-6989586621679266008"><span class="hs-identifier hs-var hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266017"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
+</span><span id="line-97"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679266222"><span class="annot"><span class="annottext">t :: Word
+</span><a href="#local-6989586621679266222"><span class="hs-identifier hs-var hs-var">t</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266231"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266027"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266017"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
+</span><a href="#local-6989586621679266241"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266231"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word -&gt; Word -&gt; Word
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266027"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266241"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Word
 </span><span class="hs-number">0</span></span><span> </span><span class="hs-comment">-- this is required to prevent an</span><span>
 </span><span id="line-98"></span><span>    </span><span class="hs-comment">-- arithmetic underflow, in the</span><span>
 </span><span id="line-99"></span><span>    </span><span class="hs-comment">-- case of kp_ &lt; c0_ we get the</span><span>
@@ -294,7 +294,7 @@ forall crypto a (kd :: KeyRole).
 (Crypto crypto, Signable (DSIGN crypto) a) =&gt;
 VKey kd crypto -&gt; a -&gt; SignedDSIGN crypto a -&gt; Bool
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">verifySignedDSIGN</span></a></span><span> </span><span class="annot"><span class="annottext">VKey 'BlockIssuer crypto
-</span><a href="#local-6989586621679266024"><span class="hs-identifier hs-var">vkcold</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">OCert crypto -&gt; OCertSignable crypto
+</span><a href="#local-6989586621679266238"><span class="hs-identifier hs-var">vkcold</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">OCert crypto -&gt; OCertSignable crypto
 forall crypto. OCert crypto -&gt; OCertSignable crypto
 </span><a href="Cardano.Protocol.TPraos.OCert.html#ocertToSignable"><span class="hs-identifier hs-var">ocertToSignable</span></a></span><span> </span><span class="annot"><span class="annottext">(OCert crypto -&gt; OCertSignable crypto)
 -&gt; OCert crypto -&gt; OCertSignable crypto
@@ -302,8 +302,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto -&gt; OCert crypto
 forall crypto. BHBody crypto -&gt; OCert crypto
 </span><a href="Cardano.Protocol.TPraos.BHeader.html#bheaderOCert"><span class="hs-identifier hs-var hs-var">bheaderOCert</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto
-</span><a href="#local-6989586621679266034"><span class="hs-identifier hs-var">bhb</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">SignedDSIGN crypto (OCertSignable crypto)
-</span><a href="#local-6989586621679266026"><span class="hs-identifier hs-var">tau</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679266248"><span class="hs-identifier hs-var">bhb</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">SignedDSIGN crypto (OCertSignable crypto)
+</span><a href="#local-6989586621679266240"><span class="hs-identifier hs-var">tau</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 -&gt; PredicateFailure (OCERT crypto)
 -&gt; Rule (OCERT crypto) 'Transition ()
 forall sts (ctx :: RuleType).
@@ -311,8 +311,8 @@ Bool -&gt; PredicateFailure sts -&gt; Rule sts ctx ()
 </span><a href="../../../../small-steps/html/src"><span class="hs-operator hs-var">?!</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; KESPeriod -&gt; OcertPredicateFailure crypto
 forall crypto. Word64 -&gt; KESPeriod -&gt; OcertPredicateFailure crypto
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#InvalidSignatureOCERT"><span class="hs-identifier hs-var">InvalidSignatureOCERT</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266030"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
-</span><a href="#local-6989586621679266029"><span class="hs-identifier hs-var">c0</span></a></span><span>
+</span><a href="#local-6989586621679266244"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">KESPeriod
+</span><a href="#local-6989586621679266243"><span class="hs-identifier hs-var">c0</span></a></span><span>
 </span><span id="line-104"></span><span>    </span><span class="annot"><span class="annottext">ContextKES (KES crypto)
 -&gt; VerKeyKES crypto
 -&gt; Word
@@ -324,10 +324,10 @@ forall v a.
 ContextKES v
 -&gt; VerKeyKES v -&gt; Word -&gt; a -&gt; SignedKES v a -&gt; Either String ()
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">verifySignedKES</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">VerKeyKES crypto
-</span><a href="#local-6989586621679266031"><span class="hs-identifier hs-var">vk_hot</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266008"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto
-</span><a href="#local-6989586621679266034"><span class="hs-identifier hs-var">bhb</span></a></span><span> </span><span class="annot"><span class="annottext">SignedKES (KES crypto) (BHBody crypto)
-</span><a href="#local-6989586621679266033"><span class="hs-identifier hs-var">sigma</span></a></span><span> </span><span class="annot"><span class="annottext">Either String ()
+</span><a href="#local-6989586621679266245"><span class="hs-identifier hs-var">vk_hot</span></a></span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266222"><span class="hs-identifier hs-var">t</span></a></span><span> </span><span class="annot"><span class="annottext">BHBody crypto
+</span><a href="#local-6989586621679266248"><span class="hs-identifier hs-var">bhb</span></a></span><span> </span><span class="annot"><span class="annottext">SignedKES (KES crypto) (BHBody crypto)
+</span><a href="#local-6989586621679266247"><span class="hs-identifier hs-var">sigma</span></a></span><span> </span><span class="annot"><span class="annottext">Either String ()
 -&gt; (String -&gt; PredicateFailure (OCERT crypto))
 -&gt; Rule (OCERT crypto) 'Transition ()
 forall e sts (ctx :: RuleType).
@@ -336,9 +336,9 @@ Either e () -&gt; (e -&gt; PredicateFailure sts) -&gt; Rule sts ctx ()
 forall crypto.
 Word -&gt; Word -&gt; Word -&gt; String -&gt; OcertPredicateFailure crypto
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#InvalidKesSignatureOCERT"><span class="hs-identifier hs-var">InvalidKesSignatureOCERT</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266017"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266027"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="annot"><span class="annottext">Word
-</span><a href="#local-6989586621679266008"><span class="hs-identifier hs-var">t</span></a></span><span>
+</span><a href="#local-6989586621679266231"><span class="hs-identifier hs-var">kp_</span></a></span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266241"><span class="hs-identifier hs-var">c0_</span></a></span><span> </span><span class="annot"><span class="annottext">Word
+</span><a href="#local-6989586621679266222"><span class="hs-identifier hs-var">t</span></a></span><span>
 </span><span id="line-105"></span><span>
 </span><span id="line-106"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">OCertEnv crypto
 -&gt; Map (KeyHash 'BlockIssuer crypto) Word64
@@ -351,10 +351,10 @@ OCertEnv crypto
 -&gt; Maybe Word64
 </span><a href="Cardano.Protocol.TPraos.OCert.html#currentIssueNo"><span class="hs-identifier hs-var">currentIssueNo</span></a></span><span> </span><span class="annot"><span class="annottext">Environment (OCERT crypto)
 OCertEnv crypto
-</span><a href="#local-6989586621679266037"><span class="hs-identifier hs-var">env</span></a></span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
+</span><a href="#local-6989586621679266251"><span class="hs-identifier hs-var">env</span></a></span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 State (OCERT crypto)
-</span><a href="#local-6989586621679266036"><span class="hs-identifier hs-var">cs</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash 'BlockIssuer crypto
-</span><a href="#local-6989586621679266022"><span class="hs-identifier hs-var">hk</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679266250"><span class="hs-identifier hs-var">cs</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash 'BlockIssuer crypto
+</span><a href="#local-6989586621679266236"><span class="hs-identifier hs-var">hk</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-107"></span><span>      </span><span class="annot"><span class="annottext">Maybe Word64
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-108"></span><span>        </span><span class="annot"><span class="annottext">PredicateFailure (OCERT crypto)
@@ -370,21 +370,21 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall crypto.
 KeyHash 'BlockIssuer crypto -&gt; OcertPredicateFailure crypto
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#NoCounterForKeyHashOCERT"><span class="hs-identifier hs-var">NoCounterForKeyHashOCERT</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash 'BlockIssuer crypto
-</span><a href="#local-6989586621679266022"><span class="hs-identifier hs-var">hk</span></a></span><span>
+</span><a href="#local-6989586621679266236"><span class="hs-identifier hs-var">hk</span></a></span><span>
 </span><span id="line-109"></span><span>        </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 -&gt; F (Clause (OCERT crypto) 'Transition)
      (Map (KeyHash 'BlockIssuer crypto) Word64)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 State (OCERT crypto)
-</span><a href="#local-6989586621679266036"><span class="hs-identifier hs-var">cs</span></a></span><span>
-</span><span id="line-110"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679266001"><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266001"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="#local-6989586621679266250"><span class="hs-identifier hs-var">cs</span></a></span><span>
+</span><span id="line-110"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679266215"><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679266215"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-111"></span><span>        </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266001"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Bool
+</span><a href="#local-6989586621679266215"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266030"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679266244"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 -&gt; PredicateFailure (OCERT crypto)
 -&gt; Rule (OCERT crypto) 'Transition ()
 forall sts (ctx :: RuleType).
@@ -392,8 +392,8 @@ Bool -&gt; PredicateFailure sts -&gt; Rule sts ctx ()
 </span><a href="../../../../small-steps/html/src"><span class="hs-operator hs-var">?!</span></a></span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; Word64 -&gt; OcertPredicateFailure crypto
 forall crypto. Word64 -&gt; Word64 -&gt; OcertPredicateFailure crypto
 </span><a href="Cardano.Protocol.TPraos.Rules.OCert.html#CounterTooSmallOCERT"><span class="hs-identifier hs-var">CounterTooSmallOCERT</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266001"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266030"><span class="hs-identifier hs-var">n</span></a></span><span>
+</span><a href="#local-6989586621679266215"><span class="hs-identifier hs-var">m</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679266244"><span class="hs-identifier hs-var">n</span></a></span><span>
 </span><span id="line-112"></span><span>        </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 -&gt; F (Clause (OCERT crypto) 'Transition)
      (Map (KeyHash 'BlockIssuer crypto) Word64)
@@ -403,7 +403,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 forall s t. Embed s t =&gt; Exp t -&gt; s
 </span><a href="../../../../set-algebra/html/src"><span class="hs-identifier hs-var">eval</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 State (OCERT crypto)
-</span><a href="#local-6989586621679266036"><span class="hs-identifier hs-var">cs</span></a></span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
+</span><a href="#local-6989586621679266250"><span class="hs-identifier hs-var">cs</span></a></span><span> </span><span class="annot"><span class="annottext">Map (KeyHash 'BlockIssuer crypto) Word64
 -&gt; Exp (Single (KeyHash 'BlockIssuer crypto) Word64)
 -&gt; Exp (Map (KeyHash 'BlockIssuer crypto) Word64)
 forall k s1 (f :: * -&gt; * -&gt; *) v s2 (g :: * -&gt; * -&gt; *).
@@ -413,6 +413,6 @@ s1 -&gt; s2 -&gt; Exp (f k v)
 -&gt; Word64 -&gt; Exp (Single (KeyHash 'BlockIssuer crypto) Word64)
 forall k v. Ord k =&gt; k -&gt; v -&gt; Exp (Single k v)
 </span><a href="../../../../set-algebra/html/src"><span class="hs-identifier hs-var">singleton</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash 'BlockIssuer crypto
-</span><a href="#local-6989586621679266022"><span class="hs-identifier hs-var">hk</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
-</span><a href="#local-6989586621679266030"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679266236"><span class="hs-identifier hs-var">hk</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
+</span><a href="#local-6989586621679266244"><span class="hs-identifier hs-var">n</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-113"></span></pre></body></html>

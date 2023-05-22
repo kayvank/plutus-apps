@@ -51,8 +51,8 @@
 </span><span id="line-51"></span><span>
 </span><span id="line-52"></span><span class="annot"><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo"><span class="hs-identifier hs-type">getTypeInfo</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#Connection"><span class="hs-identifier hs-type">Connection</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../postgresql-libpq/html/src"><span class="hs-identifier hs-type">PQ.Oid</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#TypeInfo"><span class="hs-identifier hs-type">TypeInfo</span></a></span><span>
 </span><span id="line-53"></span><span id="getTypeInfo"><span class="annot"><span class="annottext">getTypeInfo :: Connection -&gt; Oid -&gt; IO TypeInfo
-</span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo"><span class="hs-identifier hs-var hs-var">getTypeInfo</span></a></span></span><span> </span><span id="local-6989586621679131432"><span class="annot"><span class="annottext">conn :: Connection
-</span><a href="#local-6989586621679131432"><span class="hs-identifier hs-var">conn</span></a></span></span><span class="hs-glyph">@</span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#Connection"><span class="hs-identifier hs-type">Connection</span></a></span><span class="hs-special">{</span><span id="local-6989586621679131428"><span id="local-6989586621679131429"><span id="local-6989586621679131430"><span class="annot"><span class="annottext">IORef Int64
+</span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo"><span class="hs-identifier hs-var hs-var">getTypeInfo</span></a></span></span><span> </span><span id="local-6989586621679131439"><span class="annot"><span class="annottext">conn :: Connection
+</span><a href="#local-6989586621679131439"><span class="hs-identifier hs-var">conn</span></a></span></span><span class="hs-glyph">@</span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#Connection"><span class="hs-identifier hs-type">Connection</span></a></span><span class="hs-special">{</span><span id="local-6989586621679131435"><span id="local-6989586621679131436"><span id="local-6989586621679131437"><span class="annot"><span class="annottext">IORef Int64
 MVar TypeInfoCache
 MVar Connection
 connectionTempNameCounter :: Connection -&gt; IORef Int64
@@ -61,52 +61,52 @@ connectionHandle :: Connection -&gt; MVar Connection
 connectionTempNameCounter :: IORef Int64
 connectionObjects :: MVar TypeInfoCache
 connectionHandle :: MVar Connection
-</span><a href="Database.PostgreSQL.Simple.Internal.html#connectionTempNameCounter"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span><span class="hs-special">}</span><span> </span><span id="local-6989586621679131424"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oid'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Database.PostgreSQL.Simple.Internal.html#connectionTempNameCounter"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span><span class="hs-special">}</span><span> </span><span id="local-6989586621679131431"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131431"><span class="hs-identifier hs-var">oid'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-54"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Oid -&gt; Maybe TypeInfo
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.Static.html#staticTypeInfo"><span class="hs-identifier hs-var">staticTypeInfo</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oid'</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-55"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679131422"><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131422"><span class="hs-identifier hs-var">name'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TypeInfo -&gt; IO TypeInfo
+</span><a href="#local-6989586621679131431"><span class="hs-identifier hs-var">oid'</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-55"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679131429"><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131429"><span class="hs-identifier hs-var">name'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TypeInfo -&gt; IO TypeInfo
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131422"><span class="hs-identifier hs-var">name'</span></a></span><span>
+</span><a href="#local-6989586621679131429"><span class="hs-identifier hs-var">name'</span></a></span><span>
 </span><span id="line-56"></span><span>    </span><span class="annot"><span class="annottext">Maybe TypeInfo
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">MVar TypeInfoCache
 -&gt; (TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)) -&gt; IO TypeInfo
 forall a b. MVar a -&gt; (a -&gt; IO (a, b)) -&gt; IO b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">modifyMVar</span></a></span><span> </span><span class="annot"><span class="annottext">MVar TypeInfoCache
-</span><a href="#local-6989586621679131429"><span class="hs-identifier hs-var">connectionObjects</span></a></span><span> </span><span class="annot"><span class="annottext">((TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)) -&gt; IO TypeInfo)
+</span><a href="#local-6989586621679131436"><span class="hs-identifier hs-var">connectionObjects</span></a></span><span> </span><span class="annot"><span class="annottext">((TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)) -&gt; IO TypeInfo)
 -&gt; (TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)) -&gt; IO TypeInfo
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-var">getTypeInfo'</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131432"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oid'</span></a></span><span>
+</span><a href="#local-6989586621679131439"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131431"><span class="hs-identifier hs-var">oid'</span></a></span><span>
 </span><span id="line-57"></span><span>
 </span><span id="line-58"></span><span class="annot"><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-type">getTypeInfo'</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#Connection"><span class="hs-identifier hs-type">Connection</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../postgresql-libpq/html/src"><span class="hs-identifier hs-type">PQ.Oid</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#TypeInfoCache"><span class="hs-identifier hs-type">TypeInfoCache</span></a></span><span>
 </span><span id="line-59"></span><span>             </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#TypeInfoCache"><span class="hs-identifier hs-type">TypeInfoCache</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#TypeInfo"><span class="hs-identifier hs-type">TypeInfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-60"></span><span id="getTypeInfo%27"><span class="annot"><span class="annottext">getTypeInfo' :: Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
-</span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-var hs-var">getTypeInfo'</span></a></span></span><span> </span><span id="local-6989586621679131419"><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span id="local-6989586621679131418"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131418"><span class="hs-identifier hs-var">oid'</span></a></span></span><span> </span><span id="local-6989586621679131417"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-var hs-var">getTypeInfo'</span></a></span></span><span> </span><span id="local-6989586621679131426"><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span id="local-6989586621679131425"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131425"><span class="hs-identifier hs-var">oid'</span></a></span></span><span> </span><span id="local-6989586621679131424"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-61"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Key -&gt; TypeInfoCache -&gt; Maybe TypeInfo
 forall a. Key -&gt; IntMap a -&gt; Maybe a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">IntMap.lookup</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Oid -&gt; Key
 </span><a href="Database.PostgreSQL.Simple.Internal.html#oid2int"><span class="hs-identifier hs-var">oid2int</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131418"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-62"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679131414"><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131414"><span class="hs-identifier hs-var">typeinfo</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
+</span><a href="#local-6989586621679131425"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-62"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679131421"><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131421"><span class="hs-identifier hs-var">typeinfo</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131414"><span class="hs-identifier hs-var">typeinfo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131421"><span class="hs-identifier hs-var">typeinfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-63"></span><span>    </span><span class="annot"><span class="annottext">Maybe TypeInfo
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-64"></span><span>      </span><span id="local-6989586621679131413"><span class="annot"><span class="annottext">[(Oid, Char, Char, ByteString, Oid, Oid)]
-</span><a href="#local-6989586621679131413"><span class="hs-identifier hs-var">names</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection
+</span><span id="line-64"></span><span>      </span><span id="local-6989586621679131420"><span class="annot"><span class="annottext">[(Oid, Char, Char, ByteString, Oid, Oid)]
+</span><a href="#local-6989586621679131420"><span class="hs-identifier hs-var">names</span></a></span></span><span>  </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection
 -&gt; Query
 -&gt; Only Oid
 -&gt; IO [(Oid, Char, Char, ByteString, Oid, Oid)]
@@ -114,19 +114,19 @@ forall q r.
 (ToRow q, FromRow r) =&gt;
 Connection -&gt; Query -&gt; q -&gt; IO [r]
 </span><a href="Database.PostgreSQL.Simple.html#query"><span class="hs-identifier hs-var">query</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Query
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Query
 </span><span class="hs-string">&quot;SELECT oid, typcategory, typdelim, typname,\
                          \ typelem, typrelid\
                          \ FROM pg_type WHERE oid = ?&quot;</span></span><span>
 </span><span id="line-67"></span><span>                           </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Oid -&gt; Only Oid
 forall a. a -&gt; Only a
 </span><a href="../../../../Only/html/src"><span class="hs-identifier hs-var">Only</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131418"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-68"></span><span>      </span><span class="hs-special">(</span><span id="local-6989586621679131410"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131410"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131409"><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131409"><span class="hs-identifier hs-var">typeInfo</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><a href="#local-6989586621679131425"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-68"></span><span>      </span><span class="hs-special">(</span><span id="local-6989586621679131417"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131416"><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131416"><span class="hs-identifier hs-var">typeInfo</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-69"></span><span>          </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">[(Oid, Char, Char, ByteString, Oid, Oid)]
-</span><a href="#local-6989586621679131413"><span class="hs-identifier hs-var">names</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679131420"><span class="hs-identifier hs-var">names</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-70"></span><span>            </span><span class="hs-special">[</span><span class="hs-special">]</span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">((TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo))
@@ -137,26 +137,26 @@ forall a e. Exception e =&gt; e -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">throw</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; SqlError
 </span><a href="Database.PostgreSQL.Simple.Internal.html#fatalError"><span class="hs-identifier hs-var">fatalError</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;invalid type oid&quot;</span></span><span class="hs-special">)</span><span>
-</span><span id="line-71"></span><span>            </span><span class="hs-special">[</span><span class="hs-special">(</span><span id="local-6989586621679131407"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131407"><span class="hs-identifier hs-var">typoid</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131406"><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679131406"><span class="hs-identifier hs-var">typcategory</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131405"><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679131405"><span class="hs-identifier hs-var">typdelim</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131404"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131404"><span class="hs-identifier hs-var">typname</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131403"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131403"><span class="hs-identifier hs-var">typelem_</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131402"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131402"><span class="hs-identifier hs-var">typrelid</span></a></span></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-71"></span><span>            </span><span class="hs-special">[</span><span class="hs-special">(</span><span id="local-6989586621679131414"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131414"><span class="hs-identifier hs-var">typoid</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131413"><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679131413"><span class="hs-identifier hs-var">typcategory</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131412"><span class="annot"><span class="annottext">Char
+</span><a href="#local-6989586621679131412"><span class="hs-identifier hs-var">typdelim</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131411"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679131411"><span class="hs-identifier hs-var">typname</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131410"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131410"><span class="hs-identifier hs-var">typelem_</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131409"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131409"><span class="hs-identifier hs-var">typrelid</span></a></span></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-72"></span><span>               </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Char
-</span><a href="#local-6989586621679131406"><span class="hs-identifier hs-var">typcategory</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679131413"><span class="hs-identifier hs-var">typcategory</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-73"></span><span>                 </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'A'</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-74"></span><span>                   </span><span class="hs-special">(</span><span id="local-6989586621679131401"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131401"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131400"><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131400"><span class="hs-identifier hs-var">typelem</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
+</span><span id="line-74"></span><span>                   </span><span class="hs-special">(</span><span id="local-6989586621679131408"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131408"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131407"><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131407"><span class="hs-identifier hs-var">typelem</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-var">getTypeInfo'</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131403"><span class="hs-identifier hs-var">typelem_</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span><span>
-</span><span id="line-75"></span><span>                   </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131399"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
-</span><a href="#local-6989586621679131399"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Array :: Oid -&gt; Char -&gt; Char -&gt; ByteString -&gt; TypeInfo -&gt; TypeInfo
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131410"><span class="hs-identifier hs-var">typelem_</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span><span>
+</span><span id="line-75"></span><span>                   </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131406"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
+</span><a href="#local-6989586621679131406"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Array :: Oid -&gt; Char -&gt; Char -&gt; ByteString -&gt; TypeInfo -&gt; TypeInfo
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#Array"><span class="hs-identifier hs-type">Array</span></a></span><span class="hs-special">{</span><span class="annot"><span class="annottext">Char
 ByteString
 Oid
@@ -178,38 +178,38 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; (TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131401"><span class="hs-identifier hs-var">oidmap'</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131399"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131408"><span class="hs-identifier hs-var">oidmap'</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131406"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-77"></span><span>                 </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'R'</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-78"></span><span>                   </span><span id="local-6989586621679131391"><span class="annot"><span class="annottext">[Only Oid]
-</span><a href="#local-6989586621679131391"><span class="hs-identifier hs-var">rngsubtypeOids</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Query -&gt; Only Oid -&gt; IO [Only Oid]
+</span><span id="line-78"></span><span>                   </span><span id="local-6989586621679131398"><span class="annot"><span class="annottext">[Only Oid]
+</span><a href="#local-6989586621679131398"><span class="hs-identifier hs-var">rngsubtypeOids</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Query -&gt; Only Oid -&gt; IO [Only Oid]
 forall q r.
 (ToRow q, FromRow r) =&gt;
 Connection -&gt; Query -&gt; q -&gt; IO [r]
 </span><a href="Database.PostgreSQL.Simple.html#query"><span class="hs-identifier hs-var">query</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Query
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Query
 </span><span class="hs-string">&quot;SELECT rngsubtype\
                                                \ FROM pg_range\
                                                \ WHERE rngtypid = ?&quot;</span></span><span>
 </span><span id="line-81"></span><span>                                                </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Oid -&gt; Only Oid
 forall a. a -&gt; Only a
 </span><a href="../../../../Only/html/src"><span class="hs-identifier hs-var">Only</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131418"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131425"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-82"></span><span>                   </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">[Only Oid]
-</span><a href="#local-6989586621679131391"><span class="hs-identifier hs-var">rngsubtypeOids</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-83"></span><span>                     </span><span class="hs-special">[</span><span class="annot"><a href="../../../../Only/html/src"><span class="hs-identifier hs-type">Only</span></a></span><span> </span><span id="local-6989586621679131390"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131390"><span class="hs-identifier hs-var">rngsubtype_</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-84"></span><span>                        </span><span class="hs-special">(</span><span id="local-6989586621679131389"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131389"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131388"><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131388"><span class="hs-identifier hs-var">rngsubtype</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><a href="#local-6989586621679131398"><span class="hs-identifier hs-var">rngsubtypeOids</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-83"></span><span>                     </span><span class="hs-special">[</span><span class="annot"><a href="../../../../Only/html/src"><span class="hs-identifier hs-type">Only</span></a></span><span> </span><span id="local-6989586621679131397"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131397"><span class="hs-identifier hs-var">rngsubtype_</span></a></span></span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-84"></span><span>                        </span><span class="hs-special">(</span><span id="local-6989586621679131396"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131396"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131395"><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131395"><span class="hs-identifier hs-var">rngsubtype</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-85"></span><span>                            </span><span class="annot"><span class="annottext">Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-var">getTypeInfo'</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131390"><span class="hs-identifier hs-var">rngsubtype_</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span><span>
-</span><span id="line-86"></span><span>                        </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131387"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
-</span><a href="#local-6989586621679131387"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Range :: Oid -&gt; Char -&gt; Char -&gt; ByteString -&gt; TypeInfo -&gt; TypeInfo
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131397"><span class="hs-identifier hs-var">rngsubtype_</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span><span>
+</span><span id="line-86"></span><span>                        </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131394"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
+</span><a href="#local-6989586621679131394"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Range :: Oid -&gt; Char -&gt; Char -&gt; ByteString -&gt; TypeInfo -&gt; TypeInfo
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#Range"><span class="hs-identifier hs-type">Range</span></a></span><span class="hs-special">{</span><span class="annot"><span class="annottext">Char
 ByteString
 Oid
@@ -231,8 +231,8 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; (TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131389"><span class="hs-identifier hs-var">oidmap'</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131387"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131396"><span class="hs-identifier hs-var">oidmap'</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131394"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-88"></span><span>                     </span><span class="annot"><span class="annottext">[Only Oid]
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String -&gt; IO (TypeInfoCache, TypeInfo)
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
@@ -240,13 +240,13 @@ forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><span class="hs-string">&quot;range subtype query failed to return exactly one result&quot;</span></span><span>
 </span><span id="line-89"></span><span>                 </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'C'</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-90"></span><span>                   </span><span id="local-6989586621679131384"><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131384"><span class="hs-identifier hs-var">cols</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Query -&gt; Only Oid -&gt; IO [(ByteString, Oid)]
+</span><span id="line-90"></span><span>                   </span><span id="local-6989586621679131391"><span class="annot"><span class="annottext">[(ByteString, Oid)]
+</span><a href="#local-6989586621679131391"><span class="hs-identifier hs-var">cols</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Query -&gt; Only Oid -&gt; IO [(ByteString, Oid)]
 forall q r.
 (ToRow q, FromRow r) =&gt;
 Connection -&gt; Query -&gt; q -&gt; IO [r]
 </span><a href="Database.PostgreSQL.Simple.html#query"><span class="hs-identifier hs-var">query</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Query
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Query
 </span><span class="hs-string">&quot;SELECT attname, atttypid\
                                      \ FROM pg_attribute\
                                      \ WHERE attrelid = ?\
@@ -256,9 +256,9 @@ Connection -&gt; Query -&gt; q -&gt; IO [r]
 </span><span id="line-96"></span><span>                                      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Oid -&gt; Only Oid
 forall a. a -&gt; Only a
 </span><a href="../../../../Only/html/src"><span class="hs-identifier hs-var">Only</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131402"><span class="hs-identifier hs-var">typrelid</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-97"></span><span>                   </span><span id="local-6989586621679131383"><span class="annot"><span class="annottext">IOVector Attribute
-</span><a href="#local-6989586621679131383"><span class="hs-identifier hs-var">vec</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Key -&gt; IO (IOVector Attribute)
+</span><a href="#local-6989586621679131409"><span class="hs-identifier hs-var">typrelid</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-97"></span><span>                   </span><span id="local-6989586621679131390"><span class="annot"><span class="annottext">IOVector Attribute
+</span><a href="#local-6989586621679131390"><span class="hs-identifier hs-var">vec</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Key -&gt; IO (IOVector Attribute)
 forall (m :: * -&gt; *) a.
 PrimMonad m =&gt;
 Key -&gt; m (MVector (PrimState m) a)
@@ -267,23 +267,23 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)] -&gt; Key
 forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Key
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">length</span></a></span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131384"><span class="hs-identifier hs-var">cols</span></a></span><span>
-</span><span id="line-98"></span><span>                   </span><span class="hs-special">(</span><span id="local-6989586621679131380"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131380"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131379"><span class="annot"><span class="annottext">Vector Attribute
-</span><a href="#local-6989586621679131379"><span class="hs-identifier hs-var">attributes</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679131391"><span class="hs-identifier hs-var">cols</span></a></span><span>
+</span><span id="line-98"></span><span>                   </span><span class="hs-special">(</span><span id="local-6989586621679131387"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131387"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131386"><span class="annot"><span class="annottext">Vector Attribute
+</span><a href="#local-6989586621679131386"><span class="hs-identifier hs-var">attributes</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection
 -&gt; [(ByteString, Oid)]
 -&gt; TypeInfoCache
 -&gt; IOVector Attribute
 -&gt; Key
 -&gt; IO (TypeInfoCache, Vector Attribute)
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getAttInfos"><span class="hs-identifier hs-var">getAttInfos</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131419"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131384"><span class="hs-identifier hs-var">cols</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span><span> </span><span class="annot"><span class="annottext">IOVector Attribute
-</span><a href="#local-6989586621679131383"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="annot"><span class="annottext">Key
+</span><a href="#local-6989586621679131426"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)]
+</span><a href="#local-6989586621679131391"><span class="hs-identifier hs-var">cols</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span><span> </span><span class="annot"><span class="annottext">IOVector Attribute
+</span><a href="#local-6989586621679131390"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-number">0</span></span><span>
-</span><span id="line-99"></span><span>                   </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131377"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
-</span><a href="#local-6989586621679131377"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Composite :: Oid
+</span><span id="line-99"></span><span>                   </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131384"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
+</span><a href="#local-6989586621679131384"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Composite :: Oid
 -&gt; Char
 -&gt; Char
 -&gt; ByteString
@@ -313,12 +313,12 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; (TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131380"><span class="hs-identifier hs-var">oidmap'</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131377"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131387"><span class="hs-identifier hs-var">oidmap'</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131384"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-101"></span><span>                 </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-102"></span><span>                   </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131373"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
-</span><a href="#local-6989586621679131373"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Basic :: Oid -&gt; Char -&gt; Char -&gt; ByteString -&gt; TypeInfo
+</span><span id="line-102"></span><span>                   </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131380"><span class="annot"><span class="annottext">typeInfo :: TypeInfo
+</span><a href="#local-6989586621679131380"><span class="hs-identifier hs-var hs-var">typeInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Basic :: Oid -&gt; Char -&gt; Char -&gt; ByteString -&gt; TypeInfo
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#Basic"><span class="hs-identifier hs-type">Basic</span></a></span><span class="hs-special">{</span><span class="annot"><span class="annottext">Char
 ByteString
 Oid
@@ -337,8 +337,8 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; (TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131373"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131424"><span class="hs-identifier hs-var">oidmap</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131380"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-104"></span><span>            </span><span class="annot"><span class="annottext">[(Oid, Char, Char, ByteString, Oid, Oid)]
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String -&gt; IO (TypeInfoCache, TypeInfo)
 forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
@@ -346,22 +346,22 @@ forall (m :: * -&gt; *) a. MonadFail m =&gt; String -&gt; m a
 </span><span class="hs-string">&quot;typename query returned more than one result&quot;</span></span><span>
 </span><span id="line-105"></span><span>                   </span><span class="hs-comment">-- oid is a primary key,  so the query should</span><span>
 </span><span id="line-106"></span><span>                   </span><span class="hs-comment">-- never return more than one result</span><span>
-</span><span id="line-107"></span><span>      </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131371"><span class="annot"><span class="annottext">oidmap'' :: TypeInfoCache
-</span><a href="#local-6989586621679131371"><span class="hs-identifier hs-var hs-var">oidmap''</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Key -&gt; TypeInfo -&gt; TypeInfoCache -&gt; TypeInfoCache
+</span><span id="line-107"></span><span>      </span><span class="hs-keyword">let</span><span> </span><span class="hs-glyph">!</span><span id="local-6989586621679131378"><span class="annot"><span class="annottext">oidmap'' :: TypeInfoCache
+</span><a href="#local-6989586621679131378"><span class="hs-identifier hs-var hs-var">oidmap''</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Key -&gt; TypeInfo -&gt; TypeInfoCache -&gt; TypeInfoCache
 forall a. Key -&gt; a -&gt; IntMap a -&gt; IntMap a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">IntMap.insert</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Oid -&gt; Key
 </span><a href="Database.PostgreSQL.Simple.Internal.html#oid2int"><span class="hs-identifier hs-var">oid2int</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131418"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131409"><span class="hs-identifier hs-var">typeInfo</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131410"><span class="hs-identifier hs-var">oidmap'</span></a></span><span>
+</span><a href="#local-6989586621679131425"><span class="hs-identifier hs-var">oid'</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131416"><span class="hs-identifier hs-var">typeInfo</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131417"><span class="hs-identifier hs-var">oidmap'</span></a></span><span>
 </span><span id="line-108"></span><span>      </span><span class="annot"><span class="annottext">(TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">((TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo))
 -&gt; (TypeInfoCache, TypeInfo) -&gt; IO (TypeInfoCache, TypeInfo)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131371"><span class="hs-identifier hs-var">oidmap''</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131409"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679131378"><span class="hs-identifier hs-var">oidmap''</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131416"><span class="hs-identifier hs-var">typeInfo</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-109"></span><span>
 </span><span id="line-110"></span><span class="annot"><a href="Database.PostgreSQL.Simple.TypeInfo.html#getAttInfos"><span class="hs-identifier hs-type">getAttInfos</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#Connection"><span class="hs-identifier hs-type">Connection</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">B.ByteString</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../postgresql-libpq/html/src"><span class="hs-identifier hs-type">PQ.Oid</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#TypeInfoCache"><span class="hs-identifier hs-type">TypeInfoCache</span></a></span><span>
 </span><span id="line-111"></span><span>            </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../vector/html/src"><span class="hs-identifier hs-type">MV.IOVector</span></a></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#Attribute"><span class="hs-identifier hs-type">Attribute</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
@@ -372,23 +372,23 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; IOVector Attribute
 -&gt; Key
 -&gt; IO (TypeInfoCache, Vector Attribute)
-</span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getAttInfos"><span class="hs-identifier hs-var hs-var">getAttInfos</span></a></span></span><span> </span><span id="local-6989586621679131369"><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131369"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span id="local-6989586621679131368"><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131368"><span class="hs-identifier hs-var">cols</span></a></span></span><span> </span><span id="local-6989586621679131367"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131367"><span class="hs-identifier hs-var">oidmap</span></a></span></span><span> </span><span id="local-6989586621679131366"><span class="annot"><span class="annottext">IOVector Attribute
-</span><a href="#local-6989586621679131366"><span class="hs-identifier hs-var">vec</span></a></span></span><span> </span><span id="local-6989586621679131365"><span class="annot"><span class="annottext">Key
-</span><a href="#local-6989586621679131365"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getAttInfos"><span class="hs-identifier hs-var hs-var">getAttInfos</span></a></span></span><span> </span><span id="local-6989586621679131376"><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679131376"><span class="hs-identifier hs-var">conn</span></a></span></span><span> </span><span id="local-6989586621679131375"><span class="annot"><span class="annottext">[(ByteString, Oid)]
+</span><a href="#local-6989586621679131375"><span class="hs-identifier hs-var">cols</span></a></span></span><span> </span><span id="local-6989586621679131374"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131374"><span class="hs-identifier hs-var">oidmap</span></a></span></span><span> </span><span id="local-6989586621679131373"><span class="annot"><span class="annottext">IOVector Attribute
+</span><a href="#local-6989586621679131373"><span class="hs-identifier hs-var">vec</span></a></span></span><span> </span><span id="local-6989586621679131372"><span class="annot"><span class="annottext">Key
+</span><a href="#local-6989586621679131372"><span class="hs-identifier hs-var">n</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-114"></span><span>    </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131368"><span class="hs-identifier hs-var">cols</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679131375"><span class="hs-identifier hs-var">cols</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-115"></span><span>      </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-116"></span><span>        </span><span class="hs-glyph">!</span><span id="local-6989586621679131364"><span class="annot"><span class="annottext">Vector Attribute
-</span><a href="#local-6989586621679131364"><span class="hs-identifier hs-var">attributes</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">MVector (PrimState IO) Attribute -&gt; IO (Vector Attribute)
+</span><span id="line-116"></span><span>        </span><span class="hs-glyph">!</span><span id="local-6989586621679131371"><span class="annot"><span class="annottext">Vector Attribute
+</span><a href="#local-6989586621679131371"><span class="hs-identifier hs-var">attributes</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">MVector (PrimState IO) Attribute -&gt; IO (Vector Attribute)
 forall (m :: * -&gt; *) a.
 PrimMonad m =&gt;
 MVector (PrimState m) a -&gt; m (Vector a)
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">V.unsafeFreeze</span></a></span><span> </span><span class="annot"><span class="annottext">IOVector Attribute
 MVector (PrimState IO) Attribute
-</span><a href="#local-6989586621679131366"><span class="hs-identifier hs-var">vec</span></a></span><span>
+</span><a href="#local-6989586621679131373"><span class="hs-identifier hs-var">vec</span></a></span><span>
 </span><span id="line-117"></span><span>        </span><span class="annot"><span class="annottext">(TypeInfoCache, Vector Attribute)
 -&gt; IO (TypeInfoCache, Vector Attribute)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -398,27 +398,27 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; IO (TypeInfoCache, Vector Attribute)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131367"><span class="hs-identifier hs-var">oidmap</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Vector Attribute
-</span><a href="#local-6989586621679131364"><span class="hs-identifier hs-var">attributes</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-118"></span><span>      </span><span class="hs-special">(</span><span class="hs-special">(</span><span id="local-6989586621679131362"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131362"><span class="hs-identifier hs-var">attname</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131361"><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131361"><span class="hs-identifier hs-var">attTypeOid</span></a></span></span><span class="hs-special">)</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-type">:</span></a></span><span id="local-6989586621679131360"><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131360"><span class="hs-identifier hs-var">xs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-119"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621679131359"><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131359"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131358"><span class="annot"><span class="annottext">TypeInfo
-</span><a href="#local-6989586621679131358"><span class="hs-identifier hs-var">atttype</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
+</span><a href="#local-6989586621679131374"><span class="hs-identifier hs-var">oidmap</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Vector Attribute
+</span><a href="#local-6989586621679131371"><span class="hs-identifier hs-var">attributes</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-118"></span><span>      </span><span class="hs-special">(</span><span class="hs-special">(</span><span id="local-6989586621679131369"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679131369"><span class="hs-identifier hs-var">attname</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131368"><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131368"><span class="hs-identifier hs-var">attTypeOid</span></a></span></span><span class="hs-special">)</span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-type">:</span></a></span><span id="local-6989586621679131367"><span class="annot"><span class="annottext">[(ByteString, Oid)]
+</span><a href="#local-6989586621679131367"><span class="hs-identifier hs-var">xs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-119"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621679131366"><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131366"><span class="hs-identifier hs-var">oidmap'</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131365"><span class="annot"><span class="annottext">TypeInfo
+</span><a href="#local-6989586621679131365"><span class="hs-identifier hs-var">atttype</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Oid -&gt; TypeInfoCache -&gt; IO (TypeInfoCache, TypeInfo)
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getTypeInfo%27"><span class="hs-identifier hs-var">getTypeInfo'</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131369"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
-</span><a href="#local-6989586621679131361"><span class="hs-identifier hs-var">attTypeOid</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131367"><span class="hs-identifier hs-var">oidmap</span></a></span><span>
+</span><a href="#local-6989586621679131376"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Oid
+</span><a href="#local-6989586621679131368"><span class="hs-identifier hs-var">attTypeOid</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131374"><span class="hs-identifier hs-var">oidmap</span></a></span><span>
 </span><span id="line-120"></span><span>        </span><span class="annot"><span class="annottext">MVector (PrimState IO) Attribute -&gt; Key -&gt; Attribute -&gt; IO ()
 forall (m :: * -&gt; *) a.
 PrimMonad m =&gt;
 MVector (PrimState m) a -&gt; Key -&gt; a -&gt; m ()
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">MV.write</span></a></span><span> </span><span class="annot"><span class="annottext">IOVector Attribute
 MVector (PrimState IO) Attribute
-</span><a href="#local-6989586621679131366"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="annot"><span class="annottext">Key
-</span><a href="#local-6989586621679131365"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">(Attribute -&gt; IO ()) -&gt; Attribute -&gt; IO ()
+</span><a href="#local-6989586621679131373"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="annot"><span class="annottext">Key
+</span><a href="#local-6989586621679131372"><span class="hs-identifier hs-var">n</span></a></span><span> </span><span class="annot"><span class="annottext">(Attribute -&gt; IO ()) -&gt; Attribute -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$!</span></a></span><span> </span><span class="annot"><span class="annottext">Attribute :: ByteString -&gt; TypeInfo -&gt; Attribute
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.Types.html#Attribute"><span class="hs-identifier hs-type">Attribute</span></a></span><span class="hs-special">{</span><span class="annot"><span class="annottext">ByteString
@@ -435,11 +435,11 @@ attname :: ByteString
 -&gt; Key
 -&gt; IO (TypeInfoCache, Vector Attribute)
 </span><a href="Database.PostgreSQL.Simple.TypeInfo.html#getAttInfos"><span class="hs-identifier hs-var">getAttInfos</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679131369"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)]
-</span><a href="#local-6989586621679131360"><span class="hs-identifier hs-var">xs</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
-</span><a href="#local-6989586621679131359"><span class="hs-identifier hs-var">oidmap'</span></a></span><span> </span><span class="annot"><span class="annottext">IOVector Attribute
-</span><a href="#local-6989586621679131366"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Key
-</span><a href="#local-6989586621679131365"><span class="hs-identifier hs-var">n</span></a></span><span class="annot"><span class="annottext">Key -&gt; Key -&gt; Key
+</span><a href="#local-6989586621679131376"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">[(ByteString, Oid)]
+</span><a href="#local-6989586621679131367"><span class="hs-identifier hs-var">xs</span></a></span><span> </span><span class="annot"><span class="annottext">TypeInfoCache
+</span><a href="#local-6989586621679131366"><span class="hs-identifier hs-var">oidmap'</span></a></span><span> </span><span class="annot"><span class="annottext">IOVector Attribute
+</span><a href="#local-6989586621679131373"><span class="hs-identifier hs-var">vec</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Key
+</span><a href="#local-6989586621679131372"><span class="hs-identifier hs-var">n</span></a></span><span class="annot"><span class="annottext">Key -&gt; Key -&gt; Key
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span class="annot"><span class="annottext">Key
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span>

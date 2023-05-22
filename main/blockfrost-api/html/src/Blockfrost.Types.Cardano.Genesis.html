@@ -12,7 +12,7 @@
 </span><span id="line-12"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.html"><span class="hs-identifier">Blockfrost.Types.Shared</span></a></span><span>
 </span><span id="line-13"></span><span>
 </span><span id="line-14"></span><span class="hs-comment">-- | Information about blockchain genesis</span><span>
-</span><span id="line-15"></span><span id="local-6989586621681201117"><span id="local-6989586621681201118"></span></span><span class="hs-keyword">data</span><span> </span><span id="Genesis"><span class="annot"><a href="Blockfrost.Types.Cardano.Genesis.html#Genesis"><span class="hs-identifier hs-var">Genesis</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Genesis"><span class="annot"><a href="Blockfrost.Types.Cardano.Genesis.html#Genesis"><span class="hs-identifier hs-var">Genesis</span></a></span></span><span>
+</span><span id="line-15"></span><span id="local-6989586621681201124"><span id="local-6989586621681201125"></span></span><span class="hs-keyword">data</span><span> </span><span id="Genesis"><span class="annot"><a href="Blockfrost.Types.Cardano.Genesis.html#Genesis"><span class="hs-identifier hs-var">Genesis</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Genesis"><span class="annot"><a href="Blockfrost.Types.Cardano.Genesis.html#Genesis"><span class="hs-identifier hs-var">Genesis</span></a></span></span><span>
 </span><span id="line-16"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_genesisActiveSlotsCoefficient"><span class="annot"><span class="annottext">Genesis -&gt; Double
 </span><a href="Blockfrost.Types.Cardano.Genesis.html#_genesisActiveSlotsCoefficient"><span class="hs-identifier hs-var hs-var">_genesisActiveSlotsCoefficient</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Double</span></a></span><span> </span><span class="hs-comment">-- ^ The proportion of slots in which blocks should be issued</span><span>
 </span><span id="line-17"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_genesisUpdateQuorum"><span class="annot"><span class="annottext">Genesis -&gt; Integer
@@ -34,7 +34,7 @@
 </span><span id="line-25"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_genesisSecurityParam"><span class="annot"><span class="annottext">Genesis -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Genesis.html#_genesisSecurityParam"><span class="hs-identifier hs-var hs-var">_genesisSecurityParam</span></a></span></span><span>          </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Security parameter @k@</span><span>
 </span><span id="line-26"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-27"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201100"><span id="local-6989586621681201102"><span id="local-6989586621681201104"><span class="annot"><span class="annottext">Int -&gt; Genesis -&gt; ShowS
+</span><span id="line-27"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201107"><span id="local-6989586621681201109"><span id="local-6989586621681201111"><span class="annot"><span class="annottext">Int -&gt; Genesis -&gt; ShowS
 [Genesis] -&gt; ShowS
 Genesis -&gt; String
 (Int -&gt; Genesis -&gt; ShowS)
@@ -47,7 +47,7 @@ show :: Genesis -&gt; String
 $cshow :: Genesis -&gt; String
 showsPrec :: Int -&gt; Genesis -&gt; ShowS
 $cshowsPrec :: Int -&gt; Genesis -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201095"><span id="local-6989586621681201097"><span class="annot"><span class="annottext">Genesis -&gt; Genesis -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201102"><span id="local-6989586621681201104"><span class="annot"><span class="annottext">Genesis -&gt; Genesis -&gt; Bool
 (Genesis -&gt; Genesis -&gt; Bool)
 -&gt; (Genesis -&gt; Genesis -&gt; Bool) -&gt; Eq Genesis
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -64,7 +64,7 @@ forall a.
 $cto :: forall x. Rep Genesis x -&gt; Genesis
 $cfrom :: forall x. Genesis -&gt; Rep Genesis x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-28"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201087"><span id="local-6989586621681201089"><span class="annot"><span class="annottext">Value -&gt; Parser [Genesis]
+</span><span id="line-28"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201094"><span id="local-6989586621681201096"><span class="annot"><span class="annottext">Value -&gt; Parser [Genesis]
 Value -&gt; Parser Genesis
 (Value -&gt; Parser Genesis)
 -&gt; (Value -&gt; Parser [Genesis]) -&gt; FromJSON Genesis
@@ -74,7 +74,7 @@ parseJSONList :: Value -&gt; Parser [Genesis]
 $cparseJSONList :: Value -&gt; Parser [Genesis]
 parseJSON :: Value -&gt; Parser Genesis
 $cparseJSON :: Value -&gt; Parser Genesis
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201078"><span id="local-6989586621681201080"><span id="local-6989586621681201082"><span id="local-6989586621681201084"><span class="annot"><span class="annottext">[Genesis] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201085"><span id="local-6989586621681201087"><span id="local-6989586621681201089"><span id="local-6989586621681201091"><span class="annot"><span class="annottext">[Genesis] -&gt; Encoding
 [Genesis] -&gt; Value
 Genesis -&gt; Encoding
 Genesis -&gt; Value
@@ -101,7 +101,7 @@ $ctoJSON :: Genesis -&gt; Value
 </span><span id="line-29"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_genesis&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Genesis.html#Genesis"><span class="hs-identifier hs-type">Genesis</span></a></span><span>
 </span><span id="line-30"></span><span>
 </span><span id="line-31"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Genesis.html#Genesis"><span class="hs-identifier hs-type">Genesis</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-32"></span><span>  </span><span id="local-6989586621681201070"><span class="annot"><span class="annottext">toSamples :: Proxy Genesis -&gt; [(Text, Genesis)]
+</span><span id="line-32"></span><span>  </span><span id="local-6989586621681201077"><span class="annot"><span class="annottext">toSamples :: Proxy Genesis -&gt; [(Text, Genesis)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy Genesis
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Genesis -&gt; [(Text, Genesis)]
 forall a. a -&gt; [(Text, a)]

@@ -14,7 +14,7 @@
 </span><span id="line-14"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.html"><span class="hs-identifier">Blockfrost.Types.Shared</span></a></span><span>
 </span><span id="line-15"></span><span>
 </span><span id="line-16"></span><span class="hs-comment">-- | Information about a block</span><span>
-</span><span id="line-17"></span><span id="local-6989586621681201469"><span id="local-6989586621681201470"></span></span><span class="hs-keyword">data</span><span> </span><span id="Block"><span class="annot"><a href="Blockfrost.Types.Cardano.Blocks.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Block"><span class="annot"><a href="Blockfrost.Types.Cardano.Blocks.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span>
+</span><span id="line-17"></span><span id="local-6989586621681201476"><span id="local-6989586621681201477"></span></span><span class="hs-keyword">data</span><span> </span><span id="Block"><span class="annot"><a href="Blockfrost.Types.Cardano.Blocks.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Block"><span class="annot"><a href="Blockfrost.Types.Cardano.Blocks.html#Block"><span class="hs-identifier hs-var">Block</span></a></span></span><span>
 </span><span id="line-18"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_blockTime"><span class="annot"><span class="annottext">Block -&gt; POSIXTime
 </span><a href="Blockfrost.Types.Cardano.Blocks.html#_blockTime"><span class="hs-identifier hs-var hs-var">_blockTime</span></a></span></span><span>          </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../time/html/src"><span class="hs-identifier hs-type">POSIXTime</span></a></span><span> </span><span class="hs-comment">-- ^ Block creation time in UNIX time</span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_blockHeight"><span class="annot"><span class="annottext">Block -&gt; Maybe Integer
@@ -46,7 +46,7 @@
 </span><span id="line-32"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_blockConfirmations"><span class="annot"><span class="annottext">Block -&gt; Integer
 </span><a href="Blockfrost.Types.Cardano.Blocks.html#_blockConfirmations"><span class="hs-identifier hs-var hs-var">_blockConfirmations</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/integer-gmp-1.0.3.0/src"><span class="hs-identifier hs-type">Integer</span></a></span><span> </span><span class="hs-comment">-- ^ Number of block confirmations</span><span>
 </span><span id="line-33"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-34"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201447"><span id="local-6989586621681201449"><span id="local-6989586621681201451"><span class="annot"><span class="annottext">Int -&gt; Block -&gt; ShowS
+</span><span id="line-34"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201454"><span id="local-6989586621681201456"><span id="local-6989586621681201458"><span class="annot"><span class="annottext">Int -&gt; Block -&gt; ShowS
 [Block] -&gt; ShowS
 Block -&gt; String
 (Int -&gt; Block -&gt; ShowS)
@@ -59,7 +59,7 @@ show :: Block -&gt; String
 $cshow :: Block -&gt; String
 showsPrec :: Int -&gt; Block -&gt; ShowS
 $cshowsPrec :: Int -&gt; Block -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201442"><span id="local-6989586621681201444"><span class="annot"><span class="annottext">Block -&gt; Block -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201449"><span id="local-6989586621681201451"><span class="annot"><span class="annottext">Block -&gt; Block -&gt; Bool
 (Block -&gt; Block -&gt; Bool) -&gt; (Block -&gt; Block -&gt; Bool) -&gt; Eq Block
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: Block -&gt; Block -&gt; Bool
@@ -75,7 +75,7 @@ forall a.
 $cto :: forall x. Rep Block x -&gt; Block
 $cfrom :: forall x. Block -&gt; Rep Block x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-35"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201434"><span id="local-6989586621681201436"><span class="annot"><span class="annottext">Value -&gt; Parser [Block]
+</span><span id="line-35"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201441"><span id="local-6989586621681201443"><span class="annot"><span class="annottext">Value -&gt; Parser [Block]
 Value -&gt; Parser Block
 (Value -&gt; Parser Block)
 -&gt; (Value -&gt; Parser [Block]) -&gt; FromJSON Block
@@ -85,7 +85,7 @@ parseJSONList :: Value -&gt; Parser [Block]
 $cparseJSONList :: Value -&gt; Parser [Block]
 parseJSON :: Value -&gt; Parser Block
 $cparseJSON :: Value -&gt; Parser Block
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201425"><span id="local-6989586621681201427"><span id="local-6989586621681201429"><span id="local-6989586621681201431"><span class="annot"><span class="annottext">[Block] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201432"><span id="local-6989586621681201434"><span id="local-6989586621681201436"><span id="local-6989586621681201438"><span class="annot"><span class="annottext">[Block] -&gt; Encoding
 [Block] -&gt; Value
 Block -&gt; Encoding
 Block -&gt; Value
@@ -112,7 +112,7 @@ $ctoJSON :: Block -&gt; Value
 </span><span id="line-36"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_block&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Blocks.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span>
 </span><span id="line-37"></span><span>
 </span><span id="line-38"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Blocks.html#Block"><span class="hs-identifier hs-type">Block</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-39"></span><span>  </span><span id="local-6989586621681201417"><span class="annot"><span class="annottext">toSamples :: Proxy Block -&gt; [(Text, Block)]
+</span><span id="line-39"></span><span>  </span><span id="local-6989586621681201424"><span class="annot"><span class="annottext">toSamples :: Proxy Block -&gt; [(Text, Block)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="annot"><span class="annottext">Proxy Block
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Block -&gt; [(Text, Block)]
 forall a. a -&gt; [(Text, a)]
@@ -203,11 +203,11 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-55"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-56"></span><span>
 </span><span id="line-57"></span><span class="hs-comment">-- instances for getBlockAffectedAddreses response</span><span>
-</span><span id="line-58"></span><span class="hs-keyword">instance</span><span> </span><span class="hs-pragma">{-# OVERLAPS</span><span> </span><span class="hs-pragma">#-}</span><span> </span><span id="local-6989586621681201409"><span id="local-6989586621681201411"><span id="local-6989586621681201413"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-59"></span><span>  </span><span id="local-6989586621681201408"><span class="annot"><span class="annottext">toJSON :: (Address, [TxHash]) -&gt; Value
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201406"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621681201406"><span class="hs-identifier hs-var">addr</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201405"><span class="annot"><span class="annottext">[TxHash]
-</span><a href="#local-6989586621681201405"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
+</span><span id="line-58"></span><span class="hs-keyword">instance</span><span> </span><span class="hs-pragma">{-# OVERLAPS</span><span> </span><span class="hs-pragma">#-}</span><span> </span><span id="local-6989586621681201416"><span id="local-6989586621681201418"><span id="local-6989586621681201420"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-59"></span><span>  </span><span id="local-6989586621681201415"><span class="annot"><span class="annottext">toJSON :: (Address, [TxHash]) -&gt; Value
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201413"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621681201413"><span class="hs-identifier hs-var">addr</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201412"><span class="annot"><span class="annottext">[TxHash]
+</span><a href="#local-6989586621681201412"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">object</span></a></span><span> </span><span class="hs-special">[</span><span>
 </span><span id="line-60"></span><span>        </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;address&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Value -&gt; Pair
@@ -215,26 +215,26 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621681201406"><span class="hs-identifier hs-var">addr</span></a></span><span>
+</span><a href="#local-6989586621681201413"><span class="hs-identifier hs-var">addr</span></a></span><span>
 </span><span id="line-61"></span><span>      </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;transactions&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; [Value] -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="annot"><span class="annottext">(TxHash -&gt; Value) -&gt; [TxHash] -&gt; [Value]
 forall a b. (a -&gt; b) -&gt; [a] -&gt; [b]
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">map</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621681201402"><span class="annot"><span class="annottext">TxHash
-</span><a href="#local-6989586621681201402"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">map</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621681201409"><span class="annot"><span class="annottext">TxHash
+</span><a href="#local-6989586621681201409"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">object</span></a></span><span> </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;tx_hash&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Value -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="annot"><span class="annottext">TxHash -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">TxHash
-</span><a href="#local-6989586621681201402"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="hs-special">]</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[TxHash]
-</span><a href="#local-6989586621681201405"><span class="hs-identifier hs-var">txs</span></a></span><span>
+</span><a href="#local-6989586621681201409"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="hs-special">]</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">[TxHash]
+</span><a href="#local-6989586621681201412"><span class="hs-identifier hs-var">txs</span></a></span><span>
 </span><span id="line-62"></span><span>      </span><span class="hs-special">]</span><span>
 </span><span id="line-63"></span><span>
-</span><span id="line-64"></span><span class="hs-keyword">instance</span><span> </span><span class="hs-pragma">{-# OVERLAPS</span><span> </span><span class="hs-pragma">#-}</span><span> </span><span id="local-6989586621681201399"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-65"></span><span>  </span><span id="local-6989586621681201398"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser (Address, [TxHash])
+</span><span id="line-64"></span><span class="hs-keyword">instance</span><span> </span><span class="hs-pragma">{-# OVERLAPS</span><span> </span><span class="hs-pragma">#-}</span><span> </span><span id="local-6989586621681201406"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span class="hs-special">,</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Blockfrost.Types.Shared.TxHash.html#TxHash"><span class="hs-identifier hs-type">TxHash</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-65"></span><span>  </span><span id="local-6989586621681201405"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser (Address, [TxHash])
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
 -&gt; (Object -&gt; Parser (Address, [TxHash]))
 -&gt; Value
@@ -247,16 +247,16 @@ forall a. String -&gt; (Object -&gt; Parser a) -&gt; Value -&gt; Parser a
 -&gt; Value
 -&gt; Parser (Address, [TxHash])
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681201395"><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681201395"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-66"></span><span>    </span><span id="local-6989586621681201394"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621681201394"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681201395"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Address
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681201402"><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681201402"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-66"></span><span>    </span><span id="local-6989586621681201401"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621681201401"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681201402"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Address
 forall a. FromJSON a =&gt; Object -&gt; Key -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.:</span></a></span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;address&quot;</span></span><span>
-</span><span id="line-67"></span><span>    </span><span id="local-6989586621681201392"><span class="annot"><span class="annottext">[TxHash]
-</span><a href="#local-6989586621681201392"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Parser [TxHash]) -&gt; Object -&gt; Key -&gt; Parser [TxHash]
+</span><span id="line-67"></span><span>    </span><span id="local-6989586621681201399"><span class="annot"><span class="annottext">[TxHash]
+</span><a href="#local-6989586621681201399"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Parser [TxHash]) -&gt; Object -&gt; Key -&gt; Parser [TxHash]
 forall a. (Value -&gt; Parser a) -&gt; Object -&gt; Key -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">explicitParseField</span></a></span><span>
 </span><span id="line-68"></span><span>      </span><span class="hs-special">(</span><span class="annot"><span class="annottext">String -&gt; (Array -&gt; Parser [TxHash]) -&gt; Value -&gt; Parser [TxHash]
@@ -265,8 +265,8 @@ forall a. String -&gt; (Array -&gt; Parser a) -&gt; Value -&gt; Parser a
 </span><span class="hs-string">&quot;a&quot;</span></span><span> </span><span class="annot"><span class="annottext">((Array -&gt; Parser [TxHash]) -&gt; Value -&gt; Parser [TxHash])
 -&gt; (Array -&gt; Parser [TxHash]) -&gt; Value -&gt; Parser [TxHash]
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681201390"><span class="annot"><span class="annottext">Array
-</span><a href="#local-6989586621681201390"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Parser TxHash) -&gt; [Value] -&gt; Parser [TxHash]
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681201397"><span class="annot"><span class="annottext">Array
+</span><a href="#local-6989586621681201397"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(Value -&gt; Parser TxHash) -&gt; [Value] -&gt; Parser [TxHash]
 forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
 (Traversable t, Monad m) =&gt;
 (a -&gt; m b) -&gt; t a -&gt; m (t b)
@@ -276,22 +276,22 @@ forall a. String -&gt; (Object -&gt; Parser a) -&gt; Value -&gt; Parser a
 </span><span class="hs-string">&quot;txHashes&quot;</span></span><span> </span><span class="annot"><span class="annottext">((Object -&gt; Parser TxHash) -&gt; Value -&gt; Parser TxHash)
 -&gt; (Object -&gt; Parser TxHash) -&gt; Value -&gt; Parser TxHash
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681201388"><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681201388"><span class="hs-identifier hs-var">to</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681201388"><span class="hs-identifier hs-var">to</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser TxHash
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681201395"><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681201395"><span class="hs-identifier hs-var">to</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681201395"><span class="hs-identifier hs-var">to</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser TxHash
 forall a. FromJSON a =&gt; Object -&gt; Key -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.:</span></a></span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;tx_hash&quot;</span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Array -&gt; [Value]
 forall a. Vector a -&gt; [a]
 </span><a href="../../../../vector/html/src"><span class="hs-identifier hs-var">Data.Vector.toList</span></a></span><span> </span><span class="annot"><span class="annottext">Array
-</span><a href="#local-6989586621681201390"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201397"><span class="hs-identifier hs-var">a</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-69"></span><span>      </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681201395"><span class="hs-identifier hs-var">o</span></a></span><span>
+</span><a href="#local-6989586621681201402"><span class="hs-identifier hs-var">o</span></a></span><span>
 </span><span id="line-70"></span><span>      </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;transactions&quot;</span></span><span>
 </span><span id="line-71"></span><span>    </span><span class="annot"><span class="annottext">(Address, [TxHash]) -&gt; Parser (Address, [TxHash])
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621681201394"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">[TxHash]
-</span><a href="#local-6989586621681201392"><span class="hs-identifier hs-var">txs</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201401"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">[TxHash]
+</span><a href="#local-6989586621681201399"><span class="hs-identifier hs-var">txs</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-72"></span></pre></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_5wDkuXD3MDmKw484UG65H4"></span><span class="hs-pragma">{-# LANGUAGE DeriveDataTypeable #-}</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="%24con2tag_HruURq2aag76pXYis3CZyS"></span><span class="hs-pragma">{-# LANGUAGE DeriveDataTypeable #-}</span><span>
 </span><span id="line-2"></span><span class="hs-pragma">{-# LANGUAGE OverloadedStrings  #-}</span><span>
 </span><span id="line-3"></span><span class="hs-pragma">{-# LANGUAGE RecordWildCards    #-}</span><span>
 </span><span id="line-4"></span><span class="hs-comment">------------------------------------------------------------------------------</span><span>
@@ -57,7 +57,7 @@
 </span><span id="line-57"></span><span>   </span><span class="hs-comment">-- ^ Relation name (usually table), constraint name</span><span>
 </span><span id="line-58"></span><span>   </span><span class="hs-glyph">|</span><span> </span><span id="ExclusionViolation"><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ExclusionViolation"><span class="hs-identifier hs-var">ExclusionViolation</span></a></span></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span>
 </span><span id="line-59"></span><span>   </span><span class="hs-comment">-- ^ Name of the exclusion violation constraint</span><span>
-</span><span id="line-60"></span><span>   </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679131038"><span id="local-6989586621679131040"><span id="local-6989586621679131042"><span class="annot"><span class="annottext">Int -&gt; ConstraintViolation -&gt; ShowS
+</span><span id="line-60"></span><span>   </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679131045"><span id="local-6989586621679131047"><span id="local-6989586621679131049"><span class="annot"><span class="annottext">Int -&gt; ConstraintViolation -&gt; ShowS
 [ConstraintViolation] -&gt; ShowS
 ConstraintViolation -&gt; String
 (Int -&gt; ConstraintViolation -&gt; ShowS)
@@ -72,7 +72,7 @@ show :: ConstraintViolation -&gt; String
 $cshow :: ConstraintViolation -&gt; String
 showsPrec :: Int -&gt; ConstraintViolation -&gt; ShowS
 $cshowsPrec :: Int -&gt; ConstraintViolation -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131033"><span id="local-6989586621679131035"><span class="annot"><span class="annottext">ConstraintViolation -&gt; ConstraintViolation -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131040"><span id="local-6989586621679131042"><span class="annot"><span class="annottext">ConstraintViolation -&gt; ConstraintViolation -&gt; Bool
 (ConstraintViolation -&gt; ConstraintViolation -&gt; Bool)
 -&gt; (ConstraintViolation -&gt; ConstraintViolation -&gt; Bool)
 -&gt; Eq ConstraintViolation
@@ -81,7 +81,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ConstraintViolation -&gt; ConstraintViolation -&gt; Bool
 == :: ConstraintViolation -&gt; ConstraintViolation -&gt; Bool
 $c== :: ConstraintViolation -&gt; ConstraintViolation -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131017"><span id="local-6989586621679131019"><span id="local-6989586621679131021"><span id="local-6989586621679131023"><span id="local-6989586621679131025"><span id="local-6989586621679131027"><span id="local-6989586621679131029"><span class="annot"><span class="annottext">Eq ConstraintViolation
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679131024"><span id="local-6989586621679131026"><span id="local-6989586621679131028"><span id="local-6989586621679131030"><span id="local-6989586621679131032"><span id="local-6989586621679131034"><span id="local-6989586621679131036"><span class="annot"><span class="annottext">Eq ConstraintViolation
 Eq ConstraintViolation
 -&gt; (ConstraintViolation -&gt; ConstraintViolation -&gt; Ordering)
 -&gt; (ConstraintViolation -&gt; ConstraintViolation -&gt; Bool)
@@ -124,7 +124,7 @@ $cp1Ord :: Eq ConstraintViolation
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Ord</span></a></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Typeable</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-61"></span><span>
 </span><span id="line-62"></span><span class="hs-comment">-- Default instance should be enough</span><span>
-</span><span id="line-63"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679131008"><span id="local-6989586621679131010"><span id="local-6989586621679131012"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Exception</span></a></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ConstraintViolation"><span class="hs-identifier hs-type">ConstraintViolation</span></a></span></span></span></span><span>
+</span><span id="line-63"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679131015"><span id="local-6989586621679131017"><span id="local-6989586621679131019"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Exception</span></a></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ConstraintViolation"><span class="hs-identifier hs-type">ConstraintViolation</span></a></span></span></span></span><span>
 </span><span id="line-64"></span><span>
 </span><span id="line-65"></span><span>
 </span><span id="line-66"></span><span class="hs-comment">-- | Tries to convert 'SqlError' to 'ConstrainViolation', checks sqlState and</span><span>
@@ -136,11 +136,11 @@ $cp1Ord :: Eq ConstraintViolation
 </span><span id="line-72"></span><span class="hs-comment">-- &gt;     handler _ = ...</span><span>
 </span><span id="line-73"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolation"><span class="hs-identifier hs-type">constraintViolation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ConstraintViolation"><span class="hs-identifier hs-type">ConstraintViolation</span></a></span><span>
 </span><span id="line-74"></span><span id="constraintViolation"><span class="annot"><span class="annottext">constraintViolation :: SqlError -&gt; Maybe ConstraintViolation
-</span><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolation"><span class="hs-identifier hs-var hs-var">constraintViolation</span></a></span></span><span> </span><span id="local-6989586621679131006"><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679131006"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolation"><span class="hs-identifier hs-var hs-var">constraintViolation</span></a></span></span><span> </span><span id="local-6989586621679131013"><span class="annot"><span class="annottext">SqlError
+</span><a href="#local-6989586621679131013"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-75"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">SqlError -&gt; ByteString
 </span><a href="Database.PostgreSQL.Simple.Internal.html#sqlState"><span class="hs-identifier hs-var hs-var">sqlState</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679131006"><span class="hs-identifier hs-var">e</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621679131013"><span class="hs-identifier hs-var">e</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-76"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;23502&quot;</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ConstraintViolation
 </span><a href="Database.PostgreSQL.Simple.Errors.html#NotNullViolation"><span class="hs-identifier hs-var">NotNullViolation</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; ConstraintViolation)
@@ -150,7 +150,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. Parser a -&gt; ByteString -&gt; Maybe a
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var">parseMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseQ1"><span class="hs-identifier hs-var">parseQ1</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621679131008"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-77"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;23503&quot;</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; ByteString -&gt; ConstraintViolation)
 -&gt; (ByteString, ByteString) -&gt; ConstraintViolation
@@ -164,7 +164,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. Parser a -&gt; ByteString -&gt; Maybe a
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var">parseMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">Parser (ByteString, ByteString)
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseQ2"><span class="hs-identifier hs-var">parseQ2</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621679131008"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-78"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;23505&quot;</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ConstraintViolation
 </span><a href="Database.PostgreSQL.Simple.Errors.html#UniqueViolation"><span class="hs-identifier hs-var">UniqueViolation</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; ConstraintViolation)
@@ -174,7 +174,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. Parser a -&gt; ByteString -&gt; Maybe a
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var">parseMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseQ1"><span class="hs-identifier hs-var">parseQ1</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621679131008"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-79"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;23514&quot;</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; ByteString -&gt; ConstraintViolation)
 -&gt; (ByteString, ByteString) -&gt; ConstraintViolation
@@ -188,7 +188,7 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. Parser a -&gt; ByteString -&gt; Maybe a
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var">parseMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">Parser (ByteString, ByteString)
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseQ2"><span class="hs-identifier hs-var">parseQ2</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621679131008"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-80"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;23P01&quot;</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ConstraintViolation
 </span><a href="Database.PostgreSQL.Simple.Errors.html#ExclusionViolation"><span class="hs-identifier hs-var">ExclusionViolation</span></a></span><span> </span><span class="annot"><span class="annottext">(ByteString -&gt; ConstraintViolation)
@@ -198,15 +198,15 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a. Parser a -&gt; ByteString -&gt; Maybe a
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var">parseMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseQ1"><span class="hs-identifier hs-var">parseQ1</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621679131008"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-81"></span><span>    </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe ConstraintViolation
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
-</span><span id="line-82"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679131001"><span class="annot"><span class="annottext">msg :: ByteString
-</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var hs-var">msg</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SqlError -&gt; ByteString
+</span><span id="line-82"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679131008"><span class="annot"><span class="annottext">msg :: ByteString
+</span><a href="#local-6989586621679131008"><span class="hs-identifier hs-var hs-var">msg</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SqlError -&gt; ByteString
 </span><a href="Database.PostgreSQL.Simple.Internal.html#sqlErrorMsg"><span class="hs-identifier hs-var hs-var">sqlErrorMsg</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679131006"><span class="hs-identifier hs-var">e</span></a></span><span>
+</span><a href="#local-6989586621679131013"><span class="hs-identifier hs-var">e</span></a></span><span>
 </span><span id="line-83"></span><span>
 </span><span id="line-84"></span><span>
 </span><span id="line-85"></span><span class="hs-comment">-- | Like constraintViolation, but also packs original SqlError.</span><span>
@@ -218,20 +218,20 @@ forall a. Maybe a
 </span><span id="line-91"></span><span class="hs-comment">--</span><span>
 </span><span id="line-92"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolationE"><span class="hs-identifier hs-type">constraintViolationE</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ConstraintViolation"><span class="hs-identifier hs-type">ConstraintViolation</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-93"></span><span id="constraintViolationE"><span class="annot"><span class="annottext">constraintViolationE :: SqlError -&gt; Maybe (SqlError, ConstraintViolation)
-</span><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolationE"><span class="hs-identifier hs-var hs-var">constraintViolationE</span></a></span></span><span> </span><span id="local-6989586621679130997"><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130997"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ConstraintViolation -&gt; (SqlError, ConstraintViolation))
+</span><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolationE"><span class="hs-identifier hs-var hs-var">constraintViolationE</span></a></span></span><span> </span><span id="local-6989586621679131004"><span class="annot"><span class="annottext">SqlError
+</span><a href="#local-6989586621679131004"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ConstraintViolation -&gt; (SqlError, ConstraintViolation))
 -&gt; Maybe ConstraintViolation
 -&gt; Maybe (SqlError, ConstraintViolation)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">(</span><span class="hs-special">,</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130997"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe ConstraintViolation
+</span><a href="#local-6989586621679131004"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe ConstraintViolation
  -&gt; Maybe (SqlError, ConstraintViolation))
 -&gt; Maybe ConstraintViolation
 -&gt; Maybe (SqlError, ConstraintViolation)
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError -&gt; Maybe ConstraintViolation
 </span><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolation"><span class="hs-identifier hs-var">constraintViolation</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130997"><span class="hs-identifier hs-var">e</span></a></span><span>
+</span><a href="#local-6989586621679131004"><span class="hs-identifier hs-var">e</span></a></span><span>
 </span><span id="line-94"></span><span>
 </span><span id="line-95"></span><span class="hs-comment">-- | Catches SqlError, tries to convert to ConstraintViolation, re-throws</span><span>
 </span><span id="line-96"></span><span class="hs-comment">-- on fail. Provides alternative interface to 'E.handleJust'</span><span>
@@ -240,16 +240,16 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-99"></span><span class="hs-comment">-- &gt;   where</span><span>
 </span><span id="line-100"></span><span class="hs-comment">-- &gt;     catcher _ (UniqueViolation &quot;user_login_key&quot;) = ...</span><span>
 </span><span id="line-101"></span><span class="hs-comment">-- &gt;     catcher e _ = throwIO e</span><span>
-</span><span id="line-102"></span><span id="local-6989586621679130996"><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#catchViolation"><span class="hs-identifier hs-type">catchViolation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ConstraintViolation"><span class="hs-identifier hs-type">ConstraintViolation</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679130996"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679130996"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679130996"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-102"></span><span id="local-6989586621679131003"><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#catchViolation"><span class="hs-identifier hs-type">catchViolation</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#ConstraintViolation"><span class="hs-identifier hs-type">ConstraintViolation</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131003"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131003"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131003"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-103"></span><span id="catchViolation"><span class="annot"><span class="annottext">catchViolation :: (SqlError -&gt; ConstraintViolation -&gt; IO a) -&gt; IO a -&gt; IO a
-</span><a href="Database.PostgreSQL.Simple.Errors.html#catchViolation"><span class="hs-identifier hs-var hs-var">catchViolation</span></a></span></span><span> </span><span id="local-6989586621679130995"><span class="annot"><span class="annottext">SqlError -&gt; ConstraintViolation -&gt; IO a
-</span><a href="#local-6989586621679130995"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span id="local-6989586621679130994"><span class="annot"><span class="annottext">IO a
-</span><a href="#local-6989586621679130994"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO a -&gt; (SqlError -&gt; IO a) -&gt; IO a
+</span><a href="Database.PostgreSQL.Simple.Errors.html#catchViolation"><span class="hs-identifier hs-var hs-var">catchViolation</span></a></span></span><span> </span><span id="local-6989586621679131002"><span class="annot"><span class="annottext">SqlError -&gt; ConstraintViolation -&gt; IO a
+</span><a href="#local-6989586621679131002"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span id="local-6989586621679131001"><span class="annot"><span class="annottext">IO a
+</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">m</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO a -&gt; (SqlError -&gt; IO a) -&gt; IO a
 forall e a. Exception e =&gt; IO a -&gt; (e -&gt; IO a) -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">E.catch</span></a></span><span> </span><span class="annot"><span class="annottext">IO a
-</span><a href="#local-6989586621679130994"><span class="hs-identifier hs-var">m</span></a></span><span>
-</span><span id="line-104"></span><span>                     </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679130992"><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130992"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">IO a
+</span><a href="#local-6989586621679131001"><span class="hs-identifier hs-var">m</span></a></span><span>
+</span><span id="line-104"></span><span>                     </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679130999"><span class="annot"><span class="annottext">SqlError
+</span><a href="#local-6989586621679130999"><span class="hs-identifier hs-var">e</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">IO a
 -&gt; (ConstraintViolation -&gt; IO a)
 -&gt; Maybe ConstraintViolation
 -&gt; IO a
@@ -257,14 +257,14 @@ forall b a. b -&gt; (a -&gt; b) -&gt; Maybe a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SqlError -&gt; IO a
 forall e a. Exception e =&gt; e -&gt; IO a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">throwIO</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130992"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SqlError -&gt; ConstraintViolation -&gt; IO a
-</span><a href="#local-6989586621679130995"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130992"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe ConstraintViolation -&gt; IO a)
+</span><a href="#local-6989586621679130999"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">SqlError -&gt; ConstraintViolation -&gt; IO a
+</span><a href="#local-6989586621679131002"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
+</span><a href="#local-6989586621679130999"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe ConstraintViolation -&gt; IO a)
 -&gt; Maybe ConstraintViolation -&gt; IO a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError -&gt; Maybe ConstraintViolation
 </span><a href="Database.PostgreSQL.Simple.Errors.html#constraintViolation"><span class="hs-identifier hs-var">constraintViolation</span></a></span><span> </span><span class="annot"><span class="annottext">SqlError
-</span><a href="#local-6989586621679130992"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679130999"><span class="hs-identifier hs-var">e</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-105"></span><span>
 </span><span id="line-106"></span><span class="hs-comment">-- Parsers just try to extract quoted strings from error messages, number</span><span>
 </span><span id="line-107"></span><span class="hs-comment">-- of quoted strings depend on error type.</span><span>
@@ -274,26 +274,26 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 forall s. s -&gt; (s -&gt; Char -&gt; Maybe s) -&gt; Parser ByteString
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">scan</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Char -&gt; Maybe Bool
-</span><a href="#local-6989586621679130987"><span class="hs-identifier hs-var">go</span></a></span><span>
-</span><span id="line-110"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679130987"><span class="annot"><span class="annottext">go :: Bool -&gt; Char -&gt; Maybe Bool
-</span><a href="#local-6989586621679130987"><span class="hs-identifier hs-var hs-var">go</span></a></span></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679130994"><span class="hs-identifier hs-var">go</span></a></span><span>
+</span><span id="line-110"></span><span>  </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679130994"><span class="annot"><span class="annottext">go :: Bool -&gt; Char -&gt; Maybe Bool
+</span><a href="#local-6989586621679130994"><span class="hs-identifier hs-var hs-var">go</span></a></span></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe Bool
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span> </span><span class="hs-comment">-- escaped character</span><span>
-</span><span id="line-111"></span><span>        </span><span class="annot"><a href="#local-6989586621679130987"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><span id="line-111"></span><span>        </span><span class="annot"><a href="#local-6989586621679130994"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'&quot;'</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Bool
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-comment">-- end parse</span><span>
-</span><span id="line-112"></span><span>        </span><span class="annot"><a href="#local-6989586621679130987"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><span id="line-112"></span><span>        </span><span class="annot"><a href="#local-6989586621679130994"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-char">'\\'</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe Bool
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span> </span><span class="hs-comment">-- next one is escaped</span><span>
-</span><span id="line-113"></span><span>        </span><span class="annot"><a href="#local-6989586621679130987"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><span id="line-113"></span><span>        </span><span class="annot"><a href="#local-6989586621679130994"><span class="hs-identifier hs-var">go</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><span class="hs-identifier">_</span></span><span> </span><span class="annot"><span class="annottext">Char
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe Bool
 forall a. a -&gt; Maybe a
@@ -330,11 +330,11 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Parser ByteString
 </span><a href="Database.PostgreSQL.Simple.Errors.html#parseQ1"><span class="hs-identifier hs-var">parseQ1</span></a></span><span>
 </span><span id="line-120"></span><span>
-</span><span id="line-121"></span><span id="local-6989586621679131091"><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-type">parseMaybe</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-type">Parser</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131091"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131091"><span class="hs-identifier hs-type">a</span></a></span></span><span>
+</span><span id="line-121"></span><span id="local-6989586621679131098"><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-type">parseMaybe</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-type">Parser</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131098"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679131098"><span class="hs-identifier hs-type">a</span></a></span></span><span>
 </span><span id="line-122"></span><span id="parseMaybe"><span class="annot"><span class="annottext">parseMaybe :: Parser a -&gt; ByteString -&gt; Maybe a
-</span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var hs-var">parseMaybe</span></a></span></span><span> </span><span id="local-6989586621679130984"><span class="annot"><span class="annottext">Parser a
-</span><a href="#local-6989586621679130984"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span id="local-6989586621679130983"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679130983"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(String -&gt; Maybe a) -&gt; (a -&gt; Maybe a) -&gt; Either String a -&gt; Maybe a
+</span><a href="Database.PostgreSQL.Simple.Errors.html#parseMaybe"><span class="hs-identifier hs-var hs-var">parseMaybe</span></a></span></span><span> </span><span id="local-6989586621679130991"><span class="annot"><span class="annottext">Parser a
+</span><a href="#local-6989586621679130991"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span id="local-6989586621679130990"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679130990"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(String -&gt; Maybe a) -&gt; (a -&gt; Maybe a) -&gt; Either String a -&gt; Maybe a
 forall a c b. (a -&gt; c) -&gt; (b -&gt; c) -&gt; Either a b -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">either</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Maybe a -&gt; String -&gt; Maybe a
 forall a b. a -&gt; b -&gt; a
@@ -347,8 +347,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Parser a -&gt; ByteString -&gt; Either String a
 forall a. Parser a -&gt; ByteString -&gt; Either String a
 </span><a href="../../../../attoparsec/html/src"><span class="hs-identifier hs-var">parseOnly</span></a></span><span> </span><span class="annot"><span class="annottext">Parser a
-</span><a href="#local-6989586621679130984"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679130983"><span class="hs-identifier hs-var">b</span></a></span><span>
+</span><a href="#local-6989586621679130991"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679130990"><span class="hs-identifier hs-var">b</span></a></span><span>
 </span><span id="line-123"></span><span>
 </span><span id="line-124"></span><span class="hs-comment">------------------------------------------------------------------------</span><span>
 </span><span id="line-125"></span><span class="hs-comment">-- Error predicates</span><span>
@@ -375,8 +375,8 @@ forall a. Parser a -&gt; ByteString -&gt; Either String a
 </span><span id="line-137"></span><span>
 </span><span id="line-138"></span><span class="annot"><a href="Database.PostgreSQL.Simple.Errors.html#isSqlState"><span class="hs-identifier hs-type">isSqlState</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-139"></span><span id="isSqlState"><span class="annot"><span class="annottext">isSqlState :: ByteString -&gt; SqlError -&gt; Bool
-</span><a href="Database.PostgreSQL.Simple.Errors.html#isSqlState"><span class="hs-identifier hs-var hs-var">isSqlState</span></a></span></span><span> </span><span id="local-6989586621679130978"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679130978"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span class="hs-special">{</span><span id="local-6989586621679130972"><span id="local-6989586621679130973"><span id="local-6989586621679130974"><span id="local-6989586621679130975"><span id="local-6989586621679130976"><span class="annot"><span class="annottext">ByteString
+</span><a href="Database.PostgreSQL.Simple.Errors.html#isSqlState"><span class="hs-identifier hs-var hs-var">isSqlState</span></a></span></span><span> </span><span id="local-6989586621679130985"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679130985"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span class="annot"><a href="Database.PostgreSQL.Simple.Internal.html#SqlError"><span class="hs-identifier hs-type">SqlError</span></a></span><span class="hs-special">{</span><span id="local-6989586621679130979"><span id="local-6989586621679130980"><span id="local-6989586621679130981"><span id="local-6989586621679130982"><span id="local-6989586621679130983"><span class="annot"><span class="annottext">ByteString
 ExecStatus
 sqlErrorHint :: SqlError -&gt; ByteString
 sqlErrorDetail :: SqlError -&gt; ByteString
@@ -389,8 +389,8 @@ sqlState :: ByteString
 sqlErrorMsg :: SqlError -&gt; ByteString
 sqlState :: SqlError -&gt; ByteString
 </span><a href="Database.PostgreSQL.Simple.Internal.html#sqlErrorHint"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679130976"><span class="hs-identifier hs-var">sqlState</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
+</span><a href="#local-6989586621679130983"><span class="hs-identifier hs-var">sqlState</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteString -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679130978"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679130985"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-140"></span></pre></body></html>

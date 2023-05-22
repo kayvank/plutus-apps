@@ -24,7 +24,7 @@
 --   samples.</li>
 --   </ul>
 @package statistics
-@version 0.16.1.2
+@version 0.16.2.0
 
 
 -- | Fast O(NlogN) implementation of <a>Kendall's tau</a>.
@@ -258,7 +258,7 @@ histogram :: (Vector v0 Double, Vector v1 Double, Num b, Vector v1 b) => Int -> 
 --   
 --   Interval (bin) sizes are uniform, based on the supplied upper and
 --   lower bounds.
-histogram_ :: (Num b, RealFrac a, Vector v0 a, Vector v1 b) => Int -> a -> a -> v0 a -> v1 b
+histogram_ :: forall b a v0 v1. (Num b, RealFrac a, Vector v0 a, Vector v1 b) => Int -> a -> a -> v0 a -> v1 b
 
 -- | <i>O(n)</i> Compute decent defaults for the lower and upper bounds of
 --   a histogram, based on the desired number of bins and the range of the
@@ -402,10 +402,10 @@ entropy :: Entropy d => d -> Double
 --   distribution type and second is element type.
 class FromSample d a
 
--- | Estimate distribution from sample. Returns nothing is there's not
---   enough data to estimate or sample clearly doesn't come from
---   distribution in question. For example if there's negative samples in
---   exponential distribution.
+-- | Estimate distribution from sample. Returns <a>Nothing</a> if there is
+--   not enough data, or if no usable fit results from the method used,
+--   e.g., the estimated distribution parameters would be invalid or
+--   inaccurate.
 fromSample :: (FromSample d a, Vector v a) => v a -> Maybe d
 
 -- | Generate discrete random variates which have given distribution.
@@ -578,6 +578,48 @@ instance Statistics.Distribution.MaybeMean Statistics.Distribution.Poisson.Poiss
 instance Statistics.Distribution.MaybeVariance Statistics.Distribution.Poisson.PoissonDistribution
 instance Statistics.Distribution.Entropy Statistics.Distribution.Poisson.PoissonDistribution
 instance Statistics.Distribution.MaybeEntropy Statistics.Distribution.Poisson.PoissonDistribution
+
+
+-- | The negative binomial distribution. This is the discrete probability
+--   distribution of the number of failures in a sequence of independent
+--   yes/no experiments before a specified number of successes <i>r</i>.
+--   Each Bernoulli trial has success probability <i>p</i> in the range (0,
+--   1]. The parameter <i>r</i> must be positive, but does not have to be
+--   integer.
+module Statistics.Distribution.NegativeBinomial
+
+-- | The negative binomial distribution.
+data NegativeBinomialDistribution
+
+-- | Construct negative binomial distribution. Number of failures <i>r</i>
+--   must be positive and probability must be in (0,1] range
+negativeBinomial :: Double -> Double -> NegativeBinomialDistribution
+
+-- | Construct negative binomial distribution. Number of failures <i>r</i>
+--   must be positive and probability must be in (0,1] range
+negativeBinomialE :: Double -> Double -> Maybe NegativeBinomialDistribution
+
+-- | Number of successes until stop
+nbdSuccesses :: NegativeBinomialDistribution -> Double
+
+-- | Success probability.
+nbdProbability :: NegativeBinomialDistribution -> Double
+instance GHC.Generics.Generic Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Data.Data.Data Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance GHC.Classes.Eq Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance GHC.Show.Show Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance GHC.Read.Read Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Data.Aeson.Types.ToJSON.ToJSON Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Data.Aeson.Types.FromJSON.FromJSON Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Data.Binary.Class.Binary Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.Distribution Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.DiscreteDistr Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.Mean Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.Variance Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.MaybeMean Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.MaybeVariance Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.Entropy Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
+instance Statistics.Distribution.MaybeEntropy Statistics.Distribution.NegativeBinomial.NegativeBinomialDistribution
 
 
 -- | The Hypergeometric distribution. This is the discrete probability

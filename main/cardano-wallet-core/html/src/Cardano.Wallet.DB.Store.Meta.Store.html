@@ -62,52 +62,52 @@ Meta-transactions are specific to a wallet.
 </span><span id="line-62"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Store</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#DeltaTxMetaHistory"><span class="hs-identifier hs-type">DeltaTxMetaHistory</span></a></span><span>
 </span><span id="line-63"></span><span id="mkStoreMetaTransactions"><span class="annot"><span class="annottext">mkStoreMetaTransactions :: WalletId -&gt; Store (SqlPersistT IO) DeltaTxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#mkStoreMetaTransactions"><span class="hs-identifier hs-var hs-var">mkStoreMetaTransactions</span></a></span></span><span>
-</span><span id="line-64"></span><span>    </span><span id="local-6989586621682458227"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458227"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Store :: forall (m :: * -&gt; *) da.
+</span><span id="line-64"></span><span>    </span><span id="local-6989586621682458511"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458511"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Store :: forall (m :: * -&gt; *) da.
 m (Either SomeException (Base da))
 -&gt; (Base da -&gt; m ()) -&gt; (Base da -&gt; da -&gt; m ()) -&gt; Store m da
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Store</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">loadS :: SqlPersistT IO (Either SomeException (Base DeltaTxMetaHistory))
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">loadS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; SqlPersistT IO (Either SomeException TxMetaHistory)
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#load"><span class="hs-identifier hs-var">load</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458227"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">writeS :: Base DeltaTxMetaHistory -&gt; SqlPersistT IO ()
+</span><a href="#local-6989586621682458511"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">writeS :: Base DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">writeS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; TxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#write"><span class="hs-identifier hs-var">write</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458227"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">updateS :: Base DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; SqlPersistT IO ()
+</span><a href="#local-6989586621682458511"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">updateS :: Base DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">updateS</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WalletId
 -&gt; TxMetaHistory -&gt; DeltaTxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#update"><span class="hs-identifier hs-var">update</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458227"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621682458511"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="hs-special">}</span><span>
 </span><span id="line-65"></span><span>
 </span><span id="line-66"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Store.html#update"><span class="hs-identifier hs-type">update</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#WalletId"><span class="hs-identifier hs-type">WalletId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#DeltaTxMetaHistory"><span class="hs-identifier hs-type">DeltaTxMetaHistory</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-67"></span><span id="update"><span class="annot"><span class="annottext">update :: WalletId
 -&gt; TxMetaHistory -&gt; DeltaTxMetaHistory -&gt; SqlPersistT IO ()
-</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#update"><span class="hs-identifier hs-var hs-var">update</span></a></span></span><span> </span><span id="local-6989586621682458223"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458223"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
-</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621682458222"><span class="annot"><span class="annottext">DeltaTxMetaHistory
-</span><a href="#local-6989586621682458222"><span class="hs-identifier hs-var">change</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">DeltaTxMetaHistory
-</span><a href="#local-6989586621682458222"><span class="hs-identifier hs-var">change</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-68"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Expand"><span class="hs-identifier hs-type">Expand</span></a></span><span> </span><span id="local-6989586621682458220"><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682458220"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; SqlPersistT IO ()
+</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#update"><span class="hs-identifier hs-var hs-var">update</span></a></span></span><span> </span><span id="local-6989586621682458507"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458507"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
+</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621682458506"><span class="annot"><span class="annottext">DeltaTxMetaHistory
+</span><a href="#local-6989586621682458506"><span class="hs-identifier hs-var">change</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">DeltaTxMetaHistory
+</span><a href="#local-6989586621682458506"><span class="hs-identifier hs-var">change</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-68"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Expand"><span class="hs-identifier hs-type">Expand</span></a></span><span> </span><span id="local-6989586621682458504"><span class="annot"><span class="annottext">TxMetaHistory
+</span><a href="#local-6989586621682458504"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#putMetas"><span class="hs-identifier hs-var">putMetas</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682458220"><span class="hs-identifier hs-var">txs</span></a></span><span>
-</span><span id="line-69"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#PruneTxMetaHistory"><span class="hs-identifier hs-type">PruneTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458216"><span class="annot"><span class="annottext">TxId
-</span><a href="#local-6989586621682458216"><span class="hs-identifier hs-var">tid</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-70"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682458215"><span class="annot"><span class="annottext">filt :: [Filter TxMeta]
-</span><a href="#local-6989586621682458215"><span class="hs-identifier hs-var hs-var">filt</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">EntityField TxMeta WalletId
+</span><a href="#local-6989586621682458504"><span class="hs-identifier hs-var">txs</span></a></span><span>
+</span><span id="line-69"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#PruneTxMetaHistory"><span class="hs-identifier hs-type">PruneTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458500"><span class="annot"><span class="annottext">TxId
+</span><a href="#local-6989586621682458500"><span class="hs-identifier hs-var">tid</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-70"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621682458499"><span class="annot"><span class="annottext">filt :: [Filter TxMeta]
+</span><a href="#local-6989586621682458499"><span class="hs-identifier hs-var hs-var">filt</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">EntityField TxMeta WalletId
 forall typ. (typ ~ WalletId) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaWalletId"><span class="hs-identifier hs-var">TxMetaWalletId</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta WalletId -&gt; WalletId -&gt; Filter TxMeta
 forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458223"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxId
+</span><a href="#local-6989586621682458507"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxId
 forall typ. (typ ~ TxId) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaTxId"><span class="hs-identifier hs-var">TxMetaTxId</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxId -&gt; TxId -&gt; Filter TxMeta
 forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">TxId
-</span><a href="#local-6989586621682458216"><span class="hs-identifier hs-var">tid</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682458500"><span class="hs-identifier hs-var">tid</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-71"></span><span>        </span><span class="annot"><span class="annottext">[Filter TxMeta]
 -&gt; [SelectOpt TxMeta]
 -&gt; ReaderT SqlBackend IO (Maybe (Entity TxMeta))
@@ -126,7 +126,7 @@ EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#InLedger"><span class="hs-identifier hs-var">W.InLedger</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta -&gt; [Filter TxMeta] -&gt; [Filter TxMeta]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span> </span><span class="annot"><span class="annottext">[Filter TxMeta]
-</span><a href="#local-6989586621682458215"><span class="hs-identifier hs-var">filt</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">ReaderT SqlBackend IO (Maybe (Entity TxMeta))
+</span><a href="#local-6989586621682458499"><span class="hs-identifier hs-var">filt</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="annot"><span class="annottext">ReaderT SqlBackend IO (Maybe (Entity TxMeta))
 -&gt; (Maybe (Entity TxMeta) -&gt; SqlPersistT IO ())
 -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
@@ -163,9 +163,9 @@ EntityField v typ -&gt; [typ] -&gt; Filter v
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Expired"><span class="hs-identifier hs-var">W.Expired</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta -&gt; [Filter TxMeta] -&gt; [Filter TxMeta]
 forall a. a -&gt; [a] -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-glyph hs-var">:</span></a></span><span> </span><span class="annot"><span class="annottext">[Filter TxMeta]
-</span><a href="#local-6989586621682458215"><span class="hs-identifier hs-var">filt</span></a></span><span>
-</span><span id="line-76"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#AgeTxMetaHistory"><span class="hs-identifier hs-type">AgeTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458207"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682458207"><span class="hs-identifier hs-var">tip</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">[Filter TxMeta] -&gt; [Update TxMeta] -&gt; SqlPersistT IO ()
+</span><a href="#local-6989586621682458499"><span class="hs-identifier hs-var">filt</span></a></span><span>
+</span><span id="line-76"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#AgeTxMetaHistory"><span class="hs-identifier hs-type">AgeTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458491"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621682458491"><span class="hs-identifier hs-var">tip</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">[Filter TxMeta] -&gt; [Update TxMeta] -&gt; SqlPersistT IO ()
 forall backend (m :: * -&gt; *) record.
 (PersistQueryWrite backend, MonadIO m,
  PersistRecordBackend record backend) =&gt;
@@ -178,7 +178,7 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458223"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682458507"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-78"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxStatus
 forall typ. (typ ~ TxStatus) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaStatus"><span class="hs-identifier hs-var">TxMetaStatus</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxStatus -&gt; TxStatus -&gt; Filter TxMeta
@@ -196,7 +196,7 @@ EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">&lt;=.</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo -&gt; Maybe SlotNo
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682458207"><span class="hs-identifier hs-var">tip</span></a></span><span>
+</span><a href="#local-6989586621682458491"><span class="hs-identifier hs-var">tip</span></a></span><span>
 </span><span id="line-80"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-81"></span><span>        </span><span class="hs-special">[</span><span class="annot"><span class="annottext">EntityField TxMeta TxStatus
 forall typ. (typ ~ TxStatus) =&gt; EntityField TxMeta typ
@@ -206,20 +206,20 @@ PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Update v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">=.</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Expired"><span class="hs-identifier hs-var">W.Expired</span></a></span><span class="hs-special">]</span><span>
-</span><span id="line-82"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#RollBackTxMetaHistory"><span class="hs-identifier hs-type">RollBackTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458204"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682458204"><span class="hs-identifier hs-var">point</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-82"></span><span>    </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#RollBackTxMetaHistory"><span class="hs-identifier hs-type">RollBackTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458488"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621682458488"><span class="hs-identifier hs-var">point</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-83"></span><span>        </span><span class="hs-keyword">let</span><span>
-</span><span id="line-84"></span><span>          </span><span id="local-6989586621682458203"><span class="annot"><span class="annottext">isAfter :: Filter TxMeta
-</span><a href="#local-6989586621682458203"><span class="hs-identifier hs-var hs-var">isAfter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta SlotNo
+</span><span id="line-84"></span><span>          </span><span id="local-6989586621682458487"><span class="annot"><span class="annottext">isAfter :: Filter TxMeta
+</span><a href="#local-6989586621682458487"><span class="hs-identifier hs-var hs-var">isAfter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta SlotNo
 forall typ. (typ ~ SlotNo) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaSlot"><span class="hs-identifier hs-var">TxMetaSlot</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta SlotNo -&gt; SlotNo -&gt; Filter TxMeta
 forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">&gt;.</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682458204"><span class="hs-identifier hs-var">point</span></a></span><span>
-</span><span id="line-85"></span><span>          </span><span id="local-6989586621682458201"><span class="annot"><span class="annottext">isIncoming :: Filter TxMeta
-</span><a href="#local-6989586621682458201"><span class="hs-identifier hs-var hs-var">isIncoming</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta Direction
+</span><a href="#local-6989586621682458488"><span class="hs-identifier hs-var">point</span></a></span><span>
+</span><span id="line-85"></span><span>          </span><span id="local-6989586621682458485"><span class="annot"><span class="annottext">isIncoming :: Filter TxMeta
+</span><a href="#local-6989586621682458485"><span class="hs-identifier hs-var hs-var">isIncoming</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta Direction
 forall typ. (typ ~ Direction) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaDirection"><span class="hs-identifier hs-var">TxMetaDirection</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta Direction -&gt; Direction -&gt; Filter TxMeta
 forall v typ.
@@ -227,8 +227,8 @@ PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">Direction
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Incoming"><span class="hs-identifier hs-var">W.Incoming</span></a></span><span>
-</span><span id="line-86"></span><span>          </span><span id="local-6989586621682458198"><span class="annot"><span class="annottext">notIncoming :: Filter TxMeta
-</span><a href="#local-6989586621682458198"><span class="hs-identifier hs-var hs-var">notIncoming</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta Direction
+</span><span id="line-86"></span><span>          </span><span id="local-6989586621682458482"><span class="annot"><span class="annottext">notIncoming :: Filter TxMeta
+</span><a href="#local-6989586621682458482"><span class="hs-identifier hs-var hs-var">notIncoming</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta Direction
 forall typ. (typ ~ Direction) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaDirection"><span class="hs-identifier hs-var">TxMetaDirection</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta Direction -&gt; Direction -&gt; Filter TxMeta
 forall v typ.
@@ -249,10 +249,10 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458223"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682458507"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-89"></span><span>            </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta
-</span><a href="#local-6989586621682458203"><span class="hs-identifier hs-var">isAfter</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta
-</span><a href="#local-6989586621682458201"><span class="hs-identifier hs-var">isIncoming</span></a></span><span>
+</span><a href="#local-6989586621682458487"><span class="hs-identifier hs-var">isAfter</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta
+</span><a href="#local-6989586621682458485"><span class="hs-identifier hs-var">isIncoming</span></a></span><span>
 </span><span id="line-90"></span><span>            </span><span class="hs-special">]</span><span>
 </span><span id="line-91"></span><span>        </span><span class="annot"><span class="annottext">[Filter TxMeta] -&gt; [Update TxMeta] -&gt; SqlPersistT IO ()
 forall backend (m :: * -&gt; *) record.
@@ -267,10 +267,10 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458223"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682458507"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-93"></span><span>            </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta
-</span><a href="#local-6989586621682458203"><span class="hs-identifier hs-var">isAfter</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta
-</span><a href="#local-6989586621682458198"><span class="hs-identifier hs-var">notIncoming</span></a></span><span>
+</span><a href="#local-6989586621682458487"><span class="hs-identifier hs-var">isAfter</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Filter TxMeta
+</span><a href="#local-6989586621682458482"><span class="hs-identifier hs-var">notIncoming</span></a></span><span>
 </span><span id="line-94"></span><span>            </span><span class="hs-special">]</span><span>
 </span><span id="line-95"></span><span>            </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta SlotNo
 forall typ. (typ ~ SlotNo) =&gt; EntityField TxMeta typ
@@ -279,7 +279,7 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Update v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">=.</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682458204"><span class="hs-identifier hs-var">point</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxStatus
+</span><a href="#local-6989586621682458488"><span class="hs-identifier hs-var">point</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxStatus
 forall typ. (typ ~ TxStatus) =&gt; EntityField TxMeta typ
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMetaStatus"><span class="hs-identifier hs-var">TxMetaStatus</span></a></span><span> </span><span class="annot"><span class="annottext">EntityField TxMeta TxStatus -&gt; TxStatus -&gt; Update TxMeta
 forall v typ.
@@ -290,9 +290,9 @@ EntityField v typ -&gt; typ -&gt; Update v
 </span><span id="line-96"></span><span>
 </span><span id="line-97"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Store.html#write"><span class="hs-identifier hs-type">write</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#WalletId"><span class="hs-identifier hs-type">WalletId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-98"></span><span id="write"><span class="annot"><span class="annottext">write :: WalletId -&gt; TxMetaHistory -&gt; SqlPersistT IO ()
-</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#write"><span class="hs-identifier hs-var hs-var">write</span></a></span></span><span> </span><span id="local-6989586621682458196"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458196"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458195"><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682458195"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#write"><span class="hs-identifier hs-var hs-var">write</span></a></span></span><span> </span><span id="local-6989586621682458480"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458480"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682458479"><span class="annot"><span class="annottext">TxMetaHistory
+</span><a href="#local-6989586621682458479"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-99"></span><span>    </span><span class="annot"><span class="annottext">[Filter TxMeta] -&gt; SqlPersistT IO ()
 forall backend (m :: * -&gt; *) record.
 (PersistQueryWrite backend, MonadIO m,
@@ -305,16 +305,16 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458196"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682458480"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-100"></span><span>    </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; SqlPersistT IO ()
 </span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#putMetas"><span class="hs-identifier hs-var">putMetas</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682458195"><span class="hs-identifier hs-var">txs</span></a></span><span>
+</span><a href="#local-6989586621682458479"><span class="hs-identifier hs-var">txs</span></a></span><span>
 </span><span id="line-101"></span><span>
 </span><span id="line-102"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Store.html#load"><span class="hs-identifier hs-type">load</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#WalletId"><span class="hs-identifier hs-type">WalletId</span></a></span><span>
 </span><span id="line-103"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Either</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">SomeException</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-104"></span><span id="load"><span class="annot"><span class="annottext">load :: WalletId -&gt; SqlPersistT IO (Either SomeException TxMetaHistory)
-</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#load"><span class="hs-identifier hs-var hs-var">load</span></a></span></span><span> </span><span id="local-6989586621682458194"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458194"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#load"><span class="hs-identifier hs-var hs-var">load</span></a></span></span><span> </span><span id="local-6989586621682458478"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682458478"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-105"></span><span>    </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; Either SomeException TxMetaHistory
 forall a b. b -&gt; Either a b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Right</span></a></span><span>
@@ -372,19 +372,19 @@ forall v typ.
 PersistField typ =&gt;
 EntityField v typ -&gt; typ -&gt; Filter v
 </span><a href="../../../../persistent/html/src"><span class="hs-operator hs-var">==.</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682458194"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682458478"><span class="hs-identifier hs-var">wid</span></a></span><span class="hs-special">]</span><span> </span><span class="hs-special">[</span><span class="hs-special">]</span><span>
 </span><span id="line-110"></span><span>
 </span><span id="line-111"></span><span class="hs-comment">-- | Insert multiple meta-transactions, overwriting the previous version in</span><span>
 </span><span id="line-112"></span><span class="hs-comment">-- case of the same transaction index.</span><span>
 </span><span id="line-113"></span><span class="hs-comment">-- Only one meta-transaction can be stored per transaction for a given wallet.</span><span>
 </span><span id="line-114"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Store.html#putMetas"><span class="hs-identifier hs-type">putMetas</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../persistent/html/src"><span class="hs-identifier hs-type">SqlPersistT</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-115"></span><span id="putMetas"><span class="annot"><span class="annottext">putMetas :: TxMetaHistory -&gt; SqlPersistT IO ()
-</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#putMetas"><span class="hs-identifier hs-var hs-var">putMetas</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458187"><span class="annot"><span class="annottext">Map TxId TxMeta
-</span><a href="#local-6989586621682458187"><span class="hs-identifier hs-var">metas</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.DB.Store.Meta.Store.html#putMetas"><span class="hs-identifier hs-var hs-var">putMetas</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458471"><span class="annot"><span class="annottext">Map TxId TxMeta
+</span><a href="#local-6989586621682458471"><span class="hs-identifier hs-var">metas</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-116"></span><span>    </span><span class="annot"><span class="annottext">([(Key TxMeta, TxMeta)] -&gt; SqlPersistT IO ())
 -&gt; [(Key TxMeta, TxMeta)] -&gt; SqlPersistT IO ()
 forall (m :: * -&gt; *) e b. Monad m =&gt; ([e] -&gt; m b) -&gt; [e] -&gt; m ()
-</span><a href="#local-6989586621682458186"><span class="hs-identifier hs-var">chunked</span></a></span><span> </span><span class="annot"><span class="annottext">[(Key TxMeta, TxMeta)] -&gt; SqlPersistT IO ()
+</span><a href="#local-6989586621682458470"><span class="hs-identifier hs-var">chunked</span></a></span><span> </span><span class="annot"><span class="annottext">[(Key TxMeta, TxMeta)] -&gt; SqlPersistT IO ()
 forall backend record (m :: * -&gt; *).
 (PersistStoreWrite backend, MonadIO m,
  PersistRecordBackend record backend) =&gt;
@@ -394,25 +394,25 @@ forall a. HasCallStack =&gt; Maybe a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromJust</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe (TxMeta -&gt; Key TxMeta)
 forall record. PersistEntity record =&gt; Maybe (record -&gt; Key record)
 </span><a href="../../../../persistent/html/src"><span class="hs-identifier hs-var">keyFromRecordM</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682458185"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682458185"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621682458185"><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682458185"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; [TxMeta]
+</span><a href="#local-6989586621682458469"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682458469"><span class="hs-identifier hs-var">x</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">|</span><span> </span><span id="local-6989586621682458469"><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682458469"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; [TxMeta]
 forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; [a]
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">toList</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta
-</span><a href="#local-6989586621682458187"><span class="hs-identifier hs-var">metas</span></a></span><span class="hs-special">]</span><span>
+</span><a href="#local-6989586621682458471"><span class="hs-identifier hs-var">metas</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-117"></span><span>    </span><span class="hs-keyword">where</span><span>
 </span><span id="line-118"></span><span>        </span><span class="hs-comment">-- needed to submit large numberot transactions</span><span>
-</span><span id="line-119"></span><span>        </span><span id="local-6989586621682458186"><span class="annot"><span class="annottext">chunked :: ([e] -&gt; m b) -&gt; [e] -&gt; m ()
-</span><a href="#local-6989586621682458186"><span class="hs-identifier hs-var hs-var">chunked</span></a></span></span><span> </span><span id="local-6989586621682458184"><span class="annot"><span class="annottext">[e] -&gt; m b
-</span><a href="#local-6989586621682458184"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span id="local-6989586621682458183"><span class="annot"><span class="annottext">[e]
-</span><a href="#local-6989586621682458183"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">([e] -&gt; m b) -&gt; [[e]] -&gt; m ()
+</span><span id="line-119"></span><span>        </span><span id="local-6989586621682458470"><span class="annot"><span class="annottext">chunked :: ([e] -&gt; m b) -&gt; [e] -&gt; m ()
+</span><a href="#local-6989586621682458470"><span class="hs-identifier hs-var hs-var">chunked</span></a></span></span><span> </span><span id="local-6989586621682458468"><span class="annot"><span class="annottext">[e] -&gt; m b
+</span><a href="#local-6989586621682458468"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span id="local-6989586621682458467"><span class="annot"><span class="annottext">[e]
+</span><a href="#local-6989586621682458467"><span class="hs-identifier hs-var">xs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">([e] -&gt; m b) -&gt; [[e]] -&gt; m ()
 forall (t :: * -&gt; *) (m :: * -&gt; *) a b.
 (Foldable t, Monad m) =&gt;
 (a -&gt; m b) -&gt; t a -&gt; m ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mapM_</span></a></span><span> </span><span class="annot"><span class="annottext">[e] -&gt; m b
-</span><a href="#local-6989586621682458184"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; [e] -&gt; [[e]]
+</span><a href="#local-6989586621682458468"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; [e] -&gt; [[e]]
 forall e. Int -&gt; [e] -&gt; [[e]]
 </span><a href="../../../../split/html/src"><span class="hs-identifier hs-var">chunksOf</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1000</span></span><span> </span><span class="annot"><span class="annottext">[e]
-</span><a href="#local-6989586621682458183"><span class="hs-identifier hs-var">xs</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682458467"><span class="hs-identifier hs-var">xs</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-120"></span></pre></body></html>

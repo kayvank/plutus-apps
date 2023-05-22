@@ -14,7 +14,7 @@
 </span><span id="line-14"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">Servant.Docs</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">ToSample</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier">singleSample</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-15"></span><span>
 </span><span id="line-16"></span><span class="hs-comment">-- | Information about an epoch</span><span>
-</span><span id="line-17"></span><span id="local-6989586621681201340"><span id="local-6989586621681201341"></span></span><span class="hs-keyword">data</span><span> </span><span id="EpochInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#EpochInfo"><span class="hs-identifier hs-var">EpochInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="EpochInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#EpochInfo"><span class="hs-identifier hs-var">EpochInfo</span></a></span></span><span>
+</span><span id="line-17"></span><span id="local-6989586621681201347"><span id="local-6989586621681201348"></span></span><span class="hs-keyword">data</span><span> </span><span id="EpochInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#EpochInfo"><span class="hs-identifier hs-var">EpochInfo</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="EpochInfo"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#EpochInfo"><span class="hs-identifier hs-var">EpochInfo</span></a></span></span><span>
 </span><span id="line-18"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_epochInfoEpoch"><span class="annot"><span class="annottext">EpochInfo -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_epochInfoEpoch"><span class="hs-identifier hs-var hs-var">_epochInfoEpoch</span></a></span></span><span>          </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch number</span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_epochInfoStartTime"><span class="annot"><span class="annottext">EpochInfo -&gt; POSIXTime
@@ -36,7 +36,7 @@
 </span><span id="line-27"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_epochInfoActiveStake"><span class="annot"><span class="annottext">EpochInfo -&gt; Maybe Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_epochInfoActiveStake"><span class="hs-identifier hs-var hs-var">_epochInfoActiveStake</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ Sum of all the active stakes within the epoch in Lovelaces</span><span>
 </span><span id="line-28"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-29"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201323"><span id="local-6989586621681201325"><span id="local-6989586621681201327"><span class="annot"><span class="annottext">Int -&gt; EpochInfo -&gt; ShowS
+</span><span id="line-29"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201330"><span id="local-6989586621681201332"><span id="local-6989586621681201334"><span class="annot"><span class="annottext">Int -&gt; EpochInfo -&gt; ShowS
 [EpochInfo] -&gt; ShowS
 EpochInfo -&gt; String
 (Int -&gt; EpochInfo -&gt; ShowS)
@@ -51,7 +51,7 @@ show :: EpochInfo -&gt; String
 $cshow :: EpochInfo -&gt; String
 showsPrec :: Int -&gt; EpochInfo -&gt; ShowS
 $cshowsPrec :: Int -&gt; EpochInfo -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201318"><span id="local-6989586621681201320"><span class="annot"><span class="annottext">EpochInfo -&gt; EpochInfo -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201325"><span id="local-6989586621681201327"><span class="annot"><span class="annottext">EpochInfo -&gt; EpochInfo -&gt; Bool
 (EpochInfo -&gt; EpochInfo -&gt; Bool)
 -&gt; (EpochInfo -&gt; EpochInfo -&gt; Bool) -&gt; Eq EpochInfo
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -68,7 +68,7 @@ forall a.
 $cto :: forall x. Rep EpochInfo x -&gt; EpochInfo
 $cfrom :: forall x. EpochInfo -&gt; Rep EpochInfo x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-30"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201310"><span id="local-6989586621681201312"><span class="annot"><span class="annottext">Value -&gt; Parser [EpochInfo]
+</span><span id="line-30"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201317"><span id="local-6989586621681201319"><span class="annot"><span class="annottext">Value -&gt; Parser [EpochInfo]
 Value -&gt; Parser EpochInfo
 (Value -&gt; Parser EpochInfo)
 -&gt; (Value -&gt; Parser [EpochInfo]) -&gt; FromJSON EpochInfo
@@ -78,7 +78,7 @@ parseJSONList :: Value -&gt; Parser [EpochInfo]
 $cparseJSONList :: Value -&gt; Parser [EpochInfo]
 parseJSON :: Value -&gt; Parser EpochInfo
 $cparseJSON :: Value -&gt; Parser EpochInfo
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201301"><span id="local-6989586621681201303"><span id="local-6989586621681201305"><span id="local-6989586621681201307"><span class="annot"><span class="annottext">[EpochInfo] -&gt; Encoding
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201308"><span id="local-6989586621681201310"><span id="local-6989586621681201312"><span id="local-6989586621681201314"><span class="annot"><span class="annottext">[EpochInfo] -&gt; Encoding
 [EpochInfo] -&gt; Value
 EpochInfo -&gt; Encoding
 EpochInfo -&gt; Value
@@ -105,7 +105,7 @@ $ctoJSON :: EpochInfo -&gt; Value
 </span><span id="line-31"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_epochInfo&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#EpochInfo"><span class="hs-identifier hs-type">EpochInfo</span></a></span><span>
 </span><span id="line-32"></span><span>
 </span><span id="line-33"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#EpochInfo"><span class="hs-identifier hs-type">EpochInfo</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-34"></span><span>  </span><span id="local-6989586621681201293"><span class="annot"><span class="annottext">toSamples :: Proxy EpochInfo -&gt; [(Text, EpochInfo)]
+</span><span id="line-34"></span><span>  </span><span id="local-6989586621681201300"><span class="annot"><span class="annottext">toSamples :: Proxy EpochInfo -&gt; [(Text, EpochInfo)]
 </span><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, EpochInfo)] -&gt; Proxy EpochInfo -&gt; [(Text, EpochInfo)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, EpochInfo)] -&gt; Proxy EpochInfo -&gt; [(Text, EpochInfo)])
@@ -163,7 +163,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-47"></span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span class="hs-comment">-- | Protocol parameters</span><span>
-</span><span id="line-50"></span><span id="local-6989586621681201290"><span id="local-6989586621681201291"></span></span><span class="hs-keyword">data</span><span> </span><span id="ProtocolParams"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#ProtocolParams"><span class="hs-identifier hs-var">ProtocolParams</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ProtocolParams"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#ProtocolParams"><span class="hs-identifier hs-var">ProtocolParams</span></a></span></span><span>
+</span><span id="line-50"></span><span id="local-6989586621681201297"><span id="local-6989586621681201298"></span></span><span class="hs-keyword">data</span><span> </span><span id="ProtocolParams"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#ProtocolParams"><span class="hs-identifier hs-var">ProtocolParams</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ProtocolParams"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#ProtocolParams"><span class="hs-identifier hs-var">ProtocolParams</span></a></span></span><span>
 </span><span id="line-51"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_protocolParamsEpoch"><span class="annot"><span class="annottext">ProtocolParams -&gt; Epoch
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_protocolParamsEpoch"><span class="hs-identifier hs-var hs-var">_protocolParamsEpoch</span></a></span></span><span>                 </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Epoch.html#Epoch"><span class="hs-identifier hs-type">Epoch</span></a></span><span> </span><span class="hs-comment">-- ^ Epoch number</span><span>
 </span><span id="line-52"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_protocolParamsMinFeeA"><span class="annot"><span class="annottext">ProtocolParams -&gt; Integer
@@ -227,7 +227,7 @@ forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><span id="line-82"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_protocolParamsCoinsPerUtxoWord"><span class="annot"><span class="annottext">ProtocolParams -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_protocolParamsCoinsPerUtxoWord"><span class="hs-identifier hs-var hs-var">_protocolParamsCoinsPerUtxoWord</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ The cost per UTxO word</span><span>
 </span><span id="line-83"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-84"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201253"><span id="local-6989586621681201255"><span id="local-6989586621681201257"><span class="annot"><span class="annottext">Int -&gt; ProtocolParams -&gt; ShowS
+</span><span id="line-84"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201260"><span id="local-6989586621681201262"><span id="local-6989586621681201264"><span class="annot"><span class="annottext">Int -&gt; ProtocolParams -&gt; ShowS
 [ProtocolParams] -&gt; ShowS
 ProtocolParams -&gt; String
 (Int -&gt; ProtocolParams -&gt; ShowS)
@@ -242,7 +242,7 @@ show :: ProtocolParams -&gt; String
 $cshow :: ProtocolParams -&gt; String
 showsPrec :: Int -&gt; ProtocolParams -&gt; ShowS
 $cshowsPrec :: Int -&gt; ProtocolParams -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201249"><span id="local-6989586621681201251"><span class="annot"><span class="annottext">ProtocolParams -&gt; ProtocolParams -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201256"><span id="local-6989586621681201258"><span class="annot"><span class="annottext">ProtocolParams -&gt; ProtocolParams -&gt; Bool
 (ProtocolParams -&gt; ProtocolParams -&gt; Bool)
 -&gt; (ProtocolParams -&gt; ProtocolParams -&gt; Bool) -&gt; Eq ProtocolParams
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -260,7 +260,7 @@ forall a.
 $cto :: forall x. Rep ProtocolParams x -&gt; ProtocolParams
 $cfrom :: forall x. ProtocolParams -&gt; Rep ProtocolParams x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-85"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201243"><span id="local-6989586621681201245"><span class="annot"><span class="annottext">Value -&gt; Parser [ProtocolParams]
+</span><span id="line-85"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201250"><span id="local-6989586621681201252"><span class="annot"><span class="annottext">Value -&gt; Parser [ProtocolParams]
 Value -&gt; Parser ProtocolParams
 (Value -&gt; Parser ProtocolParams)
 -&gt; (Value -&gt; Parser [ProtocolParams]) -&gt; FromJSON ProtocolParams
@@ -270,7 +270,7 @@ parseJSONList :: Value -&gt; Parser [ProtocolParams]
 $cparseJSONList :: Value -&gt; Parser [ProtocolParams]
 parseJSON :: Value -&gt; Parser ProtocolParams
 $cparseJSON :: Value -&gt; Parser ProtocolParams
-</span><a href="#local-6989586621681201243"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201235"><span id="local-6989586621681201237"><span id="local-6989586621681201239"><span id="local-6989586621681201241"><span class="annot"><span class="annottext">[ProtocolParams] -&gt; Encoding
+</span><a href="#local-6989586621681201250"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201242"><span id="local-6989586621681201244"><span id="local-6989586621681201246"><span id="local-6989586621681201248"><span class="annot"><span class="annottext">[ProtocolParams] -&gt; Encoding
 [ProtocolParams] -&gt; Value
 ProtocolParams -&gt; Encoding
 ProtocolParams -&gt; Value
@@ -293,12 +293,12 @@ toEncoding :: ProtocolParams -&gt; Encoding
 $ctoEncoding :: ProtocolParams -&gt; Encoding
 toJSON :: ProtocolParams -&gt; Value
 $ctoJSON :: ProtocolParams -&gt; Value
-</span><a href="#local-6989586621681201235"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201242"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-86"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_protocolParams&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#ProtocolParams"><span class="hs-identifier hs-type">ProtocolParams</span></a></span><span>
 </span><span id="line-87"></span><span>
 </span><span id="line-88"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#ProtocolParams"><span class="hs-identifier hs-type">ProtocolParams</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-89"></span><span>  </span><span id="local-6989586621681201233"><span class="annot"><span class="annottext">toSamples :: Proxy ProtocolParams -&gt; [(Text, ProtocolParams)]
-</span><a href="#local-6989586621681201233"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, ProtocolParams)]
+</span><span id="line-89"></span><span>  </span><span id="local-6989586621681201240"><span class="annot"><span class="annottext">toSamples :: Proxy ProtocolParams -&gt; [(Text, ProtocolParams)]
+</span><a href="#local-6989586621681201240"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, ProtocolParams)]
 -&gt; Proxy ProtocolParams -&gt; [(Text, ProtocolParams)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, ProtocolParams)]
@@ -436,7 +436,7 @@ forall a. Maybe a
 </span><span id="line-121"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-122"></span><span>
 </span><span id="line-123"></span><span class="hs-comment">-- | Active stake distribution for an epoch</span><span>
-</span><span id="line-124"></span><span id="local-6989586621681201231"><span id="local-6989586621681201232"></span></span><span class="hs-keyword">data</span><span> </span><span id="StakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#StakeDistribution"><span class="hs-identifier hs-var">StakeDistribution</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="StakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#StakeDistribution"><span class="hs-identifier hs-var">StakeDistribution</span></a></span></span><span>
+</span><span id="line-124"></span><span id="local-6989586621681201238"><span id="local-6989586621681201239"></span></span><span class="hs-keyword">data</span><span> </span><span id="StakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#StakeDistribution"><span class="hs-identifier hs-var">StakeDistribution</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="StakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#StakeDistribution"><span class="hs-identifier hs-var">StakeDistribution</span></a></span></span><span>
 </span><span id="line-125"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_stakeDistributionStakeAddress"><span class="annot"><span class="annottext">StakeDistribution -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_stakeDistributionStakeAddress"><span class="hs-identifier hs-var hs-var">_stakeDistributionStakeAddress</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Stake address</span><span>
 </span><span id="line-126"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_stakeDistributionPoolId"><span class="annot"><span class="annottext">StakeDistribution -&gt; PoolId
@@ -444,7 +444,7 @@ forall a. Maybe a
 </span><span id="line-127"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_stakeDistributionAmount"><span class="annot"><span class="annottext">StakeDistribution -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_stakeDistributionAmount"><span class="hs-identifier hs-var hs-var">_stakeDistributionAmount</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ Amount of active delegated stake in Lovelaces</span><span>
 </span><span id="line-128"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-129"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201221"><span id="local-6989586621681201223"><span id="local-6989586621681201225"><span class="annot"><span class="annottext">Int -&gt; StakeDistribution -&gt; ShowS
+</span><span id="line-129"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201228"><span id="local-6989586621681201230"><span id="local-6989586621681201232"><span class="annot"><span class="annottext">Int -&gt; StakeDistribution -&gt; ShowS
 [StakeDistribution] -&gt; ShowS
 StakeDistribution -&gt; String
 (Int -&gt; StakeDistribution -&gt; ShowS)
@@ -459,7 +459,7 @@ show :: StakeDistribution -&gt; String
 $cshow :: StakeDistribution -&gt; String
 showsPrec :: Int -&gt; StakeDistribution -&gt; ShowS
 $cshowsPrec :: Int -&gt; StakeDistribution -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201217"><span id="local-6989586621681201219"><span class="annot"><span class="annottext">StakeDistribution -&gt; StakeDistribution -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201224"><span id="local-6989586621681201226"><span class="annot"><span class="annottext">StakeDistribution -&gt; StakeDistribution -&gt; Bool
 (StakeDistribution -&gt; StakeDistribution -&gt; Bool)
 -&gt; (StakeDistribution -&gt; StakeDistribution -&gt; Bool)
 -&gt; Eq StakeDistribution
@@ -478,7 +478,7 @@ forall a.
 $cto :: forall x. Rep StakeDistribution x -&gt; StakeDistribution
 $cfrom :: forall x. StakeDistribution -&gt; Rep StakeDistribution x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-130"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201211"><span id="local-6989586621681201213"><span class="annot"><span class="annottext">Value -&gt; Parser [StakeDistribution]
+</span><span id="line-130"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201218"><span id="local-6989586621681201220"><span class="annot"><span class="annottext">Value -&gt; Parser [StakeDistribution]
 Value -&gt; Parser StakeDistribution
 (Value -&gt; Parser StakeDistribution)
 -&gt; (Value -&gt; Parser [StakeDistribution])
@@ -489,7 +489,7 @@ parseJSONList :: Value -&gt; Parser [StakeDistribution]
 $cparseJSONList :: Value -&gt; Parser [StakeDistribution]
 parseJSON :: Value -&gt; Parser StakeDistribution
 $cparseJSON :: Value -&gt; Parser StakeDistribution
-</span><a href="#local-6989586621681201211"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201203"><span id="local-6989586621681201205"><span id="local-6989586621681201207"><span id="local-6989586621681201209"><span class="annot"><span class="annottext">[StakeDistribution] -&gt; Encoding
+</span><a href="#local-6989586621681201218"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201210"><span id="local-6989586621681201212"><span id="local-6989586621681201214"><span id="local-6989586621681201216"><span class="annot"><span class="annottext">[StakeDistribution] -&gt; Encoding
 [StakeDistribution] -&gt; Value
 StakeDistribution -&gt; Encoding
 StakeDistribution -&gt; Value
@@ -512,12 +512,12 @@ toEncoding :: StakeDistribution -&gt; Encoding
 $ctoEncoding :: StakeDistribution -&gt; Encoding
 toJSON :: StakeDistribution -&gt; Value
 $ctoJSON :: StakeDistribution -&gt; Value
-</span><a href="#local-6989586621681201203"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201210"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-131"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_stakeDistribution&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#StakeDistribution"><span class="hs-identifier hs-type">StakeDistribution</span></a></span><span>
 </span><span id="line-132"></span><span>
 </span><span id="line-133"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#StakeDistribution"><span class="hs-identifier hs-type">StakeDistribution</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-134"></span><span>  </span><span id="local-6989586621681201201"><span class="annot"><span class="annottext">toSamples :: Proxy StakeDistribution -&gt; [(Text, StakeDistribution)]
-</span><a href="#local-6989586621681201201"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, StakeDistribution)]
+</span><span id="line-134"></span><span>  </span><span id="local-6989586621681201208"><span class="annot"><span class="annottext">toSamples :: Proxy StakeDistribution -&gt; [(Text, StakeDistribution)]
+</span><a href="#local-6989586621681201208"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, StakeDistribution)]
 -&gt; Proxy StakeDistribution -&gt; [(Text, StakeDistribution)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, StakeDistribution)]
@@ -543,13 +543,13 @@ forall a. a -&gt; [(Text, a)]
 </span><span id="line-139"></span><span>      </span><span class="hs-special">}</span><span>
 </span><span id="line-140"></span><span>
 </span><span id="line-141"></span><span class="hs-comment">-- | Stake distribution for an epoch for specific pool</span><span>
-</span><span id="line-142"></span><span id="local-6989586621681201199"><span id="local-6989586621681201200"></span></span><span class="hs-keyword">data</span><span> </span><span id="PoolStakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#PoolStakeDistribution"><span class="hs-identifier hs-var">PoolStakeDistribution</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PoolStakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#PoolStakeDistribution"><span class="hs-identifier hs-var">PoolStakeDistribution</span></a></span></span><span>
+</span><span id="line-142"></span><span id="local-6989586621681201206"><span id="local-6989586621681201207"></span></span><span class="hs-keyword">data</span><span> </span><span id="PoolStakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#PoolStakeDistribution"><span class="hs-identifier hs-var">PoolStakeDistribution</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="PoolStakeDistribution"><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#PoolStakeDistribution"><span class="hs-identifier hs-var">PoolStakeDistribution</span></a></span></span><span>
 </span><span id="line-143"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="_poolStakeDistributionStakeAddress"><span class="annot"><span class="annottext">PoolStakeDistribution -&gt; Address
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_poolStakeDistributionStakeAddress"><span class="hs-identifier hs-var hs-var">_poolStakeDistributionStakeAddress</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Address.html#Address"><span class="hs-identifier hs-type">Address</span></a></span><span> </span><span class="hs-comment">-- ^ Stake address</span><span>
 </span><span id="line-144"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="_poolStakeDistributionAmount"><span class="annot"><span class="annottext">PoolStakeDistribution -&gt; Lovelaces
 </span><a href="Blockfrost.Types.Cardano.Epochs.html#_poolStakeDistributionAmount"><span class="hs-identifier hs-var hs-var">_poolStakeDistributionAmount</span></a></span></span><span>       </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Blockfrost.Types.Shared.Ada.html#Lovelaces"><span class="hs-identifier hs-type">Lovelaces</span></a></span><span> </span><span class="hs-comment">-- ^ Amount of active delegated stake in Lovelaces</span><span>
 </span><span id="line-145"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-146"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201190"><span id="local-6989586621681201192"><span id="local-6989586621681201194"><span class="annot"><span class="annottext">Int -&gt; PoolStakeDistribution -&gt; ShowS
+</span><span id="line-146"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201197"><span id="local-6989586621681201199"><span id="local-6989586621681201201"><span class="annot"><span class="annottext">Int -&gt; PoolStakeDistribution -&gt; ShowS
 [PoolStakeDistribution] -&gt; ShowS
 PoolStakeDistribution -&gt; String
 (Int -&gt; PoolStakeDistribution -&gt; ShowS)
@@ -564,7 +564,7 @@ show :: PoolStakeDistribution -&gt; String
 $cshow :: PoolStakeDistribution -&gt; String
 showsPrec :: Int -&gt; PoolStakeDistribution -&gt; ShowS
 $cshowsPrec :: Int -&gt; PoolStakeDistribution -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201186"><span id="local-6989586621681201188"><span class="annot"><span class="annottext">PoolStakeDistribution -&gt; PoolStakeDistribution -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201193"><span id="local-6989586621681201195"><span class="annot"><span class="annottext">PoolStakeDistribution -&gt; PoolStakeDistribution -&gt; Bool
 (PoolStakeDistribution -&gt; PoolStakeDistribution -&gt; Bool)
 -&gt; (PoolStakeDistribution -&gt; PoolStakeDistribution -&gt; Bool)
 -&gt; Eq PoolStakeDistribution
@@ -583,7 +583,7 @@ forall a.
 $cto :: forall x. Rep PoolStakeDistribution x -&gt; PoolStakeDistribution
 $cfrom :: forall x. PoolStakeDistribution -&gt; Rep PoolStakeDistribution x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-147"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201180"><span id="local-6989586621681201182"><span class="annot"><span class="annottext">Value -&gt; Parser [PoolStakeDistribution]
+</span><span id="line-147"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681201187"><span id="local-6989586621681201189"><span class="annot"><span class="annottext">Value -&gt; Parser [PoolStakeDistribution]
 Value -&gt; Parser PoolStakeDistribution
 (Value -&gt; Parser PoolStakeDistribution)
 -&gt; (Value -&gt; Parser [PoolStakeDistribution])
@@ -594,7 +594,7 @@ parseJSONList :: Value -&gt; Parser [PoolStakeDistribution]
 $cparseJSONList :: Value -&gt; Parser [PoolStakeDistribution]
 parseJSON :: Value -&gt; Parser PoolStakeDistribution
 $cparseJSON :: Value -&gt; Parser PoolStakeDistribution
-</span><a href="#local-6989586621681201180"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201172"><span id="local-6989586621681201174"><span id="local-6989586621681201176"><span id="local-6989586621681201178"><span class="annot"><span class="annottext">[PoolStakeDistribution] -&gt; Encoding
+</span><a href="#local-6989586621681201187"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">FromJSON</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681201179"><span id="local-6989586621681201181"><span id="local-6989586621681201183"><span id="local-6989586621681201185"><span class="annot"><span class="annottext">[PoolStakeDistribution] -&gt; Encoding
 [PoolStakeDistribution] -&gt; Value
 PoolStakeDistribution -&gt; Encoding
 PoolStakeDistribution -&gt; Value
@@ -617,12 +617,12 @@ toEncoding :: PoolStakeDistribution -&gt; Encoding
 $ctoEncoding :: PoolStakeDistribution -&gt; Encoding
 toJSON :: PoolStakeDistribution -&gt; Value
 $ctoJSON :: PoolStakeDistribution -&gt; Value
-</span><a href="#local-6989586621681201172"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621681201179"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">ToJSON</span></a></span></span></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-148"></span><span>  </span><span class="hs-keyword">via</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CustomJSON</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">FieldLabelModifier</span></a></span><span> </span><span class="hs-special">'</span><span class="hs-special">[</span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">StripPrefix</span></a></span><span> </span><span class="annot"><span class="hs-string">&quot;_poolStakeDistribution&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../deriving-aeson/html/src"><span class="hs-identifier hs-type">CamelToSnake</span></a></span><span class="hs-special">]</span><span class="hs-special">]</span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#PoolStakeDistribution"><span class="hs-identifier hs-type">PoolStakeDistribution</span></a></span><span>
 </span><span id="line-149"></span><span>
 </span><span id="line-150"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../servant-docs/html/src"><span class="hs-identifier hs-type">ToSample</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.Cardano.Epochs.html#PoolStakeDistribution"><span class="hs-identifier hs-type">PoolStakeDistribution</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-151"></span><span>  </span><span id="local-6989586621681201170"><span class="annot"><span class="annottext">toSamples :: Proxy PoolStakeDistribution -&gt; [(Text, PoolStakeDistribution)]
-</span><a href="#local-6989586621681201170"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, PoolStakeDistribution)]
+</span><span id="line-151"></span><span>  </span><span id="local-6989586621681201177"><span class="annot"><span class="annottext">toSamples :: Proxy PoolStakeDistribution -&gt; [(Text, PoolStakeDistribution)]
+</span><a href="#local-6989586621681201177"><span class="hs-identifier hs-var hs-var hs-var hs-var">toSamples</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(Text, PoolStakeDistribution)]
 -&gt; Proxy PoolStakeDistribution -&gt; [(Text, PoolStakeDistribution)]
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">([(Text, PoolStakeDistribution)]

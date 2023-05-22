@@ -22,17 +22,17 @@
 </span><span id="line-22"></span><span>
 </span><span id="line-23"></span><span class="hs-comment">-- | Ed25519 signature verification</span><span>
 </span><span id="line-24"></span><span class="hs-comment">-- This will fail if the key or the signature are not of the expected length.</span><span>
-</span><span id="line-25"></span><span id="local-6989586621680941787"><span class="annot"><a href="Crypto.html#verifyEd25519Signature"><span class="hs-identifier hs-type">verifyEd25519Signature</span></a></span><span>
-</span><span id="line-26"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Alternative</span></a></span><span> </span><span class="annot"><a href="#local-6989586621680941787"><span class="hs-identifier hs-type">f</span></a></span><span>
+</span><span id="line-25"></span><span id="local-6989586621680941954"><span class="annot"><a href="Crypto.html#verifyEd25519Signature"><span class="hs-identifier hs-type">verifyEd25519Signature</span></a></span><span>
+</span><span id="line-26"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Alternative</span></a></span><span> </span><span class="annot"><a href="#local-6989586621680941954"><span class="hs-identifier hs-type">f</span></a></span><span>
 </span><span id="line-27"></span><span>    </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BS.ByteString</span></a></span><span>  </span><span class="hs-comment">-- ^ Public Key (32 bytes)</span><span>
 </span><span id="line-28"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BS.ByteString</span></a></span><span>  </span><span class="hs-comment">-- ^ Message    (arbitrary length)</span><span>
 </span><span id="line-29"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">BS.ByteString</span></a></span><span>  </span><span class="hs-comment">-- ^ Signature  (64 bytes)</span><span>
-</span><span id="line-30"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621680941787"><span class="hs-identifier hs-type">f</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span></span><span>
+</span><span id="line-30"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="#local-6989586621680941954"><span class="hs-identifier hs-type">f</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span></span><span>
 </span><span id="line-31"></span><span id="verifyEd25519Signature"><span class="annot"><span class="annottext">verifyEd25519Signature :: ByteString -&gt; ByteString -&gt; ByteString -&gt; f Bool
-</span><a href="Crypto.html#verifyEd25519Signature"><span class="hs-identifier hs-var hs-var">verifyEd25519Signature</span></a></span></span><span> </span><span id="local-6989586621680941786"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941786"><span class="hs-identifier hs-var">pubKey</span></a></span></span><span> </span><span id="local-6989586621680941785"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941785"><span class="hs-identifier hs-var">msg</span></a></span></span><span> </span><span id="local-6989586621680941784"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941784"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Crypto.html#verifyEd25519Signature"><span class="hs-identifier hs-var hs-var">verifyEd25519Signature</span></a></span></span><span> </span><span id="local-6989586621680941953"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941953"><span class="hs-identifier hs-var">pubKey</span></a></span></span><span> </span><span id="local-6989586621680941952"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941952"><span class="hs-identifier hs-var">msg</span></a></span></span><span> </span><span id="local-6989586621680941951"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941951"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-32"></span><span>    </span><span class="annot"><span class="annottext">f Bool -&gt; (Bool -&gt; f Bool) -&gt; Maybe Bool -&gt; f Bool
 forall b a. b -&gt; (a -&gt; b) -&gt; Maybe a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">maybe</span></a></span><span> </span><span class="annot"><span class="annottext">f Bool
@@ -61,21 +61,21 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; CryptoFailable PublicKey
 forall ba. ByteArrayAccess ba =&gt; ba -&gt; CryptoFailable PublicKey
 </span><a href="../../../../cardano-crypto/html/src"><span class="hs-identifier hs-var">publicKey</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941786"><span class="hs-identifier hs-var">pubKey</span></a></span><span>
+</span><a href="#local-6989586621680941953"><span class="hs-identifier hs-var">pubKey</span></a></span><span>
 </span><span id="line-35"></span><span>            </span><span class="annot"><span class="annottext">CryptoFailable (ByteString -&gt; Signature -&gt; Bool)
 -&gt; CryptoFailable ByteString -&gt; CryptoFailable (Signature -&gt; Bool)
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; CryptoFailable ByteString
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941785"><span class="hs-identifier hs-var">msg</span></a></span><span>
+</span><a href="#local-6989586621680941952"><span class="hs-identifier hs-var">msg</span></a></span><span>
 </span><span id="line-36"></span><span>            </span><span class="annot"><span class="annottext">CryptoFailable (Signature -&gt; Bool)
 -&gt; CryptoFailable Signature -&gt; CryptoFailable Bool
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; CryptoFailable Signature
 forall ba. ByteArrayAccess ba =&gt; ba -&gt; CryptoFailable Signature
 </span><a href="../../../../cardano-crypto/html/src"><span class="hs-keyword hs-var">signature</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941784"><span class="hs-identifier hs-var">sig</span></a></span><span>
+</span><a href="#local-6989586621680941951"><span class="hs-identifier hs-var">sig</span></a></span><span>
 </span><span id="line-37"></span><span>
 </span><span id="line-38"></span><span class="hs-comment">-- | Verify an ECDSA signature made using the SECP256k1 curve.</span><span>
 </span><span id="line-39"></span><span class="hs-comment">--</span><span>
@@ -90,43 +90,43 @@ forall ba. ByteArrayAccess ba =&gt; ba -&gt; CryptoFailable Signature
 </span><span id="line-48"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="PlutusCore.Builtin.Emitter.html#Emitter"><span class="hs-identifier hs-type">Emitter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="PlutusCore.Evaluation.Result.html#EvaluationResult"><span class="hs-identifier hs-type">EvaluationResult</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-49"></span><span id="verifyEcdsaSecp256k1Signature"><span class="annot"><span class="annottext">verifyEcdsaSecp256k1Signature :: ByteString
 -&gt; ByteString -&gt; ByteString -&gt; Emitter (EvaluationResult Bool)
-</span><a href="Crypto.html#verifyEcdsaSecp256k1Signature"><span class="hs-identifier hs-var hs-var">verifyEcdsaSecp256k1Signature</span></a></span></span><span> </span><span id="local-6989586621680941780"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941780"><span class="hs-identifier hs-var">pk</span></a></span></span><span> </span><span id="local-6989586621680941779"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941779"><span class="hs-identifier hs-var">msg</span></a></span></span><span> </span><span id="local-6989586621680941778"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941778"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Crypto.html#verifyEcdsaSecp256k1Signature"><span class="hs-identifier hs-var hs-var">verifyEcdsaSecp256k1Signature</span></a></span></span><span> </span><span id="local-6989586621680941947"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941947"><span class="hs-identifier hs-var">pk</span></a></span></span><span> </span><span id="local-6989586621680941946"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941946"><span class="hs-identifier hs-var">msg</span></a></span></span><span> </span><span id="local-6989586621680941945"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941945"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-50"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (VerKeyDSIGN EcdsaSecp256k1DSIGN)
 forall v. DSIGNAlgorithm v =&gt; ByteString -&gt; Maybe (VerKeyDSIGN v)
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.rawDeserialiseVerKeyDSIGN</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">EcdsaSecp256k1DSIGN</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941780"><span class="hs-identifier hs-var">pk</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941947"><span class="hs-identifier hs-var">pk</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-51"></span><span>    </span><span class="annot"><span class="annottext">Maybe (VerKeyDSIGN EcdsaSecp256k1DSIGN)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Emitter (EvaluationResult Bool)
 forall a. Text -&gt; Text -&gt; Emitter (EvaluationResult a)
 </span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var">failWithMessage</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941775"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941942"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Invalid verification key.&quot;</span></span><span>
-</span><span id="line-52"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941774"><span class="annot"><span class="annottext">VerKeyDSIGN EcdsaSecp256k1DSIGN
-</span><a href="#local-6989586621680941774"><span class="hs-identifier hs-var">pk'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (SigDSIGN EcdsaSecp256k1DSIGN)
+</span><span id="line-52"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941941"><span class="annot"><span class="annottext">VerKeyDSIGN EcdsaSecp256k1DSIGN
+</span><a href="#local-6989586621680941941"><span class="hs-identifier hs-var">pk'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (SigDSIGN EcdsaSecp256k1DSIGN)
 forall v. DSIGNAlgorithm v =&gt; ByteString -&gt; Maybe (SigDSIGN v)
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.rawDeserialiseSigDSIGN</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">EcdsaSecp256k1DSIGN</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941778"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941945"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-53"></span><span>      </span><span class="annot"><span class="annottext">Maybe (SigDSIGN EcdsaSecp256k1DSIGN)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Emitter (EvaluationResult Bool)
 forall a. Text -&gt; Text -&gt; Emitter (EvaluationResult a)
 </span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var">failWithMessage</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941775"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941942"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Invalid signature.&quot;</span></span><span>
-</span><span id="line-54"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941772"><span class="annot"><span class="annottext">SigDSIGN EcdsaSecp256k1DSIGN
-</span><a href="#local-6989586621680941772"><span class="hs-identifier hs-var">sig'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe MessageHash
+</span><span id="line-54"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941939"><span class="annot"><span class="annottext">SigDSIGN EcdsaSecp256k1DSIGN
+</span><a href="#local-6989586621680941939"><span class="hs-identifier hs-var">sig'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe MessageHash
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">toMessageHash</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941779"><span class="hs-identifier hs-var">msg</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941946"><span class="hs-identifier hs-var">msg</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-55"></span><span>        </span><span class="annot"><span class="annottext">Maybe MessageHash
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Emitter (EvaluationResult Bool)
 forall a. Text -&gt; Text -&gt; Emitter (EvaluationResult a)
 </span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var">failWithMessage</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941775"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941942"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Invalid message hash.&quot;</span></span><span>
-</span><span id="line-56"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941771"><span class="annot"><span class="annottext">MessageHash
-</span><a href="#local-6989586621680941771"><span class="hs-identifier hs-var">msg'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">EvaluationResult Bool -&gt; Emitter (EvaluationResult Bool)
+</span><span id="line-56"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941938"><span class="annot"><span class="annottext">MessageHash
+</span><a href="#local-6989586621680941938"><span class="hs-identifier hs-var">msg'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">EvaluationResult Bool -&gt; Emitter (EvaluationResult Bool)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(EvaluationResult Bool -&gt; Emitter (EvaluationResult Bool))
 -&gt; (Bool -&gt; EvaluationResult Bool)
@@ -148,18 +148,18 @@ forall v a.
 ContextDSIGN v
 -&gt; VerKeyDSIGN v -&gt; a -&gt; SigDSIGN v -&gt; Either String ()
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.verifyDSIGN</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">VerKeyDSIGN EcdsaSecp256k1DSIGN
-</span><a href="#local-6989586621680941774"><span class="hs-identifier hs-var">pk'</span></a></span><span> </span><span class="annot"><span class="annottext">MessageHash
-</span><a href="#local-6989586621680941771"><span class="hs-identifier hs-var">msg'</span></a></span><span> </span><span class="annot"><span class="annottext">SigDSIGN EcdsaSecp256k1DSIGN
-</span><a href="#local-6989586621680941772"><span class="hs-identifier hs-var">sig'</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941941"><span class="hs-identifier hs-var">pk'</span></a></span><span> </span><span class="annot"><span class="annottext">MessageHash
+</span><a href="#local-6989586621680941938"><span class="hs-identifier hs-var">msg'</span></a></span><span> </span><span class="annot"><span class="annottext">SigDSIGN EcdsaSecp256k1DSIGN
+</span><a href="#local-6989586621680941939"><span class="hs-identifier hs-var">sig'</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-57"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span>   </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
 </span><span id="line-58"></span><span>          </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>
 </span><span id="line-59"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-60"></span><span>    </span><span class="annot"><a href="#local-6989586621680941775"><span class="hs-identifier hs-type">loc</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
-</span><span id="line-61"></span><span>    </span><span id="local-6989586621680941775"><span class="annot"><span class="annottext">loc :: Text
-</span><a href="#local-6989586621680941775"><span class="hs-identifier hs-var hs-var">loc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text
+</span><span id="line-60"></span><span>    </span><span class="annot"><a href="#local-6989586621680941942"><span class="hs-identifier hs-type">loc</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
+</span><span id="line-61"></span><span>    </span><span id="local-6989586621680941942"><span class="annot"><span class="annottext">loc :: Text
+</span><a href="#local-6989586621680941942"><span class="hs-identifier hs-var hs-var">loc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;ECDSA SECP256k1 signature verification&quot;</span></span><span>
 </span><span id="line-62"></span><span>
 </span><span id="line-63"></span><span class="hs-comment">-- | Verify a Schnorr signature made using the SECP256k1 curve.</span><span>
@@ -175,33 +175,33 @@ ContextDSIGN v
 </span><span id="line-73"></span><span>  </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="PlutusCore.Builtin.Emitter.html#Emitter"><span class="hs-identifier hs-type">Emitter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="PlutusCore.Evaluation.Result.html#EvaluationResult"><span class="hs-identifier hs-type">EvaluationResult</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-74"></span><span id="verifySchnorrSecp256k1Signature"><span class="annot"><span class="annottext">verifySchnorrSecp256k1Signature :: ByteString
 -&gt; ByteString -&gt; ByteString -&gt; Emitter (EvaluationResult Bool)
-</span><a href="Crypto.html#verifySchnorrSecp256k1Signature"><span class="hs-identifier hs-var hs-var">verifySchnorrSecp256k1Signature</span></a></span></span><span> </span><span id="local-6989586621680941769"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941769"><span class="hs-identifier hs-var">pk</span></a></span></span><span> </span><span id="local-6989586621680941768"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941768"><span class="hs-identifier hs-var">msg</span></a></span></span><span> </span><span id="local-6989586621680941767"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941767"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Crypto.html#verifySchnorrSecp256k1Signature"><span class="hs-identifier hs-var hs-var">verifySchnorrSecp256k1Signature</span></a></span></span><span> </span><span id="local-6989586621680941936"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941936"><span class="hs-identifier hs-var">pk</span></a></span></span><span> </span><span id="local-6989586621680941935"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941935"><span class="hs-identifier hs-var">msg</span></a></span></span><span> </span><span id="local-6989586621680941934"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941934"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-75"></span><span>  </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (VerKeyDSIGN SchnorrSecp256k1DSIGN)
 forall v. DSIGNAlgorithm v =&gt; ByteString -&gt; Maybe (VerKeyDSIGN v)
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.rawDeserialiseVerKeyDSIGN</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">SchnorrSecp256k1DSIGN</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941769"><span class="hs-identifier hs-var">pk</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941936"><span class="hs-identifier hs-var">pk</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-76"></span><span>    </span><span class="annot"><span class="annottext">Maybe (VerKeyDSIGN SchnorrSecp256k1DSIGN)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Emitter (EvaluationResult Bool)
 forall a. Text -&gt; Text -&gt; Emitter (EvaluationResult a)
 </span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var">failWithMessage</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941766"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941933"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Invalid verification key.&quot;</span></span><span>
-</span><span id="line-77"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941765"><span class="annot"><span class="annottext">VerKeyDSIGN SchnorrSecp256k1DSIGN
-</span><a href="#local-6989586621680941765"><span class="hs-identifier hs-var">pk'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (SigDSIGN SchnorrSecp256k1DSIGN)
+</span><span id="line-77"></span><span>    </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941932"><span class="annot"><span class="annottext">VerKeyDSIGN SchnorrSecp256k1DSIGN
+</span><a href="#local-6989586621680941932"><span class="hs-identifier hs-var">pk'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe (SigDSIGN SchnorrSecp256k1DSIGN)
 forall v. DSIGNAlgorithm v =&gt; ByteString -&gt; Maybe (SigDSIGN v)
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.rawDeserialiseSigDSIGN</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">SchnorrSecp256k1DSIGN</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941767"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941934"><span class="hs-identifier hs-var">sig</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-78"></span><span>      </span><span class="annot"><span class="annottext">Maybe (SigDSIGN SchnorrSecp256k1DSIGN)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Emitter (EvaluationResult Bool)
 forall a. Text -&gt; Text -&gt; Emitter (EvaluationResult a)
 </span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var">failWithMessage</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941766"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941933"><span class="hs-identifier hs-var">loc</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Invalid signature.&quot;</span></span><span>
-</span><span id="line-79"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941764"><span class="annot"><span class="annottext">SigDSIGN SchnorrSecp256k1DSIGN
-</span><a href="#local-6989586621680941764"><span class="hs-identifier hs-var">sig'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">EvaluationResult Bool -&gt; Emitter (EvaluationResult Bool)
+</span><span id="line-79"></span><span>      </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621680941931"><span class="annot"><span class="annottext">SigDSIGN SchnorrSecp256k1DSIGN
+</span><a href="#local-6989586621680941931"><span class="hs-identifier hs-var">sig'</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">EvaluationResult Bool -&gt; Emitter (EvaluationResult Bool)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">(EvaluationResult Bool -&gt; Emitter (EvaluationResult Bool))
 -&gt; (Bool -&gt; EvaluationResult Bool)
@@ -223,18 +223,18 @@ forall v a.
 ContextDSIGN v
 -&gt; VerKeyDSIGN v -&gt; a -&gt; SigDSIGN v -&gt; Either String ()
 </span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.verifyDSIGN</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">VerKeyDSIGN SchnorrSecp256k1DSIGN
-</span><a href="#local-6989586621680941765"><span class="hs-identifier hs-var">pk'</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621680941768"><span class="hs-identifier hs-var">msg</span></a></span><span> </span><span class="annot"><span class="annottext">SigDSIGN SchnorrSecp256k1DSIGN
-</span><a href="#local-6989586621680941764"><span class="hs-identifier hs-var">sig'</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621680941932"><span class="hs-identifier hs-var">pk'</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621680941935"><span class="hs-identifier hs-var">msg</span></a></span><span> </span><span class="annot"><span class="annottext">SigDSIGN SchnorrSecp256k1DSIGN
+</span><a href="#local-6989586621680941931"><span class="hs-identifier hs-var">sig'</span></a></span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-80"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Left</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-identifier">_</span></span><span>   </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
 </span><span id="line-81"></span><span>        </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Right</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>
 </span><span id="line-82"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-83"></span><span>    </span><span class="annot"><a href="#local-6989586621680941766"><span class="hs-identifier hs-type">loc</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
-</span><span id="line-84"></span><span>    </span><span id="local-6989586621680941766"><span class="annot"><span class="annottext">loc :: Text
-</span><a href="#local-6989586621680941766"><span class="hs-identifier hs-var hs-var">loc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text
+</span><span id="line-83"></span><span>    </span><span class="annot"><a href="#local-6989586621680941933"><span class="hs-identifier hs-type">loc</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
+</span><span id="line-84"></span><span>    </span><span id="local-6989586621680941933"><span class="annot"><span class="annottext">loc :: Text
+</span><a href="#local-6989586621680941933"><span class="hs-identifier hs-var hs-var">loc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;Schnorr SECP256k1 signature verification&quot;</span></span><span>
 </span><span id="line-85"></span><span>
 </span><span id="line-86"></span><span class="hs-comment">-- Helpers</span><span>
@@ -244,23 +244,23 @@ ContextDSIGN v
 </span><span id="line-90"></span><span class="hs-comment">-- requires a fix to how Emitter and EvaluationResult work, and since we don't</span><span>
 </span><span id="line-91"></span><span class="hs-comment">-- expect 'failWithMessage' to be used this way, we note this for future</span><span>
 </span><span id="line-92"></span><span class="hs-comment">-- reference only for when such fixes are made.</span><span>
-</span><span id="line-93"></span><span class="annot"><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-type">failWithMessage</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span class="hs-special">(</span><span id="local-6989586621680941810"><span class="annot"><a href="#local-6989586621680941810"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Type</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-operator">.</span><span>
-</span><span id="line-94"></span><span>  </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="PlutusCore.Builtin.Emitter.html#Emitter"><span class="hs-identifier hs-type">Emitter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="PlutusCore.Evaluation.Result.html#EvaluationResult"><span class="hs-identifier hs-type">EvaluationResult</span></a></span><span> </span><span class="annot"><a href="#local-6989586621680941810"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-93"></span><span class="annot"><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-type">failWithMessage</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span class="hs-special">(</span><span id="local-6989586621680941977"><span class="annot"><a href="#local-6989586621680941977"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Type</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-operator">.</span><span>
+</span><span id="line-94"></span><span>  </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="PlutusCore.Builtin.Emitter.html#Emitter"><span class="hs-identifier hs-type">Emitter</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="PlutusCore.Evaluation.Result.html#EvaluationResult"><span class="hs-identifier hs-type">EvaluationResult</span></a></span><span> </span><span class="annot"><a href="#local-6989586621680941977"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-95"></span><span id="failWithMessage"><span class="annot"><span class="annottext">failWithMessage :: Text -&gt; Text -&gt; Emitter (EvaluationResult a)
-</span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var hs-var">failWithMessage</span></a></span></span><span> </span><span id="local-6989586621680941763"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941763"><span class="hs-identifier hs-var">location</span></a></span></span><span> </span><span id="local-6989586621680941762"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941762"><span class="hs-identifier hs-var">reason</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><a href="Crypto.html#failWithMessage"><span class="hs-identifier hs-var hs-var">failWithMessage</span></a></span></span><span> </span><span id="local-6989586621680941930"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941930"><span class="hs-identifier hs-var">location</span></a></span></span><span> </span><span id="local-6989586621680941929"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621680941929"><span class="hs-identifier hs-var">reason</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-96"></span><span>  </span><span class="annot"><span class="annottext">Text -&gt; Emitter ()
 </span><a href="PlutusCore.Builtin.Emitter.html#emit"><span class="hs-identifier hs-var">emit</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; Emitter ()) -&gt; Text -&gt; Emitter ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941763"><span class="hs-identifier hs-var">location</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
+</span><a href="#local-6989586621680941930"><span class="hs-identifier hs-var">location</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text
 </span><span class="hs-string">&quot;: &quot;</span></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Text -&gt; Text
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621680941762"><span class="hs-identifier hs-var">reason</span></a></span><span>
+</span><a href="#local-6989586621680941929"><span class="hs-identifier hs-var">reason</span></a></span><span>
 </span><span id="line-97"></span><span>  </span><span class="annot"><span class="annottext">EvaluationResult a -&gt; Emitter (EvaluationResult a)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="annot"><span class="annottext">EvaluationResult a

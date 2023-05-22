@@ -51,38 +51,38 @@
 </span><span id="line-51"></span><span class="hs-comment">-- &gt;    return redirectRequests</span><span>
 </span><span id="line-52"></span><span class="annot"><a href="Network.HTTP.Client.Response.html#getRedirectedRequest"><span class="hs-identifier hs-type">getRedirectedRequest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../http-types/html/src"><span class="hs-identifier hs-type">W.ResponseHeaders</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#CookieJar"><span class="hs-identifier hs-type">CookieJar</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span>
 </span><span id="line-53"></span><span id="getRedirectedRequest"><span class="annot"><span class="annottext">getRedirectedRequest :: Request -&gt; ResponseHeaders -&gt; CookieJar -&gt; Int -&gt; Maybe Request
-</span><a href="Network.HTTP.Client.Response.html#getRedirectedRequest"><span class="hs-identifier hs-var hs-var">getRedirectedRequest</span></a></span></span><span> </span><span id="local-6989586621679096440"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096440"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span id="local-6989586621679096439"><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096439"><span class="hs-identifier hs-var">hs</span></a></span></span><span> </span><span id="local-6989586621679096438"><span class="annot"><span class="annottext">CookieJar
-</span><a href="#local-6989586621679096438"><span class="hs-identifier hs-var">cookie_jar</span></a></span></span><span> </span><span id="local-6989586621679096437"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">code</span></a></span></span><span>
+</span><a href="Network.HTTP.Client.Response.html#getRedirectedRequest"><span class="hs-identifier hs-var hs-var">getRedirectedRequest</span></a></span></span><span> </span><span id="local-6989586621679096444"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679096444"><span class="hs-identifier hs-var">req</span></a></span></span><span> </span><span id="local-6989586621679096443"><span class="annot"><span class="annottext">ResponseHeaders
+</span><a href="#local-6989586621679096443"><span class="hs-identifier hs-var">hs</span></a></span></span><span> </span><span id="local-6989586621679096442"><span class="annot"><span class="annottext">CookieJar
+</span><a href="#local-6989586621679096442"><span class="hs-identifier hs-var">cookie_jar</span></a></span></span><span> </span><span id="local-6989586621679096441"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679096441"><span class="hs-identifier hs-var">code</span></a></span></span><span>
 </span><span id="line-54"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">300</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679096441"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679096441"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">400</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-55"></span><span>        </span><span id="local-6989586621679096433"><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679096433"><span class="hs-identifier hs-var">l'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">HeaderName -&gt; ResponseHeaders -&gt; Maybe ByteString
+</span><span id="line-55"></span><span>        </span><span id="local-6989586621679096437"><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">l'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">HeaderName -&gt; ResponseHeaders -&gt; Maybe ByteString
 forall a b. Eq a =&gt; a -&gt; [(a, b)] -&gt; Maybe b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">lookup</span></a></span><span> </span><span class="annot"><span class="annottext">HeaderName
 </span><span class="hs-string">&quot;location&quot;</span></span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096439"><span class="hs-identifier hs-var">hs</span></a></span><span>
-</span><span id="line-56"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679096431"><span class="annot"><span class="annottext">l :: String
-</span><a href="#local-6989586621679096431"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Char -&gt; Bool) -&gt; String -&gt; String
+</span><a href="#local-6989586621679096443"><span class="hs-identifier hs-var">hs</span></a></span><span>
+</span><span id="line-56"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679096435"><span class="annot"><span class="annottext">l :: String
+</span><a href="#local-6989586621679096435"><span class="hs-identifier hs-var hs-var">l</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Char -&gt; Bool) -&gt; String -&gt; String
 </span><a href="../../../../network-uri/html/src"><span class="hs-identifier hs-var">escapeURIString</span></a></span><span> </span><span class="annot"><span class="annottext">Char -&gt; Bool
 </span><a href="../../../../network-uri/html/src"><span class="hs-identifier hs-var">isAllowedInURI</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString -&gt; String
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S8.unpack</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679096433"><span class="hs-identifier hs-var">l'</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-57"></span><span>            </span><span id="local-6989586621679096429"><span class="annot"><span class="annottext">stripHeaders :: Request -&gt; Request
-</span><a href="#local-6989586621679096429"><span class="hs-identifier hs-var hs-var">stripHeaders</span></a></span></span><span> </span><span id="local-6989586621679096428"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096428"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">l'</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-57"></span><span>            </span><span id="local-6989586621679096433"><span class="annot"><span class="annottext">stripHeaders :: Request -&gt; Request
+</span><a href="#local-6989586621679096433"><span class="hs-identifier hs-var hs-var">stripHeaders</span></a></span></span><span> </span><span id="local-6989586621679096432"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679096432"><span class="hs-identifier hs-var">r</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-58"></span><span>              </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096428"><span class="hs-identifier hs-var">r</span></a></span><span class="hs-special">{</span><span class="annot"><span class="annottext">requestHeaders :: ResponseHeaders
+</span><a href="#local-6989586621679096432"><span class="hs-identifier hs-var">r</span></a></span><span class="hs-special">{</span><span class="annot"><span class="annottext">requestHeaders :: ResponseHeaders
 </span><a href="Network.HTTP.Client.Types.html#requestHeaders"><span class="hs-identifier hs-var">requestHeaders</span></a></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-59"></span><span>                </span><span class="annot"><span class="annottext">((HeaderName, ByteString) -&gt; Bool)
 -&gt; ResponseHeaders -&gt; ResponseHeaders
@@ -95,7 +95,7 @@ forall a. (a -&gt; Bool) -&gt; [a] -&gt; [a]
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; HeaderName -&gt; Bool
 </span><a href="Network.HTTP.Client.Types.html#shouldStripHeaderOnRedirect"><span class="hs-identifier hs-var hs-var">shouldStripHeaderOnRedirect</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096440"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">(HeaderName -&gt; Bool)
+</span><a href="#local-6989586621679096444"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">(HeaderName -&gt; Bool)
 -&gt; ((HeaderName, ByteString) -&gt; HeaderName)
 -&gt; (HeaderName, ByteString)
 -&gt; Bool
@@ -108,34 +108,34 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-60"></span><span>                </span><span class="annot"><span class="annottext">Request -&gt; ResponseHeaders
 </span><a href="Network.HTTP.Client.Types.html#requestHeaders"><span class="hs-identifier hs-var hs-var">requestHeaders</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096428"><span class="hs-identifier hs-var">r</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-61"></span><span>        </span><span id="local-6989586621679096423"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096423"><span class="hs-identifier hs-var">req'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Request -&gt; Request) -&gt; Maybe Request -&gt; Maybe Request
+</span><a href="#local-6989586621679096432"><span class="hs-identifier hs-var">r</span></a></span><span class="hs-special">}</span><span>
+</span><span id="line-61"></span><span>        </span><span id="local-6989586621679096427"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679096427"><span class="hs-identifier hs-var">req'</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Request -&gt; Request) -&gt; Maybe Request -&gt; Maybe Request
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; Request
-</span><a href="#local-6989586621679096429"><span class="hs-identifier hs-var">stripHeaders</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe Request -&gt; Maybe Request)
+</span><a href="#local-6989586621679096433"><span class="hs-identifier hs-var">stripHeaders</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe Request -&gt; Maybe Request)
 -&gt; (URI -&gt; Maybe Request) -&gt; URI -&gt; Maybe Request
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; URI -&gt; Maybe Request
 forall (m :: * -&gt; *). MonadThrow m =&gt; Request -&gt; URI -&gt; m Request
 </span><a href="Network.HTTP.Client.Request.html#setUriRelative"><span class="hs-identifier hs-var">setUriRelative</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096440"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">(URI -&gt; Maybe Request) -&gt; Maybe URI -&gt; Maybe Request
+</span><a href="#local-6989586621679096444"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">(URI -&gt; Maybe Request) -&gt; Maybe URI -&gt; Maybe Request
 forall (m :: * -&gt; *) a b. Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">=&lt;&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Maybe URI
 </span><a href="../../../../network-uri/html/src"><span class="hs-identifier hs-var">parseURIReference</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679096431"><span class="hs-identifier hs-var">l</span></a></span><span>
+</span><a href="#local-6989586621679096435"><span class="hs-identifier hs-var">l</span></a></span><span>
 </span><span id="line-62"></span><span>        </span><span class="annot"><span class="annottext">Request -&gt; Maybe Request
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">(Request -&gt; Maybe Request) -&gt; Request -&gt; Maybe Request
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-63"></span><span>            </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679096441"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">302</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096437"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679096441"><span class="hs-identifier hs-var">code</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">303</span></span><span>
@@ -143,7 +143,7 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><span id="line-65"></span><span>                </span><span class="hs-comment">-- 303. However, almost all clients mistakenly implement it for</span><span>
 </span><span id="line-66"></span><span>                </span><span class="hs-comment">-- 302 as well. So we have to be wrong like everyone else...</span><span>
 </span><span id="line-67"></span><span>                </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096423"><span class="hs-identifier hs-var">req'</span></a></span><span>
+</span><a href="#local-6989586621679096427"><span class="hs-identifier hs-var">req'</span></a></span><span>
 </span><span id="line-68"></span><span>                    </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">method :: ByteString
 </span><a href="Network.HTTP.Client.Types.html#method"><span class="hs-identifier hs-var">method</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;GET&quot;</span></span><span>
@@ -153,7 +153,7 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-string">&quot;&quot;</span></span><span>
 </span><span id="line-70"></span><span>                    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">cookieJar :: Maybe CookieJar
 </span><a href="Network.HTTP.Client.Types.html#cookieJar"><span class="hs-identifier hs-var">cookieJar</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe CookieJar
-</span><a href="#local-6989586621679096414"><span class="hs-identifier hs-var">cookie_jar'</span></a></span><span>
+</span><a href="#local-6989586621679096418"><span class="hs-identifier hs-var">cookie_jar'</span></a></span><span>
 </span><span id="line-71"></span><span>                    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">requestHeaders :: ResponseHeaders
 </span><a href="Network.HTTP.Client.Types.html#requestHeaders"><span class="hs-identifier hs-var">requestHeaders</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">((HeaderName, ByteString) -&gt; Bool)
 -&gt; ResponseHeaders -&gt; ResponseHeaders
@@ -173,52 +173,52 @@ forall a b. (a, b) -&gt; a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; ResponseHeaders
 </span><a href="Network.HTTP.Client.Types.html#requestHeaders"><span class="hs-identifier hs-var hs-var">requestHeaders</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096423"><span class="hs-identifier hs-var">req'</span></a></span><span>
+</span><a href="#local-6989586621679096427"><span class="hs-identifier hs-var">req'</span></a></span><span>
 </span><span id="line-72"></span><span>                    </span><span class="hs-special">}</span><span>
 </span><span id="line-73"></span><span>                </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096423"><span class="hs-identifier hs-var">req'</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">cookieJar :: Maybe CookieJar
+</span><a href="#local-6989586621679096427"><span class="hs-identifier hs-var">req'</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">cookieJar :: Maybe CookieJar
 </span><a href="Network.HTTP.Client.Types.html#cookieJar"><span class="hs-identifier hs-var">cookieJar</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe CookieJar
-</span><a href="#local-6989586621679096414"><span class="hs-identifier hs-var">cookie_jar'</span></a></span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621679096418"><span class="hs-identifier hs-var">cookie_jar'</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-74"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">otherwise</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe Request
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-75"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-76"></span><span>    </span><span id="local-6989586621679096414"><span class="annot"><span class="annottext">cookie_jar' :: Maybe CookieJar
-</span><a href="#local-6989586621679096414"><span class="hs-identifier hs-var hs-var">cookie_jar'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(CookieJar -&gt; CookieJar) -&gt; Maybe CookieJar -&gt; Maybe CookieJar
+</span><span id="line-76"></span><span>    </span><span id="local-6989586621679096418"><span class="annot"><span class="annottext">cookie_jar' :: Maybe CookieJar
+</span><a href="#local-6989586621679096418"><span class="hs-identifier hs-var hs-var">cookie_jar'</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(CookieJar -&gt; CookieJar) -&gt; Maybe CookieJar -&gt; Maybe CookieJar
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fmap</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">CookieJar -&gt; CookieJar -&gt; CookieJar
 forall a b. a -&gt; b -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">const</span></a></span><span> </span><span class="annot"><span class="annottext">CookieJar
-</span><a href="#local-6989586621679096438"><span class="hs-identifier hs-var">cookie_jar</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe CookieJar -&gt; Maybe CookieJar)
+</span><a href="#local-6989586621679096442"><span class="hs-identifier hs-var">cookie_jar</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(Maybe CookieJar -&gt; Maybe CookieJar)
 -&gt; Maybe CookieJar -&gt; Maybe CookieJar
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Request -&gt; Maybe CookieJar
 </span><a href="Network.HTTP.Client.Types.html#cookieJar"><span class="hs-identifier hs-var hs-var">cookieJar</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096440"><span class="hs-identifier hs-var">req</span></a></span><span>
+</span><a href="#local-6989586621679096444"><span class="hs-identifier hs-var">req</span></a></span><span>
 </span><span id="line-77"></span><span>
 </span><span id="line-78"></span><span class="hs-comment">-- | Convert a 'Response' that has a 'Source' body to one with a lazy</span><span>
 </span><span id="line-79"></span><span class="hs-comment">-- 'L.ByteString' body.</span><span>
 </span><span id="line-80"></span><span class="annot"><a href="Network.HTTP.Client.Response.html#lbsResponse"><span class="hs-identifier hs-type">lbsResponse</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#BodyReader"><span class="hs-identifier hs-type">BodyReader</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Network.HTTP.Client.Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">L.ByteString</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-81"></span><span id="lbsResponse"><span class="annot"><span class="annottext">lbsResponse :: Response BodyReader -&gt; IO (Response ByteString)
-</span><a href="Network.HTTP.Client.Response.html#lbsResponse"><span class="hs-identifier hs-var hs-var">lbsResponse</span></a></span></span><span> </span><span id="local-6989586621679096410"><span class="annot"><span class="annottext">Response BodyReader
-</span><a href="#local-6989586621679096410"><span class="hs-identifier hs-var">res</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-82"></span><span>    </span><span id="local-6989586621679096409"><span class="annot"><span class="annottext">[ByteString]
-</span><a href="#local-6989586621679096409"><span class="hs-identifier hs-var">bss</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BodyReader -&gt; IO [ByteString]
+</span><a href="Network.HTTP.Client.Response.html#lbsResponse"><span class="hs-identifier hs-var hs-var">lbsResponse</span></a></span></span><span> </span><span id="local-6989586621679096414"><span class="annot"><span class="annottext">Response BodyReader
+</span><a href="#local-6989586621679096414"><span class="hs-identifier hs-var">res</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-82"></span><span>    </span><span id="local-6989586621679096413"><span class="annot"><span class="annottext">[ByteString]
+</span><a href="#local-6989586621679096413"><span class="hs-identifier hs-var">bss</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">BodyReader -&gt; IO [ByteString]
 </span><a href="Network.HTTP.Client.Body.html#brConsume"><span class="hs-identifier hs-var">brConsume</span></a></span><span> </span><span class="annot"><span class="annottext">(BodyReader -&gt; IO [ByteString]) -&gt; BodyReader -&gt; IO [ByteString]
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Response BodyReader -&gt; BodyReader
 forall body. Response body -&gt; body
 </span><a href="Network.HTTP.Client.Types.html#responseBody"><span class="hs-identifier hs-var hs-var">responseBody</span></a></span><span> </span><span class="annot"><span class="annottext">Response BodyReader
-</span><a href="#local-6989586621679096410"><span class="hs-identifier hs-var">res</span></a></span><span>
+</span><a href="#local-6989586621679096414"><span class="hs-identifier hs-var">res</span></a></span><span>
 </span><span id="line-83"></span><span>    </span><span class="annot"><span class="annottext">Response ByteString -&gt; IO (Response ByteString)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">Response BodyReader
-</span><a href="#local-6989586621679096410"><span class="hs-identifier hs-var">res</span></a></span><span>
+</span><a href="#local-6989586621679096414"><span class="hs-identifier hs-var">res</span></a></span><span>
 </span><span id="line-84"></span><span>        </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">responseBody :: ByteString
 </span><a href="Network.HTTP.Client.Types.html#responseBody"><span class="hs-identifier hs-var">responseBody</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[ByteString] -&gt; ByteString
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">L.fromChunks</span></a></span><span> </span><span class="annot"><span class="annottext">[ByteString]
-</span><a href="#local-6989586621679096409"><span class="hs-identifier hs-var">bss</span></a></span><span>
+</span><a href="#local-6989586621679096413"><span class="hs-identifier hs-var">bss</span></a></span><span>
 </span><span id="line-85"></span><span>        </span><span class="hs-special">}</span><span>
 </span><span id="line-86"></span><span>
 </span><span id="line-87"></span><span class="annot"><a href="Network.HTTP.Client.Response.html#getResponse"><span class="hs-identifier hs-type">getResponse</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
@@ -231,9 +231,9 @@ forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 -&gt; Managed Connection
 -&gt; Maybe (IO ())
 -&gt; IO (Response BodyReader)
-</span><a href="Network.HTTP.Client.Response.html#getResponse"><span class="hs-identifier hs-var hs-var">getResponse</span></a></span></span><span> </span><span id="local-6989586621679096405"><span class="annot"><span class="annottext">Maybe Int
-</span><a href="#local-6989586621679096405"><span class="hs-identifier hs-var">timeout'</span></a></span></span><span> </span><span id="local-6989586621679096404"><span class="annot"><span class="annottext">req :: Request
-</span><a href="#local-6989586621679096404"><span class="hs-identifier hs-var">req</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Network.HTTP.Client.Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679096381"><span id="local-6989586621679096382"><span id="local-6989586621679096383"><span id="local-6989586621679096384"><span id="local-6989586621679096385"><span id="local-6989586621679096386"><span id="local-6989586621679096387"><span id="local-6989586621679096388"><span id="local-6989586621679096389"><span id="local-6989586621679096390"><span id="local-6989586621679096391"><span id="local-6989586621679096392"><span id="local-6989586621679096393"><span id="local-6989586621679096394"><span id="local-6989586621679096395"><span id="local-6989586621679096396"><span id="local-6989586621679096397"><span id="local-6989586621679096398"><span id="local-6989586621679096399"><span id="local-6989586621679096400"><span id="local-6989586621679096401"><span id="local-6989586621679096402"><span class="annot"><span class="annottext">Bool
+</span><a href="Network.HTTP.Client.Response.html#getResponse"><span class="hs-identifier hs-var hs-var">getResponse</span></a></span></span><span> </span><span id="local-6989586621679096409"><span class="annot"><span class="annottext">Maybe Int
+</span><a href="#local-6989586621679096409"><span class="hs-identifier hs-var">timeout'</span></a></span></span><span> </span><span id="local-6989586621679096408"><span class="annot"><span class="annottext">req :: Request
+</span><a href="#local-6989586621679096408"><span class="hs-identifier hs-var">req</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Network.HTTP.Client.Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621679096385"><span id="local-6989586621679096386"><span id="local-6989586621679096387"><span id="local-6989586621679096388"><span id="local-6989586621679096389"><span id="local-6989586621679096390"><span id="local-6989586621679096391"><span id="local-6989586621679096392"><span id="local-6989586621679096393"><span id="local-6989586621679096394"><span id="local-6989586621679096395"><span id="local-6989586621679096396"><span id="local-6989586621679096397"><span id="local-6989586621679096398"><span id="local-6989586621679096399"><span id="local-6989586621679096400"><span id="local-6989586621679096401"><span id="local-6989586621679096402"><span id="local-6989586621679096403"><span id="local-6989586621679096404"><span id="local-6989586621679096405"><span id="local-6989586621679096406"><span class="annot"><span class="annottext">Bool
 Int
 ResponseHeaders
 Maybe HostAddress
@@ -294,28 +294,28 @@ requestBody :: Request -&gt; RequestBody
 method :: Request -&gt; ByteString
 shouldStripHeaderOnRedirect :: Request -&gt; HeaderName -&gt; Bool
 requestHeaders :: Request -&gt; ResponseHeaders
-</span><a href="Network.HTTP.Client.Types.html#redactHeaders"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">}</span><span class="hs-special">)</span><span> </span><span id="local-6989586621679096363"><span class="annot"><span class="annottext">Managed Connection
-</span><a href="#local-6989586621679096363"><span class="hs-identifier hs-var">mconn</span></a></span></span><span> </span><span id="local-6989586621679096362"><span class="annot"><span class="annottext">Maybe (IO ())
-</span><a href="#local-6989586621679096362"><span class="hs-identifier hs-var">cont</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-93"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679096361"><span class="annot"><span class="annottext">conn :: Connection
-</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var hs-var">conn</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Managed Connection -&gt; Connection
+</span><a href="Network.HTTP.Client.Types.html#redactHeaders"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">}</span><span class="hs-special">)</span><span> </span><span id="local-6989586621679096367"><span class="annot"><span class="annottext">Managed Connection
+</span><a href="#local-6989586621679096367"><span class="hs-identifier hs-var">mconn</span></a></span></span><span> </span><span id="local-6989586621679096366"><span class="annot"><span class="annottext">Maybe (IO ())
+</span><a href="#local-6989586621679096366"><span class="hs-identifier hs-var">cont</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-93"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679096365"><span class="annot"><span class="annottext">conn :: Connection
+</span><a href="#local-6989586621679096365"><span class="hs-identifier hs-var hs-var">conn</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Managed Connection -&gt; Connection
 forall resource. Managed resource -&gt; resource
 </span><a href="Data.KeyedPool.html#managedResource"><span class="hs-identifier hs-var">managedResource</span></a></span><span> </span><span class="annot"><span class="annottext">Managed Connection
-</span><a href="#local-6989586621679096363"><span class="hs-identifier hs-var">mconn</span></a></span><span>
-</span><span id="line-94"></span><span>    </span><span class="annot"><a href="Network.HTTP.Client.Types.html#StatusHeaders"><span class="hs-identifier hs-type">StatusHeaders</span></a></span><span> </span><span id="local-6989586621679096358"><span class="annot"><span class="annottext">Status
-</span><a href="#local-6989586621679096358"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span id="local-6989586621679096357"><span class="annot"><span class="annottext">HttpVersion
-</span><a href="#local-6989586621679096357"><span class="hs-identifier hs-var">version</span></a></span></span><span> </span><span id="local-6989586621679096356"><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">hs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Maybe Int -&gt; Maybe (IO ()) -&gt; IO StatusHeaders
+</span><a href="#local-6989586621679096367"><span class="hs-identifier hs-var">mconn</span></a></span><span>
+</span><span id="line-94"></span><span>    </span><span class="annot"><a href="Network.HTTP.Client.Types.html#StatusHeaders"><span class="hs-identifier hs-type">StatusHeaders</span></a></span><span> </span><span id="local-6989586621679096362"><span class="annot"><span class="annottext">Status
+</span><a href="#local-6989586621679096362"><span class="hs-identifier hs-var">s</span></a></span></span><span> </span><span id="local-6989586621679096361"><span class="annot"><span class="annottext">HttpVersion
+</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">version</span></a></span></span><span> </span><span id="local-6989586621679096360"><span class="annot"><span class="annottext">ResponseHeaders
+</span><a href="#local-6989586621679096360"><span class="hs-identifier hs-var">hs</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Connection -&gt; Maybe Int -&gt; Maybe (IO ()) -&gt; IO StatusHeaders
 </span><a href="Network.HTTP.Client.Headers.html#parseStatusHeaders"><span class="hs-identifier hs-var">parseStatusHeaders</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Int
-</span><a href="#local-6989586621679096405"><span class="hs-identifier hs-var">timeout'</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe (IO ())
-</span><a href="#local-6989586621679096362"><span class="hs-identifier hs-var">cont</span></a></span><span>
-</span><span id="line-95"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679096354"><span class="annot"><span class="annottext">mcl :: Maybe Int
-</span><a href="#local-6989586621679096354"><span class="hs-identifier hs-var hs-var">mcl</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">HeaderName -&gt; ResponseHeaders -&gt; Maybe ByteString
+</span><a href="#local-6989586621679096365"><span class="hs-identifier hs-var">conn</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Int
+</span><a href="#local-6989586621679096409"><span class="hs-identifier hs-var">timeout'</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe (IO ())
+</span><a href="#local-6989586621679096366"><span class="hs-identifier hs-var">cont</span></a></span><span>
+</span><span id="line-95"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679096358"><span class="annot"><span class="annottext">mcl :: Maybe Int
+</span><a href="#local-6989586621679096358"><span class="hs-identifier hs-var hs-var">mcl</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">HeaderName -&gt; ResponseHeaders -&gt; Maybe ByteString
 forall a b. Eq a =&gt; a -&gt; [(a, b)] -&gt; Maybe b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">lookup</span></a></span><span> </span><span class="annot"><span class="annottext">HeaderName
 </span><span class="hs-string">&quot;content-length&quot;</span></span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">hs</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; (ByteString -&gt; Maybe Int) -&gt; Maybe Int
+</span><a href="#local-6989586621679096360"><span class="hs-identifier hs-var">hs</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; (ByteString -&gt; Maybe Int) -&gt; Maybe Int
 forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&gt;&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; Maybe Int
 </span><a href="Network.HTTP.Client.Util.html#readPositiveInt"><span class="hs-identifier hs-var">readPositiveInt</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Maybe Int)
@@ -323,8 +323,8 @@ forall (m :: * -&gt; *) a b. Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
 forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; String
 </span><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-var">S8.unpack</span></a></span><span>
-</span><span id="line-96"></span><span>        </span><span id="local-6989586621679096352"><span class="annot"><span class="annottext">isChunked :: Bool
-</span><a href="#local-6989586621679096352"><span class="hs-identifier hs-var hs-var">isChunked</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">HeaderName
+</span><span id="line-96"></span><span>        </span><span id="local-6989586621679096356"><span class="annot"><span class="annottext">isChunked :: Bool
+</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var hs-var">isChunked</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">HeaderName
 </span><span class="hs-string">&quot;transfer-encoding&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; HeaderName
 forall s. FoldCase s =&gt; s -&gt; CI s
 </span><a href="../../../../case-insensitive/html/src"><span class="hs-identifier hs-var">CI.mk</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
@@ -341,11 +341,11 @@ a b c -&gt; a (d, b) (d, c)
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">second</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; HeaderName
 forall s. FoldCase s =&gt; s -&gt; CI s
 </span><a href="../../../../case-insensitive/html/src"><span class="hs-identifier hs-var">CI.mk</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">hs</span></a></span><span>
+</span><a href="#local-6989586621679096360"><span class="hs-identifier hs-var">hs</span></a></span><span>
 </span><span id="line-97"></span><span>
 </span><span id="line-98"></span><span>        </span><span class="hs-comment">-- should we put this connection back into the connection manager?</span><span>
-</span><span id="line-99"></span><span>        </span><span id="local-6989586621679096349"><span class="annot"><span class="annottext">toPut :: Bool
-</span><a href="#local-6989586621679096349"><span class="hs-identifier hs-var hs-var">toPut</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe ByteString
+</span><span id="line-99"></span><span>        </span><span id="local-6989586621679096353"><span class="annot"><span class="annottext">toPut :: Bool
+</span><a href="#local-6989586621679096353"><span class="hs-identifier hs-var hs-var">toPut</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Maybe ByteString
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;close&quot;</span></span><span> </span><span class="annot"><span class="annottext">Maybe ByteString -&gt; Maybe ByteString -&gt; Bool
@@ -354,26 +354,26 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 forall a b. Eq a =&gt; a -&gt; [(a, b)] -&gt; Maybe b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">lookup</span></a></span><span> </span><span class="annot"><span class="annottext">HeaderName
 </span><span class="hs-string">&quot;connection&quot;</span></span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">hs</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679096360"><span class="hs-identifier hs-var">hs</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">HttpVersion
-</span><a href="#local-6989586621679096357"><span class="hs-identifier hs-var">version</span></a></span><span> </span><span class="annot"><span class="annottext">HttpVersion -&gt; HttpVersion -&gt; Bool
+</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">version</span></a></span><span> </span><span class="annot"><span class="annottext">HttpVersion -&gt; HttpVersion -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; HttpVersion
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var">W.HttpVersion</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">0</span></span><span>
-</span><span id="line-100"></span><span>        </span><span id="local-6989586621679096346"><span class="annot"><span class="annottext">cleanup :: Bool -&gt; IO ()
-</span><a href="#local-6989586621679096346"><span class="hs-identifier hs-var hs-var">cleanup</span></a></span></span><span> </span><span id="local-6989586621679096345"><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679096345"><span class="hs-identifier hs-var">bodyConsumed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-100"></span><span>        </span><span id="local-6989586621679096350"><span class="annot"><span class="annottext">cleanup :: Bool -&gt; IO ()
+</span><a href="#local-6989586621679096350"><span class="hs-identifier hs-var hs-var">cleanup</span></a></span></span><span> </span><span id="local-6989586621679096349"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679096349"><span class="hs-identifier hs-var">bodyConsumed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-101"></span><span>            </span><span class="annot"><span class="annottext">Managed Connection -&gt; Reuse -&gt; IO ()
 forall resource. Managed resource -&gt; Reuse -&gt; IO ()
 </span><a href="Data.KeyedPool.html#managedRelease"><span class="hs-identifier hs-var">managedRelease</span></a></span><span> </span><span class="annot"><span class="annottext">Managed Connection
-</span><a href="#local-6989586621679096363"><span class="hs-identifier hs-var">mconn</span></a></span><span> </span><span class="annot"><span class="annottext">(Reuse -&gt; IO ()) -&gt; Reuse -&gt; IO ()
+</span><a href="#local-6989586621679096367"><span class="hs-identifier hs-var">mconn</span></a></span><span> </span><span class="annot"><span class="annottext">(Reuse -&gt; IO ()) -&gt; Reuse -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679096349"><span class="hs-identifier hs-var">toPut</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679096353"><span class="hs-identifier hs-var">toPut</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679096345"><span class="hs-identifier hs-var">bodyConsumed</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Reuse
+</span><a href="#local-6989586621679096349"><span class="hs-identifier hs-var">bodyConsumed</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">Reuse
 </span><a href="Data.KeyedPool.html#Reuse"><span class="hs-identifier hs-var">Reuse</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Reuse
 </span><a href="Data.KeyedPool.html#DontReuse"><span class="hs-identifier hs-var">DontReuse</span></a></span><span>
 </span><span id="line-102"></span><span>            </span><span class="hs-comment">-- Keep alive the `Managed Connection` until we're done with it, to prevent an early</span><span>
@@ -383,19 +383,19 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-106"></span><span>            </span><span class="annot"><span class="annottext">Managed Connection -&gt; IO ()
 forall resource. Managed resource -&gt; IO ()
 </span><a href="Data.KeyedPool.html#keepAlive"><span class="hs-identifier hs-var">keepAlive</span></a></span><span> </span><span class="annot"><span class="annottext">Managed Connection
-</span><a href="#local-6989586621679096363"><span class="hs-identifier hs-var">mconn</span></a></span><span>
+</span><a href="#local-6989586621679096367"><span class="hs-identifier hs-var">mconn</span></a></span><span>
 </span><span id="line-107"></span><span>
 </span><span id="line-108"></span><span>
-</span><span id="line-109"></span><span>    </span><span id="local-6989586621679096340"><span class="annot"><span class="annottext">BodyReader
-</span><a href="#local-6989586621679096340"><span class="hs-identifier hs-var">body</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-109"></span><span>    </span><span id="local-6989586621679096344"><span class="annot"><span class="annottext">BodyReader
+</span><a href="#local-6989586621679096344"><span class="hs-identifier hs-var">body</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-110"></span><span>        </span><span class="hs-comment">-- RFC 2616 section 4.4_1 defines responses that must not include a body</span><span>
 </span><span id="line-111"></span><span>        </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Int -&gt; Bool
 </span><a href="Network.HTTP.Client.Response.html#hasNoBody"><span class="hs-identifier hs-var">hasNoBody</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679096402"><span class="hs-identifier hs-var">method</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Status -&gt; Int
+</span><a href="#local-6989586621679096406"><span class="hs-identifier hs-var">method</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Status -&gt; Int
 </span><a href="../../../../http-types/html/src"><span class="hs-identifier hs-var hs-var">W.statusCode</span></a></span><span> </span><span class="annot"><span class="annottext">Status
-</span><a href="#local-6989586621679096358"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679096362"><span class="hs-identifier hs-var">s</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">||</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Maybe Int
-</span><a href="#local-6989586621679096354"><span class="hs-identifier hs-var">mcl</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Int -&gt; Maybe Int -&gt; Bool
+</span><a href="#local-6989586621679096358"><span class="hs-identifier hs-var">mcl</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe Int -&gt; Maybe Int -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Maybe Int
 forall a. a -&gt; Maybe a
@@ -403,53 +403,53 @@ forall a. a -&gt; Maybe a
 </span><span class="hs-number">0</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">not</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679096352"><span class="hs-identifier hs-var">isChunked</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">isChunked</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-112"></span><span>            </span><span class="hs-keyword">then</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-113"></span><span>                </span><span class="annot"><span class="annottext">Bool -&gt; IO ()
-</span><a href="#local-6989586621679096346"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679096350"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>
 </span><span id="line-114"></span><span>                </span><span class="annot"><span class="annottext">BodyReader -&gt; IO BodyReader
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">BodyReader
 </span><a href="Network.HTTP.Client.Body.html#brEmpty"><span class="hs-identifier hs-var">brEmpty</span></a></span><span>
 </span><span id="line-115"></span><span>            </span><span class="hs-keyword">else</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-116"></span><span>                </span><span id="local-6989586621679096336"><span class="annot"><span class="annottext">BodyReader
-</span><a href="#local-6989586621679096336"><span class="hs-identifier hs-var">body1</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-116"></span><span>                </span><span id="local-6989586621679096340"><span class="annot"><span class="annottext">BodyReader
+</span><a href="#local-6989586621679096340"><span class="hs-identifier hs-var">body1</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-117"></span><span>                    </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679096352"><span class="hs-identifier hs-var">isChunked</span></a></span><span>
+</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">isChunked</span></a></span><span>
 </span><span id="line-118"></span><span>                        </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; Bool -&gt; Connection -&gt; IO BodyReader
 </span><a href="Network.HTTP.Client.Body.html#makeChunkedReader"><span class="hs-identifier hs-var">makeChunkedReader</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; IO ()
-</span><a href="#local-6989586621679096346"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679096350"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621679096392"><span class="hs-identifier hs-var">rawBody</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">conn</span></a></span><span>
+</span><a href="#local-6989586621679096396"><span class="hs-identifier hs-var">rawBody</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679096365"><span class="hs-identifier hs-var">conn</span></a></span><span>
 </span><span id="line-119"></span><span>                        </span><span class="hs-keyword">else</span><span>
 </span><span id="line-120"></span><span>                            </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">Maybe Int
-</span><a href="#local-6989586621679096354"><span class="hs-identifier hs-var">mcl</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-121"></span><span>                                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679096334"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096334"><span class="hs-identifier hs-var">len</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; Int -&gt; Connection -&gt; IO BodyReader
+</span><a href="#local-6989586621679096358"><span class="hs-identifier hs-var">mcl</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-121"></span><span>                                </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621679096338"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679096338"><span class="hs-identifier hs-var">len</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; Int -&gt; Connection -&gt; IO BodyReader
 </span><a href="Network.HTTP.Client.Body.html#makeLengthReader"><span class="hs-identifier hs-var">makeLengthReader</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; IO ()
-</span><a href="#local-6989586621679096346"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679096350"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096334"><span class="hs-identifier hs-var">len</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">conn</span></a></span><span>
+</span><a href="#local-6989586621679096338"><span class="hs-identifier hs-var">len</span></a></span><span> </span><span class="annot"><span class="annottext">Connection
+</span><a href="#local-6989586621679096365"><span class="hs-identifier hs-var">conn</span></a></span><span>
 </span><span id="line-122"></span><span>                                </span><span class="annot"><span class="annottext">Maybe Int
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; Connection -&gt; IO BodyReader
 </span><a href="Network.HTTP.Client.Body.html#makeUnlimitedReader"><span class="hs-identifier hs-var">makeUnlimitedReader</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; IO ()
-</span><a href="#local-6989586621679096346"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679096350"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Connection
-</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">conn</span></a></span><span>
+</span><a href="#local-6989586621679096365"><span class="hs-identifier hs-var">conn</span></a></span><span>
 </span><span id="line-123"></span><span>                </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Request -&gt; ResponseHeaders -&gt; Bool
 </span><a href="Network.HTTP.Client.Request.html#needsGunzip"><span class="hs-identifier hs-var">needsGunzip</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096404"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">hs</span></a></span><span>
+</span><a href="#local-6989586621679096408"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
+</span><a href="#local-6989586621679096360"><span class="hs-identifier hs-var">hs</span></a></span><span>
 </span><span id="line-124"></span><span>                    </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">BodyReader -&gt; IO BodyReader
 </span><a href="Network.HTTP.Client.Body.html#makeGzipReader"><span class="hs-identifier hs-var">makeGzipReader</span></a></span><span> </span><span class="annot"><span class="annottext">BodyReader
-</span><a href="#local-6989586621679096336"><span class="hs-identifier hs-var">body1</span></a></span><span>
+</span><a href="#local-6989586621679096340"><span class="hs-identifier hs-var">body1</span></a></span><span>
 </span><span id="line-125"></span><span>                    </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">BodyReader -&gt; IO BodyReader
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">return</span></a></span><span> </span><span class="annot"><span class="annottext">BodyReader
-</span><a href="#local-6989586621679096336"><span class="hs-identifier hs-var">body1</span></a></span><span>
+</span><a href="#local-6989586621679096340"><span class="hs-identifier hs-var">body1</span></a></span><span>
 </span><span id="line-126"></span><span>
 </span><span id="line-127"></span><span>    </span><span class="annot"><span class="annottext">Response BodyReader -&gt; IO (Response BodyReader)
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
@@ -465,16 +465,16 @@ Status
 </span><a href="Network.HTTP.Client.Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span>
 </span><span id="line-128"></span><span>        </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">responseStatus :: Status
 </span><a href="Network.HTTP.Client.Types.html#responseStatus"><span class="hs-identifier hs-var">responseStatus</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Status
-</span><a href="#local-6989586621679096358"><span class="hs-identifier hs-var">s</span></a></span><span>
+</span><a href="#local-6989586621679096362"><span class="hs-identifier hs-var">s</span></a></span><span>
 </span><span id="line-129"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">responseVersion :: HttpVersion
 </span><a href="Network.HTTP.Client.Types.html#responseVersion"><span class="hs-identifier hs-var">responseVersion</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">HttpVersion
-</span><a href="#local-6989586621679096357"><span class="hs-identifier hs-var">version</span></a></span><span>
+</span><a href="#local-6989586621679096361"><span class="hs-identifier hs-var">version</span></a></span><span>
 </span><span id="line-130"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">responseHeaders :: ResponseHeaders
 </span><a href="Network.HTTP.Client.Types.html#responseHeaders"><span class="hs-identifier hs-var">responseHeaders</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ResponseHeaders
-</span><a href="#local-6989586621679096356"><span class="hs-identifier hs-var">hs</span></a></span><span>
+</span><a href="#local-6989586621679096360"><span class="hs-identifier hs-var">hs</span></a></span><span>
 </span><span id="line-131"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">responseBody :: BodyReader
 </span><a href="Network.HTTP.Client.Types.html#responseBody"><span class="hs-identifier hs-var">responseBody</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">BodyReader
-</span><a href="#local-6989586621679096340"><span class="hs-identifier hs-var">body</span></a></span><span>
+</span><a href="#local-6989586621679096344"><span class="hs-identifier hs-var">body</span></a></span><span>
 </span><span id="line-132"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">responseCookieJar :: CookieJar
 </span><a href="Network.HTTP.Client.Types.html#responseCookieJar"><span class="hs-identifier hs-var">responseCookieJar</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">CookieJar
 forall a. Monoid a =&gt; a
@@ -482,11 +482,11 @@ forall a. Monoid a =&gt; a
 </span><span id="line-133"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">responseClose' :: ResponseClose
 </span><a href="Network.HTTP.Client.Types.html#responseClose%27"><span class="hs-identifier hs-var">responseClose'</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; ResponseClose
 </span><a href="Network.HTTP.Client.Types.html#ResponseClose"><span class="hs-identifier hs-var">ResponseClose</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool -&gt; IO ()
-</span><a href="#local-6989586621679096346"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679096350"><span class="hs-identifier hs-var">cleanup</span></a></span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-134"></span><span>        </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">responseOriginalRequest :: Request
 </span><a href="Network.HTTP.Client.Types.html#responseOriginalRequest"><span class="hs-identifier hs-var">responseOriginalRequest</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679096404"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">requestBody :: RequestBody
+</span><a href="#local-6989586621679096408"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">requestBody :: RequestBody
 </span><a href="Network.HTTP.Client.Types.html#requestBody"><span class="hs-identifier hs-var">requestBody</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">RequestBody
 </span><span class="hs-string">&quot;&quot;</span></span><span class="hs-special">}</span><span>
 </span><span id="line-135"></span><span>        </span><span class="hs-special">}</span><span>
@@ -509,14 +509,14 @@ forall a. Monoid a =&gt; a
 </span><span class="hs-number">304</span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span>
 </span><span id="line-144"></span><span class="annot"><a href="Network.HTTP.Client.Response.html#hasNoBody"><span class="hs-identifier hs-var">hasNoBody</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621679096321"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096321"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-identifier">_</span></span><span> </span><span id="local-6989586621679096325"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679096325"><span class="hs-identifier hs-var">i</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">100</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096321"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><a href="#local-6989586621679096325"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679096321"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679096325"><span class="hs-identifier hs-var">i</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;</span></a></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">200</span></span><span>
@@ -526,7 +526,7 @@ forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><span id="line-148"></span><span class="hs-comment">-- Note that the 'requestBody' is not available and always set to empty.</span><span>
 </span><span id="line-149"></span><span class="hs-comment">--</span><span>
 </span><span id="line-150"></span><span class="hs-comment">-- @since 0.7.8</span><span>
-</span><span id="line-151"></span><span id="local-6989586621679096320"><span class="annot"><a href="Network.HTTP.Client.Response.html#getOriginalRequest"><span class="hs-identifier hs-type">getOriginalRequest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679096320"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span></span><span>
+</span><span id="line-151"></span><span id="local-6989586621679096324"><span class="annot"><a href="Network.HTTP.Client.Response.html#getOriginalRequest"><span class="hs-identifier hs-type">getOriginalRequest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679096324"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Network.HTTP.Client.Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span></span><span>
 </span><span id="line-152"></span><span id="getOriginalRequest"><span class="annot"><span class="annottext">getOriginalRequest :: Response a -&gt; Request
 </span><a href="Network.HTTP.Client.Response.html#getOriginalRequest"><span class="hs-identifier hs-var hs-var">getOriginalRequest</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Response a -&gt; Request
 forall body. Response body -&gt; Request

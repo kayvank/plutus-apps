@@ -76,10 +76,10 @@
 </span><span id="line-76"></span><span class="hs-comment">-- When we build support for minting and burning of tokens, we may wish to</span><span>
 </span><span id="line-77"></span><span class="hs-comment">-- parameterize this type and allow it to be instantiated with 'Integer'.</span><span>
 </span><span id="line-78"></span><span class="hs-comment">--</span><span>
-</span><span id="line-79"></span><span id="local-6989586621682424321"><span id="local-6989586621682424322"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="TokenQuantity"><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-var">TokenQuantity</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TokenQuantity"><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-var">TokenQuantity</span></a></span></span><span>
+</span><span id="line-79"></span><span id="local-6989586621682424605"><span id="local-6989586621682424606"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="TokenQuantity"><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-var">TokenQuantity</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="TokenQuantity"><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-var">TokenQuantity</span></a></span></span><span>
 </span><span id="line-80"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="unTokenQuantity"><span class="annot"><span class="annottext">TokenQuantity -&gt; Natural
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unTokenQuantity"><span class="hs-identifier hs-var hs-var">unTokenQuantity</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Natural</span></a></span><span> </span><span class="hs-special">}</span><span>
-</span><span id="line-81"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621682424315"><span id="local-6989586621682424317"><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; Bool
+</span><span id="line-81"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">stock</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621682424599"><span id="local-6989586621682424601"><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; Bool
 (TokenQuantity -&gt; TokenQuantity -&gt; Bool)
 -&gt; (TokenQuantity -&gt; TokenQuantity -&gt; Bool) -&gt; Eq TokenQuantity
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -87,7 +87,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: TokenQuantity -&gt; TokenQuantity -&gt; Bool
 == :: TokenQuantity -&gt; TokenQuantity -&gt; Bool
 $c== :: TokenQuantity -&gt; TokenQuantity -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682424299"><span id="local-6989586621682424301"><span id="local-6989586621682424303"><span id="local-6989586621682424305"><span id="local-6989586621682424307"><span id="local-6989586621682424309"><span id="local-6989586621682424311"><span class="annot"><span class="annottext">Eq TokenQuantity
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682424583"><span id="local-6989586621682424585"><span id="local-6989586621682424587"><span id="local-6989586621682424589"><span id="local-6989586621682424591"><span id="local-6989586621682424593"><span id="local-6989586621682424595"><span class="annot"><span class="annottext">Eq TokenQuantity
 Eq TokenQuantity
 -&gt; (TokenQuantity -&gt; TokenQuantity -&gt; Ordering)
 -&gt; (TokenQuantity -&gt; TokenQuantity -&gt; Bool)
@@ -135,7 +135,7 @@ forall a.
 $cto :: forall x. Rep TokenQuantity x -&gt; TokenQuantity
 $cfrom :: forall x. TokenQuantity -&gt; Rep TokenQuantity x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-82"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682424287"><span id="local-6989586621682424289"><span id="local-6989586621682424291"><span id="local-6989586621682424293"><span class="annot"><span class="annottext">ReadPrec [TokenQuantity]
+</span><span id="line-82"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682424571"><span id="local-6989586621682424573"><span id="local-6989586621682424575"><span id="local-6989586621682424577"><span class="annot"><span class="annottext">ReadPrec [TokenQuantity]
 ReadPrec TokenQuantity
 Int -&gt; ReadS TokenQuantity
 ReadS [TokenQuantity]
@@ -155,7 +155,7 @@ readList :: ReadS [TokenQuantity]
 $creadList :: ReadS [TokenQuantity]
 readsPrec :: Int -&gt; ReadS TokenQuantity
 $creadsPrec :: Int -&gt; ReadS TokenQuantity
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682424280"><span id="local-6989586621682424282"><span id="local-6989586621682424284"><span class="annot"><span class="annottext">Int -&gt; TokenQuantity -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Read</span></a></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682424564"><span id="local-6989586621682424566"><span id="local-6989586621682424568"><span class="annot"><span class="annottext">Int -&gt; TokenQuantity -&gt; ShowS
 [TokenQuantity] -&gt; ShowS
 TokenQuantity -&gt; String
 (Int -&gt; TokenQuantity -&gt; ShowS)
@@ -171,12 +171,12 @@ $cshow :: TokenQuantity -&gt; String
 showsPrec :: Int -&gt; TokenQuantity -&gt; ShowS
 $cshowsPrec :: Int -&gt; TokenQuantity -&gt; ShowS
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">via</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../quiet/html/src"><span class="hs-identifier hs-type">Quiet</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-83"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621682424277"><span class="annot"><span class="annottext">TokenQuantity -&gt; ()
+</span><span id="line-83"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621682424561"><span class="annot"><span class="annottext">TokenQuantity -&gt; ()
 (TokenQuantity -&gt; ()) -&gt; NFData TokenQuantity
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: TokenQuantity -&gt; ()
 $crnf :: TokenQuantity -&gt; ()
-</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682424272"><span id="local-6989586621682424274"><span class="annot"><span class="annottext">Int -&gt; TokenQuantity -&gt; Int
+</span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682424556"><span id="local-6989586621682424558"><span class="annot"><span class="annottext">Int -&gt; TokenQuantity -&gt; Int
 TokenQuantity -&gt; Int
 (Int -&gt; TokenQuantity -&gt; Int)
 -&gt; (TokenQuantity -&gt; Int) -&gt; Hashable TokenQuantity
@@ -191,18 +191,18 @@ $chashWithSalt :: Int -&gt; TokenQuantity -&gt; Int
 </span><span id="line-86"></span><span class="hs-comment">-- Instances</span><span>
 </span><span id="line-87"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-88"></span><span>
-</span><span id="line-89"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424266"><span id="local-6989586621682424268"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Semigroup</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-90"></span><span>    </span><span id="local-6989586621682424264"><span class="annot"><span class="annottext">&lt;&gt; :: TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
+</span><span id="line-89"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424550"><span id="local-6989586621682424552"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Semigroup</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-90"></span><span>    </span><span id="local-6989586621682424548"><span class="annot"><span class="annottext">&lt;&gt; :: TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var hs-var hs-var hs-var">(&lt;&gt;)</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#add"><span class="hs-identifier hs-var">add</span></a></span><span>
 </span><span id="line-91"></span><span>
-</span><span id="line-92"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424258"><span id="local-6989586621682424260"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monoid</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-93"></span><span>    </span><span id="local-6989586621682424256"><span class="annot"><span class="annottext">mempty :: TokenQuantity
+</span><span id="line-92"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424542"><span id="local-6989586621682424544"><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Monoid</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-93"></span><span>    </span><span id="local-6989586621682424540"><span class="annot"><span class="annottext">mempty :: TokenQuantity
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">mempty</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#zero"><span class="hs-identifier hs-var">zero</span></a></span><span>
 </span><span id="line-94"></span><span>
 </span><span id="line-95"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">Buildable</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-96"></span><span>    </span><span id="local-6989586621682424253"><span class="annot"><span class="annottext">build :: TokenQuantity -&gt; Builder
+</span><span id="line-96"></span><span>    </span><span id="local-6989586621682424537"><span class="annot"><span class="annottext">build :: TokenQuantity -&gt; Builder
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Text -&gt; Builder
 forall p. Buildable p =&gt; p -&gt; Builder
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="annot"><span class="annottext">(Text -&gt; Builder)
@@ -217,8 +217,8 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unTokenQuantity"><span class="hs-identifier hs-var hs-var">unTokenQuantity</span></a></span><span>
 </span><span id="line-97"></span><span>
 </span><span id="line-98"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../text-class/html/src"><span class="hs-identifier hs-type">ToText</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-99"></span><span>    </span><span id="local-6989586621682424247"><span class="annot"><span class="annottext">toText :: TokenQuantity -&gt; Text
-</span><a href="#local-6989586621682424247"><span class="hs-identifier hs-var hs-var hs-var hs-var">toText</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Text
+</span><span id="line-99"></span><span>    </span><span id="local-6989586621682424531"><span class="annot"><span class="annottext">toText :: TokenQuantity -&gt; Text
+</span><a href="#local-6989586621682424531"><span class="hs-identifier hs-var hs-var hs-var hs-var">toText</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Text
 forall a. ToText a =&gt; a -&gt; Text
 </span><a href="../../../../text-class/html/src"><span class="hs-identifier hs-var">toText</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Text)
 -&gt; (TokenQuantity -&gt; Natural) -&gt; TokenQuantity -&gt; Text
@@ -227,7 +227,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unTokenQuantity"><span class="hs-identifier hs-var hs-var">unTokenQuantity</span></a></span><span>
 </span><span id="line-100"></span><span>
 </span><span id="line-101"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../text-class/html/src"><span class="hs-identifier hs-type">FromText</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-102"></span><span>    </span><span id="local-6989586621682424244"><span class="annot"><span class="annottext">fromText :: Text -&gt; Either TextDecodingError TokenQuantity
+</span><span id="line-102"></span><span>    </span><span id="local-6989586621682424528"><span class="annot"><span class="annottext">fromText :: Text -&gt; Either TextDecodingError TokenQuantity
 </span><a href="../../../../text-class/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromText</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Integer -&gt; TokenQuantity)
 -&gt; Either TextDecodingError Integer
 -&gt; Either TextDecodingError TokenQuantity
@@ -248,8 +248,8 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a. FromText a =&gt; Text -&gt; Either TextDecodingError a
 </span><a href="../../../../text-class/html/src"><span class="hs-identifier hs-var">fromText</span></a></span><span>
 </span><span id="line-103"></span><span>
-</span><span id="line-104"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424240"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-105"></span><span>    </span><span id="local-6989586621682424238"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser TokenQuantity
+</span><span id="line-104"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424524"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-105"></span><span>    </span><span id="local-6989586621682424522"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser TokenQuantity
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; TokenQuantity)
 -&gt; Parser Natural -&gt; Parser TokenQuantity
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -260,8 +260,8 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Value -&gt; Parser Natural
 forall a. FromJSON a =&gt; Value -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">parseJSON</span></a></span><span>
-</span><span id="line-106"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424230"><span id="local-6989586621682424232"><span id="local-6989586621682424234"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-107"></span><span>    </span><span id="local-6989586621682424228"><span class="annot"><span class="annottext">toJSON :: TokenQuantity -&gt; Value
+</span><span id="line-106"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621682424514"><span id="local-6989586621682424516"><span id="local-6989586621682424518"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-107"></span><span>    </span><span id="local-6989586621682424512"><span class="annot"><span class="annottext">toJSON :: TokenQuantity -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; Value)
@@ -286,16 +286,16 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><span id="line-119"></span><span>
 </span><span id="line-120"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#add"><span class="hs-identifier hs-type">add</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-121"></span><span id="add"><span class="annot"><span class="annottext">add :: TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#add"><span class="hs-identifier hs-var hs-var">add</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424226"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424226"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424225"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424225"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; TokenQuantity
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#add"><span class="hs-identifier hs-var hs-var">add</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424510"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682424510"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424509"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682424509"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-var">TokenQuantity</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; TokenQuantity) -&gt; Natural -&gt; TokenQuantity
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424226"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Natural -&gt; Natural
+</span><a href="#local-6989586621682424510"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Natural -&gt; Natural
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">+</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424225"><span class="hs-identifier hs-var">y</span></a></span><span>
+</span><a href="#local-6989586621682424509"><span class="hs-identifier hs-var">y</span></a></span><span>
 </span><span id="line-122"></span><span>
 </span><span id="line-123"></span><span class="hs-comment">-- | Subtracts the second token quantity from the first.</span><span>
 </span><span id="line-124"></span><span class="hs-comment">--</span><span>
@@ -303,20 +303,20 @@ forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span id="line-126"></span><span class="hs-comment">--</span><span>
 </span><span id="line-127"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#subtract"><span class="hs-identifier hs-type">subtract</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-128"></span><span id="subtract"><span class="annot"><span class="annottext">subtract :: TokenQuantity -&gt; TokenQuantity -&gt; Maybe TokenQuantity
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#subtract"><span class="hs-identifier hs-var hs-var">subtract</span></a></span></span><span> </span><span id="local-6989586621682424223"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424223"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621682424222"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424222"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#subtract"><span class="hs-identifier hs-var hs-var">subtract</span></a></span></span><span> </span><span id="local-6989586621682424507"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424507"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621682424506"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424506"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Maybe ()
 forall (f :: * -&gt; *). Alternative f =&gt; Bool -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">guard</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424223"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; Bool
+</span><a href="#local-6989586621682424507"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;=</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424222"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe () -&gt; TokenQuantity -&gt; Maybe TokenQuantity
+</span><a href="#local-6989586621682424506"><span class="hs-identifier hs-var">y</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Maybe () -&gt; TokenQuantity -&gt; Maybe TokenQuantity
 forall (f :: * -&gt; *) a b. Functor f =&gt; f a -&gt; b -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unsafeSubtract"><span class="hs-identifier hs-var">unsafeSubtract</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424223"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424222"><span class="hs-identifier hs-var">y</span></a></span><span>
+</span><a href="#local-6989586621682424507"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424506"><span class="hs-identifier hs-var">y</span></a></span><span>
 </span><span id="line-129"></span><span>
 </span><span id="line-130"></span><span class="hs-comment">-- | Finds the predecessor of a given token quantity.</span><span>
 </span><span id="line-131"></span><span class="hs-comment">--</span><span>
@@ -365,9 +365,9 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><span id="line-156"></span><span class="hs-comment">--</span><span>
 </span><span id="line-157"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#difference"><span class="hs-identifier hs-type">difference</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-158"></span><span id="difference"><span class="annot"><span class="annottext">difference :: TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#difference"><span class="hs-identifier hs-var hs-var">difference</span></a></span></span><span> </span><span id="local-6989586621682424221"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424221"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621682424220"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424220"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; Maybe TokenQuantity -&gt; TokenQuantity
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#difference"><span class="hs-identifier hs-var hs-var">difference</span></a></span></span><span> </span><span id="local-6989586621682424505"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424505"><span class="hs-identifier hs-var">x</span></a></span></span><span> </span><span id="local-6989586621682424504"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424504"><span class="hs-identifier hs-var">y</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; Maybe TokenQuantity -&gt; TokenQuantity
 forall a. a -&gt; Maybe a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#zero"><span class="hs-identifier hs-var">zero</span></a></span><span> </span><span class="annot"><span class="annottext">(Maybe TokenQuantity -&gt; TokenQuantity)
@@ -375,8 +375,8 @@ forall a. a -&gt; Maybe a -&gt; a
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity -&gt; TokenQuantity -&gt; Maybe TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#subtract"><span class="hs-identifier hs-var">subtract</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424221"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424220"><span class="hs-identifier hs-var">y</span></a></span><span>
+</span><a href="#local-6989586621682424505"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424504"><span class="hs-identifier hs-var">y</span></a></span><span>
 </span><span id="line-159"></span><span>
 </span><span id="line-160"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-161"></span><span class="hs-comment">-- Partitioning</span><span>
@@ -389,16 +389,16 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-168"></span><span class="hs-comment">--</span><span>
 </span><span id="line-169"></span><span class="hs-comment">-- The resultant list is sorted in ascending order.</span><span>
 </span><span id="line-170"></span><span class="hs-comment">--</span><span>
-</span><span id="line-171"></span><span id="local-6989586621682424344"><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#equipartition"><span class="hs-identifier hs-type">equipartition</span></a></span><span>
+</span><span id="line-171"></span><span id="local-6989586621682424628"><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#equipartition"><span class="hs-identifier hs-type">equipartition</span></a></span><span>
 </span><span id="line-172"></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-173"></span><span>    </span><span class="hs-comment">-- ^ The token quantity to be partitioned.</span><span>
-</span><span id="line-174"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682424344"><span class="hs-identifier hs-type">a</span></a></span><span>
+</span><span id="line-174"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="#local-6989586621682424628"><span class="hs-identifier hs-type">a</span></a></span><span>
 </span><span id="line-175"></span><span>    </span><span class="hs-comment">-- ^ Represents the number of portions in which to partition the quantity.</span><span>
 </span><span id="line-176"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-177"></span><span>    </span><span class="hs-comment">-- ^ The partitioned quantities.</span></span><span>
 </span><span id="line-178"></span><span id="equipartition"><span class="annot"><span class="annottext">equipartition :: TokenQuantity -&gt; NonEmpty a -&gt; NonEmpty TokenQuantity
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#equipartition"><span class="hs-identifier hs-var hs-var">equipartition</span></a></span></span><span> </span><span id="local-6989586621682424219"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424219"><span class="hs-identifier hs-var">q</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#equipartition"><span class="hs-identifier hs-var hs-var">equipartition</span></a></span></span><span> </span><span id="local-6989586621682424503"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424503"><span class="hs-identifier hs-var">q</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-179"></span><span>    </span><span class="annot"><span class="annottext">(Natural -&gt; TokenQuantity)
 -&gt; NonEmpty Natural -&gt; NonEmpty TokenQuantity
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -412,7 +412,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall a. HasCallStack =&gt; Natural -&gt; NonEmpty a -&gt; NonEmpty Natural
 </span><a href="../../../../cardano-numeric/html/src"><span class="hs-identifier hs-var">equipartitionNatural</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenQuantity -&gt; Natural
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unTokenQuantity"><span class="hs-identifier hs-var hs-var">unTokenQuantity</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424219"><span class="hs-identifier hs-var">q</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682424503"><span class="hs-identifier hs-var">q</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-180"></span><span>
 </span><span id="line-181"></span><span class="hs-comment">-- | Partitions a token quantity into a number of parts, where the size of each</span><span>
 </span><span id="line-182"></span><span class="hs-comment">--   part is proportional (modulo rounding) to the size of its corresponding</span><span>
@@ -430,8 +430,8 @@ forall a. HasCallStack =&gt; Natural -&gt; NonEmpty a -&gt; NonEmpty Natural
 </span><span id="line-194"></span><span>    </span><span class="hs-comment">-- ^ The partitioned token quantities.</span><span>
 </span><span id="line-195"></span><span id="partition"><span class="annot"><span class="annottext">partition :: TokenQuantity
 -&gt; NonEmpty TokenQuantity -&gt; Maybe (NonEmpty TokenQuantity)
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#partition"><span class="hs-identifier hs-var hs-var">partition</span></a></span></span><span> </span><span id="local-6989586621682424218"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424218"><span class="hs-identifier hs-var">c</span></a></span></span><span>
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#partition"><span class="hs-identifier hs-var hs-var">partition</span></a></span></span><span> </span><span id="local-6989586621682424502"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424502"><span class="hs-identifier hs-var">c</span></a></span></span><span>
 </span><span id="line-196"></span><span>    </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(NonEmpty Natural -&gt; NonEmpty TokenQuantity)
 -&gt; Maybe (NonEmpty Natural) -&gt; Maybe (NonEmpty TokenQuantity)
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -448,7 +448,7 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; NonEmpty Natural -&gt; Maybe (NonEmpty Natural)
 </span><a href="../../../../cardano-numeric/html/src"><span class="hs-identifier hs-var">partitionNatural</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenQuantity -&gt; Natural
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unTokenQuantity"><span class="hs-identifier hs-var hs-var">unTokenQuantity</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424218"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682424502"><span class="hs-identifier hs-var">c</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-198"></span><span>    </span><span class="annot"><span class="annottext">(NonEmpty Natural -&gt; Maybe (NonEmpty Natural))
 -&gt; (NonEmpty TokenQuantity -&gt; NonEmpty Natural)
 -&gt; NonEmpty TokenQuantity
@@ -483,20 +483,20 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><span id="line-220"></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">NonEmpty</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-221"></span><span>    </span><span class="hs-comment">-- ^ The partitioned token quantities.</span><span>
 </span><span id="line-222"></span><span id="partitionDefault"><span class="annot"><span class="annottext">partitionDefault :: TokenQuantity -&gt; NonEmpty TokenQuantity -&gt; NonEmpty TokenQuantity
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#partitionDefault"><span class="hs-identifier hs-var hs-var">partitionDefault</span></a></span></span><span> </span><span id="local-6989586621682424217"><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424217"><span class="hs-identifier hs-var">q</span></a></span></span><span> </span><span id="local-6989586621682424216"><span class="annot"><span class="annottext">NonEmpty TokenQuantity
-</span><a href="#local-6989586621682424216"><span class="hs-identifier hs-var">ws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NonEmpty TokenQuantity
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#partitionDefault"><span class="hs-identifier hs-var hs-var">partitionDefault</span></a></span></span><span> </span><span id="local-6989586621682424501"><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424501"><span class="hs-identifier hs-var">q</span></a></span></span><span> </span><span id="local-6989586621682424500"><span class="annot"><span class="annottext">NonEmpty TokenQuantity
+</span><a href="#local-6989586621682424500"><span class="hs-identifier hs-var">ws</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">NonEmpty TokenQuantity
 -&gt; Maybe (NonEmpty TokenQuantity) -&gt; NonEmpty TokenQuantity
 forall a. a -&gt; Maybe a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">fromMaybe</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenQuantity -&gt; NonEmpty TokenQuantity -&gt; NonEmpty TokenQuantity
 forall a. TokenQuantity -&gt; NonEmpty a -&gt; NonEmpty TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#equipartition"><span class="hs-identifier hs-var">equipartition</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424217"><span class="hs-identifier hs-var">q</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty TokenQuantity
-</span><a href="#local-6989586621682424216"><span class="hs-identifier hs-var">ws</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenQuantity
+</span><a href="#local-6989586621682424501"><span class="hs-identifier hs-var">q</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty TokenQuantity
+</span><a href="#local-6989586621682424500"><span class="hs-identifier hs-var">ws</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TokenQuantity
 -&gt; NonEmpty TokenQuantity -&gt; Maybe (NonEmpty TokenQuantity)
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#partition"><span class="hs-identifier hs-var">partition</span></a></span><span> </span><span class="annot"><span class="annottext">TokenQuantity
-</span><a href="#local-6989586621682424217"><span class="hs-identifier hs-var">q</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty TokenQuantity
-</span><a href="#local-6989586621682424216"><span class="hs-identifier hs-var">ws</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682424501"><span class="hs-identifier hs-var">q</span></a></span><span> </span><span class="annot"><span class="annottext">NonEmpty TokenQuantity
+</span><a href="#local-6989586621682424500"><span class="hs-identifier hs-var">ws</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-223"></span><span>
 </span><span id="line-224"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-225"></span><span class="hs-comment">-- Tests</span><span>
@@ -528,14 +528,14 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><span id="line-243"></span><span class="hs-comment">--</span><span>
 </span><span id="line-244"></span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unsafeSubtract"><span class="hs-identifier hs-type">unsafeSubtract</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span>
 </span><span id="line-245"></span><span id="unsafeSubtract"><span class="annot"><span class="annottext">unsafeSubtract :: TokenQuantity -&gt; TokenQuantity -&gt; TokenQuantity
-</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unsafeSubtract"><span class="hs-identifier hs-var hs-var">unsafeSubtract</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424214"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424214"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424213"><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424213"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; TokenQuantity
+</span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#unsafeSubtract"><span class="hs-identifier hs-var hs-var">unsafeSubtract</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424498"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682424498"><span class="hs-identifier hs-var">x</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-type">TokenQuantity</span></a></span><span> </span><span id="local-6989586621682424497"><span class="annot"><span class="annottext">Natural
+</span><a href="#local-6989586621682424497"><span class="hs-identifier hs-var">y</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; TokenQuantity
 </span><a href="Cardano.Wallet.Primitive.Types.TokenQuantity.html#TokenQuantity"><span class="hs-identifier hs-var">TokenQuantity</span></a></span><span> </span><span class="annot"><span class="annottext">(Natural -&gt; TokenQuantity) -&gt; Natural -&gt; TokenQuantity
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424214"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Natural -&gt; Natural
+</span><a href="#local-6989586621682424498"><span class="hs-identifier hs-var">x</span></a></span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Natural -&gt; Natural
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-glyph hs-var">-</span></a></span><span> </span><span class="annot"><span class="annottext">Natural
-</span><a href="#local-6989586621682424213"><span class="hs-identifier hs-var">y</span></a></span><span>
+</span><a href="#local-6989586621682424497"><span class="hs-identifier hs-var">y</span></a></span><span>
 </span><span id="line-246"></span></pre></body></html>

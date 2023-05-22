@@ -49,8 +49,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-38"></span><span>  </span><span id="local-6989586621679481727"><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481727"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-38"></span><span>  </span><span id="local-6989586621679481960"><span class="annot"><span class="annottext">Certificate
+</span><a href="#local-6989586621679481960"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-39"></span><span>    </span><span class="annot"><span class="annottext">Gen Certificate -&gt; PropertyT IO Certificate
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -81,10 +81,10 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity SafeSigner
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">genSafeSigner</span></a></span><span>
 </span><span id="line-44"></span><span>
-</span><span id="line-45"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679481724"><span class="annot"><span class="annottext">aCert :: ACertificate ByteString
-</span><a href="#local-6989586621679481724"><span class="hs-identifier hs-var hs-var">aCert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; ACertificate ByteString
+</span><span id="line-45"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679481957"><span class="annot"><span class="annottext">aCert :: ACertificate ByteString
+</span><a href="#local-6989586621679481957"><span class="hs-identifier hs-var hs-var">aCert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; ACertificate ByteString
 </span><a href="Test.Cardano.Chain.Delegation.Certificate.html#annotateCert"><span class="hs-identifier hs-var">annotateCert</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481727"><span class="hs-identifier hs-var">cert</span></a></span><span>
+</span><a href="#local-6989586621679481960"><span class="hs-identifier hs-var">cert</span></a></span><span>
 </span><span id="line-46"></span><span>
 </span><span id="line-47"></span><span>  </span><span class="annot"><span class="annottext">Bool -&gt; PropertyT IO ()
 forall (m :: * -&gt; *). (MonadTest m, HasCallStack) =&gt; Bool -&gt; m ()
@@ -94,7 +94,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; ACertificate ByteString -&gt; Bool
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">isValid</span></a></span><span> </span><span class="annot"><span class="annottext">Annotated ProtocolMagicId ByteString
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">Dummy.annotatedProtocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">ACertificate ByteString
-</span><a href="#local-6989586621679481724"><span class="hs-identifier hs-var">aCert</span></a></span><span>
+</span><a href="#local-6989586621679481957"><span class="hs-identifier hs-var">aCert</span></a></span><span>
 </span><span id="line-48"></span><span>
 </span><span id="line-49"></span><span class="hs-comment">-- | Cannot validate 'Certificate's with incorrect verification keys</span><span>
 </span><span id="line-50"></span><span class="annot"><a href="Test.Cardano.Chain.Delegation.Certificate.html#prop_certificateIncorrect"><span class="hs-identifier hs-type">prop_certificateIncorrect</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-type">Property</span></a></span><span>
@@ -104,8 +104,8 @@ PropertyT IO () -&gt; Property
 </span><a href="../../../../hedgehog/html/src"><span class="hs-identifier hs-var">property</span></a></span><span> </span><span class="annot"><span class="annottext">(PropertyT IO () -&gt; Property) -&gt; PropertyT IO () -&gt; Property
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-52"></span><span>  </span><span id="local-6989586621679481721"><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481721"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
+</span><span id="line-52"></span><span>  </span><span id="local-6989586621679481954"><span class="annot"><span class="annottext">Certificate
+</span><a href="#local-6989586621679481954"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span>
 </span><span id="line-53"></span><span>    </span><span class="annot"><span class="annottext">Gen Certificate -&gt; PropertyT IO Certificate
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
@@ -135,8 +135,8 @@ forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f
 forall (f :: * -&gt; *) a b. Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;*&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">GenT Identity SafeSigner
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">genSafeSigner</span></a></span><span>
-</span><span id="line-58"></span><span>  </span><span id="local-6989586621679481720"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679481720"><span class="hs-identifier hs-var">badDelegateVK</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">GenT Identity VerificationKey -&gt; PropertyT IO VerificationKey
+</span><span id="line-58"></span><span>  </span><span id="local-6989586621679481953"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679481953"><span class="hs-identifier hs-var">badDelegateVK</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">GenT Identity VerificationKey -&gt; PropertyT IO VerificationKey
 forall (m :: * -&gt; *) a.
 (Monad m, Show a, HasCallStack) =&gt;
 Gen a -&gt; PropertyT m a
@@ -153,18 +153,18 @@ forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">/=</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; VerificationKey
 forall a. ACertificate a -&gt; VerificationKey
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">delegateVK</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481721"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">GenT Identity VerificationKey
+</span><a href="#local-6989586621679481954"><span class="hs-identifier hs-var">cert</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">GenT Identity VerificationKey
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">genVerificationKey</span></a></span><span>
 </span><span id="line-59"></span><span>
-</span><span id="line-60"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679481717"><span class="annot"><span class="annottext">badCert :: Certificate
-</span><a href="#local-6989586621679481717"><span class="hs-identifier hs-var hs-var">badCert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481721"><span class="hs-identifier hs-var">cert</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">delegateVK :: VerificationKey
+</span><span id="line-60"></span><span>  </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679481950"><span class="annot"><span class="annottext">badCert :: Certificate
+</span><a href="#local-6989586621679481950"><span class="hs-identifier hs-var hs-var">badCert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate
+</span><a href="#local-6989586621679481954"><span class="hs-identifier hs-var">cert</span></a></span><span> </span><span class="hs-special">{</span><span class="annot"><span class="annottext">delegateVK :: VerificationKey
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">delegateVK</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679481720"><span class="hs-identifier hs-var">badDelegateVK</span></a></span><span class="hs-special">}</span><span>
-</span><span id="line-61"></span><span>      </span><span id="local-6989586621679481716"><span class="annot"><span class="annottext">aBadCert :: ACertificate ByteString
-</span><a href="#local-6989586621679481716"><span class="hs-identifier hs-var hs-var">aBadCert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; ACertificate ByteString
+</span><a href="#local-6989586621679481953"><span class="hs-identifier hs-var">badDelegateVK</span></a></span><span class="hs-special">}</span><span>
+</span><span id="line-61"></span><span>      </span><span id="local-6989586621679481949"><span class="annot"><span class="annottext">aBadCert :: ACertificate ByteString
+</span><a href="#local-6989586621679481949"><span class="hs-identifier hs-var hs-var">aBadCert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; ACertificate ByteString
 </span><a href="Test.Cardano.Chain.Delegation.Certificate.html#annotateCert"><span class="hs-identifier hs-var">annotateCert</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481717"><span class="hs-identifier hs-var">badCert</span></a></span><span>
+</span><a href="#local-6989586621679481950"><span class="hs-identifier hs-var">badCert</span></a></span><span>
 </span><span id="line-62"></span><span>
 </span><span id="line-63"></span><span>  </span><span class="annot"><span class="annottext">Bool -&gt; PropertyT IO ()
 forall (m :: * -&gt; *). (MonadTest m, HasCallStack) =&gt; Bool -&gt; m ()
@@ -180,12 +180,12 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 -&gt; ACertificate ByteString -&gt; Bool
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">isValid</span></a></span><span> </span><span class="annot"><span class="annottext">Annotated ProtocolMagicId ByteString
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">Dummy.annotatedProtocolMagicId</span></a></span><span> </span><span class="annot"><span class="annottext">ACertificate ByteString
-</span><a href="#local-6989586621679481716"><span class="hs-identifier hs-var">aBadCert</span></a></span><span>
+</span><a href="#local-6989586621679481949"><span class="hs-identifier hs-var">aBadCert</span></a></span><span>
 </span><span id="line-64"></span><span>
 </span><span id="line-65"></span><span class="annot"><a href="Test.Cardano.Chain.Delegation.Certificate.html#annotateCert"><span class="hs-identifier hs-type">annotateCert</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Certificate</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">ACertificate</span></a></span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span>
 </span><span id="line-66"></span><span id="annotateCert"><span class="annot"><span class="annottext">annotateCert :: Certificate -&gt; ACertificate ByteString
-</span><a href="Test.Cardano.Chain.Delegation.Certificate.html#annotateCert"><span class="hs-identifier hs-var hs-var">annotateCert</span></a></span></span><span> </span><span id="local-6989586621679481713"><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481713"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Chain.Delegation.Certificate.html#annotateCert"><span class="hs-identifier hs-var hs-var">annotateCert</span></a></span></span><span> </span><span id="local-6989586621679481946"><span class="annot"><span class="annottext">Certificate
+</span><a href="#local-6989586621679481946"><span class="hs-identifier hs-var">cert</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-67"></span><span>  </span><span class="annot"><span class="annottext">(ByteSpan -&gt; ByteString)
 -&gt; ACertificate ByteSpan -&gt; ACertificate ByteString
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
@@ -197,7 +197,7 @@ Category cat =&gt;
 cat b c -&gt; cat a b -&gt; cat a c
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; ByteSpan -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">slice</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679481711"><span class="hs-identifier hs-var">bytes</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679481944"><span class="hs-identifier hs-var">bytes</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-68"></span><span>    </span><span class="annot"><span class="annottext">(ACertificate ByteSpan -&gt; ACertificate ByteString)
 -&gt; (Either DecoderError (ACertificate ByteSpan)
     -&gt; ACertificate ByteSpan)
@@ -223,11 +223,11 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString -&gt; Either DecoderError (ACertificate ByteSpan)
 forall a. FromCBOR a =&gt; ByteString -&gt; Either DecoderError a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">decodeFull</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679481711"><span class="hs-identifier hs-var">bytes</span></a></span><span>
+</span><a href="#local-6989586621679481944"><span class="hs-identifier hs-var">bytes</span></a></span><span>
 </span><span id="line-71"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-72"></span><span>    </span><span id="local-6989586621679481711"><span class="annot"><span class="annottext">bytes :: ByteString
-</span><a href="#local-6989586621679481711"><span class="hs-identifier hs-var hs-var">bytes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; ByteString
+</span><span id="line-72"></span><span>    </span><span id="local-6989586621679481944"><span class="annot"><span class="annottext">bytes :: ByteString
+</span><a href="#local-6989586621679481944"><span class="hs-identifier hs-var hs-var">bytes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Certificate -&gt; ByteString
 forall a. ToCBOR a =&gt; a -&gt; ByteString
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">serialize</span></a></span><span> </span><span class="annot"><span class="annottext">Certificate
-</span><a href="#local-6989586621679481713"><span class="hs-identifier hs-var">cert</span></a></span><span>
+</span><a href="#local-6989586621679481946"><span class="hs-identifier hs-var">cert</span></a></span><span>
 </span><span id="line-73"></span></pre></body></html>

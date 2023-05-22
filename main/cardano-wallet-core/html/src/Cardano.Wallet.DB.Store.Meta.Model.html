@@ -51,7 +51,7 @@ Meta transactions are encoded &quot;as&quot; expressed in DB tables.
 </span><span id="line-51"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier">Data.Map.Strict</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Map</span></span><span>
 </span><span id="line-52"></span><span>
 </span><span id="line-53"></span><span class="hs-comment">-- | A collection of `TxMeta`, indexed by transaction identifier.</span><span>
-</span><span id="line-54"></span><span id="local-6989586621682457802"><span id="local-6989586621682457803"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="TxMetaHistory"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-54"></span><span id="local-6989586621682458086"><span id="local-6989586621682458087"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="TxMetaHistory"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-55"></span><span>    </span><span id="TxMetaHistory"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span></span><span> </span><span class="hs-special">{</span><span> </span><span id="relations"><span class="annot"><span class="annottext">TxMetaHistory -&gt; Map TxId TxMeta
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#relations"><span class="hs-identifier hs-var hs-var">relations</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Types.html#TxId"><span class="hs-identifier hs-type">TxId</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-special">}</span><span>
 </span><span id="line-56"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span> </span><span class="annot"><span class="annottext">(forall x. TxMetaHistory -&gt; Rep TxMetaHistory x)
@@ -63,7 +63,7 @@ forall a.
 (forall x. a -&gt; Rep a x) -&gt; (forall x. Rep a x -&gt; a) -&gt; Generic a
 $cto :: forall x. Rep TxMetaHistory x -&gt; TxMetaHistory
 $cfrom :: forall x. TxMetaHistory -&gt; Rep TxMetaHistory x
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457793"><span id="local-6989586621682457795"><span class="annot"><span class="annottext">TxMetaHistory -&gt; TxMetaHistory -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682458077"><span id="local-6989586621682458079"><span class="annot"><span class="annottext">TxMetaHistory -&gt; TxMetaHistory -&gt; Bool
 (TxMetaHistory -&gt; TxMetaHistory -&gt; Bool)
 -&gt; (TxMetaHistory -&gt; TxMetaHistory -&gt; Bool) -&gt; Eq TxMetaHistory
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -71,7 +71,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: TxMetaHistory -&gt; TxMetaHistory -&gt; Bool
 == :: TxMetaHistory -&gt; TxMetaHistory -&gt; Bool
 $c== :: TxMetaHistory -&gt; TxMetaHistory -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457786"><span id="local-6989586621682457788"><span id="local-6989586621682457790"><span class="annot"><span class="annottext">Int -&gt; TxMetaHistory -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682458070"><span id="local-6989586621682458072"><span id="local-6989586621682458074"><span class="annot"><span class="annottext">Int -&gt; TxMetaHistory -&gt; ShowS
 [TxMetaHistory] -&gt; ShowS
 TxMetaHistory -&gt; String
 (Int -&gt; TxMetaHistory -&gt; ShowS)
@@ -86,7 +86,7 @@ show :: TxMetaHistory -&gt; String
 $cshow :: TxMetaHistory -&gt; String
 showsPrec :: Int -&gt; TxMetaHistory -&gt; ShowS
 $cshowsPrec :: Int -&gt; TxMetaHistory -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457778"><span id="local-6989586621682457780"><span id="local-6989586621682457782"><span class="annot"><span class="annottext">Semigroup TxMetaHistory
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682458062"><span id="local-6989586621682458064"><span id="local-6989586621682458066"><span class="annot"><span class="annottext">Semigroup TxMetaHistory
 TxMetaHistory
 Semigroup TxMetaHistory
 -&gt; TxMetaHistory
@@ -104,7 +104,7 @@ $cmappend :: TxMetaHistory -&gt; TxMetaHistory -&gt; TxMetaHistory
 mempty :: TxMetaHistory
 $cmempty :: TxMetaHistory
 $cp1Monoid :: Semigroup TxMetaHistory
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monoid</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457771"><span id="local-6989586621682457773"><span id="local-6989586621682457775"><span class="annot"><span class="annottext">b -&gt; TxMetaHistory -&gt; TxMetaHistory
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Monoid</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682458055"><span id="local-6989586621682458057"><span id="local-6989586621682458059"><span class="annot"><span class="annottext">b -&gt; TxMetaHistory -&gt; TxMetaHistory
 NonEmpty TxMetaHistory -&gt; TxMetaHistory
 TxMetaHistory -&gt; TxMetaHistory -&gt; TxMetaHistory
 (TxMetaHistory -&gt; TxMetaHistory -&gt; TxMetaHistory)
@@ -126,9 +126,9 @@ $c&lt;&gt; :: TxMetaHistory -&gt; TxMetaHistory -&gt; TxMetaHistory
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Semigroup</span></a></span></span></span></span><span> </span><span class="hs-special">)</span><span>
 </span><span id="line-57"></span><span>
 </span><span id="line-58"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">Buildable</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-59"></span><span>    </span><span id="local-6989586621682457767"><span class="annot"><span class="annottext">build :: TxMetaHistory -&gt; Builder
-</span><a href="#local-6989586621682457767"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span id="local-6989586621682457766"><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682457766"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-59"></span><span>    </span><span id="local-6989586621682458051"><span class="annot"><span class="annottext">build :: TxMetaHistory -&gt; Builder
+</span><a href="#local-6989586621682458051"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span id="local-6989586621682458050"><span class="annot"><span class="annottext">TxMetaHistory
+</span><a href="#local-6989586621682458050"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-60"></span><span>        </span><span class="annot"><span class="annottext">Builder
 </span><span class="hs-string">&quot;TxMetaHistory &quot;</span></span><span>
 </span><span id="line-61"></span><span>        </span><span class="annot"><span class="annottext">Builder -&gt; Builder -&gt; Builder
@@ -141,7 +141,7 @@ forall (t :: * -&gt; *) a. Foldable t =&gt; t a -&gt; Int
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; Map TxId TxMeta
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#relations"><span class="hs-identifier hs-var hs-var">relations</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682457766"><span class="hs-identifier hs-var">txs</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682458050"><span class="hs-identifier hs-var">txs</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-62"></span><span>
 </span><span id="line-63"></span><span class="hs-comment">-- | Verbs for 'TxMeta' changes</span><span>
 </span><span id="line-64"></span><span class="hs-comment">-- that can be issued independently from the transaction store.</span><span>
@@ -154,7 +154,7 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-71"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span id="RollBackTxMetaHistory"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#RollBackTxMetaHistory"><span class="hs-identifier hs-var">RollBackTxMetaHistory</span></a></span></span><span> </span><span class="annot"><a href="../../../../cardano-slotting/html/src"><span class="hs-identifier hs-type">W.SlotNo</span></a></span><span>
 </span><span id="line-72"></span><span>    </span><span class="hs-comment">-- ^ Remove all incoming transactions created after the given slot and</span><span>
 </span><span id="line-73"></span><span>    </span><span class="hs-comment">-- mark all outgoing transactions after the given slot as 'Pending'.</span><span>
-</span><span id="line-74"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span> </span><span id="local-6989586621682457758"><span id="local-6989586621682457760"><span class="annot"><span class="annottext">ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool
+</span><span id="line-74"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span> </span><span id="local-6989586621682458042"><span id="local-6989586621682458044"><span class="annot"><span class="annottext">ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool
 (ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool)
 -&gt; (ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool)
 -&gt; Eq ManipulateTxMetaHistory
@@ -163,7 +163,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool
 == :: ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool
 $c== :: ManipulateTxMetaHistory -&gt; ManipulateTxMetaHistory -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457752"><span id="local-6989586621682457754"><span id="local-6989586621682457756"><span class="annot"><span class="annottext">Int -&gt; ManipulateTxMetaHistory -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682458036"><span id="local-6989586621682458038"><span id="local-6989586621682458040"><span class="annot"><span class="annottext">Int -&gt; ManipulateTxMetaHistory -&gt; ShowS
 [ManipulateTxMetaHistory] -&gt; ShowS
 ManipulateTxMetaHistory -&gt; String
 (Int -&gt; ManipulateTxMetaHistory -&gt; ShowS)
@@ -185,7 +185,7 @@ $cshowsPrec :: Int -&gt; ManipulateTxMetaHistory -&gt; ShowS
 </span><span id="line-78"></span><span class="hs-keyword">data</span><span> </span><span id="DeltaTxMetaHistory"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#DeltaTxMetaHistory"><span class="hs-identifier hs-var">DeltaTxMetaHistory</span></a></span></span><span>
 </span><span id="line-79"></span><span>    </span><span class="hs-glyph">=</span><span> </span><span id="Manipulate"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-var">Manipulate</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#ManipulateTxMetaHistory"><span class="hs-identifier hs-type">ManipulateTxMetaHistory</span></a></span><span>
 </span><span id="line-80"></span><span>    </span><span class="hs-glyph">|</span><span> </span><span id="Expand"><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Expand"><span class="hs-identifier hs-var">Expand</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span>
-</span><span id="line-81"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682457744"><span id="local-6989586621682457746"><span id="local-6989586621682457748"><span class="annot"><span class="annottext">Int -&gt; DeltaTxMetaHistory -&gt; ShowS
+</span><span id="line-81"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682458028"><span id="local-6989586621682458030"><span id="local-6989586621682458032"><span class="annot"><span class="annottext">Int -&gt; DeltaTxMetaHistory -&gt; ShowS
 [DeltaTxMetaHistory] -&gt; ShowS
 DeltaTxMetaHistory -&gt; String
 (Int -&gt; DeltaTxMetaHistory -&gt; ShowS)
@@ -200,7 +200,7 @@ show :: DeltaTxMetaHistory -&gt; String
 $cshow :: DeltaTxMetaHistory -&gt; String
 showsPrec :: Int -&gt; DeltaTxMetaHistory -&gt; ShowS
 $cshowsPrec :: Int -&gt; DeltaTxMetaHistory -&gt; ShowS
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457740"><span id="local-6989586621682457742"><span class="annot"><span class="annottext">DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></a></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682458024"><span id="local-6989586621682458026"><span class="annot"><span class="annottext">DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; Bool
 (DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; Bool)
 -&gt; (DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; Bool)
 -&gt; Eq DeltaTxMetaHistory
@@ -212,8 +212,8 @@ $c== :: DeltaTxMetaHistory -&gt; DeltaTxMetaHistory -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">)</span><span>
 </span><span id="line-82"></span><span>
 </span><span id="line-83"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../formatting/html/src"><span class="hs-identifier hs-type">Buildable</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#DeltaTxMetaHistory"><span class="hs-identifier hs-type">DeltaTxMetaHistory</span></a></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-84"></span><span>    </span><span id="local-6989586621682457738"><span class="annot"><span class="annottext">build :: DeltaTxMetaHistory -&gt; Builder
-</span><a href="#local-6989586621682457738"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Builder
+</span><span id="line-84"></span><span>    </span><span id="local-6989586621682458022"><span class="annot"><span class="annottext">build :: DeltaTxMetaHistory -&gt; Builder
+</span><a href="#local-6989586621682458022"><span class="hs-identifier hs-var hs-var hs-var hs-var">build</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; Builder
 forall p. Buildable p =&gt; p -&gt; Builder
 </span><a href="../../../../formatting/html/src"><span class="hs-identifier hs-var">build</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; Builder)
 -&gt; (DeltaTxMetaHistory -&gt; String) -&gt; DeltaTxMetaHistory -&gt; Builder
@@ -224,32 +224,32 @@ forall a. Show a =&gt; a -&gt; String
 </span><span id="line-85"></span><span>
 </span><span id="line-86"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Delta</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#DeltaTxMetaHistory"><span class="hs-identifier hs-type">DeltaTxMetaHistory</span></a></span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-87"></span><span>    </span><span class="hs-keyword">type</span><span> </span><span id="Base"><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Base</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#DeltaTxMetaHistory"><span class="hs-identifier hs-type">DeltaTxMetaHistory</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span>
-</span><span id="line-88"></span><span>    </span><span id="local-6989586621682457733"><span class="annot"><span class="annottext">apply :: DeltaTxMetaHistory
+</span><span id="line-88"></span><span>    </span><span id="local-6989586621682458017"><span class="annot"><span class="annottext">apply :: DeltaTxMetaHistory
 -&gt; Base DeltaTxMetaHistory -&gt; Base DeltaTxMetaHistory
-</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">apply</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Expand"><span class="hs-identifier hs-type">Expand</span></a></span><span> </span><span id="local-6989586621682457731"><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682457731"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682457730"><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
-</span><a href="#local-6989586621682457730"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
-</span><a href="#local-6989586621682457731"><span class="hs-identifier hs-var">txs</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; TxMetaHistory -&gt; TxMetaHistory
+</span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">apply</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Expand"><span class="hs-identifier hs-type">Expand</span></a></span><span> </span><span id="local-6989586621682458015"><span class="annot"><span class="annottext">TxMetaHistory
+</span><a href="#local-6989586621682458015"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682458014"><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458014"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMetaHistory
+</span><a href="#local-6989586621682458015"><span class="hs-identifier hs-var">txs</span></a></span><span> </span><span class="annot"><span class="annottext">TxMetaHistory -&gt; TxMetaHistory -&gt; TxMetaHistory
 forall a. Semigroup a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
 TxMetaHistory
-</span><a href="#local-6989586621682457730"><span class="hs-identifier hs-var">h</span></a></span><span>
-</span><span id="line-89"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span id="local-6989586621682457729"><span class="annot"><span class="annottext">ManipulateTxMetaHistory
-</span><a href="#local-6989586621682457729"><span class="hs-identifier hs-var">d</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682457728"><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
-</span><a href="#local-6989586621682457728"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ManipulateTxMetaHistory
+</span><a href="#local-6989586621682458014"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><span id="line-89"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#Manipulate"><span class="hs-identifier hs-type">Manipulate</span></a></span><span> </span><span id="local-6989586621682458013"><span class="annot"><span class="annottext">ManipulateTxMetaHistory
+</span><a href="#local-6989586621682458013"><span class="hs-identifier hs-var">d</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621682458012"><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458012"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ManipulateTxMetaHistory
 -&gt; Base ManipulateTxMetaHistory -&gt; Base ManipulateTxMetaHistory
 forall delta. Delta delta =&gt; delta -&gt; Base delta -&gt; Base delta
 </span><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="annot"><span class="annottext">ManipulateTxMetaHistory
-</span><a href="#local-6989586621682457729"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
+</span><a href="#local-6989586621682458013"><span class="hs-identifier hs-var">d</span></a></span><span> </span><span class="annot"><span class="annottext">Base DeltaTxMetaHistory
 Base ManipulateTxMetaHistory
-</span><a href="#local-6989586621682457728"><span class="hs-identifier hs-var">h</span></a></span><span>
+</span><a href="#local-6989586621682458012"><span class="hs-identifier hs-var">h</span></a></span><span>
 </span><span id="line-90"></span><span>
 </span><span id="line-91"></span><span class="hs-keyword">instance</span><span> </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-type">Delta</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#ManipulateTxMetaHistory"><span class="hs-identifier hs-type">ManipulateTxMetaHistory</span></a></span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-92"></span><span>    </span><span class="hs-keyword">type</span><span> </span><span id="Base"><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">Base</span></a></span></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#ManipulateTxMetaHistory"><span class="hs-identifier hs-type">ManipulateTxMetaHistory</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span>
-</span><span id="line-93"></span><span>    </span><span id="local-6989586621682457726"><span class="annot"><span class="annottext">apply :: ManipulateTxMetaHistory
+</span><span id="line-93"></span><span>    </span><span id="local-6989586621682458010"><span class="annot"><span class="annottext">apply :: ManipulateTxMetaHistory
 -&gt; Base ManipulateTxMetaHistory -&gt; Base ManipulateTxMetaHistory
-</span><a href="#local-6989586621682457726"><span class="hs-identifier hs-var hs-var hs-var hs-var">apply</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#PruneTxMetaHistory"><span class="hs-identifier hs-type">PruneTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457725"><span class="annot"><span class="annottext">TxId
-</span><a href="#local-6989586621682457725"><span class="hs-identifier hs-var">tid</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457724"><span class="annot"><a href="#local-6989586621682457724"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682458010"><span class="hs-identifier hs-var hs-var hs-var hs-var">apply</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#PruneTxMetaHistory"><span class="hs-identifier hs-type">PruneTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458009"><span class="annot"><span class="annottext">TxId
+</span><a href="#local-6989586621682458009"><span class="hs-identifier hs-var">tid</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682458008"><span class="annot"><a href="#local-6989586621682458008"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-94"></span><span>        </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; TxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span><span> </span><span class="annot"><span class="annottext">(Map TxId TxMeta -&gt; TxMetaHistory)
 -&gt; Map TxId TxMeta -&gt; TxMetaHistory
@@ -260,13 +260,13 @@ forall k a.
 Ord k =&gt;
 (Maybe a -&gt; Maybe a) -&gt; k -&gt; Map k a -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.alter</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe TxMeta -&gt; Maybe TxMeta
-</span><a href="#local-6989586621682457722"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">TxId
-</span><a href="#local-6989586621682457725"><span class="hs-identifier hs-var">tid</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta
-</span><a href="#local-6989586621682457724"><span class="hs-identifier hs-var">txs</span></a></span><span>
+</span><a href="#local-6989586621682458006"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">TxId
+</span><a href="#local-6989586621682458009"><span class="hs-identifier hs-var">tid</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta
+</span><a href="#local-6989586621682458008"><span class="hs-identifier hs-var">txs</span></a></span><span>
 </span><span id="line-95"></span><span>      </span><span class="hs-keyword">where</span><span>
-</span><span id="line-96"></span><span>        </span><span id="local-6989586621682457722"><span class="annot"><span class="annottext">f :: Maybe TxMeta -&gt; Maybe TxMeta
-</span><a href="#local-6989586621682457722"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682457721"><span class="annot"><span class="annottext">tx :: TxMeta
-</span><a href="#local-6989586621682457721"><span class="hs-identifier hs-var">tx</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621682457709"><span id="local-6989586621682457710"><span id="local-6989586621682457711"><span id="local-6989586621682457712"><span id="local-6989586621682457713"><span id="local-6989586621682457714"><span id="local-6989586621682457715"><span id="local-6989586621682457716"><span id="local-6989586621682457717"><span id="local-6989586621682457718"><span id="local-6989586621682457719"><span class="annot"><span class="annottext">Maybe Bool
+</span><span id="line-96"></span><span>        </span><span id="local-6989586621682458006"><span class="annot"><span class="annottext">f :: Maybe TxMeta -&gt; Maybe TxMeta
+</span><a href="#local-6989586621682458006"><span class="hs-identifier hs-var hs-var">f</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682458005"><span class="annot"><span class="annottext">tx :: TxMeta
+</span><a href="#local-6989586621682458005"><span class="hs-identifier hs-var">tx</span></a></span></span><span class="hs-glyph">@</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621682457993"><span id="local-6989586621682457994"><span id="local-6989586621682457995"><span id="local-6989586621682457996"><span id="local-6989586621682457997"><span id="local-6989586621682457998"><span id="local-6989586621682457999"><span id="local-6989586621682458000"><span id="local-6989586621682458001"><span id="local-6989586621682458002"><span id="local-6989586621682458003"><span class="annot"><span class="annottext">Maybe Bool
 Maybe Word64
 Maybe TxMetadata
 Maybe SlotNo
@@ -301,33 +301,33 @@ txMetaWalletId :: WalletId
 txMetaTxId :: TxId
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaScriptValidity"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">}</span><span class="hs-special">)</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-97"></span><span>            </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">TxStatus
-</span><a href="#local-6989586621682457717"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus -&gt; TxStatus -&gt; Bool
+</span><a href="#local-6989586621682458001"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus -&gt; TxStatus -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#InLedger"><span class="hs-identifier hs-var">W.InLedger</span></a></span><span>
 </span><span id="line-98"></span><span>                </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; Maybe TxMeta
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457721"><span class="hs-identifier hs-var">tx</span></a></span><span>
+</span><a href="#local-6989586621682458005"><span class="hs-identifier hs-var">tx</span></a></span><span>
 </span><span id="line-99"></span><span>                </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">Maybe TxMeta
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
-</span><span id="line-100"></span><span>        </span><span class="annot"><a href="#local-6989586621682457722"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe TxMeta
+</span><span id="line-100"></span><span>        </span><span class="annot"><a href="#local-6989586621682458006"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe TxMeta
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Maybe TxMeta
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
-</span><span id="line-101"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#AgeTxMetaHistory"><span class="hs-identifier hs-type">AgeTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457696"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457696"><span class="hs-identifier hs-var">tip</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457695"><span class="annot"><a href="#local-6989586621682457695"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-101"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#AgeTxMetaHistory"><span class="hs-identifier hs-type">AgeTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457980"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621682457980"><span class="hs-identifier hs-var">tip</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457979"><span class="annot"><a href="#local-6989586621682457979"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-102"></span><span>        </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; TxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span><span>
 </span><span id="line-103"></span><span>        </span><span class="annot"><span class="annottext">(Map TxId TxMeta -&gt; TxMetaHistory)
 -&gt; Map TxId TxMeta -&gt; TxMetaHistory
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta
-</span><a href="#local-6989586621682457695"><span class="hs-identifier hs-var">txs</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; (TxMeta -&gt; TxMeta) -&gt; Map TxId TxMeta
+</span><a href="#local-6989586621682457979"><span class="hs-identifier hs-var">txs</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; (TxMeta -&gt; TxMeta) -&gt; Map TxId TxMeta
 forall (f :: * -&gt; *) a b. Functor f =&gt; f a -&gt; (a -&gt; b) -&gt; f b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&amp;&gt;</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682457694"><span class="annot"><span class="annottext">meta :: TxMeta
-</span><a href="#local-6989586621682457694"><span class="hs-identifier hs-var">meta</span></a></span></span><span class="hs-glyph">@</span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621682457683"><span id="local-6989586621682457684"><span id="local-6989586621682457685"><span id="local-6989586621682457686"><span id="local-6989586621682457687"><span id="local-6989586621682457688"><span id="local-6989586621682457689"><span id="local-6989586621682457690"><span id="local-6989586621682457691"><span id="local-6989586621682457692"><span id="local-6989586621682457693"><span class="annot"><span class="annottext">Maybe Bool
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&amp;&gt;</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621682457978"><span class="annot"><span class="annottext">meta :: TxMeta
+</span><a href="#local-6989586621682457978"><span class="hs-identifier hs-var">meta</span></a></span></span><span class="hs-glyph">@</span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-special">{</span><span id="local-6989586621682457967"><span id="local-6989586621682457968"><span id="local-6989586621682457969"><span id="local-6989586621682457970"><span id="local-6989586621682457971"><span id="local-6989586621682457972"><span id="local-6989586621682457973"><span id="local-6989586621682457974"><span id="local-6989586621682457975"><span id="local-6989586621682457976"><span id="local-6989586621682457977"><span class="annot"><span class="annottext">Maybe Bool
 Maybe Word64
 Maybe TxMetadata
 Maybe SlotNo
@@ -360,34 +360,34 @@ txMetaDirection :: TxMeta -&gt; Direction
 txMetaStatus :: TxMeta -&gt; TxStatus
 txMetaWalletId :: TxMeta -&gt; WalletId
 txMetaTxId :: TxMeta -&gt; TxId
-</span><a href="#local-6989586621682457683"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">-&gt;</span><span>
+</span><a href="#local-6989586621682457967"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span></span></span></span></span></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">-&gt;</span><span>
 </span><span id="line-104"></span><span>            </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">TxStatus
-</span><a href="#local-6989586621682457691"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus -&gt; TxStatus -&gt; Bool
+</span><a href="#local-6989586621682457975"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus -&gt; TxStatus -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">TxStatus
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Pending"><span class="hs-identifier hs-var">W.Pending</span></a></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&amp;&amp;</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe SlotNo -&gt; Bool
-</span><a href="#local-6989586621682457680"><span class="hs-identifier hs-var">isExpired</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe SlotNo
-</span><a href="#local-6989586621682457685"><span class="hs-identifier hs-var">txMetaSlotExpires</span></a></span><span>
+</span><a href="#local-6989586621682457964"><span class="hs-identifier hs-var">isExpired</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe SlotNo
+</span><a href="#local-6989586621682457969"><span class="hs-identifier hs-var">txMetaSlotExpires</span></a></span><span>
 </span><span id="line-105"></span><span>            </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457694"><span class="hs-identifier hs-var">meta</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">txMetaStatus :: TxStatus
+</span><a href="#local-6989586621682457978"><span class="hs-identifier hs-var">meta</span></a></span><span> </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">txMetaStatus :: TxStatus
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaStatus"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxStatus
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Expired"><span class="hs-identifier hs-var">W.Expired</span></a></span><span> </span><span class="hs-special">}</span><span>
 </span><span id="line-106"></span><span>            </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457694"><span class="hs-identifier hs-var">meta</span></a></span><span>
+</span><a href="#local-6989586621682457978"><span class="hs-identifier hs-var">meta</span></a></span><span>
 </span><span id="line-107"></span><span>      </span><span class="hs-keyword">where</span><span>
-</span><span id="line-108"></span><span>        </span><span id="local-6989586621682457680"><span class="annot"><span class="annottext">isExpired :: Maybe SlotNo -&gt; Bool
-</span><a href="#local-6989586621682457680"><span class="hs-identifier hs-var hs-var">isExpired</span></a></span></span><span> </span><span class="annot"><span class="annottext">Maybe SlotNo
+</span><span id="line-108"></span><span>        </span><span id="local-6989586621682457964"><span class="annot"><span class="annottext">isExpired :: Maybe SlotNo -&gt; Bool
+</span><a href="#local-6989586621682457964"><span class="hs-identifier hs-var hs-var">isExpired</span></a></span></span><span> </span><span class="annot"><span class="annottext">Maybe SlotNo
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">False</span></a></span><span>
-</span><span id="line-109"></span><span>        </span><span class="annot"><a href="#local-6989586621682457680"><span class="hs-identifier hs-var">isExpired</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682457678"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457678"><span class="hs-identifier hs-var">tip'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457678"><span class="hs-identifier hs-var">tip'</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo -&gt; SlotNo -&gt; Bool
+</span><span id="line-109"></span><span>        </span><span class="annot"><a href="#local-6989586621682457964"><span class="hs-identifier hs-var">isExpired</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Just</span></a></span><span> </span><span id="local-6989586621682457962"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621682457962"><span class="hs-identifier hs-var">tip'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621682457962"><span class="hs-identifier hs-var">tip'</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo -&gt; SlotNo -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&lt;=</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457696"><span class="hs-identifier hs-var">tip</span></a></span><span>
-</span><span id="line-110"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#RollBackTxMetaHistory"><span class="hs-identifier hs-type">RollBackTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457676"><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457676"><span class="hs-identifier hs-var">point</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457675"><span class="annot"><a href="#local-6989586621682457675"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621682457980"><span class="hs-identifier hs-var">tip</span></a></span><span>
+</span><span id="line-110"></span><span>    </span><span class="annot"><a href="../../../../dbvar/html/src"><span class="hs-identifier hs-var">apply</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#RollBackTxMetaHistory"><span class="hs-identifier hs-type">RollBackTxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457960"><span class="annot"><span class="annottext">SlotNo
+</span><a href="#local-6989586621682457960"><span class="hs-identifier hs-var">point</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span> </span><span id="local-6989586621682457959"><span class="annot"><a href="#local-6989586621682457959"><span class="hs-identifier hs-var">txs</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-111"></span><span>        </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; TxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span><span> </span><span class="annot"><span class="annottext">(Map TxId TxMeta -&gt; TxMetaHistory)
 -&gt; Map TxId TxMeta -&gt; TxMetaHistory
@@ -395,31 +395,31 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">(TxMeta -&gt; Maybe TxMeta) -&gt; Map TxId TxMeta -&gt; Map TxId TxMeta
 forall a b k. (a -&gt; Maybe b) -&gt; Map k a -&gt; Map k b
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.mapMaybe</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; Maybe TxMeta
-</span><a href="#local-6989586621682457673"><span class="hs-identifier hs-var">rescheduleOrForget</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta
-</span><a href="#local-6989586621682457675"><span class="hs-identifier hs-var">txs</span></a></span><span>
+</span><a href="#local-6989586621682457957"><span class="hs-identifier hs-var">rescheduleOrForget</span></a></span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta
+</span><a href="#local-6989586621682457959"><span class="hs-identifier hs-var">txs</span></a></span><span>
 </span><span id="line-112"></span><span>      </span><span class="hs-keyword">where</span><span>
-</span><span id="line-113"></span><span>        </span><span class="annot"><a href="#local-6989586621682457673"><span class="hs-identifier hs-type">rescheduleOrForget</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span>
-</span><span id="line-114"></span><span>        </span><span id="local-6989586621682457673"><span class="annot"><span class="annottext">rescheduleOrForget :: TxMeta -&gt; Maybe TxMeta
-</span><a href="#local-6989586621682457673"><span class="hs-identifier hs-var hs-var">rescheduleOrForget</span></a></span></span><span> </span><span id="local-6989586621682457672"><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457672"><span class="hs-identifier hs-var">meta</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-113"></span><span>        </span><span class="annot"><a href="#local-6989586621682457957"><span class="hs-identifier hs-type">rescheduleOrForget</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span>
+</span><span id="line-114"></span><span>        </span><span id="local-6989586621682457957"><span class="annot"><span class="annottext">rescheduleOrForget :: TxMeta -&gt; Maybe TxMeta
+</span><a href="#local-6989586621682457957"><span class="hs-identifier hs-var hs-var">rescheduleOrForget</span></a></span></span><span> </span><span id="local-6989586621682457956"><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457956"><span class="hs-identifier hs-var">meta</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-115"></span><span>            </span><span class="hs-keyword">let</span><span>
-</span><span id="line-116"></span><span>                </span><span id="local-6989586621682457671"><span class="annot"><span class="annottext">isAfter :: Bool
-</span><a href="#local-6989586621682457671"><span class="hs-identifier hs-var hs-var">isAfter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; SlotNo
+</span><span id="line-116"></span><span>                </span><span id="local-6989586621682457955"><span class="annot"><span class="annottext">isAfter :: Bool
+</span><a href="#local-6989586621682457955"><span class="hs-identifier hs-var hs-var">isAfter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; SlotNo
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaSlot"><span class="hs-identifier hs-var hs-var">txMetaSlot</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457672"><span class="hs-identifier hs-var">meta</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo -&gt; SlotNo -&gt; Bool
+</span><a href="#local-6989586621682457956"><span class="hs-identifier hs-var">meta</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo -&gt; SlotNo -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457676"><span class="hs-identifier hs-var">point</span></a></span><span>
-</span><span id="line-117"></span><span>                </span><span id="local-6989586621682457669"><span class="annot"><span class="annottext">isIncoming :: Bool
-</span><a href="#local-6989586621682457669"><span class="hs-identifier hs-var hs-var">isIncoming</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; Direction
+</span><a href="#local-6989586621682457960"><span class="hs-identifier hs-var">point</span></a></span><span>
+</span><span id="line-117"></span><span>                </span><span id="local-6989586621682457953"><span class="annot"><span class="annottext">isIncoming :: Bool
+</span><a href="#local-6989586621682457953"><span class="hs-identifier hs-var hs-var">isIncoming</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; Direction
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaDirection"><span class="hs-identifier hs-var hs-var">txMetaDirection</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457672"><span class="hs-identifier hs-var">meta</span></a></span><span> </span><span class="annot"><span class="annottext">Direction -&gt; Direction -&gt; Bool
+</span><a href="#local-6989586621682457956"><span class="hs-identifier hs-var">meta</span></a></span><span> </span><span class="annot"><span class="annottext">Direction -&gt; Direction -&gt; Bool
 forall a. Eq a =&gt; a -&gt; a -&gt; Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-operator hs-var">==</span></a></span><span> </span><span class="annot"><span class="annottext">Direction
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Incoming"><span class="hs-identifier hs-var">W.Incoming</span></a></span><span>
 </span><span id="line-118"></span><span>            </span><span class="hs-keyword">in</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621682457671"><span class="hs-identifier hs-var">isAfter</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Bool
-</span><a href="#local-6989586621682457669"><span class="hs-identifier hs-var">isIncoming</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
+</span><a href="#local-6989586621682457955"><span class="hs-identifier hs-var">isAfter</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621682457953"><span class="hs-identifier hs-var">isIncoming</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">of</span><span>
 </span><span id="line-119"></span><span>                   </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span class="hs-special">,</span><span class="annot"><span class="annottext">Bool
 </span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var">True</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Maybe TxMeta
@@ -433,24 +433,24 @@ forall a. a -&gt; Maybe a
 </span><span id="line-121"></span><span>                       </span><span class="annot"><span class="annottext">(TxMeta -&gt; Maybe TxMeta) -&gt; TxMeta -&gt; Maybe TxMeta
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457672"><span class="hs-identifier hs-var">meta</span></a></span><span>
+</span><a href="#local-6989586621682457956"><span class="hs-identifier hs-var">meta</span></a></span><span>
 </span><span id="line-122"></span><span>                       </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">txMetaSlot :: SlotNo
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaSlot"><span class="hs-identifier hs-var">txMetaSlot</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SlotNo
-</span><a href="#local-6989586621682457676"><span class="hs-identifier hs-var">point</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaStatus :: TxStatus
+</span><a href="#local-6989586621682457960"><span class="hs-identifier hs-var">point</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaStatus :: TxStatus
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaStatus"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxStatus
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#Pending"><span class="hs-identifier hs-var">W.Pending</span></a></span><span> </span><span class="hs-special">}</span><span>
 </span><span id="line-123"></span><span>                   </span><span class="annot"><span class="annottext">(Bool, Bool)
 </span><span class="hs-identifier">_</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">TxMeta -&gt; Maybe TxMeta
 forall a. a -&gt; Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Just</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457672"><span class="hs-identifier hs-var">meta</span></a></span><span>
+</span><a href="#local-6989586621682457956"><span class="hs-identifier hs-var">meta</span></a></span><span>
 </span><span id="line-124"></span><span>
 </span><span id="line-125"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaEntity"><span class="hs-identifier hs-type">mkTxMetaEntity</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#WalletId"><span class="hs-identifier hs-type">W.WalletId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#Tx"><span class="hs-identifier hs-type">W.Tx</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxMeta"><span class="hs-identifier hs-type">W.TxMeta</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Sqlite.Schema.html#TxMeta"><span class="hs-identifier hs-type">TxMeta</span></a></span><span>
 </span><span id="line-126"></span><span id="mkTxMetaEntity"><span class="annot"><span class="annottext">mkTxMetaEntity :: WalletId -&gt; Tx -&gt; TxMeta -&gt; TxMeta
-</span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaEntity"><span class="hs-identifier hs-var hs-var">mkTxMetaEntity</span></a></span></span><span> </span><span id="local-6989586621682457666"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682457666"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682457665"><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457665"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span id="local-6989586621682457664"><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaEntity"><span class="hs-identifier hs-var hs-var">mkTxMetaEntity</span></a></span></span><span> </span><span id="local-6989586621682457950"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682457950"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682457949"><span class="annot"><span class="annottext">Tx
+</span><a href="#local-6989586621682457949"><span class="hs-identifier hs-var">tx</span></a></span></span><span> </span><span id="local-6989586621682457948"><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-127"></span><span>    </span><span class="annot"><span class="annottext">TxMeta :: TxId
 -&gt; WalletId
 -&gt; TxStatus
@@ -469,7 +469,7 @@ forall a. a -&gt; Maybe a
 </span><a href="Cardano.Wallet.DB.Sqlite.Types.html#TxId"><span class="hs-identifier hs-var">TxId</span></a></span><span> </span><span class="annot"><span class="annottext">(Hash &quot;Tx&quot; -&gt; TxId) -&gt; Hash &quot;Tx&quot; -&gt; TxId
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457665"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
+</span><a href="#local-6989586621682457949"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
 -&gt; ((Hash &quot;Tx&quot; -&gt; Const (Hash &quot;Tx&quot;) (Hash &quot;Tx&quot;))
     -&gt; Tx -&gt; Const (Hash &quot;Tx&quot;) Tx)
 -&gt; Hash &quot;Tx&quot;
@@ -480,13 +480,13 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
    -&gt; Tx -&gt; Const (Hash &quot;Tx&quot;) Tx)
 (Hash &quot;Tx&quot; -&gt; Const (Hash &quot;Tx&quot;) (Hash &quot;Tx&quot;))
 -&gt; Tx -&gt; Const (Hash &quot;Tx&quot;) Tx
-</span><a href="#local-6989586621682457662"><span class="hs-var">#txId</span></a></span><span>
+</span><a href="#local-6989586621682457946"><span class="hs-var">#txId</span></a></span><span>
 </span><span id="line-129"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaWalletId :: WalletId
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaWalletId"><span class="hs-identifier hs-var">txMetaWalletId</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682457666"><span class="hs-identifier hs-var">wid</span></a></span><span>
+</span><a href="#local-6989586621682457950"><span class="hs-identifier hs-var">wid</span></a></span><span>
 </span><span id="line-130"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaStatus :: TxStatus
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaStatus"><span class="hs-identifier hs-var">txMetaStatus</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
 -&gt; ((TxStatus -&gt; Const TxStatus TxStatus)
     -&gt; TxMeta -&gt; Const TxStatus TxMeta)
 -&gt; TxStatus
@@ -497,10 +497,10 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
    -&gt; TxMeta -&gt; Const TxStatus TxMeta)
 (TxStatus -&gt; Const TxStatus TxStatus)
 -&gt; TxMeta -&gt; Const TxStatus TxMeta
-</span><a href="#local-6989586621682457661"><span class="hs-var">#status</span></a></span><span>
+</span><a href="#local-6989586621682457945"><span class="hs-var">#status</span></a></span><span>
 </span><span id="line-131"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaDirection :: Direction
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaDirection"><span class="hs-identifier hs-var">txMetaDirection</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
 -&gt; ((Direction -&gt; Const Direction Direction)
     -&gt; TxMeta -&gt; Const Direction TxMeta)
 -&gt; Direction
@@ -511,10 +511,10 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
    -&gt; TxMeta -&gt; Const Direction TxMeta)
 (Direction -&gt; Const Direction Direction)
 -&gt; TxMeta -&gt; Const Direction TxMeta
-</span><a href="#local-6989586621682457660"><span class="hs-var">#direction</span></a></span><span>
+</span><a href="#local-6989586621682457944"><span class="hs-var">#direction</span></a></span><span>
 </span><span id="line-132"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaSlot :: SlotNo
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaSlot"><span class="hs-identifier hs-var">txMetaSlot</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
 -&gt; ((SlotNo -&gt; Const SlotNo SlotNo)
     -&gt; TxMeta -&gt; Const SlotNo TxMeta)
 -&gt; SlotNo
@@ -523,13 +523,13 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
   &quot;slotNo&quot;
   ((SlotNo -&gt; Const SlotNo SlotNo) -&gt; TxMeta -&gt; Const SlotNo TxMeta)
 (SlotNo -&gt; Const SlotNo SlotNo) -&gt; TxMeta -&gt; Const SlotNo TxMeta
-</span><a href="#local-6989586621682457659"><span class="hs-var">#slotNo</span></a></span><span>
+</span><a href="#local-6989586621682457943"><span class="hs-var">#slotNo</span></a></span><span>
 </span><span id="line-133"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaBlockHeight :: Word32
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaBlockHeight"><span class="hs-identifier hs-var">txMetaBlockHeight</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Quantity &quot;block&quot; Word32 -&gt; Word32
 forall (unit :: Symbol) a. Quantity unit a -&gt; a
 </span><a href="Data.Quantity.html#getQuantity"><span class="hs-identifier hs-var hs-var">getQuantity</span></a></span><span>
 </span><span id="line-134"></span><span>          </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
 -&gt; ((Quantity &quot;block&quot; Word32
      -&gt; Const (Quantity &quot;block&quot; Word32) (Quantity &quot;block&quot; Word32))
     -&gt; TxMeta -&gt; Const (Quantity &quot;block&quot; Word32) TxMeta)
@@ -543,17 +543,17 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
 (Quantity &quot;block&quot; Word32
  -&gt; Const (Quantity &quot;block&quot; Word32) (Quantity &quot;block&quot; Word32))
 -&gt; TxMeta -&gt; Const (Quantity &quot;block&quot; Word32) TxMeta
-</span><a href="#local-6989586621682457658"><span class="hs-var">#blockHeight</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621682457942"><span class="hs-var">#blockHeight</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-135"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaAmount :: Coin
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaAmount"><span class="hs-identifier hs-var">txMetaAmount</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
 -&gt; ((Coin -&gt; Const Coin Coin) -&gt; TxMeta -&gt; Const Coin TxMeta)
 -&gt; Coin
 forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
 </span><a href="../../../../generic-lens/html/src"><span class="hs-operator hs-var">^.</span></a></span><span> </span><span class="annot"><span class="annottext">IsLabel
   &quot;amount&quot; ((Coin -&gt; Const Coin Coin) -&gt; TxMeta -&gt; Const Coin TxMeta)
 (Coin -&gt; Const Coin Coin) -&gt; TxMeta -&gt; Const Coin TxMeta
-</span><a href="#local-6989586621682457657"><span class="hs-var">#amount</span></a></span><span>
+</span><a href="#local-6989586621682457941"><span class="hs-var">#amount</span></a></span><span>
 </span><span id="line-136"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaFee :: Maybe Word64
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaFee"><span class="hs-identifier hs-var">txMetaFee</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Natural -&gt; Word64
 forall a b. (Integral a, Num b) =&gt; a -&gt; b
@@ -564,10 +564,10 @@ forall b c a. (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Tx -&gt; Maybe Coin
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#%24sel%3Afee%3ATx"><span class="hs-identifier hs-var hs-var">W.fee</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457665"><span class="hs-identifier hs-var">tx</span></a></span><span>
+</span><a href="#local-6989586621682457949"><span class="hs-identifier hs-var">tx</span></a></span><span>
 </span><span id="line-137"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaSlotExpires :: Maybe SlotNo
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaSlotExpires"><span class="hs-identifier hs-var">txMetaSlotExpires</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457664"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457948"><span class="hs-identifier hs-var">derived</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
 -&gt; ((Maybe SlotNo -&gt; Const (Maybe SlotNo) (Maybe SlotNo))
     -&gt; TxMeta -&gt; Const (Maybe SlotNo) TxMeta)
 -&gt; Maybe SlotNo
@@ -578,15 +578,15 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
    -&gt; TxMeta -&gt; Const (Maybe SlotNo) TxMeta)
 (Maybe SlotNo -&gt; Const (Maybe SlotNo) (Maybe SlotNo))
 -&gt; TxMeta -&gt; Const (Maybe SlotNo) TxMeta
-</span><a href="#local-6989586621682457653"><span class="hs-var">#expiry</span></a></span><span>
+</span><a href="#local-6989586621682457937"><span class="hs-var">#expiry</span></a></span><span>
 </span><span id="line-138"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetadata :: Maybe TxMetadata
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetadata"><span class="hs-identifier hs-var">txMetadata</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Tx -&gt; Maybe TxMetadata
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#%24sel%3Ametadata%3ATx"><span class="hs-identifier hs-var hs-var">W.metadata</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457665"><span class="hs-identifier hs-var">tx</span></a></span><span>
+</span><a href="#local-6989586621682457949"><span class="hs-identifier hs-var">tx</span></a></span><span>
 </span><span id="line-139"></span><span>    </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">txMetaScriptValidity :: Maybe Bool
 </span><a href="Cardano.Wallet.DB.Sqlite.Schema.html#txMetaScriptValidity"><span class="hs-identifier hs-var">txMetaScriptValidity</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Tx -&gt; Maybe TxScriptValidity
 </span><a href="Cardano.Wallet.Primitive.Types.Tx.html#%24sel%3AscriptValidity%3ATx"><span class="hs-identifier hs-var hs-var">W.scriptValidity</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457665"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe TxScriptValidity -&gt; (TxScriptValidity -&gt; Bool) -&gt; Maybe Bool
+</span><a href="#local-6989586621682457949"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe TxScriptValidity -&gt; (TxScriptValidity -&gt; Bool) -&gt; Maybe Bool
 forall (f :: * -&gt; *) a b. Functor f =&gt; f a -&gt; (a -&gt; b) -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;&amp;&gt;</span></a></span><span> </span><span class="hs-glyph">\</span><span class="hs-glyph">case</span><span>
 </span><span id="line-140"></span><span>          </span><span class="annot"><span class="annottext">TxScriptValidity
@@ -600,9 +600,9 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; f a -&gt; (a -&gt; b) -&gt; f b
 </span><span id="line-144"></span><span class="hs-comment">-- | Compute a 'TxMetaHistory' for a wallet.</span><span>
 </span><span id="line-145"></span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaHistory"><span class="hs-identifier hs-type">mkTxMetaHistory</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.html#WalletId"><span class="hs-identifier hs-type">W.WalletId</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-special">[</span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#Tx"><span class="hs-identifier hs-type">W.Tx</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Wallet.Primitive.Types.Tx.html#TxMeta"><span class="hs-identifier hs-type">W.TxMeta</span></a></span><span class="hs-special">)</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-type">TxMetaHistory</span></a></span><span>
 </span><span id="line-146"></span><span id="mkTxMetaHistory"><span class="annot"><span class="annottext">mkTxMetaHistory :: WalletId -&gt; [(Tx, TxMeta)] -&gt; TxMetaHistory
-</span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaHistory"><span class="hs-identifier hs-var hs-var">mkTxMetaHistory</span></a></span></span><span> </span><span id="local-6989586621682457648"><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682457648"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682457647"><span class="annot"><span class="annottext">[(Tx, TxMeta)]
-</span><a href="#local-6989586621682457647"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; TxMetaHistory
+</span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaHistory"><span class="hs-identifier hs-var hs-var">mkTxMetaHistory</span></a></span></span><span> </span><span id="local-6989586621682457932"><span class="annot"><span class="annottext">WalletId
+</span><a href="#local-6989586621682457932"><span class="hs-identifier hs-var">wid</span></a></span></span><span> </span><span id="local-6989586621682457931"><span class="annot"><span class="annottext">[(Tx, TxMeta)]
+</span><a href="#local-6989586621682457931"><span class="hs-identifier hs-var">txs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Map TxId TxMeta -&gt; TxMetaHistory
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#TxMetaHistory"><span class="hs-identifier hs-var">TxMetaHistory</span></a></span><span> </span><span class="annot"><span class="annottext">(Map TxId TxMeta -&gt; TxMetaHistory)
 -&gt; Map TxId TxMeta -&gt; TxMetaHistory
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -614,7 +614,7 @@ forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="Cardano.Wallet.DB.Sqlite.Types.html#TxId"><span class="hs-identifier hs-var">TxId</span></a></span><span> </span><span class="annot"><span class="annottext">(Hash &quot;Tx&quot; -&gt; TxId) -&gt; Hash &quot;Tx&quot; -&gt; TxId
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457645"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
+</span><a href="#local-6989586621682457929"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
 -&gt; ((Hash &quot;Tx&quot; -&gt; Const (Hash &quot;Tx&quot;) (Hash &quot;Tx&quot;))
     -&gt; Tx -&gt; Const (Hash &quot;Tx&quot;) Tx)
 -&gt; Hash &quot;Tx&quot;
@@ -625,15 +625,15 @@ forall s a. s -&gt; ((a -&gt; Const a a) -&gt; s -&gt; Const a s) -&gt; a
    -&gt; Tx -&gt; Const (Hash &quot;Tx&quot;) Tx)
 (Hash &quot;Tx&quot; -&gt; Const (Hash &quot;Tx&quot;) (Hash &quot;Tx&quot;))
 -&gt; Tx -&gt; Const (Hash &quot;Tx&quot;) Tx
-</span><a href="#local-6989586621682457644"><span class="hs-var">#txId</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; Tx -&gt; TxMeta -&gt; TxMeta
+</span><a href="#local-6989586621682457928"><span class="hs-var">#txId</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">WalletId -&gt; Tx -&gt; TxMeta -&gt; TxMeta
 </span><a href="Cardano.Wallet.DB.Store.Meta.Model.html#mkTxMetaEntity"><span class="hs-identifier hs-var">mkTxMetaEntity</span></a></span><span> </span><span class="annot"><span class="annottext">WalletId
-</span><a href="#local-6989586621682457648"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457645"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457643"><span class="hs-identifier hs-var">meta</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-149"></span><span>            </span><span class="hs-glyph">|</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682457645"><span class="annot"><span class="annottext">Tx
-</span><a href="#local-6989586621682457645"><span class="hs-identifier hs-var">tx</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457643"><span class="annot"><span class="annottext">TxMeta
-</span><a href="#local-6989586621682457643"><span class="hs-identifier hs-var">meta</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
-</span><a href="#local-6989586621682457647"><span class="hs-identifier hs-var">txs</span></a></span><span>
+</span><a href="#local-6989586621682457932"><span class="hs-identifier hs-var">wid</span></a></span><span> </span><span class="annot"><span class="annottext">Tx
+</span><a href="#local-6989586621682457929"><span class="hs-identifier hs-var">tx</span></a></span><span> </span><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457927"><span class="hs-identifier hs-var">meta</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-149"></span><span>            </span><span class="hs-glyph">|</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682457929"><span class="annot"><span class="annottext">Tx
+</span><a href="#local-6989586621682457929"><span class="hs-identifier hs-var">tx</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682457927"><span class="annot"><span class="annottext">TxMeta
+</span><a href="#local-6989586621682457927"><span class="hs-identifier hs-var">meta</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">[(Tx, TxMeta)]
+</span><a href="#local-6989586621682457931"><span class="hs-identifier hs-var">txs</span></a></span><span>
 </span><span id="line-150"></span><span>        </span><span class="hs-special">]</span><span>
 </span><span id="line-151"></span><span>
 </span><span id="line-152"></span><span>

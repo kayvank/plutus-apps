@@ -3,7 +3,7 @@
 
 
 @package quickcheck-contractmodel
-@version 0.1.2.0
+@version 0.1.4.1
 
 module Test.QuickCheck.ContractModel.Internal.Common
 type Era = BabbageEra
@@ -12,13 +12,61 @@ era :: ShelleyBasedEra Era
 instance GHC.Classes.Ord (Cardano.Api.Address.AddressInEra era)
 
 module Test.QuickCheck.ContractModel.Internal.Symbolics
+data SymIndexF f
+SymIndex :: f AssetId -> f (TxOut CtxUTxO Era) -> f TxIn -> SymIndexF f
+[_tokens] :: SymIndexF f -> f AssetId
+[_utxos] :: SymIndexF f -> f (TxOut CtxUTxO Era)
+[_txIns] :: SymIndexF f -> f TxIn
+utxos :: forall f_aTlY. Lens' (SymIndexF f_aTlY) (f_aTlY (TxOut CtxUTxO Era))
+txIns :: forall f_aTlY. Lens' (SymIndexF f_aTlY) (f_aTlY TxIn)
+tokens :: forall f_aTlY. Lens' (SymIndexF f_aTlY) (f_aTlY AssetId)
+class HasSymbolicRep t
+symIndexL :: HasSymbolicRep t => Lens' (SymIndexF f) (f t)
+symPrefix :: HasSymbolicRep t => String
+bmapConst :: FunctorB b => (forall a. f a -> c) -> b f -> Container b c
+mappendSymIndexF :: forall f. (AllBF Semigroup f SymIndexF, Show (SymIndexF f)) => (forall a. f a -> Set String) -> SymIndexF f -> SymIndexF f -> SymIndexF f
 
--- | A symbolic token is a token that exists only during ContractModel
---   generation time
-data SymToken
-SymToken :: Var (Map String AssetId) -> String -> SymToken
-[symVar] :: SymToken -> Var (Map String AssetId)
-[symVarIdx] :: SymToken -> String
+-- | For an assumed variable, what's the mapping of String indices to
+--   underlying actual values. This is what is returned by a contract model
+--   action when it runs.
+type SymIndex = SymIndexF (Map String)
+symIndex :: HasSymbolicRep t => String -> t -> SymIndex
+
+-- | For a given action, what are the String indices used to construct
+--   symbolic variables when this action ran. NOTE: this purposefully does
+--   not include the variable because we might want to fake the variable
+--   with `Var 0` in some cases. See comment somewhere for why this is
+--   safe...
+type SymCreationIndex = SymIndexF (Const (Set String))
+toCreationIndex :: SymIndex -> SymCreationIndex
+createIndex :: forall t. HasSymbolicRep t => String -> SymCreationIndex
+showCreateIndex :: SymCreationIndex -> String
+
+-- | What symbolic variables have been created in a given run of the
+--   <tt>Spec</tt> monad?
+type SymCollectionIndex = SymIndexF SymSet
+newtype SymSet t
+SymSet :: Set (Symbolic t) -> SymSet t
+[unSymSet] :: SymSet t -> Set (Symbolic t)
+symCollect :: HasSymbolicRep t => Symbolic t -> SymCollectionIndex
+makeSymCollection :: SymCreationIndex -> Var SymIndex -> SymCollectionIndex
+symCollectionSubset :: SymCollectionIndex -> SymCollectionIndex -> Bool
+data Symbolic t
+Symbolic :: Var SymIndex -> String -> Symbolic t
+[symVar] :: Symbolic t -> Var SymIndex
+[symVarIdx] :: Symbolic t -> String
+type SymbolicSemantics = forall t. HasSymbolicRep t => Symbolic t -> t
+getSymbolics :: forall t. HasSymbolicRep t => SymCreationIndex -> Var SymIndex -> Set (Symbolic t)
+lookupSymbolic :: HasSymbolicRep t => SymIndex -> Symbolic t -> Maybe t
+
+-- | A symbolic token is a token that is only available at runtime
+type SymToken = Symbolic AssetId
+
+-- | A SymTxOut is a `TxOut CtxUTxO Era` that is only available at runtime
+type SymTxOut = Symbolic (TxOut CtxUTxO Era)
+
+-- | A SymTxIn is a <a>TxIn</a> that is only available at runtime
+type SymTxIn = Symbolic TxIn
 
 -- | A symbolic value is a combination of a real value and a value
 --   associating symbolic tokens with an amount
@@ -52,10 +100,16 @@ symAssetIdValueOf :: TokenLike t => SymValue -> t -> Quantity
 
 -- | Convert a token and an amount to a <a>SymValue</a>
 symAssetIdValue :: TokenLike t => t -> Quantity -> SymValue
-instance GHC.Classes.Ord Test.QuickCheck.ContractModel.Internal.Symbolics.SymToken
-instance GHC.Classes.Eq Test.QuickCheck.ContractModel.Internal.Symbolics.SymToken
+instance forall k (t :: k). GHC.Classes.Ord (Test.QuickCheck.ContractModel.Internal.Symbolics.Symbolic t)
+instance forall k (t :: k). GHC.Classes.Eq (Test.QuickCheck.ContractModel.Internal.Symbolics.Symbolic t)
+instance forall k (t :: k). GHC.Base.Monoid (Test.QuickCheck.ContractModel.Internal.Symbolics.SymSet t)
+instance forall k (t :: k). GHC.Base.Semigroup (Test.QuickCheck.ContractModel.Internal.Symbolics.SymSet t)
+instance forall k (t :: k). GHC.Generics.Generic (Test.QuickCheck.ContractModel.Internal.Symbolics.SymSet t)
 instance GHC.Generics.Generic Test.QuickCheck.ContractModel.Internal.Symbolics.SymValue
 instance GHC.Show.Show Test.QuickCheck.ContractModel.Internal.Symbolics.SymValue
+instance Barbies.Internal.ConstraintsB.AllBF GHC.Show.Show f Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF f)
+instance Barbies.Internal.ConstraintsB.AllBF GHC.Classes.Eq f Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF => GHC.Classes.Eq (Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF f)
+instance forall k (t :: k). GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Symbolics.Symbolic t) => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Symbolics.SymSet t)
 instance Test.QuickCheck.ContractModel.Internal.Symbolics.TokenLike Test.QuickCheck.ContractModel.Internal.Symbolics.SymToken
 instance Test.QuickCheck.ContractModel.Internal.Symbolics.TokenLike Cardano.Api.Value.AssetId
 instance Test.QuickCheck.ContractModel.Internal.Symbolics.SymValueLike Cardano.Api.Value.Value
@@ -64,8 +118,20 @@ instance GHC.Base.Semigroup Test.QuickCheck.ContractModel.Internal.Symbolics.Sym
 instance GHC.Base.Monoid Test.QuickCheck.ContractModel.Internal.Symbolics.SymValue
 instance GHC.Classes.Eq Test.QuickCheck.ContractModel.Internal.Symbolics.SymValue
 instance Text.PrettyPrint.HughesPJClass.Pretty Test.QuickCheck.ContractModel.Internal.Symbolics.SymValue
-instance Test.QuickCheck.StateModel.Variables.HasVariables Test.QuickCheck.ContractModel.Internal.Symbolics.SymToken
-instance GHC.Show.Show Test.QuickCheck.ContractModel.Internal.Symbolics.SymToken
+instance GHC.Base.Semigroup Test.QuickCheck.ContractModel.Internal.Symbolics.SymCollectionIndex
+instance Test.QuickCheck.ContractModel.Internal.Symbolics.HasSymbolicRep t => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Symbolics.Symbolic t)
+instance forall k (t :: k). Test.QuickCheck.StateModel.Variables.HasVariables (Test.QuickCheck.ContractModel.Internal.Symbolics.Symbolic t)
+instance GHC.Base.Semigroup Test.QuickCheck.ContractModel.Internal.Symbolics.SymCreationIndex
+instance GHC.Base.Semigroup Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndex
+instance Test.QuickCheck.ContractModel.Internal.Symbolics.HasSymbolicRep Cardano.Api.Value.AssetId
+instance Test.QuickCheck.ContractModel.Internal.Symbolics.HasSymbolicRep (Cardano.Api.TxBody.TxOut Cardano.Api.TxBody.CtxUTxO Test.QuickCheck.ContractModel.Internal.Common.Era)
+instance Test.QuickCheck.ContractModel.Internal.Symbolics.HasSymbolicRep Cardano.Api.TxIn.TxIn
+instance (Barbies.Internal.ConstraintsB.AllBF GHC.Base.Monoid f Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF, GHC.Base.Semigroup (Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF f)) => GHC.Base.Monoid (Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF f)
+instance Barbies.Internal.TraversableB.TraversableB Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF
+instance Barbies.Internal.ApplicativeB.ApplicativeB Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF
+instance Barbies.Internal.FunctorB.FunctorB Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF
+instance Barbies.Internal.ConstraintsB.ConstraintsB Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF
+instance GHC.Generics.Generic (Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndexF f)
 
 module Test.QuickCheck.ContractModel.Internal.Spec
 
@@ -78,11 +144,11 @@ module Test.QuickCheck.ContractModel.Internal.Spec
 --   <li>the amount that has been minted (<a>minted</a>)</li>
 --   </ul>
 data ModelState state
-ModelState :: SlotNo -> Map (AddressInEra Era) SymValue -> SymValue -> Set SymToken -> [(String, Bool)] -> Bool -> state -> ModelState state
+ModelState :: SlotNo -> Map (AddressInEra Era) SymValue -> SymValue -> SymCollectionIndex -> [(String, Bool)] -> Bool -> state -> ModelState state
 [_currentSlot] :: ModelState state -> SlotNo
 [_balanceChanges] :: ModelState state -> Map (AddressInEra Era) SymValue
 [_minted] :: ModelState state -> SymValue
-[_symTokens] :: ModelState state -> Set SymToken
+[_symbolics] :: ModelState state -> SymCollectionIndex
 [_assertions] :: ModelState state -> [(String, Bool)]
 [_assertionsOk] :: ModelState state -> Bool
 [_contractState] :: ModelState state -> state
@@ -92,18 +158,18 @@ ModelState :: SlotNo -> Map (AddressInEra Era) SymValue -> SymValue -> Set SymTo
 --   tokens. It is used exclusively by the <a>nextState</a> function to
 --   model the effects of an action on the blockchain.
 newtype Spec state a
-Spec :: WriterT [SymToken] (ReaderT (Var (Map String AssetId)) (State (ModelState state))) a -> Spec state a
-[unSpec] :: Spec state a -> WriterT [SymToken] (ReaderT (Var (Map String AssetId)) (State (ModelState state))) a
+Spec :: WriterT SymCreationIndex (ReaderT (Var SymIndex) (State (ModelState state))) a -> Spec state a
+[unSpec] :: Spec state a -> WriterT SymCreationIndex (ReaderT (Var SymIndex) (State (ModelState state))) a
 coerceSpec :: forall s s' a. Coercible s s' => Spec s a -> Spec s' a
 
 -- | Lens for the contract-specific part of the model state.
-contractState :: forall state_aXXV state_a106R. Lens (ModelState state_aXXV) (ModelState state_a106R) state_aXXV state_a106R
-currentSlotL :: forall state_aXXV. Lens' (ModelState state_aXXV) SlotNo
-balanceChangesL :: forall state_aXXV. Lens' (ModelState state_aXXV) (Map (AddressInEra Era) SymValue)
-mintedL :: forall state_aXXV. Lens' (ModelState state_aXXV) SymValue
-assertions :: forall state_aXXV. Lens' (ModelState state_aXXV) [(String, Bool)]
-assertionsOk :: forall state_aXXV. Lens' (ModelState state_aXXV) Bool
-symTokens :: forall state_aXXV. Lens' (ModelState state_aXXV) (Set SymToken)
+contractState :: forall state_a13ZV state_a14xD. Lens (ModelState state_a13ZV) (ModelState state_a14xD) state_a13ZV state_a14xD
+currentSlotL :: forall state_a13ZV. Lens' (ModelState state_a13ZV) SlotNo
+balanceChangesL :: forall state_a13ZV. Lens' (ModelState state_a13ZV) (Map (AddressInEra Era) SymValue)
+mintedL :: forall state_a13ZV. Lens' (ModelState state_a13ZV) SymValue
+assertions :: forall state_a13ZV. Lens' (ModelState state_a13ZV) [(String, Bool)]
+assertionsOk :: forall state_a13ZV. Lens' (ModelState state_a13ZV) Bool
+symbolics :: forall state_a13ZV. Lens' (ModelState state_a13ZV) SymCollectionIndex
 
 -- | Get the current slot.
 --   
@@ -170,12 +236,21 @@ viewModelState :: GetModelState m => Getting a (ModelState (StateType m)) a -> m
 
 -- | Get a component of the contract state using a lens.
 viewContractState :: GetModelState m => Getting a (StateType m) a -> m a
-runSpec :: Spec state () -> Var (Map String AssetId) -> ModelState state -> ModelState state
-tokensCreatedBy :: Spec state () -> Var (Map String AssetId) -> ModelState state -> [SymToken]
+runSpec :: Spec state () -> Var SymIndex -> ModelState state -> ModelState state
+symbolicsCreatedBy :: Spec state () -> Var SymIndex -> ModelState state -> SymCreationIndex
+createSymbolic :: forall t state. HasSymbolicRep t => String -> Spec state (Symbolic t)
 
 -- | Create a new symbolic token in <a>nextState</a> - must have a
 --   corresponding <tt>registerToken</tt> call in <a>perform</a>
 createToken :: String -> Spec state SymToken
+
+-- | Create a new symbolic TxOut in <a>nextState</a> - must have a
+--   corresponding <tt>registerTxOut</tt> call in <a>perform</a>
+createTxOut :: String -> Spec state SymTxOut
+
+-- | Create a new symbolic TxIn in <a>nextState</a> - must have a
+--   corresponding <tt>registerTxIn</tt> call in <a>perform</a>
+createTxIn :: String -> Spec state SymTxIn
 
 -- | Mint tokens. Minted tokens start out as <a>lockedValue</a> (i.e. owned
 --   by the contract) and can be transferred to wallets using
@@ -209,14 +284,47 @@ instance GHC.Base.Functor (Test.QuickCheck.ContractModel.Internal.Spec.Spec stat
 instance Control.Monad.State.Class.MonadState state (Test.QuickCheck.ContractModel.Internal.Spec.Spec state)
 instance GHC.Base.Functor Test.QuickCheck.ContractModel.Internal.Spec.ModelState
 
+module Test.QuickCheck.ContractModel.Internal.Utils
+getTxOuts :: Tx Era -> [TxOut CtxTx Era]
+getTxInputs :: Tx Era -> UTxO Era -> [TxOut CtxUTxO Era]
+bucket :: (Num a, Ord a, Show a, Integral a) => a -> a -> [String]
+
+module Test.QuickCheck.ContractModel.Internal.ChainIndex
+data ChainState
+ChainState :: SlotNo -> UTxO Era -> ChainState
+[slot] :: ChainState -> SlotNo
+[utxo] :: ChainState -> UTxO Era
+data TxInState
+TxInState :: Tx Era -> ChainState -> Bool -> TxInState
+[tx] :: TxInState -> Tx Era
+[chainState] :: TxInState -> ChainState
+[accepted] :: TxInState -> Bool
+data ChainIndex
+ChainIndex :: [TxInState] -> NetworkId -> ChainIndex
+[transactions] :: ChainIndex -> [TxInState]
+[networkId] :: ChainIndex -> NetworkId
+class HasChainIndex m
+getChainIndex :: HasChainIndex m => m ChainIndex
+getChainState :: HasChainIndex m => m ChainState
+allMinAda :: ChainIndex -> ProtocolParameters -> [Lovelace]
+type FeeCalculation = NetworkId -> TxInState -> Map (AddressInEra Era) Value
+signerPaysFees :: FeeCalculation
+mkAddrFromWitness :: NetworkId -> KeyWitness Era -> Address ShelleyAddr
+getBalanceChangesDiscountingFees :: ChainIndex -> FeeCalculation -> Map (AddressInEra Era) Value
+txBalanceChanges :: TxInState -> Map (AddressInEra Era) Value
+instance (GHC.Base.Monad m, Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex m) => Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex (Control.Monad.Trans.State.Lazy.StateT s m)
+instance (GHC.Base.Monad m, Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex m) => Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex (Control.Monad.Trans.Reader.ReaderT r m)
+instance (GHC.Base.Monad m, GHC.Base.Monoid w, Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex m) => Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex (Control.Monad.Trans.Writer.Lazy.WriterT w m)
+instance GHC.Base.Semigroup Test.QuickCheck.ContractModel.Internal.ChainIndex.ChainIndex
+
 module Test.QuickCheck.ContractModel.Internal.Model
-class HasSymTokens a
-getAllSymTokens :: HasSymTokens a => a -> Set SymToken
-getAllSymTokens :: (HasSymTokens a, Generic a, GenericHasSymTokens (Rep a)) => a -> Set SymToken
+class HasSymbolics a
+getAllSymbolics :: HasSymbolics a => a -> SymCollectionIndex
+getAllSymbolics :: (HasSymbolics a, Generic a, GenericHasSymbolics (Rep a)) => a -> SymCollectionIndex
 newtype BaseType a
 BaseType :: a -> BaseType a
-class GenericHasSymTokens f
-genericGetAllSymTokens :: GenericHasSymTokens f => f k -> Set SymToken
+class GenericHasSymbolics f
+genericGetAllSymbolics :: GenericHasSymbolics f => f k -> SymCollectionIndex
 
 -- | A <a>ContractModel</a> instance captures everything that is needed to
 --   generate and run tests of a contract or set of contracts. It specifies
@@ -292,7 +400,7 @@ restricted :: ContractModel state => Action state -> Bool
 
 -- | Check if a given action creates new symbolic tokens in a given
 --   <a>ModelState</a>
-createsTokens :: ContractModel state => ModelState state -> Action state -> Bool
+createsSymbolics :: ContractModel state => ModelState state -> Action state -> Bool
 
 -- | Wait the given number of slots. Updates the <a>currentSlot</a> of the
 --   model state.
@@ -301,20 +409,22 @@ wait :: ContractModel state => Integer -> Spec state ()
 -- | Wait until the given slot. Has no effect if <a>currentSlot</a> is
 --   greater than the given slot.
 waitUntil :: ContractModel state => SlotNo -> Spec state ()
-contractAction :: ContractModel state => ModelState state -> Action state -> Action (ModelState state) (Map String AssetId)
+contractAction :: ContractModel state => ModelState state -> Action state -> Action (ModelState state) SymIndex
 data Actions s
 Actions_ :: [String] -> Smart [Act s] -> Actions s
-pattern ContractAction :: () => Bool -> Action state -> Action (ModelState state) (Map String AssetId)
+pattern ContractAction :: () => Bool -> Action state -> Action (ModelState state) SymIndex
 pattern WaitUntil :: () => SlotNo -> Action (ModelState state) ()
+pattern Observation :: () => String -> (SymbolicSemantics -> ChainState -> Bool) -> Action (ModelState state) ()
 pattern Actions :: [Act s] -> Actions s
 data Act s
-Bind :: Var (Map String AssetId) -> Action s -> Act s
-[varOf] :: Act s -> Var (Map String AssetId)
+Bind :: Var SymIndex -> Action s -> Act s
+[varOf] :: Act s -> Var SymIndex
 [actionOf] :: Act s -> Action s
-NoBind :: Var (Map String AssetId) -> Action s -> Act s
-[varOf] :: Act s -> Var (Map String AssetId)
+NoBind :: Var SymIndex -> Action s -> Act s
+[varOf] :: Act s -> Var SymIndex
 [actionOf] :: Act s -> Action s
 ActWaitUntil :: Var () -> SlotNo -> Act s
+ActObservation :: Var () -> String -> (SymbolicSemantics -> ChainState -> Bool) -> Act s
 mapActions :: (Action s -> Action s') -> Actions s -> Actions s'
 isBind :: Act s -> Bool
 toStateModelActions :: ContractModel state => Actions state -> Actions (ModelState state)
@@ -323,31 +433,31 @@ dummyModelState :: state -> ModelState state
 stateAfter :: ContractModel state => Actions state -> ModelState state
 annotatedStateAfter :: ContractModel state => Actions state -> Annotated (ModelState state)
 asserts :: ModelState state -> Property
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens GHC.Integer.Type.Integer
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens GHC.Types.Int
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens GHC.Types.Char
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens Cardano.Api.Value.Value
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens Cardano.Api.Value.Quantity
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Classes.Eq (Test.QuickCheck.StateModel.Action (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state) a)
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel s => GHC.Classes.Eq (Test.QuickCheck.ContractModel.Internal.Model.Act s)
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Model.Actions state)
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel s => Test.QuickCheck.Arbitrary.Arbitrary (Test.QuickCheck.ContractModel.Internal.Model.Actions s)
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Model.Act state)
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Show.Show (Test.QuickCheck.StateModel.Action (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state) a)
-instance Test.QuickCheck.StateModel.Variables.HasVariables (Test.QuickCheck.ContractModel.Internal.Model.Action state) => Test.QuickCheck.StateModel.Variables.HasVariables (Test.QuickCheck.StateModel.Action (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state) a)
-instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => Test.QuickCheck.StateModel.StateModel (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state)
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens Test.QuickCheck.ContractModel.Internal.Symbolics.SymToken
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens (Test.QuickCheck.ContractModel.Internal.Model.BaseType a)
-instance (Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens k, Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens v) => Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens (Data.Map.Internal.Map k v)
-instance (GHC.Generics.Generic a, Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens (GHC.Generics.Rep a)) => Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens a
-instance Test.QuickCheck.ContractModel.Internal.Model.HasSymTokens c => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens (GHC.Generics.K1 i c)
-instance forall k (f :: k -> *) i (c :: GHC.Generics.Meta). Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens f => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens (GHC.Generics.M1 i c f)
-instance Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens GHC.Generics.U1
-instance forall k (f :: k -> *) (g :: k -> *). (Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens f, Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens g) => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens (f GHC.Generics.:*: g)
-instance forall k (f :: k -> *) (g :: k -> *). (Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens f, Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens g) => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymTokens (f GHC.Generics.:+: g)
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics GHC.Integer.Type.Integer
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics GHC.Types.Int
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics GHC.Types.Char
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics Cardano.Api.Value.Value
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics Cardano.Api.Value.Quantity
 instance Test.QuickCheck.StateModel.Variables.HasVariables (Cardano.Api.Address.AddressInEra Test.QuickCheck.ContractModel.Internal.Common.Era)
 instance Test.QuickCheck.StateModel.Variables.HasVariables Cardano.Api.Value.Quantity
 instance Test.QuickCheck.StateModel.Variables.HasVariables Cardano.Api.Value.Value
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Model.Actions state)
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel s => Test.QuickCheck.Arbitrary.Arbitrary (Test.QuickCheck.ContractModel.Internal.Model.Actions s)
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel s => GHC.Classes.Eq (Test.QuickCheck.ContractModel.Internal.Model.Act s)
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Show.Show (Test.QuickCheck.ContractModel.Internal.Model.Act state)
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Show.Show (Test.QuickCheck.StateModel.Action (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state) a)
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => GHC.Classes.Eq (Test.QuickCheck.StateModel.Action (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state) a)
+instance Test.QuickCheck.StateModel.Variables.HasVariables (Test.QuickCheck.ContractModel.Internal.Model.Action state) => Test.QuickCheck.StateModel.Variables.HasVariables (Test.QuickCheck.StateModel.Action (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state) a)
+instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel state => Test.QuickCheck.StateModel.StateModel (Test.QuickCheck.ContractModel.Internal.Spec.ModelState state)
+instance Test.QuickCheck.ContractModel.Internal.Symbolics.HasSymbolicRep t => Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics (Test.QuickCheck.ContractModel.Internal.Symbolics.Symbolic t)
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics (Test.QuickCheck.ContractModel.Internal.Model.BaseType a)
+instance (Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics k, Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics v) => Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics (Data.Map.Internal.Map k v)
+instance (GHC.Generics.Generic a, Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics (GHC.Generics.Rep a)) => Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics a
+instance Test.QuickCheck.ContractModel.Internal.Model.HasSymbolics c => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics (GHC.Generics.K1 i c)
+instance forall k (f :: k -> *) i (c :: GHC.Generics.Meta). Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics f => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics (GHC.Generics.M1 i c f)
+instance Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics GHC.Generics.U1
+instance forall k (f :: k -> *) (g :: k -> *). (Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics f, Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics g) => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics (f GHC.Generics.:*: g)
+instance forall k (f :: k -> *) (g :: k -> *). (Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics f, Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics g) => Test.QuickCheck.ContractModel.Internal.Model.GenericHasSymbolics (f GHC.Generics.:+: g)
 
 module Test.QuickCheck.ContractModel.DL
 
@@ -364,6 +474,7 @@ class ActionLike state a | a -> state
 -- | Generate a specific action. Fails if the action's <a>precondition</a>
 --   is not satisfied.
 action :: ActionLike state a => a -> DL state ()
+observe :: ContractModel state => String -> ((forall t. HasSymbolicRep t => Symbolic t -> t) -> ChainState -> Bool) -> DL state ()
 waitUntilDL :: forall state. ContractModel state => SlotNo -> DL state ()
 
 -- | Generate a random action using <a>arbitraryAction</a>. The generated
@@ -514,36 +625,6 @@ instance (Test.QuickCheck.ContractModel.Internal.Model.ContractModel state, Data
 instance Test.QuickCheck.ContractModel.Internal.Spec.GetModelState (Test.QuickCheck.ContractModel.DL.DL state)
 instance Test.QuickCheck.ContractModel.Internal.Model.ContractModel s => Test.QuickCheck.DynamicLogic.Internal.DynLogicModel (Test.QuickCheck.ContractModel.Internal.Spec.ModelState s)
 
-module Test.QuickCheck.ContractModel.Internal.Utils
-getTxOuts :: Tx Era -> [TxOut CtxTx Era]
-getTxInputs :: Tx Era -> UTxO Era -> [TxOut CtxUTxO Era]
-bucket :: (Num a, Ord a, Show a, Integral a) => a -> a -> [String]
-
-module Test.QuickCheck.ContractModel.Internal.ChainIndex
-data ChainState
-ChainState :: SlotNo -> UTxO Era -> ChainState
-[slot] :: ChainState -> SlotNo
-[utxo] :: ChainState -> UTxO Era
-data TxInState
-TxInState :: Tx Era -> ChainState -> Bool -> TxInState
-[tx] :: TxInState -> Tx Era
-[chainState] :: TxInState -> ChainState
-[accepted] :: TxInState -> Bool
-data ChainIndex
-ChainIndex :: [TxInState] -> NetworkId -> ChainIndex
-[transactions] :: ChainIndex -> [TxInState]
-[networkId] :: ChainIndex -> NetworkId
-class HasChainIndex m
-getChainIndex :: HasChainIndex m => m ChainIndex
-allMinAda :: ChainIndex -> ProtocolParameters -> [Lovelace]
-type FeeCalculation = NetworkId -> TxInState -> Map (AddressInEra Era) Value
-signerPaysFees :: FeeCalculation
-mkAddrFromWitness :: NetworkId -> KeyWitness Era -> Address ShelleyAddr
-getBalanceChangesDiscountingFees :: ChainIndex -> FeeCalculation -> Map (AddressInEra Era) Value
-txBalanceChanges :: TxInState -> Map (AddressInEra Era) Value
-instance (GHC.Base.Monad m, Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex m) => Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex (Control.Monad.Trans.State.Lazy.StateT s m)
-instance GHC.Base.Semigroup Test.QuickCheck.ContractModel.Internal.ChainIndex.ChainIndex
-
 module Test.QuickCheck.ContractModel.Internal
 class (ContractModel state, IsRunnable m) => RunModel state m
 
@@ -557,23 +638,27 @@ class (ContractModel state, IsRunnable m) => RunModel state m
 --   
 --   The <tt>Lookup</tt> parameter provides an <i>environment</i> to lookup
 --   `Var a` instances from previous steps.
-perform :: RunModel state m => ModelState state -> Action state -> (SymToken -> AssetId) -> RunMonad m ()
+perform :: RunModel state m => ModelState state -> Action state -> (forall t. HasSymbolicRep t => Symbolic t -> t) -> RunMonad m ()
 
 -- | Allows the user to attach information to the <a>Property</a> at each
 --   step of the process. This function is given the full transition that's
 --   been executed, including the start and ending <a>state</a>, the
 --   <a>Action</a>, the current environment to <tt>Lookup</tt> and the
 --   value produced by <a>perform</a> while executing this step.
-monitoring :: RunModel state m => (ModelState state, ModelState state) -> Action state -> (SymToken -> AssetId) -> Map String AssetId -> Property -> Property
+monitoring :: RunModel state m => (ModelState state, ModelState state) -> Action state -> (forall t. HasSymbolicRep t => Symbolic t -> t) -> SymIndex -> Property -> Property
 newtype RunMonad m a
-RunMonad :: WriterT [(String, AssetId)] m a -> RunMonad m a
-[unRunMonad] :: RunMonad m a -> WriterT [(String, AssetId)] m a
+RunMonad :: WriterT SymIndex m a -> RunMonad m a
+[unRunMonad] :: RunMonad m a -> WriterT SymIndex m a
 liftRunMonad :: (forall a. m a -> n a) -> RunMonad m a -> RunMonad n a
+registerSymbolic :: (Monad m, HasSymbolicRep t) => String -> t -> RunMonad m ()
 registerToken :: Monad m => String -> AssetId -> RunMonad m ()
-withLocalTokens :: Monad m => RunMonad m () -> RunMonad m (Map String AssetId)
-type DefaultRealized m = (Realized m (Map String AssetId) ~ Map String AssetId, Realized m () ~ ())
-class (DefaultRealized m, Monad m) => IsRunnable m
+registerTxOut :: Monad m => String -> TxOut CtxUTxO Era -> RunMonad m ()
+registerTxIn :: Monad m => String -> TxIn -> RunMonad m ()
+withLocalSymbolics :: Monad m => RunMonad m () -> RunMonad m SymIndex
+type DefaultRealized m = (Realized m SymIndex ~ SymIndex, Realized m () ~ ())
+class (DefaultRealized m, HasChainIndex m, Monad m) => IsRunnable m
 awaitSlot :: IsRunnable m => SlotNo -> m ()
+translateSymbolic :: (Var SymIndex -> SymIndex) -> SymbolicSemantics
 data ContractModelResult state
 ContractModelResult :: ModelState state -> Map SymToken AssetId -> ChainIndex -> ContractModelResult state
 [finalModelState] :: ContractModelResult state -> ModelState state
@@ -587,7 +672,7 @@ BalanceChangeOptions :: Bool -> FeeCalculation -> ProtocolParameters -> (Address
 [protocolParameters] :: BalanceChangeOptions -> ProtocolParameters
 [addressPrettyPrinter] :: BalanceChangeOptions -> AddressInEra Era -> String
 assertBalanceChangesMatch :: BalanceChangeOptions -> ContractModelResult state -> Property
-instance GHC.Base.Monad m => Control.Monad.Writer.Class.MonadWriter [(GHC.Base.String, Cardano.Api.Value.AssetId)] (Test.QuickCheck.ContractModel.Internal.RunMonad m)
+instance GHC.Base.Monad m => Control.Monad.Writer.Class.MonadWriter Test.QuickCheck.ContractModel.Internal.Symbolics.SymIndex (Test.QuickCheck.ContractModel.Internal.RunMonad m)
 instance Control.Monad.State.Class.MonadState s m => Control.Monad.State.Class.MonadState s (Test.QuickCheck.ContractModel.Internal.RunMonad m)
 instance Control.Monad.Error.Class.MonadError e m => Control.Monad.Error.Class.MonadError e (Test.QuickCheck.ContractModel.Internal.RunMonad m)
 instance GHC.Base.Monad m => GHC.Base.Monad (Test.QuickCheck.ContractModel.Internal.RunMonad m)
@@ -601,6 +686,7 @@ instance Test.QuickCheck.ContractModel.Internal.IsRunnable m => Test.QuickCheck.
 instance GHC.Base.Monad m => Control.Monad.Fail.MonadFail (Test.QuickCheck.ContractModel.Internal.RunMonad m)
 instance Control.Monad.Trans.Class.MonadTrans Test.QuickCheck.ContractModel.Internal.RunMonad
 instance (GHC.Base.Monad m, Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex m) => Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex (Test.QuickCheck.ContractModel.Internal.RunMonad m)
+instance (GHC.Base.Monad m, Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex m) => Test.QuickCheck.ContractModel.Internal.ChainIndex.HasChainIndex (Test.QuickCheck.StateModel.PostconditionM m)
 
 module Test.QuickCheck.ContractModel
 
@@ -687,41 +773,46 @@ class (ContractModel state, IsRunnable m) => RunModel state m
 --   
 --   The <tt>Lookup</tt> parameter provides an <i>environment</i> to lookup
 --   `Var a` instances from previous steps.
-perform :: RunModel state m => ModelState state -> Action state -> (SymToken -> AssetId) -> RunMonad m ()
+perform :: RunModel state m => ModelState state -> Action state -> (forall t. HasSymbolicRep t => Symbolic t -> t) -> RunMonad m ()
 
 -- | Allows the user to attach information to the <a>Property</a> at each
 --   step of the process. This function is given the full transition that's
 --   been executed, including the start and ending <a>state</a>, the
 --   <a>Action</a>, the current environment to <tt>Lookup</tt> and the
 --   value produced by <a>perform</a> while executing this step.
-monitoring :: RunModel state m => (ModelState state, ModelState state) -> Action state -> (SymToken -> AssetId) -> Map String AssetId -> Property -> Property
-class (DefaultRealized m, Monad m) => IsRunnable m
+monitoring :: RunModel state m => (ModelState state, ModelState state) -> Action state -> (forall t. HasSymbolicRep t => Symbolic t -> t) -> SymIndex -> Property -> Property
+class (DefaultRealized m, HasChainIndex m, Monad m) => IsRunnable m
 awaitSlot :: IsRunnable m => SlotNo -> m ()
-type DefaultRealized m = (Realized m (Map String AssetId) ~ Map String AssetId, Realized m () ~ ())
+type DefaultRealized m = (Realized m SymIndex ~ SymIndex, Realized m () ~ ())
 newtype RunMonad m a
-RunMonad :: WriterT [(String, AssetId)] m a -> RunMonad m a
-[unRunMonad] :: RunMonad m a -> WriterT [(String, AssetId)] m a
+RunMonad :: WriterT SymIndex m a -> RunMonad m a
+[unRunMonad] :: RunMonad m a -> WriterT SymIndex m a
 data Actions s
 data Act s
-Bind :: Var (Map String AssetId) -> Action s -> Act s
-[varOf] :: Act s -> Var (Map String AssetId)
+Bind :: Var SymIndex -> Action s -> Act s
+[varOf] :: Act s -> Var SymIndex
 [actionOf] :: Act s -> Action s
-NoBind :: Var (Map String AssetId) -> Action s -> Act s
-[varOf] :: Act s -> Var (Map String AssetId)
+NoBind :: Var SymIndex -> Action s -> Act s
+[varOf] :: Act s -> Var SymIndex
 [actionOf] :: Act s -> Action s
 ActWaitUntil :: Var () -> SlotNo -> Act s
+ActObservation :: Var () -> String -> (SymbolicSemantics -> ChainState -> Bool) -> Act s
 pattern Actions :: [Act s] -> Actions s
-ContractAction :: Bool -> Action state -> Action (ModelState state) (Map String AssetId)
+ContractAction :: Bool -> Action state -> Action (ModelState state) SymIndex
 WaitUntil :: SlotNo -> Action (ModelState state) ()
 stateAfter :: ContractModel state => Actions state -> ModelState state
 runContractModel :: (ContractModel state, RunModel state m, HasChainIndex m) => Actions state -> PropertyM (RunMonad m) (ContractModelResult state)
 liftRunMonad :: (forall a. m a -> n a) -> RunMonad m a -> RunMonad n a
 
 -- | Lens for the contract-specific part of the model state.
-contractState :: forall state_aXXV state_a106R. Lens (ModelState state_aXXV) (ModelState state_a106R) state_aXXV state_a106R
+contractState :: forall state_a13ZV state_a14xD. Lens (ModelState state_a13ZV) (ModelState state_a14xD) state_a13ZV state_a14xD
+registerSymbolic :: (Monad m, HasSymbolicRep t) => String -> t -> RunMonad m ()
 registerToken :: Monad m => String -> AssetId -> RunMonad m ()
+registerTxOut :: Monad m => String -> TxOut CtxUTxO Era -> RunMonad m ()
+registerTxIn :: Monad m => String -> TxIn -> RunMonad m ()
 class HasChainIndex m
 getChainIndex :: HasChainIndex m => m ChainIndex
+getChainState :: HasChainIndex m => m ChainState
 data ChainIndex
 ChainIndex :: [TxInState] -> NetworkId -> ChainIndex
 [transactions] :: ChainIndex -> [TxInState]
@@ -736,10 +827,16 @@ TxInState :: Tx Era -> ChainState -> Bool -> TxInState
 [chainState] :: TxInState -> ChainState
 [accepted] :: TxInState -> Bool
 type Era = BabbageEra
+data Symbolic t
 
--- | A symbolic token is a token that exists only during ContractModel
---   generation time
-data SymToken
+-- | A symbolic token is a token that is only available at runtime
+type SymToken = Symbolic AssetId
+
+-- | A SymTxOut is a `TxOut CtxUTxO Era` that is only available at runtime
+type SymTxOut = Symbolic (TxOut CtxUTxO Era)
+
+-- | A SymTxIn is a <a>TxIn</a> that is only available at runtime
+type SymTxIn = Symbolic TxIn
 
 -- | A symbolic value is a combination of a real value and a value
 --   associating symbolic tokens with an amount
@@ -768,9 +865,10 @@ symAssetIdValueOf :: TokenLike t => SymValue -> t -> Quantity
 
 -- | Convert a token and an amount to a <a>SymValue</a>
 symAssetIdValue :: TokenLike t => t -> Quantity -> SymValue
-class HasSymTokens a
-getAllSymTokens :: HasSymTokens a => a -> Set SymToken
-getAllSymTokens :: (HasSymTokens a, Generic a, GenericHasSymTokens (Rep a)) => a -> Set SymToken
+class HasSymbolics a
+getAllSymbolics :: HasSymbolics a => a -> SymCollectionIndex
+getAllSymbolics :: (HasSymbolics a, Generic a, GenericHasSymbolics (Rep a)) => a -> SymCollectionIndex
+class HasSymbolicRep t
 data BalanceChangeOptions
 BalanceChangeOptions :: Bool -> FeeCalculation -> ProtocolParameters -> (AddressInEra Era -> String) -> BalanceChangeOptions
 [observeScriptValue] :: BalanceChangeOptions -> Bool
@@ -796,8 +894,8 @@ data ModelState state
 --   tokens. It is used exclusively by the <a>nextState</a> function to
 --   model the effects of an action on the blockchain.
 newtype Spec state a
-Spec :: WriterT [SymToken] (ReaderT (Var (Map String AssetId)) (State (ModelState state))) a -> Spec state a
-[unSpec] :: Spec state a -> WriterT [SymToken] (ReaderT (Var (Map String AssetId)) (State (ModelState state))) a
+Spec :: WriterT SymCreationIndex (ReaderT (Var SymIndex) (State (ModelState state))) a -> Spec state a
+[unSpec] :: Spec state a -> WriterT SymCreationIndex (ReaderT (Var SymIndex) (State (ModelState state))) a
 
 -- | Monads with read access to the model state: the <a>Spec</a> monad used
 --   in <a>nextState</a>, and the <tt>DL</tt> monad used to construct test
@@ -812,7 +910,7 @@ class Monad m => GetModelState m where {
 
 -- | Get the current model state.
 getModelState :: GetModelState m => m (ModelState (StateType m))
-runSpec :: Spec state () -> Var (Map String AssetId) -> ModelState state -> ModelState state
+runSpec :: Spec state () -> Var SymIndex -> ModelState state -> ModelState state
 
 -- | Get the current slot.
 --   
@@ -862,10 +960,19 @@ viewModelState :: GetModelState m => Getting a (ModelState (StateType m)) a -> m
 
 -- | Get a component of the contract state using a lens.
 viewContractState :: GetModelState m => Getting a (StateType m) a -> m a
+createSymbolic :: forall t state. HasSymbolicRep t => String -> Spec state (Symbolic t)
 
 -- | Create a new symbolic token in <a>nextState</a> - must have a
 --   corresponding <tt>registerToken</tt> call in <a>perform</a>
 createToken :: String -> Spec state SymToken
+
+-- | Create a new symbolic TxOut in <a>nextState</a> - must have a
+--   corresponding <tt>registerTxOut</tt> call in <a>perform</a>
+createTxOut :: String -> Spec state SymTxOut
+
+-- | Create a new symbolic TxIn in <a>nextState</a> - must have a
+--   corresponding <tt>registerTxIn</tt> call in <a>perform</a>
+createTxIn :: String -> Spec state SymTxIn
 
 -- | Mint tokens. Minted tokens start out as <a>lockedValue</a> (i.e. owned
 --   by the contract) and can be transferred to wallets using

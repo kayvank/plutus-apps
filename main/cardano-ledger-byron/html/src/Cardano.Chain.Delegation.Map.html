@@ -28,18 +28,18 @@
 </span><span id="line-28"></span><span class="hs-keyword">import</span><span> </span><span class="hs-keyword">qualified</span><span> </span><span class="annot"><a href="../../../../containers/html/src"><span class="hs-identifier">Data.Set</span></a></span><span> </span><span class="hs-keyword">as</span><span> </span><span class="annot"><span class="hs-identifier">Set</span></span><span>
 </span><span id="line-29"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">NoThunks.Class</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">NoThunks</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier">noThunksInKeysAndValues</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-30"></span><span>
-</span><span id="line-31"></span><span id="local-6989586621679528509"><span id="local-6989586621679528510"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Map"><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-var">Map</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Map"><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-var">Map</span></a></span></span><span>
+</span><span id="line-31"></span><span id="local-6989586621679528533"><span id="local-6989586621679528534"></span></span><span class="hs-keyword">newtype</span><span> </span><span id="Map"><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-var">Map</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Map"><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-var">Map</span></a></span></span><span>
 </span><span id="line-32"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="unMap"><span class="annot"><span class="annottext">Map -&gt; Bimap KeyHash KeyHash
 </span><a href="Cardano.Chain.Delegation.Map.html#unMap"><span class="hs-identifier hs-var hs-var">unMap</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bimap/html/src"><span class="hs-identifier hs-type">Bimap</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span>
 </span><span id="line-33"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-34"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528503"><span id="local-6989586621679528505"><span class="annot"><span class="annottext">Map -&gt; Map -&gt; Bool
+</span><span id="line-34"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528527"><span id="local-6989586621679528529"><span class="annot"><span class="annottext">Map -&gt; Map -&gt; Bool
 (Map -&gt; Map -&gt; Bool) -&gt; (Map -&gt; Map -&gt; Bool) -&gt; Eq Map
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 /= :: Map -&gt; Map -&gt; Bool
 $c/= :: Map -&gt; Map -&gt; Bool
 == :: Map -&gt; Map -&gt; Bool
 $c== :: Map -&gt; Map -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528496"><span id="local-6989586621679528498"><span id="local-6989586621679528500"><span class="annot"><span class="annottext">Int -&gt; Map -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679528520"><span id="local-6989586621679528522"><span id="local-6989586621679528524"><span class="annot"><span class="annottext">Int -&gt; Map -&gt; ShowS
 [Map] -&gt; ShowS
 Map -&gt; String
 (Int -&gt; Map -&gt; ShowS)
@@ -61,15 +61,15 @@ forall a.
 $cto :: forall x. Rep Map x -&gt; Map
 $cfrom :: forall x. Map -&gt; Rep Map x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-35"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528490"><span class="annot"><span class="annottext">Map -&gt; ()
+</span><span id="line-35"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="annot"><span class="hs-keyword">anyclass</span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679528514"><span class="annot"><span class="annottext">Map -&gt; ()
 (Map -&gt; ()) -&gt; NFData Map
 forall a. (a -&gt; ()) -&gt; NFData a
 rnf :: Map -&gt; ()
 $crnf :: Map -&gt; ()
 </span><a href="../../../../ghc/html/libraries/deepseq-1.4.4.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">NFData</span></a></span></span><span class="hs-special">)</span><span>
 </span><span id="line-36"></span><span>
-</span><span id="line-37"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528485"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-38"></span><span>  </span><span id="local-6989586621679528483"><span class="annot"><span class="annottext">fromCBOR :: Decoder s Map
+</span><span id="line-37"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528509"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">FromCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-38"></span><span>  </span><span id="local-6989586621679528507"><span class="annot"><span class="annottext">fromCBOR :: Decoder s Map
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">fromCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bimap KeyHash KeyHash -&gt; Map
 </span><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-var">Map</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Map)
 -&gt; ([(KeyHash, KeyHash)] -&gt; Bimap KeyHash KeyHash)
@@ -87,8 +87,8 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 forall a s. FromCBOR a =&gt; Decoder s a
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">fromCBOR</span></a></span><span>
 </span><span id="line-39"></span><span>
-</span><span id="line-40"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528473"><span id="local-6989586621679528475"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-41"></span><span>  </span><span id="local-6989586621679528471"><span class="annot"><span class="annottext">toCBOR :: Map -&gt; Encoding
+</span><span id="line-40"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528497"><span id="local-6989586621679528499"><span class="annot"><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-type">ToCBOR</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-41"></span><span>  </span><span id="local-6989586621679528495"><span class="annot"><span class="annottext">toCBOR :: Map -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toCBOR</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[(KeyHash, KeyHash)] -&gt; Encoding
 forall a. ToCBOR a =&gt; a -&gt; Encoding
 </span><a href="../../../../cardano-binary/html/src"><span class="hs-identifier hs-var">toCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">([(KeyHash, KeyHash)] -&gt; Encoding)
@@ -108,16 +108,16 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-42"></span><span>
 </span><span id="line-43"></span><span class="hs-comment">-- | A 'Bimap' contains two regular 'Map's, which are spine strict; we therefore</span><span>
 </span><span id="line-44"></span><span class="hs-comment">-- have to worry about the elements only</span><span>
-</span><span id="line-45"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528464"><span id="local-6989586621679528467"><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-type">NoThunks</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-46"></span><span>  </span><span id="local-6989586621679528462"><span class="annot"><span class="annottext">wNoThunks :: Context -&gt; Map -&gt; IO (Maybe ThunkInfo)
-</span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">wNoThunks</span></a></span></span><span> </span><span id="local-6989586621679528460"><span class="annot"><span class="annottext">Context
-</span><a href="#local-6989586621679528460"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-45"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679528488"><span id="local-6989586621679528491"><span class="annot"><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-type">NoThunks</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-46"></span><span>  </span><span id="local-6989586621679528486"><span class="annot"><span class="annottext">wNoThunks :: Context -&gt; Map -&gt; IO (Maybe ThunkInfo)
+</span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">wNoThunks</span></a></span></span><span> </span><span id="local-6989586621679528484"><span class="annot"><span class="annottext">Context
+</span><a href="#local-6989586621679528484"><span class="hs-identifier hs-var">ctxt</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-47"></span><span>    </span><span class="annot"><span class="annottext">Context -&gt; [(KeyHash, KeyHash)] -&gt; IO (Maybe ThunkInfo)
 forall k v.
 (NoThunks k, NoThunks v) =&gt;
 Context -&gt; [(k, v)] -&gt; IO (Maybe ThunkInfo)
 </span><a href="../../../../nothunks/html/src"><span class="hs-identifier hs-var">noThunksInKeysAndValues</span></a></span><span> </span><span class="annot"><span class="annottext">Context
-</span><a href="#local-6989586621679528460"><span class="hs-identifier hs-var">ctxt</span></a></span><span>
+</span><a href="#local-6989586621679528484"><span class="hs-identifier hs-var">ctxt</span></a></span><span>
 </span><span id="line-48"></span><span>      </span><span class="annot"><span class="annottext">([(KeyHash, KeyHash)] -&gt; IO (Maybe ThunkInfo))
 -&gt; (Map -&gt; [(KeyHash, KeyHash)]) -&gt; Map -&gt; IO (Maybe ThunkInfo)
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
@@ -140,11 +140,11 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-54"></span><span>
 </span><span id="line-55"></span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#memberR"><span class="hs-identifier hs-type">memberR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-56"></span><span id="memberR"><span class="annot"><span class="annottext">memberR :: KeyHash -&gt; Map -&gt; Bool
-</span><a href="Cardano.Chain.Delegation.Map.html#memberR"><span class="hs-identifier hs-var hs-var">memberR</span></a></span></span><span> </span><span id="local-6989586621679528459"><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528459"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Bool
+</span><a href="Cardano.Chain.Delegation.Map.html#memberR"><span class="hs-identifier hs-var hs-var">memberR</span></a></span></span><span> </span><span id="local-6989586621679528483"><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679528483"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Bool
 forall a b. (Ord a, Ord b) =&gt; b -&gt; Bimap a b -&gt; Bool
 </span><a href="../../../../bimap/html/src"><span class="hs-identifier hs-var">Bimap.memberR</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528459"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bool)
+</span><a href="#local-6989586621679528483"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bool)
 -&gt; (Map -&gt; Bimap KeyHash KeyHash) -&gt; Map -&gt; Bool
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
 Category cat =&gt;
@@ -156,11 +156,11 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-59"></span><span>
 </span><span id="line-60"></span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#notMemberR"><span class="hs-identifier hs-type">notMemberR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-61"></span><span id="notMemberR"><span class="annot"><span class="annottext">notMemberR :: KeyHash -&gt; Map -&gt; Bool
-</span><a href="Cardano.Chain.Delegation.Map.html#notMemberR"><span class="hs-identifier hs-var hs-var">notMemberR</span></a></span></span><span> </span><span id="local-6989586621679528457"><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528457"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Bool
+</span><a href="Cardano.Chain.Delegation.Map.html#notMemberR"><span class="hs-identifier hs-var hs-var">notMemberR</span></a></span></span><span> </span><span id="local-6989586621679528481"><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679528481"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Bool
 forall a b. (Ord a, Ord b) =&gt; b -&gt; Bimap a b -&gt; Bool
 </span><a href="../../../../bimap/html/src"><span class="hs-identifier hs-var">Bimap.notMemberR</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528457"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bool)
+</span><a href="#local-6989586621679528481"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bool)
 -&gt; (Map -&gt; Bimap KeyHash KeyHash) -&gt; Map -&gt; Bool
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
 Category cat =&gt;
@@ -170,11 +170,11 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-62"></span><span>
 </span><span id="line-63"></span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#pairMember"><span class="hs-identifier hs-type">pairMember</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Bool</span></a></span><span>
 </span><span id="line-64"></span><span id="pairMember"><span class="annot"><span class="annottext">pairMember :: (KeyHash, KeyHash) -&gt; Map -&gt; Bool
-</span><a href="Cardano.Chain.Delegation.Map.html#pairMember"><span class="hs-identifier hs-var hs-var">pairMember</span></a></span></span><span> </span><span id="local-6989586621679528455"><span class="annot"><span class="annottext">(KeyHash, KeyHash)
-</span><a href="#local-6989586621679528455"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KeyHash, KeyHash) -&gt; Bimap KeyHash KeyHash -&gt; Bool
+</span><a href="Cardano.Chain.Delegation.Map.html#pairMember"><span class="hs-identifier hs-var hs-var">pairMember</span></a></span></span><span> </span><span id="local-6989586621679528479"><span class="annot"><span class="annottext">(KeyHash, KeyHash)
+</span><a href="#local-6989586621679528479"><span class="hs-identifier hs-var">p</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(KeyHash, KeyHash) -&gt; Bimap KeyHash KeyHash -&gt; Bool
 forall a b. (Ord a, Ord b) =&gt; (a, b) -&gt; Bimap a b -&gt; Bool
 </span><a href="../../../../bimap/html/src"><span class="hs-identifier hs-var">Bimap.pairMember</span></a></span><span> </span><span class="annot"><span class="annottext">(KeyHash, KeyHash)
-</span><a href="#local-6989586621679528455"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bool)
+</span><a href="#local-6989586621679528479"><span class="hs-identifier hs-var">p</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bool)
 -&gt; (Map -&gt; Bimap KeyHash KeyHash) -&gt; Map -&gt; Bool
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
 Category cat =&gt;
@@ -184,13 +184,13 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-65"></span><span>
 </span><span id="line-66"></span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#lookupR"><span class="hs-identifier hs-type">lookupR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">Maybe</span></a></span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span>
 </span><span id="line-67"></span><span id="lookupR"><span class="annot"><span class="annottext">lookupR :: KeyHash -&gt; Map -&gt; Maybe KeyHash
-</span><a href="Cardano.Chain.Delegation.Map.html#lookupR"><span class="hs-identifier hs-var hs-var">lookupR</span></a></span></span><span> </span><span id="local-6989586621679528453"><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528453"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Maybe KeyHash
+</span><a href="Cardano.Chain.Delegation.Map.html#lookupR"><span class="hs-identifier hs-var hs-var">lookupR</span></a></span></span><span> </span><span id="local-6989586621679528477"><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679528477"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Maybe KeyHash
 forall a b (m :: * -&gt; *).
 (Ord a, Ord b, MonadThrow m) =&gt;
 b -&gt; Bimap a b -&gt; m a
 </span><a href="../../../../bimap/html/src"><span class="hs-identifier hs-var">Bimap.lookupR</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528453"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Maybe KeyHash)
+</span><a href="#local-6989586621679528477"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Maybe KeyHash)
 -&gt; (Map -&gt; Bimap KeyHash KeyHash) -&gt; Map -&gt; Maybe KeyHash
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
 Category cat =&gt;
@@ -204,9 +204,9 @@ cat b c -&gt; cat a b -&gt; cat a c
 </span><span id="line-72"></span><span>
 </span><span id="line-73"></span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#insert"><span class="hs-identifier hs-type">insert</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Common.KeyHash.html#KeyHash"><span class="hs-identifier hs-type">KeyHash</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-type">Map</span></a></span><span>
 </span><span id="line-74"></span><span id="insert"><span class="annot"><span class="annottext">insert :: KeyHash -&gt; KeyHash -&gt; Map -&gt; Map
-</span><a href="Cardano.Chain.Delegation.Map.html#insert"><span class="hs-identifier hs-var hs-var">insert</span></a></span></span><span> </span><span id="local-6989586621679528451"><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528451"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span id="local-6989586621679528450"><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528450"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bimap KeyHash KeyHash -&gt; Map
+</span><a href="Cardano.Chain.Delegation.Map.html#insert"><span class="hs-identifier hs-var hs-var">insert</span></a></span></span><span> </span><span id="local-6989586621679528475"><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679528475"><span class="hs-identifier hs-var">a</span></a></span></span><span> </span><span id="local-6989586621679528474"><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679528474"><span class="hs-identifier hs-var">b</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Bimap KeyHash KeyHash -&gt; Map
 </span><a href="Cardano.Chain.Delegation.Map.html#Map"><span class="hs-identifier hs-var">Map</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Map)
 -&gt; (Map -&gt; Bimap KeyHash KeyHash) -&gt; Map -&gt; Map
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
@@ -216,8 +216,8 @@ cat b c -&gt; cat a b -&gt; cat a c
 -&gt; KeyHash -&gt; Bimap KeyHash KeyHash -&gt; Bimap KeyHash KeyHash
 forall a b. (Ord a, Ord b) =&gt; a -&gt; b -&gt; Bimap a b -&gt; Bimap a b
 </span><a href="../../../../bimap/html/src"><span class="hs-identifier hs-var">Bimap.insert</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528451"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
-</span><a href="#local-6989586621679528450"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bimap KeyHash KeyHash)
+</span><a href="#local-6989586621679528475"><span class="hs-identifier hs-var">a</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash
+</span><a href="#local-6989586621679528474"><span class="hs-identifier hs-var">b</span></a></span><span> </span><span class="annot"><span class="annottext">(Bimap KeyHash KeyHash -&gt; Bimap KeyHash KeyHash)
 -&gt; (Map -&gt; Bimap KeyHash KeyHash) -&gt; Map -&gt; Bimap KeyHash KeyHash
 forall k (cat :: k -&gt; k -&gt; *) (b :: k) (c :: k) (a :: k).
 Category cat =&gt;

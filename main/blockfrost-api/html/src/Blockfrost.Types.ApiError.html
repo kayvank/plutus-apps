@@ -14,14 +14,14 @@
 </span><span id="line-14"></span><span>
 </span><span id="line-15"></span><span class="hs-comment">-- | Fancy JSON error returned</span><span>
 </span><span id="line-16"></span><span class="hs-comment">-- by the server</span><span>
-</span><span id="line-17"></span><span id="local-6989586621681196656"><span id="local-6989586621681196657"></span></span><span class="hs-keyword">data</span><span> </span><span id="ApiError"><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-var">ApiError</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ApiError"><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-var">ApiError</span></a></span></span><span>
+</span><span id="line-17"></span><span id="local-6989586621681196663"><span id="local-6989586621681196664"></span></span><span class="hs-keyword">data</span><span> </span><span id="ApiError"><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-var">ApiError</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="ApiError"><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-var">ApiError</span></a></span></span><span>
 </span><span id="line-18"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="apiError"><span class="annot"><span class="annottext">ApiError -&gt; Text
 </span><a href="Blockfrost.Types.ApiError.html#apiError"><span class="hs-identifier hs-var hs-var">apiError</span></a></span></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
 </span><span id="line-19"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="apiErrorMessage"><span class="annot"><span class="annottext">ApiError -&gt; Text
 </span><a href="Blockfrost.Types.ApiError.html#apiErrorMessage"><span class="hs-identifier hs-var hs-var">apiErrorMessage</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../text/html/src"><span class="hs-identifier hs-type">Text</span></a></span><span>
 </span><span id="line-20"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="apiErrorCode"><span class="annot"><span class="annottext">ApiError -&gt; Int
 </span><a href="Blockfrost.Types.ApiError.html#apiErrorCode"><span class="hs-identifier hs-var hs-var">apiErrorCode</span></a></span></span><span>    </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
-</span><span id="line-21"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681196648"><span id="local-6989586621681196650"><span class="annot"><span class="annottext">ApiError -&gt; ApiError -&gt; Bool
+</span><span id="line-21"></span><span>  </span><span class="hs-special">}</span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621681196655"><span id="local-6989586621681196657"><span class="annot"><span class="annottext">ApiError -&gt; ApiError -&gt; Bool
 (ApiError -&gt; ApiError -&gt; Bool)
 -&gt; (ApiError -&gt; ApiError -&gt; Bool) -&gt; Eq ApiError
 forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
@@ -29,7 +29,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: ApiError -&gt; ApiError -&gt; Bool
 == :: ApiError -&gt; ApiError -&gt; Bool
 $c== :: ApiError -&gt; ApiError -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681196641"><span id="local-6989586621681196643"><span id="local-6989586621681196645"><span class="annot"><span class="annottext">Int -&gt; ApiError -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621681196648"><span id="local-6989586621681196650"><span id="local-6989586621681196652"><span class="annot"><span class="annottext">Int -&gt; ApiError -&gt; ShowS
 [ApiError] -&gt; ShowS
 ApiError -&gt; String
 (Int -&gt; ApiError -&gt; ShowS)
@@ -52,9 +52,9 @@ $cto :: forall x. Rep ApiError x -&gt; ApiError
 $cfrom :: forall x. ApiError -&gt; Rep ApiError x
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">Generic</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-22"></span><span>
-</span><span id="line-23"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681196630"><span id="local-6989586621681196632"><span id="local-6989586621681196634"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-type">ApiError</span></a></span></span></span></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-24"></span><span>  </span><span id="local-6989586621681196628"><span class="annot"><span class="annottext">toJSON :: ApiError -&gt; Value
-</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-type">ApiError</span></a></span><span class="hs-special">{</span><span id="local-6989586621681196624"><span id="local-6989586621681196625"><span id="local-6989586621681196626"><span class="annot"><span class="annottext">Int
+</span><span id="line-23"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681196637"><span id="local-6989586621681196639"><span id="local-6989586621681196641"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">ToJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-type">ApiError</span></a></span></span></span></span><span>  </span><span class="hs-keyword">where</span><span>
+</span><span id="line-24"></span><span>  </span><span id="local-6989586621681196635"><span class="annot"><span class="annottext">toJSON :: ApiError -&gt; Value
+</span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">toJSON</span></a></span></span><span> </span><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-type">ApiError</span></a></span><span class="hs-special">{</span><span id="local-6989586621681196631"><span id="local-6989586621681196632"><span id="local-6989586621681196633"><span class="annot"><span class="annottext">Int
 Text
 apiErrorCode :: Int
 apiErrorMessage :: Text
@@ -62,7 +62,7 @@ apiError :: Text
 apiErrorCode :: ApiError -&gt; Int
 apiErrorMessage :: ApiError -&gt; Text
 apiError :: ApiError -&gt; Text
-</span><a href="#local-6989586621681196624"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621681196631"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span></span></span></span><span class="hs-special">}</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-25"></span><span>    </span><span class="annot"><span class="annottext">[Pair] -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">object</span></a></span><span> </span><span class="hs-special">[</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;error&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Value -&gt; Pair
@@ -70,48 +70,48 @@ forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681196626"><span class="hs-identifier hs-var">apiError</span></a></span><span>
+</span><a href="#local-6989586621681196633"><span class="hs-identifier hs-var">apiError</span></a></span><span>
 </span><span id="line-26"></span><span>           </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;message&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Value -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="annot"><span class="annottext">Text -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681196625"><span class="hs-identifier hs-var">apiErrorMessage</span></a></span><span>
+</span><a href="#local-6989586621681196632"><span class="hs-identifier hs-var">apiErrorMessage</span></a></span><span>
 </span><span id="line-27"></span><span>           </span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;status_code&quot;</span></span><span> </span><span class="annot"><span class="annottext">Key -&gt; Value -&gt; Pair
 forall kv v. (KeyValue kv, ToJSON v) =&gt; Key -&gt; v -&gt; kv
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.=</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Value
 forall a. ToJSON a =&gt; a -&gt; Value
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">toJSON</span></a></span><span> </span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621681196624"><span class="hs-identifier hs-var">apiErrorCode</span></a></span><span>
+</span><a href="#local-6989586621681196631"><span class="hs-identifier hs-var">apiErrorCode</span></a></span><span>
 </span><span id="line-28"></span><span>           </span><span class="hs-special">]</span><span>
 </span><span id="line-29"></span><span>
-</span><span id="line-30"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681196619"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-type">ApiError</span></a></span></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-31"></span><span>  </span><span id="local-6989586621681196617"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser ApiError
+</span><span id="line-30"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621681196626"><span class="annot"><a href="../../../../aeson/html/src"><span class="hs-identifier hs-type">FromJSON</span></a></span><span> </span><span class="annot"><a href="Blockfrost.Types.ApiError.html#ApiError"><span class="hs-identifier hs-type">ApiError</span></a></span></span><span>  </span><span class="hs-keyword">where</span><span>
+</span><span id="line-31"></span><span>  </span><span id="local-6989586621681196624"><span class="annot"><span class="annottext">parseJSON :: Value -&gt; Parser ApiError
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var hs-var hs-var hs-var">parseJSON</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String -&gt; (Object -&gt; Parser ApiError) -&gt; Value -&gt; Parser ApiError
 forall a. String -&gt; (Object -&gt; Parser a) -&gt; Value -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-identifier hs-var">withObject</span></a></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;error&quot;</span></span><span> </span><span class="annot"><span class="annottext">((Object -&gt; Parser ApiError) -&gt; Value -&gt; Parser ApiError)
 -&gt; (Object -&gt; Parser ApiError) -&gt; Value -&gt; Parser ApiError
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681196614"><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681196614"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-32"></span><span>    </span><span id="local-6989586621681196613"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681196613"><span class="hs-identifier hs-var">apiError</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681196614"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Text
+</span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621681196621"><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681196621"><span class="hs-identifier hs-var">o</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-32"></span><span>    </span><span id="local-6989586621681196620"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681196620"><span class="hs-identifier hs-var">apiError</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681196621"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Text
 forall a. FromJSON a =&gt; Object -&gt; Key -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.:</span></a></span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;error&quot;</span></span><span>
-</span><span id="line-33"></span><span>    </span><span id="local-6989586621681196611"><span class="annot"><span class="annottext">Text
-</span><a href="#local-6989586621681196611"><span class="hs-identifier hs-var">apiErrorMessage</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681196614"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Text
+</span><span id="line-33"></span><span>    </span><span id="local-6989586621681196618"><span class="annot"><span class="annottext">Text
+</span><a href="#local-6989586621681196618"><span class="hs-identifier hs-var">apiErrorMessage</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681196621"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Text
 forall a. FromJSON a =&gt; Object -&gt; Key -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.:</span></a></span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;message&quot;</span></span><span>
-</span><span id="line-34"></span><span>    </span><span id="local-6989586621681196610"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621681196610"><span class="hs-identifier hs-var">apiErrorCode</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
-</span><a href="#local-6989586621681196614"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Int
+</span><span id="line-34"></span><span>    </span><span id="local-6989586621681196617"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621681196617"><span class="hs-identifier hs-var">apiErrorCode</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Object
+</span><a href="#local-6989586621681196621"><span class="hs-identifier hs-var">o</span></a></span><span> </span><span class="annot"><span class="annottext">Object -&gt; Key -&gt; Parser Int
 forall a. FromJSON a =&gt; Object -&gt; Key -&gt; Parser a
 </span><a href="../../../../aeson/html/src"><span class="hs-operator hs-var">.:</span></a></span><span> </span><span class="annot"><span class="annottext">Key
 </span><span class="hs-string">&quot;status_code&quot;</span></span><span>
@@ -128,5 +128,5 @@ apiError :: Text
 apiErrorCode :: Int
 apiErrorMessage :: Text
 apiError :: Text
-</span><a href="#local-6989586621681196610"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span><span class="hs-special">}</span><span>
+</span><a href="#local-6989586621681196617"><span class="hs-glyph hs-var hs-var hs-var hs-var hs-var hs-var">..</span></a></span><span class="hs-special">}</span><span>
 </span><span id="line-36"></span></pre></body></html>

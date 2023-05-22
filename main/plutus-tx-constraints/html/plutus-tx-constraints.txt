@@ -847,18 +847,18 @@ data SomeLookupsAndConstraints
 --   it can be submitted to the ledger. See note [Submitting transactions
 --   from Plutus contracts] in <a>Wallet</a>.
 data UnbalancedTx
-UnbalancedCardanoTx :: CardanoBuildTx -> Map TxOutRef TxOut -> UnbalancedTx
+UnbalancedCardanoTx :: CardanoBuildTx -> UtxoIndex -> UnbalancedTx
 [unBalancedCardanoBuildTx] :: UnbalancedTx -> CardanoBuildTx
 
 -- | Utxo lookups that are used for adding inputs to the
 --   <a>UnbalancedTx</a>. Simply refers to <a>slTxOutputs</a> of
 --   <a>ScriptLookups</a>.
-[unBalancedTxUtxoIndex] :: UnbalancedTx -> Map TxOutRef TxOut
+[unBalancedTxUtxoIndex] :: UnbalancedTx -> UtxoIndex
 tx :: Traversal' UnbalancedTx CardanoBuildTx
 txInsCollateral :: Lens' CardanoBuildTx [TxIn]
 txValidityRange :: Lens' CardanoBuildTx (TxValidityLowerBound BabbageEra, TxValidityUpperBound BabbageEra)
-txOuts :: Lens' CardanoBuildTx [TxOut CtxTx BabbageEra]
-utxoIndex :: Lens' UnbalancedTx (Map TxOutRef TxOut)
+txOuts :: Lens' CardanoBuildTx [TxOut]
+utxoIndex :: Lens' UnbalancedTx UtxoIndex
 emptyUnbalancedTx :: Params -> UnbalancedTx
 
 -- | Each transaction output should contain a minimum amount of Ada (this
@@ -897,20 +897,20 @@ NoMatchingOutputFound :: ValidatorHash -> MkTxError
 MultipleMatchingOutputsFound :: ValidatorHash -> MkTxError
 AmbiguousRedeemer :: TxOutRef -> [Redeemer] -> MkTxError
 AmbiguousReferenceScript :: TxOutRef -> [TxOutRef] -> MkTxError
-_TypeCheckFailed :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ConnectionError
-_ToCardanoError :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ToCardanoError
-_TxOutRefNotFound :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl TxOutRef
-_TxOutRefWrongType :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl TxOutRef
-_TxOutRefNoReferenceScript :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl TxOutRef
-_DatumNotFound :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl DatumHash
-_DeclaredInputMismatch :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl Value
-_MintingPolicyNotFound :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl MintingPolicyHash
-_ScriptHashNotFound :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ScriptHash
-_TypedValidatorMissing :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ()
-_DatumWrongHash :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl (DatumHash, Datum)
-_CannotSatisfyAny :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ()
-_NoMatchingOutputFound :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ValidatorHash
-_MultipleMatchingOutputsFound :: AsMkTxError r_a1Bkl => Prism' r_a1Bkl ValidatorHash
+_TypeCheckFailed :: AsMkTxError r_a1BsI => Prism' r_a1BsI ConnectionError
+_ToCardanoError :: AsMkTxError r_a1BsI => Prism' r_a1BsI ToCardanoError
+_TxOutRefNotFound :: AsMkTxError r_a1BsI => Prism' r_a1BsI TxOutRef
+_TxOutRefWrongType :: AsMkTxError r_a1BsI => Prism' r_a1BsI TxOutRef
+_TxOutRefNoReferenceScript :: AsMkTxError r_a1BsI => Prism' r_a1BsI TxOutRef
+_DatumNotFound :: AsMkTxError r_a1BsI => Prism' r_a1BsI DatumHash
+_DeclaredInputMismatch :: AsMkTxError r_a1BsI => Prism' r_a1BsI Value
+_MintingPolicyNotFound :: AsMkTxError r_a1BsI => Prism' r_a1BsI MintingPolicyHash
+_ScriptHashNotFound :: AsMkTxError r_a1BsI => Prism' r_a1BsI ScriptHash
+_TypedValidatorMissing :: AsMkTxError r_a1BsI => Prism' r_a1BsI ()
+_DatumWrongHash :: AsMkTxError r_a1BsI => Prism' r_a1BsI (DatumHash, Datum)
+_CannotSatisfyAny :: AsMkTxError r_a1BsI => Prism' r_a1BsI ()
+_NoMatchingOutputFound :: AsMkTxError r_a1BsI => Prism' r_a1BsI ValidatorHash
+_MultipleMatchingOutputsFound :: AsMkTxError r_a1BsI => Prism' r_a1BsI ValidatorHash
 
 -- | The balances we track for computing the missing <a>Value</a> (if any)
 --   that needs to be added to the transaction. See note [Balance of value
@@ -1537,13 +1537,13 @@ isSatisfiable :: forall i o. TxConstraints i o -> Bool
 --   it can be submitted to the ledger. See note [Submitting transactions
 --   from Plutus contracts] in <a>Wallet</a>.
 data UnbalancedTx
-UnbalancedCardanoTx :: CardanoBuildTx -> Map TxOutRef TxOut -> UnbalancedTx
+UnbalancedCardanoTx :: CardanoBuildTx -> UtxoIndex -> UnbalancedTx
 [unBalancedCardanoBuildTx] :: UnbalancedTx -> CardanoBuildTx
 
 -- | Utxo lookups that are used for adding inputs to the
 --   <a>UnbalancedTx</a>. Simply refers to <a>slTxOutputs</a> of
 --   <a>ScriptLookups</a>.
-[unBalancedTxUtxoIndex] :: UnbalancedTx -> Map TxOutRef TxOut
+[unBalancedTxUtxoIndex] :: UnbalancedTx -> UtxoIndex
 data MkTxError
 TypeCheckFailed :: ConnectionError -> MkTxError
 ToCardanoError :: ToCardanoError -> MkTxError

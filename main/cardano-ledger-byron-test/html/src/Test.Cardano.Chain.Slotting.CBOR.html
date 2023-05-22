@@ -68,11 +68,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">SlotNumber
-</span><a href="#local-6989586621679484482"><span class="hs-identifier hs-var">fsi</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679484715"><span class="hs-identifier hs-var">fsi</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/slotting/SlotNumber&quot;</span></span><span>
 </span><span id="line-44"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-45"></span><span>    </span><span id="local-6989586621679484482"><span class="annot"><span class="annottext">fsi :: SlotNumber
-</span><a href="#local-6989586621679484482"><span class="hs-identifier hs-var hs-var">fsi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SlotNumber
+</span><span id="line-45"></span><span>    </span><span id="local-6989586621679484715"><span class="annot"><span class="annottext">fsi :: SlotNumber
+</span><a href="#local-6989586621679484715"><span class="hs-identifier hs-var hs-var">fsi</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SlotNumber
 </span><span class="hs-number">5001</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">SlotNumber</span></a></span><span>
 </span><span id="line-46"></span><span>
 </span><span id="line-47"></span><span class="annot"><a href="Test.Cardano.Chain.Slotting.CBOR.html#ts_roundTripSlotNumberCBOR"><span class="hs-identifier hs-type">ts_roundTripSlotNumberCBOR</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Test.Options.html#TSProperty"><span class="hs-identifier hs-type">TSProperty</span></a></span><span>
@@ -101,11 +101,11 @@ forall a.
 (FromCBOR a, ToCBOR a, Eq a, Show a, HasCallStack) =&gt;
 a -&gt; FilePath -&gt; Property
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">goldenTestCBOR</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679484479"><span class="hs-identifier hs-var">sc</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679484712"><span class="hs-identifier hs-var">sc</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
 </span><span class="hs-string">&quot;test/golden/cbor/slotting/EpochSlots&quot;</span></span><span>
 </span><span id="line-55"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-56"></span><span>    </span><span id="local-6989586621679484479"><span class="annot"><span class="annottext">sc :: EpochSlots
-</span><a href="#local-6989586621679484479"><span class="hs-identifier hs-var hs-var">sc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; EpochSlots
+</span><span id="line-56"></span><span>    </span><span id="local-6989586621679484712"><span class="annot"><span class="annottext">sc :: EpochSlots
+</span><a href="#local-6989586621679484712"><span class="hs-identifier hs-var hs-var">sc</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; EpochSlots
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">EpochSlots</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
 </span><span class="hs-number">474747</span></span><span>
 </span><span id="line-57"></span><span>
@@ -152,22 +152,22 @@ forall a.
 TestLimit -&gt; Gen a -&gt; (a -&gt; PropertyT IO ()) -&gt; TSProperty
 </span><a href="Test.Options.html#eachOfTS"><span class="hs-identifier hs-var">eachOfTS</span></a></span><span> </span><span class="annot"><span class="annottext">TestLimit
 </span><span class="hs-number">1000</span></span><span> </span><span class="annot"><span class="annottext">Gen EpochAndSlotCount
-</span><a href="#local-6989586621679484474"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="annot"><span class="annottext">EpochAndSlotCount -&gt; PropertyT IO ()
+</span><a href="#local-6989586621679484707"><span class="hs-identifier hs-var">gen</span></a></span><span> </span><span class="annot"><span class="annottext">EpochAndSlotCount -&gt; PropertyT IO ()
 forall a (m :: * -&gt; *).
 (FromCBOR a, ToCBOR a, Eq a, MonadTest m, Buildable a,
  HasCallStack) =&gt;
 a -&gt; m ()
 </span><a href="../../../../cardano-binary-test/html/src"><span class="hs-identifier hs-var">roundTripsCBORBuildable</span></a></span><span>
 </span><span id="line-72"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-73"></span><span>    </span><span id="local-6989586621679484474"><span class="annot"><span class="annottext">gen :: Gen EpochAndSlotCount
-</span><a href="#local-6989586621679484474"><span class="hs-identifier hs-var hs-var">gen</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ProtocolMagicId -&gt; EpochSlots -&gt; Gen EpochAndSlotCount)
+</span><span id="line-73"></span><span>    </span><span id="local-6989586621679484707"><span class="annot"><span class="annottext">gen :: Gen EpochAndSlotCount
+</span><a href="#local-6989586621679484707"><span class="hs-identifier hs-var hs-var">gen</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(ProtocolMagicId -&gt; EpochSlots -&gt; Gen EpochAndSlotCount)
 -&gt; Gen EpochAndSlotCount
 forall a. (ProtocolMagicId -&gt; EpochSlots -&gt; Gen a) -&gt; Gen a
-</span><a href="Test.Cardano.Chain.Slotting.Gen.html#feedPMEpochSlots"><span class="hs-identifier hs-var">feedPMEpochSlots</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679484473"><span class="annot"><span class="annottext">ProtocolMagicId
-</span><a href="#local-6989586621679484473"><span class="hs-identifier hs-var">_pm</span></a></span></span><span> </span><span id="local-6989586621679484472"><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679484472"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">EpochSlots -&gt; Gen EpochAndSlotCount
+</span><a href="Test.Cardano.Chain.Slotting.Gen.html#feedPMEpochSlots"><span class="hs-identifier hs-var">feedPMEpochSlots</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679484706"><span class="annot"><span class="annottext">ProtocolMagicId
+</span><a href="#local-6989586621679484706"><span class="hs-identifier hs-var">_pm</span></a></span></span><span> </span><span id="local-6989586621679484705"><span class="annot"><span class="annottext">EpochSlots
+</span><a href="#local-6989586621679484705"><span class="hs-identifier hs-var">es</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">EpochSlots -&gt; Gen EpochAndSlotCount
 </span><a href="Test.Cardano.Chain.Slotting.Gen.html#genEpochAndSlotCount"><span class="hs-identifier hs-var">genEpochAndSlotCount</span></a></span><span> </span><span class="annot"><span class="annottext">EpochSlots
-</span><a href="#local-6989586621679484472"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679484705"><span class="hs-identifier hs-var">es</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-74"></span><span>
 </span><span id="line-75"></span><span class="hs-comment">--------------------------------------------------------------------------------</span><span>
 </span><span id="line-76"></span><span class="hs-comment">-- Main test export</span><span>

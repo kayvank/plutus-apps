@@ -40,7 +40,7 @@
 </span><span id="line-40"></span><span>
 </span><span id="line-41"></span><span class="hs-comment">-- | Context for integration tests.</span><span>
 </span><span id="line-42"></span><span class="hs-comment">--</span><span>
-</span><span id="line-43"></span><span id="local-6989586621682936547"><span id="local-6989586621682936548"></span></span><span class="hs-keyword">data</span><span> </span><span id="Context"><span class="annot"><a href="Test.Integration.Framework.Context.html#Context"><span class="hs-identifier hs-var">Context</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Context"><span class="annot"><a href="Test.Integration.Framework.Context.html#Context"><span class="hs-identifier hs-var">Context</span></a></span></span><span>
+</span><span id="line-43"></span><span id="local-6989586621682936832"><span id="local-6989586621682936833"></span></span><span class="hs-keyword">data</span><span> </span><span id="Context"><span class="annot"><a href="Test.Integration.Framework.Context.html#Context"><span class="hs-identifier hs-var">Context</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Context"><span class="annot"><a href="Test.Integration.Framework.Context.html#Context"><span class="hs-identifier hs-var">Context</span></a></span></span><span>
 </span><span id="line-44"></span><span>    </span><span class="hs-special">{</span><span> </span><span id="_cleanup"><span class="annot"><span class="annottext">Context -&gt; IO ()
 </span><a href="Test.Integration.Framework.Context.html#_cleanup"><span class="hs-identifier hs-var hs-var">_cleanup</span></a></span></span><span>
 </span><span id="line-45"></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
@@ -112,7 +112,7 @@ $cfrom :: forall x. Context -&gt; Rep Context x
 </span><span id="line-91"></span><span>        </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><a href="../../../../cardano-wallet-core/html/src"><span class="hs-identifier hs-type">PoolRetirementCertificate</span></a></span><span class="hs-special">]</span><span>
 </span><span id="line-92"></span><span>        </span><span class="hs-comment">-- ^ The pools that were removed from the database.</span><span>
 </span><span id="line-93"></span><span>    </span><span class="hs-special">}</span><span>
-</span><span id="line-94"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682936525"><span id="local-6989586621682936527"><span class="annot"><span class="annottext">PoolGarbageCollectionEvent -&gt; PoolGarbageCollectionEvent -&gt; Bool
+</span><span id="line-94"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621682936810"><span id="local-6989586621682936812"><span class="annot"><span class="annottext">PoolGarbageCollectionEvent -&gt; PoolGarbageCollectionEvent -&gt; Bool
 (PoolGarbageCollectionEvent -&gt; PoolGarbageCollectionEvent -&gt; Bool)
 -&gt; (PoolGarbageCollectionEvent
     -&gt; PoolGarbageCollectionEvent -&gt; Bool)
@@ -122,7 +122,7 @@ forall a. (a -&gt; a -&gt; Bool) -&gt; (a -&gt; a -&gt; Bool) -&gt; Eq a
 $c/= :: PoolGarbageCollectionEvent -&gt; PoolGarbageCollectionEvent -&gt; Bool
 == :: PoolGarbageCollectionEvent -&gt; PoolGarbageCollectionEvent -&gt; Bool
 $c== :: PoolGarbageCollectionEvent -&gt; PoolGarbageCollectionEvent -&gt; Bool
-</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682936518"><span id="local-6989586621682936520"><span id="local-6989586621682936522"><span class="annot"><span class="annottext">Int -&gt; PoolGarbageCollectionEvent -&gt; ShowS
+</span><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Eq</span></a></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621682936803"><span id="local-6989586621682936805"><span id="local-6989586621682936807"><span class="annot"><span class="annottext">Int -&gt; PoolGarbageCollectionEvent -&gt; ShowS
 [PoolGarbageCollectionEvent] -&gt; ShowS
 PoolGarbageCollectionEvent -&gt; String
 (Int -&gt; PoolGarbageCollectionEvent -&gt; ShowS)
@@ -153,7 +153,7 @@ $cshowsPrec :: Int -&gt; PoolGarbageCollectionEvent -&gt; ShowS
 </span><a href="Test.Integration.Framework.Context.html#nChanges"><span class="hs-identifier hs-var hs-var">nChanges</span></a></span></span><span>
 </span><span id="line-105"></span><span>            </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">Int</span></a></span><span>
 </span><span id="line-106"></span><span>        </span><span class="hs-special">}</span><span>
-</span><span id="line-107"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621682936506"><span id="local-6989586621682936508"><span id="local-6989586621682936510"><span class="annot"><span class="annottext">Int -&gt; TxDescription -&gt; ShowS
+</span><span id="line-107"></span><span>    </span><span class="hs-keyword">deriving</span><span> </span><span id="local-6989586621682936791"><span id="local-6989586621682936793"><span id="local-6989586621682936795"><span class="annot"><span class="annottext">Int -&gt; TxDescription -&gt; ShowS
 [TxDescription] -&gt; ShowS
 TxDescription -&gt; String
 (Int -&gt; TxDescription -&gt; ShowS)

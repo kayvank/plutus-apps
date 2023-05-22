@@ -114,31 +114,31 @@ forall a. Testable a =&gt; TestName -&gt; a -&gt; TestTree
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span>
 </span><span id="line-110"></span><span>  </span><span class="hs-keyword">do</span><span>
-</span><span id="line-111"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679802162"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802162"><span class="hs-identifier hs-var">byronVKey</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679802161"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679802161"><span class="hs-identifier hs-var">byronAddr</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen (VerificationKey, Address)
+</span><span id="line-111"></span><span>    </span><span class="hs-special">(</span><span id="local-6989586621679802391"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679802391"><span class="hs-identifier hs-var">byronVKey</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679802390"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679802390"><span class="hs-identifier hs-var">byronAddr</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen (VerificationKey, Address)
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronVKeyAddr"><span class="hs-identifier hs-var">genByronVKeyAddr</span></a></span><span>
-</span><span id="line-112"></span><span>    </span><span id="local-6989586621679802159"><span class="annot"><span class="annottext">SignedDSIGN Ed25519DSIGN (Hash Blake2b_256 EraIndependentTxBody)
-</span><a href="#local-6989586621679802159"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen
+</span><span id="line-112"></span><span>    </span><span id="local-6989586621679802388"><span class="annot"><span class="annottext">SignedDSIGN Ed25519DSIGN (Hash Blake2b_256 EraIndependentTxBody)
+</span><a href="#local-6989586621679802388"><span class="hs-identifier hs-var">sig</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen
   (SignedDSIGN Ed25519DSIGN (Hash Blake2b_256 EraIndependentTxBody))
 forall a b. DSIGNAlgorithm a =&gt; Gen (SignedDSIGN a b)
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genSignature"><span class="hs-identifier hs-var">genSignature</span></a></span><span>
-</span><span id="line-113"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679802158"><span class="annot"><span class="annottext">addr :: BootstrapAddress C_crypto
-</span><a href="#local-6989586621679802158"><span class="hs-identifier hs-var hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Address -&gt; BootstrapAddress C_crypto
+</span><span id="line-113"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679802387"><span class="annot"><span class="annottext">addr :: BootstrapAddress C_crypto
+</span><a href="#local-6989586621679802387"><span class="hs-identifier hs-var hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Address -&gt; BootstrapAddress C_crypto
 forall crypto. Address -&gt; BootstrapAddress crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">BootstrapAddress</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679802161"><span class="hs-identifier hs-var">byronAddr</span></a></span><span>
-</span><span id="line-114"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621679802156"><span class="annot"><span class="annottext">VKey 'Witness C_crypto
-</span><a href="#local-6989586621679802156"><span class="hs-identifier hs-var">shelleyVKey</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679802155"><span class="annot"><span class="annottext">ChainCode
-</span><a href="#local-6989586621679802155"><span class="hs-identifier hs-var">chainCode</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; (VKey 'Witness C_crypto, ChainCode)
+</span><a href="#local-6989586621679802390"><span class="hs-identifier hs-var">byronAddr</span></a></span><span>
+</span><span id="line-114"></span><span>        </span><span class="hs-special">(</span><span id="local-6989586621679802385"><span class="annot"><span class="annottext">VKey 'Witness C_crypto
+</span><a href="#local-6989586621679802385"><span class="hs-identifier hs-var">shelleyVKey</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679802384"><span class="annot"><span class="annottext">ChainCode
+</span><a href="#local-6989586621679802384"><span class="hs-identifier hs-var">chainCode</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; (VKey 'Witness C_crypto, ChainCode)
 forall crypto.
 (DSIGN crypto ~ Ed25519DSIGN) =&gt;
 VerificationKey -&gt; (VKey 'Witness crypto, ChainCode)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">unpackByronVKey</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#C_crypto"><span class="hs-identifier hs-type">C_crypto</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802162"><span class="hs-identifier hs-var">byronVKey</span></a></span><span>
-</span><span id="line-115"></span><span>        </span><span class="annot"><a href="#local-6989586621679802153"><span class="hs-identifier hs-type">witness</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">BootstrapWitness</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#C_crypto"><span class="hs-identifier hs-type">C_crypto</span></a></span><span>
-</span><span id="line-116"></span><span>        </span><span id="local-6989586621679802153"><span class="annot"><span class="annottext">witness :: BootstrapWitness C_crypto
-</span><a href="#local-6989586621679802153"><span class="hs-identifier hs-var hs-var">witness</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679802391"><span class="hs-identifier hs-var">byronVKey</span></a></span><span>
+</span><span id="line-115"></span><span>        </span><span class="annot"><a href="#local-6989586621679802382"><span class="hs-identifier hs-type">witness</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">BootstrapWitness</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#C_crypto"><span class="hs-identifier hs-type">C_crypto</span></a></span><span>
+</span><span id="line-116"></span><span>        </span><span id="local-6989586621679802382"><span class="annot"><span class="annottext">witness :: BootstrapWitness C_crypto
+</span><a href="#local-6989586621679802382"><span class="hs-identifier hs-var hs-var">witness</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-117"></span><span>          </span><span class="annot"><span class="annottext">BootstrapWitness :: forall crypto.
 Crypto crypto =&gt;
 VKey 'Witness crypto
@@ -149,14 +149,14 @@ VKey 'Witness crypto
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-type">BootstrapWitness</span></a></span><span>
 </span><span id="line-118"></span><span>            </span><span class="hs-special">{</span><span> </span><span class="annot"><span class="annottext">bwKey :: VKey 'Witness C_crypto
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">bwKey</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VKey 'Witness C_crypto
-</span><a href="#local-6989586621679802156"><span class="hs-identifier hs-var">shelleyVKey</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679802385"><span class="hs-identifier hs-var">shelleyVKey</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-119"></span><span>              </span><span class="annot"><span class="annottext">bwChainCode :: ChainCode
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">bwChainCode</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ChainCode
-</span><a href="#local-6989586621679802155"><span class="hs-identifier hs-var">chainCode</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679802384"><span class="hs-identifier hs-var">chainCode</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-120"></span><span>              </span><span class="annot"><span class="annottext">bwSig :: SignedDSIGN C_crypto (Hash C_crypto EraIndependentTxBody)
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">bwSig</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SignedDSIGN Ed25519DSIGN (Hash Blake2b_256 EraIndependentTxBody)
 SignedDSIGN C_crypto (Hash C_crypto EraIndependentTxBody)
-</span><a href="#local-6989586621679802159"><span class="hs-identifier hs-var">sig</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679802388"><span class="hs-identifier hs-var">sig</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-121"></span><span>              </span><span class="annot"><span class="annottext">bwAttributes :: ByteString
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">bwAttributes</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Attributes AddrAttributes -&gt; ByteString
 forall a. ToCBOR a =&gt; a -&gt; ByteString
@@ -165,7 +165,7 @@ forall a. ToCBOR a =&gt; a -&gt; ByteString
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">Address -&gt; Attributes AddrAttributes
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var hs-var">Byron.addrAttributes</span></a></span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679802161"><span class="hs-identifier hs-var">byronAddr</span></a></span><span>
+</span><a href="#local-6989586621679802390"><span class="hs-identifier hs-var">byronAddr</span></a></span><span>
 </span><span id="line-122"></span><span>            </span><span class="hs-special">}</span><span>
 </span><span id="line-123"></span><span>    </span><span class="annot"><span class="annottext">Property -&gt; Gen Property
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
@@ -185,7 +185,7 @@ forall crypto.
 Crypto crypto =&gt;
 BootstrapAddress crypto -&gt; KeyHash 'Payment crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">bootstrapKeyHash</span></a></span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#C_crypto"><span class="hs-identifier hs-type">C_crypto</span></a></span><span> </span><span class="annot"><span class="annottext">BootstrapAddress C_crypto
-</span><a href="#local-6989586621679802158"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679802387"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-125"></span><span>        </span><span class="annot"><span class="annottext">KeyHash 'Witness C_crypto -&gt; KeyHash 'Witness C_crypto -&gt; Property
 forall a. (Eq a, Show a) =&gt; a -&gt; a -&gt; Property
 </span><a href="../../../../QuickCheck/html/src"><span class="hs-operator hs-var">===</span></a></span><span> </span><span class="annot"><span class="annottext">BootstrapWitness C_crypto -&gt; KeyHash 'Witness C_crypto
@@ -193,9 +193,9 @@ forall crypto.
 Crypto crypto =&gt;
 BootstrapWitness crypto -&gt; KeyHash 'Witness crypto
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">bootstrapWitKeyHash</span></a></span><span> </span><span class="annot"><span class="annottext">BootstrapWitness C_crypto
-</span><a href="#local-6989586621679802153"><span class="hs-identifier hs-var">witness</span></a></span><span>
+</span><a href="#local-6989586621679802382"><span class="hs-identifier hs-var">witness</span></a></span><span>
 </span><span id="line-126"></span><span>
-</span><span id="line-127"></span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genSignature"><span class="hs-identifier hs-type">genSignature</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679802382"><span class="annot"><a href="#local-6989586621679802382"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span id="local-6989586621679802380"><span class="annot"><a href="#local-6989586621679802380"><span class="hs-identifier hs-type">b</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">DSIGN.DSIGNAlgorithm</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802382"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">DSIGN.SignedDSIGN</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802382"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802380"><span class="hs-identifier hs-type">b</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-127"></span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genSignature"><span class="hs-identifier hs-type">genSignature</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-keyword">forall</span><span> </span><span id="local-6989586621679802611"><span class="annot"><a href="#local-6989586621679802611"><span class="hs-identifier hs-type">a</span></a></span></span><span> </span><span id="local-6989586621679802609"><span class="annot"><a href="#local-6989586621679802609"><span class="hs-identifier hs-type">b</span></a></span></span><span class="hs-operator">.</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">DSIGN.DSIGNAlgorithm</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802611"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="hs-glyph">=&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-type">DSIGN.SignedDSIGN</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802611"><span class="hs-identifier hs-type">a</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802609"><span class="hs-identifier hs-type">b</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-128"></span><span id="genSignature"><span class="annot"><span class="annottext">genSignature :: Gen (SignedDSIGN a b)
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genSignature"><span class="hs-identifier hs-var hs-var">genSignature</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-129"></span><span>  </span><span class="annot"><span class="annottext">SigDSIGN a -&gt; SignedDSIGN a b
@@ -233,9 +233,9 @@ forall a b. (Integral a, Num b) =&gt; a -&gt; b
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">[a] -&gt; Word
 forall v (proxy :: * -&gt; *). DSIGNAlgorithm v =&gt; proxy v -&gt; Word
-</span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.sizeSigDSIGN</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679802382"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
+</span><a href="../../../../cardano-crypto-class/html/src"><span class="hs-identifier hs-var">DSIGN.sizeSigDSIGN</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">@</span><span class="annot"><a href="#local-6989586621679802611"><span class="hs-identifier hs-type">a</span></a></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
 </span><span id="line-133"></span><span>
-</span><span id="line-134"></span><span id="local-6989586621679802138"><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genBootstrapAddress"><span class="hs-identifier hs-type">genBootstrapAddress</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">BootstrapAddress</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802138"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span><span>
+</span><span id="line-134"></span><span id="local-6989586621679802367"><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genBootstrapAddress"><span class="hs-identifier hs-type">genBootstrapAddress</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">BootstrapAddress</span></a></span><span> </span><span class="annot"><a href="#local-6989586621679802367"><span class="hs-identifier hs-type">crypto</span></a></span><span class="hs-special">)</span></span><span>
 </span><span id="line-135"></span><span id="genBootstrapAddress"><span class="annot"><span class="annottext">genBootstrapAddress :: Gen (BootstrapAddress crypto)
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genBootstrapAddress"><span class="hs-identifier hs-var hs-var">genBootstrapAddress</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Address -&gt; BootstrapAddress crypto
 forall crypto. Address -&gt; BootstrapAddress crypto
@@ -255,29 +255,29 @@ forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><span id="line-137"></span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronVKeyAddr"><span class="hs-identifier hs-type">genByronVKeyAddr</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">Byron.VerificationKey</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Byron.Address</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-138"></span><span id="genByronVKeyAddr"><span class="annot"><span class="annottext">genByronVKeyAddr :: Gen (VerificationKey, Address)
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronVKeyAddr"><span class="hs-identifier hs-var hs-var">genByronVKeyAddr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-139"></span><span>  </span><span id="local-6989586621679802137"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802137"><span class="hs-identifier hs-var">vkey</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen VerificationKey -&gt; Gen VerificationKey
+</span><span id="line-139"></span><span>  </span><span id="local-6989586621679802366"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679802366"><span class="hs-identifier hs-var">vkey</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Gen VerificationKey -&gt; Gen VerificationKey
 forall a. Gen a -&gt; Gen a
 </span><a href="../../../../hedgehog-quickcheck/html/src"><span class="hs-identifier hs-var">hedgehog</span></a></span><span> </span><span class="annot"><span class="annottext">Gen VerificationKey
 </span><a href="../../../../cardano-crypto-test/html/src"><span class="hs-identifier hs-var">Byron.genVerificationKey</span></a></span><span>
-</span><span id="line-140"></span><span>  </span><span id="local-6989586621679802135"><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679802135"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; Gen Address
+</span><span id="line-140"></span><span>  </span><span id="local-6989586621679802364"><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679802364"><span class="hs-identifier hs-var">addr</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; Gen Address
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronAddrFromVKey"><span class="hs-identifier hs-var">genByronAddrFromVKey</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802137"><span class="hs-identifier hs-var">vkey</span></a></span><span>
+</span><a href="#local-6989586621679802366"><span class="hs-identifier hs-var">vkey</span></a></span><span>
 </span><span id="line-141"></span><span>  </span><span class="annot"><span class="annottext">(VerificationKey, Address) -&gt; Gen (VerificationKey, Address)
 forall (f :: * -&gt; *) a. Applicative f =&gt; a -&gt; f a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">pure</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802137"><span class="hs-identifier hs-var">vkey</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Address
-</span><a href="#local-6989586621679802135"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
+</span><a href="#local-6989586621679802366"><span class="hs-identifier hs-var">vkey</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Address
+</span><a href="#local-6989586621679802364"><span class="hs-identifier hs-var">addr</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-142"></span><span>
 </span><span id="line-143"></span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronAddrFromVKey"><span class="hs-identifier hs-type">genByronAddrFromVKey</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-type">Byron.VerificationKey</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../QuickCheck/html/src"><span class="hs-identifier hs-type">Gen</span></a></span><span> </span><span class="annot"><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-type">Byron.Address</span></a></span><span>
 </span><span id="line-144"></span><span id="genByronAddrFromVKey"><span class="annot"><span class="annottext">genByronAddrFromVKey :: VerificationKey -&gt; Gen Address
-</span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronAddrFromVKey"><span class="hs-identifier hs-var hs-var">genByronAddrFromVKey</span></a></span></span><span> </span><span id="local-6989586621679802133"><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802133"><span class="hs-identifier hs-var">vkey</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#genByronAddrFromVKey"><span class="hs-identifier hs-var hs-var">genByronAddrFromVKey</span></a></span></span><span> </span><span id="local-6989586621679802362"><span class="annot"><span class="annottext">VerificationKey
+</span><a href="#local-6989586621679802362"><span class="hs-identifier hs-var">vkey</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-145"></span><span>  </span><span class="annot"><span class="annottext">AddrSpendingData -&gt; AddrAttributes -&gt; Address
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Byron.makeAddress</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">VerificationKey -&gt; AddrSpendingData
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Byron.VerKeyASD</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802133"><span class="hs-identifier hs-var">vkey</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(AddrAttributes -&gt; Address) -&gt; Gen AddrAttributes -&gt; Gen Address
+</span><a href="#local-6989586621679802362"><span class="hs-identifier hs-var">vkey</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(AddrAttributes -&gt; Address) -&gt; Gen AddrAttributes -&gt; Gen Address
 forall (f :: * -&gt; *) a b. Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">&lt;$&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Gen AddrAttributes -&gt; Gen AddrAttributes
 forall a. Gen a -&gt; Gen a
@@ -420,8 +420,8 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">[(TxIn C_crypto, TxOut C)] -&gt; Map (TxIn C_crypto) (TxOut C)
 forall k a. Ord k =&gt; [(k, a)] -&gt; Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.fromList</span></a></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">(TxIn C_crypto, TxOut C)
-</span><a href="#local-6989586621679802100"><span class="hs-identifier hs-var">bobResult</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TxIn C_crypto, TxOut C)
-</span><a href="#local-6989586621679802099"><span class="hs-identifier hs-var">aliceResult</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679802329"><span class="hs-identifier hs-var">bobResult</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">(TxIn C_crypto, TxOut C)
+</span><a href="#local-6989586621679802328"><span class="hs-identifier hs-var">aliceResult</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
 </span><span id="line-174"></span><span>      </span><span class="annot"><span class="annottext">_deposited :: Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_deposited</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Coin
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
@@ -462,8 +462,8 @@ forall a. Monoid a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span>
 </span><span id="line-178"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-179"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-180"></span><span>    </span><span id="local-6989586621679802097"><span class="annot"><span class="annottext">txid :: TxId C_crypto
-</span><a href="#local-6989586621679802097"><span class="hs-identifier hs-var hs-var">txid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SafeHash C_crypto EraIndependentTxBody -&gt; TxId C_crypto
+</span><span id="line-180"></span><span>    </span><span id="local-6989586621679802326"><span class="annot"><span class="annottext">txid :: TxId C_crypto
+</span><a href="#local-6989586621679802326"><span class="hs-identifier hs-var hs-var">txid</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SafeHash C_crypto EraIndependentTxBody -&gt; TxId C_crypto
 forall crypto. SafeHash crypto EraIndependentTxBody -&gt; TxId crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">TxId</span></a></span><span> </span><span class="annot"><span class="annottext">(SafeHash C_crypto EraIndependentTxBody -&gt; TxId C_crypto)
 -&gt; SafeHash C_crypto EraIndependentTxBody -&gt; TxId C_crypto
@@ -474,13 +474,13 @@ forall c i x.
 x -&gt; SafeHash c i
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">hashAnnotated</span></a></span><span> </span><span class="annot"><span class="annottext">TxBody C
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#txBody"><span class="hs-identifier hs-var">txBody</span></a></span><span>
-</span><span id="line-181"></span><span>    </span><span id="local-6989586621679802100"><span class="annot"><span class="annottext">bobResult :: (TxIn C_crypto, TxOut C)
-</span><a href="#local-6989586621679802100"><span class="hs-identifier hs-var hs-var">bobResult</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxId C_crypto -&gt; Integer -&gt; TxIn C_crypto
+</span><span id="line-181"></span><span>    </span><span id="local-6989586621679802329"><span class="annot"><span class="annottext">bobResult :: (TxIn C_crypto, TxOut C)
+</span><a href="#local-6989586621679802329"><span class="hs-identifier hs-var hs-var">bobResult</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxId C_crypto -&gt; Integer -&gt; TxIn C_crypto
 forall crypto.
 HasCallStack =&gt;
 TxId crypto -&gt; Integer -&gt; TxIn crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">mkTxInPartial</span></a></span><span> </span><span class="annot"><span class="annottext">TxId C_crypto
-</span><a href="#local-6989586621679802097"><span class="hs-identifier hs-var">txid</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679802326"><span class="hs-identifier hs-var">txid</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">0</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Addr (Crypto C) -&gt; Value C -&gt; TxOut C
 forall era.
 (Era era, Show (Value era), Compactible (Value era)) =&gt;
@@ -490,13 +490,13 @@ Addr C_crypto
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#bobAddr"><span class="hs-identifier hs-var">bobAddr</span></a></span><span> </span><span class="annot"><span class="annottext">Value C
 Coin
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#coinsToBob"><span class="hs-identifier hs-var">coinsToBob</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-182"></span><span>    </span><span id="local-6989586621679802099"><span class="annot"><span class="annottext">aliceResult :: (TxIn C_crypto, TxOut C)
-</span><a href="#local-6989586621679802099"><span class="hs-identifier hs-var hs-var">aliceResult</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxId C_crypto -&gt; Integer -&gt; TxIn C_crypto
+</span><span id="line-182"></span><span>    </span><span id="local-6989586621679802328"><span class="annot"><span class="annottext">aliceResult :: (TxIn C_crypto, TxOut C)
+</span><a href="#local-6989586621679802328"><span class="hs-identifier hs-var hs-var">aliceResult</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">TxId C_crypto -&gt; Integer -&gt; TxIn C_crypto
 forall crypto.
 HasCallStack =&gt;
 TxId crypto -&gt; Integer -&gt; TxIn crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">mkTxInPartial</span></a></span><span> </span><span class="annot"><span class="annottext">TxId C_crypto
-</span><a href="#local-6989586621679802097"><span class="hs-identifier hs-var">txid</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
+</span><a href="#local-6989586621679802326"><span class="hs-identifier hs-var">txid</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">1</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Addr (Crypto C) -&gt; Value C -&gt; TxOut C
 forall era.
 (Era era, Show (Value era), Compactible (Value era)) =&gt;
@@ -557,13 +557,13 @@ forall passPhrase seed.
 (ByteArrayAccess passPhrase, ByteArrayAccess seed) =&gt;
 seed -&gt; passPhrase -&gt; XPrv
 </span><a href="../../../../cardano-crypto/html/src"><span class="hs-identifier hs-var">Byron.generate</span></a></span><span> </span><span class="annot"><span class="annottext">ByteString
-</span><a href="#local-6989586621679802086"><span class="hs-identifier hs-var">seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
+</span><a href="#local-6989586621679802315"><span class="hs-identifier hs-var">seed</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">ByteString
 forall a. Monoid a =&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">mempty</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span class="hs-special">)</span><span>
 </span><span id="line-197"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-198"></span><span>    </span><span class="annot"><a href="#local-6989586621679802086"><span class="hs-identifier hs-type">seed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-comment">-- 32 bytes</span><span>
-</span><span id="line-199"></span><span>    </span><span id="local-6989586621679802086"><span class="annot"><span class="annottext">seed :: ByteString
-</span><a href="#local-6989586621679802086"><span class="hs-identifier hs-var hs-var">seed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
+</span><span id="line-198"></span><span>    </span><span class="annot"><a href="#local-6989586621679802315"><span class="hs-identifier hs-type">seed</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../bytestring/html/src"><span class="hs-identifier hs-type">ByteString</span></a></span><span> </span><span class="hs-comment">-- 32 bytes</span><span>
+</span><span id="line-199"></span><span>    </span><span id="local-6989586621679802315"><span class="annot"><span class="annottext">seed :: ByteString
+</span><a href="#local-6989586621679802315"><span class="hs-identifier hs-var hs-var">seed</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">ByteString
 </span><span class="hs-string">&quot;12345678901234567890123456789012&quot;</span></span><span>
 </span><span id="line-200"></span><span>
 </span><span id="line-201"></span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#aliceVKey"><span class="hs-identifier hs-type">aliceVKey</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">VKey</span></a></span><span> </span><span class="hs-special">'</span><span class="annot"><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-type">Witness</span></a></span><span> </span><span class="annot"><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#C_crypto"><span class="hs-identifier hs-type">C_crypto</span></a></span><span>
@@ -595,18 +595,18 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-205"></span><span id="aliceByronAddr"><span class="annot"><span class="annottext">aliceByronAddr :: Address
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#aliceByronAddr"><span class="hs-identifier hs-var hs-var">aliceByronAddr</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">AddrSpendingData -&gt; AddrAttributes -&gt; Address
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Byron.makeAddress</span></a></span><span> </span><span class="annot"><span class="annottext">AddrSpendingData
-</span><a href="#local-6989586621679802083"><span class="hs-identifier hs-var">asd</span></a></span><span> </span><span class="annot"><span class="annottext">AddrAttributes
-</span><a href="#local-6989586621679802082"><span class="hs-identifier hs-var">attrs</span></a></span><span>
+</span><a href="#local-6989586621679802312"><span class="hs-identifier hs-var">asd</span></a></span><span> </span><span class="annot"><span class="annottext">AddrAttributes
+</span><a href="#local-6989586621679802311"><span class="hs-identifier hs-var">attrs</span></a></span><span>
 </span><span id="line-206"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-207"></span><span>    </span><span id="local-6989586621679802083"><span class="annot"><span class="annottext">asd :: AddrSpendingData
-</span><a href="#local-6989586621679802083"><span class="hs-identifier hs-var hs-var">asd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; AddrSpendingData
+</span><span id="line-207"></span><span>    </span><span id="local-6989586621679802312"><span class="annot"><span class="annottext">asd :: AddrSpendingData
+</span><a href="#local-6989586621679802312"><span class="hs-identifier hs-var hs-var">asd</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">VerificationKey -&gt; AddrSpendingData
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Byron.VerKeyASD</span></a></span><span> </span><span class="annot"><span class="annottext">(VerificationKey -&gt; AddrSpendingData)
 -&gt; VerificationKey -&gt; AddrSpendingData
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">VerificationKey
-</span><a href="#local-6989586621679802081"><span class="hs-identifier hs-var">byronVerificationKey</span></a></span><span>
-</span><span id="line-208"></span><span>    </span><span id="local-6989586621679802082"><span class="annot"><span class="annottext">attrs :: AddrAttributes
-</span><a href="#local-6989586621679802082"><span class="hs-identifier hs-var hs-var">attrs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="#local-6989586621679802310"><span class="hs-identifier hs-var">byronVerificationKey</span></a></span><span>
+</span><span id="line-208"></span><span>    </span><span id="local-6989586621679802311"><span class="annot"><span class="annottext">attrs :: AddrAttributes
+</span><a href="#local-6989586621679802311"><span class="hs-identifier hs-var hs-var">attrs</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-209"></span><span>      </span><span class="annot"><span class="annottext">Maybe HDAddressPayload -&gt; NetworkMagic -&gt; AddrAttributes
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Byron.AddrAttributes</span></a></span><span>
 </span><span id="line-210"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">HDAddressPayload -&gt; Maybe HDAddressPayload
@@ -617,8 +617,8 @@ forall a. a -&gt; Maybe a
 </span><span id="line-211"></span><span>        </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Word32 -&gt; NetworkMagic
 </span><a href="../../../../cardano-ledger-byron/html/src"><span class="hs-identifier hs-var">Byron.NetworkTestnet</span></a></span><span> </span><span class="annot"><span class="annottext">Word32
 </span><span class="hs-number">0</span></span><span class="hs-special">)</span><span>
-</span><span id="line-212"></span><span>    </span><span id="local-6989586621679802081"><span class="annot"><span class="annottext">byronVerificationKey :: VerificationKey
-</span><a href="#local-6989586621679802081"><span class="hs-identifier hs-var hs-var">byronVerificationKey</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SigningKey -&gt; VerificationKey
+</span><span id="line-212"></span><span>    </span><span id="local-6989586621679802310"><span class="annot"><span class="annottext">byronVerificationKey :: VerificationKey
+</span><a href="#local-6989586621679802310"><span class="hs-identifier hs-var hs-var">byronVerificationKey</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">SigningKey -&gt; VerificationKey
 </span><a href="../../../../cardano-crypto-wrapper/html/src"><span class="hs-identifier hs-var">Byron.toVerification</span></a></span><span> </span><span class="annot"><span class="annottext">SigningKey
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#aliceSigningKey"><span class="hs-identifier hs-var">aliceSigningKey</span></a></span><span>
 </span><span id="line-213"></span><span>
@@ -707,12 +707,12 @@ forall (kr :: KeyRole) crypto.
 KeyHash kr crypto -&gt; Credential kr crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">KeyHashObj</span></a></span><span> </span><span class="annot"><span class="annottext">KeyHash 'Payment C_crypto
 forall (r' :: KeyRole). KeyHash r' C_crypto
-</span><a href="#local-6989586621679802070"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">StakeReference C_crypto
+</span><a href="#local-6989586621679802299"><span class="hs-identifier hs-var">k</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">StakeReference C_crypto
 forall crypto. StakeReference crypto
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">StakeRefNull</span></a></span><span>
 </span><span id="line-233"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-234"></span><span>    </span><span id="local-6989586621679802070"><span class="annot"><span class="annottext">k :: KeyHash r' C_crypto
-</span><a href="#local-6989586621679802070"><span class="hs-identifier hs-var hs-var">k</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash 'Witness C_crypto -&gt; KeyHash r' C_crypto
+</span><span id="line-234"></span><span>    </span><span id="local-6989586621679802299"><span class="annot"><span class="annottext">k :: KeyHash r' C_crypto
+</span><a href="#local-6989586621679802299"><span class="hs-identifier hs-var hs-var">k</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">KeyHash 'Witness C_crypto -&gt; KeyHash r' C_crypto
 forall (a :: KeyRole -&gt; * -&gt; *) (r :: KeyRole) crypto
        (r' :: KeyRole).
 HasKeyRole a =&gt;
@@ -777,7 +777,7 @@ Addr (Crypto era) -&gt; Value era -&gt; TxOut era
 Addr C_crypto
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#aliceAddr"><span class="hs-identifier hs-var">aliceAddr</span></a></span><span> </span><span class="annot"><span class="annottext">Value C
 Coin
-</span><a href="#local-6989586621679802064"><span class="hs-identifier hs-var">change</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679802293"><span class="hs-identifier hs-var">change</span></a></span><span class="hs-special">]</span><span class="hs-special">,</span><span>
 </span><span id="line-244"></span><span>      </span><span class="annot"><span class="annottext">_certs :: StrictSeq (DCert (Crypto C))
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_certs</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">[DCert C_crypto] -&gt; StrictSeq (DCert C_crypto)
 forall a. [a] -&gt; StrictSeq a
@@ -792,7 +792,7 @@ forall k a. Map k a
 </span><a href="../../../../containers/html/src"><span class="hs-identifier hs-var">Map.empty</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-246"></span><span>      </span><span class="annot"><span class="annottext">_txfee :: Coin
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_txfee</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621679802058"><span class="hs-identifier hs-var">fee</span></a></span><span class="hs-special">,</span><span>
+</span><a href="#local-6989586621679802287"><span class="hs-identifier hs-var">fee</span></a></span><span class="hs-special">,</span><span>
 </span><span id="line-247"></span><span>      </span><span class="annot"><span class="annottext">_ttl :: SlotNo
 </span><a href="../../../../cardano-ledger-shelley/html/src"><span class="hs-identifier hs-var">_ttl</span></a></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Word64 -&gt; SlotNo
 </span><a href="../../../../cardano-slotting/html/src"><span class="hs-identifier hs-var">SlotNo</span></a></span><span> </span><span class="annot"><span class="annottext">Word64
@@ -807,17 +807,17 @@ forall a. StrictMaybe a
 </span><a href="../../../../strict-containers/html/src"><span class="hs-identifier hs-var">SNothing</span></a></span><span>
 </span><span id="line-250"></span><span>    </span><span class="hs-special">}</span><span>
 </span><span id="line-251"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-252"></span><span>    </span><span id="local-6989586621679802064"><span class="annot"><span class="annottext">change :: Coin
-</span><a href="#local-6989586621679802064"><span class="hs-identifier hs-var hs-var">change</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Coin
+</span><span id="line-252"></span><span>    </span><span id="local-6989586621679802293"><span class="annot"><span class="annottext">change :: Coin
+</span><a href="#local-6989586621679802293"><span class="hs-identifier hs-var hs-var">change</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Coin
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#aliceInitCoin"><span class="hs-identifier hs-var">aliceInitCoin</span></a></span><span> </span><span class="annot"><span class="annottext">Coin -&gt; Coin -&gt; Coin
 forall t. Val t =&gt; t -&gt; t -&gt; t
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-operator hs-var">&lt;-&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Coin
 </span><a href="Test.Cardano.Ledger.Shelley.Address.Bootstrap.html#coinsToBob"><span class="hs-identifier hs-var">coinsToBob</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">Coin -&gt; Coin -&gt; Coin
 forall t. Val t =&gt; t -&gt; t -&gt; t
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-operator hs-var">&lt;-&gt;</span></a></span><span> </span><span class="annot"><span class="annottext">Coin
-</span><a href="#local-6989586621679802058"><span class="hs-identifier hs-var">fee</span></a></span><span>
-</span><span id="line-253"></span><span>    </span><span id="local-6989586621679802058"><span class="annot"><span class="annottext">fee :: Coin
-</span><a href="#local-6989586621679802058"><span class="hs-identifier hs-var hs-var">fee</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Coin
+</span><a href="#local-6989586621679802287"><span class="hs-identifier hs-var">fee</span></a></span><span>
+</span><span id="line-253"></span><span>    </span><span id="local-6989586621679802287"><span class="annot"><span class="annottext">fee :: Coin
+</span><a href="#local-6989586621679802287"><span class="hs-identifier hs-var hs-var">fee</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">Integer -&gt; Coin
 </span><a href="../../../../cardano-ledger-core/html/src"><span class="hs-identifier hs-var">Coin</span></a></span><span> </span><span class="annot"><span class="annottext">Integer
 </span><span class="hs-number">10</span></span><span>
 </span><span id="line-254"></span><span>

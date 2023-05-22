@@ -6,147 +6,7 @@
 --   
 --   A fast logging system for Haskell
 @package fast-logger
-@version 3.1.2
-
-module System.Log.FastLogger.LoggerSet
-
--- | A set of loggers. The number of loggers is the capabilities of GHC
---   RTS. You can specify it with "+RTS -N&lt;x&gt;". A buffer is prepared
---   for each capability.
-data LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using a file.
---   
---   Uses <tt>numCapabilties</tt> many buffers, which will result in log
---   output that is not ordered by time (see <a>newFileLoggerSetN</a>).
-newFileLoggerSet :: BufSize -> FilePath -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using a file, using only the given
---   number of capabilites.
---   
---   Giving <tt>mn = Just 1</tt> scales less well on multi-core machines,
---   but provides time-ordered output.
-newFileLoggerSetN :: BufSize -> Maybe Int -> FilePath -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using stdout.
-newStdoutLoggerSet :: BufSize -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using stdout, with the given number of
---   buffers (see <a>newFileLoggerSetN</a>).
-newStdoutLoggerSetN :: BufSize -> Maybe Int -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using stderr.
-newStderrLoggerSet :: BufSize -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using stderr, with the given number of
---   buffers (see <a>newFileLoggerSetN</a>).
-newStderrLoggerSetN :: BufSize -> Maybe Int -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a>. If <a>Nothing</a> is specified to the
---   second argument, stdout is used. Please note that the minimum
---   <a>BufSize</a> is 1.
-
--- | <i>Deprecated: Use newFileLoggerSet etc instead</i>
-newLoggerSet :: BufSize -> Maybe Int -> Maybe FilePath -> IO LoggerSet
-
--- | Creating a new <a>LoggerSet</a> using a FD.
-newFDLoggerSet :: BufSize -> Maybe Int -> Maybe FilePath -> FD -> IO LoggerSet
-
--- | Renewing the internal file information in <a>LoggerSet</a>. This does
---   nothing for stdout and stderr.
-renewLoggerSet :: LoggerSet -> IO ()
-
--- | Flushing the buffers, closing the internal file information and
---   freeing the buffers.
-rmLoggerSet :: LoggerSet -> IO ()
-
--- | Writing a log message to the corresponding buffer. If the buffer
---   becomes full, the log messages in the buffer are written to its
---   corresponding file, stdout, or stderr.
-pushLogStr :: LoggerSet -> LogStr -> IO ()
-
--- | Same as <a>pushLogStr</a> but also appends a newline.
-pushLogStrLn :: LoggerSet -> LogStr -> IO ()
-
--- | Flushing log messages in buffers. This function must be called
---   explicitly when the program is being terminated.
---   
---   Note: Since version 2.1.6, this function does not need to be
---   explicitly called, as every push includes an auto-debounced flush
---   courtesy of the auto-update package. Since version 2.2.2, this
---   function can be used to force flushing outside of the debounced flush
---   calls.
-flushLogStr :: LoggerSet -> IO ()
-
--- | Replacing the file path in <a>LoggerSet</a> and returning a new
---   <a>LoggerSet</a> and the old file path.
-replaceLoggerSet :: LoggerSet -> FilePath -> (LoggerSet, Maybe FilePath)
-
-
--- | The contents of this module can change at any time without warning.
-module System.Log.FastLogger.Internal
-type Buffer = Ptr Word8
-
--- | The type for buffer size of each core.
-type BufSize = Int
-
--- | The default buffer size (4,096 bytes).
-defaultBufSize :: BufSize
-getBuffer :: BufSize -> IO Buffer
-freeBuffer :: Buffer -> IO ()
-toBufIOWith :: Buffer -> BufSize -> (Buffer -> Int -> IO ()) -> Builder -> IO ()
-type FD = FD
-closeFD :: FD -> IO ()
-openFileFD :: FilePath -> IO FD
-getStderrFD :: IO FD
-getStdoutFD :: IO FD
-writeRawBufferPtr2FD :: IORef FD -> Ptr Word8 -> Int -> IO Int
-invalidFD :: FD
-isFDValid :: FD -> Bool
-
--- | <a>Builder</a>s denote sequences of bytes. They are <a>Monoid</a>s
---   where <a>mempty</a> is the zero-length sequence and <a>mappend</a> is
---   concatenation, which runs in <i>O(1)</i>.
-data Builder
-
--- | Log message builder. Use (<a>&lt;&gt;</a>) to append two LogStr in
---   O(1).
-data LogStr
-LogStr :: !Int -> Builder -> LogStr
-
--- | Obtaining the length of <a>LogStr</a>.
-logStrLength :: LogStr -> Int
-
--- | Converting <a>LogStr</a> to <a>ByteString</a>.
-fromLogStr :: LogStr -> ByteString
-
--- | Types that can be converted to a <a>LogStr</a>. Instances for types
---   from the <tt>text</tt> library use a UTF-8 encoding. Instances for
---   numerical types use a decimal encoding.
-class ToLogStr msg
-toLogStr :: ToLogStr msg => msg -> LogStr
-
--- | Identity of <a>mappend</a>
---   
---   <pre>
---   &gt;&gt;&gt; "Hello world" &lt;&gt; mempty
---   "Hello world"
---   </pre>
-mempty :: Monoid a => a
-
--- | An associative operation.
---   
---   <pre>
---   &gt;&gt;&gt; [1,2,3] &lt;&gt; [4,5,6]
---   [1,2,3,4,5,6]
---   </pre>
-(<>) :: Semigroup a => a -> a -> a
-infixr 6 <>
-newtype Logger
-Logger :: IORef LogStr -> Logger
-newLogger :: IO Logger
-pushLog :: IORef FD -> BufSize -> MVar Buffer -> Logger -> LogStr -> IO ()
-flushLog :: IORef FD -> BufSize -> MVar Buffer -> Logger -> IO ()
+@version 3.2.1
 
 module System.Log.FastLogger.Types
 type TimeFormat = ByteString
@@ -224,6 +84,80 @@ simpleTimeFormat :: TimeFormat
 -- | A simple time cache using format <tt>"%d-%b-%Y %T"</tt>
 simpleTimeFormat' :: TimeFormat
 
+module System.Log.FastLogger.LoggerSet
+
+-- | A set of loggers. The number of loggers is the capabilities of GHC
+--   RTS. You can specify it with "+RTS -N&lt;x&gt;". A buffer is prepared
+--   for each capability.
+data LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using a file.
+--   
+--   Uses <tt>numCapabilties</tt> many buffers, which will result in log
+--   output that is not ordered by time (see <a>newFileLoggerSetN</a>).
+newFileLoggerSet :: BufSize -> FilePath -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using a file, using only the given
+--   number of capabilites.
+--   
+--   Giving <tt>mn = Just 1</tt> scales less well on multi-core machines,
+--   but provides time-ordered output.
+newFileLoggerSetN :: BufSize -> Maybe Int -> FilePath -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using stdout.
+newStdoutLoggerSet :: BufSize -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using stdout, with the given number of
+--   buffers (see <a>newFileLoggerSetN</a>).
+newStdoutLoggerSetN :: BufSize -> Maybe Int -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using stderr.
+newStderrLoggerSet :: BufSize -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using stderr, with the given number of
+--   buffers (see <a>newFileLoggerSetN</a>).
+newStderrLoggerSetN :: BufSize -> Maybe Int -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a>. If <a>Nothing</a> is specified to the
+--   second argument, stdout is used. Please note that the minimum
+--   <a>BufSize</a> is 1.
+
+-- | <i>Deprecated: Use newFileLoggerSet etc instead</i>
+newLoggerSet :: BufSize -> Maybe Int -> Maybe FilePath -> IO LoggerSet
+
+-- | Creating a new <a>LoggerSet</a> using a FD.
+newFDLoggerSet :: BufSize -> Maybe Int -> Maybe FilePath -> FD -> IO LoggerSet
+
+-- | Renewing the internal file information in <a>LoggerSet</a>. This does
+--   nothing for stdout and stderr.
+renewLoggerSet :: LoggerSet -> IO ()
+
+-- | Flushing the buffers, closing the internal file information and
+--   freeing the buffers.
+rmLoggerSet :: LoggerSet -> IO ()
+
+-- | Writing a log message to the corresponding buffer. If the buffer
+--   becomes full, the log messages in the buffer are written to its
+--   corresponding file, stdout, or stderr.
+pushLogStr :: LoggerSet -> LogStr -> IO ()
+
+-- | Same as <a>pushLogStr</a> but also appends a newline.
+pushLogStrLn :: LoggerSet -> LogStr -> IO ()
+
+-- | Flushing log messages in buffers. This function must be called
+--   explicitly when the program is being terminated.
+--   
+--   Note: Since version 2.1.6, this function does not need to be
+--   explicitly called, as every push includes an auto-debounced flush
+--   courtesy of the auto-update package. Since version 2.2.2, this
+--   function can be used to force flushing outside of the debounced flush
+--   calls.
+flushLogStr :: LoggerSet -> IO ()
+
+-- | Replacing the file path in <a>LoggerSet</a> and returning a new
+--   <a>LoggerSet</a> and the old file path.
+replaceLoggerSet :: LoggerSet -> FilePath -> (LoggerSet, Maybe FilePath)
+
 
 -- | This module provides a fast logging system which scales on multicore
 --   environments (i.e. +RTS -N&lt;x&gt;).
@@ -261,8 +195,9 @@ data LogType' a
 newFastLogger :: LogType' v -> IO (v -> IO (), IO ())
 
 -- | Like <a>newFastLogger</a>, but creating a logger that uses only 1
---   capability. This scales less well on multi-core machines, but provides
---   time-ordered output.
+--   internal builder. This scales less on multi-core machines and consumes
+--   more memory because of an internal queue but provides time-ordered
+--   output.
 newFastLogger1 :: LogType' v -> IO (v -> IO (), IO ())
 
 -- | <a>bracket</a> version of <a>newFastLogger</a>
@@ -311,3 +246,90 @@ type BufSize = Int
 
 -- | The default buffer size (4,096 bytes).
 defaultBufSize :: BufSize
+
+
+-- | The contents of this module can change at any time without warning.
+module System.Log.FastLogger.Internal
+type Buffer = Ptr Word8
+
+-- | The type for buffer size of each core.
+type BufSize = Int
+
+-- | The default buffer size (4,096 bytes).
+defaultBufSize :: BufSize
+getBuffer :: BufSize -> IO Buffer
+freeBuffer :: Buffer -> IO ()
+toBufIOWith :: Buffer -> BufSize -> (Buffer -> Int -> IO ()) -> Builder -> IO ()
+type FD = FD
+closeFD :: FD -> IO ()
+openFileFD :: FilePath -> IO FD
+getStderrFD :: IO FD
+getStdoutFD :: IO FD
+writeRawBufferPtr2FD :: IORef FD -> Ptr Word8 -> Int -> IO Int
+invalidFD :: FD
+isFDValid :: FD -> Bool
+
+-- | <a>Builder</a>s denote sequences of bytes. They are <a>Monoid</a>s
+--   where <a>mempty</a> is the zero-length sequence and <a>mappend</a> is
+--   concatenation, which runs in <i>O(1)</i>.
+data Builder
+
+-- | Log message builder. Use (<a>&lt;&gt;</a>) to append two LogStr in
+--   O(1).
+data LogStr
+LogStr :: !Int -> Builder -> LogStr
+
+-- | Obtaining the length of <a>LogStr</a>.
+logStrLength :: LogStr -> Int
+
+-- | Converting <a>LogStr</a> to <a>ByteString</a>.
+fromLogStr :: LogStr -> ByteString
+
+-- | Types that can be converted to a <a>LogStr</a>. Instances for types
+--   from the <tt>text</tt> library use a UTF-8 encoding. Instances for
+--   numerical types use a decimal encoding.
+class ToLogStr msg
+toLogStr :: ToLogStr msg => msg -> LogStr
+
+-- | Identity of <a>mappend</a>
+--   
+--   <pre>
+--   &gt;&gt;&gt; "Hello world" &lt;&gt; mempty
+--   "Hello world"
+--   </pre>
+mempty :: Monoid a => a
+
+-- | An associative operation.
+--   
+--   <pre>
+--   &gt;&gt;&gt; [1,2,3] &lt;&gt; [4,5,6]
+--   [1,2,3,4,5,6]
+--   </pre>
+(<>) :: Semigroup a => a -> a -> a
+infixr 6 <>
+
+-- | A non-scale but time-ordered logger.
+data SingleLogger
+
+-- | Creating <a>SingleLogger</a>.
+newSingleLogger :: BufSize -> IORef FD -> IO SingleLogger
+
+-- | A scale but non-time-ordered logger.
+data MultiLogger
+
+-- | Creating <a>MultiLogger</a>. The first argument is the number of the
+--   internal builders.
+newMultiLogger :: Int -> BufSize -> IORef FD -> IO MultiLogger
+
+-- | Writting <a>LogStr</a> using a buffer in blocking mode. The size of
+--   <a>LogStr</a> must be smaller or equal to the size of buffer.
+writeLogStr :: Buffer -> IORef FD -> LogStr -> IO ()
+
+-- | Writting <a>LogStr</a> using a temporary buffer.
+writeBigLogStr :: IORef FD -> LogStr -> IO ()
+
+-- | A class for internal loggers.
+class Loggers a
+stopLoggers :: Loggers a => a -> IO ()
+pushLog :: Loggers a => a -> LogStr -> IO ()
+flushAllLog :: Loggers a => a -> IO ()

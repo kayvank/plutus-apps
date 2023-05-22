@@ -35,8 +35,8 @@
 </span><span id="line-35"></span><span class="hs-comment">-- handlers that will correctly clean up sub-processes.</span><span>
 </span><span id="line-36"></span><span class="annot"><a href="Cardano.Startup.POSIX.html#installSignalHandlers"><span class="hs-identifier hs-type">installSignalHandlers</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-37"></span><span id="installSignalHandlers"><span class="annot"><span class="annottext">installSignalHandlers :: IO () -&gt; IO ()
-</span><a href="Cardano.Startup.POSIX.html#installSignalHandlers"><span class="hs-identifier hs-var hs-var">installSignalHandlers</span></a></span></span><span> </span><span id="local-6989586621679097608"><span class="annot"><span class="annottext">IO ()
-</span><a href="#local-6989586621679097608"><span class="hs-identifier hs-var">notify</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO Handler -&gt; IO ()
+</span><a href="Cardano.Startup.POSIX.html#installSignalHandlers"><span class="hs-identifier hs-var hs-var">installSignalHandlers</span></a></span></span><span> </span><span id="local-6989586621679097776"><span class="annot"><span class="annottext">IO ()
+</span><a href="#local-6989586621679097776"><span class="hs-identifier hs-var">notify</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO Handler -&gt; IO ()
 forall (f :: * -&gt; *) a. Functor f =&gt; f a -&gt; f ()
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">void</span></a></span><span> </span><span class="annot"><span class="annottext">(IO Handler -&gt; IO ()) -&gt; IO Handler -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
@@ -44,17 +44,17 @@ forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span id="line-38"></span><span>    </span><span class="annot"><span class="annottext">Signal -&gt; Handler -&gt; Maybe SignalSet -&gt; IO Handler
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">installHandler</span></a></span><span> </span><span class="annot"><span class="annottext">Signal
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">softwareTermination</span></a></span><span> </span><span class="annot"><span class="annottext">Handler
-</span><a href="#local-6989586621679097607"><span class="hs-identifier hs-var">termHandler</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe SignalSet
+</span><a href="#local-6989586621679097775"><span class="hs-identifier hs-var">termHandler</span></a></span><span> </span><span class="annot"><span class="annottext">Maybe SignalSet
 forall a. Maybe a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-var">Nothing</span></a></span><span>
 </span><span id="line-39"></span><span>    </span><span class="hs-keyword">where</span><span>
-</span><span id="line-40"></span><span>        </span><span id="local-6989586621679097607"><span class="annot"><span class="annottext">termHandler :: Handler
-</span><a href="#local-6989586621679097607"><span class="hs-identifier hs-var hs-var">termHandler</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; Handler
+</span><span id="line-40"></span><span>        </span><span id="local-6989586621679097775"><span class="annot"><span class="annottext">termHandler :: Handler
+</span><a href="#local-6989586621679097775"><span class="hs-identifier hs-var hs-var">termHandler</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO () -&gt; Handler
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">CatchOnce</span></a></span><span> </span><span class="annot"><span class="annottext">(IO () -&gt; Handler) -&gt; IO () -&gt; Handler
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-41"></span><span>            </span><span class="annot"><span class="annottext">IO ()
-</span><a href="#local-6989586621679097608"><span class="hs-identifier hs-var">notify</span></a></span><span>
+</span><a href="#local-6989586621679097776"><span class="hs-identifier hs-var">notify</span></a></span><span>
 </span><span id="line-42"></span><span>            </span><span class="annot"><span class="annottext">Signal -&gt; IO ()
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">raiseSignal</span></a></span><span> </span><span class="annot"><span class="annottext">Signal
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">keyboardSignal</span></a></span><span>
@@ -69,9 +69,9 @@ forall (f :: * -&gt; *) a. Functor f =&gt; f a -&gt; f ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">$</span></a></span><span> </span><span class="annot"><span class="annottext">FileMode -&gt; IO FileMode
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">setFileCreationMask</span></a></span><span> </span><span class="annot"><span class="annottext">FileMode
-</span><a href="#local-6989586621679097605"><span class="hs-identifier hs-var">mask</span></a></span><span>
-</span><span id="line-48"></span><span>    </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679097605"><span class="annot"><span class="annottext">mask :: FileMode
-</span><a href="#local-6989586621679097605"><span class="hs-identifier hs-var hs-var">mask</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FileMode
+</span><a href="#local-6989586621679097773"><span class="hs-identifier hs-var">mask</span></a></span><span>
+</span><span id="line-48"></span><span>    </span><span class="hs-keyword">where</span><span> </span><span id="local-6989586621679097773"><span class="annot"><span class="annottext">mask :: FileMode
+</span><a href="#local-6989586621679097773"><span class="hs-identifier hs-var hs-var">mask</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FileMode
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">groupModes</span></a></span><span> </span><span class="annot"><span class="annottext">FileMode -&gt; FileMode -&gt; FileMode
 forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-operator hs-var">.|.</span></a></span><span> </span><span class="annot"><span class="annottext">FileMode
@@ -81,10 +81,10 @@ forall a. Bits a =&gt; a -&gt; a -&gt; a
 </span><span id="line-51"></span><span class="hs-comment">-- them.</span><span>
 </span><span id="line-52"></span><span class="annot"><a href="Cardano.Startup.POSIX.html#restrictFileMode"><span class="hs-identifier hs-type">restrictFileMode</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/base-4.14.3.0/src"><span class="hs-identifier hs-type">FilePath</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="../../../../ghc/html/libraries/ghc-prim-0.6.1/src"><span class="hs-identifier hs-type">IO</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-53"></span><span id="restrictFileMode"><span class="annot"><span class="annottext">restrictFileMode :: FilePath -&gt; IO ()
-</span><a href="Cardano.Startup.POSIX.html#restrictFileMode"><span class="hs-identifier hs-var hs-var">restrictFileMode</span></a></span></span><span> </span><span id="local-6989586621679097604"><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679097604"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FileMode -&gt; IO ()
+</span><a href="Cardano.Startup.POSIX.html#restrictFileMode"><span class="hs-identifier hs-var hs-var">restrictFileMode</span></a></span></span><span> </span><span id="local-6989586621679097772"><span class="annot"><span class="annottext">FilePath
+</span><a href="#local-6989586621679097772"><span class="hs-identifier hs-var">f</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">FilePath -&gt; FileMode -&gt; IO ()
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">setFileMode</span></a></span><span> </span><span class="annot"><span class="annottext">FilePath
-</span><a href="#local-6989586621679097604"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">FileMode
+</span><a href="#local-6989586621679097772"><span class="hs-identifier hs-var">f</span></a></span><span> </span><span class="annot"><span class="annottext">FileMode
 </span><a href="../../../../unix/html/src"><span class="hs-identifier hs-var">ownerReadMode</span></a></span><span>
 </span><span id="line-54"></span><span>
 </span><span id="line-55"></span><span class="hs-comment">-- | Kill a process with signal 9. This is used only after previous attempts to</span><span>
