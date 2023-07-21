@@ -18,7 +18,8 @@ index-state:
   , hackage.haskell.org 2023-04-20T00:00:00Z
   , cardano-haskell-packages 2023-05-10T00:00:00Z
 
-packages: cardano-node-emulator
+packages:
+          cardano-node-emulator
           cardano-node-socket-emulator
           cardano-streaming
           doc
@@ -65,6 +66,11 @@ allow-newer:
   , blockfrost-api:lens
 
 constraints:
+  -- plutus-contract-model-1.2.0.0 needs
+ , quickcheck-contractmodel >=0.1.4.0
+
+  -- plutus-ledger-1.2.0.0 needs
+  , cryptonite >=0.25
   -- cardano-prelude-0.1.0.0 needs
   , protolude <0.3.1
 
